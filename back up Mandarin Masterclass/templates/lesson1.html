@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSK 1 Lesson 1 - 你好</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a472a;
+            padding: 20px;
+        }
+        .container { max-width: 1000px; margin: 0 auto; background: white; border-radius: 20px; overflow: hidden; }
+        .header { background: #1a472a; color: white; padding: 20px; text-align: center; }
+        .content { padding: 25px; }
+        .section { margin-bottom: 30px; background: #fafafa; padding: 20px; border-radius: 16px; }
+        .section-title { font-size: 22px; color: #1a472a; border-left: 5px solid #ffd700; padding-left: 15px; margin-bottom: 20px; }
+        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
+        .vocab-card { background: white; padding: 15px; border-radius: 12px; text-align: center; }
+        .grammar-card { background: white; padding: 15px; border-radius: 12px; margin-bottom: 15px; }
+        .dialogue { background: #1a1a2e; color: white; padding: 20px; border-radius: 12px; }
+        .btn { background: #2d6a4f; color: white; border: none; padding: 10px 20px; border-radius: 25px; cursor: pointer; margin: 10px; }
+        .btn:hover { background: #1a472a; }
+        .exercise-btn { background: #e94560; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>HSK 1 Lesson 1: 你好 (Hello)</h1>
+            <p>Learn to greet people in Chinese</p>
+        </div>
+        <div class="content">
+            <div class="section">
+                <div class="section-title">📚 Vocabulary</div>
+                <div class="vocab-grid">
+                    <div class="vocab-card"><strong>你</strong><br>nǐ<br>you</div>
+                    <div class="vocab-card"><strong>好</strong><br>hǎo<br>good</div>
+                    <div class="vocab-card"><strong>你好</strong><br>nǐ hǎo<br>hello</div>
+                    <div class="vocab-card"><strong>我</strong><br>wǒ<br>I, me</div>
+                    <div class="vocab-card"><strong>叫</strong><br>jiào<br>to be called</div>
+                    <div class="vocab-card"><strong>什么</strong><br>shén me<br>what</div>
+                    <div class="vocab-card"><strong>名字</strong><br>míng zi<br>name</div>
+                    <div class="vocab-card"><strong>是</strong><br>shì<br>to be</div>
+                    <div class="vocab-card"><strong>学生</strong><br>xué sheng<br>student</div>
+                    <div class="vocab-card"><strong>老师</strong><br>lǎo shī<br>teacher</div>
+                    <div class="vocab-card"><strong>再见</strong><br>zài jiàn<br>goodbye</div>
+                    <div class="vocab-card"><strong>谢谢</strong><br>xiè xie<br>thank you</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">📖 Grammar</div>
+                <div class="grammar-card"><strong>SVO Word Order</strong><br>Chinese uses Subject-Verb-Object order.<br>Example: 我爱你 (I love you)</div>
+                <div class="grammar-card"><strong>吗 Questions</strong><br>Add 吗 to make yes/no questions.<br>Example: 你好吗? (How are you?)</div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">💬 Dialogue</div>
+                <div class="dialogue">
+                    👨 A: 你好！<br>
+                    👩 B: 你好！<br>
+                    👨 A: 你叫什么名字？<br>
+                    👩 B: 我叫小明。你呢？<br>
+                    👨 A: 我叫安娜。很高兴认识你。
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">✍️ Practice</div>
+                <button class="btn" onclick="window.location.href='/lesson-exercise?level=1&lesson=1'">📝 Take Lesson Exercise</button>
+                <button class="btn exercise-btn" onclick="window.location.href='/full-lesson?level=1&lesson=1'">📖 View Full Lesson</button>
+                <button class="btn" onclick="window.location.href='/lessons'">← Back to Lessons</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

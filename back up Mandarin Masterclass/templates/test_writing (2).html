@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Chinese Writing Practice - Complete Offline</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a472a;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .test-container {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        h2 {
+            color: #1a472a;
+            margin-bottom: 5px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+        
+        .canvas-container {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+            border: 2px solid #2d6a4f;
+            border-radius: 8px;
+            background: white;
+            overflow: hidden;
+        }
+        
+        #writingCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 250px;
+            background: transparent;
+            cursor: crosshair;
+            touch-action: none;
+            z-index: 2;
+        }
+        
+        /* Reference character drawn directly on container background */
+        .canvas-container::before {
+            content: "天";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 120px;
+            font-family: "KaiTi", "STKaiti", "楷体", "Microsoft YaHei", serif;
+            color: #e0e0e0;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        /* White paper mode - hide reference character */
+        .canvas-container.white-paper::before {
+            display: none;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        
+        button:hover {
+            background: #1a472a;
+            transform: scale(1.02);
+        }
+        
+        .white-paper-btn {
+            background: #ffd700;
+            color: #1a472a;
+        }
+        
+        .reset-btn {
+            background: #e94560;
+        }
+        
+        .stroke-counter {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1a472a;
+            margin: 10px 0;
+            padding: 8px;
+            background: #e8f5e9;
+            border-radius: 10px;
+        }
+        
+        .status {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        
+        .status.success {
+            background: #d4edda;
+            color: #28a745;
+        }
+        
+        .status.error {
+            background: #f8d7da;
+            color: #dc3545;
+        }
+        
+        .status.info {
+            background: #e8f5e9;
+            color: #1a472a;
+        }
+        
+        .status.warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        /* Animation overlay for stroke guide */
+        .animation-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .animation-box {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            max-width: 350px;
+        }
+        
+        .animation-stroke {
+            font-size: 80px;
+            font-family: "KaiTi", "STKaiti", "楷体", serif;
+            color: #2d6a4f;
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #2d6a4f;
+            border-radius: 10px;
+            background: #f8f9fa;
+        }
+        
+        .close-animation {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 600px) {
+            .test-container { padding: 15px; }
+            .canvas-container, #writingCanvas { width: 220px; height: 220px; }
+            .canvas-container::before { font-size: 100px; }
+        }
+    </style>
+</head>
+<body>
+<div class="test-container">
+    <h2>✍️ Writing Practice</h2>
+    <p class="subtitle" id="characterDisplay">Character: 天 (tiān) - sky/heaven</p>
+    
+    <div class="canvas-container" id="canvasContainer">
+        <canvas id="writingCanvas" width="250" height="250"></canvas>
+    </div>
+    
+    <div class="stroke-counter" id="strokeCounter">
+        ✍️ Strokes Completed: <span id="strokeCount">0</span> / <span id="totalStrokes">4</span>
+    </div>
+    
+    <div class="controls">
+        <button id="playBtn" onclick="showStrokeAnimation()">▶ Play Animation</button>
+        <button id="whitePaperBtn" class="white-paper-btn" onclick="toggleWhitePaper()">📄 White Paper</button>
+        <button id="resetBtn" class="reset-btn" onclick="resetAll()">⟳ Reset</button>
+    </div>
+    
+    <div id="status" class="status info">
+        💡 Draw on the canvas. Click "Complete Stroke" after each stroke.
+    </div>
+    
+    <div class="controls" style="margin-top: 5px;">
+        <button onclick="completeStroke()" style="background:#28a745;">✓ Complete Stroke</button>
+        <button onclick="wrongStroke()" style="background:#dc3545;">✗ Wrong Stroke</button>
+    </div>
+</div>
+
+<script>
+    // Canvas drawing
+    let canvas = document.getElementById('writingCanvas');
+    let ctx = canvas.getContext('2d');
+    let isDrawing = false;
+    let lastX = 0, lastY = 0;
+    
+    // Writing state
+    let currentChar = '天';
+    let currentPinyin = 'tiān';
+    let totalStrokes = 4;
+    let strokeCount = 0;
+    let whitePaperMode = false;
+    
+    // Stroke order guide for animation
+    const strokeGuide = {
+        '天': [
+            { stroke: 1, description: 'First stroke: Horizontal line from left to right' },
+            { stroke: 2, description: 'Second stroke: Second horizontal line' },
+            { stroke: 3, description: 'Third stroke: Left-falling stroke from top to bottom-left' },
+            { stroke: 4, description: 'Fourth stroke: Right-falling stroke from top to bottom-right' }
+        ],
+        '人': [
+            { stroke: 1, description: 'First stroke: Left-falling stroke' },
+            { stroke: 2, description: 'Second stroke: Right-falling stroke' }
+        ],
+        '大': [
+            { stroke: 1, description: 'First stroke: Horizontal line' },
+            { stroke: 2, description: 'Second stroke: Left-falling stroke' },
+            { stroke: 3, description: 'Third stroke: Right-falling stroke' }
+        ],
+        '中': [
+            { stroke: 1, description: 'First stroke: Vertical line' },
+            { stroke: 2, description: 'Second stroke: Horizontal line (top)' },
+            { stroke: 3, description: 'Third stroke: Horizontal line (bottom)' },
+            { stroke: 4, description: 'Fourth stroke: Vertical line through center' }
+        ]
+    };
+    
+    // Initialize canvas
+    function initCanvas() {
+        canvas.width = 250;
+        canvas.height = 250;
+        ctx = canvas.getContext('2d');
+        ctx.lineWidth = 3;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.strokeStyle = '#2d6a4f';
+        clearCanvas();
+        
+        // Event listeners
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mouseleave', stopDrawing);
+        
+        canvas.addEventListener('touchstart', startDrawingTouch);
+        canvas.addEventListener('touchmove', drawTouch);
+        canvas.addEventListener('touchend', stopDrawing);
+        canvas.addEventListener('touchcancel', stopDrawing);
+    }
+    
+    function clearCanvas() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+    
+    function startDrawing(e) {
+        isDrawing = true;
+        const pos = getCanvasCoordinates(e);
+        lastX = pos.x;
+        lastY = pos.y;
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
+        e.preventDefault();
+    }
+    
+    function startDrawingTouch(e) {
+        e.preventDefault();
+        isDrawing = true;
+        const pos = getTouchCoordinates(e);
+        lastX = pos.x;
+        lastY = pos.y;
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
+    }
+    
+    function draw(e) {
+        if (!isDrawing) return;
+        e.preventDefault();
+        const pos = getCanvasCoordinates(e);
+        const x = pos.x;
+        const y = pos.y;
+        ctx.lineTo(x, y);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        lastX = x;
+        lastY = y;
+    }
+    
+    function drawTouch(e) {
+        if (!isDrawing) return;
+        e.preventDefault();
+        const pos = getTouchCoordinates(e);
+        const x = pos.x;
+        const y = pos.y;
+        ctx.lineTo(x, y);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        lastX = x;
+        lastY = y;
+    }
+    
+    function stopDrawing() {
+        isDrawing = false;
+    }
+    
+    function getCanvasCoordinates(e) {
+        const rect = canvas.getBoundingClientRect();
+        const scaleX = canvas.width / rect.width;
+        const scaleY = canvas.height / rect.height;
+        let clientX, clientY;
+        
+        if (e.touches) {
+            clientX = e.touches[0].clientX;
+            clientY = e.touches[0].clientY;
+        } else {
+            clientX = e.clientX;
+            clientY = e.clientY;
+        }
+        
+        let x = (clientX - rect.left) * scaleX;
+        let y = (clientY - rect.top) * scaleY;
+        x = Math.min(Math.max(x, 0), canvas.width);
+        y = Math.min(Math.max(y, 0), canvas.height);
+        return {x, y};
+    }
+    
+    function getTouchCoordinates(e) {
+        const rect = canvas.getBoundingClientRect();
+        const scaleX = canvas.width / rect.width;
+        const scaleY = canvas.height / rect.height;
+        const touch = e.touches[0];
+        let x = (touch.clientX - rect.left) * scaleX;
+        let y = (touch.clientY - rect.top) * scaleY;
+        x = Math.min(Math.max(x, 0), canvas.width);
+        y = Math.min(Math.max(y, 0), canvas.height);
+        return {x, y};
+    }
+    
+    function updateUI() {
+        document.getElementById('strokeCount').innerText = strokeCount;
+        document.getElementById('totalStrokes').innerText = totalStrokes;
+        document.getElementById('characterDisplay').innerHTML = `Character: ${currentChar} (${currentPinyin}) - ${strokeCount}/${totalStrokes} strokes`;
+    }
+    
+    function updateStatus(message, type) {
+        const statusDiv = document.getElementById('status');
+        statusDiv.innerHTML = message;
+        statusDiv.className = `status ${type}`;
+    }
+    
+    function completeStroke() {
+        if (strokeCount < totalStrokes) {
+            strokeCount++;
+            updateUI();
+            updateStatus(`✓ Stroke ${strokeCount} completed! Good job!`, 'success');
+            
+            if (strokeCount >= totalStrokes) {
+                updateStatus(`🎉 PERFECT! You have mastered "${currentChar}"! Great job!`, 'success');
+            }
+        } else {
+            updateStatus(`🎉 You have already mastered "${currentChar}"! Click Reset to practice again.`, 'success');
+        }
+    }
+    
+    function wrongStroke() {
+        updateStatus(`❌ WRONG STROKE! Starting over from stroke 1.`, 'error');
+        strokeCount = 0;
+        updateUI();
+        clearCanvas();
+    }
+    
+    function toggleWhitePaper() {
+        const container = document.getElementById('canvasContainer');
+        whitePaperMode = !whitePaperMode;
+        
+        if (whitePaperMode) {
+            container.classList.add('white-paper');
+            updateStatus('📄 White paper mode. No guide lines.', 'info');
+        } else {
+            container.classList.remove('white-paper');
+            updateStatus('📝 Outline mode. Gray guide lines visible.', 'info');
+        }
+    }
+    
+    function resetAll() {
+        strokeCount = 0;
+        updateUI();
+        clearCanvas();
+        updateStatus(`⟳ Reset. Start from stroke 1 of ${totalStrokes}.`, 'info');
+    }
+    
+    function showStrokeAnimation() {
+        const guide = strokeGuide[currentChar];
+        if (!guide) {
+            updateStatus(`⚠️ No stroke guide for "${currentChar}". Follow the character outline.`, 'warning');
+            return;
+        }
+        
+        let step = 0;
+        
+        function showNextStroke() {
+            if (step >= guide.length) {
+                // Animation complete
+                const overlay = document.querySelector('.animation-overlay');
+                if (overlay) overlay.remove();
+                updateStatus(`✅ Animation complete! ${currentChar} has ${totalStrokes} strokes.`, 'success');
+                return;
+            }
+            
+            const strokeInfo = guide[step];
+            
+            // Create or update overlay
+            let overlay = document.querySelector('.animation-overlay');
+            if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.className = 'animation-overlay';
+                document.body.appendChild(overlay);
+            }
+            
+            overlay.innerHTML = `
+                <div class="animation-box">
+                    <h3>Stroke ${strokeInfo.stroke} of ${totalStrokes}</h3>
+                    <div class="animation-stroke">${currentChar}</div>
+                    <p>${strokeInfo.description}</p>
+                    <button class="close-animation" onclick="this.closest('.animation-overlay').remove(); updateStatus('Animation paused. Continue practicing.', 'info')">Pause</button>
+                    <button class="close-animation" onclick="nextAnimationStep()" style="background:#28a745;">Next →</button>
+                </div>
+            `;
+            
+            step++;
+            window.nextAnimationStep = showNextStroke;
+        }
+        
+        showNextStroke();
+        updateStatus('🎬 Playing stroke order animation. Follow along!', 'success');
+    }
+    
+    // Function to change character (will be called from vocabulary)
+    function setCharacter(character, pinyin, strokes) {
+        currentChar = character;
+        currentPinyin = pinyin;
+        totalStrokes = strokes || strokeGuide[character]?.length || 4;
+        strokeCount = 0;
+        
+        // Update the reference character in CSS
+        const style = document.createElement('style');
+        style.textContent = `.canvas-container::before { content: "${character}"; }`;
+        document.head.appendChild(style);
+        
+        updateUI();
+        clearCanvas();
+        updateStatus(`Loaded "${character}". Practice writing!`, 'success');
+    }
+    
+    // Initialize
+    initCanvas();
+    updateUI();
+    
+    // Make functions global
+    window.completeStroke = completeStroke;
+    window.wrongStroke = wrongStroke;
+    window.toggleWhitePaper = toggleWhitePaper;
+    window.resetAll = resetAll;
+    window.showStrokeAnimation = showStrokeAnimation;
+    window.setCharacter = setCharacter;
+    window.nextAnimationStep = null;
+</script>
+</body>
+</html>

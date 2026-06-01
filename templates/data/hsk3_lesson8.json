@@ -1,0 +1,51 @@
+{
+  "title": "我考上大学了",
+  "subtitle": "Talking About Achievements, Using Resultative 上, Discussing Education",
+  "assistant_message": "Today we learn: resultative complement 上 (shàng) for successful achievement, talking about exams and education, and expressing goals.",
+  "vocabulary": [
+    {"word": "考上", "pinyin": "kǎo shàng", "meaning": "to pass an exam/be admitted", "meaning_id": "lulus ujian/diterima", "example": "考上大学", "example_translation": "be admitted to university", "example_translation_id": "diterima di universitas"},
+    {"word": "大学", "pinyin": "dà xué", "meaning": "university", "meaning_id": "universitas", "example": "上大学", "example_translation": "go to university", "example_translation_id": "pergi ke universitas"},
+    {"word": "考试", "pinyin": "kǎo shì", "meaning": "exam/test", "meaning_id": "ujian", "example": "参加考试", "example_translation": "take an exam", "example_translation_id": "mengikuti ujian"},
+    {"word": "成绩", "pinyin": "chéng jì", "meaning": "grade/score", "meaning_id": "nilai", "example": "好成绩", "example_translation": "good grade", "example_translation_id": "nilai bagus"},
+    {"word": "努力", "pinyin": "nǔ lì", "meaning": "to work hard", "meaning_id": "bekerja keras", "example": "努力学习", "example_translation": "study hard", "example_translation_id": "belajar keras"},
+    {"word": "专业", "pinyin": "zhuān yè", "meaning": "major", "meaning_id": "jurusan", "example": "选择专业", "example_translation": "choose a major", "example_translation_id": "memilih jurusan"},
+    {"word": "毕业", "pinyin": "bì yè", "meaning": "to graduate", "meaning_id": "lulus", "example": "大学毕业", "example_translation": "graduate from university", "example_translation_id": "lulus dari universitas"},
+    {"word": "希望", "pinyin": "xī wàng", "meaning": "to hope", "meaning_id": "berharap", "example": "希望成功", "example_translation": "hope to succeed", "example_translation_id": "berharap berhasil"}
+  ],
+  "grammar": [
+    {
+      "point": "Resultative Complement 上 (shàng)",
+      "point_id": "Komplemen Hasil 上 (shàng)",
+      "explanation": "上 as a resultative complement indicates successful achievement (catching, reaching, passing). Structure: Verb + 上.",
+      "explanation_id": "上 sebagai komplemen hasil menunjukkan pencapaian yang berhasil (menangkap, mencapai, lulus). Struktur: Kata Kerja + 上.",
+      "examples": [
+        {"chinese": "我考上大学了。", "translation": "I was admitted to university.", "translation_id": "Saya diterima di universitas."},
+        {"chinese": "他考上了研究生。", "translation": "He was admitted to graduate school.", "translation_id": "Dia diterima di sekolah pascasarjana."},
+        {"chinese": "我赶上了火车。", "translation": "I caught the train.", "translation_id": "Saya naik kereta."}
+      ]
+    },
+    {
+      "point": "Expressing Hope with 希望 (xīwàng)",
+      "point_id": "Menyatakan Harapan dengan 希望 (xīwàng)",
+      "explanation": "Use 希望 before a verb to express hope or wish. Structure: Subject + 希望 + Verb Phrase.",
+      "explanation_id": "Gunakan 希望 sebelum kata kerja untuk menyatakan harapan atau keinginan. Struktur: Subjek + 希望 + Frasa Kata Kerja.",
+      "examples": [
+        {"chinese": "我希望考上好大学。", "translation": "I hope to be admitted to a good university.", "translation_id": "Saya berharap diterima di universitas yang bagus."},
+        {"chinese": "我希望你成功。", "translation": "I hope you succeed.", "translation_id": "Saya berharap kamu berhasil."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Mother", "voice": "female", "chinese": "听说你考上大学了？", "pinyin": "Tīngshuō nǐ kǎo shàng dàxué le?", "translation": "I heard you were admitted to university?", "translation_id": "Saya dengar kamu diterima di universitas?"},
+    {"speaker": "male", "name": "Son", "voice": "male", "chinese": "是的，妈妈！我考上了！", "pinyin": "Shì de, māma! Wǒ kǎo shàng le!", "translation": "Yes, Mom! I got in!", "translation_id": "Ya, Bu! Saya diterima!"},
+    {"speaker": "female", "name": "Mother", "voice": "female", "chinese": "太好了！你选了什么专业？", "pinyin": "Tài hǎo le! Nǐ xuǎn le shénme zhuānyè?", "translation": "That's great! What major did you choose?", "translation_id": "Bagus sekali! Kamu memilih jurusan apa?"},
+    {"speaker": "male", "name": "Son", "voice": "male", "chinese": "我选了计算机专业。", "pinyin": "Wǒ xuǎn le jìsuànjī zhuānyè.", "translation": "I chose computer science.", "translation_id": "Saya memilih jurusan ilmu komputer."}
+  ],
+  "exercises": [
+    {"question": "What does 考上 (kǎo shàng) mean?", "question_id": "Apa arti 考上 (kǎo shàng)?", "options": ["To take an exam", "To pass an exam/be admitted", "To fail an exam", "To prepare for an exam"], "options_id": ["Mengikuti ujian", "Lulus ujian/diterima", "Gagal ujian", "Mempersiapkan ujian"], "correct": 1},
+    {"question": "How do you say 'I was admitted to university' in Chinese?", "question_id": "Bagaimana mengatakan 'Saya diterima di universitas' dalam bahasa Mandarin?", "options": ["我上大学了", "我考上大学了", "我考试大学了", "我进大学了"], "options_id": ["Saya pergi ke universitas", "Saya diterima di universitas", "Saya ujian universitas", "Saya masuk universitas"], "correct": 1},
+    {"question": "What does 努力 (nǔlì) mean?", "question_id": "Apa arti 努力 (nǔlì)?", "options": ["To study", "To work hard", "To succeed", "To hope"], "options_id": ["Belajar", "Bekerja keras", "Berhasil", "Berharap"], "correct": 1},
+    {"question": "What is 专业 (zhuānyè)?", "question_id": "Apa itu 专业 (zhuānyè)?", "options": ["University", "Major", "Exam", "Grade"], "options_id": ["Universitas", "Jurusan", "Ujian", "Nilai"], "correct": 1},
+    {"question": "How to say 'I hope you succeed' in Chinese?", "question_id": "Bagaimana mengatakan 'Saya berharap kamu berhasil' dalam bahasa Mandarin?", "options": ["我希望你成功", "我祝你成功", "你希望成功", "成功希望"], "options_id": ["Saya berharap kamu berhasil", "Saya doakan kamu berhasil", "Kamu berharap berhasil", "Berhasil harapan"], "correct": 0}
+  ]
+}

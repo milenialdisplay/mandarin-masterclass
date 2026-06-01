@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Passcode Requests</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: #0a2a1a; padding: 20px; }
+        .container { max-width: 1400px; margin: 0 auto; background: white; border-radius: 20px; padding: 30px; }
+        h1 { color: #1a472a; margin-bottom: 20px; }
+        h2 { color: #1a472a; font-size: 18px; margin: 20px 0 10px; border-left: 3px solid #ffd700; padding-left: 10px; }
+        
+        .tabs { display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 2px solid #e8f5e9; }
+        .tab { background: none; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; color: #666; font-weight: bold; }
+        .tab.active { color: #1a472a; border-bottom: 3px solid #ffd700; }
+        
+        .settings-panel { background: #f8f9fa; padding: 20px; border-radius: 12px; margin-bottom: 20px; }
+        .setting-row { display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-end; }
+        .setting-item { flex: 1; min-width: 180px; }
+        .setting-item label { display: block; font-weight: bold; margin-bottom: 5px; color: #1a472a; }
+        .setting-item input, .setting-item select { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 8px; }
+        .expiry-group { display: flex; gap: 10px; }
+        .expiry-group input { flex: 2; }
+        .expiry-group select { flex: 1; }
+        .save-btn { background: #2d6a4f; color: white; border: none; padding: 8px 20px; border-radius: 25px; cursor: pointer; margin-top: 10px; }
+        .refresh-btn { background: #ffd700; color: #1a472a; border: none; padding: 8px 20px; border-radius: 25px; cursor: pointer; font-weight: bold; margin-left: 10px; }
+        
+        .request-card { background: #f8f9fa; border-radius: 12px; padding: 15px; margin-bottom: 15px; border-left: 4px solid #ffd700; }
+        .request-info { margin-bottom: 10px; }
+        .request-info strong { color: #1a472a; }
+        .passcode-display { font-family: monospace; font-size: 20px; font-weight: bold; background: #e8f5e9; padding: 5px 15px; border-radius: 8px; letter-spacing: 2px; display: inline-block; margin: 5px 0; }
+        .btn-approve { background: #2d6a4f; color: white; border: none; padding: 8px 20px; border-radius: 25px; cursor: pointer; margin-right: 10px; }
+        .btn-deny { background: #e94560; color: white; border: none; padding: 8px 20px; border-radius: 25px; cursor: pointer; }
+        .btn-copy { background: #ffd700; color: #1a472a; border: none; padding: 5px 15px; border-radius: 20px; cursor: pointer; font-weight: bold; margin-left: 10px; }
+        .empty { text-align: center; color: #888; padding: 40px; }
+        .status-badge { display: inline-block; padding: 2px 8px; border-radius: 15px; font-size: 10px; font-weight: bold; margin-left: 8px; }
+        .status-pending { background: #ffd700; color: #1a472a; }
+        .status-approved { background: #28a745; color: white; }
+        .status-denied { background: #dc3545; color: white; }
+        .info-text { font-size: 12px; color: #666; margin-top: 5px; }
+        
+        .history-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .history-table th, .history-table td { padding: 10px 8px; text-align: left; border-bottom: 1px solid #eee; }
+        .history-table th { background: #1a472a; color: white; font-weight: bold; position: sticky; top: 0; }
+        .history-table tr:hover { background: #f8f9fa; }
+        .copy-small { background: #ffd700; color: #1a472a; border: none; padding: 2px 8px; border-radius: 12px; cursor: pointer; font-size: 10px; margin-left: 5px; }
+        .passcode-small { font-family: monospace; font-size: 12px; font-weight: bold; background: #e8f5e9; padding: 2px 6px; border-radius: 4px; display: inline-block; }
+        .expired-text { color: #e94560; font-size: 10px; }
+        .active-text { color: #28a745; font-size: 10px; }
+        
+        .history-container { max-height: 500px; overflow-y: auto; border: 1px solid #eee; border-radius: 12px; }
+        
+        @media (max-width: 768px) {
+            .history-table { font-size: 11px; }
+            .history-table th, .history-table td { padding: 6px 4px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Admin Dashboard</h1>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('pending')">⏳ Pending Requests</button>
+            <button class="tab" onclick="showTab('history')">📜 History (All Users)</button>
+        </div>
+        
+        <div class="settings-panel">
+            <h2>⚙️ Settings</h2>
+            <div class="setting-row">
+                <div class="setting-item">
+                    <label>⏰ Passcode Expiry</label>
+                    <div class="expiry-group">
+                        <input type="number" id="expiryValue" min="1" max="90" value="7">
+                        <select id="expiryUnit">
+                            <option value="hours">Hours</option>
+                            <option value="days" selected>Days</option>
+                            <option value="weeks">Weeks</option>
+                        </select>
+                    </div>
+                    <div class="info-text">How long passcode remains valid</div>
+                </div>
+                <div class="setting-item">
+                    <label>📱 Max Devices Per User</label>
+                    <select id="maxDevices">
+                        <option value="1">1 device</option>
+                        <option value="2" selected>2 devices (1 phone + 1 computer)</option>
+                        <option value="3">3 devices</option>
+                        <option value="4">4 devices</option>
+                        <option value="5">5 devices</option>
+                    </select>
+                    <div class="info-text">Users can use passcode on this many devices</div>
+                </div>
+                <div class="setting-item">
+                    <button class="save-btn" onclick="saveSettings()">💾 Save Settings</button>
+                    <button class="refresh-btn" onclick="refreshAll()">⟳ Refresh</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="pendingTab">
+            <h2>📋 Pending Requests</h2>
+            <div id="pendingRequests"></div>
+        </div>
+        
+        <div id="historyTab" style="display: none;">
+            <h2>📜 All Request History (1 row = 1 user + 1 lesson)</h2>
+            <div class="history-container">
+                <div id="historyList"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Convert expiry to hours
+        function getExpiryHours() {
+            let value = parseInt(document.getElementById('expiryValue').value);
+            const unit = document.getElementById('expiryUnit').value;
+            if (unit === 'days') value *= 24;
+            if (unit === 'weeks') value *= 168;
+            return value;
+        }
+        
+        // Load settings from server
+        async function loadSettings() {
+            try {
+                const response = await fetch('/api/admin/settings');
+                const data = await response.json();
+                let hours = data.settings.default_expiry_hours;
+                if (hours % 168 === 0 && hours >= 168) {
+                    document.getElementById('expiryValue').value = hours / 168;
+                    document.getElementById('expiryUnit').value = 'weeks';
+                } else if (hours % 24 === 0 && hours >= 24) {
+                    document.getElementById('expiryValue').value = hours / 24;
+                    document.getElementById('expiryUnit').value = 'days';
+                } else {
+                    document.getElementById('expiryValue').value = hours;
+                    document.getElementById('expiryUnit').value = 'hours';
+                }
+                document.getElementById('maxDevices').value = data.settings.max_devices_per_user;
+            } catch(e) { console.error(e); }
+        }
+        
+        // Save settings
+        async function saveSettings() {
+            const expiryHours = getExpiryHours();
+            const maxDevices = parseInt(document.getElementById('maxDevices').value);
+            
+            const response = await fetch('/api/admin/settings', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ default_expiry_hours: expiryHours, max_devices_per_user: maxDevices })
+            });
+            const data = await response.json();
+            if (data.success) {
+                alert('✅ Settings saved!');
+                refreshAll();
+            }
+        }
+        
+        // Copy passcode to clipboard
+        async function copyPasscode(passcode, email, lesson) {
+            try {
+                await navigator.clipboard.writeText(passcode);
+                alert(`✅ Copied: ${passcode}\n\nUse for: ${email} - ${lesson}`);
+            } catch(e) {
+                const textarea = document.createElement('textarea');
+                textarea.value = passcode;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                alert(`✅ Copied: ${passcode}`);
+            }
+        }
+        
+        // Load pending requests
+        async function loadPending() {
+            try {
+                const response = await fetch('/api/admin/pending');
+                const data = await response.json();
+                const container = document.getElementById('pendingRequests');
+                
+                if (data.pending && data.pending.length > 0) {
+                    container.innerHTML = data.pending.map(req => `
+                        <div class="request-card">
+                            <div class="request-info">
+                                <strong>📧 Email:</strong> ${req.email}<br>
+                                <strong>📚 Lesson:</strong> HSK ${req.level} - Lesson ${req.lesson_num}<br>
+                                <strong>🕐 Requested:</strong> ${new Date(req.created_at).toLocaleString()}<br>
+                                <strong>🔐 Passcode:</strong> 
+                                <span class="passcode-display">${req.passcode}</span>
+                                <button class="btn-copy" onclick="copyPasscode('${req.passcode}', '${req.email}', 'HSK ${req.level} L${req.lesson_num}')">📋 Copy</button>
+                            </div>
+                            <button class="btn-approve" onclick="approveRequest('${req.request_id}')">✓ Approve</button>
+                            <button class="btn-deny" onclick="denyRequest('${req.request_id}')">✗ Deny</button>
+                        </div>
+                    `).join('');
+                } else {
+                    container.innerHTML = '<div class="empty">✨ No pending requests</div>';
+                }
+            } catch(e) { console.error(e); }
+        }
+        
+        // Load history - DIRECT SIMPLE APPROACH
+        async function loadHistory() {
+            try {
+                console.log("Loading history...");
+                const response = await fetch('/api/admin/history');
+                const data = await response.json();
+                const container = document.getElementById('historyList');
+                
+                console.log("History response:", data);
+                
+                if (!data.history || data.history.length === 0) {
+                    container.innerHTML = '<div class="empty">📭 No history yet. Approve a request to see it here.</div>';
+                    return;
+                }
+                
+                // Build table directly
+                let tableHtml = `
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Date</th>
+                                <th>Email</th>
+                                <th>Lesson</th>
+                                <th>Passcode</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </thead>
+                            <tbody>
+                `;
+                
+                for (let i = 0; i < data.history.length; i++) {
+                    const req = data.history[i];
+                    const rowNum = i + 1;
+                    
+                    let statusClass = '';
+                    let statusText = '';
+                    
+                    if (req.status === 'approved') {
+                        statusClass = 'status-approved';
+                        statusText = '✅ Approved';
+                    } else if (req.status === 'denied') {
+                        statusClass = 'status-denied';
+                        statusText = '❌ Denied';
+                    } else {
+                        statusClass = 'status-pending';
+                        statusText = '⏳ Pending';
+                    }
+                    
+                    tableHtml += `
+                        <tr>
+                            <td>${rowNum}</div>
+                            <td>${new Date(req.created_at).toLocaleString()}</div>
+                            <td><strong>${req.email}</strong></div>
+                            <td>HSK ${req.level} L${req.lesson_num}</div>
+                            <td><span class="passcode-small">${req.passcode}</span></div>
+                            <td><span class="status-badge ${statusClass}">${statusText}</span></div>
+                            <td><button class="copy-small" onclick="copyPasscode('${req.passcode}', '${req.email}', 'HSK ${req.level} L${req.lesson_num}')">📋 Copy</button></div>
+                        </div>
+                    `;
+                }
+                
+                tableHtml += `</tbody>}</div>`;
+                container.innerHTML = tableHtml;
+                
+                console.log(`✅ Loaded ${data.history.length} history records`);
+                
+            } catch(e) { 
+                console.error("Error loading history:", e);
+                document.getElementById('historyList').innerHTML = '<div class="empty">Error loading history. Check console.</div>';
+            }
+        }
+        
+        async function refreshAll() {
+            await loadPending();
+            await loadHistory();
+        }
+        
+        // Approve request
+        async function approveRequest(requestId) {
+            if (!confirm('Approve this request?')) return;
+            try {
+                const response = await fetch(`/api/admin/approve/${requestId}`, { method: 'POST' });
+                const data = await response.json();
+                alert(data.message);
+                await refreshAll();
+            } catch(e) { alert('Error: ' + e.message); }
+        }
+        
+        // Deny request
+        async function denyRequest(requestId) {
+            if (!confirm('Deny this request?')) return;
+            try {
+                const response = await fetch(`/api/admin/deny/${requestId}`, { method: 'POST' });
+                const data = await response.json();
+                alert(data.message);
+                await refreshAll();
+            } catch(e) { alert('Error: ' + e.message); }
+        }
+        
+        // Tab switching
+        function showTab(tab) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            if (tab === 'pending') {
+                document.querySelector('.tab:first-child').classList.add('active');
+                document.getElementById('pendingTab').style.display = 'block';
+                document.getElementById('historyTab').style.display = 'none';
+                loadPending();
+            } else {
+                document.querySelector('.tab:last-child').classList.add('active');
+                document.getElementById('pendingTab').style.display = 'none';
+                document.getElementById('historyTab').style.display = 'block';
+                loadHistory();
+            }
+        }
+        
+        // Auto-refresh pending every 15 seconds
+        setInterval(() => {
+            if (document.getElementById('pendingTab').style.display !== 'none') {
+                loadPending();
+            }
+        }, 15000);
+        
+        // Initialize
+        loadSettings();
+        loadPending();
+        
+        // Make functions global
+        window.showTab = showTab;
+        window.copyPasscode = copyPasscode;
+        window.approveRequest = approveRequest;
+        window.denyRequest = denyRequest;
+        window.saveSettings = saveSettings;
+        window.refreshAll = refreshAll;
+        window.loadHistory = loadHistory;
+    </script>
+</body>
+</html>

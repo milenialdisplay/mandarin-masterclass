@@ -1,0 +1,228 @@
+{
+  "title": "适应变化",
+  "subtitle": "Adaptability, Change Management, Resilience",
+  "assistant_message": "Today we learn: discussing how to adapt to changes, expressing resilience and flexibility, and talking about managing transitions in life and work.",
+  "vocabulary": [
+    {
+      "word": "适应",
+      "pinyin": "shì yìng",
+      "meaning": "to adapt",
+      "meaning_id": "beradaptasi",
+      "example": "适应新环境",
+      "example_translation": "adapt to a new environment",
+      "example_translation_id": "beradaptasi dengan lingkungan baru"
+    },
+    {
+      "word": "变化",
+      "pinyin": "biàn huà",
+      "meaning": "change",
+      "meaning_id": "perubahan",
+      "example": "应对变化",
+      "example_translation": "deal with change",
+      "example_translation_id": "menghadapi perubahan"
+    },
+    {
+      "word": "灵活",
+      "pinyin": "líng huó",
+      "meaning": "flexible",
+      "meaning_id": "fleksibel",
+      "example": "灵活应对",
+      "example_translation": "respond flexibly",
+      "example_translation_id": "merespons secara fleksibel"
+    },
+    {
+      "word": "调整",
+      "pinyin": "tiáo zhěng",
+      "meaning": "to adjust",
+      "meaning_id": "menyesuaikan",
+      "example": "调整心态",
+      "example_translation": "adjust one's mindset",
+      "example_translation_id": "menyesuaikan pola pikir"
+    },
+    {
+      "word": "挑战",
+      "pinyin": "tiǎo zhàn",
+      "meaning": "challenge",
+      "meaning_id": "tantangan",
+      "example": "迎接挑战",
+      "example_translation": "embrace challenges",
+      "example_translation_id": "menyambut tantangan"
+    },
+    {
+      "word": "机遇",
+      "pinyin": "jī yù",
+      "meaning": "opportunity",
+      "meaning_id": "kesempatan",
+      "example": "抓住机遇",
+      "example_translation": "seize opportunities",
+      "example_translation_id": "merebut kesempatan"
+    },
+    {
+      "word": "抗拒",
+      "pinyin": "kàng jù",
+      "meaning": "to resist",
+      "meaning_id": "menolak",
+      "example": "抗拒改变",
+      "example_translation": "resist change",
+      "example_translation_id": "menolak perubahan"
+    },
+    {
+      "word": "接受",
+      "pinyin": "jiē shòu",
+      "meaning": "to accept",
+      "meaning_id": "menerima",
+      "example": "接受现实",
+      "example_translation": "accept reality",
+      "example_translation_id": "menerima kenyataan"
+    },
+    {
+      "word": "成长",
+      "pinyin": "chéng zhǎng",
+      "meaning": "growth",
+      "meaning_id": "pertumbuhan",
+      "example": "个人成长",
+      "example_translation": "personal growth",
+      "example_translation_id": "pertumbuhan pribadi"
+    },
+    {
+      "word": "不确定性",
+      "pinyin": "bù què dìng xìng",
+      "meaning": "uncertainty",
+      "meaning_id": "ketidakpastian",
+      "example": "面对不确定性",
+      "example_translation": "face uncertainty",
+      "example_translation_id": "menghadapi ketidakpastian"
+    }
+  ],
+  "grammar": [
+    {
+      "point": "Using 随着 (suízhe) - 'Along with'",
+      "point_id": "Menggunakan 随着 (suízhe) - 'Seiring dengan'",
+      "explanation": "随着 indicates that as one thing changes, another thing changes accordingly.",
+      "explanation_id": "随着 menunjukkan bahwa seiring satu hal berubah, hal lain berubah sesuai.",
+      "examples": [
+        {
+          "chinese": "随着科技的发展，生活方式也改变了。",
+          "translation": "Along with technological development, lifestyles have also changed.",
+          "translation_id": "Seiring dengan perkembangan teknologi, gaya hidup juga berubah."
+        },
+        {
+          "chinese": "随着时间的推移，他渐渐适应了新环境。",
+          "translation": "As time went by, he gradually adapted to the new environment.",
+          "translation_id": "Seiring berjalannya waktu, dia perlahan beradaptasi dengan lingkungan baru."
+        }
+      ]
+    },
+    {
+      "point": "Using 关键在于 (guānjiàn zàiyú) - 'The key lies in'",
+      "point_id": "Menggunakan 关键在于 (guānjiàn zàiyú) - 'Kuncinya terletak pada'",
+      "explanation": "This phrase introduces the most important factor or solution.",
+      "explanation_id": "Frasa ini memperkenalkan faktor atau solusi terpenting.",
+      "examples": [
+        {
+          "chinese": "关键在于如何应对变化。",
+          "translation": "The key lies in how to deal with change.",
+          "translation_id": "Kuncinya terletak pada bagaimana menghadapi perubahan."
+        },
+        {
+          "chinese": "成功的关键在于坚持。",
+          "translation": "The key to success lies in persistence.",
+          "translation_id": "Kunci sukses terletak pada ketekunan."
+        }
+      ]
+    },
+    {
+      "point": "Using 与其...不如... (yǔqí...bùrú...) - 'Rather than... better to...'",
+      "point_id": "Menggunakan 与其...不如... (yǔqí...bùrú...) - 'Daripada... lebih baik...'",
+      "explanation": "This structure compares two options, indicating the second is preferable.",
+      "explanation_id": "Struktur ini membandingkan dua pilihan, menunjukkan pilihan kedua lebih baik.",
+      "examples": [
+        {
+          "chinese": "与其抗拒变化，不如主动适应。",
+          "translation": "Rather than resisting change, it's better to actively adapt.",
+          "translation_id": "Daripada menolak perubahan, lebih baik beradaptasi secara aktif."
+        },
+        {
+          "chinese": "与其抱怨困难，不如寻找解决方案。",
+          "translation": "Rather than complaining about difficulties, it's better to look for solutions.",
+          "translation_id": "Daripada mengeluh tentang kesulitan, lebih baik mencari solusi."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "female",
+      "name": "Xu Yan",
+      "voice": "female",
+      "chinese": "公司最近重组，我被调到了一个新部门。感觉很不安，不知道如何适应。",
+      "pinyin": "Gōngsī zuìjìn chóngzǔ, wǒ bèi diào dào le yī gè xīn bùmén. Gǎnjué hěn bù'ān, bù zhīdào rúhé shìyìng.",
+      "translation": "The company recently restructured, and I was transferred to a new department. I feel very uneasy and don't know how to adapt.",
+      "translation_id": "Perusahaan baru saja direstrukturisasi, dan saya dipindahkan ke departemen baru. Saya merasa sangat cemas dan tidak tahu bagaimana beradaptasi."
+    },
+    {
+      "speaker": "male",
+      "name": "Zhao Ming",
+      "voice": "male",
+      "chinese": "变化总是伴随不确定性，但同时也是成长的机会。关键在于调整心态，灵活应对。",
+      "pinyin": "Biànhuà zǒng shì bànsuí bù quèdìngxìng, dàn tóngshí yě shì chéngzhǎng de jīhuì. Guānjiàn zàiyú tiáozhěng xīntài, línghuó yìngduì.",
+      "translation": "Change always comes with uncertainty, but it's also an opportunity for growth. The key is to adjust your mindset and respond flexibly.",
+      "translation_id": "Perubahan selalu datang dengan ketidakpastian, tetapi juga merupakan kesempatan untuk bertumbuh. Kuncinya adalah menyesuaikan pola pikir dan merespons secara fleksibel."
+    },
+    {
+      "speaker": "female",
+      "name": "Xu Yan",
+      "voice": "female",
+      "chinese": "我觉得很难接受这种变化，有点抗拒。",
+      "pinyin": "Wǒ juéde hěn nán jiēshòu zhè zhǒng biànhuà, yǒudiǎn kàngjù.",
+      "translation": "I find it hard to accept this change. I'm a bit resistant.",
+      "translation_id": "Saya merasa sulit menerima perubahan ini. Sedikit menolak."
+    },
+    {
+      "speaker": "male",
+      "name": "Zhao Ming",
+      "voice": "male",
+      "chinese": "与其抗拒，不如主动拥抱变化。随着时间推移，你会发现自己成长了很多。记住，每一次变化都带来新的机遇！",
+      "pinyin": "Yǔqí kàngjù, bùrú zhǔdòng yōngbào biànhuà. Suízhe shíjiān tuīyí, nǐ huì fāxiàn zìjǐ chéngzhǎng le hěnduō. Jìzhù, měi yī cì biànhuà dōu dài lái xīn de jīyù!",
+      "translation": "Rather than resisting, it's better to actively embrace change. As time goes by, you'll find that you've grown a lot. Remember, every change brings new opportunities!",
+      "translation_id": "Daripada menolak, lebih baik secara aktif merangkul perubahan. Seiring berjalannya waktu, Anda akan menemukan bahwa Anda telah banyak berkembang. Ingat, setiap perubahan membawa peluang baru!"
+    }
+  ],
+  "exercises": [
+    {
+      "question": "What does 适应 (shìyìng) mean?",
+      "question_id": "Apa arti 适应 (shìyìng)?",
+      "options": ["To resist", "To adapt", "To change", "To accept"],
+      "options_id": ["Menolak", "Beradaptasi", "Berubah", "Menerima"],
+      "correct": 1
+    },
+    {
+      "question": "How do you say 'flexible' in Chinese?",
+      "question_id": "Bagaimana mengatakan 'fleksibel' dalam bahasa Mandarin?",
+      "options": ["适应", "变化", "灵活", "调整"],
+      "options_id": ["beradaptasi", "perubahan", "fleksibel", "menyesuaikan"],
+      "correct": 2
+    },
+    {
+      "question": "What does 机遇 (jīyù) mean?",
+      "question_id": "Apa arti 机遇 (jīyù)?",
+      "options": ["Challenge", "Change", "Opportunity", "Growth"],
+      "options_id": ["Tantangan", "Perubahan", "Kesempatan", "Pertumbuhan"],
+      "correct": 2
+    },
+    {
+      "question": "Complete the sentence: ______科技的发展，生活方式也改变了。",
+      "question_id": "Lengkapi kalimat: ______科技的发展，生活方式也改变了。",
+      "options": ["随着", "沿着", "跟着", "伴着"],
+      "options_id": ["Seiring dengan", "Sepanjang", "Mengikuti", "Bersamaan dengan"],
+      "correct": 0
+    },
+    {
+      "question": "What is the best translation of 'The key lies in how to deal with change'?",
+      "question_id": "Apa terjemahan terbaik dari 'Kuncinya terletak pada bagaimana menghadapi perubahan'?",
+      "options": ["关键在于如何适应变化", "关键在于如何应对变化", "关键在于如何接受变化", "关键在于如何抗拒变化"],
+      "options_id": ["kuncinya pada bagaimana beradaptasi dengan perubahan", "kuncinya pada bagaimana menghadapi perubahan", "kuncinya pada bagaimana menerima perubahan", "kuncinya pada bagaimana menolak perubahan"],
+      "correct": 1
+    }
+  ]
+}

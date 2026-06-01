@@ -1,0 +1,228 @@
+{
+  "title": "挑战自我",
+  "subtitle": "Personal Growth, Ambition, Courage",
+  "assistant_message": "Today we learn: discussing personal challenges and growth, expressing ambition and goals, and talking about courage and perseverance.",
+  "vocabulary": [
+    {
+      "word": "挑战",
+      "pinyin": "tiǎo zhàn",
+      "meaning": "challenge",
+      "meaning_id": "tantangan",
+      "example": "接受挑战",
+      "example_translation": "accept a challenge",
+      "example_translation_id": "menerima tantangan"
+    },
+    {
+      "word": "自我",
+      "pinyin": "zì wǒ",
+      "meaning": "self",
+      "meaning_id": "diri sendiri",
+      "example": "超越自我",
+      "example_translation": "surpass oneself",
+      "example_translation_id": "melampaui diri sendiri"
+    },
+    {
+      "word": "突破",
+      "pinyin": "tū pò",
+      "meaning": "to break through",
+      "meaning_id": "terobosan",
+      "example": "实现突破",
+      "example_translation": "achieve a breakthrough",
+      "example_translation_id": "mencapai terobosan"
+    },
+    {
+      "word": "勇气",
+      "pinyin": "yǒng qì",
+      "meaning": "courage",
+      "meaning_id": "keberanian",
+      "example": "需要勇气",
+      "example_translation": "need courage",
+      "example_translation_id": "membutuhkan keberanian"
+    },
+    {
+      "word": "坚持",
+      "pinyin": "jiān chí",
+      "meaning": "to persist",
+      "meaning_id": "bertahan",
+      "example": "坚持到底",
+      "example_translation": "persevere to the end",
+      "example_translation_id": "bertahan sampai akhir"
+    },
+    {
+      "word": "目标",
+      "pinyin": "mù biāo",
+      "meaning": "goal",
+      "meaning_id": "tujuan",
+      "example": "设定目标",
+      "example_translation": "set a goal",
+      "example_translation_id": "menetapkan tujuan"
+    },
+    {
+      "word": "失败",
+      "pinyin": "shī bài",
+      "meaning": "failure",
+      "meaning_id": "kegagalan",
+      "example": "从失败中学习",
+      "example_translation": "learn from failure",
+      "example_translation_id": "belajar dari kegagalan"
+    },
+    {
+      "word": "成功",
+      "pinyin": "chéng gōng",
+      "meaning": "success",
+      "meaning_id": "kesuksesan",
+      "example": "取得成功",
+      "example_translation": "achieve success",
+      "example_translation_id": "mencapai kesuksesan"
+    },
+    {
+      "word": "克服",
+      "pinyin": "kè fú",
+      "meaning": "to overcome",
+      "meaning_id": "mengatasi",
+      "example": "克服困难",
+      "example_translation": "overcome difficulties",
+      "example_translation_id": "mengatasi kesulitan"
+    },
+    {
+      "word": "潜力",
+      "pinyin": "qián lì",
+      "meaning": "potential",
+      "meaning_id": "potensi",
+      "example": "发挥潜力",
+      "example_translation": "realize one's potential",
+      "example_translation_id": "mengeluarkan potensi"
+    }
+  ],
+  "grammar": [
+    {
+      "point": "Expressing 'Break through' with 突破 (tūpò)",
+      "point_id": "Menyatakan 'Terobosan' dengan 突破 (tūpò)",
+      "explanation": "突破 can be used as a verb meaning to break through limits, or as a noun meaning a breakthrough.",
+      "explanation_id": "突破 dapat digunakan sebagai kata kerja yang berarti menerobos batasan, atau sebagai kata benda yang berarti terobosan.",
+      "examples": [
+        {
+          "chinese": "他在事业上取得了重大突破。",
+          "translation": "He achieved a major breakthrough in his career.",
+          "translation_id": "Dia mencapai terobosan besar dalam karirnya."
+        },
+        {
+          "chinese": "我们要突破传统思维。",
+          "translation": "We need to break through traditional thinking.",
+          "translation_id": "Kita perlu menerobos pemikiran tradisional."
+        }
+      ]
+    },
+    {
+      "point": "Using 无论 (wúlùn) with 都/也 (dōu/yě) - 'No matter what'",
+      "point_id": "Menggunakan 无论 (wúlùn) dengan 都/也 (dōu/yě) - 'Tidak peduli apa pun'",
+      "explanation": "无论 (wúlùn) followed by a question word or alternative options, paired with 都 or 也 to mean 'no matter what/who/where...'",
+      "explanation_id": "无论 (wúlùn) diikuti oleh kata tanya atau pilihan alternatif, dipasangkan dengan 都 atau 也 berarti 'tidak peduli apa/siapa/di mana...'",
+      "examples": [
+        {
+          "chinese": "无论遇到什么困难，他都能坚持。",
+          "translation": "No matter what difficulties he encounters, he can persist.",
+          "translation_id": "Tidak peduli kesulitan apa yang dia hadapi, dia bisa bertahan."
+        },
+        {
+          "chinese": "无论成功还是失败，我们都要继续努力。",
+          "translation": "Whether success or failure, we must continue to work hard.",
+          "translation_id": "Entah sukses atau gagal, kita harus terus bekerja keras."
+        }
+      ]
+    },
+    {
+      "point": "Using 从...中 (cóng...zhōng) - 'From within...'",
+      "point_id": "Menggunakan 从...中 (cóng...zhōng) - 'Dari dalam...'",
+      "explanation": "This structure indicates the source or origin of an action or experience, often used with learning or gaining something.",
+      "explanation_id": "Struktur ini menunjukkan sumber atau asal dari suatu tindakan atau pengalaman, sering digunakan dengan belajar atau mendapatkan sesuatu.",
+      "examples": [
+        {
+          "chinese": "从失败中吸取教训很重要。",
+          "translation": "Learning lessons from failure is very important.",
+          "translation_id": "Belajar dari kegagalan sangat penting."
+        },
+        {
+          "chinese": "他从挑战中获得了成长。",
+          "translation": "He gained growth from challenges.",
+          "translation_id": "Dia mendapatkan pertumbuhan dari tantangan."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "female",
+      "name": "Li Mei",
+      "voice": "female",
+      "chinese": "我最近在考虑辞职去创业，但很害怕失败。",
+      "pinyin": "Wǒ zuìjìn zài kǎolǜ cízhí qù chuàngyè, dàn hěn hàipà shībài.",
+      "translation": "I've been considering quitting my job to start a business, but I'm very afraid of failing.",
+      "translation_id": "Akhir-akhir ini saya mempertimbangkan berhenti kerja untuk memulai bisnis, tapi saya sangat takut gagal."
+    },
+    {
+      "speaker": "male",
+      "name": "Wang Lei",
+      "voice": "male",
+      "chinese": "挑战自我需要很大的勇气。但是不尝试怎么知道结果呢？",
+      "pinyin": "Tiǎozhàn zìwǒ xūyào hěn dà de yǒngqì. Dànshì bù chángshì zěnme zhīdào jiéguǒ ne?",
+      "translation": "Challenging yourself requires a lot of courage. But if you don't try, how will you know the result?",
+      "translation_id": "Menantang diri sendiri membutuhkan banyak keberanian. Tapi jika tidak mencoba, bagaimana Anda tahu hasilnya?"
+    },
+    {
+      "speaker": "female",
+      "name": "Li Mei",
+      "voice": "female",
+      "chinese": "你说得对。我决定给自己一个机会，无论结果如何都要坚持下去。",
+      "pinyin": "Nǐ shuō de duì. Wǒ juédìng gěi zìjǐ yī gè jīhuì, wúlùn jiéguǒ rúhé dōu yào jiānchí xiàqù.",
+      "translation": "You're right. I've decided to give myself a chance, no matter the result, I will persist.",
+      "translation_id": "Kamu benar. Saya memutuskan untuk memberi diri saya kesempatan, tidak peduli hasilnya, saya akan bertahan."
+    },
+    {
+      "speaker": "male",
+      "name": "Wang Lei",
+      "voice": "male",
+      "chinese": "这才是突破自我的精神！记住，从挑战中我们才能认识自己的潜力。",
+      "pinyin": "Zhè cái shì tūpò zìwǒ de jīngshén! Jìzhù, cóng tiǎozhàn zhōng wǒmen cáinéng rènshi zìjǐ de qiánlì.",
+      "translation": "That's the spirit of breaking through yourself! Remember, only through challenges can we realize our potential.",
+      "translation_id": "Itulah semangat menerobos diri sendiri! Ingat, hanya melalui tantangan kita bisa menyadari potensi kita."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "What does 挑战 (tiǎozhàn) mean?",
+      "question_id": "Apa arti 挑战 (tiǎozhàn)?",
+      "options": ["Success", "Challenge", "Courage", "Goal"],
+      "options_id": ["Kesuksesan", "Tantangan", "Keberanian", "Tujuan"],
+      "correct": 1
+    },
+    {
+      "question": "How do you say 'persevere to the end' in Chinese?",
+      "question_id": "Bagaimana mengatakan 'bertahan sampai akhir' dalam bahasa Mandarin?",
+      "options": ["坚持到底", "坚持下去", "坚持目标", "坚持成功"],
+      "options_id": ["bertahan sampai akhir", "terus bertahan", "mempertahankan tujuan", "mempertahankan kesuksesan"],
+      "correct": 0
+    },
+    {
+      "question": "What does 克服 (kèfú) mean?",
+      "question_id": "Apa arti 克服 (kèfú)?",
+      "options": ["To fail", "To overcome", "To ignore", "To avoid"],
+      "options_id": ["Gagal", "Mengatasi", "Mengabaikan", "Menghindari"],
+      "correct": 1
+    },
+    {
+      "question": "Complete the sentence: 无论遇到什么困难，他______能坚持。",
+      "question_id": "Lengkapi kalimat: 无论遇到什么困难，他______能坚持。",
+      "options": ["都", "也", "还", "更"],
+      "options_id": ["dōu", "yě", "hái", "gèng"],
+      "correct": 0
+    },
+    {
+      "question": "What is the best translation of 'He gained growth from challenges'?",
+      "question_id": "Apa terjemahan terbaik dari 'Dia mendapatkan pertumbuhan dari tantangan'?",
+      "options": ["他从挑战中获得了成长", "他挑战中成长", "挑战给他成长", "他成长于挑战"],
+      "options_id": ["Dia mendapatkan pertumbuhan dari tantangan", "Dia tumbuh dalam tantangan", "Tantangan memberinya pertumbuhan", "Dia tumbuh karena tantangan"],
+      "correct": 0
+    }
+  ]
+}

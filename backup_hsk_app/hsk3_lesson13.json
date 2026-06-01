@@ -1,0 +1,51 @@
+{
+  "title": "交通越来越方便了",
+  "subtitle": "Progressive Change with 越来越, Talking About Transportation, Comparing Changes",
+  "assistant_message": "Today we learn: expressing gradual change with 越来越 (yuè lái yuè), talking about transportation, and comparing how things change over time.",
+  "vocabulary": [
+    {"word": "交通", "pinyin": "jiāo tōng", "meaning": "transportation", "meaning_id": "transportasi", "example": "交通方便", "example_translation": "transportation is convenient", "example_translation_id": "transportasi nyaman"},
+    {"word": "越来越", "pinyin": "yuè lái yuè", "meaning": "more and more", "meaning_id": "semakin", "example": "越来越好", "example_translation": "getting better and better", "example_translation_id": "semakin baik"},
+    {"word": "方便", "pinyin": "fāng biàn", "meaning": "convenient", "meaning_id": "nyaman", "example": "很方便", "example_translation": "very convenient", "example_translation_id": "sangat nyaman"},
+    {"word": "地铁", "pinyin": "dì tiě", "meaning": "subway", "meaning_id": "kereta bawah tanah", "example": "坐地铁", "example_translation": "take the subway", "example_translation_id": "naik kereta bawah tanah"},
+    {"word": "公交", "pinyin": "gōng jiāo", "meaning": "bus", "meaning_id": "bus", "example": "坐公交", "example_translation": "take the bus", "example_translation_id": "naik bus"},
+    {"word": "堵车", "pinyin": "dǔ chē", "meaning": "traffic jam", "meaning_id": "kemacetan", "example": "常常堵车", "example_translation": "often traffic jam", "example_translation_id": "sering macet"},
+    {"word": "准时", "pinyin": "zhǔn shí", "meaning": "on time", "meaning_id": "tepat waktu", "example": "很准时", "example_translation": "very on time", "example_translation_id": "sangat tepat waktu"},
+    {"word": "变化", "pinyin": "biàn huà", "meaning": "change", "meaning_id": "perubahan", "example": "很大变化", "example_translation": "big change", "example_translation_id": "perubahan besar"}
+  ],
+  "grammar": [
+    {
+      "point": "Progressive Change with 越来越 (yuè lái yuè)",
+      "point_id": "Perubahan Progresif dengan 越来越 (yuè lái yuè)",
+      "explanation": "Use 越来越 + Adjective to express 'more and more' or 'increasingly'. Structure: Subject + 越来越 + Adjective.",
+      "explanation_id": "Gunakan 越来越 + Kata Sifat untuk menyatakan 'semakin' atau 'makin'. Struktur: Subjek + 越来越 + Kata Sifat.",
+      "examples": [
+        {"chinese": "交通越来越方便了。", "translation": "Transportation is getting more and more convenient.", "translation_id": "Transportasi semakin nyaman."},
+        {"chinese": "天气越来越冷了。", "translation": "The weather is getting colder and colder.", "translation_id": "Cuaca semakin dingin."},
+        {"chinese": "汉语越来越有意思。", "translation": "Chinese is getting more and more interesting.", "translation_id": "Mandarin semakin menarik."}
+      ]
+    },
+    {
+      "point": "Talking About Change with 变化 (biànhuà)",
+      "point_id": "Membicarakan Perubahan dengan 变化 (biànhuà)",
+      "explanation": "Use 变化 as a noun to talk about changes. Structure: Subject + 有 + 很大/一些 + 变化.",
+      "explanation_id": "Gunakan 变化 sebagai kata benda untuk membicarakan perubahan. Struktur: Subjek + 有 + 很大/一些 + 变化.",
+      "examples": [
+        {"chinese": "城市有很大的变化。", "translation": "The city has changed a lot.", "translation_id": "Kota ini banyak berubah."},
+        {"chinese": "这些年有什么变化？", "translation": "What changes have there been these years?", "translation_id": "Perubahan apa yang terjadi tahun-tahun ini?"}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你们城市的交通怎么样？", "pinyin": "Nǐmen chéngshì de jiāotōng zěnme yàng?", "translation": "How is transportation in your city?", "translation_id": "Bagaimana transportasi di kotamu?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "交通越来越方便了。", "pinyin": "Jiāotōng yuè lái yuè fāngbiàn le.", "translation": "Transportation is getting more and more convenient.", "translation_id": "Transportasi semakin nyaman."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "地铁方便吗？", "pinyin": "Dìtiě fāngbiàn ma?", "translation": "Is the subway convenient?", "translation_id": "Apakah kereta bawah tanah nyaman?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "很方便，而且很准时。", "pinyin": "Hěn fāngbiàn, érqiě hěn zhǔnshí.", "translation": "Very convenient, and also very on time.", "translation_id": "Sangat nyaman, dan juga sangat tepat waktu."}
+  ],
+  "exercises": [
+    {"question": "What does 越来越 (yuè lái yuè) express?", "question_id": "Apa yang diekspresikan oleh 越来越 (yuè lái yuè)?", "options": ["Less and less", "More and more", "Same as before", "Suddenly changing"], "options_id": ["Semakin kurang", "Semakin", "Sama seperti sebelumnya", "Berubah tiba-tiba"], "correct": 1},
+    {"question": "How do you say 'Transportation is getting more and more convenient' in Chinese?", "question_id": "Bagaimana mengatakan 'Transportasi semakin nyaman' dalam bahasa Mandarin?", "options": ["交通方便了", "交通越来越方便", "交通很方便", "交通很方便了"], "options_id": ["Transportasi nyaman", "Transportasi semakin nyaman", "Transportasi sangat nyaman", "Transportasi sudah nyaman"], "correct": 1},
+    {"question": "What does 方便 (fāngbiàn) mean?", "question_id": "Apa arti 方便 (fāngbiàn)?", "options": ["Fast", "Convenient", "Cheap", "Expensive"], "options_id": ["Cepat", "Nyaman", "Murah", "Mahal"], "correct": 1},
+    {"question": "What is 地铁 (dìtiě)?", "question_id": "Apa itu 地铁 (dìtiě)?", "options": ["Bus", "Subway", "Train", "Taxi"], "options_id": ["Bus", "Kereta bawah tanah", "Kereta api", "Taksi"], "correct": 1},
+    {"question": "How to say 'traffic jam' in Chinese?", "question_id": "Bagaimana mengatakan 'kemacetan' dalam bahasa Mandarin?", "options": ["堵车", "撞车", "停车", "开车"], "options_id": ["Macet", "Tabrakan", "Parkir", "Mengemudi"], "correct": 0}
+  ]
+}

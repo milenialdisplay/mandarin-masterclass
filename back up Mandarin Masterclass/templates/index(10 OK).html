@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Mandarin Masterclass - Learn Chinese Online | HSK 1-6 Complete Curriculum</title>
+    <meta name="description" content="Complete HSK curriculum from Level 1 to 6. Interactive Chinese learning with AI tutor, writing practice, pronunciation training, and affordable pricing.">
+    <meta name="keywords" content="HSK, Chinese learning, Mandarin, online course, learn Chinese, HSK 1-6">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Poppins', system-ui, -apple-system, sans-serif;
+            background: #0a2a1a;
+            color: #1a2a1a;
+            line-height: 1.6;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #e8f5e9; }
+        ::-webkit-scrollbar-thumb { background: #2d6a4f; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #1a472a; }
+
+        /* Navigation */
+        .navbar {
+            background: #0a2a1a;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(10, 42, 26, 0.95);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffd700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            background: #ffd700;
+            color: #1a472a;
+            padding: 4px 8px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #e8f5e9;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+
+        .btn-login {
+            background: transparent;
+            border: 2px solid #ffd700;
+            color: #ffd700;
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .btn-login:hover {
+            background: #ffd700;
+            color: #1a472a;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0a2a1a 0%, #1a472a 50%, #0a2a1a 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #ffd700;
+            color: #1a472a;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #ffd700;
+            color: #ffd700;
+            padding: 12px 30px;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: #ffd700;
+            color: #1a472a;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: #1a472a;
+            padding: 30px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .stat-label {
+            color: #e8f5e9;
+            font-size: 0.9rem;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #1a472a;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #ffd700;
+            border-radius: 2px;
+        }
+
+        /* HSK Level Cards */
+        .hsk-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .hsk-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .hsk-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .hsk-header {
+            padding: 20px;
+            color: white;
+        }
+
+        .hsk-header.hsk1 { background: linear-gradient(135deg, #1e3c2c, #2d6a4f); }
+        .hsk-header.hsk2 { background: linear-gradient(135deg, #2c3e50, #3498db); }
+        .hsk-header.hsk3 { background: linear-gradient(135deg, #5d2e2e, #c0392b); }
+        .hsk-header.hsk4 { background: linear-gradient(135deg, #4a2e5d, #8e44ad); }
+        .hsk-header.hsk5 { background: linear-gradient(135deg, #2e5d4a, #27ae60); }
+        .hsk-header.hsk6 { background: linear-gradient(135deg, #5d4a2e, #d4a017); }
+
+        .hsk-level {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .hsk-cefr {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        .hsk-stats {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+            font-size: 0.85rem;
+        }
+
+        .hsk-stats span {
+            background: rgba(255,255,255,0.2);
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .hsk-body {
+            padding: 20px;
+            background: white;
+        }
+
+        .hsk-body p {
+            color: #555;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .hsk-preview {
+            font-size: 0.85rem;
+            color: #666;
+            border-top: 1px solid #eee;
+            padding-top: 12px;
+            margin-top: 8px;
+        }
+
+        .hsk-preview strong {
+            color: #1a472a;
+        }
+
+        .btn-view {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-view:hover {
+            background: #1a472a;
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid #e8f5e9;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border-color: #ffd700;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            color: #1a472a;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Pricing Preview */
+        .pricing-section {
+            background: #f0f4f0;
+            border-radius: 30px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .pricing-card.featured {
+            border: 2px solid #ffd700;
+            transform: scale(1.02);
+        }
+
+        .pricing-card h3 {
+            color: #1a472a;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffd700;
+            margin: 15px 0;
+        }
+
+        .price small {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .pricing-card li {
+            padding: 6px 0;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .btn-price {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-price:hover {
+            background: #1a472a;
+        }
+
+        .btn-wa {
+            background: #25D366;
+            color: white;
+        }
+
+        .btn-wa:hover {
+            background: #128C7E;
+        }
+
+        /* Login Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 24px;
+            padding: 35px;
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+        }
+
+        .modal-content h2 {
+            color: #1a472a;
+            margin-bottom: 10px;
+        }
+
+        .modal-content p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        .modal-input {
+            width: 100%;
+            padding: 14px;
+            margin: 12px 0;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .modal-input:focus {
+            border-color: #ffd700;
+        }
+
+        .modal-btn {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 30px;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .modal-btn:hover {
+            background: #1a472a;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .close-modal:hover {
+            color: #e94560;
+        }
+
+        .register-link {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .register-link a {
+            color: #2d6a4f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Contact/WhatsApp Section */
+        .contact-section {
+            background: linear-gradient(135deg, #0a2a1a, #1a472a);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            border-radius: 30px;
+            margin: 40px 0;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 15px;
+        }
+
+        .contact-section p {
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .btn-wa-large {
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 14px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.2s;
+        }
+
+        .btn-wa-large:hover {
+            transform: scale(1.02);
+        }
+
+        /* Footer */
+        .footer {
+            background: #0a2a1a;
+            color: #e8f5e9;
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+            font-size: 0.85rem;
+        }
+
+        .footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { justify-content: center; width: 100%; }
+            .section-title { font-size: 1.5rem; }
+            .pricing-section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="/" class="logo">
+            🀆 <span>Mandarin Masterclass</span>
+        </a>
+        <div class="nav-links">
+            <a href="#levels">HSK Levels</a>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="/lessons">📚 Lessons</a>
+            <a href="/dashboard">📊 Dashboard</a>
+            <button class="btn-login" onclick="openLoginModal()">Login</button>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Master Mandarin with Confidence</h1>
+        <p>Complete HSK curriculum from Level 1 to 6. Interactive lessons, AI tutor, writing practice, and pronunciation training — all at an affordable price.</p>
+        <div class="hero-buttons">
+            <button class="btn-primary" onclick="window.location.href='/lessons'">Start Learning Free</button>
+            <button class="btn-secondary" onclick="document.getElementById('levels').scrollIntoView({behavior: 'smooth'})">View Curriculum</button>
+        </div>
+    </div>
+</section>
+
+<div class="stats-bar">
+    <div class="stat-item">
+        <div class="stat-number">150+</div>
+        <div class="stat-label">Interactive Lessons</div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-number">5,000+</div>
+        <div class="stat-label">Vocabulary Words</div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-number">6</div>
+        <div class="stat-label">HSK Levels</div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">AI Tutor Support</div>
+    </div>
+</div>
+
+<div class="container" id="levels">
+    <h2 class="section-title">Complete HSK Curriculum</h2>
+    <div class="hsk-grid" id="hskGrid"></div>
+</div>
+
+<div class="container" id="features">
+    <h2 class="section-title">What Makes Us Different</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">✍️</div>
+            <h3>Writing Practice</h3>
+            <p>Stroke-by-stroke detection with real-time feedback. Learn to write Chinese characters correctly.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎤</div>
+            <h3>Pronunciation Training</h3>
+            <p>Voice recognition to perfect your tones and pronunciation. Practice speaking with AI feedback.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🤖</div>
+            <h3>AI Teacher Assistant</h3>
+            <p>24/7 AI tutor powered by DeepSeek. Ask questions, get translations, and learn at your pace.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🔊</div>
+            <h3>Native Audio</h3>
+            <p>High-quality TTS with male and female voices. Slow mode for better comprehension.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📷</div>
+            <h3>Image Helper</h3>
+            <p>Upload images with Chinese text — draw characters to identify and learn them.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🌐</div>
+            <h3>English / Indonesian</h3>
+            <p>Full bilingual support. Learn in English or Bahasa Indonesia.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="pricing">
+    <div class="pricing-section">
+        <h2 class="section-title" style="background: transparent;">Simple, Affordable Pricing</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Free Preview</h3>
+                <div class="price">$0 <small>/ forever</small></div>
+                <ul>
+                    <li>✓ First 3 lessons of HSK 1</li>
+                    <li>✓ Basic writing practice</li>
+                    <li>✓ Limited AI queries</li>
+                    <li>✗ Full curriculum access</li>
+                    <li>✗ Progress tracking</li>
+                </ul>
+                <button class="btn-price" onclick="window.location.href='/lessons'">Get Started</button>
+            </div>
+            <div class="pricing-card featured">
+                <h3>Full Access</h3>
+                <div class="price">$29 <small>/ 3 months</small></div>
+                <ul>
+                    <li>✓ All HSK 1-6 lessons</li>
+                    <li>✓ Unlimited writing practice</li>
+                    <li>✓ Unlimited AI tutor</li>
+                    <li>✓ Progress tracking</li>
+                    <li>✓ Certificate upon completion</li>
+                </ul>
+                <button class="btn-price" onclick="contactForPayment()">Contact for Payment</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Annual Plan</h3>
+                <div class="price">$79 <small>/ year</small></div>
+                <ul>
+                    <li>✓ All Full Access features</li>
+                    <li>✓ Save 30% vs quarterly</li>
+                    <li>✓ Priority support</li>
+                    <li>✓ Early access to new content</li>
+                </ul>
+                <button class="btn-price" onclick="contactForPayment()">Contact for Payment</button>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 25px; font-size: 0.85rem; color: #555;">
+            💡 Limited budget? <strong>Contact us</strong> for special rates or scholarships.
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="contact-section">
+        <h2>📱 Start Your Learning Journey Today</h2>
+        <p>For manual payment via WhatsApp, or if you have any questions about the course — contact us directly.</p>
+        <button class="btn-wa-large" onclick="contactWhatsApp()">
+            📞 Contact via WhatsApp
+        </button>
+        <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.7;">
+            Or email: support@mandarinmasterclass.com
+        </p>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2025 Mandarin Masterclass. All rights reserved.</p>
+    <p style="margin-top: 10px;">
+        <a href="/privacy">Privacy Policy</a> | 
+        <a href="/terms">Terms of Service</a> | 
+        <a href="#" onclick="openLoginModal()">Student Login</a>
+    </p>
+</footer>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeLoginModal()">&times;</span>
+        <h2>🔐 Student Login</h2>
+        <p>Enter your credentials provided by the admin.</p>
+        <input type="text" class="modal-input" id="loginUsername" placeholder="Username / Student ID">
+        <input type="password" class="modal-input" id="loginPassword" placeholder="Password">
+        <button class="modal-btn" onclick="attemptLogin()">Login</button>
+        <div class="register-link">
+            Don't have an account? <a href="#" onclick="contactForPayment()">Contact admin</a> to register.
+        </div>
+        <div id="loginError" style="color: #e94560; margin-top: 12px; font-size: 0.8rem;"></div>
+    </div>
+</div>
+
+<!-- Register Modal (for first-time users to request access) -->
+<div id="registerModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeRegisterModal()">&times;</span>
+        <h2>📝 Request Access</h2>
+        <p>Fill out the form below. We'll contact you within 24 hours with your login credentials.</p>
+        <input type="text" class="modal-input" id="regName" placeholder="Full Name">
+        <input type="email" class="modal-input" id="regEmail" placeholder="Email Address">
+        <input type="tel" class="modal-input" id="regWhatsApp" placeholder="WhatsApp Number (optional)">
+        <select class="modal-input" id="regLevel">
+            <option value="1">HSK Level 1 (Beginner)</option>
+            <option value="2">HSK Level 2</option>
+            <option value="3">HSK Level 3</option>
+            <option value="4">HSK Level 4</option>
+            <option value="5">HSK Level 5</option>
+            <option value="6">HSK Level 6</option>
+        </select>
+        <button class="modal-btn" onclick="submitRegistration()">Send Request</button>
+        <p style="font-size: 0.7rem; color: #888; margin-top: 12px;">We'll send login details to your WhatsApp/Email.</p>
+    </div>
+</div>
+
+<script>
+    // HSK Level Data
+    const hskLevels = [
+        { level: 1, name: "HSK Level 1", cefr: "A1", hours: "30-36 hrs", words: "150", color: "hsk1", desc: "Basic greetings, numbers, family, daily essentials.", preview: "你好, 谢谢, 再见, 名字, 老师" },
+        { level: 2, name: "HSK Level 2", cefr: "A2", hours: "30-45 hrs", words: "300", color: "hsk2", desc: "Daily routines, shopping, travel, simple conversations.", preview: "旅游, 起床, 工作, 电脑, 天气" },
+        { level: 3, name: "HSK Level 3", cefr: "B1", hours: "35-45 hrs", words: "600", color: "hsk3", desc: "Hobbies, opinions, health, education, environment.", preview: "打算, 电影, 钱包, 长城, 减肥" },
+        { level: 4, name: "HSK Level 4", cefr: "B2", hours: "45+ hrs", words: "1,200", color: "hsk4", desc: "Abstract topics, news, relationships, technology.", preview: "爱情, 朋友, 健康, 环境, 成功" },
+        { level: 5, name: "HSK Level 5", cefr: "C1", hours: "60+ hrs", words: "2,500", color: "hsk5", desc: "Professional topics, debates, advanced reading.", preview: "留学, 网购, 经济, 科技, 文化" },
+        { level: 6, name: "HSK Level 6", cefr: "C2", hours: "80+ hrs", words: "5,000+", color: "hsk6", desc: "Native-level fluency, humanities, science, arts.", preview: "哲学, 伦理, 全球化, 艺术, 创新" }
+    ];
+
+    // Render HSK Cards
+    function renderHSKCards() {
+        const grid = document.getElementById('hskGrid');
+        grid.innerHTML = hskLevels.map(l => `
+            <div class="hsk-card" onclick="goToLevel(${l.level})">
+                <div class="hsk-header ${l.color}">
+                    <div class="hsk-level">${l.name}</div>
+                    <div class="hsk-cefr">${l.cefr} | ${l.hours}</div>
+                    <div class="hsk-stats">
+                        <span>📚 15-40 Lessons</span>
+                        <span>📖 ${l.words} words</span>
+                    </div>
+                </div>
+                <div class="hsk-body">
+                    <p>${l.desc}</p>
+                    <div class="hsk-preview">
+                        <strong>Preview words:</strong> ${l.preview}
+                    </div>
+                    <button class="btn-view" onclick="event.stopPropagation(); goToLevel(${l.level})">Browse Lessons →</button>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function goToLevel(level) {
+        window.location.href = `/lessons?level=${level}`;
+    }
+
+    // Modal functions
+    function openLoginModal() {
+        document.getElementById('loginModal').classList.add('active');
+        document.getElementById('loginError').innerHTML = '';
+    }
+
+    function closeLoginModal() {
+        document.getElementById('loginModal').classList.remove('active');
+    }
+
+    function openRegisterModal() {
+        closeLoginModal();
+        document.getElementById('registerModal').classList.add('active');
+    }
+
+    function closeRegisterModal() {
+        document.getElementById('registerModal').classList.remove('active');
+    }
+
+    // Demo login (will be connected to backend later)
+    function attemptLogin() {
+        const username = document.getElementById('loginUsername').value.trim();
+        const password = document.getElementById('loginPassword').value.trim();
+        const errorDiv = document.getElementById('loginError');
+
+        if (!username || !password) {
+            errorDiv.innerHTML = '⚠️ Please enter both username and password.';
+            return;
+        }
+
+        // For demo - in production, this will call /api/login
+        // For now, redirect to lessons if password matches demo pattern
+        if (password === 'demo123' || username === 'student') {
+            window.location.href = '/lessons';
+        } else {
+            errorDiv.innerHTML = '❌ Invalid credentials. Contact admin for your password.';
+        }
+    }
+
+    // Contact functions
+    function contactForPayment() {
+        const phoneNumber = "6281234567890"; // Replace with your WhatsApp number
+        const message = "Hello! I'm interested in purchasing Mandarin Masterclass full access. Please send me payment instructions.";
+        window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+    }
+
+    function contactWhatsApp() {
+        const phoneNumber = "6281234567890"; // Replace with your WhatsApp number
+        const message = "Hello! I'm interested in learning Chinese with Mandarin Masterclass. Please tell me more.";
+        window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+    }
+
+    function submitRegistration() {
+        const name = document.getElementById('regName').value;
+        const email = document.getElementById('regEmail').value;
+        const wa = document.getElementById('regWhatsApp').value;
+        const level = document.getElementById('regLevel').value;
+
+        if (!name || !email) {
+            alert('Please enter your name and email address.');
+            return;
+        }
+
+        const message = `New Registration Request:\nName: ${name}\nEmail: ${email}\nWhatsApp: ${wa || 'Not provided'}\nHSK Level: ${level}`;
+        const phoneNumber = "6281234567890";
+        window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+        closeRegisterModal();
+        alert('Request sent! We will contact you within 24 hours.');
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        const loginModal = document.getElementById('loginModal');
+        const registerModal = document.getElementById('registerModal');
+        if (event.target === loginModal) closeLoginModal();
+        if (event.target === registerModal) closeRegisterModal();
+    }
+
+    // Initialize
+    renderHSKCards();
+
+    // Expose functions globally
+    window.openLoginModal = openLoginModal;
+    window.closeLoginModal = closeLoginModal;
+    window.openRegisterModal = openRegisterModal;
+    window.closeRegisterModal = closeRegisterModal;
+    window.attemptLogin = attemptLogin;
+    window.contactForPayment = contactForPayment;
+    window.contactWhatsApp = contactWhatsApp;
+    window.submitRegistration = submitRegistration;
+    window.goToLevel = goToLevel;
+</script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+{
+  "title": "危机处理",
+  "subtitle": "Crisis Management, Problem-Solving, Decision Making Under Pressure",
+  "assistant_message": "Today we learn: discussing crisis management strategies, expressing problem-solving approaches, and talking about decision-making under pressure.",
+  "vocabulary": [
+    {
+      "word": "危机",
+      "pinyin": "wēi jī",
+      "meaning": "crisis",
+      "meaning_id": "krisis",
+      "example": "应对危机",
+      "example_translation": "respond to a crisis",
+      "example_translation_id": "merespons krisis"
+    },
+    {
+      "word": "处理",
+      "pinyin": "chǔ lǐ",
+      "meaning": "to handle",
+      "meaning_id": "menangani",
+      "example": "妥善处理",
+      "example_translation": "handle properly",
+      "example_translation_id": "menangani dengan baik"
+    },
+    {
+      "word": "紧急",
+      "pinyin": "jǐn jí",
+      "meaning": "urgent",
+      "meaning_id": "mendesak",
+      "example": "紧急情况",
+      "example_translation": "emergency situation",
+      "example_translation_id": "situasi darurat"
+    },
+    {
+      "word": "应对",
+      "pinyin": "yìng duì",
+      "meaning": "to cope with",
+      "meaning_id": "menghadapi",
+      "example": "应对挑战",
+      "example_translation": "cope with challenges",
+      "example_translation_id": "menghadapi tantangan"
+    },
+    {
+      "word": "预防",
+      "pinyin": "yù fáng",
+      "meaning": "to prevent",
+      "meaning_id": "mencegah",
+      "example": "预防措施",
+      "example_translation": "preventive measures",
+      "example_translation_id": "tindakan pencegahan"
+    },
+    {
+      "word": "评估",
+      "pinyin": "píng gū",
+      "meaning": "to assess",
+      "meaning_id": "menilai",
+      "example": "评估风险",
+      "example_translation": "assess risks",
+      "example_translation_id": "menilai risiko"
+    },
+    {
+      "word": "方案",
+      "pinyin": "fāng àn",
+      "meaning": "plan/solution",
+      "meaning_id": "rencana/solusi",
+      "example": "制定方案",
+      "example_translation": "develop a plan",
+      "example_translation_id": "mengembangkan rencana"
+    },
+    {
+      "word": "果断",
+      "pinyin": "guǒ duàn",
+      "meaning": "decisive",
+      "meaning_id": "tegas",
+      "example": "果断决策",
+      "example_translation": "make decisive decisions",
+      "example_translation_id": "membuat keputusan tegas"
+    },
+    {
+      "word": "恢复",
+      "pinyin": "huī fù",
+      "meaning": "to recover",
+      "meaning_id": "memulihkan",
+      "example": "恢复正常",
+      "example_translation": "return to normal",
+      "example_translation_id": "kembali normal"
+    },
+    {
+      "word": "教训",
+      "pinyin": "jiào xùn",
+      "meaning": "lesson (from experience)",
+      "meaning_id": "pelajaran (dari pengalaman)",
+      "example": "吸取教训",
+      "example_translation": "learn a lesson",
+      "example_translation_id": "mengambil pelajaran"
+    }
+  ],
+  "grammar": [
+    {
+      "point": "Using 以免 (yǐmiǎn) - 'To avoid'",
+      "point_id": "Menggunakan 以免 (yǐmiǎn) - 'Untuk menghindari'",
+      "explanation": "以免 means 'in order to avoid' or 'lest', indicating the purpose of preventing a negative outcome.",
+      "explanation_id": "以免 berarti 'untuk menghindari', menunjukkan tujuan mencegah hasil negatif.",
+      "examples": [
+        {
+          "chinese": "提前做好准备，以免出现意外。",
+          "translation": "Prepare in advance to avoid accidents.",
+          "translation_id": "Persiapkan terlebih dahulu untuk menghindari kecelakaan."
+        },
+        {
+          "chinese": "遵守规定，以免发生危险。",
+          "translation": "Follow the rules to avoid danger.",
+          "translation_id": "Ikuti aturan untuk menghindari bahaya."
+        }
+      ]
+    },
+    {
+      "point": "Using 鉴于 (jiànyú) - 'In light of'",
+      "point_id": "Menggunakan 鉴于 (jiànyú) - 'Mengingat'",
+      "explanation": "鉴于 is used to introduce a reason or consideration, similar to 'in light of' or 'given that'.",
+      "explanation_id": "鉴于 digunakan untuk memperkenalkan alasan atau pertimbangan, mirip dengan 'mengingat'.",
+      "examples": [
+        {
+          "chinese": "鉴于当前形势，我们需要改变策略。",
+          "translation": "In light of the current situation, we need to change our strategy.",
+          "translation_id": "Mengingat situasi saat ini, kita perlu mengubah strategi."
+        },
+        {
+          "chinese": "鉴于他的表现，公司决定奖励他。",
+          "translation": "In light of his performance, the company decided to reward him.",
+          "translation_id": "Mengingat kinerjanya, perusahaan memutuskan untuk menghadiahinya."
+        }
+      ]
+    },
+    {
+      "point": "Using 无论如何 (wúlùn rúhé) - 'No matter what'",
+      "point_id": "Menggunakan 无论如何 (wúlùn rúhé) - 'Tidak peduli apa pun'",
+      "explanation": "无论如何 means 'no matter what' or 'in any case', emphasizing that something will happen regardless of circumstances.",
+      "explanation_id": "无论如何 berarti 'tidak peduli apa pun', menekankan bahwa sesuatu akan terjadi terlepas dari keadaan.",
+      "examples": [
+        {
+          "chinese": "无论如何，我们都要完成这个任务。",
+          "translation": "No matter what, we must complete this task.",
+          "translation_id": "Tidak peduli apa pun, kita harus menyelesaikan tugas ini."
+        },
+        {
+          "chinese": "无论如何，安全第一。",
+          "translation": "In any case, safety comes first.",
+          "translation_id": "Bagaimanapun juga, keselamatan adalah yang utama."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "male",
+      "name": "Liu Feng",
+      "voice": "male",
+      "chinese": "公司遇到了严重的财务危机，情况很紧急。我们该怎么办？",
+      "pinyin": "Gōngsī yù dào le yánzhòng de cáiwù wēijī, qíngkuàng hěn jǐnjí. Wǒmen gāi zěnme bàn?",
+      "translation": "The company is facing a serious financial crisis. The situation is urgent. What should we do?",
+      "translation_id": "Perusahaan menghadapi krisis keuangan serius. Situasinya mendesak. Apa yang harus kita lakukan?"
+    },
+    {
+      "speaker": "female",
+      "name": "Chen Mei",
+      "voice": "female",
+      "chinese": "首先，我们需要冷静评估风险，找出问题的根源。预防措施也要立即实施。",
+      "pinyin": "Shǒuxiān, wǒmen xūyào lěngjìng pínggū fēngxiǎn, zhǎo chū wèntí de gēnyuán. Yùfáng cuòshī yě yào lìjí shíshī.",
+      "translation": "First, we need to calmly assess the risks and find the root cause of the problem. Preventive measures must also be implemented immediately.",
+      "translation_id": "Pertama, kita perlu menilai risiko dengan tenang dan menemukan akar penyebab masalah. Tindakan pencegahan juga harus segera dilaksanakan."
+    },
+    {
+      "speaker": "male",
+      "name": "Liu Feng",
+      "voice": "male",
+      "chinese": "我们需要制定几个应对方案，然后做出果断的决策。",
+      "pinyin": "Wǒmen xūyào zhìdìng jǐ gè yìngduì fāng'àn, ránhòu zuò chū guǒduàn de juécè.",
+      "translation": "We need to develop several response plans, then make decisive decisions.",
+      "translation_id": "Kita perlu mengembangkan beberapa rencana respons, lalu membuat keputusan tegas."
+    },
+    {
+      "speaker": "female",
+      "name": "Chen Mei",
+      "voice": "female",
+      "chinese": "无论如何，我们要尽快恢复正常运营。这次危机结束后，一定要吸取教训，以免再次发生类似问题。",
+      "pinyin": "Wúlùn rúhé, wǒmen yào jǐnkuài huīfù zhèngcháng yùnyíng. Zhè cì wēijī jiéshù hòu, yīdìng yào xīqǔ jiàoxùn, yǐmiǎn zàicì fāshēng lèisì wèntí.",
+      "translation": "No matter what, we need to return to normal operations as soon as possible. After this crisis is over, we must learn lessons to avoid similar problems happening again.",
+      "translation_id": "Tidak peduli apa pun, kita perlu kembali ke operasi normal sesegera mungkin. Setelah krisis ini berakhir, kita harus mengambil pelajaran untuk menghindari masalah serupa terjadi lagi."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "What does 危机 (wēijī) mean?",
+      "question_id": "Apa arti 危机 (wēijī)?",
+      "options": ["Opportunity", "Crisis", "Success", "Plan"],
+      "options_id": ["Kesempatan", "Krisis", "Kesuksesan", "Rencana"],
+      "correct": 1
+    },
+    {
+      "question": "How do you say 'decisive' in Chinese?",
+      "question_id": "Bagaimana mengatakan 'tegas' dalam bahasa Mandarin?",
+      "options": ["紧急", "果断", "谨慎", "犹豫"],
+      "options_id": ["mendesak", "tegas", "hati-hati", "ragu-ragu"],
+      "correct": 1
+    },
+    {
+      "question": "What does 吸取教训 (xīqǔ jiàoxùn) mean?",
+      "question_id": "Apa arti 吸取教训 (xīqǔ jiàoxùn)?",
+      "options": ["Give a lesson", "Learn a lesson", "Teach a lesson", "Ignore a lesson"],
+      "options_id": ["Memberi pelajaran", "Mengambil pelajaran", "Mengajar pelajaran", "Mengabaikan pelajaran"],
+      "correct": 1
+    },
+    {
+      "question": "Complete the sentence: 提前做好准备，______出现意外。",
+      "question_id": "Lengkapi kalimat: 提前做好准备，______出现意外。",
+      "options": ["为了", "所以", "以免", "因此"],
+      "options_id": ["untuk", "jadi", "untuk menghindari", "oleh karena itu"],
+      "correct": 2
+    },
+    {
+      "question": "What does 恢复 (huīfù) mean?",
+      "question_id": "Apa arti 恢复 (huīfù)?",
+      "options": ["To prevent", "To recover", "To assess", "To handle"],
+      "options_id": ["Mencegah", "Memulihkan", "Menilai", "Menangani"],
+      "correct": 1
+    }
+  ]
+}

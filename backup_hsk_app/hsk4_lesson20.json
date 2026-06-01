@@ -1,0 +1,50 @@
+{
+  "title": "成功的秘诀",
+  "subtitle": "Talking About Success, Motivation, and Persistence",
+  "assistant_message": "Today we learn: discussing the secrets of success, using 总而言之 (zǒng'ér yánzhī) for 'in conclusion', and sharing motivation.",
+  "vocabulary": [
+    {"word": "成功", "pinyin": "chéng gōng", "meaning": "success", "meaning_id": "keberhasilan", "example": "获得成功", "example_translation": "achieve success", "example_translation_id": "meraih keberhasilan"},
+    {"word": "秘诀", "pinyin": "mì jué", "meaning": "secret", "meaning_id": "rahasia", "example": "成功的秘诀", "example_translation": "the secret to success", "example_translation_id": "rahasia kesuksesan"},
+    {"word": "努力", "pinyin": "nǔ lì", "meaning": "hard work", "meaning_id": "kerja keras", "example": "不断努力", "example_translation": "keep working hard", "example_translation_id": "terus bekerja keras"},
+    {"word": "坚持", "pinyin": "jiān chí", "meaning": "persistence", "meaning_id": "ketekunan", "example": "长期坚持", "example_translation": "long-term persistence", "example_translation_id": "ketekunan jangka panjang"},
+    {"word": "态度", "pinyin": "tài dù", "meaning": "attitude", "meaning_id": "sikap", "example": "积极态度", "example_translation": "positive attitude", "example_translation_id": "sikap positif"},
+    {"word": "勤奋", "pinyin": "qín fèn", "meaning": "diligent", "meaning_id": "rajin", "example": "勤奋学习", "example_translation": "study diligently", "example_translation_id": "belajar dengan rajin"},
+    {"word": "机遇", "pinyin": "jī yù", "meaning": "opportunity", "meaning_id": "kesempatan", "example": "抓住机遇", "example_translation": "seize the opportunity", "example_translation_id": "memanfaatkan kesempatan"},
+    {"word": "失败", "pinyin": "shī bài", "meaning": "failure", "meaning_id": "kegagalan", "example": "不怕失败", "example_translation": "not afraid of failure", "example_translation_id": "tidak takut gagal"}
+  ],
+  "grammar": [
+    {
+      "point": "Using 总而言之 (zǒng'ér yánzhī) for 'In Conclusion'",
+      "point_id": "Menggunakan 总而言之 (zǒng'ér yánzhī) untuk 'Kesimpulannya'",
+      "explanation": "总而言之 is used to summarize main points and give a final conclusion.",
+      "explanation_id": "总而言之 digunakan untuk merangkum poin-poin utama dan memberikan kesimpulan akhir.",
+      "examples": [
+        {"chinese": "努力、坚持、态度都很重要。总而言之，成功没有捷径。", "translation": "Hard work, persistence, and attitude are all important. In conclusion, there is no shortcut to success.", "translation_id": "Kerja keras, ketekunan, dan sikap semuanya penting. Kesimpulannya, tidak ada jalan pintas menuju kesuksesan."},
+        {"chinese": "总而言之，只要努力，就能成功。", "translation": "In conclusion, as long as you work hard, you can succeed.", "translation_id": "Kesimpulannya, asalkan kamu bekerja keras, kamu bisa berhasil."}
+      ]
+    },
+    {
+      "point": "Using 综上所述 (zōng shàng suǒ shù) for 'To Summarize'",
+      "point_id": "Menggunakan 综上所述 (zōng shàng suǒ shù) untuk 'Ringkasnya'",
+      "explanation": "综上所述 is a formal way to summarize points mentioned above.",
+      "explanation_id": "综上所述 adalah cara formal untuk merangkum poin-poin yang disebutkan di atas.",
+      "examples": [
+        {"chinese": "综上所述，成功需要多方面的因素。", "translation": "To summarize, success requires multiple factors.", "translation_id": "Ringkasnya, kesuksesan membutuhkan banyak faktor."},
+        {"chinese": "综上所述，我们应该继续努力。", "translation": "To summarize, we should continue to work hard.", "translation_id": "Ringkasnya, kita harus terus bekerja keras."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你认为成功的秘诀是什么？", "pinyin": "Nǐ rènwéi chénggōng de mìjué shì shénme?", "translation": "What do you think is the secret to success?", "translation_id": "Menurutmu apa rahasia kesuksesan?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我觉得是努力和坚持。没有努力，就不会有收获。", "pinyin": "Wǒ juéde shì nǔlì hé jiānchí. Méiyǒu nǔlì, jiù bù huì yǒu shōuhuò.", "translation": "I think it's hard work and persistence. Without hard work, there will be no gains.", "translation_id": "Saya pikir itu adalah kerja keras dan ketekunan. Tanpa kerja keras, tidak akan ada hasil."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "还要有积极的态度和抓住机遇的能力。", "pinyin": "Hái yào yǒu jījí de tàidù hé zhuāzhù jīyù de nénglì.", "translation": "You also need a positive attitude and the ability to seize opportunities.", "translation_id": "Kamu juga perlu sikap positif dan kemampuan memanfaatkan kesempatan."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "总而言之，成功没有捷径，只有不断努力。", "pinyin": "Zǒng'ér yánzhī, chénggōng méiyǒu jiéjìng, zhǐyǒu bùduàn nǔlì.", "translation": "In conclusion, there is no shortcut to success, only continuous hard work.", "translation_id": "Kesimpulannya, tidak ada jalan pintas menuju kesuksesan, hanya kerja keras yang terus-menerus."}
+  ],
+  "exercises": [
+    {"question": "What does 成功 (chénggōng) mean?", "question_id": "Apa arti 成功 (chénggōng)?", "options": ["Failure", "Success", "Progress", "Growth"], "options_id": ["Kegagalan", "Keberhasilan", "Kemajuan", "Pertumbuhan"], "correct": 1},
+    {"question": "How do you say 'the secret to success' in Chinese?", "question_id": "Bagaimana mengatakan 'rahasia kesuksesan' dalam bahasa Mandarin?", "options": ["成功的秘密", "成功的秘诀", "成功的窍门", "成功的钥匙"], "options_id": ["rahasia kesuksesan", "rahasia kesuksesan", "kunci kesuksesan", "kunci kesuksesan"], "correct": 1},
+    {"question": "What does 总而言之 (zǒng'ér yánzhī) mean?", "question_id": "Apa arti 总而言之 (zǒng'ér yánzhī)?", "options": ["In addition", "In conclusion", "In contrast", "In detail"], "options_id": ["Sebagai tambahan", "Kesimpulannya", "Sebaliknya", "Secara detail"], "correct": 1},
+    {"question": "What is 态度 (tàidù)?", "question_id": "Apa itu 态度 (tàidù)?", "options": ["Ability", "Attitude", "Skill", "Talent"], "options_id": ["Kemampuan", "Sikap", "Keterampilan", "Bakat"], "correct": 1},
+    {"question": "How to say 'seize the opportunity' in Chinese?", "question_id": "Bagaimana mengatakan 'memanfaatkan kesempatan' dalam bahasa Mandarin?", "options": ["抓住机会", "抓住机遇", "把握机会", "All of the above"], "options_id": ["memanfaatkan kesempatan", "memanfaatkan kesempatan", "memanfaatkan kesempatan", "Semua di atas"], "correct": 3}
+  ]
+}

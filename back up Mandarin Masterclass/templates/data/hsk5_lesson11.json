@@ -1,0 +1,60 @@
+{
+  "title": "城市发展",
+  "subtitle": "Urban Development, City Planning, Modernization",
+  "assistant_message": "Today we learn: discussing urban development, using 随着 (suízhe) and 越来越 (yuèláiyuè), and describing city changes.",
+  "vocabulary": [
+    {"word": "城市", "pinyin": "chéng shì", "meaning": "city", "meaning_id": "kota", "example": "现代化城市", "example_translation": "modern city", "example_translation_id": "kota modern"},
+    {"word": "发展", "pinyin": "fā zhǎn", "meaning": "development", "meaning_id": "perkembangan", "example": "快速发展", "example_translation": "rapid development", "example_translation_id": "perkembangan pesat"},
+    {"word": "建设", "pinyin": "jiàn shè", "meaning": "construction", "meaning_id": "pembangunan", "example": "城市建设", "example_translation": "urban construction", "example_translation_id": "pembangunan kota"},
+    {"word": "规划", "pinyin": "guī huà", "meaning": "planning", "meaning_id": "perencanaan", "example": "城市规划", "example_translation": "urban planning", "example_translation_id": "perencanaan kota"},
+    {"word": "交通", "pinyin": "jiāo tōng", "meaning": "transportation", "meaning_id": "transportasi", "example": "交通便利", "example_translation": "convenient transportation", "example_translation_id": "transportasi nyaman"},
+    {"word": "环境", "pinyin": "huán jìng", "meaning": "environment", "meaning_id": "lingkungan", "example": "生活环境", "example_translation": "living environment", "example_translation_id": "lingkungan hidup"},
+    {"word": "人口", "pinyin": "rén kǒu", "meaning": "population", "meaning_id": "populasi", "example": "人口增长", "example_translation": "population growth", "example_translation_id": "pertumbuhan populasi"},
+    {"word": "现代化", "pinyin": "xiàn dài huà", "meaning": "modernization", "meaning_id": "modernisasi", "example": "城市现代化", "example_translation": "urban modernization", "example_translation_id": "modernisasi kota"}
+  ],
+  "grammar": [
+    {
+      "point": "随着 (suízhe) - As...",
+      "point_id": "随着 (suízhe) - Seiring dengan...",
+      "explanation": "随着 is used to indicate that as one thing changes, another changes accordingly. Often used at the beginning of a sentence.",
+      "explanation_id": "随着 digunakan untuk menunjukkan bahwa seiring satu hal berubah, hal lain berubah sesuai. Sering digunakan di awal kalimat.",
+      "examples": [
+        {"chinese": "随着经济的发展，城市建设越来越好。", "translation": "As the economy develops, urban construction gets better and better.", "translation_id": "Seiring perkembangan ekonomi, pembangunan kota semakin baik."},
+        {"chinese": "随着人口的增长，交通压力也越来越大。", "translation": "As the population grows, transportation pressure also increases.", "translation_id": "Seiring pertumbuhan populasi, tekanan transportasi juga meningkat."}
+      ]
+    },
+    {
+      "point": "越来越 (yuè lái yuè) - More and more",
+      "point_id": "越来越 (yuè lái yuè) - Semakin",
+      "explanation": "越来越 + adjective means 'more and more', indicating gradual change.",
+      "explanation_id": "越来越 + kata sifat berarti 'semakin', menunjukkan perubahan bertahap.",
+      "examples": [
+        {"chinese": "城市越来越现代化了。", "translation": "Cities are becoming more and more modern.", "translation_id": "Kota menjadi semakin modern."},
+        {"chinese": "人们的生活环境越来越好。", "translation": "People's living environment is getting better and better.", "translation_id": "Lingkungan hidup masyarakat semakin baik."}
+      ]
+    },
+    {
+      "point": "不仅...而且... (bùjǐn... érqiě...) - Not only... but also...",
+      "point_id": "不仅...而且... (bùjǐn... érqiě...) - Tidak hanya... tetapi juga...",
+      "explanation": "不仅 introduces one point, and 而且 adds another point of equal or greater importance.",
+      "explanation_id": "不仅 memperkenalkan satu poin, dan 而且 menambahkan poin lain yang sama atau lebih penting.",
+      "examples": [
+        {"chinese": "城市发展不仅提高了生活水平，而且创造了更多就业机会。", "translation": "Urban development not only improves living standards, but also creates more job opportunities.", "translation_id": "Perkembangan kota tidak hanya meningkatkan standar hidup, tetapi juga menciptakan lebih banyak lapangan kerja."},
+        {"chinese": "这个城市不仅交通便利，而且环境优美。", "translation": "This city not only has convenient transportation, but also has a beautiful environment.", "translation_id": "Kota ini tidak hanya memiliki transportasi yang nyaman, tetapi juga memiliki lingkungan yang indah."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "这个城市变化真大。", "pinyin": "Zhège chéngshì biànhuà zhēn dà.", "translation": "This city has changed so much.", "translation_id": "Kota ini banyak berubah."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "随着经济的发展，城市建设越来越好了。", "pinyin": "Suízhe jīngjì de fāzhǎn, chéngshì jiànshè yuè lái yuè hǎo le.", "translation": "As the economy develops, urban construction is getting better and better.", "translation_id": "Seiring perkembangan ekonomi, pembangunan kota semakin baik."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "交通方便了，环境也改善了。", "pinyin": "Jiāotōng fāngbiàn le, huánjìng yě gǎishàn le.", "translation": "Transportation is convenient, and the environment has also improved.", "translation_id": "Transportasi nyaman, dan lingkungan juga membaik."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "但是人口也越来越多，带来了新的挑战。城市发展不仅有利，也有弊。", "pinyin": "Dànshì rénkǒu yě yuè lái yuè duō, dài lái le xīn de tiǎozhàn. Chéngshì fāzhǎn bùjǐn yǒu lì, yě yǒu bì.", "translation": "But the population is also growing, bringing new challenges. Urban development not only has benefits, but also drawbacks.", "translation_id": "Tapi populasi juga semakin bertambah, membawa tantangan baru. Perkembangan kota tidak hanya memiliki keuntungan, tetapi juga kerugian."}
+  ],
+  "exercises": [
+    {"question": "What does 城市 (chéngshì) mean?", "question_id": "Apa arti 城市 (chéngshì)?", "options": ["Country", "City", "Village", "Town"], "options_id": ["Negara", "Kota", "Desa", "Kota kecil"], "correct": 1},
+    {"question": "How do you say 'urban planning' in Chinese?", "question_id": "Bagaimana mengatakan 'perencanaan kota' dalam bahasa Mandarin?", "options": ["城市规划", "城市建设", "城市发展", "城市管理"], "options_id": ["perencanaan kota", "pembangunan kota", "perkembangan kota", "manajemen kota"], "correct": 0},
+    {"question": "What does the structure 随着... express?", "question_id": "Apa yang diekspresikan oleh struktur 随着...?", "options": ["As (indicating change)", "Because", "Although", "If"], "options_id": ["Seiring (menunjukkan perubahan)", "Karena", "Meskipun", "Jika"], "correct": 0},
+    {"question": "How do you say 'more and more modern' in Chinese?", "question_id": "Bagaimana mengatakan 'semakin modern' dalam bahasa Mandarin?", "options": ["很现代", "越来越现代", "非常现代", "特别现代"], "options_id": ["sangat modern", "semakin modern", "sangat modern", "sangat modern"], "correct": 1},
+    {"question": "What does 交通 (jiāotōng) mean?", "question_id": "Apa arti 交通 (jiāotōng)?", "options": ["Communication", "Transportation", "Education", "Economy"], "options_id": ["Komunikasi", "Transportasi", "Pendidikan", "Ekonomi"], "correct": 1}
+  ]
+}

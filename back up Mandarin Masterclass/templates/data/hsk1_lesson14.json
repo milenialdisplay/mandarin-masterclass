@@ -1,0 +1,50 @@
+{
+  "title": "她买了不少衣服",
+  "subtitle": "Talking About Completed Actions, Using Particle 了, Discussing Shopping",
+  "assistant_message": "Today we learn: talking about completed actions with 了 (le), discussing shopping, and using colors (红色, 蓝色).",
+  "vocabulary": [
+    {"word": "了", "pinyin": "le", "meaning": "completed action particle", "meaning_id": "partikel aksi selesai", "example": "我吃了饭", "example_translation": "I ate (meal)", "example_translation_id": "Saya sudah makan"},
+    {"word": "买", "pinyin": "mǎi", "meaning": "to buy", "meaning_id": "membeli", "example": "买东西", "example_translation": "buy things", "example_translation_id": "membeli barang"},
+    {"word": "衣服", "pinyin": "yī fu", "meaning": "clothes", "meaning_id": "pakaian", "example": "买衣服", "example_translation": "buy clothes", "example_translation_id": "membeli pakaian"},
+    {"word": "颜色", "pinyin": "yán sè", "meaning": "color", "meaning_id": "warna", "example": "什么颜色", "example_translation": "what color", "example_translation_id": "warna apa"},
+    {"word": "红色", "pinyin": "hóng sè", "meaning": "red", "meaning_id": "merah", "example": "红色衣服", "example_translation": "red clothes", "example_translation_id": "pakaian merah"},
+    {"word": "蓝色", "pinyin": "lán sè", "meaning": "blue", "meaning_id": "biru", "example": "蓝色裙子", "example_translation": "blue dress", "example_translation_id": "gaun biru"},
+    {"word": "钱", "pinyin": "qián", "meaning": "money", "meaning_id": "uang", "example": "多少钱", "example_translation": "how much money", "example_translation_id": "berapa uangnya"},
+    {"word": "块", "pinyin": "kuài", "meaning": "yuan (unit of money)", "meaning_id": "yuan (satuan uang)", "example": "十块钱", "example_translation": "ten yuan", "example_translation_id": "sepuluh yuan"}
+  ],
+  "grammar": [
+    {
+      "point": "Completed Action with 了 (le)",
+      "point_id": "Aksi Selesai dengan 了 (le)",
+      "explanation": "Place 了 after the verb to indicate that an action has been completed.",
+      "explanation_id": "Letakkan 了 setelah kata kerja untuk menunjukkan bahwa aksi telah selesai.",
+      "examples": [
+        {"chinese": "我吃了饭。", "translation": "I ate (a meal).", "translation_id": "Saya sudah makan."},
+        {"chinese": "她买了一件衣服。", "translation": "She bought a piece of clothing.", "translation_id": "Dia membeli sepotong pakaian."}
+      ]
+    },
+    {
+      "point": "Talking About Shopping: 买 (mǎi) and 多少钱 (duōshao qián)",
+      "point_id": "Membicarakan Belanja: 买 (mǎi) dan 多少钱 (duōshao qián)",
+      "explanation": "Use 买 to mean 'to buy'. Ask price with 多少钱 (how much money).",
+      "explanation_id": "Gunakan 买 untuk berarti 'membeli'. Tanya harga dengan 多少钱 (berapa uangnya).",
+      "examples": [
+        {"chinese": "这个多少钱？", "translation": "How much is this?", "translation_id": "Berapa ini?"},
+        {"chinese": "我买了一本书。", "translation": "I bought a book.", "translation_id": "Saya membeli sebuah buku."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你买了什么？", "pinyin": "Nǐ mǎi le shénme?", "translation": "What did you buy?", "translation_id": "Apa yang kamu beli?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我买了一件红色衣服。", "pinyin": "Wǒ mǎi le yī jiàn hóngsè yīfu.", "translation": "I bought a red piece of clothing.", "translation_id": "Saya membeli pakaian merah."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "花了多少钱？", "pinyin": "Huā le duōshao qián?", "translation": "How much did you spend?", "translation_id": "Berapa uang yang kamu keluarkan?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "花了一百块。", "pinyin": "Huā le yī bǎi kuài.", "translation": "I spent one hundred yuan.", "translation_id": "Saya mengeluarkan seratus yuan."}
+  ],
+  "exercises": [
+    {"question": "What does 了 (le) indicate after a verb?", "question_id": "Apa yang ditunjukkan 了 (le) setelah kata kerja?", "options": ["Ongoing action", "Future action", "Completed action", "Possible action"], "options_id": ["Aksi sedang berlangsung", "Aksi masa depan", "Aksi selesai", "Aksi mungkin"], "correct": 2},
+    {"question": "How do you say 'I bought red clothes' in Chinese?", "question_id": "Bagaimana mengatakan 'Saya membeli pakaian merah' dalam bahasa Mandarin?", "options": ["我买红色衣服", "我买了红色衣服", "我想买红色衣服", "我会买红色衣服"], "options_id": ["Saya beli pakaian merah", "Saya sudah beli pakaian merah", "Saya ingin beli pakaian merah", "Saya bisa beli pakaian merah"], "correct": 1},
+    {"question": "What is 红色 (hóngsè)?", "question_id": "Apa itu 红色 (hóngsè)?", "options": ["Blue", "Red", "Yellow", "Green"], "options_id": ["Biru", "Merah", "Kuning", "Hijau"], "correct": 1},
+    {"question": "How to ask 'How much is this?' in Chinese?", "question_id": "Bagaimana bertanya 'Berapa ini?' dalam bahasa Mandarin?", "options": ["这是什么？", "这是多少？", "这个多少钱？", "这个怎么样？"], "options_id": ["Apa ini?", "Ini berapa?", "Ini berapa uangnya?", "Ini bagaimana?"], "correct": 2},
+    {"question": "What does 不少 (bù shǎo) mean?", "question_id": "Apa arti 不少 (bù shǎo)?", "options": ["A little", "Not many", "Quite a few", "None"], "options_id": ["Sedikit", "Tidak banyak", "Cukup banyak", "Tidak ada"], "correct": 2}
+  ]
+}

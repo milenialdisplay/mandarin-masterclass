@@ -1,0 +1,52 @@
+{
+  "title": "他比我大三岁",
+  "subtitle": "Making Comparisons with 比, Expressing Age Differences, Using 多/少 for Quantity",
+  "assistant_message": "Today we learn: making comparisons with 比 (bǐ), expressing age differences, and using 多/少 (duō/shao) for quantity comparisons.",
+  "vocabulary": [
+    {"word": "比", "pinyin": "bǐ", "meaning": "than (comparison)", "meaning_id": "daripada (perbandingan)", "example": "我比你高", "example_translation": "I am taller than you", "example_translation_id": "Saya lebih tinggi darimu"},
+    {"word": "大", "pinyin": "dà", "meaning": "big/older", "meaning_id": "besar/lebih tua", "example": "他比我大", "example_translation": "He is older than me", "example_translation_id": "Dia lebih tua dariku"},
+    {"word": "小", "pinyin": "xiǎo", "meaning": "small/younger", "meaning_id": "kecil/lebih muda", "example": "他比我小", "example_translation": "He is younger than me", "example_translation_id": "Dia lebih muda dariku"},
+    {"word": "多", "pinyin": "duō", "meaning": "more/many", "meaning_id": "lebih/banyak", "example": "多三岁", "example_translation": "three years more", "example_translation_id": "lebih tiga tahun"},
+    {"word": "少", "pinyin": "shǎo", "meaning": "less/few", "meaning_id": "kurang/sedikit", "example": "少五块钱", "example_translation": "five yuan less", "example_translation_id": "kurang lima yuan"},
+    {"word": "高", "pinyin": "gāo", "meaning": "tall/high", "meaning_id": "tinggi", "example": "我比你高", "example_translation": "I am taller than you", "example_translation_id": "Saya lebih tinggi darimu"},
+    {"word": "矮", "pinyin": "ǎi", "meaning": "short (height)", "meaning_id": "pendek", "example": "他比我矮", "example_translation": "He is shorter than me", "example_translation_id": "Dia lebih pendek dariku"},
+    {"word": "年轻", "pinyin": "nián qīng", "meaning": "young", "meaning_id": "muda", "example": "她比我年轻", "example_translation": "She is younger than me", "example_translation_id": "Dia lebih muda dariku"}
+  ],
+  "grammar": [
+    {
+      "point": "Comparisons with 比 (bǐ)",
+      "point_id": "Perbandingan dengan 比 (bǐ)",
+      "explanation": "Use 比 to compare two things. Structure: A + 比 + B + Adjective.",
+      "explanation_id": "Gunakan 比 untuk membandingkan dua hal. Struktur: A + 比 + B + Kata Sifat.",
+      "examples": [
+        {"chinese": "我比你高。", "translation": "I am taller than you.", "translation_id": "Saya lebih tinggi darimu."},
+        {"chinese": "他比我大三岁。", "translation": "He is three years older than me.", "translation_id": "Dia lebih tua tiga tahun dariku."},
+        {"chinese": "今天比昨天冷。", "translation": "Today is colder than yesterday.", "translation_id": "Hari ini lebih dingin dari kemarin."}
+      ]
+    },
+    {
+      "point": "Comparison with Quantity: 多/少 (duō/shao)",
+      "point_id": "Perbandingan dengan Kuantitas: 多/少 (duō/shao)",
+      "explanation": "When comparing quantities, place 多 or 少 after the adjective.",
+      "explanation_id": "Saat membandingkan kuantitas, letakkan 多 atau 少 setelah kata sifat.",
+      "examples": [
+        {"chinese": "他比我大三岁。", "translation": "He is three years older than me.", "translation_id": "Dia lebih tua tiga tahun dariku."},
+        {"chinese": "我比他少五块钱。", "translation": "I have five yuan less than him.", "translation_id": "Saya kurang lima yuan darinya."},
+        {"chinese": "这个比那个多十块钱。", "translation": "This one is ten yuan more than that one.", "translation_id": "Yang ini lebih sepuluh yuan dari yang itu."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你哥哥比你大几岁？", "pinyin": "Nǐ gēge bǐ nǐ dà jǐ suì?", "translation": "How many years older is your brother than you?", "translation_id": "Berapa tahun lebih tua kakak laki-lakimu darimu?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "他比我大三岁。", "pinyin": "Tā bǐ wǒ dà sān suì.", "translation": "He is three years older than me.", "translation_id": "Dia lebih tua tiga tahun dariku."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "那你姐姐呢？", "pinyin": "Nà nǐ jiějie ne?", "translation": "What about your older sister?", "translation_id": "Bagaimana dengan kakak perempuanmu?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "姐姐比我大五岁。", "pinyin": "Jiějie bǐ wǒ dà wǔ suì.", "translation": "My older sister is five years older than me.", "translation_id": "Kakak perempuanku lebih tua lima tahun dariku."}
+  ],
+  "exercises": [
+    {"question": "What does 比 (bǐ) indicate?", "question_id": "Apa yang ditunjukkan oleh 比 (bǐ)?", "options": ["Equality", "Comparison", "Location", "Time"], "options_id": ["Kesamaan", "Perbandingan", "Lokasi", "Waktu"], "correct": 1},
+    {"question": "How do you say 'He is three years older than me' in Chinese?", "question_id": "Bagaimana mengatakan 'Dia lebih tua tiga tahun dariku' dalam bahasa Mandarin?", "options": ["他比我大三岁", "他大三岁比我", "他比我大岁三", "比我他大三岁"], "options_id": ["Dia dari saya lebih tua tiga tahun", "Dia lebih tua tiga tahun dari saya", "Dia dari saya lebih tua tahun tiga", "Dari saya dia lebih tua tiga tahun"], "correct": 0},
+    {"question": "What does 高 (gāo) mean?", "question_id": "Apa arti 高 (gāo)?", "options": ["Short", "Tall", "Big", "Small"], "options_id": ["Pendek", "Tinggi", "Besar", "Kecil"], "correct": 1},
+    {"question": "How to say 'I am taller than you' in Chinese?", "question_id": "Bagaimana mengatakan 'Saya lebih tinggi darimu' dalam bahasa Mandarin?", "options": ["我比你高", "你比我高", "我比你矮", "你比我矮"], "options_id": ["Saya dari kamu lebih tinggi", "Kamu dari saya lebih tinggi", "Saya dari kamu lebih pendek", "Kamu dari saya lebih pendek"], "correct": 0},
+    {"question": "What does 年轻 (niánqīng) mean?", "question_id": "Apa arti 年轻 (niánqīng)?", "options": ["Old", "Young", "Tall", "Short"], "options_id": ["Tua", "Muda", "Tinggi", "Pendek"], "correct": 1}
+  ]
+}

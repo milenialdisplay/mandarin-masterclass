@@ -1,0 +1,50 @@
+{
+  "title": "文化交流",
+  "subtitle": "Cultural Exchange, Globalization, Mutual Understanding",
+  "assistant_message": "Today we learn: discussing cultural exchange, using 通过 (tōngguò) for 'through', and expressing the importance of mutual understanding.",
+  "vocabulary": [
+    {"word": "文化", "pinyin": "wén huà", "meaning": "culture", "meaning_id": "budaya", "example": "中国文化", "example_translation": "Chinese culture", "example_translation_id": "budaya Tiongkok"},
+    {"word": "交流", "pinyin": "jiāo liú", "meaning": "exchange", "meaning_id": "pertukaran", "example": "文化交流", "example_translation": "cultural exchange", "example_translation_id": "pertukaran budaya"},
+    {"word": "传统", "pinyin": "chuán tǒng", "meaning": "tradition", "meaning_id": "tradisi", "example": "传统文化", "example_translation": "traditional culture", "example_translation_id": "budaya tradisional"},
+    {"word": "习俗", "pinyin": "xí sú", "meaning": "custom", "meaning_id": "adat istiadat", "example": "当地习俗", "example_translation": "local customs", "example_translation_id": "adat setempat"},
+    {"word": "价值观", "pinyin": "jià zhí guān", "meaning": "values", "meaning_id": "nilai-nilai", "example": "不同的价值观", "example_translation": "different values", "example_translation_id": "nilai-nilai yang berbeda"},
+    {"word": "多元", "pinyin": "duō yuán", "meaning": "diverse", "meaning_id": "beragam", "example": "多元文化", "example_translation": "multicultural", "example_translation_id": "multikultural"},
+    {"word": "融合", "pinyin": "róng hé", "meaning": "integration", "meaning_id": "integrasi", "example": "文化融合", "example_translation": "cultural integration", "example_translation_id": "integrasi budaya"},
+    {"word": "尊重", "pinyin": "zūn zhòng", "meaning": "to respect", "meaning_id": "menghormati", "example": "互相尊重", "example_translation": "mutual respect", "example_translation_id": "saling menghormati"}
+  ],
+  "grammar": [
+    {
+      "point": "通过 (tōngguò) - Through",
+      "point_id": "通过 (tōngguò) - Melalui",
+      "explanation": "通过 is used to indicate the means or method by which something is achieved.",
+      "explanation_id": "通过 digunakan untuk menunjukkan cara atau metode yang dengannya sesuatu dicapai.",
+      "examples": [
+        {"chinese": "通过文化交流，我们可以了解不同的传统和习俗。", "translation": "Through cultural exchange, we can understand different traditions and customs.", "translation_id": "Melalui pertukaran budaya, kita dapat memahami tradisi dan adat yang berbeda."},
+        {"chinese": "通过这次活动，我交了很多朋友。", "translation": "Through this activity, I made many friends.", "translation_id": "Melalui kegiatan ini, saya mendapat banyak teman."}
+      ]
+    },
+    {
+      "point": "因此 (yīncǐ) - Therefore",
+      "point_id": "因此 (yīncǐ) - Oleh karena itu",
+      "explanation": "因此 means 'therefore' or 'as a result', used to show consequence.",
+      "explanation_id": "因此 berarti 'oleh karena itu' atau 'sebagai hasil', digunakan untuk menunjukkan konsekuensi.",
+      "examples": [
+        {"chinese": "不同文化之间存在差异，因此我们需要互相理解。", "translation": "There are differences between cultures, therefore we need to understand each other.", "translation_id": "Ada perbedaan antar budaya, oleh karena itu kita perlu saling memahami."},
+        {"chinese": "他努力学习，因此取得了好成绩。", "translation": "He studied hard, therefore he achieved good grades.", "translation_id": "Dia belajar keras, oleh karena itu dia mencapai nilai bagus."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你觉得文化交流重要吗？", "pinyin": "Nǐ juéde wénhuà jiāoliú zhòngyào ma?", "translation": "Do you think cultural exchange is important?", "translation_id": "Apakah menurutmu pertukaran budaya itu penting?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "非常重要。通过文化交流，我们可以了解不同的传统、习俗和价值观。", "pinyin": "Fēicháng zhòngyào. Tōngguò wénhuà jiāoliú, wǒmen kěyǐ liǎojiě bùtóng de chuántǒng, xísú hé jiàzhíguān.", "translation": "Very important. Through cultural exchange, we can understand different traditions, customs, and values.", "translation_id": "Sangat penting. Melalui pertukaran budaya, kita dapat memahami tradisi, adat, dan nilai-nilai yang berbeda."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "这样能促进文化融合，增进相互理解。", "pinyin": "Zhèyàng néng cùjìn wénhuà rónghé, zēngjìn xiānghù lǐjiě.", "translation": "This can promote cultural integration and enhance mutual understanding.", "translation_id": "Ini dapat mempromosikan integrasi budaya dan meningkatkan saling pengertian."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "是的，尊重文化差异很重要。因此，我们应该多参与国际交流活动。", "pinyin": "Shì de, zūnzhòng wénhuà chāyì hěn zhòngyào. Yīncǐ, wǒmen yīnggāi duō cānyù guójì jiāoliú huódòng.", "translation": "Yes, respecting cultural differences is very important. Therefore, we should participate more in international exchange activities.", "translation_id": "Ya, menghormati perbedaan budaya sangat penting. Oleh karena itu, kita harus lebih banyak berpartisipasi dalam kegiatan pertukaran internasional."}
+  ],
+  "exercises": [
+    {"question": "What does 文化 (wénhuà) mean?", "question_id": "Apa arti 文化 (wénhuà)?", "options": ["Economy", "Culture", "Politics", "History"], "options_id": ["Ekonomi", "Budaya", "Politik", "Sejarah"], "correct": 1},
+    {"question": "How do you say 'Through cultural exchange' in Chinese?", "question_id": "Bagaimana mengatakan 'Melalui pertukaran budaya' dalam bahasa Mandarin?", "options": ["通过文化交流", "文化通过交流", "交流通过文化", "通过文化"], "options_id": ["Melalui pertukaran budaya", "Budaya melalui pertukaran", "Pertukaran melalui budaya", "Melalui budaya"], "correct": 0},
+    {"question": "What does 尊重 (zūnzhòng) mean?", "question_id": "Apa arti 尊重 (zūnzhòng)?", "options": ["To ignore", "To respect", "To criticize", "To forget"], "options_id": ["Mengabaikan", "Menghormati", "Mengkritik", "Melupakan"], "correct": 1},
+    {"question": "What is the function of 因此 (yīncǐ)?", "question_id": "Apa fungsi 因此 (yīncǐ)?", "options": ["To show cause", "To show result/therefore", "To show contrast", "To show condition"], "options_id": ["Menunjukkan sebab", "Menunjukkan hasil/oleh karena itu", "Menunjukkan kontras", "Menunjukkan kondisi"], "correct": 1},
+    {"question": "How to say 'mutual understanding' in Chinese?", "question_id": "Bagaimana mengatakan 'saling pengertian' dalam bahasa Mandarin?", "options": ["相互理解", "互相尊重", "互相帮助", "互相关心"], "options_id": ["saling pengertian", "saling menghormati", "saling membantu", "saling peduli"], "correct": 0}
+  ]
+}

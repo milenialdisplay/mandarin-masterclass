@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSK 1 Lessons - Mandarin Teacher</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a472a;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .header {
+            background: #1a472a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 { font-size: 28px; }
+        .header p { font-size: 14px; opacity: 0.8; margin-top: 5px; }
+        .lesson-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+        .lesson-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+            border: 1px solid #e0e0e0;
+        }
+        .lesson-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background: #e8f5e9;
+        }
+        .lesson-number {
+            font-size: 14px;
+            color: #e94560;
+            font-weight: bold;
+        }
+        .lesson-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1a472a;
+            margin: 10px 0;
+        }
+        .lesson-title-en {
+            font-size: 14px;
+            color: #666;
+        }
+        .back-btn {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 20px;
+            font-size: 14px;
+        }
+        .content-area {
+            padding: 20px;
+            display: none;
+        }
+        .content-area.active {
+            display: block;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .section-title {
+            font-size: 20px;
+            color: #1a472a;
+            border-left: 4px solid #ffd700;
+            padding-left: 12px;
+            margin-bottom: 15px;
+        }
+        .vocab-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+        }
+        .vocab-item {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .vocab-word {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .vocab-pinyin {
+            color: #e94560;
+            font-size: 12px;
+        }
+        .grammar-item {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+        .dialogue-box {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 12px;
+            font-family: monospace;
+            line-height: 1.8;
+        }
+        @media (max-width: 600px) {
+            .lesson-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 HSK Level 1 Complete Curriculum</h1>
+            <p>15 Lessons following the official HSK Standard Course</p>
+        </div>
+        
+        <div id="lessonGrid" class="lesson-grid"></div>
+        
+        <div id="contentArea" class="content-area"></div>
+        
+        <button class="back-btn" onclick="showGrid()">← Back to All Lessons</button>
+    </div>
+
+    <script>
+        let lessons = {};
+        
+        async function loadLessons() {
+            try {
+                const response = await fetch('/api/lessons');
+                const data = await response.json();
+                
+                const grid = document.getElementById('lessonGrid');
+                grid.innerHTML = '';
+                
+                for (const lesson of data.lessons) {
+                    const card = document.createElement('div');
+                    card.className = 'lesson-card';
+                    card.onclick = () => loadLesson(lesson.number);
+                    card.innerHTML = `
+                        <div class="lesson-number">Lesson ${lesson.number}</div>
+                        <div class="lesson-title">${lesson.title}</div>
+                        <div class="lesson-title-en">${lesson.title_en}</div>
+                    `;
+                    grid.appendChild(card);
+                }
+            } catch (error) {
+                console.error('Error loading lessons:', error);
+            }
+        }
+        
+        async function loadLesson(lessonNum) {
+            try {
+                const response = await fetch(`/api/lesson/${lessonNum}`);
+                const lesson = await response.json();
+                
+                document.getElementById('lessonGrid').style.display = 'none';
+                const contentArea = document.getElementById('contentArea');
+                contentArea.className = 'content-area active';
+                
+                let html = `
+                    <h2 style="color: #1a472a; margin-bottom: 10px;">Lesson ${lesson.number}: ${lesson.title}</h2>
+                    <h3 style="color: #666; margin-bottom: 20px;">${lesson.title_en}</h3>
+                    
+                    <div class="section">
+                        <div class="section-title">📖 Learning Objectives</div>
+                        <ul style="margin-left: 20px;">
+                            ${lesson.objectives.map(obj => `<li>${obj}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="section">
+                        <div class="section-title">📚 Vocabulary (${lesson.vocabulary.length} words)</div>
+                        <div class="vocab-list">
+                            ${lesson.vocabulary.map(v => `
+                                <div class="vocab-item">
+                                    <div class="vocab-word">${v.word}</div>
+                                    <div class="vocab-pinyin">${v.pinyin}</div>
+                                    <div style="font-size: 12px;">${v.meaning}</div>
+                                    <div style="font-size: 11px; color: #999;">例: ${v.example}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <div class="section-title">📖 Grammar</div>
+                        ${lesson.grammar.map(g => `
+                            <div class="grammar-item">
+                                <strong>${g.point}</strong><br>
+                                ${g.explanation}<br>
+                                <em>Example: ${g.example}</em>
+                            </div>
+                        `).join('')}
+                    </div>
+                    
+                    <div class="section">
+                        <div class="section-title">💬 Dialogue</div>
+                        <div class="dialogue-box">
+                            ${lesson.dialogue.replace(/\n/g, '<br>')}
+                        </div>
+                    </div>
+                `;
+                
+                contentArea.innerHTML = html;
+                
+            } catch (error) {
+                console.error('Error loading lesson:', error);
+            }
+        }
+        
+        function showGrid() {
+            document.getElementById('lessonGrid').style.display = 'grid';
+            document.getElementById('contentArea').className = 'content-area';
+            document.getElementById('contentArea').innerHTML = '';
+        }
+        
+        loadLessons();
+    </script>
+</body>
+</html>

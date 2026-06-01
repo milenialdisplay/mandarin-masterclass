@@ -1,0 +1,51 @@
+{
+  "title": "九月去北京旅游最好",
+  "subtitle": "Talking About Travel, Expressing Preferences, Using Superlative 最",
+  "assistant_message": "Today we learn: talking about travel (旅游), expressing preferences with 最 (zuì), and using time expressions (秋天, 九月, 十月).",
+  "vocabulary": [
+    {"word": "旅游", "pinyin": "lǚ yóu", "meaning": "to travel", "meaning_id": "bepergian", "example": "去中国旅游", "example_translation": "travel to China", "example_translation_id": "bepergian ke Tiongkok"},
+    {"word": "最好", "pinyin": "zuì hǎo", "meaning": "best", "meaning_id": "terbaik", "example": "九月最好", "example_translation": "September is best", "example_translation_id": "September terbaik"},
+    {"word": "季节", "pinyin": "jì jié", "meaning": "season", "meaning_id": "musim", "example": "最好的季节", "example_translation": "the best season", "example_translation_id": "musim terbaik"},
+    {"word": "天气", "pinyin": "tiān qì", "meaning": "weather", "meaning_id": "cuaca", "example": "天气很好", "example_translation": "the weather is good", "example_translation_id": "cuacanya bagus"},
+    {"word": "凉快", "pinyin": "liáng kuai", "meaning": "cool (weather)", "meaning_id": "sejuk", "example": "天气凉快", "example_translation": "the weather is cool", "example_translation_id": "cuacanya sejuk"},
+    {"word": "秋天", "pinyin": "qiū tiān", "meaning": "autumn", "meaning_id": "musim gugur", "example": "秋天很美", "example_translation": "autumn is beautiful", "example_translation_id": "musim gugur indah"},
+    {"word": "风景", "pinyin": "fēng jǐng", "meaning": "scenery", "meaning_id": "pemandangan", "example": "美丽的风景", "example_translation": "beautiful scenery", "example_translation_id": "pemandangan indah"},
+    {"word": "拍照", "pinyin": "pāi zhào", "meaning": "to take photos", "meaning_id": "memotret", "example": "拍照留念", "example_translation": "take photos as souvenirs", "example_translation_id": "memotret sebagai kenang-kenangan"}
+  ],
+  "grammar": [
+    {
+      "point": "Superlative 最 (zuì)",
+      "point_id": "Superlatif 最 (zuì)",
+      "explanation": "Use 最 before an adjective to mean 'the most' or 'the best'.",
+      "explanation_id": "Gunakan 最 sebelum kata sifat untuk berarti 'paling' atau 'terbaik'.",
+      "examples": [
+        {"chinese": "九月去北京旅游最好。", "translation": "September is the best time to travel to Beijing.", "translation_id": "September adalah waktu terbaik untuk bepergian ke Beijing."},
+        {"chinese": "我最喜欢秋天。", "translation": "I like autumn the most.", "translation_id": "Saya paling suka musim gugur."},
+        {"chinese": "这是最好的季节。", "translation": "This is the best season.", "translation_id": "Ini adalah musim terbaik."}
+      ]
+    },
+    {
+      "point": "Time Expressions with 的时候 (de shíhou)",
+      "point_id": "Ekspresi Waktu dengan 的时候 (de shíhou)",
+      "explanation": "Use 的时候 to mean 'when' or 'at the time of' an action.",
+      "explanation_id": "Gunakan 的时候 untuk berarti 'ketika' atau 'pada saat' suatu tindakan.",
+      "examples": [
+        {"chinese": "秋天的时候天气很好。", "translation": "The weather is good in autumn.", "translation_id": "Cuacanya bagus pada musim gugur."},
+        {"chinese": "旅游的时候要注意安全。", "translation": "Be careful when traveling.", "translation_id": "Hati-hati saat bepergian."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你觉得什么时候去北京旅游最好？", "pinyin": "Nǐ juéde shénme shíhou qù Běijīng lǚyóu zuì hǎo?", "translation": "When do you think is the best time to travel to Beijing?", "translation_id": "Kapan menurutmu waktu terbaik untuk bepergian ke Beijing?"},
+    {"speaker": "female", "name": "Chen Mei", "voice": "female", "chinese": "我觉得秋天去最好，天气很舒服。", "pinyin": "Wǒ juéde qiūtiān qù zuì hǎo, tiānqì hěn shūfu.", "translation": "I think autumn is best, the weather is very comfortable.", "translation_id": "Saya pikir musim gugur terbaik, cuacanya sangat nyaman."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "九月还是十月？", "pinyin": "Jiǔ yuè háishì shí yuè?", "translation": "September or October?", "translation_id": "September atau Oktober?"},
+    {"speaker": "female", "name": "Chen Mei", "voice": "female", "chinese": "九月最好，不冷不热。", "pinyin": "Jiǔ yuè zuì hǎo, bù lěng bù rè.", "translation": "September is best, neither cold nor hot.", "translation_id": "September terbaik, tidak dingin tidak panas."}
+  ],
+  "exercises": [
+    {"question": "What does 旅游 (lǚyóu) mean?", "question_id": "Apa arti 旅游 (lǚyóu)?", "options": ["To work", "To travel", "To study", "To eat"], "options_id": ["Bekerja", "Bepergian", "Belajar", "Makan"], "correct": 1},
+    {"question": "How do you say 'September is best' in Chinese?", "question_id": "Bagaimana mengatakan 'September terbaik' dalam bahasa Mandarin?", "options": ["九月好", "九月最好", "九月很好", "九月大好"], "options_id": ["September bagus", "September terbaik", "September sangat bagus", "September sangat baik"], "correct": 1},
+    {"question": "What is the pinyin for 风景 (scenery)?", "question_id": "Apa pinyin untuk 风景 (pemandangan)?", "options": ["fēng jǐng", "fēng jìng", "fēn jǐng", "fèng jìng"], "options_id": ["fēng jǐng", "fēng jìng", "fēn jǐng", "fèng jìng"], "correct": 0},
+    {"question": "What does 凉快 (liángkuai) describe?", "question_id": "Apa yang dideskripsikan oleh 凉快 (liángkuai)?", "options": ["Hot weather", "Cold weather", "Cool weather", "Warm weather"], "options_id": ["Cuaca panas", "Cuaca dingin", "Cuaca sejuk", "Cuaca hangat"], "correct": 2},
+    {"question": "How to ask 'What's the best season?' in Chinese?", "question_id": "Bagaimana bertanya 'Apa musim terbaik?' dalam bahasa Mandarin?", "options": ["什么季节最好？", "什么季节好？", "哪个季节最好？", "哪个季节好？"], "options_id": ["Musim apa terbaik?", "Musim apa bagus?", "Musim mana terbaik?", "Musim mana bagus?"], "correct": 2}
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "title": "媒体与信息",
+  "subtitle": "Media and Information, News Literacy, Truth vs Falsehood",
+  "assistant_message": "Today we learn: discussing media and information, using 传播 (chuánbō) and 影响 (yǐngxiǎng), and evaluating news sources.",
+  "vocabulary": [
+    {"word": "媒体", "pinyin": "méi tǐ", "meaning": "media", "meaning_id": "media", "example": "社交媒体", "example_translation": "social media", "example_translation_id": "media sosial"},
+    {"word": "信息", "pinyin": "xìn xī", "meaning": "information", "meaning_id": "informasi", "example": "海量信息", "example_translation": "vast amount of information", "example_translation_id": "informasi yang melimpah"},
+    {"word": "新闻", "pinyin": "xīn wén", "meaning": "news", "meaning_id": "berita", "example": "虚假新闻", "example_translation": "fake news", "example_translation_id": "berita palsu"},
+    {"word": "传播", "pinyin": "chuán bō", "meaning": "to spread", "meaning_id": "menyebarkan", "example": "信息传播", "example_translation": "information spread", "example_translation_id": "penyebaran informasi"},
+    {"word": "影响", "pinyin": "yǐng xiǎng", "meaning": "influence", "meaning_id": "pengaruh", "example": "社会影响", "example_translation": "social influence", "example_translation_id": "pengaruh sosial"},
+    {"word": "真实", "pinyin": "zhēn shí", "meaning": "truthful/real", "meaning_id": "benar/nyata", "example": "真实信息", "example_translation": "truthful information", "example_translation_id": "informasi yang benar"},
+    {"word": "虚假", "pinyin": "xū jiǎ", "meaning": "false", "meaning_id": "palsu", "example": "虚假信息", "example_translation": "false information", "example_translation_id": "informasi palsu"},
+    {"word": "来源", "pinyin": "lái yuán", "meaning": "source", "meaning_id": "sumber", "example": "信息来源", "example_translation": "information source", "example_translation_id": "sumber informasi"}
+  ],
+  "grammar": [
+    {
+      "point": "传播 (chuánbō) - To Spread",
+      "point_id": "Menyebarkan",
+      "explanation": "传播 is used to talk about the spread of information, news, or ideas.",
+      "explanation_id": "传播 digunakan untuk membicarakan penyebaran informasi, berita, atau gagasan.",
+      "examples": [
+        {"chinese": "社交媒体让信息传播更快了。", "translation": "Social media makes information spread faster.", "translation_id": "Media sosial membuat informasi menyebar lebih cepat."},
+        {"chinese": "虚假新闻传播很快，影响很坏。", "translation": "Fake news spreads quickly and has a bad influence.", "translation_id": "Berita palsu menyebar cepat dan memiliki pengaruh buruk."}
+      ]
+    },
+    {
+      "point": "影响 (yǐngxiǎng) - Influence/Impact",
+      "point_id": "Pengaruh",
+      "explanation": "影响 can be used as a noun or verb to talk about the effect something has.",
+      "explanation_id": "影响 dapat digunakan sebagai kata benda atau kata kerja untuk membicarakan efek sesuatu.",
+      "examples": [
+        {"chinese": "媒体对社会有很大的影响。", "translation": "Media has a great influence on society.", "translation_id": "Media memiliki pengaruh besar pada masyarakat."},
+        {"chinese": "这个新闻影响了很多人。", "translation": "This news influenced many people.", "translation_id": "Berita ini mempengaruhi banyak orang."}
+      ]
+    },
+    {
+      "point": "真实与虚假 (zhēnshí yǔ xūjiǎ) - Truth vs Falsehood",
+      "point_id": "Kebenaran vs Kepalsuan",
+      "explanation": "真实 means 'truthful/real'. 虚假 means 'false'. Used to distinguish between true and false information.",
+      "explanation_id": "真实 berarti 'benar/nyata'. 虚假 berarti 'palsu'. Digunakan untuk membedakan antara informasi yang benar dan palsu.",
+      "examples": [
+        {"chinese": "我们要学会辨别信息的真实与虚假。", "translation": "We need to learn to distinguish between true and false information.", "translation_id": "Kita perlu belajar membedakan antara informasi yang benar dan palsu."},
+        {"chinese": "不要传播虚假消息。", "translation": "Don't spread false news.", "translation_id": "Jangan menyebarkan berita palsu."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "现在信息传播太快了。", "pinyin": "Xiànzài xìnxī chuánbō tài kuài le.", "translation": "Information spreads too fast now.", "translation_id": "Informasi sekarang menyebar terlalu cepat."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "是啊，新闻真假难辨。", "pinyin": "Shì a, xīnwén zhēn jiǎ nán biàn.", "translation": "Yes, it's hard to tell whether news is true or false.", "translation_id": "Ya, sulit membedakan berita benar atau palsu."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我们要学会辨别信息来源，不要随便相信网上的消息。", "pinyin": "Wǒmen yào xuéhuì biànbié xìnxī láiyuán, bù yào suíbiàn xiāngxìn wǎngshàng de xiāoxi.", "translation": "We need to learn to identify information sources, and not easily believe news online.", "translation_id": "Kita perlu belajar mengidentifikasi sumber informasi, dan tidak mudah percaya berita online."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "媒体应该传播真实信息，对社会负责。", "pinyin": "Méitǐ yīnggāi chuánbō zhēnshí xìnxī, duì shèhuì fùzé.", "translation": "Media should spread truthful information and be responsible to society.", "translation_id": "Media harus menyebarkan informasi yang benar dan bertanggung jawab kepada masyarakat."}
+  ],
+  "exercises": [
+    {"question": "What does 媒体 (méitǐ) mean?", "question_id": "Apa arti 媒体 (méitǐ)?", "options": ["Information", "Media", "News", "Source"], "options_id": ["Informasi", "Media", "Berita", "Sumber"], "correct": 1},
+    {"question": "How do you say 'spread information' in Chinese?", "question_id": "Bagaimana mengatakan 'menyebarkan informasi' dalam bahasa Mandarin?", "options": ["传播信息", "收集信息", "分析信息", "保存信息"], "options_id": ["menyebarkan informasi", "mengumpulkan informasi", "menganalisis informasi", "menyimpan informasi"], "correct": 0},
+    {"question": "What does 虚假 (xūjiǎ) mean?", "question_id": "Apa arti 虚假 (xūjiǎ)?", "options": ["True", "False", "Real", "Important"], "options_id": ["Benar", "Palsu", "Nyata", "Penting"], "correct": 1},
+    {"question": "What is the opposite of 真实 (zhēnshí)?", "question_id": "Apa lawan dari 真实 (zhēnshí)?", "options": ["真相", "事实", "虚假", "确实"], "options_id": ["kebenaran", "fakta", "palsu", "pasti"], "correct": 2},
+    {"question": "How to say 'information source' in Chinese?", "question_id": "Bagaimana mengatakan 'sumber informasi' dalam bahasa Mandarin?", "options": ["信息来源", "信息传播", "信息媒体", "信息时代"], "options_id": ["sumber informasi", "penyebaran informasi", "media informasi", "era informasi"], "correct": 0}
+  ]
+}

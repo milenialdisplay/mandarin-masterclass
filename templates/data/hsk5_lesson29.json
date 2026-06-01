@@ -1,0 +1,228 @@
+{
+  "title": "人工智能",
+  "subtitle": "Artificial Intelligence, Technology, Future of Work",
+  "assistant_message": "Today we learn: discussing artificial intelligence and its applications, expressing views on technology, and talking about the future of work and society.",
+  "vocabulary": [
+    {
+      "word": "人工智能",
+      "pinyin": "rén gōng zhì néng",
+      "meaning": "artificial intelligence",
+      "meaning_id": "kecerdasan buatan",
+      "example": "人工智能技术",
+      "example_translation": "AI technology",
+      "example_translation_id": "teknologi kecerdasan buatan"
+    },
+    {
+      "word": "技术",
+      "pinyin": "jì shù",
+      "meaning": "technology",
+      "meaning_id": "teknologi",
+      "example": "最新技术",
+      "example_translation": "latest technology",
+      "example_translation_id": "teknologi terbaru"
+    },
+    {
+      "word": "自动化",
+      "pinyin": "zì dòng huà",
+      "meaning": "automation",
+      "meaning_id": "otomatisasi",
+      "example": "自动化生产",
+      "example_translation": "automated production",
+      "example_translation_id": "produksi otomatis"
+    },
+    {
+      "word": "算法",
+      "pinyin": "suàn fǎ",
+      "meaning": "algorithm",
+      "meaning_id": "algoritma",
+      "example": "智能算法",
+      "example_translation": "intelligent algorithm",
+      "example_translation_id": "algoritma cerdas"
+    },
+    {
+      "word": "数据",
+      "pinyin": "shù jù",
+      "meaning": "data",
+      "meaning_id": "data",
+      "example": "大数据",
+      "example_translation": "big data",
+      "example_translation_id": "data besar"
+    },
+    {
+      "word": "效率",
+      "pinyin": "xiào lǜ",
+      "meaning": "efficiency",
+      "meaning_id": "efisiensi",
+      "example": "提高效率",
+      "example_translation": "improve efficiency",
+      "example_translation_id": "meningkatkan efisiensi"
+    },
+    {
+      "word": "取代",
+      "pinyin": "qǔ dài",
+      "meaning": "to replace",
+      "meaning_id": "menggantikan",
+      "example": "取代人工",
+      "example_translation": "replace manual labor",
+      "example_translation_id": "menggantikan tenaga kerja"
+    },
+    {
+      "word": "创新",
+      "pinyin": "chuàng xīn",
+      "meaning": "innovation",
+      "meaning_id": "inovasi",
+      "example": "科技创新",
+      "example_translation": "technological innovation",
+      "example_translation_id": "inovasi teknologi"
+    },
+    {
+      "word": "伦理",
+      "pinyin": "lún lǐ",
+      "meaning": "ethics",
+      "meaning_id": "etika",
+      "example": "人工智能伦理",
+      "example_translation": "AI ethics",
+      "example_translation_id": "etika AI"
+    },
+    {
+      "word": "未来",
+      "pinyin": "wèi lái",
+      "meaning": "future",
+      "meaning_id": "masa depan",
+      "example": "未来发展",
+      "example_translation": "future development",
+      "example_translation_id": "perkembangan masa depan"
+    }
+  ],
+  "grammar": [
+    {
+      "point": "Using 随着...而... (suízhe...ér...) - 'As... and...'",
+      "point_id": "Menggunakan 随着...而... (suízhe...ér...) - 'Seiring... dan...'",
+      "explanation": "This structure shows two things changing together or one changing as a result of another.",
+      "explanation_id": "Struktur ini menunjukkan dua hal berubah bersama atau satu berubah sebagai akibat dari yang lain.",
+      "examples": [
+        {
+          "chinese": "随着技术的发展，工作效率随之而提高。",
+          "translation": "As technology develops, work efficiency increases accordingly.",
+          "translation_id": "Seiring perkembangan teknologi, efisiensi kerja meningkat."
+        },
+        {
+          "chinese": "随着人工智能的普及，很多行业随之而改变。",
+          "translation": "As AI becomes popular, many industries change accordingly.",
+          "translation_id": "Seiring AI menjadi populer, banyak industri berubah."
+        }
+      ]
+    },
+    {
+      "point": "Using 以...为 (yǐ...wéi) - 'Take... as...'",
+      "point_id": "Menggunakan 以...为 (yǐ...wéi) - 'Mengambil... sebagai...'",
+      "explanation": "This structure indicates taking something as a basis, standard, or goal.",
+      "explanation_id": "Struktur ini menunjukkan mengambil sesuatu sebagai dasar, standar, atau tujuan.",
+      "examples": [
+        {
+          "chinese": "以数据为基础做出决策。",
+          "translation": "Make decisions based on data.",
+          "translation_id": "Buat keputusan berdasarkan data."
+        },
+        {
+          "chinese": "以用户为中心设计产品。",
+          "translation": "Design products centered on users.",
+          "translation_id": "Desain produk yang berpusat pada pengguna."
+        }
+      ]
+    },
+    {
+      "point": "Using 不仅...也... (bùjǐn...yě...) - 'Not only... also...'",
+      "point_id": "Menggunakan 不仅...也... (bùjǐn...yě...) - 'Tidak hanya... juga...'",
+      "explanation": "This structure adds additional information about the same subject.",
+      "explanation_id": "Struktur ini menambahkan informasi tambahan tentang subjek yang sama.",
+      "examples": [
+        {
+          "chinese": "人工智能不仅提高了效率，也创造了新职业。",
+          "translation": "AI not only improves efficiency but also creates new professions.",
+          "translation_id": "AI tidak hanya meningkatkan efisiensi tetapi juga menciptakan profesi baru."
+        },
+        {
+          "chinese": "这不仅是个技术问题，也是伦理问题。",
+          "translation": "This is not only a technical issue but also an ethical issue.",
+          "translation_id": "Ini tidak hanya masalah teknis tetapi juga masalah etika."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "male",
+      "name": "Wang Peng",
+      "voice": "male",
+      "chinese": "最近人工智能发展很快，你觉得它会取代人类的工作吗？",
+      "pinyin": "Zuìjìn réngōng zhìnéng fāzhǎn hěn kuài, nǐ juéde tā huì qǔdài rénlèi de gōngzuò ma?",
+      "translation": "AI has been developing rapidly lately. Do you think it will replace human jobs?",
+      "translation_id": "AI berkembang pesat akhir-akhir ini. Apakah Anda pikir itu akan menggantikan pekerjaan manusia?"
+    },
+    {
+      "speaker": "female",
+      "name": "Liu Mei",
+      "voice": "female",
+      "chinese": "随着技术的发展，一些重复性工作确实可能被自动化取代。但AI也会创造新机会。",
+      "pinyin": "Suízhe jìshù de fāzhǎn, yīxiē chóngfù xìng gōngzuò quèshí kěnéng bèi zìdònghuà qǔdài. Dàn AI yě huì chuàngzào xīn jīhuì.",
+      "translation": "As technology develops, some repetitive jobs may indeed be replaced by automation. But AI will also create new opportunities.",
+      "translation_id": "Seiring perkembangan teknologi, beberapa pekerjaan berulang mungkin memang digantikan oleh otomatisasi. Tapi AI juga akan menciptakan peluang baru."
+    },
+    {
+      "speaker": "male",
+      "name": "Wang Peng",
+      "voice": "male",
+      "chinese": "以数据为基础的AI算法确实很强大，但我们需要考虑伦理问题。",
+      "pinyin": "Yǐ shùjù wéi jīchǔ de AI suànfǎ quèshí hěn qiángdà, dàn wǒmen xūyào kǎolǜ lúnlǐ wèntí.",
+      "translation": "Data-based AI algorithms are indeed very powerful, but we need to consider ethical issues.",
+      "translation_id": "Algoritma AI berbasis data memang sangat kuat, tetapi kita perlu mempertimbangkan masalah etika."
+    },
+    {
+      "speaker": "female",
+      "name": "Liu Mei",
+      "voice": "female",
+      "chinese": "人工智能不仅改变了工作方式，也影响着我们的生活。未来，人机协作会成为常态。",
+      "pinyin": "Rén'gōng zhìnéng bùjǐn gǎibiàn le gōngzuò fāngshì, yě yǐngxiǎng zhe wǒmen de shēnghuó. Wèilái, rénjī xiézuò huì chéngwéi chángtài.",
+      "translation": "AI not only changes the way we work but also affects our lives. In the future, human-machine collaboration will become the norm.",
+      "translation_id": "AI tidak hanya mengubah cara kita bekerja tetapi juga memengaruhi kehidupan kita. Di masa depan, kolaborasi manusia-mesin akan menjadi norma."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "What does 人工智能 (réngōng zhìnéng) mean?",
+      "question_id": "Apa arti 人工智能 (réngōng zhìnéng)?",
+      "options": ["Machine learning", "Artificial intelligence", "Data science", "Automation"],
+      "options_id": ["Pembelajaran mesin", "Kecerdasan buatan", "Ilmu data", "Otomatisasi"],
+      "correct": 1
+    },
+    {
+      "question": "How do you say 'algorithm' in Chinese?",
+      "question_id": "Bagaimana mengatakan 'algoritma' dalam bahasa Mandarin?",
+      "options": ["数据", "算法", "程序", "代码"],
+      "options_id": ["data", "algoritma", "program", "kode"],
+      "correct": 1
+    },
+    {
+      "question": "What does 取代 (qǔdài) mean?",
+      "question_id": "Apa arti 取代 (qǔdài)?",
+      "options": ["To create", "To replace", "To improve", "To destroy"],
+      "options_id": ["Menciptakan", "Menggantikan", "Meningkatkan", "Menghancurkan"],
+      "correct": 1
+    },
+    {
+      "question": "Complete the sentence: ______技术的发展，工作效率随之而提高。",
+      "question_id": "Lengkapi kalimat: ______技术的发展，工作效率随之而提高。",
+      "options": ["关于", "对于", "随着", "沿着"],
+      "options_id": ["Tentang", "Untuk", "Seiring", "Sepanjang"],
+      "correct": 2
+    },
+    {
+      "question": "What is the best translation of 'human-machine collaboration'?",
+      "question_id": "Apa terjemahan terbaik dari 'kolaborasi manusia-mesin'?",
+      "options": ["人机交互", "人机协作", "人工协作", "机器协作"],
+      "options_id": ["interaksi manusia-mesin", "kolaborasi manusia-mesin", "kolaborasi buatan", "kolaborasi mesin"],
+      "correct": 1
+    }
+  ]
+}

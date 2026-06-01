@@ -1,0 +1,50 @@
+{
+  "title": "智能生活",
+  "subtitle": "Talking About Technology, Future, and Innovation",
+  "assistant_message": "Today we learn: discussing smart technology, using 按照 (ànzhào) for 'according to', and talking about future innovations.",
+  "vocabulary": [
+    {"word": "智能", "pinyin": "zhì néng", "meaning": "smart/intelligent", "meaning_id": "cerdas", "example": "智能手机", "example_translation": "smartphone", "example_translation_id": "ponsel pintar"},
+    {"word": "科技", "pinyin": "kē jì", "meaning": "technology", "meaning_id": "teknologi", "example": "现代科技", "example_translation": "modern technology", "example_translation_id": "teknologi modern"},
+    {"word": "创新", "pinyin": "chuàng xīn", "meaning": "innovation", "meaning_id": "inovasi", "example": "技术创新", "example_translation": "technological innovation", "example_translation_id": "inovasi teknologi"},
+    {"word": "便捷", "pinyin": "biàn jié", "meaning": "convenient and fast", "meaning_id": "nyaman dan cepat", "example": "生活便捷", "example_translation": "convenient life", "example_translation_id": "kehidupan yang nyaman"},
+    {"word": "人工智能", "pinyin": "rén gōng zhì néng", "meaning": "artificial intelligence (AI)", "meaning_id": "kecerdasan buatan", "example": "AI技术", "example_translation": "AI technology", "example_translation_id": "teknologi AI"},
+    {"word": "大数据", "pinyin": "dà shù jù", "meaning": "big data", "meaning_id": "data besar", "example": "大数据分析", "example_translation": "big data analysis", "example_translation_id": "analisis data besar"},
+    {"word": "网络", "pinyin": "wǎng luò", "meaning": "internet/network", "meaning_id": "internet/jaringan", "example": "高速网络", "example_translation": "high-speed internet", "example_translation_id": "internet kecepatan tinggi"},
+    {"word": "虚拟", "pinyin": "xū nǐ", "meaning": "virtual", "meaning_id": "virtual", "example": "虚拟现实", "example_translation": "virtual reality", "example_translation_id": "realitas virtual"}
+  ],
+  "grammar": [
+    {
+      "point": "Using 按照 (ànzhào) for 'According to'",
+      "point_id": "Menggunakan 按照 (ànzhào) untuk 'Menurut'",
+      "explanation": "按照 means 'according to' or 'in accordance with', used before rules, plans, or standards.",
+      "explanation_id": "按照 berarti 'menurut' atau 'sesuai dengan', digunakan sebelum aturan, rencana, atau standar.",
+      "examples": [
+        {"chinese": "按照计划，我们明年推出新产品。", "translation": "According to the plan, we will launch new products next year.", "translation_id": "Menurut rencana, kami akan meluncurkan produk baru tahun depan."},
+        {"chinese": "按照规定，每个人都必须遵守。", "translation": "According to the rules, everyone must comply.", "translation_id": "Menurut peraturan, setiap orang harus mematuhi."}
+      ]
+    },
+    {
+      "point": "Using 根据 (gēn jù) for 'Based on'",
+      "point_id": "Menggunakan 根据 (gēn jù) untuk 'Berdasarkan'",
+      "explanation": "根据 means 'based on' or 'according to', used with facts, data, or evidence.",
+      "explanation_id": "根据 berarti 'berdasarkan' atau 'menurut', digunakan dengan fakta, data, atau bukti.",
+      "examples": [
+        {"chinese": "根据调查，大多数人支持这个方案。", "translation": "Based on the survey, most people support this plan.", "translation_id": "Berdasarkan survei, kebanyakan orang mendukung rencana ini."},
+        {"chinese": "根据经验，这个方法是可行的。", "translation": "Based on experience, this method is feasible.", "translation_id": "Berdasarkan pengalaman, metode ini layak dilakukan."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你觉得智能科技给生活带来了什么变化？", "pinyin": "Nǐ juéde zhìnéng kējì gěi shēnghuó dài lái le shénme biànhuà?", "translation": "What changes do you think smart technology has brought to life?", "translation_id": "Perubahan apa yang menurutmu dibawa oleh teknologi pintar ke kehidupan?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "生活变得更加便捷了。比如智能手机让我们随时与人沟通。", "pinyin": "Shēnghuó biàn dé gèngjiā biànjié le. Bǐrú zhìnéng shǒujī ràng wǒmen suíshí yǔ rén gōutōng.", "translation": "Life has become more convenient. For example, smartphones allow us to communicate with people anytime.", "translation_id": "Kehidupan menjadi lebih nyaman. Contohnya, ponsel pintar memungkinkan kita berkomunikasi dengan orang kapan saja."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "人工智能和大数据也在改变世界。", "pinyin": "Réngōng zhìnéng hé dà shùjù yě zài gǎibiàn shìjiè.", "translation": "Artificial intelligence and big data are also changing the world.", "translation_id": "Kecerdasan buatan dan data besar juga mengubah dunia."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "按照这个趋势，未来的生活会更加智能化。", "pinyin": "Ànzhào zhège qūshì, wèilái de shēnghuó huì gèngjiā zhìnéng huà.", "translation": "According to this trend, future life will become more intelligent.", "translation_id": "Menurut tren ini, kehidupan masa depan akan menjadi lebih cerdas."}
+  ],
+  "exercises": [
+    {"question": "What does 智能 (zhìnéng) mean?", "question_id": "Apa arti 智能 (zhìnéng)?", "options": ["Smart/intelligent", "Fast", "Cheap", "Beautiful"], "options_id": ["Cerdas", "Cepat", "Murah", "Cantik"], "correct": 0},
+    {"question": "How do you say 'artificial intelligence' in Chinese?", "question_id": "Bagaimana mengatakan 'kecerdasan buatan' dalam bahasa Mandarin?", "options": ["人工智慧", "人工智能", "人造智能", "机器智能"], "options_id": ["kecerdasan buatan", "kecerdasan buatan", "kecerdasan buatan", "kecerdasan mesin"], "correct": 1},
+    {"question": "What does 按照 (ànzhào) mean?", "question_id": "Apa arti 按照 (ànzhào)?", "options": ["According to", "Because of", "In spite of", "Instead of"], "options_id": ["Menurut", "Karena", "Meskipun", "Alih-alih"], "correct": 0},
+    {"question": "What is 创新 (chuàngxīn)?", "question_id": "Apa itu 创新 (chuàngxīn)?", "options": ["Tradition", "Innovation", "Imitate", "Copy"], "options_id": ["Tradisi", "Inovasi", "Meniru", "Menyalin"], "correct": 1},
+    {"question": "How to say 'convenient and fast' in Chinese?", "question_id": "Bagaimana mengatakan 'nyaman dan cepat' dalam bahasa Mandarin?", "options": ["方便", "快捷", "便捷", "便利"], "options_id": ["nyaman", "cepat", "nyaman dan cepat", "nyaman"], "correct": 2}
+  ]
+}

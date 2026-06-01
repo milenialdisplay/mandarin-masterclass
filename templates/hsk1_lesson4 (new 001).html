@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>HSK 1 Lesson 4 - 日常生活 (Rìcháng shēnghuó) - Daily Activities</title>
+    <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@2.3.0/dist/hanzi-writer.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #1a472a; padding: 10px; min-height: 100vh; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .lesson-header { background: linear-gradient(135deg, #1a472a, #2d6a4f); color: white; padding: 14px; text-align: center; border-radius: 16px 16px 0 0; }
+        .lesson-header h1 { font-size: 18px; margin-bottom: 4px; }
+        .lesson-header p { font-size: 11px; opacity: 0.9; }
+        .level-indicator { display: inline-block; background: #ffd700; color: #1a472a; padding: 3px 10px; border-radius: 20px; font-size: 10px; margin-top: 5px; font-weight: bold; }
+        .lesson-nav { background: #f5f5f5; padding: 8px; display: flex; justify-content: space-between; gap: 8px; }
+        .nav-btn { background: #2d6a4f; color: white; border: none; padding: 8px 12px; border-radius: 20px; cursor: pointer; font-size: 12px; flex: 1; text-align: center; }
+        .ai-bar { background: white; margin-top: 10px; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+        .ai-bar-header { background: #f8f9fa; padding: 8px 12px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; }
+        .ai-bar-header h3 { font-size: 17px; color: #1a472a; }
+        .lang-toggle { display: flex; gap: 5px; }
+        .lang-mini-btn { background: #f0f0f0; border: none; padding: 3px 10px; border-radius: 20px; cursor: pointer; font-size: 12px; font-weight: bold; }
+        .lang-mini-btn.active { background: #2d6a4f; color: white; }
+        .ai-message { background: #e8f5e9; padding: 10px 14px; margin: 8px; border-radius: 10px; border-left: 3px solid #ffd700; font-size: 13px; }
+        .ai-message .greeting { font-weight: bold; color: #1a472a; margin-bottom: 4px; font-size: 14px; }
+        .chat-area { background: #f5f5f5; margin: 0 8px; border-radius: 10px; max-height: 140px; overflow-y: auto; }
+        .chat-message { padding: 6px 10px; margin: 5px; border-radius: 14px; max-width: 90%; font-size: 13px; word-break: break-word; }
+        .chat-message.user { background: #2d6a4f; color: white; margin-left: auto; text-align: right; }
+        .chat-message.ai { background: white; border: 1px solid #ddd; color: #333; }
+        .pronounce-chat-btn { background: #ffd700; border: none; padding: 2px 8px; border-radius: 15px; cursor: pointer; font-size: 10px; font-weight: bold; margin-left: 8px; color: #1a472a; }
+        .input-row { display: flex; gap: 5px; padding: 8px; align-items: center; flex-wrap: nowrap; border-top: 1px solid #eee; background: white; }
+        .chat-input { flex: 2; padding: 8px 10px; border: 1px solid #ddd; border-radius: 25px; font-size: 13px; outline: none; min-width: 0; }
+        .action-btn { background: #e8f5e9; border: 1px solid #2d6a4f; color: #2d6a4f; padding: 6px 10px; border-radius: 25px; cursor: pointer; font-size: 13px; font-weight: bold; text-align: center; white-space: nowrap; }
+        .action-btn.recording { background: #e94560; color: white; animation: pulse 1s infinite; }
+        .pronounce-input-btn { background: #ffd700; border: 1px solid #d4a500; color: #1a472a; }
+        .send-btn { background: #2d6a4f; color: white; border: none; padding: 6px 14px; border-radius: 25px; cursor: pointer; font-size: 13px; font-weight: bold; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.7; } 100% { opacity: 1; } }
+        .chat-status { font-size: 10px; color: #888; text-align: center; padding-bottom: 6px; }
+        #imageUpload { display: none; }
+        .image-helper-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 20000; justify-content: center; align-items: center; }
+        .image-helper-modal.active { display: flex; }
+        .image-helper-content { background: white; border-radius: 20px; padding: 20px; max-width: 500px; width: 90%; text-align: center; max-height: 85vh; overflow-y: auto; }
+        .image-helper-content img { max-width: 100%; border-radius: 10px; margin: 10px 0; border: 2px solid #2d6a4f; }
+        .draw-area { background: #f5f5f5; border-radius: 10px; padding: 10px; margin: 10px 0; }
+        .draw-canvas { border: 2px solid #2d6a4f; border-radius: 8px; background: white; cursor: crosshair; touch-action: none; }
+        .draw-controls { display: flex; gap: 10px; justify-content: center; margin-top: 10px; flex-wrap: wrap; }
+        .draw-btn { background: #2d6a4f; color: white; border: none; padding: 6px 15px; border-radius: 25px; cursor: pointer; font-size: 12px; }
+        .draw-btn.clear-btn { background: #e94560; }
+        .draw-btn.find-btn { background: #ffd700; color: #1a472a; }
+        .character-result { background: #e8f5e9; padding: 10px; border-radius: 10px; margin-top: 10px; display: none; }
+        .character-result.show { display: block; }
+        .character-result-word { font-size: 36px; font-weight: bold; color: #1a472a; }
+        .writing-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 10000; justify-content: center; align-items: center; }
+        .writing-modal.active { display: flex; }
+        .writing-modal-content { background: white; border-radius: 20px; padding: 20px; max-width: 95%; width: auto; text-align: center; position: relative; max-height: 90vh; overflow-y: auto; }
+        .writing-modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px; }
+        .writing-modal-header h3 { font-size: 24px; color: #1a472a; }
+        .close-modal { background: #e94560; color: white; border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 20px; }
+        .writing-boxes-container { display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; margin: 20px auto; }
+        .writing-character-box { position: relative; width: 250px; height: 250px; border: 3px solid #2d6a4f; border-radius: 12px; background: #fafafa; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.15); overflow: hidden; }
+        .writing-character-box.completed { border-color: #28a745; background: #f0fff0; }
+        .writing-character-box.active { border-color: #ffd700; box-shadow: 0 0 20px rgba(255,215,0,0.6); }
+        .writing-character-box.wrong { border-color: #e94560; animation: shake 0.3s ease-in-out; }
+        @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
+        .writing-hanzi-target { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+        .writing-draw-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; cursor: crosshair; touch-action: none; z-index: 2; }
+        .box-label { position: absolute; bottom: -30px; left: 0; right: 0; text-align: center; font-size: 14px; color: #555; font-weight: bold; }
+        .writing-stroke-counter { font-size: 16px; font-weight: bold; color: #1a472a; margin: 35px 0 15px; padding: 10px; background: #e8f5e9; border-radius: 8px; }
+        .writing-controls { display: flex; gap: 12px; justify-content: center; margin: 15px 0; flex-wrap: wrap; }
+        .writing-btn { background: #2d6a4f; color: white; border: none; padding: 8px 20px; border-radius: 30px; cursor: pointer; font-size: 13px; font-weight: bold; transition: all 0.2s ease; }
+        .writing-btn:hover { transform: scale(1.02); opacity: 0.95; }
+        .write-mode-btn { background: #ffd700; color: #1a472a; }
+        .white-paper-mode-btn { background: #e8f5e9; color: #2d6a4f; border: 1px solid #2d6a4f; }
+        .writing-clear-btn { background: #e94560; }
+        .lesson-content { background: white; border-radius: 16px; margin-top: 12px; padding: 16px; max-height: 55vh; overflow-y: auto; font-size: 15px; }
+        .section { margin-bottom: 20px; }
+        .section-title { font-size: 20px; color: #1a472a; border-left: 4px solid #ffd700; padding-left: 12px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+        .play-all-btn { background: #2d6a4f; color: white; border: none; padding: 4px 10px; border-radius: 6px; cursor: pointer; font-size: 12px; }
+        .section-smart-btn { background: transparent; border: 1px solid #2d6a4f; color: #2d6a4f; padding: 4px 10px; border-radius: 15px; cursor: pointer; font-size: 12px; }
+        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; }
+        .vocab-card { background: #fafafa; border-radius: 10px; padding: 10px; border: 1px solid #eee; }
+        .vocab-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 5px; }
+        .vocab-word { font-size: 22px; font-weight: bold; color: #1a472a; cursor: pointer; }
+        .vocab-buttons { display: flex; gap: 6px; }
+        .action-icon-btn { background: #e8f5e9; border: 1px solid #2d6a4f; color: #2d6a4f; padding: 4px 8px; border-radius: 20px; cursor: pointer; font-size: 11px; font-weight: bold; }
+        .write-btn { background: #ffd700; border-color: #d4a500; color: #1a472a; }
+        .vocab-pinyin { color: #e94560; font-size: 13px; margin: 4px 0; }
+        .vocab-meaning { color: #666; font-size: 13px; margin-bottom: 6px; }
+        .vocab-example { background: white; padding: 6px; border-radius: 6px; font-size: 12px; }
+        .audio-btn { background: #2d6a4f; color: white; border: none; padding: 3px 7px; border-radius: 10px; cursor: pointer; font-size: 10px; margin-top: 5px; margin-right: 5px; }
+        .speak-practice-btn { background: #e94560; color: white; border: none; padding: 3px 7px; border-radius: 10px; cursor: pointer; font-size: 10px; margin-top: 5px; }
+        .grammar-card { background: #fafafa; border-radius: 10px; padding: 10px; margin-bottom: 10px; border-left: 3px solid #ffd700; }
+        .grammar-title { font-size: 16px; font-weight: bold; color: #1a472a; margin-bottom: 6px; }
+        .grammar-example-item { background: white; padding: 8px; border-radius: 6px; margin-top: 6px; font-size: 14px; }
+        .dialogue-container { background: #1a1a2e; border-radius: 10px; overflow: hidden; color: white; }
+        .dialogue-scene { padding: 12px; }
+        .dialogue-line { margin-bottom: 10px; }
+        .dialogue-speaker { font-weight: bold; margin-bottom: 3px; font-size: 13px; }
+        .speaker-male { color: #87CEEB; }
+        .speaker-female { color: #FFB6C1; }
+        .dialogue-bubble { background: rgba(255,255,255,0.1); border-radius: 10px; padding: 8px 10px; }
+        .dialogue-chinese { font-size: 16px; margin-bottom: 3px; }
+        .dialogue-pinyin { color: #aaa; font-size: 11px; }
+        .dialogue-translation { color: #888; font-size: 11px; }
+        .exercise-card { background: #fafafa; border-radius: 10px; padding: 10px; margin-bottom: 10px; }
+        .exercise-question { font-weight: bold; margin-bottom: 8px; font-size: 14px; }
+        .exercise-option { padding: 6px 10px; margin: 4px 0; background: white; border-radius: 8px; cursor: pointer; font-size: 13px; }
+        .exercise-option.selected { background: #2d6a4f; color: white; }
+        .check-exercise-btn { background: #2d6a4f; color: white; border: none; padding: 6px 12px; border-radius: 20px; cursor: pointer; margin-top: 8px; font-size: 12px; }
+        .exercise-score { margin-top: 8px; padding: 6px; border-radius: 8px; text-align: center; font-size: 12px; }
+        .score-good { background: #d4edda; color: #28a745; }
+        .score-bad { background: #f8d7da; color: #dc3545; }
+        @media (max-width: 700px) { .writing-character-box { width: 180px; height: 180px; } .writing-boxes-container { gap: 25px; } }
+        @media (max-width: 500px) { .writing-character-box { width: 140px; height: 140px; } .writing-boxes-container { gap: 20px; } }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="lesson-header">
+        <h1 id="lessonTitle">HSK 1 Lesson 4: 日常生活 (Rìcháng shēnghuó) - Daily Activities</h1>
+        <p id="lessonSubtitle">Daily Routines: Get up, Eat, Work, Sleep, Go Home</p>
+        <div class="level-indicator">⭐ HSK Level 1 - Beginner</div>
+    </div>
+    <div class="lesson-nav">
+        <button class="nav-btn" onclick="window.location.href='/hsk1/lesson3'">◀ Lesson 3: Family</button>
+        <button class="nav-btn" onclick="window.location.href='/lessons'">📚 All Lessons</button>
+        <button class="nav-btn" onclick="window.location.href='/hsk1/lesson5'">Next: Food ▶</button>
+    </div>
+    <div class="ai-bar">
+        <div class="ai-bar-header">
+            <h3>🤖 AI Teacher Assistant</h3>
+            <div class="lang-toggle">
+                <button class="lang-mini-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+                <button class="lang-mini-btn" data-lang="id" onclick="setLanguage('id')">ID</button>
+            </div>
+        </div>
+        <div class="ai-message">
+            <div class="greeting" id="assistantGreeting">⏰ What do you do every day?</div>
+            <div class="message-content" id="assistantMessage">Today we learn: daily routines (起床, 吃饭, 上班, 回家, 睡觉) and hobbies (看电视, 听音乐, 读书).<br>Click <strong>read 🔊</strong> to hear the word.<br>Click <strong>✍️ Write</strong> to practice writing.<br>📷 <strong>Upload</strong> an image with Chinese text → Draw the character to identify it!</div>
+        </div>
+        <div class="chat-area" id="chatMessages"></div>
+        <div class="input-row">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Type here..." onkeypress="if(event.key==='Enter') sendChatMessage()">
+            <button class="action-btn pronounce-input-btn" onclick="pronounceChatText()">read 🔊</button>
+            <button class="action-btn" id="voiceBtn" onclick="toggleVoiceInput()">🎤 Speak</button>
+            <button class="action-btn" id="uploadBtn" onclick="document.getElementById('imageUpload').click()">📷 Upload</button>
+            <button class="send-btn" onclick="sendChatMessage()">Send</button>
+        </div>
+        <input type="file" id="imageUpload" accept="image/*">
+        <div class="chat-status" id="chatStatus">Ready</div>
+    </div>
+    <div class="lesson-content" id="lessonContent"></div>
+</div>
+<div id="imageHelperModal" class="image-helper-modal">
+    <div class="image-helper-content">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <h3 style="color:#1a472a;">📷 Image Helper</h3>
+            <button class="close-modal" onclick="closeImageHelper()">✕</button>
+        </div>
+        <div id="imagePreview"></div>
+        <div class="draw-area">
+            <p style="margin-bottom: 8px;">✍️ Draw the character you see:</p>
+            <canvas id="helperDrawCanvas" width="200" height="200" class="draw-canvas" style="width:200px; height:200px;"></canvas>
+            <div class="draw-controls">
+                <button class="draw-btn clear-btn" onclick="clearHelperCanvas()">🗑 Clear</button>
+                <button class="draw-btn find-btn" onclick="identifyDrawnCharacter()">🔍 Find</button>
+            </div>
+        </div>
+        <div id="characterResult" class="character-result">
+            <p>📖 Recognized character:</p>
+            <div id="foundCharacter" class="character-result-word"></div>
+            <div id="characterActions" style="margin-top: 10px;"></div>
+        </div>
+    </div>
+</div>
+<div id="writingModal" class="writing-modal">
+    <div class="writing-modal-content">
+        <div class="writing-modal-header">
+            <h3 id="writingModalTitle">✍️ Writing Practice</h3>
+            <button class="close-modal" onclick="closeWritingModal()">✕</button>
+        </div>
+        <div id="writingBoxesContainer" class="writing-boxes-container"></div>
+        <div class="writing-stroke-counter">✍️ Strokes: <span id="writingStrokeCount">0</span> / <span id="writingTotalStrokes">0</span></div>
+        <div class="writing-controls">
+            <button class="writing-btn" id="writingPlayBtn">▶ Play Animation</button>
+            <button class="writing-btn write-mode-btn" id="writingWriteBtn">✍️ Write</button>
+            <button class="writing-btn white-paper-mode-btn" id="writingWhitePaperBtn">📄 White Paper</button>
+            <button class="writing-btn writing-clear-btn" id="writingClearBtn">🗑 Clear</button>
+        </div>
+        <div class="status" id="writingStatus">Click "Write Mode" to start tracing.</div>
+    </div>
+</div>
+<script>
+
+    // ============================================
+    // IMAGE HELPER
+    // ============================================
+    let helperCanvas=null,helperCtx=null,helperIsDrawing=false;
+    const vocList=["起床","吃饭","喝水","上班","回家","睡觉","看电视","听音乐","读书","喜欢","想","会"];
+    function initHelperCanvas(){helperCanvas=document.getElementById('helperDrawCanvas');if(!helperCanvas)return;helperCtx=helperCanvas.getContext('2d');helperCanvas.width=200;helperCanvas.height=200;helperCtx.fillStyle='white';helperCtx.fillRect(0,0,200,200);helperCtx.lineWidth=3;helperCtx.strokeStyle='#000';helperCanvas.addEventListener('mousedown',(e)=>{helperIsDrawing=true;const p=getHC(e);helperCtx.beginPath();helperCtx.moveTo(p.x,p.y);e.preventDefault();});helperCanvas.addEventListener('mousemove',(e)=>{if(!helperIsDrawing)return;const p=getHC(e);helperCtx.lineTo(p.x,p.y);helperCtx.stroke();helperCtx.beginPath();helperCtx.moveTo(p.x,p.y);e.preventDefault();});helperCanvas.addEventListener('mouseup',()=>helperIsDrawing=false);helperCanvas.addEventListener('mouseleave',()=>helperIsDrawing=false);helperCanvas.addEventListener('touchstart',(e)=>{helperIsDrawing=true;const p=getHTC(e);helperCtx.beginPath();helperCtx.moveTo(p.x,p.y);e.preventDefault();});helperCanvas.addEventListener('touchmove',(e)=>{if(!helperIsDrawing)return;const p=getHTC(e);helperCtx.lineTo(p.x,p.y);helperCtx.stroke();helperCtx.beginPath();helperCtx.moveTo(p.x,p.y);e.preventDefault();});helperCanvas.addEventListener('touchend',()=>helperIsDrawing=false);function getHC(e){const r=helperCanvas.getBoundingClientRect();return{x:(e.clientX-r.left)*200/r.width,y:(e.clientY-r.top)*200/r.height};}function getHTC(e){const r=helperCanvas.getBoundingClientRect();const t=e.touches[0];return{x:(t.clientX-r.left)*200/r.width,y:(t.clientY-r.top)*200/r.height};}}
+    function clearHelperCanvas(){helperCtx.fillStyle='white';helperCtx.fillRect(0,0,200,200);document.getElementById('characterResult').classList.remove('show');}
+    function identifyDrawnCharacter(){const r=document.getElementById('characterResult');r.classList.add('show');document.getElementById('foundCharacter').innerHTML='?';document.getElementById('characterActions').innerHTML='<div style="display:flex;gap:8px;justify-content:center;margin-top:10px;"><button class="draw-btn" onclick="openCharSel()">📋 Select</button><button class="draw-btn" onclick="typeManual()">⌨️ Type</button></div>';}
+    function openCharSel(){let h='<div style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:white;border-radius:20px;padding:20px;max-width:400px;z-index:30000;"><h3>Select</h3><div style="max-height:300px;overflow:auto;">';vocList.forEach(v=>{h+=`<button style="display:block;width:100%;padding:8px;margin:3px 0;background:#e8f5e9;border:1px solid #2d6a4f;border-radius:8px;cursor:pointer;" onclick="selChar('${v}')">${v}</button>`;});h+='</div><button style="margin-top:10px;padding:8px;background:#e94560;color:white;border:none;border-radius:25px;" onclick="closeSel()">Cancel</button></div>';const d=document.createElement('div');d.id='tempSel';d.innerHTML=h;document.body.appendChild(d);}
+    function closeSel(){const s=document.getElementById('tempSel');if(s)s.remove();}
+    function selChar(c){closeSel();document.getElementById('foundCharacter').innerHTML=c;document.getElementById('characterActions').innerHTML=`<div style="display:flex;gap:10px;"><button class="draw-btn" onclick="addToChat('${c}')">➕ Add</button><button class="draw-btn find-btn" onclick="openWritingModal('${c}', '?')">✍️ Write</button><button class="draw-btn" onclick="speakC('${c}')">🔊 Listen</button></div>`;}
+    function typeManual(){const i=prompt("Type the character:");if(i)selChar(i);}
+    function addToChat(c){addChatMsg(`📖 Character: ${c}`,false);document.getElementById('chatInput').value=c;closeImageHelper();}
+    function speakC(c){playAudio(c,'zh','female');}
+    function openImageHelper(url){document.getElementById('imagePreview').innerHTML=`<img src="${url}">`;clearHelperCanvas();document.getElementById('imageHelperModal').classList.add('active');}
+    function closeImageHelper(){document.getElementById('imageHelperModal').classList.remove('active');}
+    document.getElementById('imageUpload').addEventListener('change',function(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=function(ev){openImageHelper(ev.target.result);};r.readAsDataURL(f);});
+    
+    // ============================================
+    // WRITING MODULE
+    // ============================================
+    let currentWord='',currentPinyin='',characters=[],writers=[],completedChars=[],activeCharIndex=0,totalStrokesForCurrentChar=0,writingModeActive=false,isWhitePaperMode=false,drawingData={},isAnimating=false;
+    const sMap={'起':10,'床':7,'吃':6,'饭':7,'喝':12,'水':4,'上':3,'班':10,'回':6,'家':10,'睡':13,'觉':12,'看':9,'电':5,'视':8,'听':7,'音':9,'乐':5,'读':10,'书':4,'喜':12,'欢':6,'想':13,'会':6};
+    function getSC(c){return sMap[c]||6;}
+    function upStatus(m,t){const d=document.getElementById('writingStatus');d.innerHTML=m;if(t==='success'){d.style.background='#d4edda';d.style.color='#28a745';}else if(t==='error'){d.style.background='#f8d7da';d.style.color='#dc3545';}else{d.style.background='#e8f5e9';d.style.color='#1a472a';}}
+    function isValidStroke(pts){if(pts.length<5)return false;let minX=Infinity,maxX=-Infinity,minY=Infinity,maxY=-Infinity;for(let p of pts){minX=Math.min(minX,p.x);maxX=Math.max(maxX,p.x);minY=Math.min(minY,p.y);maxY=Math.max(maxY,p.y);}let d=0;for(let i=1;i<pts.length;i++)d+=Math.hypot(pts[i].x-pts[i-1].x,pts[i].y-pts[i-1].y);return(maxX-minX>=10||maxY-minY>=10)&&d>=20;}
+    function wrongStroke(idx){const b=document.getElementById(`char-box-${idx}`);if(b){b.classList.add('wrong');setTimeout(()=>b.classList.remove('wrong'),500);}upStatus(`❌ Wrong stroke! Starting over for "${characters[idx]}".`,'error');if(drawingData[idx]){drawingData[idx].strokeCount=0;drawingData[idx].ctx.clearRect(0,0,250,250);}let total=0;for(let i=0;i<activeCharIndex;i++)total+=drawingData[i]?.strokeCount||0;document.getElementById('writingStrokeCount').innerText=total;}
+    function createBoxes(cont,wChars,pArr){cont.innerHTML='';writers=[];completedChars=new Array(wChars.length).fill(false);activeCharIndex=0;drawingData={};for(let i=0;i<wChars.length;i++){const c=wChars[i];const box=document.createElement('div');box.className='writing-character-box';if(i===0)box.classList.add('active');box.id=`char-box-${i}`;const td=document.createElement('div');td.className='writing-hanzi-target';td.id=`hanzi-target-${i}`;const canv=document.createElement('canvas');canv.className='writing-draw-canvas';canv.id=`draw-canvas-${i}`;canv.width=250;canv.height=250;const lbl=document.createElement('div');lbl.className='box-label';lbl.innerHTML=`${c} - ${pArr[i]||currentPinyin}`;box.appendChild(td);box.appendChild(canv);box.appendChild(lbl);cont.appendChild(box);const ctx=canv.getContext('2d');ctx.lineWidth=4;ctx.strokeStyle='#000';drawingData[i]={canvas:canv,ctx:ctx,isDrawing:false,strokeCount:0,completed:false,currentStrokePoints:[]};setupEvents(canv,i);try{writers.push(HanziWriter.create(`hanzi-target-${i}`,c,{width:250,height:250,showOutline:!isWhitePaperMode,showCharacter:true,outlineColor:'#d3d3d3',strokeColor:'#000'}));}catch(e){writers.push(null);}}const total=wChars.reduce((s,ch)=>s+getSC(ch),0);document.getElementById('writingTotalStrokes').innerText=total;document.getElementById('writingStrokeCount').innerText='0';totalStrokesForCurrentChar=getSC(wChars[0]);}
+    function setupEvents(canv,idx){const data=drawingData[idx];const getC=(e)=>{const r=canv.getBoundingClientRect();const sx=canv.width/r.width,sy=canv.height/r.height;let cx,cy;if(e.touches){cx=e.touches[0].clientX;cy=e.touches[0].clientY;}else{cx=e.clientX;cy=e.clientY;}return{x:Math.min(Math.max(0,(cx-r.left)*sx),canv.width),y:Math.min(Math.max(0,(cy-r.top)*sy),canv.height)};};const start=(e)=>{if(!writingModeActive){upStatus('Click "Write Mode" first!','error');return;}if(idx!==activeCharIndex){upStatus(`Complete "${characters[activeCharIndex]}" first!`,'error');return;}if(data.completed)return;e.preventDefault();data.isDrawing=true;const p=getC(e);data.currentStrokePoints=[p];data.ctx.beginPath();data.ctx.moveTo(p.x,p.y);};const draw=(e)=>{if(!data.isDrawing)return;e.preventDefault();const p=getC(e);data.ctx.lineTo(p.x,p.y);data.ctx.stroke();data.ctx.beginPath();data.ctx.moveTo(p.x,p.y);data.currentStrokePoints.push(p);};const end=()=>{if(!data.isDrawing)return;data.isDrawing=false;const pts=data.currentStrokePoints;if(pts.length>0&&!data.completed&&idx===activeCharIndex){if(isValidStroke(pts)){data.strokeCount++;let total=0;for(let i=0;i<=activeCharIndex;i++)total+=drawingData[i]?.strokeCount||0;document.getElementById('writingStrokeCount').innerText=total;if(data.strokeCount>=totalStrokesForCurrentChar){data.completed=true;completedChars[idx]=true;const box=document.getElementById(`char-box-${idx}`);if(box){box.classList.add('completed');box.classList.remove('active');}upStatus(`✓ Completed "${characters[idx]}"!`,'success');if(idx+1<characters.length){activeCharIndex=idx+1;totalStrokesForCurrentChar=getSC(characters[activeCharIndex]);const nb=document.getElementById(`char-box-${activeCharIndex}`);if(nb)nb.classList.add('active');upStatus(`Now practice "${characters[activeCharIndex]}"! (${totalStrokesForCurrentChar} strokes)`,'success');}else{upStatus('🎉 CONGRATULATIONS! Complete word!','success');writingModeActive=false;}}else{upStatus(`✓ Stroke ${data.strokeCount}/${totalStrokesForCurrentChar} completed!`,'success');}}else if(pts.length>=3){wrongStroke(idx);}}data.currentStrokePoints=[];};canv.addEventListener('mousedown',start);canv.addEventListener('mousemove',draw);canv.addEventListener('mouseup',end);canv.addEventListener('mouseleave',end);canv.addEventListener('touchstart',start);canv.addEventListener('touchmove',draw);canv.addEventListener('touchend',end);}
+    function playAnim(){if(isAnimating){upStatus('Animation already playing...','info');return;}if(characters.length===0){upStatus('No characters.','error');return;}isAnimating=true;let i=0;const next=()=>{if(i>=characters.length){isAnimating=false;upStatus('🎬 Animation complete!','success');return;}const c=characters[i];const tid=`hanzi-target-${i}`;const td=document.getElementById(tid);if(td){upStatus(`🎬 Playing "${c}" (${i+1}/${characters.length})...`,'success');for(let j=0;j<characters.length;j++){const b=document.getElementById(`char-box-${j}`);if(b)b.style.boxShadow=j===i?'0 0 0 3px #ffd700':'none';}td.innerHTML='';const tw=HanziWriter.create(tid,c,{width:250,height:250,showOutline:true,showCharacter:true,outlineColor:'#d3d3d3',strokeColor:'#2d6a4f'});setTimeout(()=>{tw.animateCharacter({onComplete:()=>{i++;setTimeout(next,600);}});},200);}else{i++;setTimeout(next,500);}};next();}
+    function enableWM(){if(isAnimating)isAnimating=false;writingModeActive=true;isWhitePaperMode=false;for(let i=0;i<characters.length;i++){if(drawingData[i]){drawingData[i].strokeCount=0;drawingData[i].completed=false;drawingData[i].ctx.clearRect(0,0,250,250);const td=document.getElementById(`hanzi-target-${i}`);if(td){td.innerHTML='';try{writers[i]=HanziWriter.create(`hanzi-target-${i}`,characters[i],{width:250,height:250,showOutline:true,showCharacter:false,outlineColor:'#d3d3d3',strokeColor:'#000'});}catch(e){}}}}completedChars.fill(false);activeCharIndex=0;totalStrokesForCurrentChar=getSC(characters[0]);for(let i=0;i<characters.length;i++){const b=document.getElementById(`char-box-${i}`);if(b){b.classList.remove('completed','active');if(i===0)b.classList.add('active');}}document.getElementById('writingStrokeCount').innerText='0';const total=characters.reduce((s,c)=>s+getSC(c),0);document.getElementById('writingTotalStrokes').innerText=total;upStatus(`✍️ Write mode! Complete "${characters[0]}" (${totalStrokesForCurrentChar} strokes)`,'success');}
+    function enableWP(){if(isAnimating)isAnimating=false;writingModeActive=true;isWhitePaperMode=true;for(let i=0;i<characters.length;i++){if(drawingData[i]){drawingData[i].strokeCount=0;drawingData[i].completed=false;drawingData[i].ctx.clearRect(0,0,250,250);const td=document.getElementById(`hanzi-target-${i}`);if(td){td.innerHTML='';try{writers[i]=HanziWriter.create(`hanzi-target-${i}`,characters[i],{width:250,height:250,showOutline:false,showCharacter:false,strokeColor:'#000'});}catch(e){}}}}completedChars.fill(false);activeCharIndex=0;totalStrokesForCurrentChar=getSC(characters[0]);for(let i=0;i<characters.length;i++){const b=document.getElementById(`char-box-${i}`);if(b){b.classList.remove('completed','active');if(i===0)b.classList.add('active');}}document.getElementById('writingStrokeCount').innerText='0';const total=characters.reduce((s,c)=>s+getSC(c),0);document.getElementById('writingTotalStrokes').innerText=total;upStatus('📄 White paper mode','success');}
+    function clearAll(){if(isAnimating)isAnimating=false;for(let i=0;i<characters.length;i++){if(drawingData[i]){drawingData[i].ctx.clearRect(0,0,250,250);drawingData[i].strokeCount=0;drawingData[i].completed=false;}}completedChars.fill(false);activeCharIndex=0;totalStrokesForCurrentChar=getSC(characters[0]);for(let i=0;i<characters.length;i++){const b=document.getElementById(`char-box-${i}`);if(b){b.classList.remove('completed','active');if(i===0)b.classList.add('active');}}document.getElementById('writingStrokeCount').innerText='0';upStatus('Cleared. Start over!','info');if(writingModeActive&&!isWhitePaperMode){for(let i=0;i<characters.length;i++){const td=document.getElementById(`hanzi-target-${i}`);if(td){td.innerHTML='';try{writers[i]=HanziWriter.create(`hanzi-target-${i}`,characters[i],{width:250,height:250,showOutline:true,showCharacter:false,outlineColor:'#d3d3d3',strokeColor:'#000'});}catch(e){}}}}}
+    function openWritingModal(w,p){currentWord=w;currentPinyin=p;characters=w.split('');const pc=p.split(' ');createBoxes(document.getElementById('writingBoxesContainer'),characters,pc);document.getElementById('writingModalTitle').innerHTML=`✍️ Writing: ${w} (${p})`;document.getElementById('writingModal').classList.add('active');writingModeActive=false;isWhitePaperMode=false;isAnimating=false;closeImageHelper();}
+    function closeWritingModal(){document.getElementById('writingModal').classList.remove('active');if(isAnimating)isAnimating=false;}
+
+    // ============================================
+    // MAIN CONTENT & CHAT
+    // ============================================
+    let currentLanguage='en',isRecording=false,recognition=null,pronRecog=null,audioQueue=[],isPlaying=false,chatHistory=[],userAnswers={};
+    if('webkitSpeechRecognition' in window){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;recognition=new SR();recognition.lang='zh-CN';pronRecog=new SR();pronRecog.lang='zh-CN';}
+    const vocabulary=[
+        {"word":"起床","pinyin":"qǐ chuáng","meaning":"get up","meaning_id":"bangun","example":"七点起床","example_translation":"Get up at 7","example_translation_id":"Bangun jam 7"},
+        {"word":"吃饭","pinyin":"chī fàn","meaning":"eat","meaning_id":"makan","example":"吃饭了吗？","example_translation":"Have you eaten?","example_translation_id":"Apakah sudah makan?"},
+        {"word":"喝水","pinyin":"hē shuǐ","meaning":"drink water","meaning_id":"minum air","example":"我想喝水","example_translation":"I want to drink water","example_translation_id":"Saya ingin minum air"},
+        {"word":"上班","pinyin":"shàng bān","meaning":"go to work","meaning_id":"pergi kerja","example":"九点上班","example_translation":"Go to work at 9","example_translation_id":"Pergi kerja jam 9"},
+        {"word":"回家","pinyin":"huí jiā","meaning":"go home","meaning_id":"pulang","example":"我回家了","example_translation":"I'm going home","example_translation_id":"Saya pulang ke rumah"},
+        {"word":"睡觉","pinyin":"shuì jiào","meaning":"sleep","meaning_id":"tidur","example":"十点睡觉","example_translation":"Sleep at 10","example_translation_id":"Tidur jam 10"},
+        {"word":"看电视","pinyin":"kàn diàn shì","meaning":"watch TV","meaning_id":"menonton TV","example":"喜欢看电视","example_translation":"Like watching TV","example_translation_id":"Suka menonton TV"},
+        {"word":"听音乐","pinyin":"tīng yīn yuè","meaning":"listen to music","meaning_id":"dengarkan musik","example":"听音乐","example_translation":"Listen to music","example_translation_id":"Dengarkan musik"},
+        {"word":"读书","pinyin":"dú shū","meaning":"read","meaning_id":"baca","example":"爱读书","example_translation":"Love reading","example_translation_id":"Suka membaca"},
+        {"word":"喜欢","pinyin":"xǐ huan","meaning":"like","meaning_id":"suka","example":"我喜欢你","example_translation":"I like you","example_translation_id":"Saya suka kamu"},
+        {"word":"想","pinyin":"xiǎng","meaning":"want/think","meaning_id":"ingin/pikir","example":"我想去北京","example_translation":"I want to go to Beijing","example_translation_id":"Saya ingin pergi ke Beijing"},
+        {"word":"会","pinyin":"huì","meaning":"can","meaning_id":"bisa","example":"我会说中文","example_translation":"I can speak Chinese","example_translation_id":"Saya bisa bicara Mandarin"}
+    ];
+    const grammar=[
+        {point:"Daily Activities",point_id:"Aktivitas Sehari-hari",explanation:"起床 (qǐ chuáng)=get up, 吃饭 (chī fàn)=eat, 上班 (shàng bān)=go to work, 回家 (huí jiā)=go home, 睡觉 (shuì jiào)=sleep.",explanation_id:"起床 (qǐ chuáng)=bangun, 吃饭 (chī fàn)=makan, 上班 (shàng bān)=pergi kerja, 回家 (huí jiā)=pulang, 睡觉 (shuì jiào)=tidur.",
+            examples:[{chinese:"我七点起床。",translation:"I get up at 7."},{chinese:"你几点上班？",translation:"What time do you go to work?"}]},
+        {point:"Liking: 喜欢 (xǐ huan)",point_id:"Suka: 喜欢 (xǐ huan)",explanation:"Use 喜欢 (xǐ huan) + noun/verb to express liking something.",explanation_id:"Gunakan 喜欢 (xǐ huan) + kata benda/kata kerja untuk menyatakan suka sesuatu.",
+            examples:[{chinese:"我喜欢听音乐。",translation:"I like listening to music."},{chinese:"你喜欢喝茶吗？",translation:"Do you like drinking tea?"}]},
+        {point:"Wanting: 想 (xiǎng) and Ability: 会 (huì)",point_id:"Keinginan: 想 (xiǎng) dan Kemampuan: 会 (huì)",explanation:"想 (xiǎng) expresses 'want to'. 会 (huì) expresses 'can/know how to'.",explanation_id:"想 (xiǎng) menyatakan 'ingin'. 会 (huì) menyatakan 'bisa/mampu'.",
+            examples:[{chinese:"我想喝水。",translation:"I want to drink water."},{chinese:"我会说中文。",translation:"I can speak Chinese."}]}
+    ];
+    const dialogue=[
+        {speaker:"male",name:"Tom",voice:"male",chinese:"你每天几点起床？",pinyin:"Nǐ měi tiān jǐ diǎn qǐchuáng?",translation:"What time do you get up every day?"},
+        {speaker:"female",name:"Li Mei",voice:"female",chinese:"我七点起床。你几点上班？",pinyin:"Wǒ qī diǎn qǐchuáng. Nǐ jǐ diǎn shàngbān?",translation:"I get up at 7. What time do you go to work?"},
+        {speaker:"male",name:"Tom",voice:"male",chinese:"我八点半上班。你下班以后做什么？",pinyin:"Wǒ bā diǎn bàn shàngbān. Nǐ xiàbān yǐhòu zuò shénme?",translation:"I go to work at 8:30. What do you do after work?"},
+        {speaker:"female",name:"Li Mei",voice:"female",chinese:"我喜欢回家看电视。你喜欢做什么？",pinyin:"Wǒ xǐhuan huí jiā kàn diànshì. Nǐ xǐhuan zuò shénme?",translation:"I like to go home and watch TV. What do you like to do?"},
+        {speaker:"male",name:"Tom",voice:"male",chinese:"我喜欢听音乐和读书。你会说中文吗？",pinyin:"Wǒ xǐhuan tīng yīnyuè hé dúshū. Nǐ huì shuō Zhōngwén ma?",translation:"I like listening to music and reading. Can you speak Chinese?"},
+        {speaker:"female",name:"Li Mei",voice:"female",chinese:"会！我想去中国旅游。",pinyin:"Huì! Wǒ xiǎng qù Zhōngguó lǚyóu.",translation:"Yes! I want to travel to China."}
+    ];
+    const exercises=[
+        {q:"What does 起床 (qǐ chuáng) mean?",opts:["Get up","Eat","Sleep","Work"],ans:0},
+        {q:"How do you say 'go to work' in Chinese?",opts:["回家","上班","睡觉","吃饭"],ans:1},
+        {q:"What does 喜欢 (xǐ huan) mean?",opts:["Like","Hate","Want","Can"],ans:0},
+        {q:"How to say 'I want to go to Beijing' in Chinese?",opts:["我去北京","我想去北京","我会去北京","我喜欢北京"],ans:1},
+        {q:"What does 会 (huì) mean?",opts:["Will","Can/Know how","Want","Like"],ans:1},
+        {q:"Complete: 我___听音乐 (I like listening to music)",opts:["会","想","喜欢","能"],ans:2}
+    ];
+    const trans={
+        en:{lessonTitle:"HSK 1 Lesson 4: 日常生活 (Rìcháng shēnghuó) - Daily Activities",lessonSubtitle:"Daily Routines, Hobbies, Expressing Likes and Abilities",assistantGreeting:"⏰ What do you do every day?",assistantMessage:"Today we learn: daily routines (起床, 吃饭, 上班, 回家, 睡觉) and hobbies (看电视, 听音乐, 读书).",vocabulary:"Vocabulary (12 words)",grammar:"Grammar Points",conversation:"Daily Routine Conversation",exercises:"Lesson Exercises",playAll:"🔊 Play All",askAI:"🤖 Ask AI",explain:"🤖 Explain",practice:"🤖 Practice",more:"🤖 More",read:"read 🔊",listen:"🔊 Listen",practiceWord:"🎤 Practice",write:"✍️ Write",checkAnswers:"Check Answers",score:"Score",greatJob:"Great job!",reviewLesson:"Review and try again."},
+        id:{lessonTitle:"HSK 1 Pelajaran 4: 日常生活 (Rìcháng shēnghuó) - Aktivitas Sehari-hari",lessonSubtitle:"Rutinitas Harian, Hobi, Menyatakan Suka dan Kemampuan",assistantGreeting:"⏰ Apa yang Anda lakukan setiap hari?",assistantMessage:"Hari ini kita belajar: rutinitas harian (起床, 吃饭, 上班, 回家, 睡觉) dan hobi (看电视, 听音乐, 读书).",vocabulary:"Kosakata (12 kata)",grammar:"Tata Bahasa",conversation:"Percakapan Rutinitas Harian",exercises:"Latihan",playAll:"🔊 Putar",askAI:"🤖 Tanya",explain:"🤖 Jelaskan",practice:"🤖 Latihan",more:"🤖 Lagi",read:"baca",listen:"🔊",practiceWord:"🎤 Latihan",write:"✍️ Tulis",checkAnswers:"Periksa",score:"Nilai",greatJob:"Kerja bagus!",reviewLesson:"Pelajari lagi."}
+    };
+    function setLanguage(l){currentLanguage=l;document.querySelectorAll('.lang-mini-btn').forEach(b=>{b.classList.remove('active');if(b.dataset.lang===l)b.classList.add('active');});document.getElementById('lessonTitle').innerHTML=trans[l].lessonTitle;document.getElementById('lessonSubtitle').innerHTML=trans[l].lessonSubtitle;document.getElementById('assistantGreeting').innerHTML=trans[l].assistantGreeting;document.getElementById('assistantMessage').innerHTML=trans[l].assistantMessage;renderContent();}
+    async function playAudio(t,lang='zh',voice='female'){if(!t)return;audioQueue.push({text:t,language:lang,voiceType:voice});if(!isPlaying)processAudio();}
+    async function processAudio(){if(audioQueue.length===0){isPlaying=false;return;}isPlaying=true;const i=audioQueue.shift();try{const r=await fetch('/api/speak',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:i.text,language:i.language,voice:i.voiceType})});if(r.ok){const b=await r.blob();const a=new Audio(URL.createObjectURL(b));a.onended=()=>setTimeout(()=>processAudio(),200);a.play();}else{const u=new SpeechSynthesisUtterance(i.text);u.lang=i.language==='zh'?'zh-CN':'en-US';u.rate=0.75;u.onend=()=>setTimeout(()=>processAudio(),200);speechSynthesis.speak(u);}}catch(e){processAudio();}}
+    function playWord(w){playAudio(w,'zh','female');}
+    function startPractice(w,p){if(!pronRecog){addChatMsg("⚠️ Not supported",false);return;}pronRecog.start();pronRecog.onresult=e=>{const s=e.results[0][0].transcript;const c=s===w||s===p||s.includes(w);addChatMsg(c?`✅ Excellent "${w}"!`:`❌ Try again. Correct: "${w}" (${p})`,false);};pronRecog.onerror=()=>addChatMsg("❌ Could not hear.",false);}
+    function toggleVoice(){if(!recognition){addChatMsg("⚠️ Not supported",false);return;}if(isRecording){recognition.stop();return;}isRecording=true;const vb=document.getElementById('voiceBtn');vb.classList.add('recording');recognition.start();recognition.onresult=e=>{document.getElementById('chatInput').value=e.results[0][0].transcript;isRecording=false;vb.classList.remove('recording');};recognition.onerror=()=>{isRecording=false;vb.classList.remove('recording');};recognition.onend=()=>{if(isRecording){isRecording=false;vb.classList.remove('recording');}};}
+    function pronounceChat(){const t=document.getElementById('chatInput').value.trim();if(t){const ch=t.match(/[\u4e00-\u9fff]/g);if(ch&&ch.length){playAudio(ch.join(''),'zh','female');addChatMsg(`🔊 "${ch.join('')}"`,false);}else{playAudio(t,'zh','female');addChatMsg(`🔊 "${t}"`,false);}}else{addChatMsg("⚠️ Type something first.",false);}}
+    async function sendChat(){const inp=document.getElementById('chatInput');const msg=inp.value.trim();if(!msg)return;addChatMsg(msg,true);inp.value='';document.getElementById('chatStatus').innerHTML='🤔 Thinking...';try{const r=await fetch('/api/ai-assistant',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg,level:1,history:chatHistory,language:currentLanguage})});const d=await r.json();addChatMsg(d.reply,false);chatHistory.push({role:"user",content:msg},{role:"assistant",content:d.reply});document.getElementById('chatStatus').innerHTML='Ready';}catch(e){addChatMsg("Connection error.",false);document.getElementById('chatStatus').innerHTML='Error';}}
+    function addChatMsg(t,isUser){const d=document.getElementById('chatMessages');const m=document.createElement('div');m.className=`chat-message ${isUser?'user':'ai'}`;let h=t;if(!isUser&&t.match(/[\u4e00-\u9fff]/)){const ch=t.match(/[\u4e00-\u9fff]+/);if(ch)h=`${t} <button class="pronounce-chat-btn" onclick="playAudio('${ch[0]}','zh','female')">read 🔊</button>`;}m.innerHTML=h;d.appendChild(m);d.scrollTop=d.scrollHeight;}
+    function sendManual(m){document.getElementById('chatInput').value=m;sendChat();}
+    function renderContent(){const c=document.getElementById('lessonContent');const t=trans[currentLanguage];c.innerHTML=`<div class="section"><div class="section-title">📖 ${t.vocabulary}<div><button class="play-all-btn" onclick="playAllVocab()">${t.playAll}</button><button class="section-smart-btn" onclick="sendManual('Help me understand this vocabulary')">${t.askAI}</button></div></div><div class="vocab-grid" id="vocabGrid"></div></div><div class="section"><div class="section-title">📖 ${t.grammar}<div><button class="play-all-btn" onclick="playAllGrammar()">${t.playAll}</button><button class="section-smart-btn" onclick="sendManual('Please explain the grammar')">${t.explain}</button></div></div><div id="grammarContainer"></div></div><div class="section"><div class="section-title">💬 ${t.conversation}<div><button class="play-all-btn" onclick="playAllDial()">${t.playAll}</button><button class="section-smart-btn" onclick="sendManual('Let\\'s practice conversation')">${t.practice}</button></div></div><div class="dialogue-container"><div class="dialogue-scene" id="dialogueContainer"></div></div></div><div class="section"><div class="section-title">✍️ ${t.exercises}<button class="section-smart-btn" onclick="sendManual('Create a quiz for me')">${t.more}</button></div><div id="exercisesContainer"></div><button class="check-exercise-btn" onclick="checkEx()">${t.checkAnswers}</button><div id="exerciseScore" style="display:none;"></div></div>`;document.getElementById('vocabGrid').innerHTML=vocabulary.map(v=>`<div class="vocab-card"><div class="vocab-header"><div class="vocab-word" onclick="playWord('${v.word}')">${v.word}</div><div class="vocab-buttons"><button class="action-icon-btn" onclick="playWord('${v.word}')" title="${t.read}">read 🔊</button><button class="action-icon-btn write-btn" onclick="openWritingModal('${v.word}','${v.pinyin}')" title="${t.write}">✍️ Write</button></div></div><div class="vocab-pinyin">${v.pinyin}</div><div class="vocab-meaning">${currentLanguage==='en'?v.meaning:v.meaning_id}</div><div class="vocab-example"><div>📝 ${v.example}</div><div style="font-size:9px;color:#888;">→ ${currentLanguage==='en'?v.example_translation:v.example_translation_id}</div><button class="audio-btn" onclick="playAudio('${v.example}','zh','female')">🔊 ${t.listen}</button><button class="speak-practice-btn" onclick="startPractice('${v.word}','${v.pinyin}')">🎤 ${t.practiceWord}</button></div></div>`).join('');document.getElementById('grammarContainer').innerHTML=grammar.map(g=>`<div class="grammar-card"><div class="grammar-title">${currentLanguage==='en'?g.point:g.point_id}</div><div style="font-size:12px;color:#555;margin-bottom:8px;">${currentLanguage==='en'?g.explanation:g.explanation_id}</div>${g.examples.map(ex=>`<div class="grammar-example-item"><div>${ex.chinese}</div><div style="font-size:10px;color:#666;">→ ${ex.translation}</div><button class="audio-btn" onclick="playAudio('${ex.chinese}','zh','female')">🔊 ${t.listen}</button></div>`).join('')}</div>`).join('');document.getElementById('dialogueContainer').innerHTML=dialogue.map(l=>`<div class="dialogue-line"><div class="dialogue-speaker ${l.speaker==='male'?'speaker-male':'speaker-female'}">${l.speaker==='male'?'👨':'👩'} ${l.name}:</div><div class="dialogue-bubble"><div class="dialogue-chinese">${l.chinese}</div><div class="dialogue-pinyin">${l.pinyin}</div><div class="dialogue-translation">→ ${l.translation}</div><button class="audio-btn" onclick="playAudio('${l.chinese}','zh','${l.voice}')">🔊 ${t.listen}</button></div></div>`).join('');document.getElementById('exercisesContainer').innerHTML=exercises.map((ex,idx)=>`<div class="exercise-card"><div class="exercise-question">${idx+1}. ${ex.q}</div>${ex.opts.map((opt,oidx)=>`<div class="exercise-option" onclick="selAns(${idx},${oidx})">${String.fromCharCode(65+oidx)}. ${opt}</div>`).join('')}</div>`).join('');}
+    function selAns(idx,opt){userAnswers[idx]=opt;const opts=document.querySelectorAll(`.exercise-card:nth-child(${idx+1}) .exercise-option`);opts.forEach(o=>o.classList.remove('selected'));opts[opt].classList.add('selected');}
+    function checkEx(){let c=0;exercises.forEach((ex,i)=>{if(userAnswers[i]===ex.ans)c++;});const p=Math.round(c/exercises.length*100);const d=document.getElementById('exerciseScore');d.style.display='block';d.className=p>=70?'exercise-score score-good':'exercise-score score-bad';const t=trans[currentLanguage];d.innerHTML=p>=70?`✅ ${t.score}: ${c}/${exercises.length} (${p}%) - ${t.greatJob}`:`📚 ${t.score}: ${c}/${exercises.length} (${p}%) - ${t.reviewLesson}`;}
+    function playAllVocab(){let i=0;function n(){if(i>=vocabulary.length)return;playAudio(vocabulary[i++].word,'zh','female');setTimeout(n,1800);}n();}
+    function playAllGrammar(){let g=0,e=0;function n(){if(g>=grammar.length)return;if(e===0){playAudio(grammar[g].point+'. '+grammar[g].explanation,'en','female');e++;setTimeout(n,4000);}else if(e-1<grammar[g].examples.length){playAudio(grammar[g].examples[e-1].chinese,'zh','female');e++;setTimeout(n,2500);}else{g++;e=0;setTimeout(n,1500);}}n();}
+    function playAllDial(){let i=0;function n(){if(i>=dialogue.length)return;playAudio(dialogue[i].chinese,'zh',dialogue[i].voice);i++;setTimeout(n,3200);}n();}
+    document.getElementById('writingPlayBtn').onclick=playAnim;
+    document.getElementById('writingWriteBtn').onclick=enableWM;
+    document.getElementById('writingWhitePaperBtn').onclick=enableWP;
+    document.getElementById('writingClearBtn').onclick=clearAll;
+    initHelperCanvas();renderContent();
+    window.playAudio=playAudio;window.playWord=playWord;window.startPractice=startPractice;window.selAns=selAns;window.checkEx=checkEx;
+    window.playAllVocab=playAllVocab;window.playAllGrammar=playAllGrammar;window.playAllDial=playAllDial;window.sendChat=sendChat;window.sendManual=sendManual;
+    window.setLanguage=setLanguage;window.toggleVoice=toggleVoice;window.pronounceChat=pronounceChat;
+    window.openWritingModal=openWritingModal;window.closeWritingModal=closeWritingModal;
+    window.openCharSel=openCharSel;window.closeSel=closeSel;window.selChar=selChar;window.typeManual=typeManual;
+    window.addToChat=addToChat;window.speakC=speakC;window.closeImageHelper=closeImageHelper;
+    window.clearHelperCanvas=clearHelperCanvas;window.identifyDrawnCharacter=identifyDrawnCharacter;
+</script>
+</body>
+</html>

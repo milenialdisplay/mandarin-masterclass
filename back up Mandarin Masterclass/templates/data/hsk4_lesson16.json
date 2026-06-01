@@ -1,0 +1,50 @@
+{
+  "title": "沟通的艺术",
+  "subtitle": "Talking About Communication, Skills, and Listening",
+  "assistant_message": "Today we learn: discussing the art of communication, using 不仅...而且... (bùjǐn... érqiě...) for 'not only... but also...', and improving listening skills.",
+  "vocabulary": [
+    {"word": "沟通", "pinyin": "gōu tōng", "meaning": "to communicate", "meaning_id": "berkomunikasi", "example": "有效沟通", "example_translation": "effective communication", "example_translation_id": "komunikasi efektif"},
+    {"word": "技巧", "pinyin": "jì qiǎo", "meaning": "skill/technique", "meaning_id": "keterampilan", "example": "沟通技巧", "example_translation": "communication skills", "example_translation_id": "keterampilan komunikasi"},
+    {"word": "倾听", "pinyin": "qīng tīng", "meaning": "to listen attentively", "meaning_id": "mendengarkan dengan saksama", "example": "学会倾听", "example_translation": "learn to listen", "example_translation_id": "belajar mendengarkan"},
+    {"word": "表达", "pinyin": "biǎo dá", "meaning": "to express", "meaning_id": "mengekspresikan", "example": "清晰表达", "example_translation": "express clearly", "example_translation_id": "mengekspresikan dengan jelas"},
+    {"word": "反馈", "pinyin": "fǎn kuì", "meaning": "feedback", "meaning_id": "umpan balik", "example": "给予反馈", "example_translation": "give feedback", "example_translation_id": "memberi umpan balik"},
+    {"word": "冲突", "pinyin": "chōng tū", "meaning": "conflict", "meaning_id": "konflik", "example": "解决冲突", "example_translation": "resolve conflict", "example_translation_id": "menyelesaikan konflik"},
+    {"word": "信任", "pinyin": "xìn rèn", "meaning": "trust", "meaning_id": "kepercayaan", "example": "建立信任", "example_translation": "build trust", "example_translation_id": "membangun kepercayaan"},
+    {"word": "尊重", "pinyin": "zūn zhòng", "meaning": "to respect", "meaning_id": "menghormati", "example": "互相尊重", "example_translation": "respect each other", "example_translation_id": "saling menghormati"}
+  ],
+  "grammar": [
+    {
+      "point": "Using 不仅...而且... (Not only... but also...)",
+      "point_id": "Menggunakan 不仅...而且... (Tidak hanya... tetapi juga...)",
+      "explanation": "不仅 is used to state one point, and 而且 adds another point of equal importance.",
+      "explanation_id": "不仅 digunakan untuk menyatakan satu poin, dan 而且 menambahkan poin lain yang sama pentingnya.",
+      "examples": [
+        {"chinese": "沟通不仅需要表达，而且需要倾听。", "translation": "Communication not only requires expression, but also requires listening.", "translation_id": "Komunikasi tidak hanya membutuhkan ekspresi, tetapi juga membutuhkan mendengarkan."},
+        {"chinese": "他不仅聪明，而且很努力。", "translation": "He is not only smart, but also very hardworking.", "translation_id": "Dia tidak hanya pintar, tetapi juga sangat pekerja keras."}
+      ]
+    },
+    {
+      "point": "Using 不但...还 (bùdàn... hái) for 'Not only... also'",
+      "point_id": "Menggunakan 不但...还 (bùdàn... hái) untuk 'Tidak hanya... juga'",
+      "explanation": "Similar to 不仅...而且, 不但...还 is more colloquial.",
+      "explanation_id": "Mirip dengan 不仅...而且, 不但...还 lebih kolokial.",
+      "examples": [
+        {"chinese": "他不但会说汉语，还会写汉字。", "translation": "He not only can speak Chinese, but also can write characters.", "translation_id": "Dia tidak hanya bisa bicara Mandarin, tetapi juga bisa menulis karakter."},
+        {"chinese": "我们不但要学习，还要实践。", "translation": "We not only need to learn, but also need to practice.", "translation_id": "Kita tidak hanya perlu belajar, tetapi juga perlu berlatih."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你觉得怎样才能更好地沟通？", "pinyin": "Nǐ juéde zěn yàng cáinéng gèng hǎo de gōutōng?", "translation": "How do you think we can communicate better?", "translation_id": "Bagaimana menurutmu kita bisa berkomunikasi lebih baik?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "沟通不仅需要会说话，而且需要会倾听。", "pinyin": "Gōutōng bùjǐn xūyào huì shuōhuà, érqiě xūyào huì qīngtīng.", "translation": "Communication not only requires the ability to speak, but also the ability to listen.", "translation_id": "Komunikasi tidak hanya membutuhkan kemampuan berbicara, tetapi juga kemampuan mendengarkan."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "倾听确实很重要。只有真正听懂对方，才能有效回应。", "pinyin": "Qīngtīng quèshí hěn zhòngyào. Zhǐyǒu zhēnzhèng tīng dǒng duìfāng, cáinéng yǒuxiào huíyìng.", "translation": "Listening is indeed very important. Only by truly understanding the other person can you respond effectively.", "translation_id": "Mendengarkan memang sangat penting. Hanya dengan benar-benar memahami orang lain, kamu dapat merespons secara efektif."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "所以，沟通是一门艺术，需要我们不断学习。", "pinyin": "Suǒyǐ, gōutōng shì yī mén yìshù, xūyào wǒmen bùduàn xuéxí.", "translation": "Therefore, communication is an art that requires us to keep learning.", "translation_id": "Oleh karena itu, komunikasi adalah seni yang membutuhkan kita untuk terus belajar."}
+  ],
+  "exercises": [
+    {"question": "What does 沟通 (gōutōng) mean?", "question_id": "Apa arti 沟通 (gōutōng)?", "options": ["To talk", "To communicate", "To argue", "To discuss"], "options_id": ["Berbicara", "Berkomunikasi", "Berdebat", "Berdiskusi"], "correct": 1},
+    {"question": "How do you say 'listening skills' in Chinese?", "question_id": "Bagaimana mengatakan 'keterampilan mendengarkan' dalam bahasa Mandarin?", "options": ["说话技巧", "倾听技巧", "表达技巧", "沟通技巧"], "options_id": ["keterampilan berbicara", "keterampilan mendengarkan", "keterampilan mengekspresikan", "keterampilan komunikasi"], "correct": 1},
+    {"question": "What does the structure 不仅...而且... express?", "question_id": "Apa yang diekspresikan oleh struktur 不仅...而且...?", "options": ["Either... or...", "Not only... but also...", "Although... but...", "If... then..."], "options_id": ["Baik... maupun...", "Tidak hanya... tetapi juga...", "Meskipun... tetapi...", "Jika... maka..."], "correct": 1},
+    {"question": "What is 反馈 (fǎnkuì)?", "question_id": "Apa itu 反馈 (fǎnkuì)?", "options": ["Forward", "Feedback", "Return", "Response"], "options_id": ["Maju", "Umpan balik", "Kembali", "Tanggapan"], "correct": 1},
+    {"question": "How to say 'resolve conflict' in Chinese?", "question_id": "Bagaimana mengatakan 'menyelesaikan konflik' dalam bahasa Mandarin?", "options": ["解决冲突", "避免冲突", "引起冲突", "面对冲突"], "options_id": ["menyelesaikan konflik", "menghindari konflik", "menyebabkan konflik", "menghadapi konflik"], "correct": 0}
+  ]
+}

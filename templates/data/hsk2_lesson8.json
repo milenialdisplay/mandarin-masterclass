@@ -1,0 +1,52 @@
+{
+  "title": "让我想想",
+  "subtitle": "Making Decisions, Verb Reduplication, Using 让 for Permission",
+  "assistant_message": "Today we learn: making decisions, verb reduplication (想想, 看看, 试试), and using 让 (ràng) to ask for permission.",
+  "vocabulary": [
+    {"word": "让", "pinyin": "ràng", "meaning": "to let/allow", "meaning_id": "membiarkan/mengizinkan", "example": "让我想想", "example_translation": "Let me think", "example_translation_id": "Biarkan saya berpikir"},
+    {"word": "想想", "pinyin": "xiǎng xiang", "meaning": "to think (a little)", "meaning_id": "berpikir (sedikit)", "example": "让我想想", "example_translation": "Let me think", "example_translation_id": "Biarkan saya berpikir"},
+    {"word": "看看", "pinyin": "kàn kan", "meaning": "to take a look", "meaning_id": "melihat-lihat", "example": "让我看看", "example_translation": "Let me take a look", "example_translation_id": "Biarkan saya lihat"},
+    {"word": "试试", "pinyin": "shì shi", "meaning": "to give it a try", "meaning_id": "mencoba", "example": "试试这件衣服", "example_translation": "try this clothing", "example_translation_id": "coba pakaian ini"},
+    {"word": "决定", "pinyin": "jué dìng", "meaning": "to decide", "meaning_id": "memutuskan", "example": "我决定了", "example_translation": "I've decided", "example_translation_id": "Saya sudah memutuskan"},
+    {"word": "打算", "pinyin": "dǎ suàn", "meaning": "to plan", "meaning_id": "berencana", "example": "你打算怎么办？", "example_translation": "What do you plan to do?", "example_translation_id": "Kamu berencana melakukan apa?"},
+    {"word": "可能", "pinyin": "kě néng", "meaning": "maybe/possible", "meaning_id": "mungkin", "example": "可能会下雨", "example_translation": "it might rain", "example_translation_id": "mungkin akan hujan"},
+    {"word": "还是", "pinyin": "hái shi", "meaning": "or (in questions)", "meaning_id": "atau (dalam pertanyaan)", "example": "喝茶还是咖啡？", "example_translation": "Tea or coffee?", "example_translation_id": "Teh atau kopi?"}
+  ],
+  "grammar": [
+    {
+      "point": "Verb Reduplication (VV / V一V)",
+      "point_id": "Pengulangan Kata Kerja (VV / V一V)",
+      "explanation": "Repeat a verb to mean 'do it a little' or soften the action. Examples: 想想 (think a bit), 看看 (take a look), 试试 (try a bit).",
+      "explanation_id": "Ulangi kata kerja untuk berarti 'lakukan sedikit' atau memperhalus tindakan. Contoh: 想想 (berpikir sedikit), 看看 (lihat-lihat), 试试 (coba sedikit).",
+      "examples": [
+        {"chinese": "让我想想。", "translation": "Let me think (a bit).", "translation_id": "Biarkan saya berpikir (sedikit)."},
+        {"chinese": "你看看这个。", "translation": "Take a look at this.", "translation_id": "Lihatlah ini."},
+        {"chinese": "我试试这件衣服。", "translation": "I'll try on this piece of clothing.", "translation_id": "Saya akan coba pakaian ini."}
+      ]
+    },
+    {
+      "point": "Using 让 (ràng) for Permission/Request",
+      "point_id": "Menggunakan 让 (ràng) untuk Izin/Permintaan",
+      "explanation": "Use 让 + person + verb to mean 'let someone do something' or 'allow someone to do something'.",
+      "explanation_id": "Gunakan 让 + orang + kata kerja untuk berarti 'biarkan seseorang melakukan sesuatu' atau 'izinkan seseorang melakukan sesuatu'.",
+      "examples": [
+        {"chinese": "让我想想。", "translation": "Let me think.", "translation_id": "Biarkan saya berpikir."},
+        {"chinese": "让我看看。", "translation": "Let me see.", "translation_id": "Biarkan saya lihat."},
+        {"chinese": "让他进来。", "translation": "Let him come in.", "translation_id": "Biarkan dia masuk."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "周末你打算做什么？", "pinyin": "Zhōumò nǐ dǎsuàn zuò shénme?", "translation": "What do you plan to do on the weekend?", "translation_id": "Kamu berencana melakukan apa di akhir pekan?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "让我想想...可能去购物。", "pinyin": "Ràng wǒ xiǎng xiǎng... kěnéng qù gòuwù.", "translation": "Let me think... maybe go shopping.", "translation_id": "Biarkan saya berpikir... mungkin pergi belanja."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "买衣服还是买书？", "pinyin": "Mǎi yīfu háishì mǎi shū?", "translation": "Buy clothes or books?", "translation_id": "Beli pakaian atau buku?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "让我看看...先买衣服吧。", "pinyin": "Ràng wǒ kàn kan... xiān mǎi yīfu ba.", "translation": "Let me see... buy clothes first.", "translation_id": "Biarkan saya lihat... beli pakaian dulu."}
+  ],
+  "exercises": [
+    {"question": "What does the reduplication 想想 (xiǎng xiang) mean?", "question_id": "Apa arti pengulangan 想想 (xiǎng xiang)?", "options": ["Think a lot", "Think a little", "Don't think", "Keep thinking"], "options_id": ["Berpikir banyak", "Berpikir sedikit", "Jangan berpikir", "Terus berpikir"], "correct": 1},
+    {"question": "How do you say 'Let me think' in Chinese?", "question_id": "Bagaimana mengatakan 'Biarkan saya berpikir' dalam bahasa Mandarin?", "options": ["让我想想", "我想想", "我想一下", "让我想"], "options_id": ["Biarkan saya berpikir sedikit", "Saya berpikir sedikit", "Saya berpikir sebentar", "Biarkan saya berpikir"], "correct": 0},
+    {"question": "What does 打算 (dǎsuàn) mean?", "question_id": "Apa arti 打算 (dǎsuàn)?", "options": ["To decide", "To plan", "To think", "To hope"], "options_id": ["Memutuskan", "Berencana", "Berpikir", "Berharap"], "correct": 1},
+    {"question": "How to say 'Let me take a look' in Chinese?", "question_id": "Bagaimana mengatakan 'Biarkan saya lihat' dalam bahasa Mandarin?", "options": ["让我看", "让我看看", "我看", "我看看"], "options_id": ["Biarkan saya lihat", "Biarkan saya lihat-lihat", "Saya lihat", "Saya lihat-lihat"], "correct": 1},
+    {"question": "What does 可能 (kěnéng) mean?", "question_id": "Apa arti 可能 (kěnéng)?", "options": ["Must", "Maybe/possible", "Impossible", "Certainly"], "options_id": ["Harus", "Mungkin", "Tidak mungkin", "Pasti"], "correct": 1}
+  ]
+}

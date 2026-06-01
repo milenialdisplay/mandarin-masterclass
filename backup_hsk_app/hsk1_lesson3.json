@@ -1,0 +1,50 @@
+{
+  "title": "你叫什么名字",
+  "subtitle": "Asking Names, Introducing Family, Using Question Words",
+  "assistant_message": "Today we learn: asking names (你叫什么名字), family members (爸爸, 妈妈), and question words (谁, 什么).",
+  "vocabulary": [
+    {"word": "名字", "pinyin": "míng zi", "meaning": "name", "meaning_id": "nama", "example": "我的名字", "example_translation": "my name", "example_translation_id": "nama saya"},
+    {"word": "什么", "pinyin": "shén me", "meaning": "what", "meaning_id": "apa", "example": "你叫什么名字？", "example_translation": "What's your name?", "example_translation_id": "Siapa nama Anda?"},
+    {"word": "叫", "pinyin": "jiào", "meaning": "to be called", "meaning_id": "dipanggil", "example": "我叫小明", "example_translation": "I'm called Xiaoming", "example_translation_id": "Saya dipanggil Xiaoming"},
+    {"word": "谁", "pinyin": "shéi", "meaning": "who", "meaning_id": "siapa", "example": "他是谁？", "example_translation": "Who is he?", "example_translation_id": "Siapa dia?"},
+    {"word": "爸爸", "pinyin": "bà ba", "meaning": "father", "meaning_id": "ayah", "example": "我爸爸", "example_translation": "my father", "example_translation_id": "ayah saya"},
+    {"word": "妈妈", "pinyin": "mā ma", "meaning": "mother", "meaning_id": "ibu", "example": "我妈妈", "example_translation": "my mother", "example_translation_id": "ibu saya"},
+    {"word": "哥哥", "pinyin": "gē ge", "meaning": "older brother", "meaning_id": "kakak laki-laki", "example": "我哥哥", "example_translation": "my older brother", "example_translation_id": "kakak laki-laki saya"},
+    {"word": "姐姐", "pinyin": "jiě jie", "meaning": "older sister", "meaning_id": "kakak perempuan", "example": "我姐姐", "example_translation": "my older sister", "example_translation_id": "kakak perempuan saya"}
+  ],
+  "grammar": [
+    {
+      "point": "Question Words: 谁 and 什么",
+      "point_id": "Kata Tanya: 谁 dan 什么",
+      "explanation": "Use 谁 (shéi) to ask 'who'. Use 什么 (shén me) to ask 'what'.",
+      "explanation_id": "Gunakan 谁 (shéi) untuk bertanya 'siapa'. Gunakan 什么 (shén me) untuk bertanya 'apa'.",
+      "examples": [
+        {"chinese": "他是谁？", "translation": "Who is he?", "translation_id": "Siapa dia?"},
+        {"chinese": "你叫什么名字？", "translation": "What's your name?", "translation_id": "Siapa nama Anda?"}
+      ]
+    },
+    {
+      "point": "Introducing Yourself with 叫",
+      "point_id": "Memperkenalkan Diri dengan 叫",
+      "explanation": "Use 我叫 (wǒ jiào) + name to say 'I am called...'",
+      "explanation_id": "Gunakan 我叫 (wǒ jiào) + nama untuk mengatakan 'Saya dipanggil...'",
+      "examples": [
+        {"chinese": "我叫小明。", "translation": "I am called Xiaoming.", "translation_id": "Saya dipanggil Xiaoming."},
+        {"chinese": "她叫李美。", "translation": "She is called Li Mei.", "translation_id": "Dia dipanggil Li Mei."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Tom", "voice": "male", "chinese": "你好！我叫Tom。你叫什么名字？", "pinyin": "Nǐ hǎo! Wǒ jiào Tom. Nǐ jiào shénme míngzi?", "translation": "Hello! I'm Tom. What's your name?", "translation_id": "Halo! Saya Tom. Siapa namamu?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你好！我叫李美。", "pinyin": "Nǐ hǎo! Wǒ jiào Lǐ Měi.", "translation": "Hello! I'm Li Mei.", "translation_id": "Halo! Saya Li Mei."},
+    {"speaker": "male", "name": "Tom", "voice": "male", "chinese": "他是谁？", "pinyin": "Tā shì shéi?", "translation": "Who is he?", "translation_id": "Siapa dia?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "他是我哥哥。", "pinyin": "Tā shì wǒ gēge.", "translation": "He is my older brother.", "translation_id": "Dia kakak laki-laki saya."}
+  ],
+  "exercises": [
+    {"question": "What does 名字 (míng zi) mean?", "question_id": "Apa arti 名字 (míng zi)?", "options": ["Name", "What", "Who", "Hello"], "options_id": ["Nama", "Apa", "Siapa", "Halo"], "correct": 0},
+    {"question": "How do you ask 'What's your name?' in Chinese?", "question_id": "Bagaimana bertanya 'Siapa namamu?' dalam bahasa Mandarin?", "options": ["你叫什么名字？", "你好吗？", "他是谁？", "你几岁？"], "options_id": ["Siapa namamu?", "Apa kabar?", "Siapa dia?", "Berapa umurmu?"], "correct": 0},
+    {"question": "What is 爸爸 (bà ba)?", "question_id": "Apa itu 爸爸 (bà ba)?", "options": ["Mother", "Father", "Brother", "Sister"], "options_id": ["Ibu", "Ayah", "Kakak laki-laki", "Kakak perempuan"], "correct": 1},
+    {"question": "How to say 'older sister' in Chinese?", "question_id": "Bagaimana mengatakan 'kakak perempuan' dalam bahasa Mandarin?", "options": ["哥哥", "姐姐", "妹妹", "弟弟"], "options_id": ["kakak laki-laki", "kakak perempuan", "adik perempuan", "adik laki-laki"], "correct": 1},
+    {"question": "Choose the correct translation: 'Who is he?'", "question_id": "Pilih terjemahan yang benar: 'Siapa dia?'", "options": ["他是谁？", "她是谁？", "你叫什么？", "我很好"], "options_id": ["Siapa dia (laki-laki)?", "Siapa dia (perempuan)?", "Siapa namamu?", "Saya baik"], "correct": 0}
+  ]
+}

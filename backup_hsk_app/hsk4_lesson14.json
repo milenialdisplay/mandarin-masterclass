@@ -1,0 +1,50 @@
+{
+  "title": "尊重与理解",
+  "subtitle": "Talking About Social Values, Relationships, and Empathy",
+  "assistant_message": "Today we learn: discussing respect and understanding, using 除了...以外 (chúle... yǐwài) for 'besides', and expressing empathy.",
+  "vocabulary": [
+    {"word": "尊重", "pinyin": "zūn zhòng", "meaning": "to respect", "meaning_id": "menghormati", "example": "互相尊重", "example_translation": "respect each other", "example_translation_id": "saling menghormati"},
+    {"word": "理解", "pinyin": "lǐ jiě", "meaning": "to understand", "meaning_id": "memahami", "example": "相互理解", "example_translation": "mutual understanding", "example_translation_id": "saling memahami"},
+    {"word": "沟通", "pinyin": "gōu tōng", "meaning": "to communicate", "meaning_id": "berkomunikasi", "example": "有效沟通", "example_translation": "effective communication", "example_translation_id": "komunikasi efektif"},
+    {"word": "包容", "pinyin": "bāo róng", "meaning": "to tolerate", "meaning_id": "toleransi", "example": "学会包容", "example_translation": "learn to tolerate", "example_translation_id": "belajar toleransi"},
+    {"word": "差异", "pinyin": "chā yì", "meaning": "difference", "meaning_id": "perbedaan", "example": "文化差异", "example_translation": "cultural differences", "example_translation_id": "perbedaan budaya"},
+    {"word": "平等", "pinyin": "píng děng", "meaning": "equality", "meaning_id": "kesetaraan", "example": "男女平等", "example_translation": "gender equality", "example_translation_id": "kesetaraan gender"},
+    {"word": "和谐", "pinyin": "hé xié", "meaning": "harmony", "meaning_id": "harmoni", "example": "社会和谐", "example_translation": "social harmony", "example_translation_id": "harmoni sosial"},
+    {"word": "同理心", "pinyin": "tóng lǐ xīn", "meaning": "empathy", "meaning_id": "empati", "example": "有同理心", "example_translation": "have empathy", "example_translation_id": "memiliki empati"}
+  ],
+  "grammar": [
+    {
+      "point": "Using 除了...以外 (chúle... yǐwài) for 'Besides'",
+      "point_id": "Menggunakan 除了...以外 (chúle... yǐwài) untuk 'Selain'",
+      "explanation": "除了...以外 means 'besides' or 'apart from'. Can include 还 or 也 for addition, or 都 for exception.",
+      "explanation_id": "除了...以外 berarti 'selain'. Dapat mencakup 还 atau 也 untuk penambahan, atau 都 untuk pengecualian.",
+      "examples": [
+        {"chinese": "除了尊重别人以外，我们也要理解别人。", "translation": "Besides respecting others, we also need to understand others.", "translation_id": "Selain menghormati orang lain, kita juga perlu memahami orang lain."},
+        {"chinese": "除了他以外，大家都同意了。", "translation": "Everyone agreed except him.", "translation_id": "Semua orang setuju kecuali dia."}
+      ]
+    },
+    {
+      "point": "Using 再说 (zàishuō) for 'Moreover'",
+      "point_id": "Menggunakan 再说 (zàishuō) untuk 'Lagi Pula'",
+      "explanation": "再说 is used to add another reason or point, meaning 'besides' or 'moreover'.",
+      "explanation_id": "再说 digunakan untuk menambahkan alasan atau poin lain, berarti 'lagi pula' atau 'selain itu'.",
+      "examples": [
+        {"chinese": "我们应该尊重每个人的选择，再说，这也是他们的权利。", "translation": "We should respect everyone's choices. Moreover, it's also their right.", "translation_id": "Kita harus menghormati pilihan setiap orang. Lagi pula, itu juga hak mereka."},
+        {"chinese": "时间太晚了，再说，明天还要早起。", "translation": "It's too late. Besides, we have to wake up early tomorrow.", "translation_id": "Sudah terlalu malam. Lagi pula, kita harus bangun pagi besok."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你觉得人与人之间最重要的是什么？", "pinyin": "Nǐ juéde rén yǔ rén zhī jiān zuì zhòngyào de shì shénme?", "translation": "What do you think is the most important thing between people?", "translation_id": "Apa yang menurutmu paling penting antara sesama manusia?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "我认为是尊重和理解。只有互相尊重，才能建立良好的关系。", "pinyin": "Wǒ rènwéi shì zūnzhòng hé lǐjiě. Zhǐyǒu hùxiāng zūnzhòng, cáinéng jiànlì liánghǎo de guānxì.", "translation": "I think it's respect and understanding. Only with mutual respect can we build good relationships.", "translation_id": "Saya pikir itu adalah rasa hormat dan pengertian. Hanya dengan saling menghormati kita bisa membangun hubungan yang baik."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "除了尊重，我们还需要有同理心。", "pinyin": "Chúle zūnzhòng, wǒmen hái xūyào yǒu tónglǐxīn.", "translation": "Besides respect, we also need to have empathy.", "translation_id": "Selain rasa hormat, kita juga perlu memiliki empati."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你说得对。理解别人的感受很重要。", "pinyin": "Nǐ shuō de duì. Lǐjiě biérén de gǎnshòu hěn zhòngyào.", "translation": "You're right. Understanding others' feelings is very important.", "translation_id": "Kamu benar. Memahami perasaan orang lain sangat penting."}
+  ],
+  "exercises": [
+    {"question": "What does 尊重 (zūnzhòng) mean?", "question_id": "Apa arti 尊重 (zūnzhòng)?", "options": ["To ignore", "To respect", "To understand", "To tolerate"], "options_id": ["Mengabaikan", "Menghormati", "Memahami", "Toleransi"], "correct": 1},
+    {"question": "How do you say 'mutual understanding' in Chinese?", "question_id": "Bagaimana mengatakan 'saling memahami' dalam bahasa Mandarin?", "options": ["互相尊重", "互相理解", "互相帮助", "互相关心"], "options_id": ["saling menghormati", "saling memahami", "saling membantu", "saling peduli"], "correct": 1},
+    {"question": "What does the structure 除了...以外 express?", "question_id": "Apa yang diekspresikan oleh struktur 除了...以外?", "options": ["In addition to", "Besides/apart from", "Because of", "Instead of"], "options_id": ["Sebagai tambahan", "Selain", "Karena", "Alih-alih"], "correct": 1},
+    {"question": "What is 同理心 (tónglǐxīn)?", "question_id": "Apa itu 同理心 (tónglǐxīn)?", "options": ["Sympathy", "Empathy", "Kindness", "Compassion"], "options_id": ["Simpati", "Empati", "Kebaikan", "Belas kasih"], "correct": 1},
+    {"question": "How to say 'social harmony' in Chinese?", "question_id": "Bagaimana mengatakan 'harmoni sosial' dalam bahasa Mandarin?", "options": ["社会和谐", "社会和平", "社会稳定", "社会发展"], "options_id": ["harmoni sosial", "perdamaian sosial", "stabilitas sosial", "perkembangan sosial"], "correct": 0}
+  ]
+}

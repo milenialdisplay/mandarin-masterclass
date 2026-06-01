@@ -1,0 +1,50 @@
+{
+  "title": "留学的选择",
+  "subtitle": "Education, Decision Making, International Studies",
+  "assistant_message": "Today we learn: discussing studying abroad, making important decisions, and using 无论...都... (wúlùn... dōu...).",
+  "vocabulary": [
+    {"word": "留学", "pinyin": "liú xué", "meaning": "to study abroad", "meaning_id": "belajar di luar negeri", "example": "去美国留学", "example_translation": "study abroad in the US", "example_translation_id": "belajar di luar negeri ke AS"},
+    {"word": "选择", "pinyin": "xuǎn zé", "meaning": "to choose", "meaning_id": "memilih", "example": "做出选择", "example_translation": "make a choice", "example_translation_id": "membuat pilihan"},
+    {"word": "机会", "pinyin": "jī huì", "meaning": "opportunity", "meaning_id": "kesempatan", "example": "难得的机会", "example_translation": "rare opportunity", "example_translation_id": "kesempatan langka"},
+    {"word": "挑战", "pinyin": "tiǎo zhàn", "meaning": "challenge", "meaning_id": "tantangan", "example": "面对挑战", "example_translation": "face challenges", "example_translation_id": "menghadapi tantangan"},
+    {"word": "文化", "pinyin": "wén huà", "meaning": "culture", "meaning_id": "budaya", "example": "文化差异", "example_translation": "cultural differences", "example_translation_id": "perbedaan budaya"},
+    {"word": "适应", "pinyin": "shì yìng", "meaning": "to adapt", "meaning_id": "beradaptasi", "example": "适应新环境", "example_translation": "adapt to new environment", "example_translation_id": "beradaptasi dengan lingkungan baru"},
+    {"word": "独立", "pinyin": "dú lì", "meaning": "independent", "meaning_id": "mandiri", "example": "学会独立", "example_translation": "learn to be independent", "example_translation_id": "belajar mandiri"},
+    {"word": "未来", "pinyin": "wèi lái", "meaning": "future", "meaning_id": "masa depan", "example": "美好未来", "example_translation": "bright future", "example_translation_id": "masa depan cerah"}
+  ],
+  "grammar": [
+    {
+      "point": "无论...都... (wúlùn... dōu...) - No matter... still...",
+      "point_id": "无论...都... (wúlùn... dōu...) - Tidak peduli... tetap...",
+      "explanation": "无论 introduces a condition, and 都 states that the result remains true regardless.",
+      "explanation_id": "无论 memperkenalkan suatu kondisi, dan 都 menyatakan bahwa hasilnya tetap benar terlepas dari apapun.",
+      "examples": [
+        {"chinese": "无论选择哪个国家，都要努力适应。", "translation": "No matter which country you choose, you must work hard to adapt.", "translation_id": "Tidak peduli negara mana yang kamu pilih, kamu harus berusaha keras untuk beradaptasi."},
+        {"chinese": "无论遇到什么困难，都不要放弃。", "translation": "No matter what difficulties you encounter, don't give up.", "translation_id": "Tidak peduli kesulitan apa yang kamu hadapi, jangan menyerah."}
+      ]
+    },
+    {
+      "point": "Expressing 'Rare' with 难得 (nándé)",
+      "point_id": "Menyatakan 'Langka' dengan 难得 (nándé)",
+      "explanation": "难得 means 'rare' or 'hard to come by', often used before nouns or verbs.",
+      "explanation_id": "难得 berarti 'langka' atau 'susah didapat', sering digunakan sebelum kata benda atau kata kerja.",
+      "examples": [
+        {"chinese": "这是个难得的机会。", "translation": "This is a rare opportunity.", "translation_id": "Ini adalah kesempatan langka."},
+        {"chinese": "难得见到你这么开心。", "translation": "It's rare to see you so happy.", "translation_id": "Jarang melihatmu begitu senang."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你决定好去哪里留学了吗？", "pinyin": "Nǐ juédìng hǎo qù nǎlǐ liúxué le ma?", "translation": "Have you decided where to study abroad?", "translation_id": "Apakah kamu sudah memutuskan ke mana akan belajar di luar negeri?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "还在考虑。无论选择哪个国家，都会有很多挑战。", "pinyin": "Hái zài kǎolǜ. Wúlùn xuǎnzé nǎge guójiā, dōu huì yǒu hěnduō tiǎozhàn.", "translation": "Still considering. No matter which country I choose, there will be many challenges.", "translation_id": "Masih mempertimbangkan. Tidak peduli negara mana yang saya pilih, akan ada banyak tantangan."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "这是个难得的机会。留学能让你更加独立，开阔视野。", "pinyin": "Zhè shì gè nándé de jīhuì. Liúxué néng ràng nǐ gèngjiā dúlì, kāikuò shìyě.", "translation": "This is a rare opportunity. Studying abroad can make you more independent and broaden your horizons.", "translation_id": "Ini adalah kesempatan langka. Belajar di luar negeri dapat membuatmu lebih mandiri dan memperluas wawasan."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你说得对。我会好好考虑的。", "pinyin": "Nǐ shuō de duì. Wǒ huì hǎohǎo kǎolǜ de.", "translation": "You're right. I'll think it over carefully.", "translation_id": "Kamu benar. Aku akan memikirkannya dengan matang."}
+  ],
+  "exercises": [
+    {"question": "What does 留学 (liúxué) mean?", "question_id": "Apa arti 留学 (liúxué)?", "options": ["To work abroad", "To study abroad", "To travel abroad", "To live abroad"], "options_id": ["Bekerja di luar negeri", "Belajar di luar negeri", "Bepergian ke luar negeri", "Tinggal di luar negeri"], "correct": 1},
+    {"question": "What does the structure 无论...都... express?", "question_id": "Apa yang diekspresikan oleh struktur 无论...都...?", "options": ["If... then...", "No matter... still...", "Because... so...", "Although... but..."], "options_id": ["Jika... maka...", "Tidak peduli... tetap...", "Karena... jadi...", "Meskipun... tetapi..."], "correct": 1},
+    {"question": "How do you say 'rare opportunity' in Chinese?", "question_id": "Bagaimana mengatakan 'kesempatan langka' dalam bahasa Mandarin?", "options": ["难得的机会", "普通的机会", "容易的机会", "经常的机会"], "options_id": ["kesempatan langka", "kesempatan biasa", "kesempatan mudah", "kesempatan sering"], "correct": 0},
+    {"question": "What does 适应 (shìyìng) mean?", "question_id": "Apa arti 适应 (shìyìng)?", "options": ["To refuse", "To adapt", "To accept", "To reject"], "options_id": ["Menolak", "Beradaptasi", "Menerima", "Menolak"], "correct": 1},
+    {"question": "How to say 'cultural differences' in Chinese?", "question_id": "Bagaimana mengatakan 'perbedaan budaya' dalam bahasa Mandarin?", "options": ["文化差异", "文化相同", "文化冲突", "文化交流"], "options_id": ["perbedaan budaya", "persamaan budaya", "konflik budaya", "pertukaran budaya"], "correct": 0}
+  ]
+}

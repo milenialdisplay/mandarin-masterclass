@@ -1,0 +1,50 @@
+{
+  "title": "他在学做中国菜呢",
+  "subtitle": "Expressing Ongoing Actions, Using Progressive 在, Talking About Cooking",
+  "assistant_message": "Today we learn: expressing ongoing actions with 在 (zài), using particle 呢 (ne), and talking about cooking and food (做菜, 饺子).",
+  "vocabulary": [
+    {"word": "在", "pinyin": "zài", "meaning": "in progress (action marker)", "meaning_id": "sedang (penanda aksi)", "example": "他在吃饭", "example_translation": "He is eating", "example_translation_id": "Dia sedang makan"},
+    {"word": "呢", "pinyin": "ne", "meaning": "ongoing action particle", "meaning_id": "partikel aksi berlangsung", "example": "他在吃饭呢", "example_translation": "He is eating (emphatic)", "example_translation_id": "Dia sedang makan"},
+    {"word": "学", "pinyin": "xué", "meaning": "to learn", "meaning_id": "belajar", "example": "学汉语", "example_translation": "learn Chinese", "example_translation_id": "belajar Mandarin"},
+    {"word": "做", "pinyin": "zuò", "meaning": "to make/do", "meaning_id": "membuat/melakukan", "example": "做饭", "example_translation": "cook (make food)", "example_translation_id": "memasak"},
+    {"word": "菜", "pinyin": "cài", "meaning": "dish/food", "meaning_id": "masakan/makanan", "example": "中国菜", "example_translation": "Chinese food", "example_translation_id": "masakan Tiongkok"},
+    {"word": "饺子", "pinyin": "jiǎo zi", "meaning": "dumplings", "meaning_id": "pangsit", "example": "包饺子", "example_translation": "make dumplings", "example_translation_id": "membuat pangsit"},
+    {"word": "好吃", "pinyin": "hǎo chī", "meaning": "delicious/tasty", "meaning_id": "enak/lezat", "example": "很好吃", "example_translation": "very delicious", "example_translation_id": "sangat enak"},
+    {"word": "中国菜", "pinyin": "Zhōngguó cài", "meaning": "Chinese cuisine", "meaning_id": "masakan Tiongkok", "example": "我喜欢中国菜", "example_translation": "I like Chinese food", "example_translation_id": "Saya suka masakan Tiongkok"}
+  ],
+  "grammar": [
+    {
+      "point": "Progressive Action with 在 (zài)",
+      "point_id": "Aksi Sedang Berlangsung dengan 在 (zài)",
+      "explanation": "Place 在 before a verb to indicate an action is in progress.",
+      "explanation_id": "Letakkan 在 sebelum kata kerja untuk menunjukkan aksi yang sedang berlangsung.",
+      "examples": [
+        {"chinese": "他在吃饭。", "translation": "He is eating.", "translation_id": "Dia sedang makan."},
+        {"chinese": "我在学汉语。", "translation": "I am learning Chinese.", "translation_id": "Saya sedang belajar Mandarin."}
+      ]
+    },
+    {
+      "point": "Emphasizing Ongoing Action with 呢 (ne)",
+      "point_id": "Menekankan Aksi Sedang Berlangsung dengan 呢 (ne)",
+      "explanation": "Add 呢 at the end of the sentence to emphasize that an action is in progress.",
+      "explanation_id": "Tambahkan 呢 di akhir kalimat untuk menekankan bahwa aksi sedang berlangsung.",
+      "examples": [
+        {"chinese": "他在学做中国菜呢。", "translation": "He is learning to cook Chinese food (right now).", "translation_id": "Dia sedang belajar memasak masakan Tiongkok (sekarang juga)."},
+        {"chinese": "我吃饭呢。", "translation": "I'm eating (right now).", "translation_id": "Saya sedang makan (sekarang juga)."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "他在做什么呢？", "pinyin": "Tā zài zuò shénme ne?", "translation": "What is he doing?", "translation_id": "Dia sedang melakukan apa?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "他在学做中国菜呢。", "pinyin": "Tā zài xué zuò Zhōngguó cài ne.", "translation": "He's learning to cook Chinese food.", "translation_id": "Dia sedang belajar memasak masakan Tiongkok."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "做的是什么菜？", "pinyin": "Zuò de shì shénme cài?", "translation": "What dish is he making?", "translation_id": "Hidangan apa yang dia buat?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "他在做饺子。很好吃！", "pinyin": "Tā zài zuò jiǎozi. Hěn hǎochī!", "translation": "He's making dumplings. Very delicious!", "translation_id": "Dia sedang membuat pangsit. Sangat enak!"}
+  ],
+  "exercises": [
+    {"question": "What does 在 (zài) indicate before a verb?", "question_id": "Apa yang ditunjukkan 在 (zài) sebelum kata kerja?", "options": ["Future action", "Completed action", "Ongoing action", "Possible action"], "options_id": ["Aksi masa depan", "Aksi selesai", "Aksi sedang berlangsung", "Aksi mungkin"], "correct": 2},
+    {"question": "How do you say 'He is learning to cook Chinese food' in Chinese?", "question_id": "Bagaimana mengatakan 'Dia sedang belajar memasak masakan Tiongkok' dalam bahasa Mandarin?", "options": ["他在学做中国菜", "他会做中国菜", "他想做中国菜", "他喜欢中国菜"], "options_id": ["Dia sedang belajar memasak masakan Tiongkok", "Dia bisa memasak masakan Tiongkok", "Dia ingin memasak masakan Tiongkok", "Dia suka masakan Tiongkok"], "correct": 0},
+    {"question": "What are 饺子 (jiǎozi)?", "question_id": "Apa itu 饺子 (jiǎozi)?", "options": ["Noodles", "Rice", "Dumplings", "Soup"], "options_id": ["Mie", "Nasi", "Pangsit", "Sup"], "correct": 2},
+    {"question": "What does 好吃 (hǎochī) mean?", "question_id": "Apa arti 好吃 (hǎochī)?", "options": ["Good looking", "Delicious/tasty", "Good smelling", "Good cooking"], "options_id": ["Tampilan bagus", "Enak/lezat", "Aroma bagus", "Memasak bagus"], "correct": 1},
+    {"question": "How to ask 'What is he doing?' in Chinese?", "question_id": "Bagaimana bertanya 'Dia sedang melakukan apa?' dalam bahasa Mandarin?", "options": ["他在做什么？", "他做什么？", "他是什么？", "他怎么样？"], "options_id": ["Dia sedang melakukan apa?", "Dia melakukan apa?", "Dia itu apa?", "Dia bagaimana?"], "correct": 0}
+  ]
+}

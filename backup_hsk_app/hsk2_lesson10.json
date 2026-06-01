@@ -1,0 +1,53 @@
+{
+  "title": "别找了，钱包在这儿",
+  "subtitle": "Negative Imperatives with 别, Finding Lost Items, Expressing Relief",
+  "assistant_message": "Today we learn: negative imperatives with 别 (bié), talking about finding lost items, and expressing relief (找到了, 太好了).",
+  "vocabulary": [
+    {"word": "别", "pinyin": "bié", "meaning": "don't (negative command)", "meaning_id": "jangan (perintah negatif)", "example": "别找了", "example_translation": "stop looking", "example_translation_id": "jangan cari lagi"},
+    {"word": "找", "pinyin": "zhǎo", "meaning": "to look for", "meaning_id": "mencari", "example": "找钱包", "example_translation": "look for wallet", "example_translation_id": "mencari dompet"},
+    {"word": "钱包", "pinyin": "qián bāo", "meaning": "wallet", "meaning_id": "dompet", "example": "我的钱包", "example_translation": "my wallet", "example_translation_id": "dompet saya"},
+    {"word": "找到了", "pinyin": "zhǎo dào le", "meaning": "found it", "meaning_id": "ketemu", "example": "我找到了", "example_translation": "I found it", "example_translation_id": "saya ketemu"},
+    {"word": "丢", "pinyin": "diū", "meaning": "to lose", "meaning_id": "kehilangan", "example": "丢钱包", "example_translation": "lose wallet", "example_translation_id": "kehilangan dompet"},
+    {"word": "忘", "pinyin": "wàng", "meaning": "to forget", "meaning_id": "lupa", "example": "忘了带", "example_translation": "forgot to bring", "example_translation_id": "lupa membawa"},
+    {"word": "记得", "pinyin": "jì de", "meaning": "to remember", "meaning_id": "ingat", "example": "不记得了", "example_translation": "don't remember", "example_translation_id": "tidak ingat"},
+    {"word": "太好了", "pinyin": "tài hǎo le", "meaning": "great! (expression of relief)", "meaning_id": "bagus sekali! (ekspresi lega)", "example": "太好了！", "example_translation": "That's great!", "example_translation_id": "Bagus sekali!"}
+  ],
+  "grammar": [
+    {
+      "point": "Negative Imperative with 别 (bié)",
+      "point_id": "Perintah Negatif dengan 别 (bié)",
+      "explanation": "Use 别 before a verb to tell someone NOT to do something. Structure: 别 + Verb.",
+      "explanation_id": "Gunakan 别 sebelum kata kerja untuk memberi tahu seseorang untuk TIDAK melakukan sesuatu. Struktur: 别 + Kata Kerja.",
+      "examples": [
+        {"chinese": "别找了。", "translation": "Stop looking.", "translation_id": "Jangan cari lagi."},
+        {"chinese": "别担心。", "translation": "Don't worry.", "translation_id": "Jangan khawatir."},
+        {"chinese": "别说话。", "translation": "Don't speak.", "translation_id": "Jangan bicara."},
+        {"chinese": "别忘了。", "translation": "Don't forget.", "translation_id": "Jangan lupa."}
+      ]
+    },
+    {
+      "point": "Finding Something with 找到 (zhǎo dào)",
+      "point_id": "Menemukan Sesuatu dengan 找到 (zhǎo dào)",
+      "explanation": "Use 找到 to mean 'find (successfully)'. 找到 + 了 indicates the finding is complete.",
+      "explanation_id": "Gunakan 找到 untuk berarti 'menemukan (berhasil)'. 找到 + 了 menunjukkan bahwa penemuan telah selesai.",
+      "examples": [
+        {"chinese": "我找到钱包了。", "translation": "I found the wallet.", "translation_id": "Saya menemukan dompetnya."},
+        {"chinese": "你找到工作了吗？", "translation": "Did you find a job?", "translation_id": "Apakah kamu menemukan pekerjaan?"},
+        {"chinese": "终于找到了！", "translation": "Finally found it!", "translation_id": "Akhirnya ketemu!"}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我的钱包丢了！", "pinyin": "Wǒ de qiánbāo diū le!", "translation": "I lost my wallet!", "translation_id": "Dompet saya hilang!"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "别着急，好好找找。", "pinyin": "Bié zhāojí, hǎohǎo zhǎo zhǎo.", "translation": "Don't worry, look carefully.", "translation_id": "Jangan khawatir, cari dengan hati-hati."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我找了半天也没找到。", "pinyin": "Wǒ zhǎo le bàntiān yě méi zhǎo dào.", "translation": "I looked for a long time but didn't find it.", "translation_id": "Saya mencari lama tapi tidak ketemu."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "别找了，钱包在这儿！", "pinyin": "Bié zhǎo le, qiánbāo zài zhèr!", "translation": "Stop looking, the wallet is here!", "translation_id": "Jangan cari lagi, dompetnya di sini!"}
+  ],
+  "exercises": [
+    {"question": "What does 别 (bié) indicate?", "question_id": "Apa yang ditunjukkan oleh 别 (bié)?", "options": ["Positive command", "Negative command", "Question", "Past action"], "options_id": ["Perintah positif", "Perintah negatif", "Pertanyaan", "Aksi masa lalu"], "correct": 1},
+    {"question": "How do you say 'Stop looking' in Chinese?", "question_id": "Bagaimana mengatakan 'Jangan cari lagi' dalam bahasa Mandarin?", "options": ["找别了", "别找了", "找了别", "不找了"], "options_id": ["Cari jangan lagi", "Jangan cari lagi", "Cari lagi jangan", "Tidak cari lagi"], "correct": 1},
+    {"question": "What does 找到 (zhǎo dào) mean?", "question_id": "Apa arti 找到 (zhǎo dào)?", "options": ["To look for", "To find (successfully)", "To lose", "To forget"], "options_id": ["Mencari", "Menemukan (berhasil)", "Kehilangan", "Lupa"], "correct": 1},
+    {"question": "How to say 'I found my wallet' in Chinese?", "question_id": "Bagaimana mengatakan 'Saya menemukan dompet saya' dalam bahasa Mandarin?", "options": ["我找了钱包", "我找到钱包了", "我找钱包了", "我钱包找到了"], "options_id": ["Saya cari dompet", "Saya menemukan dompet (sudah)", "Saya cari dompet (sudah)", "Saya dompet menemukan"], "correct": 1},
+    {"question": "What is the difference between 丢 (diū) and 忘 (wàng)?", "question_id": "Apa perbedaan antara 丢 (diū) dan 忘 (wàng)?", "options": ["Both mean lose", "丢 = lose object, 忘 = forget", "丢 = forget, 忘 = lose object", "Both mean forget"], "options_id": ["Keduanya berarti kehilangan", "丢 = kehilangan benda, 忘 = lupa", "丢 = lupa, 忘 = kehilangan benda", "Keduanya berarti lupa"], "correct": 1}
+  ]
+}

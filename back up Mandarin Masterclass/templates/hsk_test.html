@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>HSK Level Test - Official Simulation</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a472a, #2d6a4f);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .header {
+            background: #1a472a;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .header h1 { font-size: 28px; margin-bottom: 8px; }
+        .header p { font-size: 14px; opacity: 0.9; }
+        
+        .level-selector {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .level-btn {
+            background: #f0f0f0;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        
+        .level-btn.active {
+            background: #2d6a4f;
+            color: white;
+        }
+        
+        .test-info {
+            background: #e8f5e9;
+            padding: 15px 20px;
+            margin: 0 20px 20px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .info-item {
+            text-align: center;
+        }
+        
+        .info-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a472a;
+        }
+        
+        .timer {
+            background: #e94560;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+        
+        .question-area {
+            padding: 20px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        
+        .question {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 15px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        
+        .option {
+            padding: 10px;
+            margin: 8px 0;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid #ddd;
+        }
+        
+        .option:hover { background: #e8f5e9; }
+        .option.selected { background: #2d6a4f; color: white; border-color: #2d6a4f; }
+        
+        .submit-btn {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 20px;
+            width: calc(100% - 40px);
+        }
+        
+        .result-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        
+        .result-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+        }
+        
+        .result-score {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .result-pass { color: #28a745; }
+        .result-fail { color: #dc3545; }
+        
+        .back-btn {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            margin: 20px;
+            width: calc(100% - 40px);
+        }
+        
+        @media (max-width: 600px) {
+            .test-info { flex-direction: column; text-align: center; }
+            .level-btn { padding: 8px 16px; font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📝 HSK Official Practice Test</h1>
+            <p>Simulated exam - Listening, Reading, Grammar</p>
+        </div>
+        
+        <div class="level-selector" id="levelSelector">
+            <button class="level-btn active" data-level="1">HSK 1</button>
+            <button class="level-btn" data-level="2">HSK 2</button>
+            <button class="level-btn" data-level="3">HSK 3</button>
+            <button class="level-btn" data-level="4">HSK 4</button>
+            <button class="level-btn" data-level="5">HSK 5</button>
+            <button class="level-btn" data-level="6">HSK 6</button>
+        </div>
+        
+        <div id="testInfo" class="test-info">
+            <div class="info-item"><div class="info-value">40</div><div>Questions</div></div>
+            <div class="info-item"><div class="info-value">120</div><div>Passing Score</div></div>
+            <div class="info-item"><div class="timer" id="timer">40:00</div></div>
+        </div>
+        
+        <div class="question-area" id="questionsArea"></div>
+        
+        <button class="submit-btn" onclick="submitTest()">Submit Test</button>
+        <button class="back-btn" onclick="window.location.href='/'">← Back</button>
+    </div>
+
+    <script>
+        let currentLevel = 1;
+        let userAnswers = {};
+        let timerInterval = null;
+        let timeSeconds = 40 * 60;
+        
+        // Complete HSK Test Questions Database
+        const hskTests = {
+            1: {
+                name: "HSK Level 1",
+                passingScore: 120,
+                maxScore: 200,
+                timeMinutes: 40,
+                questions: [
+                    {id: 1, text: "你叫什么名字？", options: ["我叫小明", "你好", "谢谢", "再见"], correct: 0, type: "dialogue"},
+                    {id: 2, text: "Select the correct pinyin for 你好", options: ["nǐ hǎo", "nǐ hào", "ní hǎo", "nì hǎo"], correct: 0, type: "pinyin"},
+                    {id: 3, text: "What does 谢谢 mean?", options: ["Hello", "Thank you", "Goodbye", "Sorry"], correct: 1, type: "vocab"},
+                    {id: 4, text: "Complete: 我___学生", options: ["是", "有", "在", "去"], correct: 0, type: "grammar"},
+                    {id: 5, text: "Select the correct translation for 'I love you'", options: ["我爱你", "我喜欢你", "我恨你", "我认识你"], correct: 0, type: "translation"},
+                ]
+            },
+            2: {
+                name: "HSK Level 2",
+                passingScore: 120,
+                maxScore: 200,
+                timeMinutes: 55,
+                questions: [
+                    {id: 1, text: "这个苹果多少钱？", options: ["二十块", "很好吃", "红色的", "一个"], correct: 0, type: "dialogue"},
+                    {id: 2, text: "他比我高 means:", options: ["He is shorter than me", "He is taller than me", "We are the same height", "He is very tall"], correct: 1, type: "grammar"},
+                    {id: 3, text: "What is the measure word for books?", options: ["个", "本", "张", "杯"], correct: 1, type: "measure"},
+                    {id: 4, text: "昨天我___商店", options: ["去了", "去", "要去", "不去"], correct: 0, type: "grammar"},
+                    {id: 5, text: "Complete: 我___喝茶，___喝咖啡", options: ["不是...而是", "不但...而且", "虽然...但是", "因为...所以"], correct: 0, type: "grammar"},
+                ]
+            },
+            3: {
+                name: "HSK Level 3",
+                passingScore: 180,
+                maxScore: 300,
+                timeMinutes: 90,
+                questions: [
+                    {id: 1, text: "虽然很累，但是很开心 means:", options: ["Although tired, very happy", "Because tired, very happy", "If tired, not happy", "Tired and not happy"], correct: 0, type: "grammar"},
+                    {id: 2, text: "Select the correct 把 sentence", options: ["我把书放在桌子上", "我书放在桌子上", "我把书放桌子上", "书我把放在桌子上"], correct: 0, type: "grammar"},
+                    {id: 3, text: "What does 美丽 mean?", options: ["Beautiful", "Ugly", "Happy", "Sad"], correct: 0, type: "vocab"},
+                    {id: 4, text: "Complete: 他___去过北京", options: ["已经", "正在", "就要", "快要"], correct: 0, type: "grammar"},
+                    {id: 5, text: "Select the correct meaning of 方便", options: ["Convenient", "Difficult", "Expensive", "Cheap"], correct: 0, type: "vocab"},
+                ]
+            },
+            4: {
+                name: "HSK Level 4",
+                passingScore: 180,
+                maxScore: 300,
+                timeMinutes: 105,
+                questions: [
+                    {id: 1, text: "保护环境很重要 means:", options: ["Protecting the environment is important", "The environment is beautiful", "We need to develop the economy", "Society is changing"], correct: 0, type: "reading"},
+                    {id: 2, text: "Select the correct usage of 即使", options: ["即使下雨也去", "因为下雨所以不去", "如果下雨就不去", "虽然下雨但是去"], correct: 0, type: "grammar"},
+                    {id: 3, text: "What does 经济 mean?", options: ["Economy", "Environment", "Culture", "Society"], correct: 0, type: "vocab"},
+                    {id: 4, text: "Complete: 只要努力___能成功", options: ["就", "才", "也", "都"], correct: 0, type: "grammar"},
+                    {id: 5, text: "Select the correct translation of 'development'", options: ["发展", "环境", "文化", "社会"], correct: 0, type: "vocab"},
+                ]
+            },
+            5: {
+                name: "HSK Level 5",
+                passingScore: 180,
+                maxScore: 300,
+                timeMinutes: 125,
+                questions: [
+                    {id: 1, text: "复杂的反义词是?", options: ["简单", "困难", "容易", "麻烦"], correct: 0, type: "vocab"},
+                    {id: 2, text: "Select the correct usage of 从而", options: ["努力学习从而取得好成绩", "因为努力学习所以取得好成绩", "虽然努力学习但是成绩不好", "如果努力学习就能取得好成绩"], correct: 0, type: "grammar"},
+                    {id: 3, text: "What does 认为 mean?", options: ["To think", "To know", "To believe", "To understand"], correct: 0, type: "vocab"},
+                    {id: 4, text: "Complete: 他___完成了任务", options: ["终于", "突然", "忽然", "果然"], correct: 0, type: "grammar"},
+                    {id: 5, text: "Select the correct meaning of 特别", options: ["Special", "Normal", "Ordinary", "Common"], correct: 0, type: "vocab"},
+                ]
+            },
+            6: {
+                name: "HSK Level 6",
+                passingScore: 180,
+                maxScore: 300,
+                timeMinutes: 140,
+                questions: [
+                    {id: 1, text: "和谐的社会 means:", options: ["Harmonious society", "Modern society", "Traditional society", "Developing society"], correct: 0, type: "reading"},
+                    {id: 2, text: "Select the correct meaning of 创新", options: ["Innovation", "Tradition", "Culture", "Development"], correct: 0, type: "vocab"},
+                    {id: 3, text: "What does 传统 mean?", options: ["Tradition", "Modern", "Future", "Past"], correct: 0, type: "vocab"},
+                    {id: 4, text: "Complete: 综上所述，我们___努力", options: ["需要", "可能", "应该", "必须"], correct: 0, type: "grammar"},
+                    {id: 5, text: "Select the correct meaning of 意识", options: ["Consciousness", "Ability", "Responsibility", "Opportunity"], correct: 0, type: "vocab"},
+                ]
+            }
+        };
+        
+        function loadTest() {
+            const test = hskTests[currentLevel];
+            document.getElementById('testInfo').innerHTML = `
+                <div class="info-item"><div class="info-value">${test.questions.length}</div><div>Questions</div></div>
+                <div class="info-item"><div class="info-value">${test.passingScore}</div><div>Passing Score</div></div>
+                <div class="info-item"><div class="timer" id="timer">${test.timeMinutes}:00</div></div>
+            `;
+            
+            timeSeconds = test.timeMinutes * 60;
+            startTimer();
+            
+            const questionsArea = document.getElementById('questionsArea');
+            questionsArea.innerHTML = test.questions.map((q, idx) => `
+                <div class="question">
+                    <div class="question-text">${idx + 1}. ${q.text}</div>
+                    ${q.options.map((opt, optIdx) => `
+                        <div class="option" onclick="selectAnswer(${idx}, ${optIdx})">
+                            ${String.fromCharCode(65 + optIdx)}. ${opt}
+                        </div>
+                    `).join('')}
+                </div>
+            `).join('');
+        }
+        
+        function selectAnswer(qIdx, optIdx) {
+            userAnswers[qIdx] = optIdx;
+            const options = document.querySelectorAll(`.question:nth-child(${qIdx + 1}) .option`);
+            options.forEach(opt => opt.classList.remove('selected'));
+            options[optIdx].classList.add('selected');
+        }
+        
+        function startTimer() {
+            if (timerInterval) clearInterval(timerInterval);
+            timerInterval = setInterval(() => {
+                if (timeSeconds <= 0) {
+                    clearInterval(timerInterval);
+                    submitTest();
+                } else {
+                    timeSeconds--;
+                    const mins = Math.floor(timeSeconds / 60);
+                    const secs = timeSeconds % 60;
+                    const timerEl = document.getElementById('timer');
+                    if (timerEl) timerEl.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
+                }
+            }, 1000);
+        }
+        
+        function submitTest() {
+            if (timerInterval) clearInterval(timerInterval);
+            
+            const test = hskTests[currentLevel];
+            let correct = 0;
+            test.questions.forEach((q, idx) => {
+                if (userAnswers[idx] === q.correct) correct++;
+            });
+            
+            const score = Math.round((correct / test.questions.length) * test.maxScore);
+            const passed = score >= test.passingScore;
+            
+            const modalHtml = `
+                <div class="result-modal" id="resultModal">
+                    <div class="result-card">
+                        <h2>${passed ? '🎉 Congratulations!' : '📚 Keep Practicing!'}</h2>
+                        <p>HSK Level ${currentLevel} Test Result</p>
+                        <div class="result-score ${passed ? 'result-pass' : 'result-fail'}">${score} / ${test.maxScore}</div>
+                        <p>Correct: ${correct}/${test.questions.length} questions</p>
+                        <p>${passed ? 'You passed! Ready for the next level!' : `Need ${test.passingScore} to pass. Review and try again.`}</p>
+                        <button onclick="closeResult()" style="background:#2d6a4f; color:white; border:none; padding:10px 20px; border-radius:25px; margin-top:15px; cursor:pointer;">Continue</button>
+                    </div>
+                </div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', modalHtml);
+        }
+        
+        function closeResult() {
+            const modal = document.getElementById('resultModal');
+            if (modal) modal.remove();
+        }
+        
+        document.querySelectorAll('.level-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.level-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentLevel = parseInt(btn.dataset.level);
+                userAnswers = {};
+                loadTest();
+            });
+        });
+        
+        loadTest();
+    </script>
+</body>
+</html>

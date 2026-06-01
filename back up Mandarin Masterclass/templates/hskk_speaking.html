@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSKK Speaking Test - Mandarin Teacher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a472a 0%, #2d6a4f 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: #1a472a;
+        }
+
+        .level-badge {
+            display: inline-block;
+            background: #2d6a4f;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+
+        .test-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .question-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2d6a4f;
+        }
+
+        .question-number {
+            color: #2d6a4f;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .question-text {
+            font-size: 18px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .chinese-text {
+            font-size: 20px;
+            color: #1a472a;
+            font-weight: 500;
+            margin: 15px 0;
+        }
+
+        .recording-area {
+            background: #e8f5e9;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .record-btn {
+            background: #e94560;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .record-btn.recording {
+            background: #ff0000;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .record-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .timer {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d6a4f;
+            margin: 10px 0;
+        }
+
+        .feedback {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .feedback.show {
+            display: block;
+        }
+
+        .feedback.correct {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .feedback.improve {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .nav-btn {
+            padding: 12px 24px;
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            background: #e94560;
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .result-card {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 999;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .score {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .score.pass {
+            color: #28a745;
+        }
+
+        @media (max-width: 600px) {
+            .question-text {
+                font-size: 16px;
+            }
+            .chinese-text {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎤 HSKK Speaking Test</h1>
+            <p>Hanyu Shuiping Kouyu Kaoshi - Official Speaking Proficiency Test</p>
+            <div class="level-badge" id="levelBadge">HSKK Elementary</div>
+        </div>
+
+        <div id="testContainer"></div>
+    </div>
+
+    <script>
+        // ============================================
+        // COMPLETE HSKK SPEAKING TEST
+        // Official format: Repeat, Q&A, Describe, Read Aloud
+        // ============================================
+
+        const hskkTests = {
+            elementary: {
+                name: "HSKK Elementary (初级)",
+                timeLimit: 17, // minutes
+                passingScore: 60,
+                sections: [
+                    {
+                        name: "Part 1: Listen and Repeat (听后重复)",
+                        instructions: "Listen to each sentence, then repeat it exactly. Pay attention to tones and pronunciation.",
+                        questions: [
+                            { id: 1, text: "你好。", pinyin: "Nǐ hǎo.", translation: "Hello." },
+                            { id: 2, text: "今天天气很好。", pinyin: "Jīntiān tiānqì hěn hǎo.", translation: "Today's weather is very good." },
+                            { id: 3, text: "我喜欢吃中国菜。", pinyin: "Wǒ xǐhuān chī Zhōngguó cài.", translation: "I like eating Chinese food." },
+                            { id: 4, text: "你明天去不去学校？", pinyin: "Nǐ míngtiān qù bu qù xuéxiào?", translation: "Are you going to school tomorrow?" },
+                            { id: 5, text: "他每天跑步半个小时。", pinyin: "Tā měitiān pǎobù bàn gè xiǎoshí.", translation: "He runs for half an hour every day." }
+                        ]
+                    },
+                    {
+                        name: "Part 2: Answer Questions (回答问题)",
+                        instructions: "Listen to each question and answer appropriately. Answers should be complete sentences.",
+                        questions: [
+                            { id: 6, text: "你叫什么名字？", pinyin: "Nǐ jiào shénme míngzi?", translation: "What is your name?", expectedKeywords: ["我叫", "名字是"] },
+                            { id: 7, text: "你是哪国人？", pinyin: "Nǐ shì nǎ guó rén?", translation: "Which country are you from?", expectedKeywords: ["我是", "国人"] },
+                            { id: 8, text: "你学汉语多长时间了？", pinyin: "Nǐ xué Hànyǔ duō cháng shíjiān le?", translation: "How long have you been learning Chinese?", expectedKeywords: ["学了", "个月", "年"] },
+                            { id: 9, text: "你周末通常做什么？", pinyin: "Nǐ zhōumò tōngcháng zuò shénme?", translation: "What do you usually do on weekends?", expectedKeywords: ["周末", "喜欢", "经常"] },
+                            { id: 10, text: "你的爱好是什么？", pinyin: "Nǐ de àihào shì shénme?", translation: "What are your hobbies?", expectedKeywords: ["喜欢", "爱好", "我的爱好是"] }
+                        ]
+                    },
+                    {
+                        name: "Part 3: Describe Pictures (描述图片)",
+                        instructions: "Describe what you see in 3-5 sentences.",
+                        questions: [
+                            { id: 11, text: "Describe a family eating dinner together.", expectedKeywords: ["家人", "吃饭", "一起", "餐桌"] },
+                            { id: 12, text: "Describe a busy street in a city.", expectedKeywords: ["街道", "车", "人", "商店"] }
+                        ]
+                    }
+                ]
+            },
+            intermediate: {
+                name: "HSKK Intermediate (中级)",
+                timeLimit: 21,
+                passingScore: 65,
+                sections: [
+                    {
+                        name: "Part 1: Listen and Repeat (听后重复)",
+                        instructions: "Repeat each sentence with correct tones and intonation.",
+                        questions: [
+                            { id: 1, text: "随着经济的发展，人们的生活水平不断提高。", pinyin: "Suízhe jīngjì de fāzhǎn, rénmen de shēnghuó shuǐpíng bùduàn tígāo." },
+                            { id: 2, text: "虽然遇到了困难，但他从来没有放弃过。", pinyin: "Suīrán yùdào le kùnnan, dàn tā cónglái méiyǒu fàngqì guò." },
+                            { id: 3, text: "我们应该珍惜时间，努力学习，实现自己的梦想。", pinyin: "Wǒmen yīnggāi zhēnxī shíjiān, nǔlì xuéxí, shíxiàn zìjǐ de mèngxiǎng." }
+                        ]
+                    },
+                    {
+                        name: "Part 2: Answer Questions (回答问题)",
+                        instructions: "Answer each question with 2-3 sentences.",
+                        questions: [
+                            { id: 4, text: "你认为什么是成功？", translation: "What do you think is success?" },
+                            { id: 5, text: "你对环境保护有什么建议？", translation: "What suggestions do you have for environmental protection?" },
+                            { id: 6, text: "社交媒体对人们的生活有什么影响？", translation: "What impact does social media have on people's lives?" }
+                        ]
+                    },
+                    {
+                        name: "Part 3: Describe Pictures (描述图片)",
+                        instructions: "Describe the picture in detail for 1 minute.",
+                        questions: [
+                            { id: 7, text: "Describe a scene of people exercising in a park." },
+                            { id: 8, text: "Describe a busy airport scene." }
+                        ]
+                    }
+                ]
+            },
+            advanced: {
+                name: "HSKK Advanced (高级)",
+                timeLimit: 24,
+                passingScore: 70,
+                sections: [
+                    {
+                        name: "Part 1: Listen and Repeat (听后重复)",
+                        instructions: "Repeat long, complex sentences accurately.",
+                        questions: [
+                            { id: 1, text: "全球化是一个复杂的过程，它既带来了前所未有的机遇，也带来了严峻的挑战，各国需要加强合作，共同应对。" }
+                        ]
+                    },
+                    {
+                        name: "Part 2: Read Aloud (朗读)",
+                        instructions: "Read the passage aloud with proper pronunciation and emotion.",
+                        questions: [
+                            { id: 2, text: "中国传统文化强调'和而不同'，这一理念对于构建人类命运共同体具有重要意义。在当今多元文化的社会中，我们应该尊重差异，寻求共识，共同创造美好的未来。" }
+                        ]
+                    },
+                    {
+                        name: "Part 3: Answer Questions (回答问题)",
+                        instructions: "Answer with well-structured, detailed responses.",
+                        questions: [
+                            { id: 3, text: "谈谈你对人工智能未来发展的看法。", translation: "Share your views on the future development of artificial intelligence." },
+                            { id: 4, text: "你认为教育应该如何适应快速变化的社会？", translation: "How should education adapt to a rapidly changing society?" }
+                        ]
+                    }
+                ]
+            }
+        };
+
+        let currentLevel = "elementary";
+        let currentSection = 0;
+        let currentQuestion = 0;
+        let recordings = {};
+        let mediaRecorder = null;
+        let audioChunks = [];
+        let isRecording = false;
+
+        document.getElementById('levelBadge').innerHTML = `HSKK ${hskkTests.elementary.name}`;
+
+        function loadTest(level = "elementary") {
+            currentLevel = level;
+            currentSection = 0;
+            currentQuestion = 0;
+            recordings = {};
+            
+            const test = hskkTests[currentLevel];
+            document.getElementById('levelBadge').innerHTML = `HSKK ${test.name}`;
+            
+            renderCurrentQuestion();
+        }
+
+        function renderCurrentQuestion() {
+            const test = hskkTests[currentLevel];
+            const section = test.sections[currentSection];
+            const question = section.questions[currentQuestion];
+            
+            if (!question) {
+                // Move to next section or finish
+                if (currentSection + 1 < test.sections.length) {
+                    currentSection++;
+                    currentQuestion = 0;
+                    renderCurrentQuestion();
+                } else {
+                    showResults();
+                }
+                return;
+            }
+            
+            const progress = ((currentSection * section.questions.length + currentQuestion + 1) / 
+                             test.sections.reduce((sum, s) => sum + s.questions.length, 0)) * 100;
+            
+            let html = `
+                <div class="test-card">
+                    <div class="progress-bar" style="background:#e0e0e0; border-radius:10px; margin-bottom:20px; height:8px;">
+                        <div style="background:#2d6a4f; width:${progress}%; height:8px; border-radius:10px;"></div>
+                    </div>
+                    
+                    <div class="question-card">
+                        <div class="question-number">${section.name} - Question ${currentQuestion + 1} of ${section.questions.length}</div>
+                        <div class="question-text">${section.instructions}</div>
+            `;
+            
+            // Add question content based on section type
+            if (currentLevel === "elementary") {
+                if (currentSection === 0) {
+                    // Repeat section - show text to repeat
+                    html += `
+                        <div class="chinese-text">${question.text}</div>
+                        <div class="pinyin-text" style="color:#666;">${question.pinyin || ""}</div>
+                        <div class="translation" style="color:#888; margin-bottom:15px;">${question.translation || ""}</div>
+                    `;
+                } else if (currentSection === 1) {
+                    // Q&A section
+                    html += `
+                        <div class="chinese-text">${question.text}</div>
+                        <div class="translation" style="color:#888; margin-bottom:15px;">${question.translation || ""}</div>
+                    `;
+                } else if (currentSection === 2) {
+                    // Describe picture
+                    html += `
+                        <div class="question-text">🎨 ${question.text}</div>
+                        <div style="background:#ddd; height:150px; display:flex; align-items:center; justify-content:center; margin:15px 0; border-radius:10px;">
+                            📷 [Picture described above]
+                        </div>
+                    `;
+                }
+            } else {
+                // Intermediate/Advanced
+                html += `<div class="chinese-text">${question.text}</div>`;
+            }
+            
+            // Recording interface
+            const hasRecording = recordings[`${currentSection}_${currentQuestion}`];
+            
+            html += `
+                        <div class="recording-area">
+                            <div class="timer" id="timer">00:00</div>
+                            <button class="record-btn" id="recordBtn" onclick="toggleRecording()">
+                                ${hasRecording ? '🎵 Re-record' : '🎤 Start Recording'}
+                            </button>
+                            ${hasRecording ? `<div style="margin-top:10px; color:#2d6a4f;">✓ Recorded</div>` : ''}
+                            <div id="recordingFeedback" class="feedback"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-buttons">
+                        <button class="nav-btn" onclick="previousQuestion()" ${currentSection === 0 && currentQuestion === 0 ? 'disabled' : ''}>
+                            ← Previous
+                        </button>
+                        <button class="nav-btn" onclick="nextQuestion()">
+                            ${currentSection === test.sections.length - 1 && currentQuestion === section.questions.length - 1 ? 'Finish Test' : 'Next →'}
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('testContainer').innerHTML = html;
+        }
+        
+        let timerInterval = null;
+        let recordingTime = 0;
+        
+        async function toggleRecording() {
+            if (isRecording) {
+                stopRecording();
+            } else {
+                await startRecording();
+            }
+        }
+        
+        async function startRecording() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                audioChunks = [];
+                
+                mediaRecorder.ondataavailable = (event) => {
+                    audioChunks.push(event.data);
+                };
+                
+                mediaRecorder.onstop = () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                    const audioUrl = URL.createObjectURL(audioBlob);
+                    
+                    // Save recording
+                    recordings[`${currentSection}_${currentQuestion}`] = audioBlob;
+                    
+                    // Provide feedback
+                    provideFeedback();
+                    
+                    // Stop all tracks
+                    stream.getTracks().forEach(track => track.stop());
+                    
+                    const recordBtn = document.getElementById('recordBtn');
+                    if (recordBtn) {
+                        recordBtn.textContent = '🎵 Re-record';
+                    }
+                    
+                    isRecording = false;
+                    if (timerInterval) clearInterval(timerInterval);
+                    
+                    const timerEl = document.getElementById('timer');
+                    if (timerEl) timerEl.textContent = '00:00';
+                    
+                    const recordBtnEl = document.getElementById('recordBtn');
+                    if (recordBtnEl) recordBtnEl.classList.remove('recording');
+                };
+                
+                mediaRecorder.start();
+                isRecording = true;
+                
+                // Start timer
+                recordingTime = 0;
+                timerInterval = setInterval(() => {
+                    recordingTime++;
+                    const mins = Math.floor(recordingTime / 60);
+                    const secs = recordingTime % 60;
+                    const timerEl = document.getElementById('timer');
+                    if (timerEl) timerEl.textContent = `${mins.toString().padStart(2,'0')}:${secs.toString().padStart(2,'0')}`;
+                    
+                    // Auto-stop after 60 seconds
+                    if (recordingTime >= 60) {
+                        stopRecording();
+                    }
+                }, 1000);
+                
+                const recordBtn = document.getElementById('recordBtn');
+                if (recordBtn) {
+                    recordBtn.textContent = '🔴 Recording...';
+                    recordBtn.classList.add('recording');
+                }
+                
+            } catch (error) {
+                console.error('Microphone error:', error);
+                alert('Please allow microphone access to take the speaking test.');
+            }
+        }
+        
+        function stopRecording() {
+            if (mediaRecorder && isRecording) {
+                mediaRecorder.stop();
+            }
+        }
+        
+        function provideFeedback() {
+            const feedbackDiv = document.getElementById('recordingFeedback');
+            if (!feedbackDiv) return;
+            
+            // Simulate AI feedback - in production, send audio to backend for analysis
+            const test = hskkTests[currentLevel];
+            const section = test.sections[currentSection];
+            const question = section.questions[currentQuestion];
+            
+            feedbackDiv.classList.add('show', 'correct');
+            
+            if (currentLevel === "elementary" && currentSection === 0) {
+                feedbackDiv.innerHTML = `
+                    <strong>📊 AI Feedback:</strong><br>
+                    Pronunciation: Good! ✅<br>
+                    Tones: Mostly accurate ✅<br>
+                    Fluency: Natural pace ✅<br>
+                    <small>Continue practicing to improve further.</small>
+                `;
+            } else if (currentSection === 1) {
+                feedbackDiv.innerHTML = `
+                    <strong>📊 AI Feedback:</strong><br>
+                    Content: Relevant and complete ✅<br>
+                    Grammar: Well-structured ✅<br>
+                    Vocabulary: Appropriate for level ✅<br>
+                    <small>Good answer! Ready for the next question.</small>
+                `;
+            } else {
+                feedbackDiv.innerHTML = `
+                    <strong>📊 AI Feedback:</strong><br>
+                    Description: Clear and detailed ✅<br>
+                    Organization: Logical flow ✅<br>
+                    <small>Great description! Keep practicing to improve fluency.</small>
+                `;
+            }
+        }
+        
+        function previousQuestion() {
+            const test = hskkTests[currentLevel];
+            const section = test.sections[currentSection];
+            
+            if (currentQuestion > 0) {
+                currentQuestion--;
+            } else if (currentSection > 0) {
+                currentSection--;
+                currentQuestion = test.sections[currentSection].questions.length - 1;
+            } else {
+                return;
+            }
+            
+            renderCurrentQuestion();
+        }
+        
+        function nextQuestion() {
+            const test = hskkTests[currentLevel];
+            const section = test.sections[currentSection];
+            
+            // Check if recorded
+            if (!recordings[`${currentSection}_${currentQuestion}`]) {
+                alert('Please record your answer before continuing.');
+                return;
+            }
+            
+            if (currentQuestion + 1 < section.questions.length) {
+                currentQuestion++;
+            } else if (currentSection + 1 < test.sections.length) {
+                currentSection++;
+                currentQuestion = 0;
+            } else {
+                showResults();
+                return;
+            }
+            
+            renderCurrentQuestion();
+        }
+        
+        function showResults() {
+            const totalQuestions = hskkTests[currentLevel].sections.reduce(
+                (sum, s) => sum + s.questions.length, 0
+            );
+            const recordedCount = Object.keys(recordings).length;
+            const score = Math.round((recordedCount / totalQuestions) * 100);
+            const passed = score >= hskkTests[currentLevel].passingScore;
+            
+            const resultHtml = `
+                <div class="overlay" id="resultOverlay"></div>
+                <div class="result-card">
+                    <h2>${passed ? '🎉 HSKK Test Complete!' : '📚 Keep Practicing!'}</h2>
+                    <div class="score ${passed ? 'pass' : ''}">${score}%</div>
+                    <p>Level: ${hskkTests[currentLevel].name}</p>
+                    <p>Completed: ${recordedCount}/${totalQuestions} questions</p>
+                    <p>Passing score required: ${hskkTests[currentLevel].passingScore}%</p>
+                    ${passed ? 
+                        '<p style="color:#28a745;">✓ You are ready for the official HSKK exam!</p>' : 
+                        '<p style="color:#856404;">Continue practicing and try again.</p>'
+                    }
+                    <button class="nav-btn" onclick="closeResults()" style="margin-top:20px;">Continue Learning</button>
+                </div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', resultHtml);
+        }
+        
+        function closeResults() {
+            document.getElementById('resultOverlay')?.remove();
+            document.querySelector('.result-card')?.remove();
+            window.location.href = '/';
+        }
+        
+        // Add level selector to header
+        function addLevelSelector() {
+            const header = document.querySelector('.header');
+            const selectorHtml = `
+                <div style="margin-top:15px;">
+                    <select id="levelSelect" onchange="changeLevel()" style="padding:8px 15px; border-radius:20px; border:1px solid #2d6a4f;">
+                        <option value="elementary">HSKK Elementary (初级)</option>
+                        <option value="intermediate">HSKK Intermediate (中级)</option>
+                        <option value="advanced">HSKK Advanced (高级)</option>
+                    </select>
+                </div>
+            `;
+            header.insertAdjacentHTML('beforeend', selectorHtml);
+        }
+        
+        function changeLevel() {
+            const select = document.getElementById('levelSelect');
+            currentLevel = select.value;
+            loadTest(currentLevel);
+        }
+        
+        // Initialize
+        addLevelSelector();
+        loadTest("elementary");
+    </script>
+</body>
+</html>

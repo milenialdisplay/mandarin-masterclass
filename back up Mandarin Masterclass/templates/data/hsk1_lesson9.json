@@ -1,0 +1,52 @@
+{
+  "title": "你儿子在哪儿工作",
+  "subtitle": "Asking and Telling Location, Using 在 for Location, Talking About Workplaces",
+  "assistant_message": "Today we learn: asking and telling location with 在 (zài), using 哪儿 (nǎr) for 'where', and talking about workplaces.",
+  "vocabulary": [
+    {"word": "在", "pinyin": "zài", "meaning": "to be at/in/on", "meaning_id": "berada di", "example": "我在北京", "example_translation": "I am in Beijing", "example_translation_id": "Saya di Beijing"},
+    {"word": "哪儿", "pinyin": "nǎr", "meaning": "where", "meaning_id": "di mana", "example": "你在哪儿？", "example_translation": "Where are you?", "example_translation_id": "Kamu di mana?"},
+    {"word": "这里", "pinyin": "zhè lǐ", "meaning": "here", "meaning_id": "di sini", "example": "我在这里", "example_translation": "I am here", "example_translation_id": "Saya di sini"},
+    {"word": "那里", "pinyin": "nà lǐ", "meaning": "there", "meaning_id": "di sana", "example": "他在那里", "example_translation": "He is there", "example_translation_id": "Dia di sana"},
+    {"word": "工作", "pinyin": "gōng zuò", "meaning": "to work", "meaning_id": "bekerja", "example": "我在银行工作", "example_translation": "I work at a bank", "example_translation_id": "Saya bekerja di bank"},
+    {"word": "银行", "pinyin": "yín háng", "meaning": "bank", "meaning_id": "bank", "example": "去银行", "example_translation": "go to the bank", "example_translation_id": "pergi ke bank"},
+    {"word": "公司", "pinyin": "gōng sī", "meaning": "company", "meaning_id": "perusahaan", "example": "他在公司", "example_translation": "He is at the company", "example_translation_id": "Dia di perusahaan"},
+    {"word": "医院", "pinyin": "yī yuàn", "meaning": "hospital", "meaning_id": "rumah sakit", "example": "在医院", "example_translation": "at the hospital", "example_translation_id": "di rumah sakit"},
+    {"word": "左边", "pinyin": "zuǒ biān", "meaning": "left side", "meaning_id": "sisi kiri", "example": "在左边", "example_translation": "on the left", "example_translation_id": "di sebelah kiri"},
+    {"word": "右边", "pinyin": "yòu biān", "meaning": "right side", "meaning_id": "sisi kanan", "example": "在右边", "example_translation": "on the right", "example_translation_id": "di sebelah kanan"}
+  ],
+  "grammar": [
+    {
+      "point": "Location with 在 (zài)",
+      "point_id": "Menyatakan Lokasi dengan 在 (zài)",
+      "explanation": "Use 在 before a place to indicate 'to be at/in/on' a location.",
+      "explanation_id": "Gunakan 在 sebelum tempat untuk menunjukkan 'berada di' suatu lokasi.",
+      "examples": [
+        {"chinese": "我在北京。", "translation": "I am in Beijing.", "translation_id": "Saya di Beijing."},
+        {"chinese": "他在医院。", "translation": "He is at the hospital.", "translation_id": "Dia di rumah sakit."}
+      ]
+    },
+    {
+      "point": "Asking 'Where' with 哪儿 (nǎr)",
+      "point_id": "Bertanya 'Di Mana' dengan 哪儿 (nǎr)",
+      "explanation": "Use 哪儿 to ask 'where'. 在哪儿 means 'where is'.",
+      "explanation_id": "Gunakan 哪儿 untuk bertanya 'di mana'. 在哪儿 berarti 'di mana'.",
+      "examples": [
+        {"chinese": "你在哪儿？", "translation": "Where are you?", "translation_id": "Kamu di mana?"},
+        {"chinese": "银行在哪儿？", "translation": "Where is the bank?", "translation_id": "Di mana banknya?"}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Wang Fang", "voice": "female", "chinese": "你儿子在哪儿工作？", "pinyin": "Nǐ érzi zài nǎr gōngzuò?", "translation": "Where does your son work?", "translation_id": "Di mana anak laki-lakimu bekerja?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "他在银行工作。", "pinyin": "Tā zài yínháng gōngzuò.", "translation": "He works at a bank.", "translation_id": "Dia bekerja di bank."},
+    {"speaker": "female", "name": "Wang Fang", "voice": "female", "chinese": "银行在哪儿？", "pinyin": "Yínháng zài nǎr?", "translation": "Where is the bank?", "translation_id": "Di mana banknya?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "银行在学校左边。", "pinyin": "Yínháng zài xuéxiào zuǒbiān.", "translation": "The bank is to the left of the school.", "translation_id": "Bank di sebelah kiri sekolah."}
+  ],
+  "exercises": [
+    {"question": "What does 在 (zài) mean?", "question_id": "Apa arti 在 (zài)?", "options": ["To go", "To be at", "To have", "To want"], "options_id": ["Pergi", "Berada di", "Memiliki", "Ingin"], "correct": 1},
+    {"question": "How do you ask 'Where are you?' in Chinese?", "question_id": "Bagaimana bertanya 'Kamu di mana?' dalam bahasa Mandarin?", "options": ["你好吗？", "你叫什么？", "你在哪儿？", "你多大？"], "options_id": ["Apa kabar?", "Siapa namamu?", "Kamu di mana?", "Berapa umurmu?"], "correct": 2},
+    {"question": "What is 银行 (yínháng)?", "question_id": "Apa itu 银行 (yínháng)?", "options": ["Hospital", "School", "Bank", "Company"], "options_id": ["Rumah sakit", "Sekolah", "Bank", "Perusahaan"], "correct": 2},
+    {"question": "How to say 'on the left' in Chinese?", "question_id": "Bagaimana mengatakan 'di sebelah kiri' dalam bahasa Mandarin?", "options": ["左边", "右边", "这里", "那里"], "options_id": ["sebelah kiri", "sebelah kanan", "di sini", "di sana"], "correct": 0},
+    {"question": "Choose the correct translation: 'He works at a company'", "question_id": "Pilih terjemahan yang benar: 'Dia bekerja di perusahaan'", "options": ["他在医院工作", "他在公司工作", "他在银行工作", "他在学校工作"], "options_id": ["Dia bekerja di rumah sakit", "Dia bekerja di perusahaan", "Dia bekerja di bank", "Dia bekerja di sekolah"], "correct": 1}
+  ]
+}

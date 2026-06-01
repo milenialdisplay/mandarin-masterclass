@@ -1,0 +1,51 @@
+{
+  "title": "她是我的汉语老师",
+  "subtitle": "Describing People, Using Possessive 的, Talking About Nationalities",
+  "assistant_message": "Today we learn: possessive 的 (my, your, his/her), nationalities (中国, 美国), and describing people.",
+  "vocabulary": [
+    {"word": "老师", "pinyin": "lǎo shī", "meaning": "teacher", "meaning_id": "guru", "example": "王老师很好", "example_translation": "Teacher Wang is very good", "example_translation_id": "Guru Wang sangat baik"},
+    {"word": "学生", "pinyin": "xué sheng", "meaning": "student", "meaning_id": "murid", "example": "我是学生", "example_translation": "I am a student", "example_translation_id": "Saya adalah murid"},
+    {"word": "汉语", "pinyin": "Hàn yǔ", "meaning": "Chinese language", "meaning_id": "bahasa Mandarin", "example": "我会说汉语", "example_translation": "I can speak Chinese", "example_translation_id": "Saya bisa bicara Mandarin"},
+    {"word": "英语", "pinyin": "Yīng yǔ", "meaning": "English language", "meaning_id": "bahasa Inggris", "example": "你会说英语吗？", "example_translation": "Can you speak English?", "example_translation_id": "Apakah Anda bisa bahasa Inggris?"},
+    {"word": "中国", "pinyin": "Zhōng guó", "meaning": "China", "meaning_id": "Tiongkok", "example": "我爱中国", "example_translation": "I love China", "example_translation_id": "Saya cinta Tiongkok"},
+    {"word": "美国", "pinyin": "Měi guó", "meaning": "America", "meaning_id": "Amerika", "example": "他是美国人", "example_translation": "He is American", "example_translation_id": "Dia orang Amerika"},
+    {"word": "的", "pinyin": "de", "meaning": "possessive particle", "meaning_id": "partikel kepemilikan", "example": "我的书", "example_translation": "my book", "example_translation_id": "buku saya"},
+    {"word": "谁", "pinyin": "shéi", "meaning": "who", "meaning_id": "siapa", "example": "他是谁？", "example_translation": "Who is he?", "example_translation_id": "Siapa dia?"}
+  ],
+  "grammar": [
+    {
+      "point": "Possessive Particle 的",
+      "point_id": "Partikel Kepemilikan 的",
+      "explanation": "Use 的 (de) after a noun or pronoun to show possession: 我 (I) → 我的 (my), 你 (you) → 你的 (your), 他 (he) → 他的 (his).",
+      "explanation_id": "Gunakan 的 (de) setelah kata benda atau kata ganti untuk menunjukkan kepemilikan.",
+      "examples": [
+        {"chinese": "我的老师", "translation": "My teacher", "translation_id": "Guru saya"},
+        {"chinese": "你的名字", "translation": "Your name", "translation_id": "Nama kamu"},
+        {"chinese": "他的汉语老师", "translation": "His Chinese teacher", "translation_id": "Guru Mandarin dia"}
+      ]
+    },
+    {
+      "point": "Asking 'Who' with 谁",
+      "point_id": "Bertanya 'Siapa' dengan 谁",
+      "explanation": "Use 谁 (shéi) to ask 'who' in questions.",
+      "explanation_id": "Gunakan 谁 (shéi) untuk bertanya 'siapa' dalam pertanyaan.",
+      "examples": [
+        {"chinese": "她是谁？", "translation": "Who is she?", "translation_id": "Siapa dia?"},
+        {"chinese": "谁是你的老师？", "translation": "Who is your teacher?", "translation_id": "Siapa gurumu?"}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Tom", "voice": "male", "chinese": "她是谁？", "pinyin": "Tā shì shéi?", "translation": "Who is she?", "translation_id": "Siapa dia?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "她是我的汉语老师。", "pinyin": "Tā shì wǒ de Hànyǔ lǎoshī.", "translation": "She is my Chinese teacher.", "translation_id": "Dia adalah guru Mandarin saya."},
+    {"speaker": "male", "name": "Tom", "voice": "male", "chinese": "她是哪国人？", "pinyin": "Tā shì nǎ guó rén?", "translation": "What nationality is she?", "translation_id": "Dia berkewarganegaraan apa?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "她是中国人。", "pinyin": "Tā shì Zhōngguó rén.", "translation": "She is Chinese.", "translation_id": "Dia orang Tiongkok."}
+  ],
+  "exercises": [
+    {"question": "What does 老师 (lǎoshī) mean?", "question_id": "Apa arti 老师 (lǎoshī)?", "options": ["Student", "Teacher", "Friend", "Doctor"], "options_id": ["Murid", "Guru", "Teman", "Dokter"], "correct": 1},
+    {"question": "How do you say 'my Chinese teacher' in Chinese?", "question_id": "Bagaimana mengatakan 'guru Mandarin saya' dalam bahasa Mandarin?", "options": ["我的汉语老师", "你的汉语老师", "他的汉语老师", "她的汉语老师"], "options_id": ["guru Mandarin saya", "guru Mandarin kamu", "guru Mandarin dia (laki)", "guru Mandarin dia (perempuan)"], "correct": 0},
+    {"question": "What is 中国 (Zhōngguó)?", "question_id": "Apa itu 中国 (Zhōngguó)?", "options": ["America", "China", "England", "Japan"], "options_id": ["Amerika", "Tiongkok", "Inggris", "Jepang"], "correct": 1},
+    {"question": "How to ask 'Who is he?' in Chinese?", "question_id": "Bagaimana bertanya 'Siapa dia (laki-laki)?' dalam bahasa Mandarin?", "options": ["他是谁？", "她是谁？", "你是谁？", "我是谁？"], "options_id": ["Siapa dia (laki)?", "Siapa dia (perempuan)?", "Siapa kamu?", "Siapa saya?"], "correct": 0},
+    {"question": "Choose the correct possessive: 'Your name'", "question_id": "Pilih kepemilikan yang benar: 'Nama kamu'", "options": ["我的名字", "你的名字", "他的名字", "她的名字"], "options_id": ["nama saya", "nama kamu", "nama dia (laki)", "nama dia (perempuan)"], "correct": 1}
+  ]
+}

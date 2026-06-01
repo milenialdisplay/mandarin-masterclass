@@ -1,0 +1,52 @@
+{
+  "title": "这个工作是他帮我介绍的",
+  "subtitle": "是...的 Construction, Helping Verbs, Talking About Work",
+  "assistant_message": "Today we learn: 是...的 construction for emphasis, helping verbs (帮 bāng), and talking about work and introductions.",
+  "vocabulary": [
+    {"word": "工作", "pinyin": "gōng zuò", "meaning": "job/work", "meaning_id": "pekerjaan", "example": "这个工作很好", "example_translation": "this job is good", "example_translation_id": "pekerjaan ini bagus"},
+    {"word": "帮", "pinyin": "bāng", "meaning": "to help", "meaning_id": "membantu", "example": "帮我", "example_translation": "help me", "example_translation_id": "bantu saya"},
+    {"word": "介绍", "pinyin": "jiè shào", "meaning": "to introduce", "meaning_id": "memperkenalkan", "example": "介绍工作", "example_translation": "introduce a job", "example_translation_id": "memperkenalkan pekerjaan"},
+    {"word": "帮助", "pinyin": "bāng zhù", "meaning": "assistance/help", "meaning_id": "bantuan", "example": "谢谢你的帮助", "example_translation": "thank you for your help", "example_translation_id": "terima kasih atas bantuanmu"},
+    {"word": "公司", "pinyin": "gōng sī", "meaning": "company", "meaning_id": "perusahaan", "example": "我在公司工作", "example_translation": "I work at a company", "example_translation_id": "saya bekerja di perusahaan"},
+    {"word": "同事", "pinyin": "tóng shì", "meaning": "colleague", "meaning_id": "rekan kerja", "example": "我的同事", "example_translation": "my colleague", "example_translation_id": "rekan kerja saya"},
+    {"word": "面试", "pinyin": "miàn shì", "meaning": "interview", "meaning_id": "wawancara", "example": "去面试", "example_translation": "go to an interview", "example_translation_id": "pergi wawancara"},
+    {"word": "机会", "pinyin": "jī huì", "meaning": "opportunity", "meaning_id": "kesempatan", "example": "好机会", "example_translation": "good opportunity", "example_translation_id": "kesempatan bagus"}
+  ],
+  "grammar": [
+    {
+      "point": "是...的 Construction for Emphasizing Past Events",
+      "point_id": "Konstruksi 是...的 untuk Menekankan Peristiwa Masa Lalu",
+      "explanation": "Use 是...的 to emphasize details about a past event (who did it, how, when, where).",
+      "explanation_id": "Gunakan 是...的 untuk menekankan detail tentang peristiwa masa lalu (siapa yang melakukannya, bagaimana, kapan, di mana).",
+      "examples": [
+        {"chinese": "这个工作是他帮我介绍的。", "translation": "He helped me get this job (emphasizing who).", "translation_id": "Dia membantu saya mendapatkan pekerjaan ini (menekankan siapa)."},
+        {"chinese": "我是坐飞机来的。", "translation": "I came by plane (emphasizing how).", "translation_id": "Saya datang dengan pesawat (menekankan bagaimana)."},
+        {"chinese": "他是昨天去的。", "translation": "He went yesterday (emphasizing when).", "translation_id": "Dia pergi kemarin (menekankan kapan)."}
+      ]
+    },
+    {
+      "point": "Helping Verb 帮 (bāng) - To Help",
+      "point_id": "Kata Kerja Bantuan 帮 (bāng) - Membantu",
+      "explanation": "Use 帮 before a verb to mean 'help do something'. Structure: 帮 + Person + Verb.",
+      "explanation_id": "Gunakan 帮 sebelum kata kerja untuk berarti 'membantu melakukan sesuatu'. Struktur: 帮 + Orang + Kata Kerja.",
+      "examples": [
+        {"chinese": "他帮我介绍工作。", "translation": "He helped me get a job.", "translation_id": "Dia membantu saya mendapatkan pekerjaan."},
+        {"chinese": "你能帮我一下吗？", "translation": "Can you help me?", "translation_id": "Bisakah kamu membantu saya?"},
+        {"chinese": "朋友帮了我很多。", "translation": "Friends helped me a lot.", "translation_id": "Teman-teman banyak membantu saya."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "这个工作是谁帮你介绍的？", "pinyin": "Zhège gōngzuò shì shéi bāng nǐ jièshào de?", "translation": "Who helped you get this job?", "translation_id": "Siapa yang membantu kamu mendapatkan pekerjaan ini?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "这个工作是他帮我介绍的。", "pinyin": "Zhège gōngzuò shì tā bāng wǒ jièshào de.", "translation": "He helped me get this job.", "translation_id": "Dia membantu saya mendapatkan pekerjaan ini."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "他在哪个公司工作？", "pinyin": "Tā zài nǎge gōngsī gōngzuò?", "translation": "Which company does he work at?", "translation_id": "Dia bekerja di perusahaan mana?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "他在一家大公司工作，是我的同事。", "pinyin": "Tā zài yī jiā dà gōngsī gōngzuò, shì wǒ de tóngshì.", "translation": "He works at a big company, he's my colleague.", "translation_id": "Dia bekerja di perusahaan besar, dia rekan kerja saya."}
+  ],
+  "exercises": [
+    {"question": "What does the 是...的 construction emphasize?", "question_id": "Apa yang ditekankan oleh konstruksi 是...的?", "options": ["Future actions", "Past event details", "Ongoing actions", "Possible actions"], "options_id": ["Aksi masa depan", "Detail peristiwa masa lalu", "Aksi sedang berlangsung", "Aksi mungkin"], "correct": 1},
+    {"question": "How do you say 'He helped me get this job' in Chinese?", "question_id": "Bagaimana mengatakan 'Dia membantu saya mendapatkan pekerjaan ini' dalam bahasa Mandarin?", "options": ["他帮我介绍这个工作", "这个工作是他帮我介绍的", "他介绍我这个工作", "这个工作他帮我介绍"], "options_id": ["Dia bantu saya perkenalkan pekerjaan ini", "Pekerjaan ini dia bantu saya perkenalkan", "Dia perkenalkan saya pekerjaan ini", "Pekerjaan ini dia bantu saya perkenalkan"], "correct": 1},
+    {"question": "What does 帮 (bāng) mean?", "question_id": "Apa arti 帮 (bāng)?", "options": ["To ask", "To help", "To work", "To introduce"], "options_id": ["Bertanya", "Membantu", "Bekerja", "Memperkenalkan"], "correct": 1},
+    {"question": "What is 同事 (tóngshì)?", "question_id": "Apa itu 同事 (tóngshì)?", "options": ["Classmate", "Colleague", "Friend", "Boss"], "options_id": ["Teman sekelas", "Rekan kerja", "Teman", "Bos"], "correct": 1},
+    {"question": "How to ask 'Who helped you?' in Chinese?", "question_id": "Bagaimana bertanya 'Siapa yang membantu kamu?' dalam bahasa Mandarin?", "options": ["谁帮你？", "谁帮助我？", "谁帮的你？", "A and C"], "options_id": ["Siapa bantu kamu?", "Siapa bantu saya?", "Siapa yang bantu kamu?", "A dan C"], "correct": 3}
+  ]
+}

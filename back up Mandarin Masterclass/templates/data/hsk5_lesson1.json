@@ -1,0 +1,49 @@
+{
+  "title": "爱的细节",
+  "subtitle": "Relationships, Observation, Emotional Intelligence",
+  "assistant_message": "Today we learn: discussing love and relationships, observing details in daily life, and expressing emotional intelligence.",
+  "vocabulary": [
+    {"word": "细节", "pinyin": "xì jié", "meaning": "details", "meaning_id": "detail", "example": "注意细节", "example_translation": "pay attention to details", "example_translation_id": "perhatikan detail"},
+    {"word": "爱情", "pinyin": "ài qíng", "meaning": "romantic love", "meaning_id": "cinta romantis", "example": "真正的爱情", "example_translation": "true love", "example_translation_id": "cinta sejati"},
+    {"word": "感动", "pinyin": "gǎn dòng", "meaning": "to be touched/moved", "meaning_id": "tersentuh", "example": "很感动", "example_translation": "very touched", "example_translation_id": "sangat tersentuh"},
+    {"word": "表达", "pinyin": "biǎo dá", "meaning": "to express", "meaning_id": "mengekspresikan", "example": "表达感情", "example_translation": "express feelings", "example_translation_id": "mengekspresikan perasaan"},
+    {"word": "理解", "pinyin": "lǐ jiě", "meaning": "to understand", "meaning_id": "memahami", "example": "互相理解", "example_translation": "mutual understanding", "example_translation_id": "saling memahami"},
+    {"word": "珍惜", "pinyin": "zhēn xī", "meaning": "to cherish", "meaning_id": "menghargai", "example": "珍惜眼前人", "example_translation": "cherish the people around you", "example_translation_id": "hargai orang di sekitarmu"},
+    {"word": "浪漫", "pinyin": "làng màn", "meaning": "romantic", "meaning_id": "romantis", "example": "浪漫的爱情", "example_translation": "romantic love", "example_translation_id": "cinta romantis"},
+    {"word": "平凡", "pinyin": "píng fán", "meaning": "ordinary", "meaning_id": "biasa", "example": "平凡的生活", "example_translation": "ordinary life", "example_translation_id": "kehidupan biasa"}
+  ],
+  "grammar": [
+    {
+      "point": "Expressing 'Details' with 细节 (xìjié)",
+      "point_id": "Menyatakan 'Detail' dengan 细节 (xìjié)",
+      "explanation": "Use 细节 to talk about small but important details in relationships or situations.",
+      "explanation_id": "Gunakan 细节 untuk membicarakan detail kecil tapi penting dalam hubungan atau situasi.",
+      "examples": [
+        {"chinese": "爱情中的细节很重要。", "translation": "Details in love are very important.", "translation_id": "Detail dalam cinta sangat penting."},
+        {"chinese": "他注意到每个细节。", "translation": "He notices every detail.", "translation_id": "Dia memperhatikan setiap detail."}
+      ]
+    },
+    {
+      "point": "Using 被 (bèi) Passive Voice",
+      "point_id": "Menggunakan 被 (bèi) untuk Kalimat Pasif",
+      "explanation": "被 is used to indicate passive voice when the subject receives the action.",
+      "explanation_id": "被 digunakan untuk menunjukkan kalimat pasif ketika subjek menerima tindakan.",
+      "examples": [
+        {"chinese": "他被她的真诚感动了。", "translation": "He was moved by her sincerity.", "translation_id": "Dia tersentuh oleh ketulusannya."},
+        {"chinese": "这段感情被很多人羡慕。", "translation": "This relationship is admired by many people.", "translation_id": "Hubungan ini dikagumi banyak orang."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Wang Fang", "voice": "female", "chinese": "你觉得爱情中什么最重要？", "pinyin": "Nǐ juéde àiqíng zhōng shénme zuì zhòngyào?", "translation": "What do you think is most important in love?", "translation_id": "Menurutmu apa yang paling penting dalam cinta?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我觉得细节最重要。平凡生活中的小事往往能看出一个人的真心。", "pinyin": "Wǒ juéde xìjié zuì zhòngyào. Píngfán shēnghuó zhōng de xiǎoshì wǎngwǎng néng kàn chū yīgè rén de zhēnxīn.", "translation": "I think details are most important. Small things in ordinary life often reveal a person's true heart.", "translation_id": "Saya pikir detail adalah yang terpenting. Hal-hal kecil dalam kehidupan biasa sering mengungkapkan hati seseorang yang sebenarnya."},
+    {"speaker": "female", "name": "Wang Fang", "voice": "female", "chinese": "说得对。懂得珍惜和感恩的人才能拥有真正的幸福。", "pinyin": "Shuō de duì. Dǒngde zhēnxī hé gǎn'ēn de rén cáinéng yōngyǒu zhēnzhèng de xìngfú.", "translation": "Well said. Only those who know how to cherish and be grateful can have true happiness.", "translation_id": "Benar. Hanya mereka yang tahu menghargai dan bersyukur dapat memiliki kebahagiaan sejati."}
+  ],
+  "exercises": [
+    {"question": "What does 细节 (xìjié) mean?", "question_id": "Apa arti 细节 (xìjié)?", "options": ["Summary", "Details", "Conclusion", "Beginning"], "options_id": ["Ringkasan", "Detail", "Kesimpulan", "Awal"], "correct": 1},
+    {"question": "How do you say 'He was moved by her sincerity' in Chinese?", "question_id": "Bagaimana mengatakan 'Dia tersentuh oleh ketulusannya' dalam bahasa Mandarin?", "options": ["他被她的真诚感动", "他被她的真诚感动了", "他感动她的真诚", "他真诚感动她"], "options_id": ["Dia tersentuh ketulusannya", "Dia tersentuh oleh ketulusannya", "Dia menyentuh ketulusannya", "Dia ketulusan menyentuh dia"], "correct": 1},
+    {"question": "What does 珍惜 (zhēnxī) mean?", "question_id": "Apa arti 珍惜 (zhēnxī)?", "options": ["To waste", "To cherish", "To ignore", "To forget"], "options_id": ["Membuang", "Menghargai", "Mengabaikan", "Melupakan"], "correct": 1},
+    {"question": "What is 浪漫 (làngmàn)?", "question_id": "Apa itu 浪漫 (làngmàn)?", "options": ["Romantic", "Realistic", "Ordinary", "Boring"], "options_id": ["Romantis", "Realistis", "Biasa", "Membosankan"], "correct": 0},
+    {"question": "How to say 'mutual understanding' in Chinese?", "question_id": "Bagaimana mengatakan 'saling memahami' dalam bahasa Mandarin?", "options": ["互相理解", "互相尊重", "互相帮助", "互相关心"], "options_id": ["saling memahami", "saling menghormati", "saling membantu", "saling peduli"], "correct": 0}
+  ]
+}

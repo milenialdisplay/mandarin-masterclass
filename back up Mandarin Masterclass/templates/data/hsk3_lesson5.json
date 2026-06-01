@@ -1,0 +1,51 @@
+{
+  "title": "我有很多爱好",
+  "subtitle": "Talking About Hobbies, Using 爱好, Expressing Frequency",
+  "assistant_message": "Today we learn: talking about hobbies and interests, using 爱好 (àihào), and expressing frequency (经常, 有时候, 很少).",
+  "vocabulary": [
+    {"word": "爱好", "pinyin": "ài hào", "meaning": "hobby", "meaning_id": "hobi", "example": "我的爱好", "example_translation": "my hobby", "example_translation_id": "hobi saya"},
+    {"word": "经常", "pinyin": "jīng cháng", "meaning": "often", "meaning_id": "sering", "example": "经常运动", "example_translation": "often exercise", "example_translation_id": "sering berolahraga"},
+    {"word": "有时候", "pinyin": "yǒu shí hou", "meaning": "sometimes", "meaning_id": "kadang-kadang", "example": "有时候很忙", "example_translation": "sometimes very busy", "example_translation_id": "kadang-kadang sangat sibuk"},
+    {"word": "很少", "pinyin": "hěn shǎo", "meaning": "rarely", "meaning_id": "jarang", "example": "很少去", "example_translation": "rarely go", "example_translation_id": "jarang pergi"},
+    {"word": "运动", "pinyin": "yùn dòng", "meaning": "sports/exercise", "meaning_id": "olahraga", "example": "做运动", "example_translation": "do exercise", "example_translation_id": "berolahraga"},
+    {"word": "读书", "pinyin": "dú shū", "meaning": "to read", "meaning_id": "membaca", "example": "喜欢读书", "example_translation": "like to read", "example_translation_id": "suka membaca"},
+    {"word": "音乐", "pinyin": "yīn yuè", "meaning": "music", "meaning_id": "musik", "example": "听音乐", "example_translation": "listen to music", "example_translation_id": "mendengarkan musik"},
+    {"word": "旅行", "pinyin": "lǚ xíng", "meaning": "to travel", "meaning_id": "bepergian", "example": "喜欢旅行", "example_translation": "like to travel", "example_translation_id": "suka bepergian"}
+  ],
+  "grammar": [
+    {
+      "point": "Talking About Hobbies with 爱好 (àihào)",
+      "point_id": "Membicarakan Hobi dengan 爱好 (àihào)",
+      "explanation": "Use 爱好 as a noun meaning 'hobby'. Structure: 我的爱好是 + Verb + Object.",
+      "explanation_id": "Gunakan 爱好 sebagai kata benda yang berarti 'hobi'. Struktur: 我的爱好是 + Kata Kerja + Objek.",
+      "examples": [
+        {"chinese": "我的爱好是听音乐。", "translation": "My hobby is listening to music.", "translation_id": "Hobi saya adalah mendengarkan musik."},
+        {"chinese": "你有什么爱好？", "translation": "What are your hobbies?", "translation_id": "Apa hobimu?"}
+      ]
+    },
+    {
+      "point": "Frequency Adverbs: 经常, 有时候, 很少",
+      "point_id": "Kata Keterangan Frekuensi: 经常, 有时候, 很少",
+      "explanation": "Place frequency adverbs before the verb. 经常 (often), 有时候 (sometimes), 很少 (rarely).",
+      "explanation_id": "Letakkan kata keterangan frekuensi sebelum kata kerja. 经常 (sering), 有时候 (kadang-kadang), 很少 (jarang).",
+      "examples": [
+        {"chinese": "我经常运动。", "translation": "I often exercise.", "translation_id": "Saya sering berolahraga."},
+        {"chinese": "他有时候打篮球。", "translation": "He sometimes plays basketball.", "translation_id": "Dia kadang-kadang bermain basket."},
+        {"chinese": "她很少看电视。", "translation": "She rarely watches TV.", "translation_id": "Dia jarang menonton TV."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你有什么爱好？", "pinyin": "Nǐ yǒu shénme àihào?", "translation": "What are your hobbies?", "translation_id": "Apa hobimu?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "我有很多爱好，比如读书和旅行。", "pinyin": "Wǒ yǒu hěnduō àihào, bǐrú dúshū hé lǚxíng.", "translation": "I have many hobbies, such as reading and traveling.", "translation_id": "Saya punya banyak hobi, seperti membaca dan bepergian."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你经常旅行吗？", "pinyin": "Nǐ jīngcháng lǚxíng ma?", "translation": "Do you often travel?", "translation_id": "Apakah kamu sering bepergian?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "有时候去，但不是很经常。", "pinyin": "Yǒushíhou qù, dàn bùshì hěn jīngcháng.", "translation": "Sometimes, but not very often.", "translation_id": "Kadang-kadang pergi, tapi tidak terlalu sering."}
+  ],
+  "exercises": [
+    {"question": "What does 爱好 (àihào) mean?", "question_id": "Apa arti 爱好 (àihào)?", "options": ["Hobby", "Love", "Like", "Interest"], "options_id": ["Hobi", "Cinta", "Suka", "Minat"], "correct": 0},
+    {"question": "How do you ask 'What are your hobbies?' in Chinese?", "question_id": "Bagaimana bertanya 'Apa hobimu?' dalam bahasa Mandarin?", "options": ["你喜欢什么？", "你有什么爱好？", "你爱什么？", "你兴趣什么？"], "options_id": ["Kamu suka apa?", "Apa hobimu?", "Kamu cinta apa?", "Kamu minat apa?"], "correct": 1},
+    {"question": "What does 经常 (jīngcháng) mean?", "question_id": "Apa arti 经常 (jīngcháng)?", "options": ["Sometimes", "Often", "Rarely", "Never"], "options_id": ["Kadang-kadang", "Sering", "Jarang", "Tidak pernah"], "correct": 1},
+    {"question": "How to say 'I rarely watch TV' in Chinese?", "question_id": "Bagaimana mengatakan 'Saya jarang menonton TV' dalam bahasa Mandarin?", "options": ["我经常看电视", "我有时候看电视", "我很少看电视", "我不看电视"], "options_id": ["Saya sering menonton TV", "Saya kadang-kadang menonton TV", "Saya jarang menonton TV", "Saya tidak menonton TV"], "correct": 2},
+    {"question": "What is the opposite of 经常 (jīngcháng)?", "question_id": "Apa lawan dari 经常 (jīngcháng)?", "options": ["有时候", "很少", "总是", "每天"], "options_id": ["Kadang-kadang", "Jarang", "Selalu", "Setiap hari"], "correct": 1}
+  ]
+}

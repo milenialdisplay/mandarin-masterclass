@@ -1,0 +1,34 @@
+// Save to dashboard
+const studentData = JSON.parse(localStorage.getItem('mandarin_student_data'));
+if (studentData) {
+    if (!studentData.testScores) studentData.testScores = {};
+    if (!studentData.testScores[currentLevel] || finalScore > studentData.testScores[currentLevel]) {
+        studentData.testScores[currentLevel] = finalScore;
+    }
+    
+    // Update current level if passed
+    if (finalScore >= passingScore && currentLevel === studentData.currentHSK && currentLevel < 6) {
+        studentData.currentHSK = currentLevel + 1;
+    }
+    
+    // Add to activity log
+    if (!studentData.activityLog) studentData.activityLog = [];
+    studentData.activityLog.unshift({
+        date: new Date().toISOString(),
+        type: 'test',
+        level: currentLevel,
+        score: finalScore,
+        passed: finalScore >= passingScore
+    });
+    
+    localStorage.setItem('mandarin_student_data', JSON.stringify(studentData));
+    
+    // Show certificate button if passed
+    if (finalScore >= passingScore) {
+        setTimeout(() => {
+            if (confirm(`🎉 Congratulations! You passed HSK Level ${currentLevel}! Would you like to download your certificate?`)) {
+                window.open(`/certificate?level=${currentLevel}&score=${finalScore}`, '_blank');
+            }
+        }, 500);
+    }
+}

@@ -1,0 +1,49 @@
+{
+  "title": "真正的朋友",
+  "subtitle": "Talking About Friendship, Trust, and Loyalty",
+  "assistant_message": "Today we learn: discussing true friendship, expressing trust and loyalty, and using 由于 (yóuyú) for 'because'.",
+  "vocabulary": [
+    {"word": "真正", "pinyin": "zhēn zhèng", "meaning": "true/real", "meaning_id": "benar/sungguhan", "example": "真正的朋友", "example_translation": "true friend", "example_translation_id": "teman sejati"},
+    {"word": "友谊", "pinyin": "yǒu yì", "meaning": "friendship", "meaning_id": "persahabatan", "example": "深厚的友谊", "example_translation": "deep friendship", "example_translation_id": "persahabatan yang dalam"},
+    {"word": "忠诚", "pinyin": "zhōng chéng", "meaning": "loyalty", "meaning_id": "kesetiaan", "example": "对朋友忠诚", "example_translation": "loyal to friends", "example_translation_id": "setia kepada teman"},
+    {"word": "真诚", "pinyin": "zhēn chéng", "meaning": "sincere", "meaning_id": "tulus", "example": "真诚的友谊", "example_translation": "sincere friendship", "example_translation_id": "persahabatan yang tulus"},
+    {"word": "患难", "pinyin": "huàn nàn", "meaning": "difficulty/trouble", "meaning_id": "kesulitan", "example": "患难见真情", "example_translation": "a friend in need is a friend indeed", "example_translation_id": "teman sejati dikenal di saat sulit"},
+    {"word": "分享", "pinyin": "fēn xiǎng", "meaning": "to share", "meaning_id": "berbagi", "example": "分享快乐", "example_translation": "share happiness", "example_translation_id": "berbagi kebahagiaan"},
+    {"word": "关心", "pinyin": "guān xīn", "meaning": "to care about", "meaning_id": "peduli", "example": "互相关心", "example_translation": "care about each other", "example_translation_id": "saling peduli"},
+    {"word": "信任", "pinyin": "xìn rèn", "meaning": "trust", "meaning_id": "kepercayaan", "example": "互相信任", "example_translation": "trust each other", "example_translation_id": "saling percaya"}
+  ],
+  "grammar": [
+    {
+      "point": "Expressing 'Because' with 由于 (yóuyú)",
+      "point_id": "Menyatakan 'Karena' dengan 由于 (yóuyú)",
+      "explanation": "由于 is used to give a reason, often at the beginning of a sentence. It's more formal than 因为.",
+      "explanation_id": "由于 digunakan untuk memberikan alasan, sering di awal kalimat. Lebih formal daripada 因为.",
+      "examples": [
+        {"chinese": "由于天气不好，我们取消了计划。", "translation": "Because the weather was bad, we canceled the plan.", "translation_id": "Karena cuaca buruk, kami membatalkan rencana."},
+        {"chinese": "由于他的帮助，我成功完成了任务。", "translation": "Because of his help, I successfully completed the task.", "translation_id": "Karena bantuannya, saya berhasil menyelesaikan tugas."}
+      ]
+    },
+    {
+      "point": "Expressing 'Therefore' with 因此 (yīncǐ)",
+      "point_id": "Menyatakan 'Oleh Karena Itu' dengan 因此 (yīncǐ)",
+      "explanation": "因此 means 'therefore' or 'as a result', used to show consequence.",
+      "explanation_id": "因此 berarti 'oleh karena itu' atau 'sebagai hasil', digunakan untuk menunjukkan konsekuensi.",
+      "examples": [
+        {"chinese": "他学习很努力，因此成绩很好。", "translation": "He studies very hard, therefore his grades are good.", "translation_id": "Dia belajar sangat keras, oleh karena itu nilainya bagus."},
+        {"chinese": "我们没有及时沟通，因此产生了误会。", "translation": "We didn't communicate in time, therefore a misunderstanding arose.", "translation_id": "Kami tidak berkomunikasi tepat waktu, oleh karena itu timbul kesalahpahaman."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你觉得什么样的朋友才是真正的朋友？", "pinyin": "Nǐ juéde shénme yàng de péngyou cái shì zhēnzhèng de péngyou?", "translation": "What kind of friends do you think are true friends?", "translation_id": "Menurutmu teman seperti apa yang merupakan teman sejati?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "真正的朋友会在你需要的时候帮助你，不会因为利益而改变。", "pinyin": "Zhēnzhèng de péngyou huì zài nǐ xūyào de shíhou bāngzhù nǐ, bù huì yīnwèi lìyì ér gǎibiàn.", "translation": "True friends will help you when you need them and won't change because of interests.", "translation_id": "Teman sejati akan membantu saat kamu membutuhkan dan tidak akan berubah karena kepentingan."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "患难见真情，真是这样。", "pinyin": "Huànnàn jiàn zhēnqíng, zhēn shì zhèyàng.", "translation": "A friend in need is a friend indeed. That's really true.", "translation_id": "Teman sejati dikenal di saat sulit. Memang benar."}
+  ],
+  "exercises": [
+    {"question": "What does 友谊 (yǒuyì) mean?", "question_id": "Apa arti 友谊 (yǒuyì)?", "options": ["Love", "Friendship", "Family", "Trust"], "options_id": ["Cinta", "Persahabatan", "Keluarga", "Kepercayaan"], "correct": 1},
+    {"question": "How do you say 'loyal to friends' in Chinese?", "question_id": "Bagaimana mengatakan 'setia kepada teman' dalam bahasa Mandarin?", "options": ["对朋友忠诚", "对朋友真诚", "对朋友关心", "对朋友信任"], "options_id": ["setia kepada teman", "tulus kepada teman", "peduli kepada teman", "percaya kepada teman"], "correct": 0},
+    {"question": "What does 患难见真情 mean?", "question_id": "Apa arti 患难见真情?", "options": ["Money makes friends", "A friend in need is a friend indeed", "Friends come and go", "Love is blind"], "options_id": ["Uang membuat teman", "Teman sejati dikenal di saat sulit", "Teman datang dan pergi", "Cinta itu buta"], "correct": 1},
+    {"question": "What is the difference between 由于 and 因为?", "question_id": "Apa perbedaan antara 由于 dan 因为?", "options": ["No difference", "由于 is more formal", "因为 is more formal", "由于 is for questions"], "options_id": ["Tidak ada perbedaan", "由于 lebih formal", "因为 lebih formal", "由于 untuk pertanyaan"], "correct": 1},
+    {"question": "How to say 'therefore' in Chinese?", "question_id": "Bagaimana mengatakan 'oleh karena itu' dalam bahasa Mandarin?", "options": ["由于", "因此", "因为", "所以"], "options_id": ["karena", "oleh karena itu", "karena", "jadi"], "correct": 1}
+  ]
+}

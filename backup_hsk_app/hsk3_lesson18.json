@@ -1,0 +1,51 @@
+{
+  "title": "只要努力就能成功",
+  "subtitle": "Conditional Statements with 只要...就..., Expressing 'As Long As', Motivation and Success",
+  "assistant_message": "Today we learn: conditional statements with 只要...就... (zhǐyào... jiù...), expressing 'as long as', talking about effort and success.",
+  "vocabulary": [
+    {"word": "只要", "pinyin": "zhǐ yào", "meaning": "as long as", "meaning_id": "asalkan", "example": "只要努力", "example_translation": "as long as you work hard", "example_translation_id": "asalkan kamu bekerja keras"},
+    {"word": "就", "pinyin": "jiù", "meaning": "then (result)", "meaning_id": "maka (hasil)", "example": "就能成功", "example_translation": "then can succeed", "example_translation_id": "maka bisa berhasil"},
+    {"word": "努力", "pinyin": "nǔ lì", "meaning": "to work hard", "meaning_id": "bekerja keras", "example": "努力学习", "example_translation": "study hard", "example_translation_id": "belajar keras"},
+    {"word": "成功", "pinyin": "chéng gōng", "meaning": "to succeed", "meaning_id": "berhasil", "example": "获得成功", "example_translation": "achieve success", "example_translation_id": "meraih keberhasilan"},
+    {"word": "坚持", "pinyin": "jiān chí", "meaning": "to persist", "meaning_id": "bertahan", "example": "坚持下去", "example_translation": "persist", "example_translation_id": "bertahan"},
+    {"word": "信心", "pinyin": "xìn xīn", "meaning": "confidence", "meaning_id": "kepercayaan diri", "example": "有信心", "example_translation": "have confidence", "example_translation_id": "percaya diri"},
+    {"word": "机会", "pinyin": "jī huì", "meaning": "opportunity", "meaning_id": "kesempatan", "example": "抓住机会", "example_translation": "seize the opportunity", "example_translation_id": "memanfaatkan kesempatan"},
+    {"word": "梦想", "pinyin": "mèng xiǎng", "meaning": "dream", "meaning_id": "mimpi", "example": "实现梦想", "example_translation": "realize a dream", "example_translation_id": "mewujudkan mimpi"}
+  ],
+  "grammar": [
+    {
+      "point": "Conditional with 只要...就... (As Long As... Then...)",
+      "point_id": "Kondisional dengan 只要...就... (Asalkan... Maka...)",
+      "explanation": "Use 只要 to state a condition, and 就 to state the result. Structure: 只要 + Condition, 就 + Result.",
+      "explanation_id": "Gunakan 只要 untuk menyatakan suatu kondisi, dan 就 untuk menyatakan hasil. Struktur: 只要 + Kondisi, 就 + Hasil.",
+      "examples": [
+        {"chinese": "只要努力就能成功。", "translation": "As long as you work hard, you can succeed.", "translation_id": "Asalkan kamu bekerja keras, kamu bisa berhasil."},
+        {"chinese": "只要坚持，就会进步。", "translation": "As long as you persist, you will improve.", "translation_id": "Asalkan kamu bertahan, kamu akan maju."},
+        {"chinese": "只要有机会，我就去。", "translation": "As long as there's an opportunity, I'll go.", "translation_id": "Asalkan ada kesempatan, saya akan pergi."}
+      ]
+    },
+    {
+      "point": "Motivation Phrases",
+      "point_id": "Frasa Motivasi",
+      "explanation": "Use phrases like 加油 (jiāyóu) and 别放弃 (bié fàngqì) to encourage someone.",
+      "explanation_id": "Gunakan frasa seperti 加油 (jiāyóu) dan 别放弃 (bié fàngqì) untuk mendorong seseorang.",
+      "examples": [
+        {"chinese": "加油！", "translation": "Keep going!", "translation_id": "Semangat!"},
+        {"chinese": "别放弃。", "translation": "Don't give up.", "translation_id": "Jangan menyerah."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "学汉语太难了，我想放弃。", "pinyin": "Xué Hànyǔ tài nán le, wǒ xiǎng fàngqì.", "translation": "Learning Chinese is too hard, I want to give up.", "translation_id": "Belajar Mandarin terlalu sulit, saya ingin menyerah."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "别放弃！只要坚持就能进步。", "pinyin": "Bié fàngqì! Zhǐyào jiānchí jiù néng jìnbù.", "translation": "Don't give up! As long as you persist, you can improve.", "translation_id": "Jangan menyerah! Asalkan kamu bertahan, kamu bisa maju."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "真的吗？", "pinyin": "Zhēn de ma?", "translation": "Really?", "translation_id": "Benarkah?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "当然！只要努力就能成功。加油！", "pinyin": "Dāngrán! Zhǐyào nǔlì jiù néng chénggōng. Jiāyóu!", "translation": "Of course! As long as you work hard, you can succeed. Keep going!", "translation_id": "Tentu saja! Asalkan kamu bekerja keras, kamu bisa berhasil. Semangat!"}
+  ],
+  "exercises": [
+    {"question": "What does the structure 只要...就... express?", "question_id": "Apa yang diekspresikan oleh struktur 只要...就...?", "options": ["If... then...", "As long as... then...", "Although... but...", "Because... so..."], "options_id": ["Jika... maka...", "Asalkan... maka...", "Meskipun... tetapi...", "Karena... jadi..."], "correct": 1},
+    {"question": "How do you say 'As long as you work hard, you can succeed' in Chinese?", "question_id": "Bagaimana mengatakan 'Asalkan kamu bekerja keras, kamu bisa berhasil' dalam bahasa Mandarin?", "options": ["如果努力就能成功", "只要努力就能成功", "因为努力所以成功", "虽然努力但是成功"], "options_id": ["Jika bekerja keras bisa berhasil", "Asalkan bekerja keras bisa berhasil", "Karena bekerja keras jadi berhasil", "Meskipun bekerja keras tetapi berhasil"], "correct": 1},
+    {"question": "What does 努力 (nǔlì) mean?", "question_id": "Apa arti 努力 (nǔlì)?", "options": ["To give up", "To work hard", "To succeed", "To try"], "options_id": ["Menyerah", "Bekerja keras", "Berhasil", "Mencoba"], "correct": 1},
+    {"question": "How to say 'Don't give up' in Chinese?", "question_id": "Bagaimana mengatakan 'Jangan menyerah' dalam bahasa Mandarin?", "options": ["别放弃", "不要放弃", "别停", "All of the above"], "options_id": ["Jangan menyerah", "Jangan menyerah", "Jangan berhenti", "Semua di atas"], "correct": 3},
+    {"question": "What does 加油 (jiāyóu) mean?", "question_id": "Apa arti 加油 (jiāyóu)?", "options": ["Add oil", "Keep going/Cheer up", "Work hard", "Good luck"], "options_id": ["Tambahkan minyak", "Semangat", "Bekerja keras", "Semoga beruntung"], "correct": 1}
+  ]
+}

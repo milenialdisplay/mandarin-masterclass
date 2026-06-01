@@ -1,0 +1,228 @@
+{
+  "title": "时间管理",
+  "subtitle": "Time Management, Productivity, Prioritization",
+  "assistant_message": "Today we learn: discussing time management strategies, expressing productivity tips, and talking about prioritization and work-life balance.",
+  "vocabulary": [
+    {
+      "word": "时间管理",
+      "pinyin": "shí jiān guǎn lǐ",
+      "meaning": "time management",
+      "meaning_id": "manajemen waktu",
+      "example": "时间管理很重要",
+      "example_translation": "Time management is very important",
+      "example_translation_id": "Manajemen waktu sangat penting"
+    },
+    {
+      "word": "效率",
+      "pinyin": "xiào lǜ",
+      "meaning": "efficiency",
+      "meaning_id": "efisiensi",
+      "example": "提高工作效率",
+      "example_translation": "improve work efficiency",
+      "example_translation_id": "meningkatkan efisiensi kerja"
+    },
+    {
+      "word": "优先",
+      "pinyin": "yōu xiān",
+      "meaning": "priority",
+      "meaning_id": "prioritas",
+      "example": "优先处理重要的事",
+      "example_translation": "prioritize important matters",
+      "example_translation_id": "prioritaskan hal-hal penting"
+    },
+    {
+      "word": "拖延",
+      "pinyin": "tuō yán",
+      "meaning": "to procrastinate",
+      "meaning_id": "menunda-nunda",
+      "example": "不要拖延时间",
+      "example_translation": "Don't procrastinate",
+      "example_translation_id": "Jangan menunda-nunda"
+    },
+    {
+      "word": "计划",
+      "pinyin": "jì huà",
+      "meaning": "plan",
+      "meaning_id": "rencana",
+      "example": "制定每日计划",
+      "example_translation": "make a daily plan",
+      "example_translation_id": "buat rencana harian"
+    },
+    {
+      "word": "目标",
+      "pinyin": "mù biāo",
+      "meaning": "goal",
+      "meaning_id": "tujuan",
+      "example": "设定明确的目标",
+      "example_translation": "set clear goals",
+      "example_translation_id": "tetapkan tujuan yang jelas"
+    },
+    {
+      "word": " deadline ",
+      "pinyin": "jié zhǐ rì qī",
+      "meaning": "deadline",
+      "meaning_id": "batas waktu",
+      "example": "遵守截止日期",
+      "example_translation": "meet the deadline",
+      "example_translation_id": "memenuhi batas waktu"
+    },
+    {
+      "word": "平衡",
+      "pinyin": "píng héng",
+      "meaning": "balance",
+      "meaning_id": "keseimbangan",
+      "example": "工作生活平衡",
+      "example_translation": "work-life balance",
+      "example_translation_id": "keseimbangan kerja dan hidup"
+    },
+    {
+      "word": "专注",
+      "pinyin": "zhuān zhù",
+      "meaning": "to focus",
+      "meaning_id": "fokus",
+      "example": "保持专注",
+      "example_translation": "stay focused",
+      "example_translation_id": "tetap fokus"
+    },
+    {
+      "word": "完成",
+      "pinyin": "wán chéng",
+      "meaning": "to complete",
+      "meaning_id": "menyelesaikan",
+      "example": "按时完成任务",
+      "example_translation": "complete tasks on time",
+      "example_translation_id": "menyelesaikan tugas tepat waktu"
+    }
+  ],
+  "grammar": [
+    {
+      "point": "Using 优先 (yōuxiān) - 'Priority'",
+      "point_id": "Menggunakan 优先 (yōuxiān) - 'Prioritas'",
+      "explanation": "优先 can be used as a noun meaning priority, or as a verb meaning to prioritize something.",
+      "explanation_id": "优先 dapat digunakan sebagai kata benda yang berarti prioritas, atau sebagai kata kerja yang berarti memprioritaskan sesuatu.",
+      "examples": [
+        {
+          "chinese": "我们应该优先处理紧急的事情。",
+          "translation": "We should prioritize urgent matters.",
+          "translation_id": "Kita harus memprioritaskan hal-hal yang mendesak."
+        },
+        {
+          "chinese": "健康永远是第一优先。",
+          "translation": "Health is always the top priority.",
+          "translation_id": "Kesehatan selalu menjadi prioritas utama."
+        }
+      ]
+    },
+    {
+      "point": "Using 按时 (ànshí) - 'On time'",
+      "point_id": "Menggunakan 按时 (ànshí) - 'Tepat waktu'",
+      "explanation": "按时 means 'on time' or 'punctually', used before verbs to indicate completing something by the scheduled time.",
+      "explanation_id": "按时 berarti 'tepat waktu', digunakan sebelum kata kerja untuk menunjukkan menyelesaikan sesuatu sesuai waktu yang dijadwalkan.",
+      "examples": [
+        {
+          "chinese": "他总是按时完成工作。",
+          "translation": "He always completes work on time.",
+          "translation_id": "Dia selalu menyelesaikan pekerjaan tepat waktu."
+        },
+        {
+          "chinese": "请按时参加会议。",
+          "translation": "Please attend the meeting on time.",
+          "translation_id": "Harap hadiri rapat tepat waktu."
+        }
+      ]
+    },
+    {
+      "point": "Using 根据 (gēnjù) - 'According to'",
+      "point_id": "Menggunakan 根据 (gēnjù) - 'Menurut'",
+      "explanation": "根据 is used to indicate the basis or source of information, similar to 'according to' or 'based on'.",
+      "explanation_id": "根据 digunakan untuk menunjukkan dasar atau sumber informasi, mirip dengan 'menurut' atau 'berdasarkan'.",
+      "examples": [
+        {
+          "chinese": "根据计划，我们下周完成任务。",
+          "translation": "According to the plan, we will complete the task next week.",
+          "translation_id": "Menurut rencana, kita akan menyelesaikan tugas minggu depan."
+        },
+        {
+          "chinese": "根据实际情况调整时间表。",
+          "translation": "Adjust the schedule according to the actual situation.",
+          "translation_id": "Sesuaikan jadwal sesuai dengan situasi aktual."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "female",
+      "name": "Chen Wei",
+      "voice": "female",
+      "chinese": "我总觉得时间不够用，每天都忙不完工作。",
+      "pinyin": "Wǒ zǒng juéde shíjiān bù gòu yòng, měitiān dōu máng bù wán gōngzuò.",
+      "translation": "I always feel like I don't have enough time, and I can't finish my work every day.",
+      "translation_id": "Saya selalu merasa waktu tidak cukup, dan tidak bisa menyelesaikan pekerjaan setiap hari."
+    },
+    {
+      "speaker": "male",
+      "name": "Zhang Ming",
+      "voice": "male",
+      "chinese": "你需要学习时间管理。首先要根据重要性给任务排序。",
+      "pinyin": "Nǐ xūyào xuéxí shíjiān guǎnlǐ. Shǒuxiān yào gēnjù zhòngyàoxìng gěi rènwù páixù.",
+      "translation": "You need to learn time management. First, prioritize tasks based on importance.",
+      "translation_id": "Kamu perlu belajar manajemen waktu. Pertama, prioritaskan tugas berdasarkan kepentingan."
+    },
+    {
+      "speaker": "female",
+      "name": "Chen Wei",
+      "voice": "female",
+      "chinese": "可是我总是拖延，很难专注做一件事。",
+      "pinyin": "Kěshì wǒ zǒng shì tuōyán, hěn nán zhuānzhù zuò yī jiàn shì.",
+      "translation": "But I always procrastinate and find it hard to focus on one thing.",
+      "translation_id": "Tapi saya selalu menunda-nunda dan sulit fokus pada satu hal."
+    },
+    {
+      "speaker": "male",
+      "name": "Zhang Ming",
+      "voice": "male",
+      "chinese": "试试番茄工作法：专注工作25分钟，然后休息5分钟。按时完成小目标，效率会提高很多。",
+      "pinyin": "Shì shì fānqié gōngzuò fǎ: zhuānzhù gōngzuò èrshíwǔ fēnzhōng, ránhòu xiūxi wǔ fēnzhōng. Ànshí wánchéng xiǎo mùbiāo, xiàolǜ huì tígāo hěnduō.",
+      "translation": "Try the Pomodoro technique: focus on work for 25 minutes, then rest for 5 minutes. Complete small goals on time, and your efficiency will improve a lot.",
+      "translation_id": "Coba teknik Pomodoro: fokus bekerja selama 25 menit, lalu istirahat 5 menit. Selesaikan tujuan kecil tepat waktu, efisiensi Anda akan meningkat banyak."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "What does 效率 (xiàolǜ) mean?",
+      "question_id": "Apa arti 效率 (xiàolǜ)?",
+      "options": ["Efficiency", "Delay", "Priority", "Balance"],
+      "options_id": ["Efisiensi", "Keterlambatan", "Prioritas", "Keseimbangan"],
+      "correct": 0
+    },
+    {
+      "question": "How do you say 'Don't procrastinate' in Chinese?",
+      "question_id": "Bagaimana mengatakan 'Jangan menunda-nunda' dalam bahasa Mandarin?",
+      "options": ["不要优先", "不要拖延", "不要计划", "不要完成"],
+      "options_id": ["Jangan prioritaskan", "Jangan menunda-nunda", "Jangan rencanakan", "Jangan selesaikan"],
+      "correct": 1
+    },
+    {
+      "question": "What does 平衡 (pínghéng) mean?",
+      "question_id": "Apa arti 平衡 (pínghéng)?",
+      "options": ["Focus", "Deadline", "Balance", "Plan"],
+      "options_id": ["Fokus", "Batas waktu", "Keseimbangan", "Rencana"],
+      "correct": 2
+    },
+    {
+      "question": "Complete the sentence: 根据计划，我们______下周完成任务。",
+      "question_id": "Lengkapi kalimat: 根据计划，我们______下周完成任务。",
+      "options": ["拖延", "优先", "会", "专注"],
+      "options_id": ["menunda", "memprioritaskan", "akan", "fokus"],
+      "correct": 2
+    },
+    {
+      "question": "What is the best translation of 'work-life balance'?",
+      "question_id": "Apa terjemahan terbaik dari 'keseimbangan kerja dan hidup'?",
+      "options": ["工作平衡", "生活平衡", "工作生活平衡", "平衡工作和生活"],
+      "options_id": ["keseimbangan kerja", "keseimbangan hidup", "keseimbangan kerja dan hidup", "menyeimbangkan kerja dan hidup"],
+      "correct": 2
+    }
+  ]
+}

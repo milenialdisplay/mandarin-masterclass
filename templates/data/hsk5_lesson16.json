@@ -1,0 +1,60 @@
+{
+  "title": "人口问题",
+  "subtitle": "Population Issues, Aging Society, Demographic Challenges",
+  "assistant_message": "Today we learn: discussing population issues, using 增长 (zēngzhǎng) and 老龄化 (lǎolínghuà), and expressing concerns about demographic changes.",
+  "vocabulary": [
+    {"word": "人口", "pinyin": "rén kǒu", "meaning": "population", "meaning_id": "populasi", "example": "人口增长", "example_translation": "population growth", "example_translation_id": "pertumbuhan populasi"},
+    {"word": "增长", "pinyin": "zēng zhǎng", "meaning": "growth", "meaning_id": "pertumbuhan", "example": "经济增长", "example_translation": "economic growth", "example_translation_id": "pertumbuhan ekonomi"},
+    {"word": "老龄化", "pinyin": "lǎo líng huà", "meaning": "aging", "meaning_id": "penuaan", "example": "人口老龄化", "example_translation": "population aging", "example_translation_id": "penuaan populasi"},
+    {"word": "政策", "pinyin": "zhèng cè", "meaning": "policy", "meaning_id": "kebijakan", "example": "人口政策", "example_translation": "population policy", "example_translation_id": "kebijakan populasi"},
+    {"word": "控制", "pinyin": "kòng zhì", "meaning": "to control", "meaning_id": "mengendalikan", "example": "控制人口", "example_translation": "control population", "example_translation_id": "mengendalikan populasi"},
+    {"word": "结构", "pinyin": "jié gòu", "meaning": "structure", "meaning_id": "struktur", "example": "人口结构", "example_translation": "population structure", "example_translation_id": "struktur populasi"},
+    {"word": "劳动力", "pinyin": "láo dòng lì", "meaning": "workforce", "meaning_id": "tenaga kerja", "example": "劳动力短缺", "example_translation": "labor shortage", "example_translation_id": "kekurangan tenaga kerja"},
+    {"word": "社会", "pinyin": "shè huì", "meaning": "society", "meaning_id": "masyarakat", "example": "社会发展", "example_translation": "social development", "example_translation_id": "perkembangan sosial"}
+  ],
+  "grammar": [
+    {
+      "point": "增长 (zēngzhǎng) - Growth",
+      "point_id": "Pertumbuhan",
+      "explanation": "增长 can be used as a noun or verb to talk about increase in numbers or size.",
+      "explanation_id": "增长 dapat digunakan sebagai kata benda atau kata kerja untuk membicarakan peningkatan jumlah atau ukuran.",
+      "examples": [
+        {"chinese": "人口增长带来了很多挑战。", "translation": "Population growth has brought many challenges.", "translation_id": "Pertumbuhan populasi telah membawa banyak tantangan."},
+        {"chinese": "经济增长速度放慢了。", "translation": "The rate of economic growth has slowed down.", "translation_id": "Laju pertumbuhan ekonomi melambat."}
+      ]
+    },
+    {
+      "point": "老龄化 (lǎolínghuà) - Aging",
+      "point_id": "Penuaan",
+      "explanation": "老龄化 refers to the aging of the population, often a concern for social policy.",
+      "explanation_id": "老龄化 mengacu pada penuaan populasi, sering menjadi perhatian bagi kebijakan sosial.",
+      "examples": [
+        {"chinese": "人口老龄化是个大问题。", "translation": "Population aging is a big problem.", "translation_id": "Penuaan populasi adalah masalah besar."},
+        {"chinese": "老龄化社会需要更多养老资源。", "translation": "An aging society needs more elderly care resources.", "translation_id": "Masyarakat yang menua membutuhkan lebih banyak sumber daya perawatan lansia."}
+      ]
+    },
+    {
+      "point": "不仅...而且... (bùjǐn... érqiě...) - Not only... but also...",
+      "point_id": "不仅...而且... (bùjǐn... érqiě...) - Tidak hanya... tetapi juga...",
+      "explanation": "Used to discuss multiple consequences or aspects of population issues.",
+      "explanation_id": "Digunakan untuk membahas berbagai konsekuensi atau aspek dari masalah populasi.",
+      "examples": [
+        {"chinese": "人口老龄化不仅影响劳动力，而且增加社会负担。", "translation": "Population aging not only affects the workforce, but also increases the social burden.", "translation_id": "Penuaan populasi tidak hanya mempengaruhi tenaga kerja, tetapi juga meningkatkan beban sosial."},
+        {"chinese": "人口政策不仅需要控制数量，还需要优化结构。", "translation": "Population policy not only needs to control quantity, but also needs to optimize structure.", "translation_id": "Kebijakan populasi tidak hanya perlu mengendalikan kuantitas, tetapi juga perlu mengoptimalkan struktur."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "人口老龄化是个大问题。", "pinyin": "Rénkǒu lǎolínghuà shì gè dà wèntí.", "translation": "Population aging is a big problem.", "translation_id": "Penuaan populasi adalah masalah besar."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "是啊，劳动力在减少。", "pinyin": "Shì a, láodònglì zài jiǎnshǎo.", "translation": "Yes, the workforce is decreasing.", "translation_id": "Ya, tenaga kerja semakin berkurang."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "政府调整了人口政策，从独生子女到允许二胎、三胎。", "pinyin": "Zhèngfǔ tiáozhěng le rénkǒu zhèngcè, cóng dúshēng zǐnǚ dào yǔnxǔ èr tāi, sān tāi.", "translation": "The government has adjusted population policy, from one-child to allowing two or three children.", "translation_id": "Pemerintah telah menyesuaikan kebijakan populasi, dari satu anak menjadi mengizinkan dua atau tiga anak."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "希望人口结构能更合理。人口问题不仅影响经济发展，也影响社会稳定。", "pinyin": "Xīwàng rénkǒu jiégòu néng gèng hélǐ. Rénkǒu wèntí bùjǐn yǐngxiǎng jīngjì fāzhǎn, yě yǐngxiǎng shèhuì wěndìng.", "translation": "I hope the population structure can be more reasonable. Population issues not only affect economic development, but also affect social stability.", "translation_id": "Saya berharap struktur populasi bisa lebih masuk akal. Masalah populasi tidak hanya mempengaruhi perkembangan ekonomi, tetapi juga mempengaruhi stabilitas sosial."}
+  ],
+  "exercises": [
+    {"question": "What does 人口 (rénkǒu) mean?", "question_id": "Apa arti 人口 (rénkǒu)?", "options": ["Economy", "Population", "Society", "Development"], "options_id": ["Ekonomi", "Populasi", "Masyarakat", "Perkembangan"], "correct": 1},
+    {"question": "How do you say 'population growth' in Chinese?", "question_id": "Bagaimana mengatakan 'pertumbuhan populasi' dalam bahasa Mandarin?", "options": ["人口减少", "人口增长", "人口控制", "人口结构"], "options_id": ["pengurangan populasi", "pertumbuhan populasi", "kontrol populasi", "struktur populasi"], "correct": 1},
+    {"question": "What does 老龄化 (lǎolínghuà) mean?", "question_id": "Apa arti 老龄化 (lǎolínghuà)?", "options": ["Youth", "Aging", "Growth", "Decline"], "options_id": ["Pemuda", "Penuaan", "Pertumbuhan", "Penurunan"], "correct": 1},
+    {"question": "What is 劳动力 (láodònglì)?", "question_id": "Apa itu 劳动力 (láodònglì)?", "options": ["Labor force", "Population", "Society", "Economy"], "options_id": ["Tenaga kerja", "Populasi", "Masyarakat", "Ekonomi"], "correct": 0},
+    {"question": "How do you say 'population structure' in Chinese?", "question_id": "Bagaimana mengatakan 'struktur populasi' dalam bahasa Mandarin?", "options": ["人口结构", "人口增长", "人口政策", "人口分布"], "options_id": ["struktur populasi", "pertumbuhan populasi", "kebijakan populasi", "distribusi populasi"], "correct": 0}
+  ]
+}

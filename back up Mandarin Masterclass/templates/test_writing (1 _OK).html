@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Chinese Writing Practice - 舒</title>
+    <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@2.3.0/dist/hanzi-writer.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1a472a;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+        .canvas-container {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            margin: 20px auto;
+        }
+        #hanziTarget {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 250px;
+            border: 2px solid #2d6a4f;
+            border-radius: 8px;
+            background: white;
+            z-index: 1;
+        }
+        #drawingCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 250px;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            background: transparent;
+            cursor: crosshair;
+            touch-action: none;
+            z-index: 2;
+        }
+        button {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 8px;
+            font-size: 14px;
+        }
+        .stroke-counter {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1a472a;
+            margin: 10px 0;
+            padding: 8px;
+            background: #e8f5e9;
+            border-radius: 10px;
+        }
+        .status {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 13px;
+            background: #e8f5e9;
+            color: #1a472a;
+            transition: all 0.3s;
+        }
+        .status.success {
+            background: #d4edda;
+            color: #28a745;
+            border-left: 4px solid #28a745;
+        }
+        .status.error {
+            background: #f8d7da;
+            color: #dc3545;
+            border-left: 4px solid #dc3545;
+        }
+        .write-btn {
+            background: #ffd700;
+            color: #1a472a;
+        }
+        .clear-btn {
+            background: #e94560;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>✍️ Writing Practice</h2>
+    <p>Character: 舒 (shū) - comfortable, relaxed</p>
+    
+    <div class="canvas-container">
+        <div id="hanziTarget"></div>
+        <canvas id="drawingCanvas" width="250" height="250"></canvas>
+    </div>
+    
+    <div class="stroke-counter">
+        ✍️ Strokes Completed: <span id="strokeCount">0</span> / <span id="totalStrokes">12</span>
+    </div>
+    
+    <div>
+        <button id="playBtn">▶ Play Animation</button>
+        <button id="writeBtn" class="write-btn">✍️ Write</button>
+        <button id="whitePaperBtn">📄 White Paper</button>
+        <button id="clearBtn" class="clear-btn">🗑 Clear</button>
+    </div>
+    
+    <div class="status" id="status">Click "Write" to start tracing the light grey outline of "舒".</div>
+</div>
+
+<script>
+    let writer = null;
+    let totalStrokes = 12;
+    let strokeCount = 0;
+    let writeModeActive = false;
+    let strokeCompleted = false;
+    let currentStrokePoints = [];
+    let isLoaded = true;  // Set to true immediately
+    
+    // Drawing canvas
+    let canvas = document.getElementById('drawingCanvas');
+    let ctx = canvas.getContext('2d');
+    let isDrawing = false;
+    let lastX = 0, lastY = 0;
+    
+    // Initialize drawing canvas
+    function initDrawingCanvas() {
+        canvas.width = 250;
+        canvas.height = 250;
+        ctx = canvas.getContext('2d');
+        ctx.lineWidth = 4;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.strokeStyle = '#000000';
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mouseleave', stopDrawing);
+        
+        canvas.addEventListener('touchstart', startDrawingTouch);
+        canvas.addEventListener('touchmove', drawTouch);
+        canvas.addEventListener('touchend', stopDrawing);
+        canvas.addEventListener('touchcancel', stopDrawing);
+    }
+    
+    function startDrawing(e) {
+        if (!writeModeActive) {
+            updateStatus('✍️ Click "Write" button first to start tracing!', 'error');
+            return;
+        }
+        if (strokeCompleted) {
+            updateStatus('✅ You already completed this character! Click "Clear" to practice again.', 'success');
+            return;
+        }
+        isDrawing = true;
+        const pos = getCanvasCoordinates(e);
+        lastX = pos.x;
+        lastY = pos.y;
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
+        currentStrokePoints = [{x: lastX, y: lastY}];
+        e.preventDefault();
+    }
+    
+    function startDrawingTouch(e) {
+        if (!writeModeActive) {
+            updateStatus('✍️ Click "Write" button first to start tracing!', 'error');
+            return;
+        }
+        if (strokeCompleted) {
+            updateStatus('✅ You already completed this character! Click "Clear" to practice again.', 'success');
+            return;
+        }
+        e.preventDefault();
+        isDrawing = true;
+        const pos = getTouchCoordinates(e);
+        lastX = pos.x;
+        lastY = pos.y;
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
+        currentStrokePoints = [{x: lastX, y: lastY}];
+    }
+    
+    function draw(e) {
+        if (!isDrawing) return;
+        e.preventDefault();
+        const pos = getCanvasCoordinates(e);
+        const x = pos.x;
+        const y = pos.y;
+        ctx.lineTo(x, y);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        currentStrokePoints.push({x: x, y: y});
+        lastX = x;
+        lastY = y;
+    }
+    
+    function drawTouch(e) {
+        if (!isDrawing) return;
+        e.preventDefault();
+        const pos = getTouchCoordinates(e);
+        const x = pos.x;
+        const y = pos.y;
+        ctx.lineTo(x, y);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        currentStrokePoints.push({x: x, y: y});
+        lastX = x;
+        lastY = y;
+    }
+    
+    function stopDrawing() {
+        if (!isDrawing) return;
+        isDrawing = false;
+        
+        const minStrokeLength = 8;
+        
+        if (currentStrokePoints.length > minStrokeLength) {
+            if (strokeCount < totalStrokes && !strokeCompleted && totalStrokes > 0) {
+                strokeCount++;
+                document.getElementById('strokeCount').innerText = strokeCount;
+                
+                if (strokeCount >= totalStrokes) {
+                    strokeCompleted = true;
+                    updateStatus('✅ WRITING COMPLETED! You have mastered "舒"! 🎉', 'success');
+                } else {
+                    updateStatus(`✓ Stroke ${strokeCount} completed! Keep going! (${strokeCount}/${totalStrokes})`, 'success');
+                }
+            }
+        } else if (currentStrokePoints.length > 0) {
+            wrongStroke();
+        }
+        
+        currentStrokePoints = [];
+    }
+    
+    function wrongStroke() {
+        updateStatus('❌ WRONG STROKE! Starting over from stroke 1.', 'error');
+        strokeCount = 0;
+        strokeCompleted = false;
+        document.getElementById('strokeCount').innerText = strokeCount;
+        clearDrawing();
+        
+        if (writeModeActive) {
+            const container = document.getElementById('hanziTarget');
+            container.innerHTML = '';
+            loadWriteMode();
+        }
+    }
+    
+    function getCanvasCoordinates(e) {
+        const rect = canvas.getBoundingClientRect();
+        const scaleX = canvas.width / rect.width;
+        const scaleY = canvas.height / rect.height;
+        let clientX, clientY;
+        
+        if (e.touches) {
+            clientX = e.touches[0].clientX;
+            clientY = e.touches[0].clientY;
+        } else {
+            clientX = e.clientX;
+            clientY = e.clientY;
+        }
+        
+        let x = (clientX - rect.left) * scaleX;
+        let y = (clientY - rect.top) * scaleY;
+        x = Math.min(Math.max(x, 0), canvas.width);
+        y = Math.min(Math.max(y, 0), canvas.height);
+        return {x, y};
+    }
+    
+    function getTouchCoordinates(e) {
+        const rect = canvas.getBoundingClientRect();
+        const scaleX = canvas.width / rect.width;
+        const scaleY = canvas.height / rect.height;
+        const touch = e.touches[0];
+        let x = (touch.clientX - rect.left) * scaleX;
+        let y = (touch.clientY - rect.top) * scaleY;
+        x = Math.min(Math.max(x, 0), canvas.width);
+        y = Math.min(Math.max(y, 0), canvas.height);
+        return {x, y};
+    }
+    
+    function clearDrawing() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+    
+    function updateStatus(msg, type) {
+        const statusDiv = document.getElementById('status');
+        statusDiv.innerHTML = msg;
+        if (type === 'success') {
+            statusDiv.className = 'status success';
+        } else if (type === 'error') {
+            statusDiv.className = 'status error';
+        } else {
+            statusDiv.className = 'status';
+        }
+    }
+    
+    // Default Mode
+    function loadDefaultMode() {
+        const container = document.getElementById('hanziTarget');
+        container.innerHTML = '';
+        
+        writer = HanziWriter.create('hanziTarget', '舒', {
+            width: 250,
+            height: 250,
+            showOutline: true,
+            showCharacter: true,
+            outlineColor: '#d3d3d3',
+            strokeColor: '#000000',
+            radicalColor: '#000000',
+            onLoad: function() {
+                console.log('Default mode loaded');
+                updateStatus('Character loaded. Click "Write" to start tracing.', 'success');
+            },
+            onError: function(err) {
+                console.error('Error:', err);
+                updateStatus('Character loaded (fallback). Click "Write" to start.', 'success');
+            }
+        });
+    }
+    
+    // Write Mode: ONLY light grey outline, no black character
+    function loadWriteMode() {
+        const container = document.getElementById('hanziTarget');
+        container.innerHTML = '';
+        
+        writer = HanziWriter.create('hanziTarget', '舒', {
+            width: 250,
+            height: 250,
+            showOutline: true,
+            showCharacter: false,
+            outlineColor: '#d3d3d3',
+            strokeColor: '#000000',
+            radicalColor: '#000000',
+            onLoad: function() {
+                console.log(`Write mode loaded.`);
+                updateStatus(`✅ Ready! ${totalStrokes} strokes. Trace the light grey outline.`, 'success');
+            },
+            onError: function(err) {
+                console.error('Error loading write mode:', err);
+                updateStatus(`⚠️ Using fallback: ${totalStrokes} strokes.`, 'error');
+            }
+        });
+    }
+    
+    // White Paper Mode: completely blank
+    function loadWhitePaperMode() {
+        const container = document.getElementById('hanziTarget');
+        container.innerHTML = '';
+        
+        writer = HanziWriter.create('hanziTarget', '舒', {
+            width: 250,
+            height: 250,
+            showOutline: false,
+            showCharacter: false,
+            strokeColor: '#000000',
+            radicalColor: '#000000',
+            onLoad: function() {
+                console.log('White paper mode loaded');
+            },
+            onError: function(err) {
+                console.error('Error:', err);
+            }
+        });
+    }
+    
+    function enableWriteMode() {
+        writeModeActive = true;
+        strokeCount = 0;
+        strokeCompleted = false;
+        document.getElementById('strokeCount').innerText = strokeCount;
+        clearDrawing();
+        loadWriteMode();
+        updateStatus('✍️ Write mode activated! Trace the LIGHT GREY outline. Each stroke will count up!', 'success');
+    }
+    
+    function enableWhitePaper() {
+        writeModeActive = true;
+        strokeCount = 0;
+        strokeCompleted = false;
+        document.getElementById('strokeCount').innerText = strokeCount;
+        clearDrawing();
+        loadWhitePaperMode();
+        updateStatus('📄 White paper mode - completely blank. Draw from memory!', 'success');
+    }
+    
+    function clearAll() {
+        clearDrawing();
+        strokeCount = 0;
+        strokeCompleted = false;
+        writeModeActive = false;
+        document.getElementById('strokeCount').innerText = strokeCount;
+        updateStatus('Canvas cleared. Click "Write" to start tracing.', 'info');
+        loadDefaultMode();
+    }
+    
+    function playAnimation() {
+        if (writer) {
+            writer.animateCharacter();
+            updateStatus(`🎬 Playing stroke order animation (${totalStrokes} strokes)... Watch carefully!`, 'success');
+        } else {
+            updateStatus('⚠️ Character not ready. Please wait a moment.', 'error');
+        }
+    }
+    
+    // Initialize
+    initDrawingCanvas();
+    loadDefaultMode();
+    
+    // Button events
+    document.getElementById('playBtn').onclick = playAnimation;
+    document.getElementById('writeBtn').onclick = enableWriteMode;
+    document.getElementById('whitePaperBtn').onclick = enableWhitePaper;
+    document.getElementById('clearBtn').onclick = clearAll;
+</script>
+</body>
+</html>

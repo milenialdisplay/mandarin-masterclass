@@ -1,0 +1,228 @@
+{
+  "title": "艺术欣赏",
+  "subtitle": "Art Appreciation, Aesthetics, Cultural Expression",
+  "assistant_message": "Today we learn: discussing art appreciation and aesthetics, expressing artistic preferences, and talking about the role of art in culture and society.",
+  "vocabulary": [
+    {
+      "word": "艺术",
+      "pinyin": "yì shù",
+      "meaning": "art",
+      "meaning_id": "seni",
+      "example": "现代艺术",
+      "example_translation": "modern art",
+      "example_translation_id": "seni modern"
+    },
+    {
+      "word": "欣赏",
+      "pinyin": "xīn shǎng",
+      "meaning": "to appreciate",
+      "meaning_id": "menghargai",
+      "example": "欣赏艺术",
+      "example_translation": "appreciate art",
+      "example_translation_id": "menghargai seni"
+    },
+    {
+      "word": "美学",
+      "pinyin": "měi xué",
+      "meaning": "aesthetics",
+      "meaning_id": "estetika",
+      "example": "美学价值",
+      "example_translation": "aesthetic value",
+      "example_translation_id": "nilai estetika"
+    },
+    {
+      "word": "创作",
+      "pinyin": "chuàng zuò",
+      "meaning": "to create",
+      "meaning_id": "menciptakan",
+      "example": "艺术创作",
+      "example_translation": "artistic creation",
+      "example_translation_id": "kreasi seni"
+    },
+    {
+      "word": "作品",
+      "pinyin": "zuò pǐn",
+      "meaning": "work (of art)",
+      "meaning_id": "karya (seni)",
+      "example": "经典作品",
+      "example_translation": "classic work",
+      "example_translation_id": "karya klasik"
+    },
+    {
+      "word": "风格",
+      "pinyin": "fēng gé",
+      "meaning": "style",
+      "meaning_id": "gaya",
+      "example": "艺术风格",
+      "example_translation": "artistic style",
+      "example_translation_id": "gaya artistik"
+    },
+    {
+      "word": "表达",
+      "pinyin": "biǎo dá",
+      "meaning": "to express",
+      "meaning_id": "mengekspresikan",
+      "example": "表达情感",
+      "example_translation": "express emotions",
+      "example_translation_id": "mengekspresikan emosi"
+    },
+    {
+      "word": "灵感",
+      "pinyin": "líng gǎn",
+      "meaning": "inspiration",
+      "meaning_id": "inspirasi",
+      "example": "获得灵感",
+      "example_translation": "gain inspiration",
+      "example_translation_id": "mendapatkan inspirasi"
+    },
+    {
+      "word": "传统",
+      "pinyin": "chuán tǒng",
+      "meaning": "tradition",
+      "meaning_id": "tradisi",
+      "example": "传统艺术",
+      "example_translation": "traditional art",
+      "example_translation_id": "seni tradisional"
+    },
+    {
+      "word": "创新",
+      "pinyin": "chuàng xīn",
+      "meaning": "innovation",
+      "meaning_id": "inovasi",
+      "example": "艺术创新",
+      "example_translation": "artistic innovation",
+      "example_translation_id": "inovasi artistik"
+    }
+  ],
+  "grammar": [
+    {
+      "point": "Using 不仅...也... (bùjǐn...yě...) - 'Not only... also...'",
+      "point_id": "Menggunakan 不仅...也... (bùjǐn...yě...) - 'Tidak hanya... juga...'",
+      "explanation": "This structure adds additional information about the same subject.",
+      "explanation_id": "Struktur ini menambahkan informasi tambahan tentang subjek yang sama.",
+      "examples": [
+        {
+          "chinese": "艺术不仅美化生活，也丰富精神世界。",
+          "translation": "Art not only beautifies life but also enriches the spiritual world.",
+          "translation_id": "Seni tidak hanya memperindah kehidupan tetapi juga memperkaya dunia spiritual."
+        },
+        {
+          "chinese": "欣赏艺术不仅需要知识，也需要感受力。",
+          "translation": "Appreciating art requires not only knowledge but also sensitivity.",
+          "translation_id": "Menghargai seni tidak hanya membutuhkan pengetahuan tetapi juga kepekaan."
+        }
+      ]
+    },
+    {
+      "point": "Using 以...为 (yǐ...wéi) - 'Take... as...'",
+      "point_id": "Menggunakan 以...为 (yǐ...wéi) - 'Mengambil... sebagai...'",
+      "explanation": "This structure indicates taking something as a basis or standard.",
+      "explanation_id": "Struktur ini menunjukkan mengambil sesuatu sebagai dasar atau standar.",
+      "examples": [
+        {
+          "chinese": "以情感表达为艺术的核心。",
+          "translation": "Take emotional expression as the core of art.",
+          "translation_id": "Ambil ekspresi emosi sebagai inti seni."
+        },
+        {
+          "chinese": "以创新为艺术发展的动力。",
+          "translation": "Take innovation as the driving force of artistic development.",
+          "translation_id": "Ambil inovasi sebagai kekuatan pendorong perkembangan seni."
+        }
+      ]
+    },
+    {
+      "point": "Using 通过...来... (tōngguò...lái...) - 'Through... to...'",
+      "point_id": "Menggunakan 通过...来... (tōngguò...lái...) - 'Melalui... untuk...'",
+      "explanation": "This structure indicates the method or means to achieve a goal.",
+      "explanation_id": "Struktur ini menunjukkan metode atau cara untuk mencapai tujuan.",
+      "examples": [
+        {
+          "chinese": "通过艺术来理解不同文化。",
+          "translation": "Understand different cultures through art.",
+          "translation_id": "Pahami budaya yang berbeda melalui seni."
+        },
+        {
+          "chinese": "通过欣赏来获得审美体验。",
+          "translation": "Gain aesthetic experiences through appreciation.",
+          "translation_id": "Dapatkan pengalaman estetika melalui apresiasi."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "male",
+      "name": "Lin Feng",
+      "voice": "male",
+      "chinese": "我最近开始学习艺术欣赏，但不知道从何入手。",
+      "pinyin": "Wǒ zuìjìn kāishǐ xuéxí yìshù xīnshǎng, dàn bù zhīdào cóng hé rùshǒu.",
+      "translation": "I recently started learning art appreciation, but I don't know where to begin.",
+      "translation_id": "Saya baru saja mulai belajar apresiasi seni, tapi tidak tahu harus mulai dari mana."
+    },
+    {
+      "speaker": "female",
+      "name": "Xu Mei",
+      "voice": "female",
+      "chinese": "艺术欣赏没有标准答案。可以从了解不同风格和流派开始。",
+      "pinyin": "Yìshù xīnshǎng méiyǒu biāozhǔn dá'àn. Kěyǐ cóng liǎojiě bùtóng fēnggé hé liúpài kāishǐ.",
+      "translation": "There's no standard answer in art appreciation. You can start by learning about different styles and schools.",
+      "translation_id": "Tidak ada jawaban standar dalam apresiasi seni. Anda bisa mulai dengan mempelajari berbagai gaya dan aliran."
+    },
+    {
+      "speaker": "male",
+      "name": "Lin Feng",
+      "voice": "male",
+      "chinese": "如何理解艺术家的创作意图呢？",
+      "pinyin": "Rúhé lǐjiě yìshùjiā de chuàngzuò yìtú ne?",
+      "translation": "How do you understand the artist's creative intention?",
+      "translation_id": "Bagaimana memahami maksud kreatif seniman?"
+    },
+    {
+      "speaker": "female",
+      "name": "Xu Mei",
+      "voice": "female",
+      "chinese": "艺术不仅是对现实的模仿，更是情感的表达。通过欣赏来获得灵感。以创新为动力，艺术不断发展。同时，要尊重传统，了解文化背景。",
+      "pinyin": "Yìshù bùjǐn shì duì xiànshí de mófǎng, gèng shì qínggǎn de biǎodá. Tōngguò xīnshǎng lái huòdé línggǎn. Yǐ chuàngxīn wéi dònglì, yìshù bùduàn fāzhǎn. Tóngshí, yào zūnzhòng chuántǒng, liǎojiě wénhuà bèijǐng.",
+      "translation": "Art is not only an imitation of reality but also an expression of emotions. Gain inspiration through appreciation. Take innovation as the driving force for the continuous development of art. At the same time, respect tradition and understand the cultural background.",
+      "translation_id": "Seni tidak hanya imitasi realitas tetapi juga ekspresi emosi. Dapatkan inspirasi melalui apresiasi. Ambil inovasi sebagai kekuatan pendorong untuk perkembangan seni yang berkelanjutan. Pada saat yang sama, hormati tradisi dan pahami latar belakang budaya."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "What does 艺术 (yìshù) mean?",
+      "question_id": "Apa arti 艺术 (yìshù)?",
+      "options": ["Culture", "Art", "Music", "Painting"],
+      "options_id": ["Budaya", "Seni", "Musik", "Lukisan"],
+      "correct": 1
+    },
+    {
+      "question": "How do you say 'aesthetic value' in Chinese?",
+      "question_id": "Bagaimana mengatakan 'nilai estetika' dalam bahasa Mandarin?",
+      "options": ["艺术价值", "美学价值", "文化价值", "历史价值"],
+      "options_id": ["nilai seni", "nilai estetika", "nilai budaya", "nilai sejarah"],
+      "correct": 1
+    },
+    {
+      "question": "What does 灵感 (línggǎn) mean?",
+      "question_id": "Apa arti 灵感 (línggǎn)?",
+      "options": ["Talent", "Skill", "Inspiration", "Creativity"],
+      "options_id": ["Bakat", "Keterampilan", "Inspirasi", "Kreativitas"],
+      "correct": 2
+    },
+    {
+      "question": "Complete the sentence: 艺术______美化生活，______丰富精神世界。",
+      "question_id": "Lengkapi kalimat: 艺术______美化生活，______丰富精神世界。",
+      "options": ["不但...而且...", "不仅...也...", "既...又...", "以上都是"],
+      "options_id": ["tidak hanya...tetapi juga...", "tidak hanya...juga...", "baik...maupun...", "semua di atas"],
+      "correct": 3
+    },
+    {
+      "question": "What is the best translation of 'artistic innovation'?",
+      "question_id": "Apa terjemahan terbaik dari 'inovasi artistik'?",
+      "options": ["艺术创新", "艺术创作", "艺术发展", "艺术变革"],
+      "options_id": ["inovasi artistik", "kreasi artistik", "perkembangan artistik", "revolusi artistik"],
+      "correct": 0
+    }
+  ]
+}

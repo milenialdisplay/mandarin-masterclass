@@ -1,0 +1,51 @@
+{
+  "title": "为什么不快乐",
+  "subtitle": "Expressing Emotions, Asking Why, Giving Reasons with 因为",
+  "assistant_message": "Today we learn: expressing emotions (快乐, 难过, 担心), asking 'why' (为什么), and giving reasons with 因为 (yīnwèi).",
+  "vocabulary": [
+    {"word": "为什么", "pinyin": "wèi shén me", "meaning": "why", "meaning_id": "mengapa", "example": "为什么迟到？", "example_translation": "Why are you late?", "example_translation_id": "Mengapa terlambat?"},
+    {"word": "快乐", "pinyin": "kuài lè", "meaning": "happy", "meaning_id": "senang", "example": "生日快乐", "example_translation": "happy birthday", "example_translation_id": "selamat ulang tahun"},
+    {"word": "不快乐", "pinyin": "bù kuài lè", "meaning": "unhappy", "meaning_id": "tidak senang", "example": "为什么不快乐？", "example_translation": "Why are you unhappy?", "example_translation_id": "Mengapa kamu tidak senang?"},
+    {"word": "难过", "pinyin": "nán guò", "meaning": "sad", "meaning_id": "sedih", "example": "很难过", "example_translation": "very sad", "example_translation_id": "sangat sedih"},
+    {"word": "担心", "pinyin": "dān xīn", "meaning": "to worry", "meaning_id": "khawatir", "example": "别担心", "example_translation": "don't worry", "example_translation_id": "jangan khawatir"},
+    {"word": "因为", "pinyin": "yīn wèi", "meaning": "because", "meaning_id": "karena", "example": "因为下雨", "example_translation": "because of the rain", "example_translation_id": "karena hujan"},
+    {"word": "所以", "pinyin": "suǒ yǐ", "meaning": "so/therefore", "meaning_id": "jadi", "example": "所以晚了", "example_translation": "so (I'm) late", "example_translation_id": "jadi terlambat"},
+    {"word": "开心", "pinyin": "kāi xīn", "meaning": "happy/joyful", "meaning_id": "gembira", "example": "很开心", "example_translation": "very happy", "example_translation_id": "sangat gembira"}
+  ],
+  "grammar": [
+    {
+      "point": "Asking 'Why' with 为什么 (wèishénme)",
+      "point_id": "Bertanya 'Mengapa' dengan 为什么 (wèishénme)",
+      "explanation": "Use 为什么 at the beginning of a question to ask 'why'.",
+      "explanation_id": "Gunakan 为什么 di awal pertanyaan untuk bertanya 'mengapa'.",
+      "examples": [
+        {"chinese": "为什么不快乐？", "translation": "Why are you unhappy?", "translation_id": "Mengapa kamu tidak senang?"},
+        {"chinese": "为什么迟到？", "translation": "Why are you late?", "translation_id": "Mengapa terlambat?"},
+        {"chinese": "你为什么不去？", "translation": "Why don't you go?", "translation_id": "Mengapa kamu tidak pergi?"}
+      ]
+    },
+    {
+      "point": "Giving Reasons with 因为 (yīnwèi)",
+      "point_id": "Memberi Alasan dengan 因为 (yīnwèi)",
+      "explanation": "Use 因为 to give the reason. Answer 为什么 questions with 因为 + reason.",
+      "explanation_id": "Gunakan 因为 untuk memberi alasan. Jawab pertanyaan 为什么 dengan 因为 + alasan.",
+      "examples": [
+        {"chinese": "因为天气不好。", "translation": "Because the weather is bad.", "translation_id": "Karena cuacanya buruk."},
+        {"chinese": "因为工作很忙。", "translation": "Because work is very busy.", "translation_id": "Karena pekerjaan sangat sibuk."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你今天为什么不快乐？", "pinyin": "Nǐ jīntiān wèishénme bù kuàilè?", "translation": "Why are you unhappy today?", "translation_id": "Mengapa kamu tidak senang hari ini?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "因为我的工作很难。", "pinyin": "Yīnwèi wǒ de gōngzuò hěn nán.", "translation": "Because my job is very difficult.", "translation_id": "Karena pekerjaan saya sangat sulit."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "别担心，慢慢就会好的。", "pinyin": "Bié dānxīn, màn man jiù huì hǎo de.", "translation": "Don't worry, it will get better slowly.", "translation_id": "Jangan khawatir, perlahan akan membaik."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "谢谢你的关心。", "pinyin": "Xièxie nǐ de guānxīn.", "translation": "Thank you for your concern.", "translation_id": "Terima kasih atas perhatianmu."}
+  ],
+  "exercises": [
+    {"question": "What does 为什么 (wèishénme) mean?", "question_id": "Apa arti 为什么 (wèishénme)?", "options": ["What", "Why", "Where", "When"], "options_id": ["Apa", "Mengapa", "Di mana", "Kapan"], "correct": 1},
+    {"question": "How do you say 'Why are you unhappy?' in Chinese?", "question_id": "Bagaimana mengatakan 'Mengapa kamu tidak senang?' dalam bahasa Mandarin?", "options": ["你怎么不快乐？", "为什么不快乐？", "为什么快乐？", "你不快乐吗？"], "options_id": ["Kamu bagaimana tidak senang?", "Mengapa tidak senang?", "Mengapa senang?", "Kamu tidak senang?"], "correct": 1},
+    {"question": "What does 因为 (yīnwèi) mean?", "question_id": "Apa arti 因为 (yīnwèi)?", "options": ["So/therefore", "Because", "But", "If"], "options_id": ["Jadi", "Karena", "Tetapi", "Jika"], "correct": 1},
+    {"question": "How to say 'Don't worry' in Chinese?", "question_id": "Bagaimana mengatakan 'Jangan khawatir' dalam bahasa Mandarin?", "options": ["没关系", "别担心", "对不起", "谢谢"], "options_id": ["Tidak apa-apa", "Jangan khawatir", "Maaf", "Terima kasih"], "correct": 1},
+    {"question": "What does 开心 (kāixīn) mean?", "question_id": "Apa arti 开心 (kāixīn)?", "options": ["Sad", "Worried", "Happy/joyful", "Angry"], "options_id": ["Sedih", "Khawatir", "Gembira", "Marah"], "correct": 2}
+  ]
+}

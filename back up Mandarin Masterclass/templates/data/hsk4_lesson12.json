@@ -1,0 +1,50 @@
+{
+  "title": "保护地球母亲",
+  "subtitle": "Talking About Environment, Responsibility, and Our Planet",
+  "assistant_message": "Today we learn: discussing environmental protection, using 以便 (yǐbiàn) for 'so that', and talking about our responsibility to Earth.",
+  "vocabulary": [
+    {"word": "保护", "pinyin": "bǎo hù", "meaning": "to protect", "meaning_id": "melindungi", "example": "保护环境", "example_translation": "protect the environment", "example_translation_id": "melindungi lingkungan"},
+    {"word": "地球", "pinyin": "dì qiú", "meaning": "Earth", "meaning_id": "Bumi", "example": "地球母亲", "example_translation": "Mother Earth", "example_translation_id": "Ibu Bumi"},
+    {"word": "环境", "pinyin": "huán jìng", "meaning": "environment", "meaning_id": "lingkungan", "example": "自然环境", "example_translation": "natural environment", "example_translation_id": "lingkungan alam"},
+    {"word": "污染", "pinyin": "wū rǎn", "meaning": "pollution", "meaning_id": "polusi", "example": "空气污染", "example_translation": "air pollution", "example_translation_id": "polusi udara"},
+    {"word": "减少", "pinyin": "jiǎn shǎo", "meaning": "to reduce", "meaning_id": "mengurangi", "example": "减少排放", "example_translation": "reduce emissions", "example_translation_id": "mengurangi emisi"},
+    {"word": "能源", "pinyin": "néng yuán", "meaning": "energy", "meaning_id": "energi", "example": "清洁能源", "example_translation": "clean energy", "example_translation_id": "energi bersih"},
+    {"word": "可持续", "pinyin": "kě chí xù", "meaning": "sustainable", "meaning_id": "berkelanjutan", "example": "可持续发展", "example_translation": "sustainable development", "example_translation_id": "pembangunan berkelanjutan"},
+    {"word": "责任", "pinyin": "zé rèn", "meaning": "responsibility", "meaning_id": "tanggung jawab", "example": "共同责任", "example_translation": "shared responsibility", "example_translation_id": "tanggung jawab bersama"}
+  ],
+  "grammar": [
+    {
+      "point": "Using 以便 (yǐbiàn) for 'So That'",
+      "point_id": "Menggunakan 以便 (yǐbiàn) untuk 'Sehingga'",
+      "explanation": "以便 indicates purpose, meaning 'so that' or 'in order to'. Structure: Action A + 以便 + Action B.",
+      "explanation_id": "以便 menunjukkan tujuan, berarti 'sehingga' atau 'agar'. Struktur: Aksi A + 以便 + Aksi B.",
+      "examples": [
+        {"chinese": "我们应该减少污染，以便保护地球。", "translation": "We should reduce pollution so that we can protect the Earth.", "translation_id": "Kita harus mengurangi polusi sehingga kita bisa melindungi Bumi."},
+        {"chinese": "早起以便有更多时间学习。", "translation": "Wake up early so that you have more time to study.", "translation_id": "Bangun pagi agar punya lebih banyak waktu belajar."}
+      ]
+    },
+    {
+      "point": "Using 为了 (wèile) for 'In Order To'",
+      "point_id": "Menggunakan 为了 (wèile) untuk 'Demi'",
+      "explanation": "为了 expresses purpose, often at the beginning of a sentence.",
+      "explanation_id": "为了 mengekspresikan tujuan, sering di awal kalimat.",
+      "examples": [
+        {"chinese": "为了我们的未来，要保护环境。", "translation": "For our future, we must protect the environment.", "translation_id": "Demi masa depan kita, harus melindungi lingkungan."},
+        {"chinese": "为了健康，他每天锻炼。", "translation": "For health, he exercises every day.", "translation_id": "Demi kesehatan, dia berolahraga setiap hari."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "地球母亲正在受到严重的污染。", "pinyin": "Dìqiú mǔqīn zhèngzài shòudào yánzhòng de wūrǎn.", "translation": "Mother Earth is suffering from serious pollution.", "translation_id": "Ibu Bumi sedang menderita polusi serius."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "我们每个人都有责任保护环境。", "pinyin": "Wǒmen měi gè rén dōu yǒu zérèn bǎohù huánjìng.", "translation": "Every one of us has the responsibility to protect the environment.", "translation_id": "Setiap dari kita memiliki tanggung jawab untuk melindungi lingkungan."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我们可以从小事做起，比如减少使用塑料袋。", "pinyin": "Wǒmen kěyǐ cóng xiǎoshì zuò qǐ, bǐrú jiǎnshǎo shǐyòng sùliào dài.", "translation": "We can start with small things, such as reducing the use of plastic bags.", "translation_id": "Kita bisa mulai dari hal-hal kecil, seperti mengurangi penggunaan kantong plastik."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "对！为了我们的未来，大家一起努力保护地球。", "pinyin": "Duì! Wèile wǒmen de wèilái, dàjiā yīqǐ nǔlì bǎohù dìqiú.", "translation": "Yes! For our future, let's work together to protect the Earth.", "translation_id": "Ya! Demi masa depan kita, mari bersama-sama berusaha melindungi Bumi."}
+  ],
+  "exercises": [
+    {"question": "What does 保护 (bǎohù) mean?", "question_id": "Apa arti 保护 (bǎohù)?", "options": ["To destroy", "To protect", "To pollute", "To ignore"], "options_id": ["Menghancurkan", "Melindungi", "Mencemari", "Mengabaikan"], "correct": 1},
+    {"question": "How do you say 'Mother Earth' in Chinese?", "question_id": "Bagaimana mengatakan 'Ibu Bumi' dalam bahasa Mandarin?", "options": ["地球妈妈", "地球母亲", "大地母亲", "All of the above"], "options_id": ["Bumi mama", "Ibu Bumi", "Ibu Pertiwi", "Semua di atas"], "correct": 3},
+    {"question": "What does 以便 (yǐbiàn) express?", "question_id": "Apa yang diekspresikan oleh 以便 (yǐbiàn)?", "options": ["Because", "So that (purpose)", "Although", "Therefore"], "options_id": ["Karena", "Sehingga (tujuan)", "Meskipun", "Oleh karena itu"], "correct": 1},
+    {"question": "What is 可持续发展 (kě chíxù fāzhǎn)?", "question_id": "Apa itu 可持续发展 (kě chíxù fāzhǎn)?", "options": ["Rapid development", "Sustainable development", "Economic development", "Social development"], "options_id": ["Perkembangan cepat", "Pembangunan berkelanjutan", "Pembangunan ekonomi", "Pembangunan sosial"], "correct": 1},
+    {"question": "How to say 'shared responsibility' in Chinese?", "question_id": "Bagaimana mengatakan 'tanggung jawab bersama' dalam bahasa Mandarin?", "options": ["共同责任", "个人责任", "社会责任", "法律责任"], "options_id": ["tanggung jawab bersama", "tanggung jawab pribadi", "tanggung jawab sosial", "tanggung jawab hukum"], "correct": 0}
+  ]
+}

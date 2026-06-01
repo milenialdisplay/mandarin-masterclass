@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>HSK Curriculum - Complete Lessons 1-6</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Poppins', system-ui, -apple-system, sans-serif;
+            background: #0a2a1a;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: #0a2a1a;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(10, 42, 26, 0.95);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffd700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            background: #ffd700;
+            color: #1a472a;
+            padding: 4px 8px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #e8f5e9;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+
+        .lang-toggle {
+            display: flex;
+            gap: 5px;
+        }
+
+        .lang-nav-btn {
+            background: transparent;
+            border: 1px solid #ffd700;
+            color: #ffd700;
+            padding: 5px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .lang-nav-btn.active {
+            background: #ffd700;
+            color: #1a472a;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .main-header {
+            background: linear-gradient(135deg, #1a472a, #2d6a4f);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 16px;
+            margin-bottom: 20px;
+        }
+
+        .main-header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .main-header p {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        .level-badge {
+            display: inline-block;
+            background: #ffd700;
+            color: #1a472a;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+
+        /* Navigation Bar */
+        .nav-bar {
+            background: #f5f5f5;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .nav-btn {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .nav-btn:hover {
+            background: #1a472a;
+            transform: scale(1.02);
+        }
+
+        /* Level Tabs */
+        .level-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .level-tab {
+            background: rgba(255,255,255,0.15);
+            border: none;
+            padding: 10px 24px;
+            border-radius: 30px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .level-tab:hover {
+            background: rgba(255,215,0,0.3);
+        }
+
+        .level-tab.active {
+            background: #ffd700;
+            color: #1a472a;
+        }
+
+        /* Level Cards */
+        .levels-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 1024px) {
+            .levels-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .levels-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .level-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+
+        .level-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+
+        .level-header {
+            padding: 16px;
+            color: white;
+        }
+
+        .level-header.hsk1 { background: linear-gradient(135deg, #1e3c2c, #2d6a4f); }
+        .level-header.hsk2 { background: linear-gradient(135deg, #2c3e50, #3498db); }
+        .level-header.hsk3 { background: linear-gradient(135deg, #5d2e2e, #c0392b); }
+        .level-header.hsk4 { background: linear-gradient(135deg, #4a2e5d, #8e44ad); }
+        .level-header.hsk5 { background: linear-gradient(135deg, #2e5d4a, #27ae60); }
+        .level-header.hsk6 { background: linear-gradient(135deg, #5d4a2e, #d4a017); }
+
+        .level-number {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .level-name {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-top: 4px;
+        }
+
+        .level-stats {
+            display: flex;
+            gap: 12px;
+            margin-top: 12px;
+            font-size: 12px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            background: rgba(255,255,255,0.2);
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .level-content {
+            padding: 16px;
+        }
+
+        .lesson-summary {
+            max-height: 350px;
+            overflow-y: auto;
+            margin-bottom: 12px;
+        }
+
+        .lesson-summary h4 {
+            font-size: 14px;
+            color: #1a472a;
+            margin-bottom: 8px;
+            border-left: 3px solid #ffd700;
+            padding-left: 8px;
+        }
+
+        .lesson-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .lesson-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 10px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-size: 12px;
+        }
+
+        .lesson-item:hover {
+            background: #e8f5e9;
+        }
+
+        .lesson-number {
+            font-weight: bold;
+            color: #2d6a4f;
+            min-width: 45px;
+        }
+
+        .lesson-title {
+            flex: 1;
+            margin-left: 8px;
+            color: #333;
+        }
+
+        .lesson-title-en {
+            font-size: 10px;
+            color: #888;
+            margin-left: 8px;
+        }
+
+        .lesson-actions {
+            display: flex;
+            gap: 6px;
+        }
+
+        .lesson-icon {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 4px;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lesson-icon:hover {
+            background: #e0e0e0;
+        }
+
+        .expand-btn {
+            background: #e8f5e9;
+            border: 1px solid #2d6a4f;
+            color: #2d6a4f;
+            padding: 6px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .expand-btn:hover {
+            background: #2d6a4f;
+            color: white;
+        }
+
+        /* Modal */
+        .lesson-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lesson-modal.active {
+            display: flex;
+        }
+
+        .lesson-modal-content {
+            background: white;
+            border-radius: 24px;
+            padding: 20px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e8f5e9;
+        }
+
+        .modal-header h2 {
+            color: #1a472a;
+            font-size: 20px;
+        }
+
+        .close-modal {
+            background: #e94560;
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .modal-section {
+            margin-bottom: 20px;
+        }
+
+        .modal-section h3 {
+            color: #2d6a4f;
+            font-size: 16px;
+            margin-bottom: 8px;
+            border-left: 3px solid #ffd700;
+            padding-left: 10px;
+        }
+
+        .objectives-list {
+            list-style: none;
+            padding-left: 10px;
+        }
+
+        .objectives-list li {
+            padding: 4px 0;
+            font-size: 13px;
+        }
+
+        .objectives-list li:before {
+            content: "✓ ";
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .go-to-lesson {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 16px;
+        }
+
+        .go-to-lesson:hover {
+            background: #1a472a;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: rgba(255,255,255,0.7);
+            font-size: 11px;
+            margin-top: 20px;
+        }
+
+        /* Scrollbar */
+        .lesson-summary::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .lesson-summary::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .lesson-summary::-webkit-scrollbar-thumb {
+            background: #2d6a4f;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .levels-grid {
+                grid-template-columns: 1fr;
+            }
+            .main-header h1 { font-size: 20px; }
+            .level-tabs { gap: 6px; }
+            .level-tab { padding: 6px 14px; font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="/" class="logo">
+            🀆 <span>Mandarin Masterclass</span>
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/lessons">📚 Lessons</a>
+            <a href="/dashboard">📊 Dashboard</a>
+            <a href="/hsk-practice">📝 Practice</a>
+            <a href="/hskk-speaking">🎤 Speaking</a>
+            <div class="lang-toggle">
+                <button class="lang-nav-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+                <button class="lang-nav-btn" data-lang="id" onclick="setLanguage('id')">ID</button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="main-header">
+        <h1 id="pageTitle">📚 HSK Standard Curriculum</h1>
+        <p id="pageSubtitle">Complete course following Beijing Language and Culture University Press syllabus</p>
+        <div class="level-badge" id="levelBadge">HSK 1 → HSK 6 | 146 Lessons | 5000+ Words</div>
+    </div>
+
+    <div class="nav-bar">
+        <a href="/" class="nav-btn">🏠 Home</a>
+        <a href="/dashboard" class="nav-btn">📊 Dashboard</a>
+        <a href="/hsk-practice" class="nav-btn">📝 Practice Test</a>
+        <a href="/hskk-speaking" class="nav-btn">🎤 Speaking Test</a>
+    </div>
+
+    <!-- Level Tabs -->
+    <div class="level-tabs" id="levelTabs"></div>
+
+    <!-- Level Cards Grid -->
+    <div class="levels-grid" id="levelsGrid"></div>
+
+    <div class="footer" id="footerText">HSK Standard Course 1-6 | Complete Curriculum | Interactive Learning</div>
+</div>
+
+<!-- Lesson Detail Modal -->
+<div id="lessonModal" class="lesson-modal">
+    <div class="lesson-modal-content">
+        <div class="modal-header">
+            <h2 id="modalTitle">Lesson Details</h2>
+            <button class="close-modal" onclick="closeLessonModal()">✕</button>
+        </div>
+        <div id="modalContent"></div>
+        <button class="go-to-lesson" id="goToLessonBtn" onclick="goToLesson()">📖 Go to Lesson →</button>
+    </div>
+</div>
+
+<script>
+    // ============================================
+    // LANGUAGE TRANSLATIONS
+    // ============================================
+    
+    let currentLang = 'en';
+    
+    const TRANSLATIONS = {
+        en: {
+            pageTitle: "📚 HSK Standard Curriculum",
+            pageSubtitle: "Complete course following Beijing Language and Culture University Press syllabus",
+            levelBadge: "HSK 1 → HSK 6 | 146 Lessons | 5000+ Words",
+            footerText: "HSK Standard Course 1-6 | Complete Curriculum | Interactive Learning",
+            objectives: "Lesson Objectives",
+            statistics: "Statistics",
+            whatYouLearn: "What You'll Learn",
+            words: "words",
+            grammarPoints: "grammar points",
+            goToLesson: "📖 Go to Lesson →",
+            browseLessons: "Browse Lessons →",
+            previewWords: "Preview words:"
+        },
+        id: {
+            pageTitle: "📚 Kurikulum Standar HSK",
+            pageSubtitle: "Kursus lengkap mengikuti silabus Beijing Language and Culture University Press",
+            levelBadge: "HSK 1 → HSK 6 | 146 Pelajaran | 5000+ Kata",
+            footerText: "Kursus Standar HSK 1-6 | Kurikulum Lengkap | Pembelajaran Interaktif",
+            objectives: "Tujuan Pelajaran",
+            statistics: "Statistik",
+            whatYouLearn: "Apa yang Akan Anda Pelajari",
+            words: "kata",
+            grammarPoints: "poin tata bahasa",
+            goToLesson: "📖 Buka Pelajaran →",
+            browseLessons: "Jelajahi Pelajaran →",
+            previewWords: "Kata pratinjau:"
+        }
+    };
+    
+    function setLanguage(lang) {
+        currentLang = lang;
+        const t = TRANSLATIONS[lang];
+        
+        document.getElementById('pageTitle').innerText = t.pageTitle;
+        document.getElementById('pageSubtitle').innerText = t.pageSubtitle;
+        document.getElementById('levelBadge').innerText = t.levelBadge;
+        document.getElementById('footerText').innerText = t.footerText;
+        
+        document.querySelectorAll('.lang-nav-btn').forEach(btn => {
+            if (btn.dataset.lang === lang) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+        
+        renderLevelCards();
+    }
+    
+    // ============================================
+    // COMPLETE HSK CURRICULUM DATA (UPDATED)
+    // ============================================
+    
+    const MAX_LESSONS = {
+        1: 15,
+        2: 15,
+        3: 20,
+        4: 20,
+        5: 36,
+        6: 40
+    };
+    
+    // COMPLETE LESSON TITLES FOR ALL 36 HSK 5 LESSONS
+    const HSK5_TITLES = {
+        1: "爱的细节", 2: "留学的选择", 3: "网购的利与弊", 4: "共享经济", 5: "人与自然",
+        6: "科技改变生活", 7: "文化交流", 8: "职场竞争", 9: "心理健康", 10: "传统节日",
+        11: "城市发展", 12: "媒体与信息", 13: "终身学习", 14: "团队合作", 15: "创新思维",
+        16: "领导力", 17: "挑战自我", 18: "时间管理", 19: "情绪控制", 20: "有效沟通",
+        21: "危机处理", 22: "决策能力", 23: "适应变化", 24: "批判性思维", 25: "跨文化交流",
+        26: "志愿服务", 27: "社会责任", 28: "全球化", 29: "人工智能", 30: "可持续发展",
+        31: "健康生活", 32: "理财规划", 33: "法律意识", 34: "媒体素养", 35: "艺术欣赏", 36: "人生哲学"
+    };
+    
+    const HSK5_TITLES_EN = {
+        1: "Details of Love", 2: "Study Abroad Choices", 3: "Online Shopping Pros & Cons", 4: "Sharing Economy", 5: "Humans and Nature",
+        6: "Technology Changes Life", 7: "Cultural Exchange", 8: "Workplace Competition", 9: "Mental Health", 10: "Traditional Festivals",
+        11: "Urban Development", 12: "Media and Information", 13: "Lifelong Learning", 14: "Teamwork", 15: "Innovative Thinking",
+        16: "Leadership", 17: "Challenge Yourself", 18: "Time Management", 19: "Emotional Control", 20: "Effective Communication",
+        21: "Crisis Management", 22: "Decision Making", 23: "Adapting to Change", 24: "Critical Thinking", 25: "Cross-Cultural Communication",
+        26: "Volunteer Service", 27: "Social Responsibility", 28: "Globalization", 29: "Artificial Intelligence", 30: "Sustainable Development",
+        31: "Healthy Living", 32: "Financial Planning", 33: "Legal Awareness", 34: "Media Literacy", 35: "Art Appreciation", 36: "Life Philosophy"
+    };
+    
+    // COMPLETE LESSON TITLES FOR ALL 40 HSK 6 LESSONS
+    const HSK6_TITLES = {
+        1: "父子之间的爱", 2: "敬业与乐业", 3: "珍惜每一刻", 4: "科技与伦理", 5: "全球化时代",
+        6: "环境保护", 7: "教育改革", 8: "人口问题", 9: "艺术鉴赏", 10: "科学探索",
+        11: "经济发展", 12: "社会治理", 13: "文化传承", 14: "国际关系", 15: "哲学思考",
+        16: "文学欣赏", 17: "历史反思", 18: "心理学", 19: "建筑美学", 20: "音乐与情感",
+        21: "运动精神", 22: "医学进步", 23: "农业创新", 24: "航天探索", 25: "海洋保护",
+        26: "能源革命", 27: "城市规划", 28: "交通发展", 29: "乡村振兴", 30: "数字经济",
+        31: "生物科技", 32: "量子计算", 33: "纳米技术", 34: "新能源", 35: "循环经济",
+        36: "和平发展", 37: "人类命运共同体", 38: "文明对话", 39: "终身成长", 40: "追求卓越"
+    };
+    
+    const HSK6_TITLES_EN = {
+        1: "Father-Son Love", 2: "Dedication and Enjoyment", 3: "Cherish Every Moment", 4: "Technology and Ethics", 5: "Era of Globalization",
+        6: "Environmental Protection", 7: "Education Reform", 8: "Population Issues", 9: "Art Appreciation", 10: "Scientific Exploration",
+        11: "Economic Development", 12: "Social Governance", 13: "Cultural Heritage", 14: "International Relations", 15: "Philosophical Thinking",
+        16: "Literary Appreciation", 17: "Historical Reflection", 18: "Psychology", 19: "Architectural Aesthetics", 20: "Music and Emotion",
+        21: "Sports Spirit", 22: "Medical Progress", 23: "Agricultural Innovation", 24: "Space Exploration", 25: "Ocean Protection",
+        26: "Energy Revolution", 27: "Urban Planning", 28: "Transportation Development", 29: "Rural Revitalization", 30: "Digital Economy",
+        31: "Biotechnology", 32: "Quantum Computing", 33: "Nanotechnology", 34: "New Energy", 35: "Circular Economy",
+        36: "Peaceful Development", 37: "Community of Shared Future", 38: "Dialogue of Civilizations", 39: "Lifelong Growth", 40: "Pursuit of Excellence"
+    };
+    
+    const LESSON_TITLES = {
+        1: {1: "你好", 2: "谢谢你", 3: "你叫什么名字", 4: "她是我的汉语老师", 5: "她女儿今年二十岁", 6: "我会说汉语", 7: "今天几号", 8: "我想喝茶", 9: "你儿子在哪儿工作", 10: "我能坐这儿吗", 11: "现在几点", 12: "明天天气怎么样", 13: "他在学做中国菜呢", 14: "她买了不少衣服", 15: "我是坐飞机来的"},
+        2: {1: "九月去中国旅游最好", 2: "我每天六点起床", 3: "左边那个红色的是我的", 4: "这个星期天我们去打球吧", 5: "我比你高", 6: "你怎么不吃了", 7: "电脑比手机贵多了", 8: "我不太喜欢喝咖啡", 9: "最近怎么样", 10: "别找了，手机在桌子上", 11: "你习惯中国的生活了吗", 12: "这件事我都听说了", 13: "一边...一边...", 14: "越...越...", 15: "虽然...但是..."},
+        3: {1: "周末你有什么打算", 2: "这个电影很有意思", 3: "我把钱包忘在家里了", 4: "你听说过长城吗", 5: "我有很多爱好", 6: "这件衣服太贵了", 7: "你减肥成功了", 8: "我考上大学了", 9: "她买的衣服真漂亮", 10: "他正在看书呢", 11: "我从来没去过西藏", 12: "你要控制一下饮食", 13: "交通越来越方便了", 14: "这篇文章太难懂了", 15: "我们都应该保护环境", 16: "既然你决定了，就去做吧", 17: "你最近瘦了", 18: "只要努力就能成功", 19: "我们该出发了", 20: "除了汉语，我还会英语"},
+        4: {1: "简单的爱情", 2: "真正的朋友", 3: "经理对我印象不错", 4: "不要太着急赚钱", 5: "美丽的小城", 6: "健康的饮食习惯", 7: "最好的医生是自己", 8: "生活中的小窍门", 9: "阳光与希望", 10: "幸福的味道", 11: "读书与人生", 12: "保护地球母亲", 13: "智能生活", 14: "尊重与理解", 15: "艺术与生活", 16: "沟通的艺术", 17: "挑战自我", 18: "珍惜时间", 19: "梦想与现实", 20: "成功的秘诀"},
+        5: HSK5_TITLES,
+        6: HSK6_TITLES
+    };
+    
+    const LESSON_TITLES_EN = {
+        1: {1: "Hello", 2: "Thank You", 3: "What's Your Name?", 4: "She's My Chinese Teacher", 5: "Her Daughter is 20", 6: "I Can Speak Chinese", 7: "What's the Date?", 8: "I Want Tea", 9: "Where Does Your Son Work?", 10: "Can I Sit Here?", 11: "What Time Is It?", 12: "How's the Weather?", 13: "Learning Chinese Cooking", 14: "She Bought Clothes", 15: "I Came by Plane"},
+        2: {1: "September Best for Travel", 2: "Get Up at 6", 3: "The Red One is Mine", 4: "Let's Play Ball Sunday", 5: "I'm Taller Than You", 6: "Why Aren't You Eating?", 7: "Computer Much Pricier", 8: "I Don't Like Coffee", 9: "How Have You Been?", 10: "Stop Looking", 11: "Used to Life in China?", 12: "I've Heard", 13: "Doing Two Things", 14: "The More... The More...", 15: "Although... But..."},
+        3: {1: "Weekend Plans", 2: "Interesting Movie", 3: "Left Wallet at Home", 4: "Heard of Great Wall?", 5: "Many Hobbies", 6: "Too Expensive", 7: "Lost Weight", 8: "Passed Exam", 9: "Beautiful Clothes", 10: "Reading Now", 11: "Never Been to Tibet", 12: "Control Diet", 13: "Convenient Transport", 14: "Hard to Understand", 15: "Protect Environment", 16: "Since You Decided", 17: "Lost Weight Lately", 18: "Work Hard, Succeed", 19: "Should Set Off", 20: "Besides Chinese"},
+        4: {1: "Simple Love", 2: "True Friends", 3: "Good Impression", 4: "Don't Rush Money", 5: "Beautiful Town", 6: "Healthy Eating", 7: "Best Doctor is You", 8: "Life Hacks", 9: "Sunshine & Hope", 10: "Taste of Happiness", 11: "Reading & Life", 12: "Protect Earth", 13: "Smart Life", 14: "Respect & Understanding", 15: "Art & Life", 16: "Art of Communication", 17: "Challenge Yourself", 18: "Cherish Time", 19: "Dreams & Reality", 20: "Secret to Success"},
+        5: HSK5_TITLES_EN,
+        6: HSK6_TITLES_EN
+    };
+    
+    // Level data for cards
+    const hskLevels = [
+        { level: 1, name: "HSK Level 1", cefr: "A1", hours: "30-36 hrs", words: "150", lessons: 15, color: "hsk1", descEn: "Basic greetings, numbers, family, daily essentials.", descId: "Salam dasar, angka, keluarga, kebutuhan sehari-hari.", preview: "你好, 谢谢, 再见, 名字, 老师" },
+        { level: 2, name: "HSK Level 2", cefr: "A2", hours: "30-45 hrs", words: "300", lessons: 15, color: "hsk2", descEn: "Daily routines, shopping, travel, simple conversations.", descId: "Rutinitas harian, berbelanja, bepergian, percakapan sederhana.", preview: "旅游, 起床, 工作, 电脑, 天气" },
+        { level: 3, name: "HSK Level 3", cefr: "B1", hours: "35-45 hrs", words: "600", lessons: 20, color: "hsk3", descEn: "Hobbies, opinions, health, education, environment.", descId: "Hobi, opini, kesehatan, pendidikan, lingkungan.", preview: "打算, 电影, 钱包, 长城, 减肥" },
+        { level: 4, name: "HSK Level 4", cefr: "B2", hours: "45+ hrs", words: "1,200", lessons: 20, color: "hsk4", descEn: "Abstract topics, news, relationships, technology.", descId: "Topik abstrak, berita, hubungan, teknologi.", preview: "爱情, 朋友, 健康, 环境, 成功" },
+        { level: 5, name: "HSK Level 5", cefr: "C1", hours: "60+ hrs", words: "2,500", lessons: 36, color: "hsk5", descEn: "Professional topics, debates, advanced reading.", descId: "Topik profesional, debat, bacaan lanjutan.", preview: "留学, 网购, 经济, 科技, 文化" },
+        { level: 6, name: "HSK Level 6", cefr: "C2", hours: "80+ hrs", words: "5,000+", lessons: 40, color: "hsk6", descEn: "Native-level fluency, humanities, science, arts.", descId: "Kefasihan tingkat native, humaniora, sains, seni.", preview: "哲学, 伦理, 全球化, 艺术, 创新" }
+    ];
+    
+    let currentModalLevel = null;
+    let currentModalLesson = null;
+    
+    function renderLevelCards() {
+        const grid = document.getElementById('levelsGrid');
+        const t = TRANSLATIONS[currentLang];
+        
+        grid.innerHTML = hskLevels.map(l => `
+            <div class="level-card" onclick="scrollToLevel(${l.level})">
+                <div class="level-header ${l.color}">
+                    <div class="level-number">${l.name}</div>
+                    <div class="level-name">${l.cefr} | ${l.hours}</div>
+                    <div class="level-stats">
+                        <span class="stat">📚 ${l.lessons} Lessons</span>
+                        <span class="stat">📖 ${l.words} words</span>
+                        <span class="stat">⭐ ${l.cefr}</span>
+                    </div>
+                </div>
+                <div class="level-content">
+                    <div class="lesson-summary">
+                        <h4>📖 Lessons Preview</h4>
+                        <div class="lesson-list" id="lesson-list-${l.level}"></div>
+                        <button class="expand-btn" onclick="event.stopPropagation(); showAllLessonsForLevel(${l.level})">📋 View all ${l.lessons} lessons →</button>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+        
+        // Populate preview lessons for each level
+        hskLevels.forEach(level => {
+            const container = document.getElementById(`lesson-list-${level.level}`);
+            if (container) {
+                const previewLessons = [];
+                const totalLessons = level.lessons;
+                const previewCount = Math.min(5, totalLessons);
+                
+                for (let i = 1; i <= previewCount; i++) {
+                    let title = '';
+                    let titleEn = '';
+                    
+                    if (level.level === 5) {
+                        title = HSK5_TITLES[i] || `Lesson ${i}`;
+                        titleEn = HSK5_TITLES_EN[i] || `Lesson ${i}`;
+                    } else if (level.level === 6) {
+                        title = HSK6_TITLES[i] || `Lesson ${i}`;
+                        titleEn = HSK6_TITLES_EN[i] || `Lesson ${i}`;
+                    } else {
+                        title = LESSON_TITLES[level.level][i] || `Lesson ${i}`;
+                        titleEn = LESSON_TITLES_EN[level.level][i] || `Lesson ${i}`;
+                    }
+                    
+                    previewLessons.push(`
+                        <div class="lesson-item" onclick="event.stopPropagation(); showLessonDetails(${level.level}, ${i})">
+                            <span class="lesson-number">L${i}</span>
+                            <span class="lesson-title">${title}</span>
+                            <span class="lesson-title-en">${titleEn}</span>
+                            <div class="lesson-actions">
+                                <button class="lesson-icon" onclick="event.stopPropagation(); goToLessonDirect(${level.level}, ${i})" title="Go to lesson">📖</button>
+                            </div>
+                        </div>
+                    `);
+                }
+                container.innerHTML = previewLessons.join('');
+            }
+        });
+    }
+    
+    function showAllLessonsForLevel(level) {
+        const levelData = hskLevels.find(l => l.level === level);
+        if (!levelData) return;
+        
+        const totalLessons = levelData.lessons;
+        let lessonsHtml = '';
+        
+        for (let i = 1; i <= totalLessons; i++) {
+            let title = '';
+            let titleEn = '';
+            
+            if (level === 5) {
+                title = HSK5_TITLES[i] || `Lesson ${i}`;
+                titleEn = HSK5_TITLES_EN[i] || `Lesson ${i}`;
+            } else if (level === 6) {
+                title = HSK6_TITLES[i] || `Lesson ${i}`;
+                titleEn = HSK6_TITLES_EN[i] || `Lesson ${i}`;
+            } else {
+                title = LESSON_TITLES[level][i] || `Lesson ${i}`;
+                titleEn = LESSON_TITLES_EN[level][i] || `Lesson ${i}`;
+            }
+            
+            lessonsHtml += `
+                <div class="lesson-item" onclick="showLessonDetails(${level}, ${i})" style="margin-bottom: 5px; cursor: pointer;">
+                    <span class="lesson-number">L${i}</span>
+                    <span class="lesson-title">${title}</span>
+                    <span class="lesson-title-en">${titleEn}</span>
+                </div>
+            `;
+        }
+        
+        const modalContent = document.getElementById('modalContent');
+        modalContent.innerHTML = `
+            <div class="modal-section">
+                <h3>📚 ${levelData.name} - All ${totalLessons} Lessons</h3>
+                <div class="lesson-list" style="max-height: 400px; overflow-y: auto;">
+                    ${lessonsHtml}
+                </div>
+            </div>
+        `;
+        document.getElementById('modalTitle').innerHTML = `${levelData.name} - Complete List`;
+        document.getElementById('lessonModal').classList.add('active');
+        document.getElementById('goToLessonBtn').style.display = 'none';
+    }
+    
+    function showLessonDetails(level, lessonNum) {
+        const levelData = hskLevels.find(l => l.level === level);
+        if (!levelData) return;
+        
+        let title = '';
+        let titleEn = '';
+        
+        if (level === 5) {
+            title = HSK5_TITLES[lessonNum] || `Lesson ${lessonNum}`;
+            titleEn = HSK5_TITLES_EN[lessonNum] || `Lesson ${lessonNum}`;
+        } else if (level === 6) {
+            title = HSK6_TITLES[lessonNum] || `Lesson ${lessonNum}`;
+            titleEn = HSK6_TITLES_EN[lessonNum] || `Lesson ${lessonNum}`;
+        } else {
+            title = LESSON_TITLES[level][lessonNum] || `Lesson ${lessonNum}`;
+            titleEn = LESSON_TITLES_EN[level][lessonNum] || `Lesson ${lessonNum}`;
+        }
+        
+        currentModalLevel = level;
+        currentModalLesson = lessonNum;
+        
+        const t = TRANSLATIONS[currentLang];
+        
+        const modalContent = document.getElementById('modalContent');
+        modalContent.innerHTML = `
+            <div class="modal-section">
+                <h3>🎯 ${t.objectives}</h3>
+                <ul class="objectives-list">
+                    <li>Learn key vocabulary for ${title}</li>
+                    <li>Master grammar patterns</li>
+                    <li>Practice conversation skills</li>
+                    <li>Complete exercises to reinforce learning</li>
+                </ul>
+            </div>
+            <div class="modal-section">
+                <h3>📊 ${t.statistics}</h3>
+                <div class="level-stats" style="margin-top: 0; justify-content: flex-start;">
+                    <span class="stat">📖 8-10 ${t.words}</span>
+                    <span class="stat">📝 2-3 ${t.grammarPoints}</span>
+                </div>
+            </div>
+            <div class="modal-section">
+                <h3>💡 ${t.whatYouLearn}</h3>
+                <p style="font-size: 13px; color: #555;">Lesson ${lessonNum}: ${title} (${titleEn})</p>
+                <p style="font-size: 12px; color: #666; margin-top: 8px;">This lesson focuses on practical vocabulary and grammar for HSK Level ${level} learners.</p>
+            </div>
+        `;
+        
+        document.getElementById('modalTitle').innerHTML = `Lesson ${lessonNum}: ${title} - ${titleEn}`;
+        document.getElementById('goToLessonBtn').style.display = 'block';
+        document.getElementById('lessonModal').classList.add('active');
+    }
+    
+    function goToLesson() {
+        if (currentModalLevel && currentModalLesson) {
+            window.location.href = `/hsk${currentModalLevel}/lesson${currentModalLesson}`;
+        }
+    }
+    
+    function goToLessonDirect(level, lessonNum) {
+        window.location.href = `/hsk${level}/lesson${lessonNum}`;
+    }
+    
+    function scrollToLevel(level) {
+        showAllLessonsForLevel(level);
+    }
+    
+    function closeLessonModal() {
+        document.getElementById('lessonModal').classList.remove('active');
+    }
+    
+    // Close modal when clicking outside
+    document.getElementById('lessonModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeLessonModal();
+        }
+    });
+    
+    // Initialize
+    renderLevelCards();
+    
+    window.showLessonDetails = showLessonDetails;
+    window.goToLesson = goToLesson;
+    window.goToLessonDirect = goToLessonDirect;
+    window.scrollToLevel = scrollToLevel;
+    window.closeLessonModal = closeLessonModal;
+    window.showAllLessonsForLevel = showAllLessonsForLevel;
+    window.setLanguage = setLanguage;
+</script>
+</body>
+</html>

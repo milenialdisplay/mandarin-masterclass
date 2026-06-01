@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>HSK 1 Lesson 10 - 颜色与描述 (Colors & Descriptions)</title>
+    <!-- hanzi-writer CDN for writing module -->
+    <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@2.3.0/dist/hanzi-writer.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a472a;
+            padding: 10px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .lesson-header {
+            background: linear-gradient(135deg, #1a472a, #2d6a4f);
+            color: white;
+            padding: 14px;
+            text-align: center;
+            border-radius: 16px 16px 0 0;
+        }
+        
+        .lesson-header h1 { font-size: 18px; margin-bottom: 4px; }
+        .lesson-header p { font-size: 11px; opacity: 0.9; }
+        .level-indicator { display: inline-block; background: #ffd700; color: #1a472a; padding: 3px 10px; border-radius: 20px; font-size: 10px; margin-top: 5px; font-weight: bold; }
+        
+        .lesson-nav {
+            background: #f5f5f5;
+            padding: 8px;
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+        }
+        
+        .nav-btn {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            flex: 1;
+            text-align: center;
+        }
+        
+        .ai-bar {
+            background: white;
+            margin-top: 10px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        
+        .ai-bar-header {
+            background: #f8f9fa;
+            padding: 8px 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .ai-bar-header h3 { font-size: 17px; color: #1a472a; }
+        
+        .lang-toggle { display: flex; gap: 5px; }
+        
+        .lang-mini-btn {
+            background: #f0f0f0;
+            border: none;
+            padding: 3px 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .lang-mini-btn.active { background: #2d6a4f; color: white; }
+        
+        .ai-message {
+            background: #e8f5e9;
+            padding: 10px 14px;
+            margin: 8px;
+            border-radius: 10px;
+            border-left: 3px solid #ffd700;
+            font-size: 13px;
+        }
+        
+        .ai-message .greeting {
+            font-weight: bold;
+            color: #1a472a;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+        
+        .chat-area {
+            background: #f5f5f5;
+            margin: 0 8px;
+            border-radius: 10px;
+            max-height: 140px;
+            overflow-y: auto;
+        }
+        
+        .chat-message {
+            padding: 6px 10px;
+            margin: 5px;
+            border-radius: 14px;
+            max-width: 90%;
+            font-size: 13px;
+            word-break: break-word;
+        }
+        
+        .chat-message.user {
+            background: #2d6a4f;
+            color: white;
+            margin-left: auto;
+            text-align: right;
+        }
+        
+        .chat-message.ai {
+            background: white;
+            border: 1px solid #ddd;
+            color: #333;
+        }
+        
+        .pronounce-chat-btn {
+            background: #ffd700;
+            border: none;
+            padding: 2px 8px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 10px;
+            font-weight: bold;
+            margin-left: 8px;
+            color: #1a472a;
+        }
+        
+        .input-row {
+            display: flex;
+            gap: 5px;
+            padding: 8px;
+            align-items: center;
+            flex-wrap: nowrap;
+            border-top: 1px solid #eee;
+            background: white;
+        }
+        
+        .chat-input {
+            flex: 2;
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 13px;
+            outline: none;
+            min-width: 0;
+        }
+        
+        .action-btn {
+            background: #e8f5e9;
+            border: 1px solid #2d6a4f;
+            color: #2d6a4f;
+            padding: 6px 10px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+            text-align: center;
+            white-space: nowrap;
+        }
+        
+        .action-btn.recording {
+            background: #e94560;
+            color: white;
+            animation: pulse 1s infinite;
+        }
+        
+        .pronounce-input-btn {
+            background: #ffd700;
+            border: 1px solid #d4a500;
+            color: #1a472a;
+        }
+        
+        .send-btn {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        .chat-status {
+            font-size: 10px;
+            color: #888;
+            text-align: center;
+            padding-bottom: 6px;
+        }
+        
+        #imageUpload { display: none; }
+        
+        .image-helper-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 20000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .image-helper-modal.active { display: flex; }
+        
+        .image-helper-content {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+        
+        .image-helper-content img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 10px 0;
+            border: 2px solid #2d6a4f;
+        }
+        
+        .draw-area {
+            background: #f5f5f5;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        .draw-canvas {
+            border: 2px solid #2d6a4f;
+            border-radius: 8px;
+            background: white;
+            cursor: crosshair;
+            touch-action: none;
+        }
+        
+        .draw-controls {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .draw-btn {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 6px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        
+        .draw-btn.clear-btn { background: #e94560; }
+        .draw-btn.find-btn { background: #ffd700; color: #1a472a; }
+        
+        .character-result {
+            background: #e8f5e9;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            display: none;
+        }
+        
+        .character-result.show { display: block; }
+        .character-result-word { font-size: 36px; font-weight: bold; color: #1a472a; }
+        
+        .writing-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .writing-modal.active { display: flex; }
+        
+        .writing-modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            max-width: 95%;
+            width: auto;
+            text-align: center;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .writing-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .writing-modal-header h3 { font-size: 24px; color: #1a472a; }
+        
+        .close-modal {
+            background: #e94560;
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+        .writing-boxes-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin: 20px auto;
+        }
+        
+        .writing-character-box {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            border: 3px solid #2d6a4f;
+            border-radius: 12px;
+            background: #fafafa;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+        
+        .writing-character-box.completed { border-color: #28a745; background: #f0fff0; }
+        .writing-character-box.active { border-color: #ffd700; box-shadow: 0 0 20px rgba(255,215,0,0.6); }
+        .writing-character-box.wrong { border-color: #e94560; animation: shake 0.3s ease-in-out; }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+        
+        .writing-hanzi-target {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .writing-draw-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            cursor: crosshair;
+            touch-action: none;
+            z-index: 2;
+        }
+        
+        .box-label {
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+            font-weight: bold;
+        }
+        
+        .writing-stroke-counter {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1a472a;
+            margin: 35px 0 15px;
+            padding: 10px;
+            background: #e8f5e9;
+            border-radius: 8px;
+        }
+        
+        .writing-controls {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+        
+        .writing-btn {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
+        
+        .writing-btn:hover { transform: scale(1.02); opacity: 0.95; }
+        .write-mode-btn { background: #ffd700; color: #1a472a; }
+        .white-paper-mode-btn { background: #e8f5e9; color: #2d6a4f; border: 1px solid #2d6a4f; }
+        .writing-clear-btn { background: #e94560; }
+        
+        .lesson-content {
+            background: white;
+            border-radius: 16px;
+            margin-top: 12px;
+            padding: 16px;
+            max-height: 45vh;
+            overflow-y: auto;
+            font-size: 15px;
+        }
+        
+        .section { margin-bottom: 20px; }
+        .section-title {
+            font-size: 20px;
+            color: #1a472a;
+            border-left: 4px solid #ffd700;
+            padding-left: 12px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .play-all-btn {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 4px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .section-smart-btn {
+            background: transparent;
+            border: 1px solid #2d6a4f;
+            color: #2d6a4f;
+            padding: 4px 10px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+        }
+        .vocab-card {
+            background: #fafafa;
+            border-radius: 10px;
+            padding: 10px;
+            border: 1px solid #eee;
+        }
+        .vocab-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .vocab-word {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1a472a;
+            cursor: pointer;
+        }
+        .vocab-buttons {
+            display: flex;
+            gap: 6px;
+        }
+        .action-icon-btn {
+            background: #e8f5e9;
+            border: 1px solid #2d6a4f;
+            color: #2d6a4f;
+            padding: 4px 8px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        .write-btn {
+            background: #ffd700;
+            border-color: #d4a500;
+            color: #1a472a;
+        }
+        .vocab-pinyin { color: #e94560; font-size: 13px; margin: 4px 0; }
+        .vocab-meaning { color: #666; font-size: 13px; margin-bottom: 6px; }
+        .vocab-example { background: white; padding: 6px; border-radius: 6px; font-size: 12px; }
+        .audio-btn {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 3px 7px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 10px;
+            margin-top: 5px;
+            margin-right: 5px;
+        }
+        .speak-practice-btn {
+            background: #e94560;
+            color: white;
+            border: none;
+            padding: 3px 7px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 10px;
+            margin-top: 5px;
+        }
+        .grammar-card {
+            background: #fafafa;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-left: 3px solid #ffd700;
+        }
+        .grammar-title { font-size: 16px; font-weight: bold; color: #1a472a; margin-bottom: 6px; }
+        .grammar-example-item { background: white; padding: 8px; border-radius: 6px; margin-top: 6px; font-size: 14px; }
+        .dialogue-container { background: #1a1a2e; border-radius: 10px; overflow: hidden; color: white; }
+        .dialogue-scene { padding: 12px; }
+        .dialogue-line { margin-bottom: 10px; }
+        .dialogue-speaker { font-weight: bold; margin-bottom: 3px; font-size: 13px; }
+        .speaker-male { color: #87CEEB; }
+        .speaker-female { color: #FFB6C1; }
+        .dialogue-bubble { background: rgba(255,255,255,0.1); border-radius: 10px; padding: 8px 10px; }
+        .dialogue-chinese { font-size: 16px; margin-bottom: 3px; }
+        .dialogue-pinyin { color: #aaa; font-size: 11px; }
+        .dialogue-translation { color: #888; font-size: 11px; }
+        .exercise-card { background: #fafafa; border-radius: 10px; padding: 10px; margin-bottom: 10px; }
+        .exercise-question { font-weight: bold; margin-bottom: 8px; font-size: 14px; }
+        .exercise-option { padding: 6px 10px; margin: 4px 0; background: white; border-radius: 8px; cursor: pointer; font-size: 13px; }
+        .exercise-option.selected { background: #2d6a4f; color: white; }
+        .check-exercise-btn {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 8px;
+            font-size: 12px;
+        }
+        .exercise-score { margin-top: 8px; padding: 6px; border-radius: 8px; text-align: center; font-size: 12px; }
+        .score-good { background: #d4edda; color: #28a745; }
+        .score-bad { background: #f8d7da; color: #dc3545; }
+        
+        @media (max-width: 700px) {
+            .writing-character-box { width: 180px; height: 180px; }
+            .writing-boxes-container { gap: 25px; }
+        }
+        @media (max-width: 500px) {
+            .writing-character-box { width: 140px; height: 140px; }
+            .writing-boxes-container { gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="lesson-header">
+        <h1 id="lessonTitle">HSK 1 Lesson 10: 颜色与描述 (Yánsè yǔ Miáoshù) - Colors & Descriptions</h1>
+        <p id="lessonSubtitle">Basic Colors, Adjectives, Describing People and Objects</p>
+        <div class="level-indicator">⭐ HSK Level 1 - Beginner</div>
+    </div>
+    
+    <div class="lesson-nav">
+        <button class="nav-btn" onclick="window.location.href='/hsk1/lesson9'">◀ Lesson 9: Weather</button>
+        <button class="nav-btn" onclick="window.location.href='/lessons'">📚 All Lessons</button>
+        <button class="nav-btn" onclick="window.location.href='/hsk1/practice-test'">Final Test ▶</button>
+    </div>
+    
+    <div class="ai-bar">
+        <div class="ai-bar-header">
+            <h3>🤖 AI Teacher Assistant</h3>
+            <div class="lang-toggle">
+                <button class="lang-mini-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+                <button class="lang-mini-btn" data-lang="id" onclick="setLanguage('id')">ID</button>
+            </div>
+        </div>
+        
+        <div class="ai-message">
+            <div class="greeting" id="assistantGreeting">🎨 What color do you like?</div>
+            <div class="message-content" id="assistantMessage">Today we learn: basic colors, descriptive adjectives (big/small, tall/short, new/old), and how to describe people and objects.<br>Click <strong>read 🔊</strong> to hear the word.<br>Use <strong>🎤 Practice</strong> for pronunciation.<br>Click <strong>✍️ Write</strong> to practice writing.<br>📷 <strong>Upload</strong> an image with Chinese text → Draw the character to identify it!</div>
+        </div>
+        
+        <div class="chat-area" id="chatMessages"></div>
+        
+        <div class="input-row">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Type here..." onkeypress="if(event.key==='Enter') sendChatMessage()">
+            <button class="action-btn pronounce-input-btn" onclick="pronounceChatText()">read 🔊</button>
+            <button class="action-btn" id="voiceBtn" onclick="toggleVoiceInput()">🎤 Speak</button>
+            <button class="action-btn" id="uploadBtn" onclick="document.getElementById('imageUpload').click()">📷 Upload</button>
+            <button class="send-btn" onclick="sendChatMessage()">Send</button>
+        </div>
+        <input type="file" id="imageUpload" accept="image/*">
+        <div class="chat-status" id="chatStatus">Ready</div>
+    </div>
+    
+    <div class="lesson-content" id="lessonContent"></div>
+</div>
+
+<!-- Image Helper Modal -->
+<div id="imageHelperModal" class="image-helper-modal">
+    <div class="image-helper-content">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <h3 style="color:#1a472a;">📷 Image Helper</h3>
+            <button class="close-modal" onclick="closeImageHelper()">✕</button>
+        </div>
+        <div id="imagePreview"></div>
+        <div class="draw-area">
+            <p style="margin-bottom: 8px;">✍️ Draw the character you see in the image:</p>
+            <canvas id="helperDrawCanvas" width="200" height="200" class="draw-canvas" style="width:200px; height:200px;"></canvas>
+            <div class="draw-controls">
+                <button class="draw-btn clear-btn" onclick="clearHelperCanvas()">🗑 Clear</button>
+                <button class="draw-btn find-btn" onclick="identifyDrawnCharacter()">🔍 Find Character</button>
+            </div>
+        </div>
+        <div id="characterResult" class="character-result">
+            <p>📖 Recognized character:</p>
+            <div id="foundCharacter" class="character-result-word"></div>
+            <div id="characterActions" style="margin-top: 10px;"></div>
+        </div>
+        <p style="font-size: 11px; color: #888; margin-top: 10px;">💡 Tip: Draw the character clearly, then click "Select from vocabulary" or "Type manually".</p>
+    </div>
+</div>
+
+<!-- Writing Modal -->
+<div id="writingModal" class="writing-modal">
+    <div class="writing-modal-content">
+        <div class="writing-modal-header">
+            <h3 id="writingModalTitle">✍️ Writing Practice</h3>
+            <button class="close-modal" onclick="closeWritingModal()">✕</button>
+        </div>
+        
+        <div id="writingBoxesContainer" class="writing-boxes-container"></div>
+        
+        <div class="writing-stroke-counter" id="writingStrokeCounter">
+            ✍️ Strokes Completed: <span id="writingStrokeCount">0</span> / <span id="writingTotalStrokes">0</span>
+        </div>
+        
+        <div class="writing-controls">
+            <button class="writing-btn" id="writingPlayBtn">▶ Play Animation (All)</button>
+            <button class="writing-btn write-mode-btn" id="writingWriteBtn">✍️ Write Mode</button>
+            <button class="writing-btn white-paper-mode-btn" id="writingWhitePaperBtn">📄 White Paper</button>
+            <button class="writing-btn writing-clear-btn" id="writingClearBtn">🗑 Clear All</button>
+        </div>
+        
+        <div class="status" id="writingStatus">Click "Write Mode" to start practicing! Complete each character one by one.</div>
+    </div>
+</div>
+
+<script>
+    // ============================================
+    // IMAGE HELPER - Draw to Identify Characters
+    // ============================================
+    
+    let helperCanvas = null;
+    let helperCtx = null;
+    let helperIsDrawing = false;
+    let currentUploadedImage = null;
+    
+    // Vocabulary list for matching (HSK 1 Lesson 10)
+    const vocabularyList = [
+        {"word": "颜色", "pinyin": "yán sè"}, {"word": "红色", "pinyin": "hóng sè"}, {"word": "蓝色", "pinyin": "lán sè"},
+        {"word": "黄色", "pinyin": "huáng sè"}, {"word": "绿色", "pinyin": "lǜ sè"}, {"word": "白色", "pinyin": "bái sè"},
+        {"word": "黑色", "pinyin": "hēi sè"}, {"word": "大", "pinyin": "dà"}, {"word": "小", "pinyin": "xiǎo"},
+        {"word": "多", "pinyin": "duō"}, {"word": "少", "pinyin": "shǎo"}, {"word": "高", "pinyin": "gāo"},
+        {"word": "矮", "pinyin": "ǎi"}, {"word": "胖", "pinyin": "pàng"}, {"word": "瘦", "pinyin": "shòu"},
+        {"word": "漂亮", "pinyin": "piào liang"}, {"word": "好看", "pinyin": "hǎo kàn"}, {"word": "新", "pinyin": "xīn"},
+        {"word": "旧", "pinyin": "jiù"}, {"word": "快", "pinyin": "kuài"}, {"word": "慢", "pinyin": "màn"}
+    ];
+    
+    function initHelperCanvas() {
+        helperCanvas = document.getElementById('helperDrawCanvas');
+        helperCtx = helperCanvas.getContext('2d');
+        helperCanvas.width = 200;
+        helperCanvas.height = 200;
+        helperCtx.lineWidth = 3;
+        helperCtx.lineCap = 'round';
+        helperCtx.lineJoin = 'round';
+        helperCtx.strokeStyle = '#000000';
+        helperCtx.fillStyle = 'white';
+        helperCtx.fillRect(0, 0, 200, 200);
+        
+        helperCanvas.addEventListener('mousedown', startHelperDraw);
+        helperCanvas.addEventListener('mousemove', drawHelper);
+        helperCanvas.addEventListener('mouseup', stopHelperDraw);
+        helperCanvas.addEventListener('mouseleave', stopHelperDraw);
+        helperCanvas.addEventListener('touchstart', startHelperDrawTouch);
+        helperCanvas.addEventListener('touchmove', drawHelperTouch);
+        helperCanvas.addEventListener('touchend', stopHelperDraw);
+        helperCanvas.addEventListener('touchcancel', stopHelperDraw);
+    }
+    
+    function startHelperDraw(e) { helperIsDrawing = true; const pos = getHelperCoords(e); helperCtx.beginPath(); helperCtx.moveTo(pos.x, pos.y); e.preventDefault(); }
+    function startHelperDrawTouch(e) { helperIsDrawing = true; const pos = getHelperTouchCoords(e); helperCtx.beginPath(); helperCtx.moveTo(pos.x, pos.y); e.preventDefault(); }
+    function drawHelper(e) { if (!helperIsDrawing) return; const pos = getHelperCoords(e); helperCtx.lineTo(pos.x, pos.y); helperCtx.stroke(); helperCtx.beginPath(); helperCtx.moveTo(pos.x, pos.y); e.preventDefault(); }
+    function drawHelperTouch(e) { if (!helperIsDrawing) return; const pos = getHelperTouchCoords(e); helperCtx.lineTo(pos.x, pos.y); helperCtx.stroke(); helperCtx.beginPath(); helperCtx.moveTo(pos.x, pos.y); e.preventDefault(); }
+    function stopHelperDraw() { helperIsDrawing = false; }
+    
+    function getHelperCoords(e) {
+        const rect = helperCanvas.getBoundingClientRect();
+        const scaleX = helperCanvas.width / rect.width;
+        const scaleY = helperCanvas.height / rect.height;
+        let clientX, clientY;
+        if (e.touches) { clientX = e.touches[0].clientX; clientY = e.touches[0].clientY; }
+        else { clientX = e.clientX; clientY = e.clientY; }
+        return { x: Math.min(Math.max(0, (clientX - rect.left) * scaleX), helperCanvas.width), y: Math.min(Math.max(0, (clientY - rect.top) * scaleY), helperCanvas.height) };
+    }
+    
+    function getHelperTouchCoords(e) {
+        const rect = helperCanvas.getBoundingClientRect();
+        const scaleX = helperCanvas.width / rect.width;
+        const scaleY = helperCanvas.height / rect.height;
+        const touch = e.touches[0];
+        return { x: Math.min(Math.max(0, (touch.clientX - rect.left) * scaleX), helperCanvas.width), y: Math.min(Math.max(0, (touch.clientY - rect.top) * scaleY), helperCanvas.height) };
+    }
+    
+    function clearHelperCanvas() { helperCtx.fillStyle = 'white'; helperCtx.fillRect(0, 0, 200, 200); helperCtx.strokeStyle = '#000000'; document.getElementById('characterResult').classList.remove('show'); }
+    
+    function identifyDrawnCharacter() {
+        const imageData = helperCtx.getImageData(0, 0, 200, 200);
+        let drawnPixels = 0;
+        for (let i = 0; i < imageData.data.length; i += 4) {
+            if (imageData.data[i] < 200) { drawnPixels++; }
+        }
+        const density = drawnPixels / (200 * 200);
+        
+        if (density < 0.01) {
+            addChatMessage("✏️ Please draw a character first! Use your finger or mouse to write.", false);
+            return;
+        }
+        
+        const resultDiv = document.getElementById('characterResult');
+        const foundCharDiv = document.getElementById('foundCharacter');
+        const actionsDiv = document.getElementById('characterActions');
+        
+        resultDiv.classList.add('show');
+        foundCharDiv.innerHTML = '?';
+        actionsDiv.innerHTML = `
+            <p style="font-size:13px; margin-bottom:8px;">🤔 Can't recognize automatically? Try one of these options:</p>
+            <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center;">
+                <button class="draw-btn" onclick="openCharacterSelector()">📋 Select from vocabulary</button>
+                <button class="draw-btn" onclick="typeCharacterManually()">⌨️ Type manually</button>
+            </div>
+            <p style="font-size:11px; color:#666; margin-top:8px;">💡 Tip: Click "Select from vocabulary" to pick the character you see.</p>
+        `;
+        addChatMessage("📷 Image uploaded! Please draw the character you see in the image, then use the buttons below to identify it.", false);
+    }
+    
+    function openCharacterSelector() {
+        let selectorHtml = '<div style="position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:white; border-radius:20px; padding:20px; max-width:400px; width:90%; z-index:30000; box-shadow:0 4px 20px rgba(0,0,0,0.3);"><h3 style="margin-bottom:15px;">Select the character you see</h3><div style="max-height:300px; overflow-y:auto;">';
+        vocabularyList.forEach(v => {
+            selectorHtml += `<button style="display:block; width:100%; padding:10px; margin:5px 0; text-align:left; background:#e8f5e9; border:1px solid #2d6a4f; border-radius:8px; cursor:pointer; font-size:18px;" onclick="selectCharacterFromList('${v.word}', '${v.pinyin}')">${v.word} - ${v.pinyin}</button>`;
+        });
+        selectorHtml += '</div><button style="margin-top:15px; padding:8px; background:#e94560; color:white; border:none; border-radius:25px; cursor:pointer;" onclick="closeSelector()">Cancel</button></div>';
+        const selectorDiv = document.createElement('div'); selectorDiv.id = 'tempSelector'; selectorDiv.innerHTML = selectorHtml; document.body.appendChild(selectorDiv);
+    }
+    
+    function closeSelector() { const selector = document.getElementById('tempSelector'); if (selector) selector.remove(); }
+    
+    function selectCharacterFromList(character, pinyin) {
+        closeSelector();
+        const foundCharDiv = document.getElementById('foundCharacter');
+        const actionsDiv = document.getElementById('characterActions');
+        foundCharDiv.innerHTML = character;
+        actionsDiv.innerHTML = `
+            <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+                <button class="draw-btn" onclick="addCharacterToChat('${character}', '${pinyin}')">➕ Add to chat</button>
+                <button class="draw-btn find-btn" onclick="openWritingModal('${character}', '${pinyin}')">✍️ Practice writing</button>
+                <button class="draw-btn" onclick="speakCharacter('${character}')">🔊 Listen</button>
+            </div>
+        `;
+        addChatMessage(`📖 You selected: ${character} (${pinyin})`, false);
+    }
+    
+    function typeCharacterManually() {
+        const manualInput = prompt("✏️ Type the character you see (in Chinese):");
+        if (manualInput && manualInput.length > 0) {
+            const foundCharDiv = document.getElementById('foundCharacter');
+            const actionsDiv = document.getElementById('characterActions');
+            foundCharDiv.innerHTML = manualInput;
+            actionsDiv.innerHTML = `
+                <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+                    <button class="draw-btn" onclick="addCharacterToChat('${manualInput}', '?')">➕ Add to chat</button>
+                    <button class="draw-btn find-btn" onclick="openWritingModal('${manualInput}', '?')">✍️ Practice writing</button>
+                    <button class="draw-btn" onclick="speakCharacter('${manualInput}')">🔊 Listen</button>
+                </div>
+            `;
+            addChatMessage(`📖 You typed: ${manualInput}`, false);
+        }
+    }
+    
+    function addCharacterToChat(character, pinyin) { addChatMessage(`📖 Identified character: ${character} (${pinyin})`, false); document.getElementById('chatInput').value = character; closeImageHelper(); }
+    function speakCharacter(character) { playAudio(character, 'zh', 'female'); }
+    
+    function openImageHelper(imageUrl) {
+        const previewDiv = document.getElementById('imagePreview');
+        previewDiv.innerHTML = `<img src="${imageUrl}" alt="Uploaded image">`;
+        clearHelperCanvas();
+        document.getElementById('characterResult').classList.remove('show');
+        document.getElementById('imageHelperModal').classList.add('active');
+    }
+    
+    function closeImageHelper() { document.getElementById('imageHelperModal').classList.remove('active'); }
+    
+    document.getElementById('imageUpload').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function(e) { addChatMessage("📷 Image uploaded! Opening helper...", false); openImageHelper(e.target.result); };
+        reader.readAsDataURL(file);
+        document.getElementById('imageUpload').value = '';
+    });
+    
+    // ============================================
+    // WRITING MODULE (SAME AS HSK2_LESSON1)
+    // ============================================
+    
+    let currentWord = '';
+    let currentPinyin = '';
+    let characters = [];
+    let writers = [];
+    let completedChars = [];
+    let activeCharIndex = 0;
+    let totalStrokesForCurrentChar = 0;
+    let writingModeActive = false;
+    let isWhitePaperMode = false;
+    let drawingData = {};
+    let isAnimating = false;
+    
+    const strokeMap = {
+        // Colors
+        '颜': 15, '色': 6, '红': 6, '蓝': 13, '黄': 11, '绿': 11, '白': 5, '黑': 12,
+        // Size & quantity
+        '大': 3, '小': 3, '多': 6, '少': 4,
+        // Appearance
+        '高': 10, '矮': 13, '胖': 9, '瘦': 14, '漂': 14, '亮': 9, '好': 6, '看': 9,
+        // Age condition
+        '新': 13, '旧': 5, '快': 7, '慢': 14,
+        // Common characters
+        '我': 7, '你': 7, '他': 5, '她': 6, '们': 5, '的': 8, '了': 2, '吗': 6,
+        '很': 9, '非': 8, '常': 11, '非': 8, '常': 11
+    };
+    
+    function getStrokeCount(char) { return strokeMap[char] || 6; }
+    
+    function updateStatus(msg, type) {
+        const statusDiv = document.getElementById('writingStatus');
+        statusDiv.innerHTML = msg;
+        if (type === 'success') { statusDiv.style.background = '#d4edda'; statusDiv.style.color = '#28a745'; }
+        else if (type === 'error') { statusDiv.style.background = '#f8d7da'; statusDiv.style.color = '#dc3545'; }
+        else { statusDiv.style.background = '#e8f5e9'; statusDiv.style.color = '#1a472a'; }
+    }
+    
+    function isValidStroke(strokePoints) {
+        if (strokePoints.length < 5) return false;
+        let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+        for (let p of strokePoints) { minX = Math.min(minX, p.x); maxX = Math.max(maxX, p.x); minY = Math.min(minY, p.y); maxY = Math.max(maxY, p.y); }
+        const width = maxX - minX, height = maxY - minY;
+        let totalDistance = 0;
+        for (let i = 1; i < strokePoints.length; i++) { const dx = strokePoints[i].x - strokePoints[i-1].x; const dy = strokePoints[i].y - strokePoints[i-1].y; totalDistance += Math.sqrt(dx*dx + dy*dy); }
+        if (width < 10 && height < 10) return false;
+        if (totalDistance < 20) return false;
+        return true;
+    }
+    
+    function triggerWrongStroke(charIndex) {
+        const box = document.getElementById(`char-box-${charIndex}`);
+        if (box) { box.classList.add('wrong'); setTimeout(() => box.classList.remove('wrong'), 500); }
+        updateStatus(`❌ Wrong stroke! Starting over for "${characters[charIndex]}".`, 'error');
+        if (drawingData[charIndex]) { drawingData[charIndex].strokeCount = 0; drawingData[charIndex].ctx.clearRect(0, 0, 250, 250); }
+        let totalCompleted = 0;
+        for (let i = 0; i < activeCharIndex; i++) { totalCompleted += drawingData[i]?.strokeCount || 0; }
+        document.getElementById('writingStrokeCount').innerText = totalCompleted;
+    }
+    
+    function createBoxes(container, wordChars, pinyinArray) {
+        container.innerHTML = '';
+        writers = [];
+        completedChars = new Array(wordChars.length).fill(false);
+        activeCharIndex = 0;
+        drawingData = {};
+        for (let i = 0; i < wordChars.length; i++) {
+            const char = wordChars[i];
+            const box = document.createElement('div');
+            box.className = 'writing-character-box';
+            if (i === 0) box.classList.add('active');
+            box.id = `char-box-${i}`;
+            const targetDiv = document.createElement('div');
+            targetDiv.className = 'writing-hanzi-target';
+            targetDiv.id = `hanzi-target-${i}`;
+            const canvas = document.createElement('canvas');
+            canvas.className = 'writing-draw-canvas';
+            canvas.id = `draw-canvas-${i}`;
+            canvas.width = 250;
+            canvas.height = 250;
+            const label = document.createElement('div');
+            label.className = 'box-label';
+            label.innerHTML = `${char} - ${pinyinArray[i] || currentPinyin}`;
+            box.appendChild(targetDiv);
+            box.appendChild(canvas);
+            box.appendChild(label);
+            container.appendChild(box);
+            const ctx = canvas.getContext('2d');
+            ctx.lineWidth = 4;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            ctx.strokeStyle = '#000000';
+            drawingData[i] = { canvas, ctx, isDrawing: false, points: [], strokeCount: 0, completed: false, currentStrokePoints: [] };
+            setupCanvasEvents(canvas, i);
+            try {
+                const writer = HanziWriter.create(`hanzi-target-${i}`, char, { width: 250, height: 250, showOutline: !isWhitePaperMode, showCharacter: true, outlineColor: '#d3d3d3', strokeColor: '#000000' });
+                writers.push(writer);
+            } catch(e) { writers.push(null); }
+        }
+        const totalAllStrokes = wordChars.reduce((sum, ch) => sum + getStrokeCount(ch), 0);
+        document.getElementById('writingTotalStrokes').innerText = totalAllStrokes;
+        document.getElementById('writingStrokeCount').innerText = '0';
+        totalStrokesForCurrentChar = getStrokeCount(wordChars[0]);
+    }
+    
+    function setupCanvasEvents(canvas, charIndex) {
+        const data = drawingData[charIndex];
+        const getCoords = (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+            let clientX, clientY;
+            if (e.touches) { clientX = e.touches[0].clientX; clientY = e.touches[0].clientY; }
+            else { clientX = e.clientX; clientY = e.clientY; }
+            return { x: Math.min(Math.max(0, (clientX - rect.left) * scaleX), canvas.width), y: Math.min(Math.max(0, (clientY - rect.top) * scaleY), canvas.height) };
+        };
+        const startDraw = (e) => {
+            if (!writingModeActive) { updateStatus('Click "Write Mode" first!', 'error'); return; }
+            if (charIndex !== activeCharIndex) { updateStatus(`Complete "${characters[activeCharIndex]}" first!`, 'error'); return; }
+            if (data.completed) return;
+            e.preventDefault();
+            data.isDrawing = true;
+            const pos = getCoords(e);
+            data.currentStrokePoints = [pos];
+            data.ctx.beginPath();
+            data.ctx.moveTo(pos.x, pos.y);
+        };
+        const draw = (e) => {
+            if (!data.isDrawing) return;
+            e.preventDefault();
+            const pos = getCoords(e);
+            data.ctx.lineTo(pos.x, pos.y);
+            data.ctx.stroke();
+            data.ctx.beginPath();
+            data.ctx.moveTo(pos.x, pos.y);
+            data.currentStrokePoints.push(pos);
+        };
+        const endDraw = () => {
+            if (!data.isDrawing) return;
+            data.isDrawing = false;
+            const strokePoints = data.currentStrokePoints;
+            if (strokePoints.length > 0 && !data.completed && charIndex === activeCharIndex) {
+                if (isValidStroke(strokePoints)) {
+                    data.strokeCount++;
+                    let totalCompleted = 0;
+                    for (let i = 0; i <= activeCharIndex; i++) totalCompleted += drawingData[i]?.strokeCount || 0;
+                    document.getElementById('writingStrokeCount').innerText = totalCompleted;
+                    if (data.strokeCount >= totalStrokesForCurrentChar) {
+                        data.completed = true;
+                        completedChars[charIndex] = true;
+                        const box = document.getElementById(`char-box-${charIndex}`);
+                        if (box) { box.classList.add('completed'); box.classList.remove('active'); }
+                        updateStatus(`✓ Completed "${characters[charIndex]}"!`, 'success');
+                        if (charIndex + 1 < characters.length) {
+                            activeCharIndex = charIndex + 1;
+                            totalStrokesForCurrentChar = getStrokeCount(characters[activeCharIndex]);
+                            const nextBox = document.getElementById(`char-box-${activeCharIndex}`);
+                            if (nextBox) nextBox.classList.add('active');
+                            updateStatus(`Now practice "${characters[activeCharIndex]}"! (${totalStrokesForCurrentChar} strokes)`, 'success');
+                        } else {
+                            updateStatus('🎉 CONGRATULATIONS! Complete word!', 'success');
+                            writingModeActive = false;
+                        }
+                    } else {
+                        updateStatus(`✓ Stroke ${data.strokeCount}/${totalStrokesForCurrentChar} completed!`, 'success');
+                    }
+                } else if (strokePoints.length >= 3) { triggerWrongStroke(charIndex); }
+            }
+            data.currentStrokePoints = [];
+        };
+        canvas.addEventListener('mousedown', startDraw);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', endDraw);
+        canvas.addEventListener('mouseleave', endDraw);
+        canvas.addEventListener('touchstart', startDraw);
+        canvas.addEventListener('touchmove', draw);
+        canvas.addEventListener('touchend', endDraw);
+        canvas.addEventListener('touchcancel', endDraw);
+    }
+    
+    function playContinuousAnimation() {
+        if (isAnimating) { updateStatus('Animation already playing...', 'info'); return; }
+        if (characters.length === 0) { updateStatus('No characters to animate.', 'error'); return; }
+        isAnimating = true;
+        let currentAnimIndex = 0;
+        function animateNextCharacter() {
+            if (currentAnimIndex >= characters.length) {
+                isAnimating = false;
+                updateStatus('🎬 Animation complete for all characters!', 'success');
+                return;
+            }
+            const char = characters[currentAnimIndex];
+            const targetId = `hanzi-target-${currentAnimIndex}`;
+            const targetDiv = document.getElementById(targetId);
+            if (targetDiv) {
+                updateStatus(`🎬 Playing animation for "${char}" (${currentAnimIndex + 1}/${characters.length})...`, 'success');
+                for (let i = 0; i < characters.length; i++) {
+                    const box = document.getElementById(`char-box-${i}`);
+                    if (box) box.style.boxShadow = i === currentAnimIndex ? '0 0 0 3px #ffd700, 0 0 15px rgba(255,215,0,0.8)' : 'none';
+                }
+                targetDiv.innerHTML = '';
+                const tempWriter = HanziWriter.create(targetId, char, { width: 250, height: 250, showOutline: true, showCharacter: true, outlineColor: '#d3d3d3', strokeColor: '#2d6a4f' });
+                setTimeout(() => {
+                    tempWriter.animateCharacter({ onComplete: () => { currentAnimIndex++; setTimeout(animateNextCharacter, 800); } });
+                }, 200);
+            } else { currentAnimIndex++; setTimeout(animateNextCharacter, 500); }
+        }
+        animateNextCharacter();
+    }
+    
+    function enableWriteMode() {
+        if (isAnimating) isAnimating = false;
+        writingModeActive = true;
+        isWhitePaperMode = false;
+        for (let i = 0; i < characters.length; i++) {
+            if (drawingData[i]) {
+                drawingData[i].strokeCount = 0;
+                drawingData[i].completed = false;
+                drawingData[i].ctx.clearRect(0, 0, 250, 250);
+                const targetDiv = document.getElementById(`hanzi-target-${i}`);
+                if (targetDiv) {
+                    targetDiv.innerHTML = '';
+                    try { writers[i] = HanziWriter.create(`hanzi-target-${i}`, characters[i], { width: 250, height: 250, showOutline: true, showCharacter: false, outlineColor: '#d3d3d3', strokeColor: '#000000' }); } catch(e) {}
+                }
+            }
+        }
+        completedChars.fill(false);
+        activeCharIndex = 0;
+        totalStrokesForCurrentChar = getStrokeCount(characters[0]);
+        for (let i = 0; i < characters.length; i++) {
+            const box = document.getElementById(`char-box-${i}`);
+            if (box) { box.classList.remove('completed', 'active'); box.style.boxShadow = 'none'; if (i === 0) box.classList.add('active'); }
+        }
+        document.getElementById('writingStrokeCount').innerText = '0';
+        const totalAllStrokes = characters.reduce((sum, ch) => sum + getStrokeCount(ch), 0);
+        document.getElementById('writingTotalStrokes').innerText = totalAllStrokes;
+        updateStatus(`✍️ Write mode activated! Complete "${characters[0]}" first (${totalStrokesForCurrentChar} strokes).`, 'success');
+    }
+    
+    function enableWhitePaperMode() {
+        if (isAnimating) isAnimating = false;
+        writingModeActive = true;
+        isWhitePaperMode = true;
+        for (let i = 0; i < characters.length; i++) {
+            if (drawingData[i]) {
+                drawingData[i].strokeCount = 0;
+                drawingData[i].completed = false;
+                drawingData[i].ctx.clearRect(0, 0, 250, 250);
+                const targetDiv = document.getElementById(`hanzi-target-${i}`);
+                if (targetDiv) {
+                    targetDiv.innerHTML = '';
+                    try { writers[i] = HanziWriter.create(`hanzi-target-${i}`, characters[i], { width: 250, height: 250, showOutline: false, showCharacter: false, strokeColor: '#000000' }); } catch(e) {}
+                }
+            }
+        }
+        completedChars.fill(false);
+        activeCharIndex = 0;
+        totalStrokesForCurrentChar = getStrokeCount(characters[0]);
+        for (let i = 0; i < characters.length; i++) {
+            const box = document.getElementById(`char-box-${i}`);
+            if (box) { box.classList.remove('completed', 'active'); box.style.boxShadow = 'none'; if (i === 0) box.classList.add('active'); }
+        }
+        document.getElementById('writingStrokeCount').innerText = '0';
+        const totalAllStrokes = characters.reduce((sum, ch) => sum + getStrokeCount(ch), 0);
+        document.getElementById('writingTotalStrokes').innerText = totalAllStrokes;
+        updateStatus('📄 White paper mode - Write from memory!', 'success');
+    }
+    
+    function clearAll() {
+        if (isAnimating) isAnimating = false;
+        for (let i = 0; i < characters.length; i++) {
+            if (drawingData[i]) { drawingData[i].ctx.clearRect(0, 0, 250, 250); drawingData[i].strokeCount = 0; drawingData[i].completed = false; }
+            const box = document.getElementById(`char-box-${i}`); if (box) box.style.boxShadow = 'none';
+        }
+        completedChars.fill(false);
+        activeCharIndex = 0;
+        totalStrokesForCurrentChar = getStrokeCount(characters[0]);
+        for (let i = 0; i < characters.length; i++) {
+            const box = document.getElementById(`char-box-${i}`);
+            if (box) { box.classList.remove('completed', 'active'); if (i === 0) box.classList.add('active'); }
+        }
+        document.getElementById('writingStrokeCount').innerText = '0';
+        updateStatus('Canvas cleared. Start over!', 'info');
+        if (writingModeActive && !isWhitePaperMode) {
+            for (let i = 0; i < characters.length; i++) {
+                const targetDiv = document.getElementById(`hanzi-target-${i}`);
+                if (targetDiv) {
+                    targetDiv.innerHTML = '';
+                    try { writers[i] = HanziWriter.create(`hanzi-target-${i}`, characters[i], { width: 250, height: 250, showOutline: true, showCharacter: false, outlineColor: '#d3d3d3', strokeColor: '#000000' }); } catch(e) {}
+                }
+            }
+        }
+    }
+    
+    function openWritingModal(word, pinyin) {
+        currentWord = word;
+        currentPinyin = pinyin;
+        characters = word.split('');
+        const pinyinChars = pinyin.split(' ');
+        const container = document.getElementById('writingBoxesContainer');
+        createBoxes(container, characters, pinyinChars);
+        document.getElementById('writingModalTitle').innerHTML = `✍️ Writing: ${word} (${pinyin})`;
+        document.getElementById('writingModal').classList.add('active');
+        writingModeActive = false;
+        isWhitePaperMode = false;
+        isAnimating = false;
+        closeImageHelper();
+    }
+    
+    function closeWritingModal() { 
+        if (isAnimating) isAnimating = false;
+        document.getElementById('writingModal').classList.remove('active'); 
+    }
+    
+    // ============================================
+    // HSK 1 LESSON 10 - COLORS & DESCRIPTIONS
+    // ============================================
+    
+    let currentLanguage = 'en';
+    let isRecording = false;
+    let recognition = null;
+    let pronunciationRecognition = null;
+    let audioQueue = [];
+    let isPlaying = false;
+    let chatHistory = [];
+    let userAnswers = {};
+    
+    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        recognition = new SpeechRecognition();
+        recognition.lang = 'zh-CN';
+        pronunciationRecognition = new SpeechRecognition();
+        pronunciationRecognition.lang = 'zh-CN';
+    }
+    
+    // HSK 1 Lesson 10 Vocabulary: Colors, Adjectives, Descriptions
+    const vocabulary = [
+        {"word": "颜色", "pinyin": "yán sè", "meaning": "color", "meaning_id": "warna", "example": "你喜欢什么颜色？", "example_translation": "What color do you like?", "example_translation_id": "Warna apa yang Anda suka?"},
+        {"word": "红色", "pinyin": "hóng sè", "meaning": "red", "meaning_id": "merah", "example": "红色的苹果", "example_translation": "Red apple", "example_translation_id": "Apel merah"},
+        {"word": "蓝色", "pinyin": "lán sè", "meaning": "blue", "meaning_id": "biru", "example": "蓝色的天", "example_translation": "Blue sky", "example_translation_id": "Langit biru"},
+        {"word": "黄色", "pinyin": "huáng sè", "meaning": "yellow", "meaning_id": "kuning", "example": "黄色的花", "example_translation": "Yellow flower", "example_translation_id": "Bunga kuning"},
+        {"word": "绿色", "pinyin": "lǜ sè", "meaning": "green", "meaning_id": "hijau", "example": "绿色的草", "example_translation": "Green grass", "example_translation_id": "Rumput hijau"},
+        {"word": "白色", "pinyin": "bái sè", "meaning": "white", "meaning_id": "putih", "example": "白色的云", "example_translation": "White clouds", "example_translation_id": "Awan putih"},
+        {"word": "黑色", "pinyin": "hēi sè", "meaning": "black", "meaning_id": "hitam", "example": "黑色的头发", "example_translation": "Black hair", "example_translation_id": "Rambut hitam"},
+        {"word": "大", "pinyin": "dà", "meaning": "big", "meaning_id": "besar", "example": "很大的房子", "example_translation": "Very big house", "example_translation_id": "Rumah yang sangat besar"},
+        {"word": "小", "pinyin": "xiǎo", "meaning": "small", "meaning_id": "kecil", "example": "小狗", "example_translation": "Small dog", "example_translation_id": "Anjing kecil"},
+        {"word": "多", "pinyin": "duō", "meaning": "many/much", "meaning_id": "banyak", "example": "很多人", "example_translation": "Many people", "example_translation_id": "Banyak orang"},
+        {"word": "少", "pinyin": "shǎo", "meaning": "few/little", "meaning_id": "sedikit", "example": "很少的钱", "example_translation": "Very little money", "example_translation_id": "Uang sangat sedikit"},
+        {"word": "高", "pinyin": "gāo", "meaning": "tall/high", "meaning_id": "tinggi", "example": "很高的山", "example_translation": "Very tall mountain", "example_translation_id": "Gunung yang sangat tinggi"},
+        {"word": "矮", "pinyin": "ǎi", "meaning": "short", "meaning_id": "pendek", "example": "矮个子", "example_translation": "Short person", "example_translation_id": "Orang pendek"},
+        {"word": "胖", "pinyin": "pàng", "meaning": "fat", "meaning_id": "gemuk", "example": "胖猫", "example_translation": "Fat cat", "example_translation_id": "Kucing gemuk"},
+        {"word": "瘦", "pinyin": "shòu", "meaning": "thin", "meaning_id": "kurus", "example": "瘦瘦的女孩", "example_translation": "Thin girl", "example_translation_id": "Gadis kurus"},
+        {"word": "漂亮", "pinyin": "piào liang", "meaning": "beautiful", "meaning_id": "cantik", "example": "很漂亮的花", "example_translation": "Beautiful flowers", "example_translation_id": "Bunga yang cantik"},
+        {"word": "好看", "pinyin": "hǎo kàn", "meaning": "good-looking", "meaning_id": "bagus dilihat", "example": "这件衣服很好看", "example_translation": "This clothing is good-looking", "example_translation_id": "Pakaian ini bagus"},
+        {"word": "新", "pinyin": "xīn", "meaning": "new", "meaning_id": "baru", "example": "新书", "example_translation": "New book", "example_translation_id": "Buku baru"},
+        {"word": "旧", "pinyin": "jiù", "meaning": "old", "meaning_id": "lama", "example": "旧衣服", "example_translation": "Old clothes", "example_translation_id": "Pakaian lama"},
+        {"word": "快", "pinyin": "kuài", "meaning": "fast", "meaning_id": "cepat", "example": "很快的车", "example_translation": "Fast car", "example_translation_id": "Mobil cepat"},
+        {"word": "慢", "pinyin": "màn", "meaning": "slow", "meaning_id": "lambat", "example": "慢慢地走", "example_translation": "Walk slowly", "example_translation_id": "Berjalan pelan-pelan"}
+    ];
+    
+    const grammar = [
+        {"point": "Describing with Adjectives: 很 (hěn)", "point_id": "Mendeskripsikan dengan Kata Sifat: 很 (hěn)",
+            "explanation": "Use 很 (hěn) before adjectives to connect subject and description. 很 means 'very' but often just a linking word.",
+            "explanation_id": "Gunakan 很 (hěn) sebelum kata sifat untuk menghubungkan subjek dan deskripsi. 很 berarti 'sangat' tetapi sering hanya kata penghubung.",
+            "examples": [
+                {"chinese": "这个苹果很大。", "translation": "This apple is big.", "translation_id": "Apel ini besar."},
+                {"chinese": "她很漂亮。", "translation": "She is beautiful.", "translation_id": "Dia cantik."},
+                {"chinese": "你的车很快。", "translation": "Your car is fast.", "translation_id": "Mobil Anda cepat."}
+            ]},
+        {"point": "Negative Form: 不 (bù)", "point_id": "Bentuk Negatif: 不 (bù)",
+            "explanation": "Use 不 (bù) before adjectives to make negative statements. 不 + adjective = not (adjective).",
+            "explanation_id": "Gunakan 不 (bù) sebelum kata sifat untuk membuat pernyataan negatif. 不 + kata sifat = tidak (kata sifat).",
+            "examples": [
+                {"chinese": "他不高。", "translation": "He is not tall.", "translation_id": "Dia tidak tinggi."},
+                {"chinese": "这个不贵。", "translation": "This is not expensive.", "translation_id": "Ini tidak mahal."},
+                {"chinese": "我不喜欢红色。", "translation": "I don't like red.", "translation_id": "Saya tidak suka merah."}
+            ]},
+        {"point": "Colors as Nouns: 颜色 (yán sè)", "point_id": "Warna sebagai Kata Benda: 颜色 (yán sè)",
+            "explanation": "Colors in Chinese can be used as nouns. 红色 = red color, 蓝色 = blue color, etc.",
+            "explanation_id": "Warna dalam bahasa Mandarin dapat digunakan sebagai kata benda. 红色 = warna merah, 蓝色 = warna biru, dll.",
+            "examples": [
+                {"chinese": "红色很好看。", "translation": "Red is very pretty.", "translation_id": "Merah sangat cantik."},
+                {"chinese": "我喜欢蓝色。", "translation": "I like blue.", "translation_id": "Saya suka biru."},
+                {"chinese": "你的衣服是什么颜色？", "translation": "What color are your clothes?", "translation_id": "Warna apa pakaian Anda?"}
+            ]}
+    ];
+    
+    const dialogue = [
+        {"speaker": "male", "name": "Tom", "voice": "male", "chinese": "你喜欢什么颜色？", "pinyin": "Nǐ xǐhuan shénme yánsè?", "translation": "What color do you like?"},
+        {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "我喜欢蓝色和白色。你呢？", "pinyin": "Wǒ xǐhuan lán sè hé bái sè. Nǐ ne?", "translation": "I like blue and white. And you?"},
+        {"speaker": "male", "name": "Tom", "voice": "male", "chinese": "我喜欢红色。红色很好看。", "pinyin": "Wǒ xǐhuan hóng sè. Hóng sè hěn hǎokàn.", "translation": "I like red. Red is very beautiful."},
+        {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你的新衣服是什么颜色？", "pinyin": "Nǐ de xīn yīfu shì shénme yánsè?", "translation": "What color are your new clothes?"},
+        {"speaker": "male", "name": "Tom", "voice": "male", "chinese": "黑色的。不大也不小。", "pinyin": "Hēi sè de. Bù dà yě bù xiǎo.", "translation": "Black. Not big and not small."},
+        {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你的朋友高吗？", "pinyin": "Nǐ de péngyou gāo ma?", "translation": "Is your friend tall?"},
+        {"speaker": "male", "name": "Tom", "voice": "male", "chinese": "他很高，也很瘦。", "pinyin": "Tā hěn gāo, yě hěn shòu.", "translation": "He is very tall and also thin."},
+        {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你的车快吗？", "pinyin": "Nǐ de chē kuài ma?", "translation": "Is your car fast?"},
+        {"speaker": "male", "name": "Tom", "voice": "male", "chinese": "不快，很慢。但是很漂亮。", "pinyin": "Bù kuài, hěn màn. Dànshì hěn piàoliang.", "translation": "Not fast, very slow. But very beautiful."}
+    ];
+    
+    const exercises = [
+        {question: "What does 颜色 (yán sè) mean?", "options": ["Color", "Red", "Blue", "Yellow"], "correct": 0},
+        {question: "What is 'red' in Chinese?", "options": ["蓝色 (lán sè)", "红色 (hóng sè)", "黄色 (huáng sè)", "绿色 (lǜ sè)"], "correct": 1},
+        {question: "How do you say 'big' in Chinese?", "options": ["小 (xiǎo)", "多 (duō)", "大 (dà)", "少 (shǎo)"], "correct": 2},
+        {question: "What does 漂亮 (piào liang) mean?", "options": ["Ugly", "Beautiful", "Tall", "Short"], "correct": 1},
+        {question: "What is the pinyin for 'tall'?", "options": ["ǎi", "gāo", "pàng", "shòu"], "correct": 1},
+        {question: "How do you say 'This apple is big' in Chinese?", "options": ["这个苹果小", "这个苹果很大", "这个苹果红", "这个苹果好吃"], "correct": 1},
+        {question: "What does 新 (xīn) mean?", "options": ["Old", "New", "Fast", "Slow"], "correct": 1},
+        {question: "What is the negative form of 高 (gāo)?", "options": ["很高", "不高", "太高", "很高吗"], "correct": 1},
+        {question: "What does 快 (kuài) mean?", "options": ["Slow", "Fast", "Big", "Small"], "correct": 1},
+        {question: "How do you ask 'What color do you like?' in Chinese?", "options": ["你喜欢什么？", "你喜欢什么颜色？", "你喜欢哪个？", "你喜欢大吗？"], "correct": 1}
+    ];
+    
+    const translations = {
+        en: { lessonTitle: "HSK 1 Lesson 10: 颜色与描述 (Yánsè yǔ Miáoshù) - Colors & Descriptions", lessonSubtitle: "Basic Colors, Adjectives, Describing People and Objects", assistantGreeting: "🎨 What color do you like?", assistantMessage: "Today we learn: basic colors, descriptive adjectives (big/small, tall/short, new/old), and how to describe people and objects.<br>Click <strong>read 🔊</strong> to hear the word.<br>Use <strong>🎤 Practice</strong> for pronunciation.<br>Click <strong>✍️ Write</strong> to practice writing.<br>📷 <strong>Upload</strong> an image with Chinese text → Draw the character to identify it!", vocabulary: "Vocabulary (21 words)", grammar: "Grammar Points", conversation: "Describing Colors & People", exercises: "Lesson Exercises", playAll: "🔊 Play All", askAI: "🤖 Ask AI", explain: "🤖 Explain", practice: "🤖 Practice", more: "🤖 More", read: "read 🔊", listen: "🔊 Listen", practiceWord: "🎤 Practice", write: "✍️ Write", checkAnswers: "Check Answers", score: "Score", greatJob: "Great job! You're making excellent progress!", reviewLesson: "Review and try again." },
+        id: { lessonTitle: "HSK 1 Pelajaran 10: 颜色与描述 (Yánsè yǔ Miáoshù) - Warna & Deskripsi", lessonSubtitle: "Warna Dasar, Kata Sifat, Mendeskripsikan Orang dan Benda", assistantGreeting: "🎨 Warna apa yang Anda suka?", assistantMessage: "Hari ini kita belajar: warna dasar, kata sifat deskriptif (besar/kecil, tinggi/pendek, baru/lama), dan cara mendeskripsikan orang dan benda.<br>Klik <strong>read 🔊</strong> untuk mendengar kata.<br>Gunakan <strong>🎤 Practice</strong> untuk latihan pengucapan.<br>Klik <strong>✍️ Write</strong> untuk latihan menulis.<br>📷 <strong>Upload</strong> gambar dengan teks Mandarin → Gambar karakter untuk mengidentifikasinya!", vocabulary: "Kosakata (21 kata)", grammar: "Tata Bahasa", conversation: "Mendeskripsikan Warna & Orang", exercises: "Latihan", playAll: "🔊 Putar Semua", askAI: "🤖 Tanya AI", explain: "🤖 Jelaskan", practice: "🤖 Latihan", more: "🤖 Lagi", read: "baca 🔊", listen: "🔊 Dengarkan", practiceWord: "🎤 Latihan", write: "✍️ Tulis", checkAnswers: "Periksa Jawaban", score: "Nilai", greatJob: "Kerja bagus! Anda membuat kemajuan yang luar biasa!", reviewLesson: "Pelajari lagi." }
+    };
+    
+    function setLanguage(lang) {
+        currentLanguage = lang;
+        document.querySelectorAll('.lang-mini-btn').forEach(btn => { btn.classList.remove('active'); if (btn.dataset.lang === lang) btn.classList.add('active'); });
+        document.getElementById('lessonTitle').innerHTML = translations[lang].lessonTitle;
+        document.getElementById('lessonSubtitle').innerHTML = translations[lang].lessonSubtitle;
+        document.getElementById('assistantGreeting').innerHTML = translations[lang].assistantGreeting;
+        document.getElementById('assistantMessage').innerHTML = translations[lang].assistantMessage;
+        renderContent();
+    }
+    
+    async function playAudio(text, language = 'zh', voiceType = 'female') {
+        if (!text) return;
+        audioQueue.push({text, language, voiceType});
+        if (!isPlaying) processAudioQueue();
+    }
+    
+    async function processAudioQueue() {
+        if (audioQueue.length === 0) { isPlaying = false; return; }
+        isPlaying = true;
+        const item = audioQueue.shift();
+        try {
+            const response = await fetch('/api/speak', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text: item.text, language: item.language, voice: item.voiceType }) });
+            if (response.ok) {
+                const audioBlob = await response.blob();
+                const audio = new Audio(URL.createObjectURL(audioBlob));
+                audio.onended = () => setTimeout(() => processAudioQueue(), 200);
+                audio.play();
+            } else {
+                const utterance = new SpeechSynthesisUtterance(item.text);
+                utterance.lang = item.language === 'zh' ? 'zh-CN' : 'en-US';
+                utterance.rate = 0.75;
+                utterance.onend = () => setTimeout(() => processAudioQueue(), 200);
+                speechSynthesis.speak(utterance);
+            }
+        } catch(e) { processAudioQueue(); }
+    }
+    
+    function playWord(word) { playAudio(word, 'zh', 'female'); }
+    
+    function startPronunciationPractice(word, pinyin) {
+        if (!pronunciationRecognition) { addChatMessage("⚠️ Speech recognition not supported", false); return; }
+        pronunciationRecognition.start();
+        pronunciationRecognition.onresult = function(event) {
+            const spoken = event.results[0][0].transcript;
+            const isCorrect = spoken === word || spoken === pinyin || spoken.includes(word);
+            addChatMessage(isCorrect ? `✅ Excellent pronunciation of "${word}"!` : `❌ Try again. Correct: "${word}" (${pinyin})`, false);
+        };
+        pronunciationRecognition.onerror = function() { addChatMessage("❌ Could not hear you. Please try again.", false); };
+    }
+    
+    function toggleVoiceInput() {
+        if (!recognition) { addChatMessage("⚠️ Voice input not supported", false); return; }
+        if (isRecording) { recognition.stop(); return; }
+        isRecording = true;
+        const voiceBtn = document.getElementById('voiceBtn');
+        voiceBtn.classList.add('recording');
+        recognition.start();
+        recognition.onresult = function(event) { document.getElementById('chatInput').value = event.results[0][0].transcript; isRecording = false; voiceBtn.classList.remove('recording'); };
+        recognition.onerror = function() { isRecording = false; voiceBtn.classList.remove('recording'); };
+        recognition.onend = function() { if (isRecording) { isRecording = false; voiceBtn.classList.remove('recording'); } };
+    }
+    
+    function pronounceChatText() {
+        const inputText = document.getElementById('chatInput').value.trim();
+        if (inputText) {
+            const chineseChars = inputText.match(/[\u4e00-\u9fff]/g);
+            if (chineseChars && chineseChars.length > 0) { playAudio(chineseChars.join(''), 'zh', 'female'); addChatMessage(`🔊 Pronouncing: "${chineseChars.join('')}"`, false); }
+            else { playAudio(inputText, 'zh', 'female'); addChatMessage(`🔊 Pronouncing: "${inputText}"`, false); }
+        } else { addChatMessage("⚠️ Please type or paste Chinese text first.", false); }
+    }
+    
+    async function sendChatMessage() {
+        const input = document.getElementById('chatInput');
+        const message = input.value.trim();
+        if (!message) return;
+        addChatMessage(message, true);
+        input.value = '';
+        document.getElementById('chatStatus').innerHTML = '🤔 Thinking...';
+        try {
+            const response = await fetch('/api/ai-assistant', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message, level: 1, history: chatHistory, language: currentLanguage }) });
+            const data = await response.json();
+            addChatMessage(data.reply, false);
+            chatHistory.push({"role": "user", "content": message}, {"role": "assistant", "content": data.reply});
+            document.getElementById('chatStatus').innerHTML = 'Ready';
+        } catch(error) { addChatMessage("Connection error. Please try again.", false); document.getElementById('chatStatus').innerHTML = 'Error'; }
+    }
+    
+    function addChatMessage(text, isUser) {
+        const messagesDiv = document.getElementById('chatMessages');
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `chat-message ${isUser ? 'user' : 'ai'}`;
+        let messageHtml = text;
+        if (!isUser && text.match(/[\u4e00-\u9fff]/)) {
+            const chineseChars = text.match(/[\u4e00-\u9fff]+/g);
+            if (chineseChars) { const firstChinese = chineseChars[0]; messageHtml = `${text} <button class="pronounce-chat-btn" onclick="playAudio('${firstChinese}', 'zh', 'female')">read 🔊</button>`; }
+        }
+        messageDiv.innerHTML = messageHtml;
+        messagesDiv.appendChild(messageDiv);
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+    
+    function requestGrammarExplanation() { sendManualMessage(currentLanguage === 'en' ? "Please explain how to use adjectives and colors to describe things in Chinese." : "Tolong jelaskan cara menggunakan kata sifat dan warna untuk mendeskripsikan benda dalam bahasa Mandarin."); }
+    function startConversationPartner() { sendManualMessage(currentLanguage === 'en' ? "Let's practice describing things! What color is your shirt? Is it big or small?" : "Mari berlatih mendeskripsikan benda! Warna apa baju Anda? Besar atau kecil?"); }
+    function requestPersonalizedExercise() { sendManualMessage(currentLanguage === 'en' ? "Please create a quiz about colors and descriptive adjectives." : "Tolong buatkan kuis tentang warna dan kata sifat deskriptif."); }
+    function sendManualMessage(msg) { document.getElementById('chatInput').value = msg; sendChatMessage(); }
+    
+    function renderContent() {
+        const container = document.getElementById('lessonContent');
+        const t = translations[currentLanguage];
+        container.innerHTML = `
+            <div class="section"><div class="section-title">📖 ${t.vocabulary} (${vocabulary.length})<div><button class="play-all-btn" onclick="playAllVocabulary()">${t.playAll}</button><button class="section-smart-btn" onclick="sendManualMessage('Help me understand this vocabulary')">${t.askAI}</button></div></div>
+            <div class="vocab-grid" id="vocabGrid"></div></div>
+            <div class="section"><div class="section-title">📖 ${t.grammar}<div><button class="play-all-btn" onclick="playAllGrammar()">${t.playAll}</button><button class="section-smart-btn" onclick="requestGrammarExplanation()">${t.explain}</button></div></div>
+            <div id="grammarContainer"></div></div>
+            <div class="section"><div class="section-title">💬 ${t.conversation}<div><button class="play-all-btn" onclick="playAllDialogue()">${t.playAll}</button><button class="section-smart-btn" onclick="startConversationPartner()">${t.practice}</button></div></div>
+            <div class="dialogue-container"><div class="dialogue-scene" id="dialogueContainer"></div></div></div>
+            <div class="section"><div class="section-title">✍️ ${t.exercises}<button class="section-smart-btn" onclick="requestPersonalizedExercise()">${t.more}</button></div>
+            <div id="exercisesContainer"></div><button class="check-exercise-btn" onclick="checkExercises()">${t.checkAnswers}</button>
+            <div id="exerciseScore" class="exercise-score" style="display:none;"></div></div>
+        `;
+        
+        document.getElementById('vocabGrid').innerHTML = vocabulary.map(v => `
+            <div class="vocab-card">
+                <div class="vocab-header"><div class="vocab-word" onclick="playWord('${v.word}')">${v.word}</div><div class="vocab-buttons"><button class="action-icon-btn" onclick="playWord('${v.word}')" title="${t.read}">read 🔊</button><button class="action-icon-btn write-btn" onclick="openWritingModal('${v.word}', '${v.pinyin}')" title="${t.write}">✍️ Write</button></div></div>
+                <div class="vocab-pinyin">${v.pinyin}</div><div class="vocab-meaning">${currentLanguage === 'en' ? v.meaning : v.meaning_id}</div>
+                <div class="vocab-example"><div>📝 ${v.example}</div><div style="font-size:9px;color:#888;">→ ${currentLanguage === 'en' ? v.example_translation : v.example_translation_id}</div><button class="audio-btn" onclick="playAudio('${v.example}','zh','female')">🔊 ${t.listen}</button><button class="speak-practice-btn" onclick="startPronunciationPractice('${v.word}','${v.pinyin}')">🎤 ${t.practiceWord}</button></div>
+            </div>
+        `).join('');
+        
+        document.getElementById('grammarContainer').innerHTML = grammar.map(g => `<div class="grammar-card"><div class="grammar-title">${currentLanguage === 'en' ? g.point : g.point_id}</div><div style="font-size:12px; color:#555; margin-bottom:8px;">${currentLanguage === 'en' ? g.explanation : g.explanation_id}</div>${g.examples.map(ex => `<div class="grammar-example-item"><div>${ex.chinese}</div><div style="font-size:10px;color:#666;">→ ${currentLanguage === 'en' ? ex.translation : ex.translation_id}</div><button class="audio-btn" onclick="playAudio('${ex.chinese}','zh','female')">🔊 ${t.listen}</button></div>`).join('')}</div>`).join('');
+        
+        document.getElementById('dialogueContainer').innerHTML = dialogue.map(line => `<div class="dialogue-line"><div class="dialogue-speaker ${line.speaker === 'male' ? 'speaker-male' : 'speaker-female'}">${line.speaker === 'male' ? '👨' : '👩'} ${line.name}:</div><div class="dialogue-bubble"><div class="dialogue-chinese">${line.chinese}</div><div class="dialogue-pinyin">${line.pinyin}</div><div class="dialogue-translation">→ ${line.translation}</div><button class="audio-btn" onclick="playAudio('${line.chinese}','zh','${line.voice}')">🔊 ${t.listen}</button></div></div>`).join('');
+        
+        document.getElementById('exercisesContainer').innerHTML = exercises.map((ex, idx) => `<div class="exercise-card"><div class="exercise-question">${idx+1}. ${ex.question}</div>${ex.options.map((opt, optIdx) => `<div class="exercise-option" onclick="selectAnswer(${idx},${optIdx})">${String.fromCharCode(65+optIdx)}. ${opt}</div>`).join('')}</div>`).join('');
+    }
+    
+    function selectAnswer(exIdx, optIdx) { userAnswers[exIdx] = optIdx; const opts = document.querySelectorAll(`.exercise-card:nth-child(${exIdx+1}) .exercise-option`); opts.forEach(opt => opt.classList.remove('selected')); opts[optIdx].classList.add('selected'); }
+    function checkExercises() {
+        let correct = 0;
+        exercises.forEach((ex, idx) => { if (userAnswers[idx] === ex.correct) correct++; });
+        const percent = Math.round((correct / exercises.length) * 100);
+        const scoreDiv = document.getElementById('exerciseScore');
+        scoreDiv.style.display = 'block';
+        scoreDiv.className = percent >= 70 ? 'exercise-score score-good' : 'exercise-score score-bad';
+        const t = translations[currentLanguage];
+        scoreDiv.innerHTML = percent >= 70 ? `✅ ${t.score}: ${correct}/${exercises.length} (${percent}%) - ${t.greatJob}` : `📚 ${t.score}: ${correct}/${exercises.length} (${percent}%) - ${t.reviewLesson}`;
+    }
+    
+    function playAllVocabulary() { let i=0; function n(){ if(i>=vocabulary.length) return; playAudio(vocabulary[i++].word,'zh','female'); setTimeout(n,1800); } n(); }
+    function playAllGrammar() { let g=0, e=0; function n(){ if(g>=grammar.length) return; if(e===0){ playAudio(grammar[g].point+'. '+grammar[g].explanation,'en','female'); e++; setTimeout(n,4500); } else if(e-1<grammar[g].examples.length){ playAudio(grammar[g].examples[e-1].chinese,'zh','female'); e++; setTimeout(n,2500); } else { g++; e=0; setTimeout(n,1500); } } n(); }
+    function playAllDialogue() { let i=0; function n(){ if(i>=dialogue.length) return; playAudio(dialogue[i].chinese,'zh',dialogue[i].voice); i++; setTimeout(n,4000); } n(); }
+    
+    document.getElementById('writingPlayBtn').onclick = playContinuousAnimation;
+    document.getElementById('writingWriteBtn').onclick = enableWriteMode;
+    document.getElementById('writingWhitePaperBtn').onclick = enableWhitePaperMode;
+    document.getElementById('writingClearBtn').onclick = clearAll;
+    
+    initHelperCanvas();
+    renderContent();
+    
+    window.playAudio = playAudio;
+    window.playWord = playWord;
+    window.startPronunciationPractice = startPronunciationPractice;
+    window.selectAnswer = selectAnswer;
+    window.checkExercises = checkExercises;
+    window.playAllVocabulary = playAllVocabulary;
+    window.playAllGrammar = playAllGrammar;
+    window.playAllDialogue = playAllDialogue;
+    window.sendChatMessage = sendChatMessage;
+    window.sendManualMessage = sendManualMessage;
+    window.requestGrammarExplanation = requestGrammarExplanation;
+    window.startConversationPartner = startConversationPartner;
+    window.requestPersonalizedExercise = requestPersonalizedExercise;
+    window.setLanguage = setLanguage;
+    window.toggleVoiceInput = toggleVoiceInput;
+    window.pronounceChatText = pronounceChatText;
+    window.openWritingModal = openWritingModal;
+    window.closeWritingModal = closeWritingModal;
+    window.openCharacterSelector = openCharacterSelector;
+    window.closeSelector = closeSelector;
+    window.selectCharacterFromList = selectCharacterFromList;
+    window.typeCharacterManually = typeCharacterManually;
+    window.addCharacterToChat = addCharacterToChat;
+    window.speakCharacter = speakCharacter;
+    window.closeImageHelper = closeImageHelper;
+    window.clearHelperCanvas = clearHelperCanvas;
+    window.identifyDrawnCharacter = identifyDrawnCharacter;
+</script>
+</body>
+</html>

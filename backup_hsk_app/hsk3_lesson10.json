@@ -1,0 +1,51 @@
+{
+  "title": "他正在看书呢",
+  "subtitle": "Progressive Actions with 正在...呢, Emphasizing Ongoing Activities",
+  "assistant_message": "Today we learn: emphasizing ongoing actions with 正在...呢, using 在 vs 正在, and talking about current activities.",
+  "vocabulary": [
+    {"word": "正在", "pinyin": "zhèng zài", "meaning": "in progress (emphatic)", "meaning_id": "sedang (penekanan)", "example": "正在看书", "example_translation": "is reading (right now)", "example_translation_id": "sedang membaca (sekarang juga)"},
+    {"word": "看书", "pinyin": "kàn shū", "meaning": "to read", "meaning_id": "membaca", "example": "喜欢看书", "example_translation": "like to read", "example_translation_id": "suka membaca"},
+    {"word": "写作业", "pinyin": "xiě zuò yè", "meaning": "to do homework", "meaning_id": "mengerjakan PR", "example": "正在写作业", "example_translation": "doing homework", "example_translation_id": "sedang mengerjakan PR"},
+    {"word": "打电话", "pinyin": "dǎ diàn huà", "meaning": "to make a phone call", "meaning_id": "menelepon", "example": "正在打电话", "example_translation": "on the phone", "example_translation_id": "sedang menelepon"},
+    {"word": "做饭", "pinyin": "zuò fàn", "meaning": "to cook", "meaning_id": "memasak", "example": "正在做饭", "example_translation": "cooking", "example_translation_id": "sedang memasak"},
+    {"word": "休息", "pinyin": "xiū xi", "meaning": "to rest", "meaning_id": "istirahat", "example": "正在休息", "example_translation": "resting", "example_translation_id": "sedang istirahat"},
+    {"word": "聊天", "pinyin": "liáo tiān", "meaning": "to chat", "meaning_id": "mengobrol", "example": "正在聊天", "example_translation": "chatting", "example_translation_id": "sedang mengobrol"},
+    {"word": "准备", "pinyin": "zhǔn bèi", "meaning": "to prepare", "meaning_id": "mempersiapkan", "example": "正在准备", "example_translation": "preparing", "example_translation_id": "sedang mempersiapkan"}
+  ],
+  "grammar": [
+    {
+      "point": "Emphasizing Ongoing Actions with 正在...呢",
+      "point_id": "Menekankan Aksi Sedang Berlangsung dengan 正在...呢",
+      "explanation": "Use 正在 before the verb and 呢 at the end to strongly emphasize an action in progress. Structure: Subject + 正在 + Verb + 呢.",
+      "explanation_id": "Gunakan 正在 sebelum kata kerja dan 呢 di akhir untuk menekankan dengan kuat suatu tindakan yang sedang berlangsung. Struktur: Subjek + 正在 + Kata Kerja + 呢.",
+      "examples": [
+        {"chinese": "他正在看书呢。", "translation": "He is reading (right now).", "translation_id": "Dia sedang membaca (sekarang juga)."},
+        {"chinese": "我正在写作业呢。", "translation": "I'm doing homework (right now).", "translation_id": "Saya sedang mengerjakan PR (sekarang juga)."},
+        {"chinese": "他们正在聊天呢。", "translation": "They are chatting (at this moment).", "translation_id": "Mereka sedang mengobrol (saat ini)."}
+      ]
+    },
+    {
+      "point": "Difference between 在 and 正在",
+      "point_id": "Perbedaan antara 在 dan 正在",
+      "explanation": "在 is the basic progressive marker. 正在 is more emphatic, stressing that the action is happening right now.",
+      "explanation_id": "在 adalah penanda progresif dasar. 正在 lebih tegas, menekankan bahwa tindakan sedang terjadi sekarang.",
+      "examples": [
+        {"chinese": "他在看书。", "translation": "He is reading.", "translation_id": "Dia sedang membaca."},
+        {"chinese": "他正在看书呢。", "translation": "He is reading (right at this moment).", "translation_id": "Dia sedang membaca (tepat pada saat ini)."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你在做什么呢？", "pinyin": "Nǐ zài zuò shénme ne?", "translation": "What are you doing?", "translation_id": "Kamu sedang melakukan apa?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我正在看书呢。", "pinyin": "Wǒ zhèngzài kàn shū ne.", "translation": "I'm reading (right now).", "translation_id": "Saya sedang membaca (sekarang juga)."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "看什么书？", "pinyin": "Kàn shénme shū?", "translation": "What book are you reading?", "translation_id": "Sedang membaca buku apa?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "一本很有意思的小说。", "pinyin": "Yī běn hěn yǒu yìsi de xiǎoshuō.", "translation": "A very interesting novel.", "translation_id": "Sebuah novel yang sangat menarik."}
+  ],
+  "exercises": [
+    {"question": "What does 正在 (zhèngzài) emphasize?", "question_id": "Apa yang ditekankan oleh 正在 (zhèngzài)?", "options": ["Future action", "Ongoing action right now", "Completed action", "Possible action"], "options_id": ["Aksi masa depan", "Aksi yang sedang berlangsung sekarang", "Aksi selesai", "Aksi mungkin"], "correct": 1},
+    {"question": "How do you say 'He is reading right now' with emphasis in Chinese?", "question_id": "Bagaimana mengatakan 'Dia sedang membaca sekarang juga' dengan penekanan dalam bahasa Mandarin?", "options": ["他在看书", "他正在看书呢", "他看书呢", "他看书"], "options_id": ["Dia sedang membaca", "Dia sedang membaca sekarang juga", "Dia membaca", "Dia membaca"], "correct": 1},
+    {"question": "What is the difference between 在 and 正在?", "question_id": "Apa perbedaan antara 在 dan 正在?", "options": ["No difference", "正在 is more emphatic", "在 is past tense", "正在 is future tense"], "options_id": ["Tidak ada perbedaan", "正在 lebih tegas", "在 adalah masa lalu", "正在 adalah masa depan"], "correct": 1},
+    {"question": "How to ask 'What are you doing?' in Chinese?", "question_id": "Bagaimana bertanya 'Kamu sedang melakukan apa?' dalam bahasa Mandarin?", "options": ["你做什么？", "你在做什么？", "你正在做什么？", "All of the above"], "options_id": ["Kamu melakukan apa?", "Kamu sedang melakukan apa?", "Kamu sedang melakukan apa (penekanan)?", "Semua di atas"], "correct": 3},
+    {"question": "What does 准备 (zhǔnbèi) mean?", "question_id": "Apa arti 准备 (zhǔnbèi)?", "options": ["To prepare", "To start", "To finish", "To continue"], "options_id": ["Mempersiapkan", "Memulai", "Menyelesaikan", "Melanjutkan"], "correct": 0}
+  ]
+}

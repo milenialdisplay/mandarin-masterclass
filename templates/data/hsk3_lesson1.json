@@ -1,0 +1,61 @@
+{
+  "title": "周末你有什么打算",
+  "subtitle": "Talking About Future Plans, Using 打算, Making Invitations",
+  "assistant_message": "Today we learn: talking about future plans with 打算 (dǎsuàn), making weekend invitations, and expressing intentions.",
+  "vocabulary": [
+    {"word": "周末", "pinyin": "zhōu mò", "meaning": "weekend", "meaning_id": "akhir pekan", "example": "周末快乐", "example_translation": "Happy weekend", "example_translation_id": "Selamat akhir pekan"},
+    {"word": "打算", "pinyin": "dǎ suàn", "meaning": "to plan/intend", "meaning_id": "berencana", "example": "你打算去哪儿？", "example_translation": "Where do you plan to go?", "example_translation_id": "Kamu berencana pergi ke mana?"},
+    {"word": "计划", "pinyin": "jì huà", "meaning": "plan/schedule", "meaning_id": "rencana/jadwal", "example": "周末计划", "example_translation": "weekend plan", "example_translation_id": "rencana akhir pekan"},
+    {"word": "邀请", "pinyin": "yāo qǐng", "meaning": "to invite", "meaning_id": "mengundang", "example": "邀请朋友", "example_translation": "invite friends", "example_translation_id": "mengundang teman"},
+    {"word": "活动", "pinyin": "huó dòng", "meaning": "activity/event", "meaning_id": "kegiatan", "example": "户外活动", "example_translation": "outdoor activity", "example_translation_id": "kegiatan luar ruangan"},
+    {"word": "聚会", "pinyin": "jù huì", "meaning": "gathering/party", "meaning_id": "pertemuan/pesta", "example": "家庭聚会", "example_translation": "family gathering", "example_translation_id": "pertemuan keluarga"},
+    {"word": "一起", "pinyin": "yī qǐ", "meaning": "together", "meaning_id": "bersama", "example": "一起去", "example_translation": "go together", "example_translation_id": "pergi bersama"},
+    {"word": "安排", "pinyin": "ān pái", "meaning": "to arrange", "meaning_id": "mengatur", "example": "安排时间", "example_translation": "arrange time", "example_translation_id": "mengatur waktu"}
+  ],
+  "grammar": [
+    {
+      "point": "Expressing Plans with 打算 (dǎsuàn)",
+      "point_id": "Menyatakan Rencana dengan 打算 (dǎsuàn)",
+      "explanation": "Use 打算 before a verb to express a plan or intention. Structure: Subject + 打算 + Verb + Object.",
+      "explanation_id": "Gunakan 打算 sebelum kata kerja untuk menyatakan rencana atau niat. Struktur: Subjek + 打算 + Kata Kerja + Objek.",
+      "examples": [
+        {"chinese": "周末你打算做什么？", "translation": "What do you plan to do on the weekend?", "translation_id": "Apa rencanamu untuk akhir pekan?"},
+        {"chinese": "我打算去看电影。", "translation": "I plan to go watch a movie.", "translation_id": "Saya berencana pergi menonton film."},
+        {"chinese": "她打算明年去中国留学。", "translation": "She plans to study in China next year.", "translation_id": "Dia berencana belajar di Tiongkok tahun depan."}
+      ]
+    },
+    {
+      "point": "Making Invitations with 邀请 (yāoqǐng)",
+      "point_id": "Membuat Undangan dengan 邀请 (yāoqǐng)",
+      "explanation": "Use 邀请 to invite someone. Structure: Subject + 邀请 + Person + Verb.",
+      "explanation_id": "Gunakan 邀请 untuk mengundang seseorang. Struktur: Subjek + 邀请 + Orang + Kata Kerja.",
+      "examples": [
+        {"chinese": "我邀请你参加聚会。", "translation": "I invite you to the party.", "translation_id": "Saya mengundangmu ke pesta."},
+        {"chinese": "朋友邀请我一起吃饭。", "translation": "My friend invited me to eat together.", "translation_id": "Teman mengundang saya makan bersama."}
+      ]
+    },
+    {
+      "point": "Using 一起 (yīqǐ) for 'Together'",
+      "point_id": "Menggunakan 一起 (yīqǐ) untuk 'Bersama'",
+      "explanation": "Place 一起 before the verb to mean 'do something together'.",
+      "explanation_id": "Letakkan 一起 sebelum kata kerja untuk berarti 'melakukan sesuatu bersama'.",
+      "examples": [
+        {"chinese": "我们一起去公园吧。", "translation": "Let's go to the park together.", "translation_id": "Ayo pergi ke taman bersama."},
+        {"chinese": "他们一起学习汉语。", "translation": "They study Chinese together.", "translation_id": "Mereka belajar Mandarin bersama."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "周末你有什么打算？", "pinyin": "Zhōumò nǐ yǒu shénme dǎsuàn?", "translation": "What are your plans for the weekend?", "translation_id": "Apa rencanamu untuk akhir pekan?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "我打算和朋友一起去爬山。", "pinyin": "Wǒ dǎsuàn hé péngyou yīqǐ qù páshān.", "translation": "I plan to go hiking with friends.", "translation_id": "Saya berencana pergi mendaki gunung dengan teman."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "听起来不错！我可以一起去吗？", "pinyin": "Tīng qǐlai bùcuò! Wǒ kěyǐ yīqǐ qù ma?", "translation": "Sounds good! Can I come too?", "translation_id": "Kedengarannya bagus! Bisakah saya ikut?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "当然可以！我们早上八点出发。", "pinyin": "Dāngrán kěyǐ! Wǒmen zǎoshang bā diǎn chūfā.", "translation": "Of course! We'll leave at 8 AM.", "translation_id": "Tentu saja! Kita berangkat jam 8 pagi."}
+  ],
+  "exercises": [
+    {"question": "What does 打算 (dǎsuàn) mean?", "question_id": "Apa arti 打算 (dǎsuàn)?", "options": ["To plan/intend", "To hope", "To want", "To need"], "options_id": ["Berencana", "Berharap", "Ingin", "Perlu"], "correct": 0},
+    {"question": "How do you say 'What are your plans for the weekend?' in Chinese?", "question_id": "Bagaimana mengatakan 'Apa rencanamu untuk akhir pekan?' dalam bahasa Mandarin?", "options": ["周末你做什么？", "周末你有什么打算？", "周末你计划什么？", "周末你去哪儿？"], "options_id": ["Akhir pekan kamu melakukan apa?", "Akhir pekan apa rencanamu?", "Akhir pekan kamu rencana apa?", "Akhir pekan kamu pergi ke mana?"], "correct": 1},
+    {"question": "What does 邀请 (yāoqǐng) mean?", "question_id": "Apa arti 邀请 (yāoqǐng)?", "options": ["To invite", "To visit", "To meet", "To call"], "options_id": ["Mengundang", "Mengunjungi", "Bertemu", "Memanggil"], "correct": 0},
+    {"question": "How to say 'Let's go together' in Chinese?", "question_id": "Bagaimana mengatakan 'Ayo pergi bersama' dalam bahasa Mandarin?", "options": ["一起去吧", "一起去", "我们一起去", "一起走吧"], "options_id": ["Pergi bersama ayo", "Pergi bersama", "Kita pergi bersama", "Pergi bersama ayo (jalan)"], "correct": 0},
+    {"question": "What does 聚会 (jùhuì) mean?", "question_id": "Apa arti 聚会 (jùhuì)?", "options": ["Meeting", "Party/gathering", "Class", "Activity"], "options_id": ["Pertemuan", "Pesta/pertemuan", "Kelas", "Kegiatan"], "correct": 1}
+  ]
+}

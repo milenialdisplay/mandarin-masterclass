@@ -1,0 +1,40 @@
+=== MANDARIN MASTERCLASS - PROJECT STATE ===
+
+COMPLETED:
+- HSK Level 1: 15 lessons (JSON files) - DONE
+- HSK Level 2: 15 lessons (JSON files) - DONE  
+- HSK Level 3: 20 lessons (JSON files) - DONE
+- HSK Level 4: 20 lessons (JSON files) - DONE
+- HSK Level 5 Lessons 1-10: DONE (JSON files created)
+- Server.py with dynamic routes: WORKING
+- lesson_viewer.html: WORKING
+- Homepage and lessons page: WORKING
+
+NEED TO COMPLETE:
+- HSK Level 5 Lessons 11-36 (31 lessons) - IN PROGRESS
+- HSK Level 6 Lessons 1-40 (40 lessons) - NOT STARTED
+
+FILE STRUCTURE:
+templates/
+├── data/
+│   ├── hsk1_lesson1.json through hsk1_lesson15.json ✅
+│   ├── hsk2_lesson1.json through hsk2_lesson15.json ✅
+│   ├── hsk3_lesson1.json through hsk3_lesson20.json ✅
+│   ├── hsk4_lesson1.json through hsk4_lesson20.json ✅
+│   ├── hsk5_lesson1.json through hsk5_lesson5.json ✅
+│   └── hsk5_lesson6.json through hsk5_lesson36.json ❌ MISSING
+├── index.html ✅
+├── lessons.html ✅
+├── lesson_viewer.html ✅
+└── (other template files)
+
+STATIC FOLDER: exists ✅
+
+LAST PROVIDED LESSON: HSK 5 Lesson 10 (传统节日)
+
+FORMAT REQUIRED FOR CONTINUATION:
+- Each lesson must have complete vocabulary, grammar, dialogue, exercises
+- Same structure as Lessons 1-5
+- Full English and Indonesian translations
+
+NEXT ACTION: Provide HSK 5 Lessons 11-36 in proper JSON format

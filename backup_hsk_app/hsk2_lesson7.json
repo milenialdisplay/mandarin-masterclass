@@ -1,0 +1,51 @@
+{
+  "title": "你家离公司远吗",
+  "subtitle": "Distance Expressions, Using 离 (lí), Asking How Far",
+  "assistant_message": "Today we learn: expressing distance with 离 (lí), asking 'how far' (多远), and talking about locations (家, 公司, 学校).",
+  "vocabulary": [
+    {"word": "家", "pinyin": "jiā", "meaning": "home", "meaning_id": "rumah", "example": "我的家", "example_translation": "my home", "example_translation_id": "rumah saya"},
+    {"word": "公司", "pinyin": "gōng sī", "meaning": "company/office", "meaning_id": "perusahaan", "example": "我在公司工作", "example_translation": "I work at the company", "example_translation_id": "saya bekerja di perusahaan"},
+    {"word": "离", "pinyin": "lí", "meaning": "from (distance)", "meaning_id": "dari (jarak)", "example": "离公司远", "example_translation": "far from the company", "example_translation_id": "jauh dari perusahaan"},
+    {"word": "远", "pinyin": "yuǎn", "meaning": "far", "meaning_id": "jauh", "example": "很远", "example_translation": "very far", "example_translation_id": "sangat jauh"},
+    {"word": "近", "pinyin": "jìn", "meaning": "near/close", "meaning_id": "dekat", "example": "很近", "example_translation": "very close", "example_translation_id": "sangat dekat"},
+    {"word": "多远", "pinyin": "duō yuǎn", "meaning": "how far", "meaning_id": "seberapa jauh", "example": "多远？", "example_translation": "How far?", "example_translation_id": "Seberapa jauh?"},
+    {"word": "公里", "pinyin": "gōng lǐ", "meaning": "kilometer", "meaning_id": "kilometer", "example": "五公里", "example_translation": "five kilometers", "example_translation_id": "lima kilometer"},
+    {"word": "学校", "pinyin": "xué xiào", "meaning": "school", "meaning_id": "sekolah", "example": "去学校", "example_translation": "go to school", "example_translation_id": "pergi ke sekolah"}
+  ],
+  "grammar": [
+    {
+      "point": "Expressing Distance with 离 (lí)",
+      "point_id": "Menyatakan Jarak dengan 离 (lí)",
+      "explanation": "Use 离 to show the distance between two places. Structure: Place A + 离 + Place B + 远/近.",
+      "explanation_id": "Gunakan 离 untuk menunjukkan jarak antara dua tempat. Struktur: Tempat A + 离 + Tempat B + 远/近.",
+      "examples": [
+        {"chinese": "我家离公司很远。", "translation": "My home is far from the office.", "translation_id": "Rumah saya jauh dari kantor."},
+        {"chinese": "学校离医院很近。", "translation": "The school is close to the hospital.", "translation_id": "Sekolah dekat dengan rumah sakit."},
+        {"chinese": "北京离上海远吗？", "translation": "Is Beijing far from Shanghai?", "translation_id": "Apakah Beijing jauh dari Shanghai?"}
+      ]
+    },
+    {
+      "point": "Asking 'How Far' with 多远 (duō yuǎn)",
+      "point_id": "Bertanya 'Seberapa Jauh' dengan 多远 (duō yuǎn)",
+      "explanation": "Use 多远 to ask 'how far' between two locations. Structure: A + 离 + B + 多远？",
+      "explanation_id": "Gunakan 多远 untuk bertanya 'seberapa jauh' antara dua lokasi. Struktur: A + 离 + B + 多远？",
+      "examples": [
+        {"chinese": "你家离公司多远？", "translation": "How far is your home from the office?", "translation_id": "Seberapa jauh rumahmu dari kantor?"},
+        {"chinese": "北京离上海多远？", "translation": "How far is Beijing from Shanghai?", "translation_id": "Seberapa jauh Beijing dari Shanghai?"}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你家离公司远吗？", "pinyin": "Nǐ jiā lí gōngsī yuǎn ma?", "translation": "Is your home far from the office?", "translation_id": "Apakah rumahmu jauh dari kantor?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "不太远，走路十五分钟。", "pinyin": "Bù tài yuǎn, zǒulù shíwǔ fēnzhōng.", "translation": "Not too far, fifteen minutes by foot.", "translation_id": "Tidak terlalu jauh, lima belas menit jalan kaki."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "那很近啊。我公司离家很远。", "pinyin": "Nà hěn jìn a. Wǒ gōngsī lí jiā hěn yuǎn.", "translation": "That's very close. My office is far from home.", "translation_id": "Itu sangat dekat. Kantorku jauh dari rumah."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你每天怎么上班？", "pinyin": "Nǐ měitiān zěnme shàngbān?", "translation": "How do you go to work every day?", "translation_id": "Bagaimana kamu pergi kerja setiap hari?"}
+  ],
+  "exercises": [
+    {"question": "What does 离 (lí) indicate?", "question_id": "Apa yang ditunjukkan oleh 离 (lí)?", "options": ["Direction", "Distance between places", "Time", "Location"], "options_id": ["Arah", "Jarak antara tempat", "Waktu", "Lokasi"], "correct": 1},
+    {"question": "How do you say 'My home is far from the office' in Chinese?", "question_id": "Bagaimana mengatakan 'Rumahku jauh dari kantor' dalam bahasa Mandarin?", "options": ["我家离公司很远", "我家公司很远", "我家很远公司", "公司离家很远"], "options_id": ["Rumahku dari kantor jauh", "Rumahku kantor jauh", "Rumahku jauh kantor", "Kantor dari rumah jauh"], "correct": 0},
+    {"question": "What does 近 (jìn) mean?", "question_id": "Apa arti 近 (jìn)?", "options": ["Far", "Near/close", "Fast", "Slow"], "options_id": ["Jauh", "Dekat", "Cepat", "Lambat"], "correct": 1},
+    {"question": "How to ask 'How far is your home from the company?' in Chinese?", "question_id": "Bagaimana bertanya 'Seberapa jauh rumahmu dari perusahaan?' dalam bahasa Mandarin?", "options": ["你家离公司多远？", "你家公司多远？", "你家多远公司？", "多远你家离公司？"], "options_id": ["Rumahmu dari perusahaan seberapa jauh?", "Rumahmu perusahaan seberapa jauh?", "Rumahmu seberapa jauh perusahaan?", "Seberapa jauh rumahmu dari perusahaan?"], "correct": 0},
+    {"question": "What is 公里 (gōnglǐ)?", "question_id": "Apa itu 公里 (gōnglǐ)?", "options": ["Meter", "Kilometer", "Mile", "Centimeter"], "options_id": ["Meter", "Kilometer", "Mil", "Sentimeter"], "correct": 1}
+  ]
+}

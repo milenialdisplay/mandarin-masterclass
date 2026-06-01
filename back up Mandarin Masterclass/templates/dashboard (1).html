@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>My Learning Dashboard - Mandarin Teacher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            color: #1a1a2e;
+            font-size: 28px;
+        }
+
+        .header p {
+            color: #666;
+            margin-top: 8px;
+        }
+
+        .student-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .student-name {
+            background: #e94560;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .total-hours {
+            background: #f0f0f0;
+            padding: 8px 20px;
+            border-radius: 25px;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-value {
+            font-size: 36px;
+            font-weight: bold;
+            color: #e94560;
+        }
+
+        .stat-label {
+            color: #666;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        /* Progress Section */
+        .section-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .progress-bar-container {
+            background: #e0e0e0;
+            border-radius: 10px;
+            height: 30px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            height: 100%;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            transition: width 0.5s ease;
+        }
+
+        /* HSK Level Grid */
+        .level-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .level-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+
+        .level-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .level-card.completed {
+            background: linear-gradient(135deg, #d4edda, #c3e6cb);
+            border-color: #28a745;
+        }
+
+        .level-card.locked {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .level-card.unlocked {
+            background: white;
+        }
+
+        .level-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a1a2e;
+        }
+
+        .level-status {
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+        .level-status.completed {
+            color: #28a745;
+        }
+
+        .level-status.locked {
+            color: #999;
+        }
+
+        .level-status.in-progress {
+            color: #e94560;
+        }
+
+        /* Activity Timeline */
+        .timeline {
+            margin-top: 20px;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .timeline-date {
+            min-width: 100px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .timeline-content {
+            flex: 1;
+        }
+
+        .timeline-title {
+            font-weight: bold;
+            color: #1a1a2e;
+        }
+
+        .timeline-score {
+            color: #e94560;
+            font-weight: bold;
+        }
+
+        /* Badge Grid */
+        .badge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .badge {
+            text-align: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+
+        .badge.earned {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+        }
+
+        .badge-icon {
+            font-size: 40px;
+        }
+
+        .badge-name {
+            font-size: 12px;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #e94560;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #c42e4a;
+            transform: scale(1.02);
+        }
+
+        .btn-secondary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a67d8;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .timeline-date {
+                min-width: 80px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 My Learning Dashboard</h1>
+            <p>Track your progress toward HSK certification</p>
+            <div class="student-info" id="studentInfo">
+                <div class="student-name" id="studentName">Student</div>
+                <div class="total-hours" id="totalHours">Total study time: 0 hours</div>
+            </div>
+        </div>
+
+        <!-- Statistics Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="currentLevel">HSK 1</div>
+                <div class="stat-label">Current Level</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="totalScore">0</div>
+                <div class="stat-label">Average Test Score</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="testsTaken">0</div>
+                <div class="stat-label">Tests Completed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="wordsLearned">0</div>
+                <div class="stat-label">Words Mastered</div>
+            </div>
+        </div>
+
+        <!-- Overall Progress -->
+        <div class="section-card">
+            <div class="section-title">
+                🎯 Overall Progress to HSK 6
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-fill" id="overallProgress" style="width: 0%">0%</div>
+            </div>
+        </div>
+
+        <!-- HSK Level Progress -->
+        <div class="section-card">
+            <div class="section-title">
+                📚 HSK Level Progress
+            </div>
+            <div class="level-grid" id="levelGrid"></div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="section-card">
+            <div class="section-title">
+                🕐 Recent Activity
+            </div>
+            <div class="timeline" id="timeline"></div>
+            <div class="action-buttons">
+                <button class="btn btn-primary" onclick="resetProgress()">Reset Progress</button>
+                <button class="btn btn-secondary" onclick="exportData()">Export Data (JSON)</button>
+            </div>
+        </div>
+
+        <!-- Badges Earned -->
+        <div class="section-card">
+            <div class="section-title">
+                🏆 Badges & Achievements
+            </div>
+            <div class="badge-grid" id="badgeGrid"></div>
+        </div>
+    </div>
+
+    <script>
+        // ============================================
+        // STUDENT PROGRESS TRACKING SYSTEM
+        // Saves data to localStorage
+        // ============================================
+
+        // Badge definitions
+        const BADGES = [
+            { id: "first_lesson", name: "First Step", icon: "🎯", requirement: "Complete 1 lesson" },
+            { id: "hsk1_pass", name: "HSK 1 Champion", icon: "🥉", requirement: "Pass HSK 1 test" },
+            { id: "hsk2_pass", name: "HSK 2 Champion", icon: "🥈", requirement: "Pass HSK 2 test" },
+            { id: "hsk3_pass", name: "HSK 3 Champion", icon: "🥇", requirement: "Pass HSK 3 test" },
+            { id: "hsk4_pass", name: "HSK 4 Master", icon: "🏅", requirement: "Pass HSK 4 test" },
+            { id: "hsk5_pass", name: "HSK 5 Expert", icon: "🎓", requirement: "Pass HSK 5 test" },
+            { id: "hsk6_pass", name: "HSK 6 Legend", icon: "👑", requirement: "Pass HSK 6 test" },
+            { id: "speaking_master", name: "Speaking Star", icon: "🎤", requirement: "Complete HSKK test" },
+            { id: "perfect_score", name: "Perfect Score", icon: "💯", requirement: "Get 100% on any test" },
+            { id: "consistent", name: "Dedicated Learner", icon: "🔥", requirement: "Study 7 days in a row" }
+        ];
+
+        // Default student data structure
+        const DEFAULT_STUDENT_DATA = {
+            name: "Language Learner",
+            currentHSK: 1,
+            studyHours: 0,
+            lastStudyDate: new Date().toISOString(),
+            streak: 0,
+            
+            // Test scores (highest per level)
+            testScores: {
+                1: null, 2: null, 3: null, 4: null, 5: null, 6: null
+            },
+            
+            // Speaking test scores
+            speakingScores: {
+                elementary: null,
+                intermediate: null,
+                advanced: null
+            },
+            
+            // Words mastered by level
+            wordsMastered: {
+                1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0
+            },
+            
+            // Lessons completed
+            lessonsCompleted: [],
+            
+            // Activity log
+            activityLog: [],
+            
+            // Badges earned
+            badgesEarned: [],
+            
+            // Level unlocked (can't skip ahead without passing)
+            highestLevelUnlocked: 1
+        };
+
+        // Load or initialize student data
+        let studentData = JSON.parse(localStorage.getItem('mandarin_student_data'));
+        if (!studentData) {
+            studentData = DEFAULT_STUDENT_DATA;
+            saveData();
+        }
+
+        function saveData() {
+            localStorage.setItem('mandarin_student_data', JSON.stringify(studentData));
+        }
+
+        // Update study time
+        function updateStudyTime(minutes) {
+            studentData.studyHours += minutes / 60;
+            
+            // Update streak
+            const today = new Date().toDateString();
+            const lastDate = new Date(studentData.lastStudyDate).toDateString();
+            
+            if (today !== lastDate) {
+                const yesterday = new Date();
+                yesterday.setDate(yesterday.getDate() - 1);
+                
+                if (lastDate === yesterday.toDateString()) {
+                    studentData.streak++;
+                } else {
+                    studentData.streak = 1;
+                }
+                studentData.lastStudyDate = new Date().toISOString();
+            }
+            
+            saveData();
+            checkBadges();
+        }
+
+        // Record test result
+        function recordTestResult(level, score, maxScore) {
+            const percentage = (score / maxScore) * 100;
+            const passed = percentage >= 60; // HSK passing is 60%
+            
+            // Update highest score for this level
+            if (!studentData.testScores[level] || percentage > studentData.testScores[level]) {
+                studentData.testScores[level] = percentage;
+            }
+            
+            // Update current level if passed
+            if (passed && level === studentData.currentHSK && level < 6) {
+                studentData.currentHSK = level + 1;
+                if (level + 1 > studentData.highestLevelUnlocked) {
+                    studentData.highestLevelUnlocked = level + 1;
+                }
+            }
+            
+            // Add to activity log
+            studentData.activityLog.unshift({
+                date: new Date().toISOString(),
+                type: 'test',
+                level: level,
+                score: percentage,
+                passed: passed
+            });
+            
+            // Keep only last 50 activities
+            if (studentData.activityLog.length > 50) {
+                studentData.activityLog.pop();
+            }
+            
+            saveData();
+            updateDashboard();
+            checkBadges();
+            
+            return passed;
+        }
+
+        // Record lesson completion
+        function recordLesson(lessonId, lessonName) {
+            if (!studentData.lessonsCompleted.includes(lessonId)) {
+                studentData.lessonsCompleted.push(lessonId);
+                
+                studentData.activityLog.unshift({
+                    date: new Date().toISOString(),
+                    type: 'lesson',
+                    lesson: lessonName,
+                    lessonId: lessonId
+                });
+                
+                saveData();
+                updateDashboard();
+                checkBadges();
+            }
+        }
+
+        // Update words mastered
+        function updateWordsMastered(level, count) {
+            studentData.wordsMastered[level] = Math.max(studentData.wordsMastered[level], count);
+            saveData();
+            updateDashboard();
+        }
+
+        // Check and award badges
+        function checkBadges() {
+            let newBadges = [];
+            
+            // First lesson badge
+            if (studentData.lessonsCompleted.length >= 1 && !studentData.badgesEarned.includes('first_lesson')) {
+                newBadges.push('first_lesson');
+            }
+            
+            // HSK level badges
+            for (let i = 1; i <= 6; i++) {
+                if (studentData.testScores[i] >= 60 && !studentData.badgesEarned.includes(`hsk${i}_pass`)) {
+                    newBadges.push(`hsk${i}_pass`);
+                }
+            }
+            
+            // Speaking badge
+            const hasSpeakingPass = Object.values(studentData.speakingScores).some(s => s && s >= 60);
+            if (hasSpeakingPass && !studentData.badgesEarned.includes('speaking_master')) {
+                newBadges.push('speaking_master');
+            }
+            
+            // Perfect score badge
+            const hasPerfect = Object.values(studentData.testScores).some(s => s && s >= 99);
+            if (hasPerfect && !studentData.badgesEarned.includes('perfect_score')) {
+                newBadges.push('perfect_score');
+            }
+            
+            // Consistent learner badge
+            if (studentData.streak >= 7 && !studentData.badgesEarned.includes('consistent')) {
+                newBadges.push('consistent');
+            }
+            
+            if (newBadges.length > 0) {
+                studentData.badgesEarned.push(...newBadges);
+                saveData();
+                
+                // Show notification for new badges
+                newBadges.forEach(badgeId => {
+                    const badge = BADGES.find(b => b.id === badgeId);
+                    if (badge) {
+                        showNotification(`🎉 New Badge Earned: ${badge.name} ${badge.icon}`);
+                    }
+                });
+            }
+        }
+
+        function showNotification(message) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: linear-gradient(135deg, #ffd700, #ffed4e);
+                color: #1a1a2e;
+                padding: 15px 25px;
+                border-radius: 10px;
+                font-weight: bold;
+                z-index: 1000;
+                animation: slideIn 0.3s ease;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            `;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        // Update the entire dashboard UI
+        function updateDashboard() {
+            // Update student name
+            document.getElementById('studentName').textContent = studentData.name;
+            
+            // Update stats
+            document.getElementById('currentLevel').textContent = `HSK ${studentData.currentHSK}`;
+            
+            const avgScore = Object.values(studentData.testScores)
+                .filter(s => s !== null)
+                .reduce((a, b) => a + b, 0) / Math.max(1, Object.values(studentData.testScores).filter(s => s !== null).length);
+            document.getElementById('totalScore').textContent = Math.round(avgScore) || 0;
+            
+            const testsCompleted = studentData.activityLog.filter(a => a.type === 'test').length;
+            document.getElementById('testsTaken').textContent = testsCompleted;
+            
+            const totalWords = Object.values(studentData.wordsMastered).reduce((a, b) => a + b, 0);
+            document.getElementById('wordsLearned').textContent = totalWords;
+            
+            document.getElementById('totalHours').textContent = `Total study time: ${studentData.studyHours.toFixed(1)} hours`;
+            
+            // Overall progress to HSK 6
+            const overallProgress = ((studentData.currentHSK - 1) / 5) * 100;
+            const progressFill = document.getElementById('overallProgress');
+            progressFill.style.width = `${overallProgress}%`;
+            progressFill.textContent = `${Math.round(overallProgress)}%`;
+            
+            // Update level grid
+            renderLevelGrid();
+            
+            // Update timeline
+            renderTimeline();
+            
+            // Update badges
+            renderBadges();
+        }
+
+        function renderLevelGrid() {
+            const grid = document.getElementById('levelGrid');
+            grid.innerHTML = '';
+            
+            for (let i = 1; i <= 6; i++) {
+                const testScore = studentData.testScores[i];
+                const isUnlocked = i <= studentData.highestLevelUnlocked + 1;
+                const isCompleted = testScore && testScore >= 60;
+                const isInProgress = testScore && testScore < 60;
+                
+                let statusClass = 'unlocked';
+                let statusText = 'Not started';
+                let statusColor = '';
+                
+                if (isCompleted) {
+                    statusClass = 'completed';
+                    statusText = `✓ Completed (${Math.round(testScore)}%)`;
+                    statusColor = 'completed';
+                } else if (isInProgress) {
+                    statusClass = 'unlocked';
+                    statusText = `In progress (${Math.round(testScore)}%)`;
+                    statusColor = 'in-progress';
+                } else if (!isUnlocked) {
+                    statusClass = 'locked';
+                    statusText = '🔒 Locked';
+                    statusColor = 'locked';
+                } else {
+                    statusText = 'Not started';
+                    statusColor = 'locked';
+                }
+                
+                const card = document.createElement('div');
+                card.className = `level-card ${statusClass}`;
+                card.onclick = () => {
+                    if (statusClass !== 'locked') {
+                        window.location.href = `/hsk-practice?level=${i}`;
+                    }
+                };
+                
+                card.innerHTML = `
+                    <div class="level-number">HSK ${i}</div>
+                    <div class="level-status ${statusColor}">${statusText}</div>
+                    ${testScore ? `<div style="font-size:12px; margin-top:5px;">Best: ${Math.round(testScore)}%</div>` : ''}
+                `;
+                
+                grid.appendChild(card);
+            }
+        }
+
+        function renderTimeline() {
+            const timeline = document.getElementById('timeline');
+            
+            if (studentData.activityLog.length === 0) {
+                timeline.innerHTML = '<div style="text-align:center; color:#999; padding:20px;">No activity yet. Start learning!</div>';
+                return;
+            }
+            
+            timeline.innerHTML = '';
+            
+            studentData.activityLog.slice(0, 20).forEach(activity => {
+                const date = new Date(activity.date);
+                const formattedDate = date.toLocaleDateString();
+                
+                const item = document.createElement('div');
+                item.className = 'timeline-item';
+                
+                if (activity.type === 'test') {
+                    item.innerHTML = `
+                        <div class="timeline-date">${formattedDate}</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">📝 HSK ${activity.level} Practice Test</div>
+                            <div>Score: <span class="timeline-score">${Math.round(activity.score)}%</span> ${activity.passed ? '✓ Passed' : '✗ Need more practice'}</div>
+                        </div>
+                    `;
+                } else {
+                    item.innerHTML = `
+                        <div class="timeline-date">${formattedDate}</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">📚 Completed: ${activity.lesson}</div>
+                        </div>
+                    `;
+                }
+                
+                timeline.appendChild(item);
+            });
+        }
+
+        function renderBadges() {
+            const badgeGrid = document.getElementById('badgeGrid');
+            badgeGrid.innerHTML = '';
+            
+            BADGES.forEach(badge => {
+                const earned = studentData.badgesEarned.includes(badge.id);
+                const badgeDiv = document.createElement('div');
+                badgeDiv.className = `badge ${earned ? 'earned' : ''}`;
+                badgeDiv.title = badge.requirement;
+                
+                badgeDiv.innerHTML = `
+                    <div class="badge-icon">${earned ? badge.icon : '🔒'}</div>
+                    <div class="badge-name">${badge.name}</div>
+                    <div style="font-size:10px; color:#666; margin-top:5px;">${earned ? 'Earned!' : badge.requirement}</div>
+                `;
+                
+                badgeGrid.appendChild(badgeDiv);
+            });
+        }
+
+        function resetProgress() {
+            if (confirm('Are you sure you want to reset all progress? This cannot be undone.')) {
+                studentData = JSON.parse(JSON.stringify(DEFAULT_STUDENT_DATA));
+                saveData();
+                updateDashboard();
+                showNotification('Progress has been reset');
+            }
+        }
+
+        function exportData() {
+            const dataStr = JSON.stringify(studentData, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `mandarin_progress_${new Date().toISOString().split('T')[0]}.json`;
+            link.click();
+            URL.revokeObjectURL(url);
+            showNotification('Progress exported successfully!');
+        }
+
+        function importData(jsonData) {
+            try {
+                const imported = JSON.parse(jsonData);
+                if (imported.currentHSK && imported.testScores) {
+                    studentData = imported;
+                    saveData();
+                    updateDashboard();
+                    showNotification('Progress imported successfully!');
+                    return true;
+                }
+            } catch(e) {
+                console.error('Invalid data');
+            }
+            return false;
+        }
+
+        // Listen for test completion from other pages
+        window.addEventListener('message', (event) => {
+            if (event.data.type === 'test_complete') {
+                recordTestResult(event.data.level, event.data.score, event.data.maxScore);
+            } else if (event.data.type === 'lesson_complete') {
+                recordLesson(event.data.lessonId, event.data.lessonName);
+            } else if (event.data.type === 'update_words') {
+                updateWordsMastered(event.data.level, event.data.count);
+            }
+        });
+
+        // Initialize dashboard
+        updateDashboard();
+
+        // Add CSS animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

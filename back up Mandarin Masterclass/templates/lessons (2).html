@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>HSK Curriculum - Complete Lessons 1-6</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a472a;
+            padding: 10px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        /* Header */
+        .main-header {
+            background: linear-gradient(135deg, #1a472a, #2d6a4f);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 16px 16px 0 0;
+        }
+        
+        .main-header h1 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        
+        .main-header p {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        
+        .level-badge {
+            display: inline-block;
+            background: #ffd700;
+            color: #1a472a;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+        
+        /* Navigation */
+        .nav-bar {
+            background: #f5f5f5;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-btn {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .nav-btn:hover {
+            background: #1a472a;
+            transform: scale(1.02);
+        }
+        
+        /* Level Cards */
+        .levels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .level-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .level-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+        
+        .level-header {
+            padding: 16px;
+            color: white;
+            position: relative;
+        }
+        
+        .level-header.hsk1 { background: linear-gradient(135deg, #1e3c2c, #2d6a4f); }
+        .level-header.hsk2 { background: linear-gradient(135deg, #2c3e50, #3498db); }
+        .level-header.hsk3 { background: linear-gradient(135deg, #5d2e2e, #c0392b); }
+        .level-header.hsk4 { background: linear-gradient(135deg, #4a2e5d, #8e44ad); }
+        .level-header.hsk5 { background: linear-gradient(135deg, #2e5d4a, #27ae60); }
+        .level-header.hsk6 { background: linear-gradient(135deg, #5d4a2e, #d4a017); }
+        
+        .level-number {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .level-name {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-top: 4px;
+        }
+        
+        .level-stats {
+            display: flex;
+            gap: 12px;
+            margin-top: 12px;
+            font-size: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            background: rgba(255,255,255,0.2);
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+        
+        .level-content {
+            padding: 16px;
+        }
+        
+        .lesson-summary {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-bottom: 12px;
+        }
+        
+        .lesson-summary h4 {
+            font-size: 14px;
+            color: #1a472a;
+            margin-bottom: 8px;
+            border-left: 3px solid #ffd700;
+            padding-left: 8px;
+        }
+        
+        .lesson-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        
+        .lesson-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 10px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-size: 13px;
+        }
+        
+        .lesson-item:hover {
+            background: #e8f5e9;
+        }
+        
+        .lesson-number {
+            font-weight: bold;
+            color: #2d6a4f;
+            min-width: 45px;
+        }
+        
+        .lesson-title {
+            flex: 1;
+            margin-left: 8px;
+            color: #333;
+        }
+        
+        .lesson-title-en {
+            font-size: 11px;
+            color: #888;
+            margin-left: 8px;
+        }
+        
+        .lesson-actions {
+            display: flex;
+            gap: 6px;
+        }
+        
+        .lesson-icon {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 4px;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .lesson-icon:hover {
+            background: #e0e0e0;
+        }
+        
+        .expand-btn {
+            background: #e8f5e9;
+            border: 1px solid #2d6a4f;
+            color: #2d6a4f;
+            padding: 6px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 8px;
+        }
+        
+        .expand-btn:hover {
+            background: #2d6a4f;
+            color: white;
+        }
+        
+        /* Modal for lesson details */
+        .lesson-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lesson-modal.active {
+            display: flex;
+        }
+        
+        .lesson-modal-content {
+            background: white;
+            border-radius: 24px;
+            padding: 20px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e8f5e9;
+        }
+        
+        .modal-header h2 {
+            color: #1a472a;
+            font-size: 20px;
+        }
+        
+        .close-modal {
+            background: #e94560;
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        
+        .modal-section {
+            margin-bottom: 20px;
+        }
+        
+        .modal-section h3 {
+            color: #2d6a4f;
+            font-size: 16px;
+            margin-bottom: 8px;
+            border-left: 3px solid #ffd700;
+            padding-left: 10px;
+        }
+        
+        .objectives-list {
+            list-style: none;
+            padding-left: 10px;
+        }
+        
+        .objectives-list li {
+            padding: 4px 0;
+            font-size: 13px;
+        }
+        
+        .objectives-list li:before {
+            content: "✓ ";
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .vocab-preview {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .vocab-tag {
+            background: #e8f5e9;
+            color: #1a472a;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        
+        .go-to-lesson {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 16px;
+        }
+        
+        .go-to-lesson:hover {
+            background: #1a472a;
+        }
+        
+        /* Scrollbar */
+        .lesson-summary::-webkit-scrollbar {
+            width: 5px;
+        }
+        
+        .lesson-summary::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .lesson-summary::-webkit-scrollbar-thumb {
+            background: #2d6a4f;
+            border-radius: 10px;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: rgba(255,255,255,0.7);
+            font-size: 11px;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 700px) {
+            .levels-grid {
+                grid-template-columns: 1fr;
+            }
+            .main-header h1 { font-size: 20px; }
+            .lesson-item { flex-wrap: wrap; }
+            .lesson-title-en { display: block; margin-left: 45px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="main-header">
+        <h1>📚 HSK Standard Curriculum</h1>
+        <p>Complete course following Beijing Language and Culture University Press syllabus</p>
+        <div class="level-badge">HSK 1 → HSK 6 | 150+ Lessons | 5000+ Words</div>
+    </div>
+    
+    <div class="nav-bar">
+        <a href="/" class="nav-btn">🏠 Home</a>
+        <a href="/dashboard" class="nav-btn">📊 Dashboard</a>
+        <a href="/hsk-practice" class="nav-btn">📝 Practice Test</a>
+        <a href="/hskk-speaking" class="nav-btn">🎤 Speaking Test</a>
+    </div>
+    
+    <div class="levels-grid" id="levelsGrid"></div>
+    <div class="footer">HSK Standard Course 1-6 | Complete Curriculum | Interactive Learning</div>
+</div>
+
+<!-- Lesson Detail Modal -->
+<div id="lessonModal" class="lesson-modal">
+    <div class="lesson-modal-content">
+        <div class="modal-header">
+            <h2 id="modalTitle">Lesson Details</h2>
+            <button class="close-modal" onclick="closeLessonModal()">✕</button>
+        </div>
+        <div id="modalContent"></div>
+        <button class="go-to-lesson" id="goToLessonBtn" onclick="goToLesson()">📖 Go to Lesson →</button>
+    </div>
+</div>
+
+<script>
+    // ============================================
+    // COMPLETE HSK CURRICULUM DATA (Based on official syllabus)
+    // ============================================
+    
+    const HSK_DATA = {
+        1: {
+            name: "HSK Level 1",
+            cefr: "A1",
+            hours: "30-36 hours",
+            words: "150 words",
+            color: "hsk1",
+            lessons: [
+                { num: 1, title: "你好", title_en: "Hello", vocab_count: 12, grammar_count: 2, objectives: ["Greet people", "Introduce yourself", "Say goodbye"] },
+                { num: 2, title: "谢谢你", title_en: "Thank You", vocab_count: 12, grammar_count: 2, objectives: ["Express thanks", "Apologize", "Use polite expressions"] },
+                { num: 3, title: "你叫什么名字", title_en: "What's Your Name?", vocab_count: 14, grammar_count: 2, objectives: ["Ask names", "Introduce family", "Use question words"] },
+                { num: 4, title: "她是我的汉语老师", title_en: "She's My Chinese Teacher", vocab_count: 14, grammar_count: 2, objectives: ["Describe people", "Use possessive 的", "Talk about nationalities"] },
+                { num: 5, title: "她女儿今年二十岁", title_en: "Her Daughter is 20", vocab_count: 15, grammar_count: 2, objectives: ["Talk about age", "Use numbers 1-100", "Ask 'how old'"] },
+                { num: 6, title: "我会说汉语", title_en: "I Can Speak Chinese", vocab_count: 13, grammar_count: 2, objectives: ["Talk about abilities", "Use modal verb 会", "Discuss language skills"] },
+                { num: 7, title: "今天几号", title_en: "What's the Date?", vocab_count: 14, grammar_count: 2, objectives: ["Ask and tell date", "Use days of week", "Talk about schedules"] },
+                { num: 8, title: "我想喝茶", title_en: "I Want Tea", vocab_count: 12, grammar_count: 2, objectives: ["Express wants", "Use 想", "Order food/drinks"] },
+                { num: 9, title: "你儿子在哪儿工作", title_en: "Where Does Your Son Work?", vocab_count: 13, grammar_count: 2, objectives: ["Ask location", "Use 在", "Talk about workplaces"] },
+                { num: 10, title: "我能坐这儿吗", title_en: "Can I Sit Here?", vocab_count: 12, grammar_count: 2, objectives: ["Ask permission", "Use 能", "Use measure words"] },
+                { num: 11, title: "现在几点", title_en: "What Time Is It?", vocab_count: 13, grammar_count: 2, objectives: ["Tell time", "Ask for time", "Daily schedules"] },
+                { num: 12, title: "明天天气怎么样", title_en: "How's the Weather?", vocab_count: 12, grammar_count: 2, objectives: ["Talk about weather", "Ask about weather", "Describe temperature"] },
+                { num: 13, title: "他在学做中国菜呢", title_en: "Learning Chinese Cooking", vocab_count: 14, grammar_count: 2, objectives: ["Express ongoing actions", "Use progressive 在", "Talk about cooking"] },
+                { num: 14, title: "她买了不少衣服", title_en: "She Bought Clothes", vocab_count: 13, grammar_count: 2, objectives: ["Talk about completed actions", "Use particle 了", "Discuss shopping"] },
+                { num: 15, title: "我是坐飞机来的", title_en: "I Came by Plane", vocab_count: 12, grammar_count: 2, objectives: ["Talk about transportation", "Use 是...的", "Describe past actions"] }
+            ]
+        },
+        2: {
+            name: "HSK Level 2",
+            cefr: "A2",
+            hours: "30-45 hours",
+            words: "300 words",
+            color: "hsk2",
+            lessons: [
+                { num: 1, title: "九月去中国旅游最好", title_en: "September Best for Travel", vocab_count: 15, grammar_count: 3, objectives: ["Talk about travel", "Express preferences", "Use superlative 最"] },
+                { num: 2, title: "我每天六点起床", title_en: "Get Up at 6", vocab_count: 14, grammar_count: 3, objectives: ["Daily routines", "Use frequency adverbs", "Time expressions"] },
+                { num: 3, title: "左边那个红色的是我的", title_en: "The Red One is Mine", vocab_count: 15, grammar_count: 3, objectives: ["Possession", "Descriptions", "Demonstrative pronouns"] },
+                { num: 4, title: "这个星期天我们去打球吧", title_en: "Let's Play Ball Sunday", vocab_count: 14, grammar_count: 3, objectives: ["Make invitations", "Suggestions", "Weekend plans"] },
+                { num: 5, title: "我比你高", title_en: "I'm Taller Than You", vocab_count: 15, grammar_count: 3, objectives: ["Comparisons with 比", "Measurements", "Physical descriptions"] },
+                { num: 6, title: "你怎么不吃了", title_en: "Why Aren't You Eating?", vocab_count: 13, grammar_count: 3, objectives: ["Question words", "Express reasons", "Eating habits"] },
+                { num: 7, title: "电脑比手机贵多了", title_en: "Computer Much Pricier", vocab_count: 14, grammar_count: 3, objectives: ["Strong comparisons", "Prices", "Electronics"] },
+                { num: 8, title: "我不太喜欢喝咖啡", title_en: "I Don't Like Coffee", vocab_count: 15, grammar_count: 3, objectives: ["Express preferences", "Negation", "Beverages"] },
+                { num: 9, title: "最近怎么样", title_en: "How Have You Been?", vocab_count: 13, grammar_count: 3, objectives: ["Small talk", "Recent activities", "问候"] },
+                { num: 10, title: "别找了，手机在桌子上", title_en: "Stop Looking", vocab_count: 14, grammar_count: 3, objectives: ["Location expressions", "Imperatives", "Finding things"] },
+                { num: 11, title: "你习惯中国的生活了吗", title_en: "Used to Life in China?", vocab_count: 15, grammar_count: 3, objectives: ["Habits", "Adaptation", "Life in China"] },
+                { num: 12, title: "这件事我都听说了", title_en: "I've Heard", vocab_count: 14, grammar_count: 3, objectives: ["Passive meaning", "Information sharing", "News"] },
+                { num: 13, title: "一边...一边...", title_en: "Doing Two Things", vocab_count: 13, grammar_count: 3, objectives: ["Simultaneous actions", "Multi-tasking", "Daily activities"] },
+                { num: 14, title: "越...越...", title_en: "The More... The More...", vocab_count: 14, grammar_count: 3, objectives: ["Progressive change", "Comparisons", "Trends"] },
+                { num: 15, title: "虽然...但是...", title_en: "Although... But...", vocab_count: 15, grammar_count: 3, objectives: ["Concession", "Contrast", "Complex sentences"] }
+            ]
+        },
+        3: {
+            name: "HSK Level 3",
+            cefr: "B1",
+            hours: "35-45 hours",
+            words: "600 words",
+            color: "hsk3",
+            lessons: [
+                { num: 1, title: "周末你有什么打算", title_en: "Weekend Plans", vocab_count: 15, grammar_count: 4, objectives: ["Future plans", "Invitations", "Weekend activities"] },
+                { num: 2, title: "这个电影很有意思", title_en: "Interesting Movie", vocab_count: 14, grammar_count: 4, objectives: ["Opinions", "Recommendations", "Entertainment"] },
+                { num: 3, title: "我把钱包忘在家里了", title_en: "Left Wallet at Home", vocab_count: 15, grammar_count: 4, objectives: ["把 construction", "Mistakes", "Forgetting"] },
+                { num: 4, title: "你听说过长城吗", title_en: "Heard of Great Wall?", vocab_count: 14, grammar_count: 4, objectives: ["Experience with 过", "Famous places", "Travel"] },
+                { num: 5, title: "我有很多爱好", title_en: "Many Hobbies", vocab_count: 16, grammar_count: 4, objectives: ["Describing interests", "Frequency", "Hobbies"] },
+                { num: 6, title: "这件衣服太贵了", title_en: "Too Expensive", vocab_count: 14, grammar_count: 4, objectives: ["Complaints", "Price negotiation", "Shopping"] },
+                { num: 7, title: "你减肥成功了", title_en: "Lost Weight", vocab_count: 15, grammar_count: 4, objectives: ["Results", "Compliments", "Health"] },
+                { num: 8, title: "我考上大学了", title_en: "Passed Exam", vocab_count: 14, grammar_count: 4, objectives: ["Achievements", "Education", "Goals"] },
+                { num: 9, title: "她买的衣服真漂亮", title_en: "Beautiful Clothes", vocab_count: 15, grammar_count: 4, objectives: ["Relative clauses", "Compliments", "Fashion"] },
+                { num: 10, title: "他正在看书呢", title_en: "Reading Now", vocab_count: 13, grammar_count: 4, objectives: ["Progressive aspect", "Ongoing actions", "Reading"] },
+                { num: 11, title: "我从来没去过西藏", title_en: "Never Been to Tibet", vocab_count: 14, grammar_count: 4, objectives: ["Negation of experience", "Travel", "Places"] },
+                { num: 12, title: "你要控制一下饮食", title_en: "Control Diet", vocab_count: 15, grammar_count: 4, objectives: ["Suggestions", "Health advice", "Eating"] },
+                { num: 13, title: "交通越来越方便了", title_en: "Convenient Transport", vocab_count: 14, grammar_count: 4, objectives: ["Progressive change", "Transportation", "Cities"] },
+                { num: 14, title: "这篇文章太难懂了", title_en: "Hard to Understand", vocab_count: 15, grammar_count: 4, objectives: ["Difficulty", "Reading", "Articles"] },
+                { num: 15, title: "我们都应该保护环境", title_en: "Protect Environment", vocab_count: 14, grammar_count: 4, objectives: ["Obligation", "Environment", "Responsibility"] },
+                { num: 16, title: "既然你决定了，就去做吧", title_en: "Since You Decided", vocab_count: 15, grammar_count: 4, objectives: ["既然...就...", "Encouragement", "Decisions"] },
+                { num: 17, title: "你最近瘦了", title_en: "Lost Weight Lately", vocab_count: 13, grammar_count: 4, objectives: ["Change of state", "Observations", "Health"] },
+                { num: 18, title: "只要努力就能成功", title_en: "Work Hard, Succeed", vocab_count: 14, grammar_count: 4, objectives: ["只要...就...", "Condition", "Motivation"] },
+                { num: 19, title: "我们该出发了", title_en: "Should Set Off", vocab_count: 15, grammar_count: 4, objectives: ["Obligation", "Time management", "Departures"] },
+                { num: 20, title: "除了汉语，我还会英语", title_en: "Besides Chinese", vocab_count: 14, grammar_count: 4, objectives: ["除了...还...", "Language abilities", "Skills"] }
+            ]
+        },
+        4: {
+            name: "HSK Level 4 (上/下)",
+            cefr: "B2",
+            hours: "45+ hours",
+            words: "1,200 words",
+            color: "hsk4",
+            lessons: [
+                { num: 1, title: "简单的爱情", title_en: "Simple Love", vocab_count: 18, grammar_count: 5, objectives: ["Relationships", "Emotions", "Values"] },
+                { num: 2, title: "真正的朋友", title_en: "True Friends", vocab_count: 16, grammar_count: 5, objectives: ["Friendship", "Trust", "Loyalty"] },
+                { num: 3, title: "经理对我印象不错", title_en: "Good Impression", vocab_count: 17, grammar_count: 5, objectives: ["Workplace", "Impressions", "Career"] },
+                { num: 4, title: "不要太着急赚钱", title_en: "Don't Rush Money", vocab_count: 15, grammar_count: 5, objectives: ["Advice", "Money", "Patience"] },
+                { num: 5, title: "美丽的小城", title_en: "Beautiful Town", vocab_count: 16, grammar_count: 5, objectives: ["Travel", "Descriptions", "Places"] },
+                { num: 6, title: "健康的饮食习惯", title_en: "Healthy Eating", vocab_count: 18, grammar_count: 5, objectives: ["Health", "Habits", "Nutrition"] },
+                { num: 7, title: "最好的医生是自己", title_en: "Best Doctor is You", vocab_count: 15, grammar_count: 5, objectives: ["Health", "Self-care", "Prevention"] },
+                { num: 8, title: "生活中的小窍门", title_en: "Life Hacks", vocab_count: 16, grammar_count: 5, objectives: ["Solutions", "Daily life", "Tips"] },
+                { num: 9, title: "阳光与希望", title_en: "Sunshine & Hope", vocab_count: 15, grammar_count: 5, objectives: ["Optimism", "Attitude", "Inspiration"] },
+                { num: 10, title: "幸福的味道", title_en: "Taste of Happiness", vocab_count: 17, grammar_count: 5, objectives: ["Happiness", "Philosophy", "Gratitude"] },
+                { num: 11, title: "读书与人生", title_en: "Reading & Life", vocab_count: 16, grammar_count: 5, objectives: ["Reading", "Life philosophy", "Wisdom"] },
+                { num: 12, title: "保护地球母亲", title_en: "Protect Earth", vocab_count: 18, grammar_count: 5, objectives: ["Environment", "Responsibility", "Planet"] },
+                { num: 13, title: "智能生活", title_en: "Smart Life", vocab_count: 16, grammar_count: 5, objectives: ["Technology", "Future", "Innovation"] },
+                { num: 14, title: "尊重与理解", title_en: "Respect & Understanding", vocab_count: 15, grammar_count: 5, objectives: ["Social values", "Relationships", "Empathy"] },
+                { num: 15, title: "艺术与生活", title_en: "Art & Life", vocab_count: 16, grammar_count: 5, objectives: ["Art", "Appreciation", "Culture"] },
+                { num: 16, title: "沟通的艺术", title_en: "Art of Communication", vocab_count: 17, grammar_count: 5, objectives: ["Communication", "Skills", "Listening"] },
+                { num: 17, title: "挑战自我", title_en: "Challenge Yourself", vocab_count: 15, grammar_count: 5, objectives: ["Personal growth", "Ambition", "Courage"] },
+                { num: 18, title: "珍惜时间", title_en: "Cherish Time", vocab_count: 16, grammar_count: 5, objectives: ["Time management", "Wisdom", "Priorities"] },
+                { num: 19, title: "梦想与现实", title_en: "Dreams & Reality", vocab_count: 17, grammar_count: 5, objectives: ["Goals", "Practicality", "Balance"] },
+                { num: 20, title: "成功的秘诀", title_en: "Secret to Success", vocab_count: 16, grammar_count: 5, objectives: ["Success", "Motivation", "Persistence"] }
+            ]
+        },
+        5: {
+            name: "HSK Level 5 (上/中/下)",
+            cefr: "C1",
+            hours: "60+ hours",
+            words: "2,500 words",
+            color: "hsk5",
+            lessons: [
+                { num: 1, title: "爱的细节", title_en: "Details of Love", vocab_count: 20, grammar_count: 6, objectives: ["Relationships", "Observation", "Emotional intelligence"] },
+                { num: 2, title: "留学的选择", title_en: "Studying Abroad", vocab_count: 18, grammar_count: 6, objectives: ["Education", "Decision making", "International"] },
+                { num: 3, title: "网购的利与弊", title_en: "Online Shopping", vocab_count: 19, grammar_count: 6, objectives: ["Debate", "E-commerce", "Pros & Cons"] },
+                { num: 4, title: "共享经济", title_en: "Sharing Economy", vocab_count: 18, grammar_count: 6, objectives: ["Economics", "Modern trends", "Technology"] },
+                { num: 5, title: "人与自然", title_en: "Humans & Nature", vocab_count: 20, grammar_count: 6, objectives: ["Environment", "Philosophy", "Balance"] },
+                { num: 6, title: "科技改变生活", title_en: "Technology Changes Life", vocab_count: 19, grammar_count: 6, objectives: ["Technology", "Innovation", "Daily life"] },
+                { num: 7, title: "文化交流", title_en: "Cultural Exchange", vocab_count: 18, grammar_count: 6, objectives: ["Culture", "Globalization", "Understanding"] },
+                { num: 8, title: "职场竞争", title_en: "Workplace Competition", vocab_count: 20, grammar_count: 6, objectives: ["Career", "Competition", "Success"] },
+                { num: 9, title: "心理健康", title_en: "Mental Health", vocab_count: 18, grammar_count: 6, objectives: ["Health", "Psychology", "Wellness"] },
+                { num: 10, title: "传统节日", title_en: "Traditional Festivals", vocab_count: 19, grammar_count: 6, objectives: ["Culture", "Traditions", "Celebrations"] },
+                { num: 11, title: "城市发展", title_en: "Urban Development", vocab_count: 18, grammar_count: 6, objectives: ["Cities", "Development", "Planning"] },
+                { num: 12, title: "媒体与信息", title_en: "Media & Information", vocab_count: 19, grammar_count: 6, objectives: ["Media", "Information", "Truth"] }
+            ]
+        },
+        6: {
+            name: "HSK Level 6 (上/下)",
+            cefr: "C2",
+            hours: "80+ hours",
+            words: "5,000+ words",
+            color: "hsk6",
+            lessons: [
+                { num: 1, title: "父子之间的爱", title_en: "Father-Son Love", vocab_count: 25, grammar_count: 8, objectives: ["Family", "Deep emotions", "Relationships"] },
+                { num: 2, title: "敬业与乐业", title_en: "Dedication & Enjoyment", vocab_count: 24, grammar_count: 8, objectives: ["Work ethic", "Philosophy", "Happiness"] },
+                { num: 3, title: "珍惜每一刻", title_en: "Cherish Every Moment", vocab_count: 23, grammar_count: 8, objectives: ["Life philosophy", "Time", "Mindfulness"] },
+                { num: 4, title: "科技与伦理", title_en: "Technology & Ethics", vocab_count: 24, grammar_count: 8, objectives: ["Ethics", "Technology", "Morality"] },
+                { num: 5, title: "全球化时代", title_en: "Globalization Era", vocab_count: 25, grammar_count: 8, objectives: ["Globalization", "Economics", "Culture"] },
+                { num: 6, title: "环境保护", title_en: "Environmental Protection", vocab_count: 24, grammar_count: 8, objectives: ["Environment", "Sustainability", "Action"] },
+                { num: 7, title: "教育改革", title_en: "Education Reform", vocab_count: 23, grammar_count: 8, objectives: ["Education", "Reform", "Future"] },
+                { num: 8, title: "人口问题", title_en: "Population Issues", vocab_count: 24, grammar_count: 8, objectives: ["Demographics", "Society", "Challenges"] },
+                { num: 9, title: "艺术鉴赏", title_en: "Art Appreciation", vocab_count: 23, grammar_count: 8, objectives: ["Art", "Appreciation", "Culture"] },
+                { num: 10, title: "科学探索", title_en: "Scientific Exploration", vocab_count: 24, grammar_count: 8, objectives: ["Science", "Discovery", "Curiosity"] }
+            ]
+        }
+    };
+    
+    let currentModalLevel = null;
+    let currentModalLesson = null;
+    
+    // Render all levels
+    function renderLevels() {
+        const grid = document.getElementById('levelsGrid');
+        grid.innerHTML = '';
+        
+        for (let level = 1; level <= 6; level++) {
+            const data = HSK_DATA[level];
+            if (!data) continue;
+            
+            const totalLessons = data.lessons.length;
+            const previewLessons = data.lessons.slice(0, 5);
+            const remainingCount = totalLessons - 5;
+            
+            const card = document.createElement('div');
+            card.className = 'level-card';
+            card.innerHTML = `
+                <div class="level-header ${data.color}">
+                    <div class="level-number">${data.name}</div>
+                    <div class="level-name">${data.cefr} | ${data.hours}</div>
+                    <div class="level-stats">
+                        <span class="stat">📚 ${totalLessons} Lessons</span>
+                        <span class="stat">📖 ${data.words}</span>
+                        <span class="stat">⭐ ${data.cefr}</span>
+                    </div>
+                </div>
+                <div class="level-content">
+                    <div class="lesson-summary">
+                        <h4>📖 Lessons Preview</h4>
+                        <div class="lesson-list">
+                            ${previewLessons.map(lesson => `
+                                <div class="lesson-item" onclick="showLessonDetails(${level}, ${lesson.num})">
+                                    <span class="lesson-number">L${lesson.num}</span>
+                                    <span class="lesson-title">${lesson.title}</span>
+                                    <span class="lesson-title-en">${lesson.title_en}</span>
+                                    <div class="lesson-actions">
+                                        <button class="lesson-icon" onclick="event.stopPropagation(); goToLessonDirect(${level}, ${lesson.num})" title="Go to lesson">📖</button>
+                                    </div>
+                                </div>
+                            `).join('')}
+                            ${remainingCount > 0 ? `<button class="expand-btn" onclick="scrollToLevel(${level})">📋 + ${remainingCount} more lessons...</button>` : ''}
+                        </div>
+                    </div>
+                </div>
+            `;
+            grid.appendChild(card);
+        }
+    }
+    
+    function scrollToLevel(level) {
+        // For now, just show all lessons in modal
+        const data = HSK_DATA[level];
+        if (data) {
+            showAllLessonsForLevel(level);
+        }
+    }
+    
+    function showAllLessonsForLevel(level) {
+        const data = HSK_DATA[level];
+        const lessonList = data.lessons.map(l => 
+            `<div class="lesson-item" onclick="showLessonDetails(${level}, ${l.num})" style="margin-bottom: 5px;">
+                <span class="lesson-number">L${l.num}</span>
+                <span class="lesson-title">${l.title}</span>
+                <span class="lesson-title-en">${l.title_en}</span>
+            </div>`
+        ).join('');
+        
+        const modalContent = document.getElementById('modalContent');
+        modalContent.innerHTML = `
+            <div class="modal-section">
+                <h3>📚 ${data.name} - All ${data.lessons.length} Lessons</h3>
+                <div class="lesson-list" style="max-height: 400px; overflow-y: auto;">
+                    ${lessonList}
+                </div>
+            </div>
+        `;
+        document.getElementById('modalTitle').innerHTML = `${data.name} - Complete List`;
+        document.getElementById('lessonModal').classList.add('active');
+        document.getElementById('goToLessonBtn').style.display = 'none';
+    }
+    
+    function showLessonDetails(level, lessonNum) {
+        const levelData = HSK_DATA[level];
+        const lesson = levelData.lessons.find(l => l.num === lessonNum);
+        if (!lesson) return;
+        
+        currentModalLevel = level;
+        currentModalLesson = lessonNum;
+        
+        const modalContent = document.getElementById('modalContent');
+        modalContent.innerHTML = `
+            <div class="modal-section">
+                <h3>🎯 Lesson Objectives</h3>
+                <ul class="objectives-list">
+                    ${lesson.objectives.map(obj => `<li>${obj}</li>`).join('')}
+                </ul>
+            </div>
+            <div class="modal-section">
+                <h3>📊 Statistics</h3>
+                <div class="level-stats" style="margin-top: 0; justify-content: flex-start;">
+                    <span class="stat">📖 ${lesson.vocab_count} words</span>
+                    <span class="stat">📝 ${lesson.grammar_count} grammar points</span>
+                </div>
+            </div>
+            <div class="modal-section">
+                <h3>💡 What You'll Learn</h3>
+                <p style="font-size: 13px; color: #555;">Lesson ${lesson.num}: ${lesson.title} (${lesson.title_en})</p>
+                <p style="font-size: 12px; color: #666; margin-top: 8px;">This lesson focuses on ${lesson.objectives.slice(0, 2).join(', ')}. Perfect for ${levelData.name} learners!</p>
+            </div>
+        `;
+        
+        document.getElementById('modalTitle').innerHTML = `Lesson ${lessonNum}: ${lesson.title} - ${lesson.title_en}`;
+        document.getElementById('goToLessonBtn').style.display = 'block';
+        document.getElementById('lessonModal').classList.add('active');
+    }
+    
+    function goToLesson() {
+        if (currentModalLevel && currentModalLesson) {
+            window.location.href = `/hsk${currentModalLevel}/lesson${currentModalLesson}`;
+        }
+    }
+    
+    function goToLessonDirect(level, lessonNum) {
+        window.location.href = `/hsk${level}/lesson${lessonNum}`;
+    }
+    
+    function closeLessonModal() {
+        document.getElementById('lessonModal').classList.remove('active');
+    }
+    
+    // Close modal when clicking outside
+    document.getElementById('lessonModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeLessonModal();
+        }
+    });
+    
+    // Initialize
+    renderLevels();
+</script>
+</body>
+</html>

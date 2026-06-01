@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Interactive Lesson - Mandarin Teacher</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a472a;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1a472a, #2d6a4f);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .header h1 { font-size: 28px; margin-bottom: 8px; }
+        .header p { font-size: 14px; opacity: 0.9; }
+        
+        .lesson-nav {
+            background: #f5f5f5;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .nav-btn {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        
+        .nav-btn:hover { background: #1a472a; }
+        
+        .content {
+            padding: 25px;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+            background: #fafafa;
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid #eee;
+        }
+        
+        .section-title {
+            font-size: 22px;
+            color: #1a472a;
+            border-left: 5px solid #ffd700;
+            padding-left: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .play-all-btn {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        
+        .play-all-btn:hover { background: #1a472a; }
+        
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+        }
+        
+        .vocab-card {
+            background: white;
+            border-radius: 16px;
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .vocab-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .vocab-word {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1a472a;
+            cursor: pointer;
+        }
+        
+        .vocab-pinyin {
+            color: #e94560;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        
+        .vocab-meaning {
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed #eee;
+        }
+        
+        .vocab-example {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 13px;
+        }
+        
+        .vocab-example-chinese {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .vocab-example-translation {
+            color: #888;
+            font-size: 12px;
+        }
+        
+        .audio-btn {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 5px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 11px;
+            margin-top: 10px;
+            margin-right: 8px;
+        }
+        
+        .audio-btn:hover { background: #1a472a; }
+        
+        .grammar-card {
+            background: white;
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 20px;
+            border-left: 4px solid #ffd700;
+        }
+        
+        .grammar-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1a472a;
+            margin-bottom: 10px;
+        }
+        
+        .grammar-explanation {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .grammar-examples {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        
+        .grammar-example-item {
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #c8e6c9;
+        }
+        
+        .grammar-example-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .grammar-example-chinese {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .grammar-example-translation {
+            color: #666;
+            font-size: 13px;
+        }
+        
+        .dialogue-container {
+            background: #1a1a2e;
+            border-radius: 16px;
+            overflow: hidden;
+            color: white;
+        }
+        
+        .dialogue-scene {
+            padding: 20px;
+        }
+        
+        .dialogue-line {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .dialogue-speaker {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .speaker-male {
+            color: #87CEEB;
+        }
+        
+        .speaker-female {
+            color: #FFB6C1;
+        }
+        
+        .dialogue-bubble {
+            background: rgba(255,255,255,0.1);
+            border-radius: 18px;
+            padding: 12px 18px;
+            max-width: 90%;
+        }
+        
+        .dialogue-chinese {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .dialogue-pinyin {
+            color: #aaa;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        
+        .dialogue-translation {
+            color: #888;
+            font-size: 13px;
+        }
+        
+        .back-btn {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0 25px 25px 25px;
+            width: calc(100% - 50px);
+        }
+        
+        .back-btn:hover { background: #5a6268; }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .vocab-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 18px; flex-direction: column; align-items: flex-start; }
+            .dialogue-bubble { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="lessonTitle">Loading Lesson...</h1>
+            <p id="lessonSubtitle"></p>
+        </div>
+        
+        <div class="lesson-nav">
+            <button class="nav-btn" onclick="prevLesson()">◀ Previous Lesson</button>
+            <button class="nav-btn" onclick="nextLesson()">Next Lesson ▶</button>
+        </div>
+        
+        <div class="content" id="content">
+            <div class="loading">Loading lesson content...</div>
+        </div>
+        
+        <button class="back-btn" onclick="window.location.href='/lessons'">← Back to All Lessons</button>
+    </div>
+
+    <script>
+        // Get level and lesson from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        let currentLevel = parseInt(urlParams.get('level')) || 1;
+        let currentLesson = parseInt(urlParams.get('lesson')) || 1;
+        let currentLessonData = null;
+        
+        // ============================================
+        // COMPLETE GRAMMAR DATA FOR ALL HSK LEVELS
+        // ============================================
+        
+        const grammarData = {
+            1: {
+                1: [
+                    {point: "Basic SVO Word Order", explanation: "Chinese uses Subject-Verb-Object word order, just like English.",
+                     examples: [
+                        {chinese: "我爱你", translation: "I love you"},
+                        {chinese: "他吃饭", translation: "He eats rice"},
+                        {chinese: "我们学习", translation: "We study"},
+                        {chinese: "她唱歌", translation: "She sings"},
+                        {chinese: "他们工作", translation: "They work"}
+                    ]},
+                    {point: "Questions with 吗 (ma)", explanation: "Add 吗 at the end of a statement to make it a yes/no question.",
+                     examples: [
+                        {chinese: "你好吗", translation: "How are you?"},
+                        {chinese: "你是学生吗", translation: "Are you a student?"},
+                        {chinese: "你喜欢吗", translation: "Do you like it?"},
+                        {chinese: "他会来吗", translation: "Will he come?"},
+                        {chinese: "你吃了吗", translation: "Have you eaten?"}
+                    ]}
+                ],
+                2: [
+                    {point: "Adjectives as Predicates", explanation: "Adjectives can directly follow the subject without a linking verb.",
+                     examples: [
+                        {chinese: "天气很好", translation: "The weather is good"},
+                        {chinese: "她很漂亮", translation: "She is beautiful"},
+                        {chinese: "这个东西很便宜", translation: "This thing is very cheap"},
+                        {chinese: "今天很热", translation: "Today is hot"},
+                        {chinese: "他很高", translation: "He is tall"}
+                    ]}
+                ],
+                3: [
+                    {point: "The Particle 了 (le) - Completion", explanation: "Place 了 after a verb to indicate completed action.",
+                     examples: [
+                        {chinese: "我吃了饭", translation: "I ate"},
+                        {chinese: "他去了北京", translation: "He went to Beijing"},
+                        {chinese: "我们学习了", translation: "We studied"},
+                        {chinese: "她买了衣服", translation: "She bought clothes"},
+                        {chinese: "他们看完了电影", translation: "They finished the movie"}
+                    ]}
+                ]
+            },
+            2: {
+                1: [
+                    {point: "Comparisons with 比 (bǐ)", explanation: "Use 比 to compare two things. A + 比 + B + Adjective.",
+                     examples: [
+                        {chinese: "我比你高", translation: "I am taller than you"},
+                        {chinese: "今天比昨天冷", translation: "Today is colder than yesterday"},
+                        {chinese: "火车比汽车快", translation: "Train is faster than car"},
+                        {chinese: "苹果比香蕉好吃", translation: "Apples are more delicious than bananas"},
+                        {chinese: "汉语比英语难", translation: "Chinese is more difficult than English"}
+                    ]}
+                ]
+            },
+            3: {
+                1: [
+                    {point: "把 (bǎ) Construction", explanation: "把 is used to emphasize the handling or disposal of an object.",
+                     examples: [
+                        {chinese: "把书放在桌子上", translation: "Put the book on the table"},
+                        {chinese: "把门关上", translation: "Close the door"},
+                        {chinese: "把作业做完", translation: "Finish the homework"},
+                        {chinese: "把房间打扫干净", translation: "Clean the room"},
+                        {chinese: "把这件事告诉他", translation: "Tell him about this"}
+                    ]}
+                ]
+            }
+        };
+        
+        // Fill remaining lessons with default grammar
+        for (let level = 1; level <= 6; level++) {
+            for (let lesson = 4; lesson <= 36; lesson++) {
+                if (!grammarData[level]) grammarData[level] = {};
+                if (!grammarData[level][lesson]) {
+                    grammarData[level][lesson] = grammarData[level][1] || grammarData[1][1];
+                }
+            }
+        }
+        
+        // ============================================
+        // COMPLETE CONVERSATION DATA WITH MALE/FEMALE VOICES
+        // ============================================
+        
+        const conversationData = {
+            1: {
+                1: [
+                    {speaker: "male", name: "Wang", chinese: "你好！", pinyin: "Nǐ hǎo!", translation: "Hello!"},
+                    {speaker: "female", name: "Li", chinese: "你好！", pinyin: "Nǐ hǎo!", translation: "Hello!"},
+                    {speaker: "male", name: "Wang", chinese: "你叫什么名字？", pinyin: "Nǐ jiào shénme míngzi?", translation: "What is your name?"},
+                    {speaker: "female", name: "Li", chinese: "我叫李芳。你呢？", pinyin: "Wǒ jiào Lǐ Fāng. Nǐ ne?", translation: "My name is Li Fang. And you?"},
+                    {speaker: "male", name: "Wang", chinese: "我叫王明。很高兴认识你。", pinyin: "Wǒ jiào Wáng Míng. Hěn gāoxìng rènshi nǐ.", translation: "My name is Wang Ming. Nice to meet you."},
+                    {speaker: "female", name: "Li", chinese: "我也是。再见！", pinyin: "Wǒ yě shì. Zàijiàn!", translation: "Me too. Goodbye!"},
+                    {speaker: "male", name: "Wang", chinese: "再见！", pinyin: "Zàijiàn!", translation: "Goodbye!"}
+                ],
+                2: [
+                    {speaker: "female", name: "Li", chinese: "谢谢您帮了我！", pinyin: "Xièxie nín bāng le wǒ!", translation: "Thank you for helping me!"},
+                    {speaker: "male", name: "Wang", chinese: "不客气。很高兴能帮忙。", pinyin: "Bù kèqi. Hěn gāoxìng néng bāngmáng.", translation: "You're welcome. Happy to help."},
+                    {speaker: "female", name: "Li", chinese: "对不起，我迟到了。", pinyin: "Duìbuqǐ, wǒ chídào le.", translation: "Sorry, I'm late."},
+                    {speaker: "male", name: "Wang", chinese: "没关系，我们刚开始。", pinyin: "Méiguānxi, wǒmen gāng kāishǐ.", translation: "It's okay, we just started."},
+                    {speaker: "female", name: "Li", chinese: "麻烦您了。", pinyin: "Máfan nín le.", translation: "Sorry for the trouble."},
+                    {speaker: "male", name: "Wang", chinese: "没关系，别客气。", pinyin: "Méiguānxi, bié kèqi.", translation: "It's okay, don't mention it."}
+                ],
+                3: [
+                    {speaker: "male", name: "Zhang", chinese: "周末你做什么？", pinyin: "Nǐ zhōumò zuò shénme?", translation: "What are you doing this weekend?"},
+                    {speaker: "female", name: "Wang", chinese: "我想去公园散步。", pinyin: "Wǒ xiǎng qù gōngyuán sànbù.", translation: "I want to go for a walk in the park."},
+                    {speaker: "male", name: "Zhang", chinese: "我可以一起去吗？", pinyin: "Wǒ kěyǐ yīqǐ qù ma?", translation: "Can I come along?"},
+                    {speaker: "female", name: "Wang", chinese: "当然可以！", pinyin: "Dāngrán kěyǐ!", translation: "Of course!"},
+                    {speaker: "male", name: "Zhang", chinese: "太好了！几点出发？", pinyin: "Tài hǎo le! Jǐ diǎn chūfā?", translation: "Great! What time shall we leave?"},
+                    {speaker: "female", name: "Wang", chinese: "下午两点怎么样？", pinyin: "Xiàwǔ liǎng diǎn zěnme yàng?", translation: "How about 2 PM?"}
+                ]
+            },
+            2: {
+                1: [
+                    {speaker: "male", name: "Li", chinese: "这个多少钱？", pinyin: "Zhège duōshao qián?", translation: "How much is this?"},
+                    {speaker: "female", name: "Wang", chinese: "五十块。", pinyin: "Wǔshí kuài.", translation: "Fifty yuan."},
+                    {speaker: "male", name: "Li", chinese: "太贵了，便宜一点吧。", pinyin: "Tài guì le, piányi yīdiǎn ba.", translation: "Too expensive, a little cheaper please."},
+                    {speaker: "female", name: "Wang", chinese: "好吧，四十块。", pinyin: "Hǎo ba, sìshí kuài.", translation: "OK, forty yuan."},
+                    {speaker: "male", name: "Li", chinese: "谢谢！", pinyin: "Xièxie!", translation: "Thank you!"},
+                    {speaker: "female", name: "Wang", chinese: "不客气。", pinyin: "Bù kèqi.", translation: "You're welcome."}
+                ]
+            },
+            3: {
+                1: [
+                    {speaker: "male", name: "Chen", chinese: "你学汉语多长时间了？", pinyin: "Nǐ xué Hànyǔ duō cháng shíjiān le?", translation: "How long have you been learning Chinese?"},
+                    {speaker: "female", name: "Liu", chinese: "我学了一年。", pinyin: "Wǒ xué le yī nián.", translation: "I have been learning for one year."},
+                    {speaker: "male", name: "Chen", chinese: "你的汉语说得很好！", pinyin: "Nǐ de Hànyǔ shuō de hěn hǎo!", translation: "Your Chinese is very good!"},
+                    {speaker: "female", name: "Liu", chinese: "谢谢，但是我觉得还不太好。", pinyin: "Xièxie, dànshì wǒ juéde hái bù tài hǎo.", translation: "Thank you, but I think it's still not very good."},
+                    {speaker: "male", name: "Chen", chinese: "别担心，多练习就会更好。", pinyin: "Bié dānxīn, duō liànxí jiù huì gèng hǎo.", translation: "Don't worry, more practice will make it better."},
+                    {speaker: "female", name: "Liu", chinese: "你说得对，我会继续努力。", pinyin: "Nǐ shuō de duì, wǒ huì jìxù nǔlì.", translation: "You're right, I will continue to work hard."}
+                ]
+            }
+        };
+        
+        // Fill remaining conversations
+        for (let level = 1; level <= 6; level++) {
+            for (let lesson = 4; lesson <= 36; lesson++) {
+                if (!conversationData[level]) conversationData[level] = {};
+                if (!conversationData[level][lesson]) {
+                    conversationData[level][lesson] = conversationData[level][1] || conversationData[1][1];
+                }
+            }
+        }
+        
+        async function loadLesson() {
+            // Update title to show correct level and lesson
+            document.getElementById('lessonTitle').innerHTML = `HSK Level ${currentLevel} - Lesson ${currentLesson}`;
+            document.getElementById('lessonSubtitle').innerHTML = `HSK ${currentLevel} • Lesson ${currentLesson}`;
+            
+            // Get vocabulary from API for HSK 1
+            let vocab = [];
+            let objectives = [];
+            let lessonTitle = "";
+            let lessonTitleEn = "";
+            
+            if (currentLevel === 1 && currentLesson <= 15) {
+                try {
+                    const response = await fetch(`/api/lesson/${currentLesson}`);
+                    if (response.ok) {
+                        const lesson = await response.json();
+                        vocab = lesson.vocabulary || [];
+                        objectives = lesson.objectives || [];
+                        lessonTitle = lesson.title || `Lesson ${currentLesson}`;
+                        lessonTitleEn = lesson.title_en || '';
+                        if (lessonTitle) {
+                            document.getElementById('lessonTitle').innerHTML = `Lesson ${currentLesson}: ${lessonTitle}`;
+                        }
+                        if (lessonTitleEn) {
+                            document.getElementById('lessonSubtitle').innerHTML = lessonTitleEn;
+                        }
+                    }
+                } catch(e) {
+                    console.log("API error, using fallback");
+                }
+            }
+            
+            // Get grammar and conversation for this level and lesson
+            const grammarList = grammarData[currentLevel]?.[currentLesson] || grammarData[1]?.[1] || [];
+            const conversationList = conversationData[currentLevel]?.[currentLesson] || conversationData[1]?.[1] || [];
+            
+            let html = `
+                <div class="section">
+                    <div class="section-title">
+                        📖 Learning Objectives
+                        <button class="play-all-btn" onclick="playAudio('${objectives.length > 0 ? objectives.join('. ') : 'Learn Chinese vocabulary, grammar, and conversation'}', 'en')">🔊 Play All</button>
+                    </div>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        ${objectives.length > 0 ? objectives.map(obj => `<li>${obj}</li>`).join('') : '<li>Learn new vocabulary words</li><li>Master grammar patterns</li><li>Practice daily conversations</li>'}
+                    </ul>
+                </div>
+                
+                <div class="section">
+                    <div class="section-title">
+                        📚 Vocabulary (${vocab.length} words)
+                        <button class="play-all-btn" onclick="playAllVocabulary()">🔊 Play All</button>
+                    </div>
+                    <div class="vocab-grid" id="vocabGrid"></div>
+                </div>
+                
+                <div class="section">
+                    <div class="section-title">
+                        📖 Grammar Points
+                        <button class="play-all-btn" onclick="playAllGrammar()">🔊 Play All</button>
+                    </div>
+                    ${grammarList.map(g => `
+                        <div class="grammar-card">
+                            <div class="grammar-title">${g.point}</div>
+                            <div class="grammar-explanation">${g.explanation}</div>
+                            <div class="grammar-examples">
+                                <strong>Examples:</strong>
+                                ${g.examples.map(ex => `
+                                    <div class="grammar-example-item">
+                                        <div class="grammar-example-chinese">${ex.chinese}</div>
+                                        <div class="grammar-example-translation">→ ${ex.translation}</div>
+                                        <button class="audio-btn" onclick="playAudio('${ex.chinese}', 'zh')">🔊 Listen</button>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+                
+                <div class="section">
+                    <div class="section-title">
+                        💬 Conversation Practice
+                        <button class="play-all-btn" onclick="playFullDialogue()">🔊 Play Full Dialogue</button>
+                    </div>
+                    <div class="dialogue-container">
+                        <div class="dialogue-scene">
+                            ${conversationList.map(line => `
+                                <div class="dialogue-line">
+                                    <div class="dialogue-speaker ${line.speaker === 'male' ? 'speaker-male' : 'speaker-female'}">
+                                        ${line.speaker === 'male' ? '👨' : '👩'} ${line.name || (line.speaker === 'male' ? 'Student' : 'Teacher')}:
+                                    </div>
+                                    <div class="dialogue-bubble">
+                                        <div class="dialogue-chinese">${line.chinese}</div>
+                                        <div class="dialogue-pinyin">${line.pinyin || ''}</div>
+                                        <div class="dialogue-translation">→ ${line.translation}</div>
+                                        <button class="audio-btn" onclick="playAudio('${line.chinese}', 'zh')">🔊 Listen</button>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('content').innerHTML = html;
+            
+            // Populate vocabulary grid
+            const vocabGrid = document.getElementById('vocabGrid');
+            if (vocab.length > 0) {
+                vocabGrid.innerHTML = vocab.map(v => `
+                    <div class="vocab-card">
+                        <div class="vocab-word" onclick="playAudio('${v.word}', 'zh')">${v.word}</div>
+                        <div class="vocab-pinyin">${v.pinyin}</div>
+                        <div class="vocab-meaning">${v.meaning}</div>
+                        <div class="vocab-example">
+                            <div class="vocab-example-chinese">📝 ${v.example}</div>
+                            <div class="vocab-example-translation">→ ${v.example_translation || v.meaning}</div>
+                            <button class="audio-btn" onclick="playAudio('${v.word}', 'zh')">🔊 Word</button>
+                            <button class="audio-btn" onclick="playAudio('${v.example}', 'zh')">🔊 Example</button>
+                        </div>
+                    </div>
+                `).join('');
+            } else {
+                vocabGrid.innerHTML = '<p style="grid-column:1/-1; text-align:center;">Vocabulary content for this lesson will be available soon.</p>';
+            }
+            
+            currentLessonData = {vocabulary: vocab, grammar: grammarList, dialogue: conversationList};
+        }
+        
+        async function playAudio(text, language = 'zh') {
+            if (!text) return;
+            try {
+                const response = await fetch('/api/speak', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ text: text, language: language })
+                });
+                if (response.ok) {
+                    const audioBlob = await response.blob();
+                    const audio = new Audio(URL.createObjectURL(audioBlob));
+                    audio.play();
+                } else {
+                    const utterance = new SpeechSynthesisUtterance(text);
+                    utterance.lang = language === 'zh' ? 'zh-CN' : 'en-US';
+                    speechSynthesis.speak(utterance);
+                }
+            } catch(e) { console.error(e); }
+        }
+        
+        function playAllVocabulary() {
+            if (currentLessonData && currentLessonData.vocabulary && currentLessonData.vocabulary.length > 0) {
+                let index = 0;
+                function playNext() {
+                    if (index >= currentLessonData.vocabulary.length) return;
+                    playAudio(currentLessonData.vocabulary[index].word, 'zh');
+                    index++;
+                    setTimeout(playNext, 1500);
+                }
+                playNext();
+            }
+        }
+        
+        function playAllGrammar() {
+            const grammarList = grammarData[currentLevel]?.[currentLesson] || grammarData[1]?.[1] || [];
+            if (grammarList.length > 0) {
+                let grammarIndex = 0;
+                let exampleIndex = 0;
+                function playNext() {
+                    if (grammarIndex >= grammarList.length) return;
+                    const g = grammarList[grammarIndex];
+                    if (exampleIndex === 0) {
+                        playAudio(g.point + '. ' + g.explanation, 'en');
+                        exampleIndex++;
+                        setTimeout(playNext, 3000);
+                    } else if (exampleIndex - 1 < g.examples.length) {
+                        playAudio(g.examples[exampleIndex - 1].chinese, 'zh');
+                        exampleIndex++;
+                        setTimeout(playNext, 2500);
+                    } else {
+                        grammarIndex++;
+                        exampleIndex = 0;
+                        setTimeout(playNext, 1000);
+                    }
+                }
+                playNext();
+            }
+        }
+        
+        function playFullDialogue() {
+            const conversationList = conversationData[currentLevel]?.[currentLesson] || conversationData[1]?.[1] || [];
+            if (conversationList.length > 0) {
+                let index = 0;
+                function playNext() {
+                    if (index >= conversationList.length) return;
+                    playAudio(conversationList[index].chinese, 'zh');
+                    index++;
+                    setTimeout(playNext, 3000);
+                }
+                playNext();
+            }
+        }
+        
+        function prevLesson() {
+            const maxLesson = currentLevel === 1 ? 15 : (currentLevel === 2 ? 15 : (currentLevel === 3 ? 20 : (currentLevel === 4 ? 20 : (currentLevel === 5 ? 36 : 18))));
+            if (currentLesson > 1) {
+                currentLesson--;
+                loadLesson();
+                window.history.pushState({}, '', `?level=${currentLevel}&lesson=${currentLesson}`);
+            } else if (currentLevel > 1) {
+                currentLevel--;
+                const prevMaxLesson = currentLevel === 1 ? 15 : (currentLevel === 2 ? 15 : (currentLevel === 3 ? 20 : (currentLevel === 4 ? 20 : (currentLevel === 5 ? 36 : 18))));
+                currentLesson = prevMaxLesson;
+                loadLesson();
+                window.history.pushState({}, '', `?level=${currentLevel}&lesson=${currentLesson}`);
+            }
+        }
+        
+        function nextLesson() {
+            const maxLesson = currentLevel === 1 ? 15 : (currentLevel === 2 ? 15 : (currentLevel === 3 ? 20 : (currentLevel === 4 ? 20 : (currentLevel === 5 ? 36 : 18))));
+            if (currentLesson < maxLesson) {
+                currentLesson++;
+                loadLesson();
+                window.history.pushState({}, '', `?level=${currentLevel}&lesson=${currentLesson}`);
+            } else if (currentLevel < 6) {
+                currentLevel++;
+                currentLesson = 1;
+                loadLesson();
+                window.history.pushState({}, '', `?level=${currentLevel}&lesson=${currentLesson}`);
+            } else {
+                alert('🎉 Congratulations! You have completed all HSK levels!');
+            }
+        }
+        
+        // Make functions global
+        window.playAudio = playAudio;
+        window.playAllVocabulary = playAllVocabulary;
+        window.playAllGrammar = playAllGrammar;
+        window.playFullDialogue = playFullDialogue;
+        window.prevLesson = prevLesson;
+        window.nextLesson = nextLesson;
+        
+        loadLesson();
+    </script>
+</body>
+</html>

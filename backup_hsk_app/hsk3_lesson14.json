@@ -1,0 +1,52 @@
+{
+  "title": "这篇文章太难懂了",
+  "subtitle": "Expressing Difficulty with 难, Using Potential Complements, Reading and Comprehension",
+  "assistant_message": "Today we learn: expressing difficulty with 难 (nán), using potential complements (Verb + 得/不 + Complement), and talking about reading comprehension.",
+  "vocabulary": [
+    {"word": "文章", "pinyin": "wén zhāng", "meaning": "article", "meaning_id": "artikel", "example": "写文章", "example_translation": "write an article", "example_translation_id": "menulis artikel"},
+    {"word": "难懂", "pinyin": "nán dǒng", "meaning": "hard to understand", "meaning_id": "sulit dipahami", "example": "太难懂了", "example_translation": "too hard to understand", "example_translation_id": "terlalu sulit dipahami"},
+    {"word": "懂", "pinyin": "dǒng", "meaning": "to understand", "meaning_id": "mengerti", "example": "听不懂", "example_translation": "can't understand (hearing)", "example_translation_id": "tidak mengerti (mendengar)"},
+    {"word": "理解", "pinyin": "lǐ jiě", "meaning": "to comprehend", "meaning_id": "memahami", "example": "理解意思", "example_translation": "understand the meaning", "example_translation_id": "memahami artinya"},
+    {"word": "意思", "pinyin": "yì si", "meaning": "meaning", "meaning_id": "arti", "example": "什么意思？", "example_translation": "What does it mean?", "example_translation_id": "Apa artinya?"},
+    {"word": "简单", "pinyin": "jiǎn dān", "meaning": "simple/easy", "meaning_id": "sederhana/mudah", "example": "很简单", "example_translation": "very simple", "example_translation_id": "sangat sederhana"},
+    {"word": "复杂", "pinyin": "fù zá", "meaning": "complicated", "meaning_id": "rumit", "example": "太复杂了", "example_translation": "too complicated", "example_translation_id": "terlalu rumit"},
+    {"word": "清楚", "pinyin": "qīng chu", "meaning": "clear", "meaning_id": "jelas", "example": "不清楚", "example_translation": "not clear", "example_translation_id": "tidak jelas"}
+  ],
+  "grammar": [
+    {
+      "point": "Potential Complements (Verb + 得/不 + Complement)",
+      "point_id": "Komplemen Potensial (Kata Kerja + 得/不 + Komplemen)",
+      "explanation": "Use 得 for ability/can, 不 for inability/cannot. Structure: Verb + 得/不 + Result (懂, 完, 见).",
+      "explanation_id": "Gunakan 得 untuk kemampuan/bisa, 不 untuk ketidakmampuan/tidak bisa. Struktur: Kata Kerja + 得/不 + Hasil (懂, 完, 见).",
+      "examples": [
+        {"chinese": "我看得懂这篇文章。", "translation": "I can understand this article.", "translation_id": "Saya bisa memahami artikel ini."},
+        {"chinese": "我听不懂他在说什么。", "translation": "I can't understand what he is saying.", "translation_id": "Saya tidak mengerti apa yang dia katakan."},
+        {"chinese": "这篇文章太难懂了。", "translation": "This article is too hard to understand.", "translation_id": "Artikel ini terlalu sulit dipahami."}
+      ]
+    },
+    {
+      "point": "Expressing Difficulty with 难 (nán)",
+      "point_id": "Menyatakan Kesulitan dengan 难 (nán)",
+      "explanation": "Use 难 + Verb to express 'difficult to do'. Structure: 难 + Verb.",
+      "explanation_id": "Gunakan 难 + Kata Kerja untuk menyatakan 'sulit dilakukan'. Struktur: 难 + Kata Kerja.",
+      "examples": [
+        {"chinese": "难懂", "translation": "hard to understand", "translation_id": "sulit dipahami"},
+        {"chinese": "难学", "translation": "hard to learn", "translation_id": "sulit dipelajari"},
+        {"chinese": "难做", "translation": "hard to do", "translation_id": "sulit dilakukan"}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你看懂这篇文章了吗？", "pinyin": "Nǐ kàn dǒng zhè piān wénzhāng le ma?", "translation": "Did you understand this article?", "translation_id": "Apakah kamu memahami artikel ini?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "太难懂了，有很多生词。", "pinyin": "Tài nán dǒng le, yǒu hěnduō shēngcí.", "translation": "It's too hard to understand, there are many new words.", "translation_id": "Terlalu sulit dipahami, ada banyak kosakata baru."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "慢慢来，多读几遍就清楚了。", "pinyin": "Màn man lái, duō dú jǐ biàn jiù qīngchu le.", "translation": "Take it slow, read it a few more times and it will become clear.", "translation_id": "Santai saja, baca beberapa kali lagi dan akan menjadi jelas."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你说得对，我会努力的。", "pinyin": "Nǐ shuō de duì, wǒ huì nǔlì de.", "translation": "You're right, I will work hard.", "translation_id": "Kamu benar, saya akan berusaha."}
+  ],
+  "exercises": [
+    {"question": "What does 懂 (dǒng) mean?", "question_id": "Apa arti 懂 (dǒng)?", "options": ["To read", "To understand", "To write", "To speak"], "options_id": ["Membaca", "Mengerti", "Menulis", "Berbicara"], "correct": 1},
+    {"question": "How do you say 'I can understand this article' using potential complement?", "question_id": "Bagaimana mengatakan 'Saya bisa memahami artikel ini' menggunakan komplemen potensial?", "options": ["我看这篇文章懂", "我看得懂这篇文章", "我懂这篇文章", "这篇文章我看懂"], "options_id": ["Saya artikel ini mengerti", "Saya bisa memahami artikel ini", "Saya mengerti artikel ini", "Artikel ini saya mengerti"], "correct": 1},
+    {"question": "What does 难懂 (nán dǒng) mean?", "question_id": "Apa arti 难懂 (nán dǒng)?", "options": ["Easy to understand", "Hard to understand", "Interesting", "Boring"], "options_id": ["Mudah dipahami", "Sulit dipahami", "Menarik", "Membosankan"], "correct": 1},
+    {"question": "How to say 'I can't understand what he is saying' in Chinese?", "question_id": "Bagaimana mengatakan 'Saya tidak mengerti apa yang dia katakan' dalam bahasa Mandarin?", "options": ["我听不懂他说什么", "我听得懂他说什么", "我不懂他说什么", "我懂他说什么"], "options_id": ["Saya tidak mengerti apa yang dia katakan", "Saya bisa mengerti apa yang dia katakan", "Saya tidak mengerti dia mengatakan apa", "Saya mengerti dia mengatakan apa"], "correct": 0},
+    {"question": "What does 清楚 (qīngchu) mean?", "question_id": "Apa arti 清楚 (qīngchu)?", "options": ["Clear", "Dark", "Bright", "Loud"], "options_id": ["Jelas", "Gelap", "Terang", "Keras"], "correct": 0}
+  ]
+}

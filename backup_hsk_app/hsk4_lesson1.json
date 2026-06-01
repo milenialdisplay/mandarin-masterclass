@@ -1,0 +1,49 @@
+{
+  "title": "简单的爱情",
+  "subtitle": "Talking About Relationships, Emotions, and Values",
+  "assistant_message": "Today we learn: talking about love and relationships, expressing emotions, and discussing personal values.",
+  "vocabulary": [
+    {"word": "爱情", "pinyin": "ài qíng", "meaning": "love (romantic)", "meaning_id": "cinta (romantis)", "example": "真正的爱情", "example_translation": "true love", "example_translation_id": "cinta sejati"},
+    {"word": "简单", "pinyin": "jiǎn dān", "meaning": "simple", "meaning_id": "sederhana", "example": "很简单", "example_translation": "very simple", "example_translation_id": "sangat sederhana"},
+    {"word": "幸福", "pinyin": "xìng fú", "meaning": "happiness", "meaning_id": "kebahagiaan", "example": "幸福的生活", "example_translation": "happy life", "example_translation_id": "kehidupan bahagia"},
+    {"word": "珍惜", "pinyin": "zhēn xī", "meaning": "to cherish", "meaning_id": "menghargai", "example": "珍惜时间", "example_translation": "cherish time", "example_translation_id": "menghargai waktu"},
+    {"word": "理解", "pinyin": "lǐ jiě", "meaning": "to understand", "meaning_id": "memahami", "example": "互相理解", "example_translation": "mutual understanding", "example_translation_id": "saling memahami"},
+    {"word": "信任", "pinyin": "xìn rèn", "meaning": "trust", "meaning_id": "kepercayaan", "example": "建立信任", "example_translation": "build trust", "example_translation_id": "membangun kepercayaan"},
+    {"word": "沟通", "pinyin": "gōu tōng", "meaning": "to communicate", "meaning_id": "berkomunikasi", "example": "良好沟通", "example_translation": "good communication", "example_translation_id": "komunikasi yang baik"},
+    {"word": "支持", "pinyin": "zhī chí", "meaning": "to support", "meaning_id": "mendukung", "example": "互相支持", "example_translation": "support each other", "example_translation_id": "saling mendukung"}
+  ],
+  "grammar": [
+    {
+      "point": "Expressing 'For' with 对于 (duìyú)",
+      "point_id": "Menyatakan 'Untuk' dengan 对于 (duìyú)",
+      "explanation": "Use 对于 to introduce the topic or object of an action. Structure: 对于 + Topic, Subject + Comment.",
+      "explanation_id": "Gunakan 对于 untuk memperkenalkan topik atau objek suatu tindakan. Struktur: 对于 + Topik, Subjek + Komentar.",
+      "examples": [
+        {"chinese": "对于爱情，每个人都有自己的理解。", "translation": "Regarding love, everyone has their own understanding.", "translation_id": "Mengenai cinta, setiap orang memiliki pemahamannya sendiri."},
+        {"chinese": "对于这个问题，我们需要认真思考。", "translation": "Regarding this issue, we need to think carefully.", "translation_id": "Mengenai masalah ini, kita perlu berpikir dengan serius."}
+      ]
+    },
+    {
+      "point": "Using 根本 (gēnběn) for 'Absolutely'",
+      "point_id": "Menggunakan 根本 (gēnběn) untuk 'Sama Sekali'",
+      "explanation": "Use 根本 before negatives to emphasize 'absolutely not' or 'never'.",
+      "explanation_id": "Gunakan 根本 sebelum negatif untuk menekankan 'sama sekali tidak' atau 'tidak pernah'.",
+      "examples": [
+        {"chinese": "我根本不明白你的意思。", "translation": "I absolutely don't understand what you mean.", "translation_id": "Sama sekali tidak mengerti maksudmu."},
+        {"chinese": "他根本不在乎别人的看法。", "translation": "He absolutely doesn't care about others' opinions.", "translation_id": "Dia sama sekali tidak peduli dengan pendapat orang lain."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你觉得什么是真正的爱情？", "pinyin": "Nǐ juéde shénme shì zhēnzhèng de àiqíng?", "translation": "What do you think true love is?", "translation_id": "Menurutmu apa itu cinta sejati?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "对我来说，爱情不需要太复杂，互相理解和支持最重要。", "pinyin": "Duì wǒ lái shuō, àiqíng bù xūyào tài fùzá, hùxiāng lǐjiě hé zhīchí zuì zhòngyào.", "translation": "For me, love doesn't need to be too complicated. Mutual understanding and support are the most important.", "translation_id": "Bagiku, cinta tidak perlu terlalu rumit. Saling memahami dan mendukung adalah yang terpenting."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你说得对，简单的爱情才是最幸福的。", "pinyin": "Nǐ shuō de duì, jiǎndān de àiqíng cái shì zuì xìngfú de.", "translation": "You're right, simple love is the happiest.", "translation_id": "Kamu benar, cinta yang sederhana adalah yang paling bahagia."}
+  ],
+  "exercises": [
+    {"question": "What does 爱情 (àiqíng) mean?", "question_id": "Apa arti 爱情 (àiqíng)?", "options": ["Family love", "Romantic love", "Friendship", "Self-love"], "options_id": ["Cinta keluarga", "Cinta romantis", "Persahabatan", "Cinta diri"], "correct": 1},
+    {"question": "How do you say 'mutual understanding' in Chinese?", "question_id": "Bagaimana mengatakan 'saling memahami' dalam bahasa Mandarin?", "options": ["互相理解", "互相支持", "互相帮助", "互相尊重"], "options_id": ["saling memahami", "saling mendukung", "saling membantu", "saling menghormati"], "correct": 0},
+    {"question": "What does 珍惜 (zhēnxī) mean?", "question_id": "Apa arti 珍惜 (zhēnxī)?", "options": ["To waste", "To cherish", "To ignore", "To forget"], "options_id": ["Membuang", "Menghargai", "Mengabaikan", "Melupakan"], "correct": 1},
+    {"question": "What is the function of 对于 (duìyú)?", "question_id": "Apa fungsi 对于 (duìyú)?", "options": ["To show cause", "To introduce a topic", "To show result", "To show time"], "options_id": ["Menunjukkan sebab", "Memperkenalkan topik", "Menunjukkan hasil", "Menunjukkan waktu"], "correct": 1},
+    {"question": "How to say 'I absolutely don't understand' in Chinese?", "question_id": "Bagaimana mengatakan 'Sama sekali tidak mengerti' dalam bahasa Mandarin?", "options": ["根本不理解", "不理解", "一点不理解", "没有理解"], "options_id": ["Sama sekali tidak mengerti", "Tidak mengerti", "Sedikit tidak mengerti", "Belum mengerti"], "correct": 0}
+  ]
+}

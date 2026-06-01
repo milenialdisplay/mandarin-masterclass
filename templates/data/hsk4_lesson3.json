@@ -1,0 +1,50 @@
+{
+  "title": "经理对我印象不错",
+  "subtitle": "Talking About Workplace, Impressions, and Career",
+  "assistant_message": "Today we learn: talking about first impressions at work, using 印象 (yìnxiàng) for 'impression', and discussing career.",
+  "vocabulary": [
+    {"word": "经理", "pinyin": "jīng lǐ", "meaning": "manager", "meaning_id": "manajer", "example": "总经理", "example_translation": "general manager", "example_translation_id": "manajer umum"},
+    {"word": "印象", "pinyin": "yìn xiàng", "meaning": "impression", "meaning_id": "kesan", "example": "第一印象", "example_translation": "first impression", "example_translation_id": "kesan pertama"},
+    {"word": "专业", "pinyin": "zhuān yè", "meaning": "professional/major", "meaning_id": "profesional/jurusan", "example": "专业能力", "example_translation": "professional ability", "example_translation_id": "kemampuan profesional"},
+    {"word": "认真", "pinyin": "rèn zhēn", "meaning": "serious/careful", "meaning_id": "serius/hati-hati", "example": "工作认真", "example_translation": "work seriously", "example_translation_id": "bekerja dengan serius"},
+    {"word": "负责", "pinyin": "fù zé", "meaning": "responsible", "meaning_id": "bertanggung jawab", "example": "负责任", "example_translation": "be responsible", "example_translation_id": "bertanggung jawab"},
+    {"word": "升职", "pinyin": "shēng zhí", "meaning": "to get promoted", "meaning_id": "naik jabatan", "example": "升职加薪", "example_translation": "get promoted and raise salary", "example_translation_id": "naik jabatan dan naik gaji"},
+    {"word": "辞职", "pinyin": "cí zhí", "meaning": "to resign", "meaning_id": "mengundurkan diri", "example": "辞职信", "example_translation": "resignation letter", "example_translation_id": "surat pengunduran diri"},
+    {"word": "面试", "pinyin": "miàn shì", "meaning": "interview", "meaning_id": "wawancara", "example": "面试官", "example_translation": "interviewer", "example_translation_id": "pewawancara"}
+  ],
+  "grammar": [
+    {
+      "point": "Using 给...留下...印象 (Give... Leave... Impression)",
+      "point_id": "Menggunakan 给...留下...印象 (Memberi... Meninggalkan... Kesan)",
+      "explanation": "Structure: Person + 给 + Object + 留下 + Impression. Means 'leave an impression on someone'.",
+      "explanation_id": "Struktur: Orang + 给 + Objek + 留下 + Kesan. Berarti 'meninggalkan kesan pada seseorang'.",
+      "examples": [
+        {"chinese": "他给我留下了很好的印象。", "translation": "He left a very good impression on me.", "translation_id": "Dia meninggalkan kesan yang sangat baik pada saya."},
+        {"chinese": "面试时要注意给面试官留下好印象。", "translation": "During the interview, pay attention to leaving a good impression on the interviewer.", "translation_id": "Saat wawancara, perhatikan untuk meninggalkan kesan baik pada pewawancara."}
+      ]
+    },
+    {
+      "point": "Using 挺 (tǐng) for 'Quite'",
+      "point_id": "Menggunakan 挺 (tǐng) untuk 'Cukup'",
+      "explanation": "挺 is used like 很 but is more conversational. Structure: 挺 + Adjective + 的.",
+      "explanation_id": "挺 digunakan seperti 很 tetapi lebih percakapan. Struktur: 挺 + Kata Sifat + 的.",
+      "examples": [
+        {"chinese": "他工作挺认真的。", "translation": "He is quite serious about his work.", "translation_id": "Dia cukup serius dalam bekerja."},
+        {"chinese": "这个方案挺不错的。", "translation": "This plan is quite good.", "translation_id": "Rencana ini cukup bagus."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你面试怎么样？", "pinyin": "Nǐ miànshì zěnme yàng?", "translation": "How was your interview?", "translation_id": "Bagaimana wawancaramu?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "经理对我印象不错，说我挺专业的。", "pinyin": "Jīnglǐ duì wǒ yìnxiàng bùcuò, shuō wǒ tǐng zhuānyè de.", "translation": "The manager had a good impression of me, said I was quite professional.", "translation_id": "Manajer punya kesan baik pada saya, mengatakan saya cukup profesional."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "太好了！祝你成功！", "pinyin": "Tài hǎo le! Zhù nǐ chénggōng!", "translation": "That's great! Wish you success!", "translation_id": "Bagus sekali! Semoga sukses!"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "谢谢！如果通过了，我就有机会升职了。", "pinyin": "Xièxie! Rúguǒ tōngguò le, wǒ jiù yǒu jīhuì shēngzhí le.", "translation": "Thanks! If I pass, I'll have a chance to get promoted.", "translation_id": "Terima kasih! Jika lulus, saya akan punya kesempatan naik jabatan."}
+  ],
+  "exercises": [
+    {"question": "What does 印象 (yìnxiàng) mean?", "question_id": "Apa arti 印象 (yìnxiàng)?", "options": ["Image", "Impression", "Effect", "Result"], "options_id": ["Gambar", "Kesan", "Efek", "Hasil"], "correct": 1},
+    {"question": "How do you say 'leave a good impression' in Chinese?", "question_id": "Bagaimana mengatakan 'meninggalkan kesan baik' dalam bahasa Mandarin?", "options": ["留下好印象", "留下坏印象", "留下印象", "印象深刻"], "options_id": ["meninggalkan kesan baik", "meninggalkan kesan buruk", "meninggalkan kesan", "kesan mendalam"], "correct": 0},
+    {"question": "What does 挺 (tǐng) mean in conversation?", "question_id": "Apa arti 挺 (tǐng) dalam percakapan?", "options": ["Very", "Quite (casual)", "Extremely", "A little"], "options_id": ["Sangat", "Cukup (kasual)", "Sangat sekali", "Sedikit"], "correct": 1},
+    {"question": "What is 升职 (shēngzhí)?", "question_id": "Apa itu 升职 (shēngzhí)?", "options": ["To resign", "To get promoted", "To get hired", "To get fired"], "options_id": ["Mengundurkan diri", "Naik jabatan", "Diterima kerja", "Dipecat"], "correct": 1},
+    {"question": "How to say 'professional ability' in Chinese?", "question_id": "Bagaimana mengatakan 'kemampuan profesional' dalam bahasa Mandarin?", "options": ["专业能力", "工作能力", "学习能力", "沟通能力"], "options_id": ["kemampuan profesional", "kemampuan kerja", "kemampuan belajar", "kemampuan komunikasi"], "correct": 0}
+  ]
+}

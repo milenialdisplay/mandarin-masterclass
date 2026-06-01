@@ -1,0 +1,51 @@
+{
+  "title": "你减肥成功了",
+  "subtitle": "Expressing Results, Using Resultative Complements, Giving Compliments",
+  "assistant_message": "Today we learn: resultative complements (verb + 完/到/见), expressing success/failure, and giving compliments.",
+  "vocabulary": [
+    {"word": "减肥", "pinyin": "jiǎn féi", "meaning": "to lose weight", "meaning_id": "menurunkan berat badan", "example": "正在减肥", "example_translation": "losing weight", "example_translation_id": "sedang menurunkan berat badan"},
+    {"word": "成功", "pinyin": "chéng gōng", "meaning": "to succeed", "meaning_id": "berhasil", "example": "减肥成功", "example_translation": "successfully lose weight", "example_translation_id": "berhasil menurunkan berat badan"},
+    {"word": "失败", "pinyin": "shī bài", "meaning": "to fail", "meaning_id": "gagal", "example": "失败了", "example_translation": "failed", "example_translation_id": "gagal"},
+    {"word": "坚持", "pinyin": "jiān chí", "meaning": "to persist", "meaning_id": "bertahan", "example": "坚持锻炼", "example_translation": "persist in exercise", "example_translation_id": "bertahan berolahraga"},
+    {"word": "效果", "pinyin": "xiào guǒ", "meaning": "effect/result", "meaning_id": "efek/hasil", "example": "效果很好", "example_translation": "the effect is good", "example_translation_id": "efeknya bagus"},
+    {"word": "办法", "pinyin": "bàn fǎ", "meaning": "method/way", "meaning_id": "metode/cara", "example": "好办法", "example_translation": "good method", "example_translation_id": "metode bagus"},
+    {"word": "健康", "pinyin": "jiàn kāng", "meaning": "healthy", "meaning_id": "sehat", "example": "身体健康", "example_translation": "healthy body", "example_translation_id": "tubuh sehat"},
+    {"word": "锻炼", "pinyin": "duàn liàn", "meaning": "to exercise", "meaning_id": "berolahraga", "example": "每天锻炼", "example_translation": "exercise every day", "example_translation_id": "berolahraga setiap hari"}
+  ],
+  "grammar": [
+    {
+      "point": "Resultative Complements (Verb + 完/到/见)",
+      "point_id": "Komplemen Hasil (Kata Kerja + 完/到/见)",
+      "explanation": "Add complements after verbs to indicate the result of an action. 完 (finish), 到 (achieve), 见 (see).",
+      "explanation_id": "Tambahkan komplemen setelah kata kerja untuk menunjukkan hasil suatu tindakan. 完 (selesai), 到 (mencapai), 见 (melihat).",
+      "examples": [
+        {"chinese": "我吃完饭了。", "translation": "I finished eating.", "translation_id": "Saya selesai makan."},
+        {"chinese": "我找到工作了。", "translation": "I found a job.", "translation_id": "Saya menemukan pekerjaan."},
+        {"chinese": "我看见他了。", "translation": "I saw him.", "translation_id": "Saya melihatnya."}
+      ]
+    },
+    {
+      "point": "Expressing Success with 成功 (chénggōng)",
+      "point_id": "Menyatakan Keberhasilan dengan 成功 (chénggōng)",
+      "explanation": "Use 成功 after a verb to indicate successful completion. Structure: Subject + Verb + 成功.",
+      "explanation_id": "Gunakan 成功 setelah kata kerja untuk menunjukkan penyelesaian yang berhasil. Struktur: Subjek + Kata Kerja + 成功.",
+      "examples": [
+        {"chinese": "你减肥成功了。", "translation": "You successfully lost weight.", "translation_id": "Kamu berhasil menurunkan berat badan."},
+        {"chinese": "他考试成功了。", "translation": "He passed the exam successfully.", "translation_id": "Dia berhasil lulus ujian."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你看起来瘦了！", "pinyin": "Nǐ kàn qǐlái shòu le!", "translation": "You look thinner!", "translation_id": "Kamu terlihat lebih kurus!"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "是啊，我减肥成功了。", "pinyin": "Shì a, wǒ jiǎnféi chénggōng le.", "translation": "Yes, I successfully lost weight.", "translation_id": "Ya, saya berhasil menurunkan berat badan."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你是怎么做到的？", "pinyin": "Nǐ shì zěnme zuò dào de?", "translation": "How did you do it?", "translation_id": "Bagaimana kamu melakukannya?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我坚持每天锻炼，也注意饮食。", "pinyin": "Wǒ jiānchí měitiān duànliàn, yě zhùyì yǐnshí.", "translation": "I persist in exercising every day, and also pay attention to my diet.", "translation_id": "Saya bertahan berolahraga setiap hari, dan juga memperhatikan makanan."}
+  ],
+  "exercises": [
+    {"question": "What is a resultative complement?", "question_id": "Apa itu komplemen hasil?", "options": ["Shows how an action is done", "Shows the result of an action", "Shows the time of an action", "Shows the place of an action"], "options_id": ["Menunjukkan bagaimana suatu tindakan dilakukan", "Menunjukkan hasil suatu tindakan", "Menunjukkan waktu suatu tindakan", "Menunjukkan tempat suatu tindakan"], "correct": 1},
+    {"question": "What does 减肥成功 (jiǎnféi chénggōng) mean?", "question_id": "Apa arti 减肥成功 (jiǎnféi chénggōng)?", "options": ["To start losing weight", "To successfully lose weight", "To fail to lose weight", "To gain weight"], "options_id": ["Mulai menurunkan berat badan", "Berhasil menurunkan berat badan", "Gagal menurunkan berat badan", "Menaikkan berat badan"], "correct": 1},
+    {"question": "What does 坚持 (jiānchí) mean?", "question_id": "Apa arti 坚持 (jiānchí)?", "options": ["To give up", "To persist", "To start", "To finish"], "options_id": ["Menyerah", "Bertahan", "Memulai", "Menyelesaikan"], "correct": 1},
+    {"question": "How to say 'I finished eating' in Chinese?", "question_id": "Bagaimana mengatakan 'Saya selesai makan' dalam bahasa Mandarin?", "options": ["我吃饭了", "我吃完饭了", "我吃完了", "我吃了饭"], "options_id": ["Saya makan sudah", "Saya selesai makan", "Saya selesai makan sudah", "Saya sudah makan"], "correct": 1},
+    {"question": "What does 健康 (jiànkāng) mean?", "question_id": "Apa arti 健康 (jiànkāng)?", "options": ["Happy", "Healthy", "Rich", "Beautiful"], "options_id": ["Senang", "Sehat", "Kaya", "Cantik"], "correct": 1}
+  ]
+}

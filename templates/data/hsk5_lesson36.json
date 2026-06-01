@@ -1,0 +1,33 @@
+{
+  "title": "未来趋势",
+  "subtitle": "Future Trends",
+  "assistant_message": "Today we learn: discussing future trends, using 未来(wèilái) and 趋势(qūshì), and expressing predictions.",
+  "vocabulary": [
+    {
+      "word": "未来",
+      "pinyin": "wèilái",
+      "meaning": "future",
+      "meaning_id": "future",
+      "example": "未来很常见",
+      "example_translation": "未来 is common",
+      "example_translation_id": "未来 umum"
+    }
+  ],
+  "grammar": [
+    {
+      "point": "趋势(qūshì)=trend",
+      "point_id": "趋势(qūshì)=trend",
+      "explanation": "Explanation for 趋势(qūshì)=trend",
+      "explanation_id": "Penjelasan untuk 趋势(qūshì)=trend",
+      "examples": [
+        {
+          "chinese": "例子",
+          "translation": "example",
+          "translation_id": "contoh"
+        }
+      ]
+    }
+  ],
+  "dialogue": [],
+  "exercises": []
+}

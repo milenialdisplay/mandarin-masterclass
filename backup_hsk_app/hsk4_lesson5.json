@@ -1,0 +1,50 @@
+{
+  "title": "美丽的小城",
+  "subtitle": "Describing Places, Travel Experiences, Using 所 (suǒ)",
+  "assistant_message": "Today we learn: describing beautiful places, talking about travel experiences, and using 所 (suǒ) as a nominalizer.",
+  "vocabulary": [
+    {"word": "小城", "pinyin": "xiǎo chéng", "meaning": "small town", "meaning_id": "kota kecil", "example": "美丽的小城", "example_translation": "beautiful small town", "example_translation_id": "kota kecil yang indah"},
+    {"word": "风景", "pinyin": "fēng jǐng", "meaning": "scenery", "meaning_id": "pemandangan", "example": "风景优美", "example_translation": "beautiful scenery", "example_translation_id": "pemandangan indah"},
+    {"word": "安静", "pinyin": "ān jìng", "meaning": "quiet", "meaning_id": "tenang", "example": "安静的地方", "example_translation": "quiet place", "example_translation_id": "tempat yang tenang"},
+    {"word": "古老", "pinyin": "gǔ lǎo", "meaning": "ancient", "meaning_id": "kuno", "example": "古老的建筑", "example_translation": "ancient architecture", "example_translation_id": "arsitektur kuno"},
+    {"word": "传统", "pinyin": "chuán tǒng", "meaning": "traditional", "meaning_id": "tradisional", "example": "传统文化", "example_translation": "traditional culture", "example_translation_id": "budaya tradisional"},
+    {"word": "特色", "pinyin": "tè sè", "meaning": "characteristic/feature", "meaning_id": "ciri khas", "example": "地方特色", "example_translation": "local characteristics", "example_translation_id": "ciri khas lokal"},
+    {"word": "游客", "pinyin": "yóu kè", "meaning": "tourist", "meaning_id": "wisatawan", "example": "很多游客", "example_translation": "many tourists", "example_translation_id": "banyak wisatawan"},
+    {"word": "放松", "pinyin": "fàng sōng", "meaning": "to relax", "meaning_id": "bersantai", "example": "放松心情", "example_translation": "relax the mind", "example_translation_id": "merilekskan pikiran"}
+  ],
+  "grammar": [
+    {
+      "point": "Using 所 (suǒ) as a Nominalizer",
+      "point_id": "Menggunakan 所 (suǒ) sebagai Pembentuk Nomina",
+      "explanation": "所 + Verb creates a noun phrase meaning 'that which is verb-ed'. Often paired with 的.",
+      "explanation_id": "所 + Kata Kerja menciptakan frasa nomina yang berarti 'apa yang dikehendaki'. Sering dipasangkan dengan 的.",
+      "examples": [
+        {"chinese": "我所看到的风景很美。", "translation": "The scenery that I saw is very beautiful.", "translation_id": "Pemandangan yang saya lihat sangat indah."},
+        {"chinese": "他所做的事让我感动。", "translation": "What he did touched me.", "translation_id": "Apa yang dia lakukan menyentuh hati saya."}
+      ]
+    },
+    {
+      "point": "Passive Voice with 被 (bèi)",
+      "point_id": "Kalimat Pasif dengan 被 (bèi)",
+      "explanation": "被 is used to indicate the passive voice, often when something undesirable happens.",
+      "explanation_id": "被 digunakan untuk menunjukkan kalimat pasif, sering ketika sesuatu yang tidak diinginkan terjadi.",
+      "examples": [
+        {"chinese": "这座城市被保护得很好。", "translation": "This city is very well protected.", "translation_id": "Kota ini dilindungi dengan sangat baik."},
+        {"chinese": "他被美丽的风景吸引了。", "translation": "He was attracted by the beautiful scenery.", "translation_id": "Dia tertarik oleh pemandangan yang indah."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你上次旅行去了哪里？", "pinyin": "Nǐ shàng cì lǚxíng qù le nǎlǐ?", "translation": "Where did you go on your last trip?", "translation_id": "Kemana kamu pergi pada perjalanan terakhirmu?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "我去了一个小城，那里的风景太美了。", "pinyin": "Wǒ qù le yī gè xiǎo chéng, nàlǐ de fēngjǐng tài měi le.", "translation": "I went to a small town. The scenery there was too beautiful.", "translation_id": "Saya pergi ke sebuah kota kecil. Pemandangan di sana sangat indah."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "是什么样的地方？", "pinyin": "Shì shénme yàng de dìfāng?", "translation": "What kind of place is it?", "translation_id": "Tempat seperti apa itu?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "一个安静古老的小城，有很多传统建筑。在那里可以放松心情。", "pinyin": "Yī gè ānjìng gǔlǎo de xiǎo chéng, yǒu hěnduō chuántǒng jiànzhú. Zài nàlǐ kěyǐ fàngsōng xīnqíng.", "translation": "A quiet, ancient small town with many traditional buildings. There you can relax your mind.", "translation_id": "Kota kecil yang tenang dan kuno, dengan banyak bangunan tradisional. Di sana kamu bisa merilekskan pikiran."}
+  ],
+  "exercises": [
+    {"question": "What does 小城 (xiǎo chéng) mean?", "question_id": "Apa arti 小城 (xiǎo chéng)?", "options": ["Big city", "Small town", "Capital city", "Coastal city"], "options_id": ["Kota besar", "Kota kecil", "Ibu kota", "Kota pantai"], "correct": 1},
+    {"question": "How do you say 'beautiful scenery' in Chinese?", "question_id": "Bagaimana mengatakan 'pemandangan indah' dalam bahasa Mandarin?", "options": ["风景好", "美丽的风景", "风景美丽", "All of the above"], "options_id": ["Pemandangan bagus", "Pemandangan indah", "Pemandangan indah", "Semua di atas"], "correct": 3},
+    {"question": "What is the function of 所 (suǒ) in Chinese?", "question_id": "Apa fungsi 所 (suǒ) dalam bahasa Mandarin?", "options": ["To show location", "To nominalize verbs", "To show possession", "To show time"], "options_id": ["Menunjukkan lokasi", "Membentuk nomina dari kata kerja", "Menunjukkan kepemilikan", "Menunjukkan waktu"], "correct": 1},
+    {"question": "What does 放松 (fàngsōng) mean?", "question_id": "Apa arti 放松 (fàngsōng)?", "options": ["To work hard", "To relax", "To exercise", "To travel"], "options_id": ["Bekerja keras", "Bersantai", "Berolahraga", "Bepergian"], "correct": 1},
+    {"question": "How to say 'traditional architecture' in Chinese?", "question_id": "Bagaimana mengatakan 'arsitektur tradisional' dalam bahasa Mandarin?", "options": ["传统建筑", "现代建筑", "古老建筑", "新建筑"], "options_id": ["arsitektur tradisional", "arsitektur modern", "arsitektur kuno", "arsitektur baru"], "correct": 0}
+  ]
+}

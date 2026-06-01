@@ -1,0 +1,50 @@
+{
+  "title": "珍惜时间",
+  "subtitle": "Talking About Time Management, Wisdom, and Priorities",
+  "assistant_message": "Today we learn: discussing the value of time, using 宁可...也不... (nìngkě... yě bù...) for 'would rather... than...', and prioritizing.",
+  "vocabulary": [
+    {"word": "珍惜", "pinyin": "zhēn xī", "meaning": "to cherish", "meaning_id": "menghargai", "example": "珍惜时间", "example_translation": "cherish time", "example_translation_id": "menghargai waktu"},
+    {"word": "时间", "pinyin": "shí jiān", "meaning": "time", "meaning_id": "waktu", "example": "宝贵时间", "example_translation": "precious time", "example_translation_id": "waktu berharga"},
+    {"word": "管理", "pinyin": "guǎn lǐ", "meaning": "to manage", "meaning_id": "mengelola", "example": "时间管理", "example_translation": "time management", "example_translation_id": "manajemen waktu"},
+    {"word": "效率", "pinyin": "xiào lǜ", "meaning": "efficiency", "meaning_id": "efisiensi", "example": "提高效率", "example_translation": "improve efficiency", "example_translation_id": "meningkatkan efisiensi"},
+    {"word": "优先", "pinyin": "yōu xiān", "meaning": "priority", "meaning_id": "prioritas", "example": "优先处理", "example_translation": "prioritize", "example_translation_id": "memprioritaskan"},
+    {"word": "拖延", "pinyin": "tuō yán", "meaning": "to procrastinate", "meaning_id": "menunda-nunda", "example": "不要拖延", "example_translation": "don't procrastinate", "example_translation_id": "jangan menunda-nunda"},
+    {"word": "计划", "pinyin": "jì huà", "meaning": "plan", "meaning_id": "rencana", "example": "制定计划", "example_translation": "make a plan", "example_translation_id": "membuat rencana"},
+    {"word": "目标", "pinyin": "mù biāo", "meaning": "goal", "meaning_id": "tujuan", "example": "达成目标", "example_translation": "achieve goals", "example_translation_id": "mencapai tujuan"}
+  ],
+  "grammar": [
+    {
+      "point": "Using 宁可...也不... (Would rather... than...)",
+      "point_id": "Menggunakan 宁可...也不... (Lebih memilih... daripada...)",
+      "explanation": "宁可 expresses a preferred choice, and 也不 expresses the rejected alternative.",
+      "explanation_id": "宁可 mengekspresikan pilihan yang lebih disukai, dan 也不 mengekspresikan alternatif yang ditolak.",
+      "examples": [
+        {"chinese": "我宁可早起，也不熬夜。", "translation": "I would rather wake up early than stay up late.", "translation_id": "Saya lebih memilih bangun pagi daripada begadang."},
+        {"chinese": "宁可慢一点，也要保证质量。", "translation": "I'd rather go slower but ensure quality.", "translation_id": "Lebih memilih lebih lambat tetapi memastikan kualitas."}
+      ]
+    },
+    {
+      "point": "Using 与其...不如... (Rather than... better to...)",
+      "point_id": "Menggunakan 与其...不如... (Daripada... lebih baik...)",
+      "explanation": "与其 introduces a less desirable option, and 不如 suggests a better alternative.",
+      "explanation_id": "与其 memperkenalkan opsi yang kurang diinginkan, dan 不如 menyarankan alternatif yang lebih baik.",
+      "examples": [
+        {"chinese": "与其浪费时间，不如做点有意义的事。", "translation": "Rather than waste time, it's better to do something meaningful.", "translation_id": "Daripada membuang waktu, lebih baik melakukan sesuatu yang berarti."},
+        {"chinese": "与其抱怨，不如行动。", "translation": "Rather than complain, it's better to take action.", "translation_id": "Daripada mengeluh, lebih baik bertindak."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "时间过得真快，我总觉得时间不够用。", "pinyin": "Shíjiān guò de zhēn kuài, wǒ zǒng juéde shíjiān bù gòu yòng.", "translation": "Time flies, I always feel like I don't have enough time.", "translation_id": "Waktu berlalu begitu cepat, saya selalu merasa waktu tidak cukup."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "所以我们要珍惜时间，提高效率。", "pinyin": "Suǒyǐ wǒmen yào zhēnxī shíjiān, tígāo xiàolǜ.", "translation": "So we need to cherish time and improve efficiency.", "translation_id": "Jadi kita perlu menghargai waktu dan meningkatkan efisiensi."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我宁可早起工作，也不晚上熬夜。", "pinyin": "Wǒ nìngkě zǎoqǐ gōngzuò, yě bù wǎnshàng áoyè.", "translation": "I'd rather wake up early to work than stay up late at night.", "translation_id": "Saya lebih memilih bangun pagi untuk bekerja daripada begadang di malam hari."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "这是个好习惯。与其拖延，不如马上行动。", "pinyin": "Zhè shì gè hǎo xíguàn. Yǔqí tuōyán, bùrú mǎshàng xíngdòng.", "translation": "That's a good habit. Rather than procrastinate, it's better to take action immediately.", "translation_id": "Itu kebiasaan baik. Daripada menunda-nunda, lebih baik segera bertindak."}
+  ],
+  "exercises": [
+    {"question": "What does 珍惜 (zhēnxī) mean?", "question_id": "Apa arti 珍惜 (zhēnxī)?", "options": ["To waste", "To cherish", "To ignore", "To forget"], "options_id": ["Membuang", "Menghargai", "Mengabaikan", "Melupakan"], "correct": 1},
+    {"question": "How do you say 'time management' in Chinese?", "question_id": "Bagaimana mengatakan 'manajemen waktu' dalam bahasa Mandarin?", "options": ["时间管理", "时间安排", "时间计划", "时间控制"], "options_id": ["manajemen waktu", "penjadwalan waktu", "perencanaan waktu", "pengendalian waktu"], "correct": 0},
+    {"question": "What does the structure 宁可...也不... express?", "question_id": "Apa yang diekspresikan oleh struktur 宁可...也不...?", "options": ["Would rather... than...", "If... then...", "Because... so...", "Although... but..."], "options_id": ["Lebih memilih... daripada...", "Jika... maka...", "Karena... jadi...", "Meskipun... tetapi..."], "correct": 0},
+    {"question": "What is 效率 (xiàolǜ)?", "question_id": "Apa itu 效率 (xiàolǜ)?", "options": ["Effect", "Efficiency", "Result", "Process"], "options_id": ["Efek", "Efisiensi", "Hasil", "Proses"], "correct": 1},
+    {"question": "How to say 'don't procrastinate' in Chinese?", "question_id": "Bagaimana mengatakan 'jangan menunda-nunda' dalam bahasa Mandarin?", "options": ["不要拖延", "不要迟到", "不要放弃", "不要犹豫"], "options_id": ["jangan menunda-nunda", "jangan terlambat", "jangan menyerah", "jangan ragu"], "correct": 0}
+  ]
+}

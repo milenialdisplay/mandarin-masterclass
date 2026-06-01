@@ -1,0 +1,41 @@
+{
+  "1": [
+    {
+      "point": "SVO Word Order",
+      "pattern": "Subject + Verb + Object",
+      "example": "我爱你"
+    },
+    {
+      "point": "是 (shi) - to be",
+      "pattern": "A + 是 + B",
+      "example": "我是学生"
+    },
+    {
+      "point": "吗 Questions",
+      "pattern": "Statement + 吗",
+      "example": "你好吗"
+    }
+  ],
+  "2": [
+    {
+      "point": "比 (bi) Comparison",
+      "pattern": "A + 比 + B + Adj",
+      "example": "我比你高"
+    },
+    {
+      "point": "了 (le) Completion",
+      "pattern": "Verb + 了",
+      "example": "吃了"
+    }
+  ],
+  "3": [
+    {
+      "point": "把 (ba) Construction",
+      "pattern": "把 + Object + Verb",
+      "example": "把书放在桌子上"
+    }
+  ],
+  "4": [],
+  "5": [],
+  "6": []
+}

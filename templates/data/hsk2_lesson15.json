@@ -1,0 +1,51 @@
+{
+  "title": "新年就要到了",
+  "subtitle": "Talking About Future Events, Using 就要...了, Discussing Holidays and Celebrations",
+  "assistant_message": "Today we learn: talking about future events with 就要...了 (jiù yào... le), discussing holidays (新年, 春节), and making plans for celebrations.",
+  "vocabulary": [
+    {"word": "新年", "pinyin": "xīn nián", "meaning": "New Year", "meaning_id": "Tahun Baru", "example": "新年快乐", "example_translation": "Happy New Year", "example_translation_id": "Selamat Tahun Baru"},
+    {"word": "就要", "pinyin": "jiù yào", "meaning": "about to (imminent)", "meaning_id": "akan segera", "example": "就要到了", "example_translation": "about to arrive", "example_translation_id": "akan segera tiba"},
+    {"word": "到了", "pinyin": "dào le", "meaning": "has arrived", "meaning_id": "telah tiba", "example": "火车到了", "example_translation": "the train has arrived", "example_translation_id": "keretanya telah tiba"},
+    {"word": "春节", "pinyin": "chūn jié", "meaning": "Spring Festival (Chinese New Year)", "meaning_id": "Festival Musim Semi (Tahun Baru Imlek)", "example": "春节快乐", "example_translation": "Happy Spring Festival", "example_translation_id": "Selamat Festival Musim Semi"},
+    {"word": "庆祝", "pinyin": "qìng zhù", "meaning": "to celebrate", "meaning_id": "merayakan", "example": "庆祝新年", "example_translation": "celebrate New Year", "example_translation_id": "merayakan Tahun Baru"},
+    {"word": "礼物", "pinyin": "lǐ wù", "meaning": "gift", "meaning_id": "hadiah", "example": "送礼物", "example_translation": "give a gift", "example_translation_id": "memberi hadiah"},
+    {"word": "回家", "pinyin": "huí jiā", "meaning": "to return home", "meaning_id": "pulang ke rumah", "example": "回家过年", "example_translation": "go home for New Year", "example_translation_id": "pulang ke rumah untuk Tahun Baru"},
+    {"word": "团圆", "pinyin": "tuán yuán", "meaning": "family reunion", "meaning_id": "reuni keluarga", "example": "家人团圆", "example_translation": "family reunion", "example_translation_id": "reuni keluarga"}
+  ],
+  "grammar": [
+    {
+      "point": "Imminent Future with 就要...了 (jiù yào... le)",
+      "point_id": "Masa Depan yang Akan Segera Terjadi dengan 就要...了 (jiù yào... le)",
+      "explanation": "Use 就要 before the verb and 了 at the end to indicate that something is about to happen very soon.",
+      "explanation_id": "Gunakan 就要 sebelum kata kerja dan 了 di akhir untuk menunjukkan bahwa sesuatu akan segera terjadi.",
+      "examples": [
+        {"chinese": "新年就要到了。", "translation": "New Year is about to arrive.", "translation_id": "Tahun Baru akan segera tiba."},
+        {"chinese": "火车就要开了。", "translation": "The train is about to depart.", "translation_id": "Keretanya akan segera berangkat."},
+        {"chinese": "电影就要开始了。", "translation": "The movie is about to start.", "translation_id": "Filmnya akan segera mulai."}
+      ]
+    },
+    {
+      "point": "Talking About Holidays and Celebrations",
+      "point_id": "Membicarakan Hari Libur dan Perayaan",
+      "explanation": "Use vocabulary like 新年 (New Year), 春节 (Spring Festival), 庆祝 (to celebrate), 礼物 (gift), 回家 (go home), 团圆 (family reunion).",
+      "explanation_id": "Gunakan kosakata seperti 新年 (Tahun Baru), 春节 (Festival Musim Semi), 庆祝 (merayakan), 礼物 (hadiah), 回家 (pulang ke rumah), 团圆 (reuni keluarga).",
+      "examples": [
+        {"chinese": "春节是中国最重要的节日。", "translation": "Spring Festival is China's most important holiday.", "translation_id": "Festival Musim Semi adalah hari libur terpenting di Tiongkok."},
+        {"chinese": "我们一家人团圆过年。", "translation": "Our whole family reunites to celebrate New Year.", "translation_id": "Seluruh keluarga kami berkumpul merayakan Tahun Baru."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "新年就要到了，你打算怎么庆祝？", "pinyin": "Xīnnián jiù yào dào le, nǐ dǎsuàn zěnme qìngzhù?", "translation": "New Year is coming, how do you plan to celebrate?", "translation_id": "Tahun Baru akan segera tiba, bagaimana rencanamu merayakannya?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我要回家和家人一起过年。", "pinyin": "Wǒ yào huíjiā hé jiārén yīqǐ guò nián.", "translation": "I will go home and celebrate New Year with my family.", "translation_id": "Saya akan pulang ke rumah dan merayakan Tahun Baru bersama keluarga."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你给家人买礼物了吗？", "pinyin": "Nǐ gěi jiārén mǎi lǐwù le ma?", "translation": "Did you buy gifts for your family?", "translation_id": "Apakah kamu sudah membeli hadiah untuk keluarga?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "买了。春节团圆最重要。", "pinyin": "Mǎi le. Chūnjié tuányuán zuì zhòngyào.", "translation": "Yes. Family reunion during Spring Festival is the most important.", "translation_id": "Sudah. Reuni keluarga saat Festival Musim Semi adalah yang terpenting."}
+  ],
+  "exercises": [
+    {"question": "What does 就要...了 (jiù yào... le) express?", "question_id": "Apa yang diekspresikan oleh 就要...了 (jiù yào... le)?", "options": ["Past action", "Ongoing action", "Imminent future action", "Possible action"], "options_id": ["Aksi masa lalu", "Aksi sedang berlangsung", "Aksi masa depan yang akan segera terjadi", "Aksi mungkin"], "correct": 2},
+    {"question": "How do you say 'New Year is coming soon' in Chinese?", "question_id": "Bagaimana mengatakan 'Tahun Baru akan segera tiba' dalam bahasa Mandarin?", "options": ["新年来了", "新年到了", "新年就要到了", "新年要到了"], "options_id": ["Tahun Baru datang", "Tahun Baru tiba", "Tahun Baru akan segera tiba", "Tahun Baru akan tiba"], "correct": 2},
+    {"question": "What does 春节 (Chūnjié) refer to?", "question_id": "Apa yang dimaksud dengan 春节 (Chūnjié)?", "options": ["New Year's Day", "Spring Festival (Chinese New Year)", "Mid-Autumn Festival", "Dragon Boat Festival"], "options_id": ["Tahun Baru Masehi", "Festival Musim Semi (Tahun Baru Imlek)", "Festival Pertengahan Musim Gugur", "Festival Perahu Naga"], "correct": 1},
+    {"question": "What does 团圆 (tuányuán) mean?", "question_id": "Apa arti 团圆 (tuányuán)?", "options": ["Gift", "Celebration", "Family reunion", "Holiday"], "options_id": ["Hadiah", "Perayaan", "Reuni keluarga", "Hari libur"], "correct": 2},
+    {"question": "How to say 'I will go home to celebrate New Year' in Chinese?", "question_id": "Bagaimana mengatakan 'Saya akan pulang ke rumah untuk merayakan Tahun Baru' dalam bahasa Mandarin?", "options": ["我回家过年", "我要回家过年", "我回家庆祝新年", "我回家团圆"], "options_id": ["Saya pulang rumah Tahun Baru", "Saya akan pulang rumah merayakan Tahun Baru", "Saya pulang rumah merayakan Tahun Baru", "Saya pulang rumah reuni"], "correct": 1}
+  ]
+}

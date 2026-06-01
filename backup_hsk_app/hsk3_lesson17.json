@@ -1,0 +1,51 @@
+{
+  "title": "你最近瘦了",
+  "subtitle": "Observing Changes with 了, Talking About Physical Changes, Giving Compliments",
+  "assistant_message": "Today we learn: using 了 (le) to indicate change of state, observing physical changes, and giving compliments about appearance.",
+  "vocabulary": [
+    {"word": "瘦", "pinyin": "shòu", "meaning": "thin", "meaning_id": "kurus", "example": "你瘦了", "example_translation": "you've gotten thinner", "example_translation_id": "kamu menjadi lebih kurus"},
+    {"word": "胖", "pinyin": "pàng", "meaning": "fat", "meaning_id": "gemuk", "example": "他胖了", "example_translation": "he's gotten fatter", "example_translation_id": "dia menjadi lebih gemuk"},
+    {"word": "变化", "pinyin": "biàn huà", "meaning": "change", "meaning_id": "perubahan", "example": "很大变化", "example_translation": "big change", "example_translation_id": "perubahan besar"},
+    {"word": "看起来", "pinyin": "kàn qǐ lai", "meaning": "looks like/seems", "meaning_id": "terlihat", "example": "看起来很好", "example_translation": "looks good", "example_translation_id": "terlihat bagus"},
+    {"word": "精神", "pinyin": "jīng shén", "meaning": "energetic/spirited", "meaning_id": "bersemangat", "example": "很有精神", "example_translation": "very energetic", "example_translation_id": "sangat bersemangat"},
+    {"word": "健康", "pinyin": "jiàn kāng", "meaning": "healthy", "meaning_id": "sehat", "example": "看起来健康", "example_translation": "looks healthy", "example_translation_id": "terlihat sehat"},
+    {"word": "脸色", "pinyin": "liǎn sè", "meaning": "complexion", "meaning_id": "warna wajah", "example": "脸色很好", "example_translation": "complexion is good", "example_translation_id": "warna wajah bagus"},
+    {"word": "休息", "pinyin": "xiū xi", "meaning": "to rest", "meaning_id": "istirahat", "example": "好好休息", "example_translation": "rest well", "example_translation_id": "istirahat yang baik"}
+  ],
+  "grammar": [
+    {
+      "point": "Change of State with 了 (le)",
+      "point_id": "Perubahan Keadaan dengan 了 (le)",
+      "explanation": "Use 了 at the end of a sentence to indicate a change of state. Structure: Subject + Adjective + 了.",
+      "explanation_id": "Gunakan 了 di akhir kalimat untuk menunjukkan perubahan keadaan. Struktur: Subjek + Kata Sifat + 了.",
+      "examples": [
+        {"chinese": "你最近瘦了。", "translation": "You've gotten thinner recently.", "translation_id": "Kamu menjadi lebih kurus akhir-akhir ini."},
+        {"chinese": "天气冷了。", "translation": "The weather has gotten cold.", "translation_id": "Cuaca menjadi dingin."},
+        {"chinese": "他高了。", "translation": "He has gotten taller.", "translation_id": "Dia menjadi lebih tinggi."}
+      ]
+    },
+    {
+      "point": "Observing Appearance with 看起来 (kàn qǐlai)",
+      "point_id": "Mengamati Penampilan dengan 看起来 (kàn qǐlai)",
+      "explanation": "Use 看起来 before an adjective to mean 'looks' or 'seems'. Structure: Subject + 看起来 + Adjective.",
+      "explanation_id": "Gunakan 看起来 sebelum kata sifat untuk berarti 'terlihat' atau 'sepertinya'. Struktur: Subjek + 看起来 + Kata Sifat.",
+      "examples": [
+        {"chinese": "你看起来很有精神。", "translation": "You look very energetic.", "translation_id": "Kamu terlihat sangat bersemangat."},
+        {"chinese": "他看起来不高兴。", "translation": "He looks unhappy.", "translation_id": "Dia terlihat tidak senang."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你最近是不是瘦了？", "pinyin": "Nǐ zuìjìn shì bù shì shòu le?", "translation": "Have you gotten thinner recently?", "translation_id": "Apakah kamu menjadi lebih kurus akhir-akhir ini?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "是啊，最近一直在锻炼。", "pinyin": "Shì a, zuìjìn yīzhí zài duànliàn.", "translation": "Yes, I've been exercising lately.", "translation_id": "Ya, akhir-akhir ini terus berolahraga."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "怪不得，你看起来更有精神了。", "pinyin": "Guàibude, nǐ kàn qǐlai gèng yǒu jīngshén le.", "translation": "No wonder, you look more energetic.", "translation_id": "Pantasan saja, kamu terlihat lebih bersemangat."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "谢谢！你看起来也不错。", "pinyin": "Xièxie! Nǐ kàn qǐlai yě bùcuò.", "translation": "Thanks! You look good too.", "translation_id": "Terima kasih! Kamu juga terlihat baik."}
+  ],
+  "exercises": [
+    {"question": "What does 了 (le) at the end of a sentence indicate?", "question_id": "Apa yang ditunjukkan oleh 了 (le) di akhir kalimat?", "options": ["Past action", "Change of state", "Future action", "Ongoing action"], "options_id": ["Aksi masa lalu", "Perubahan keadaan", "Aksi masa depan", "Aksi sedang berlangsung"], "correct": 1},
+    {"question": "How do you say 'You've gotten thinner' in Chinese?", "question_id": "Bagaimana mengatakan 'Kamu menjadi lebih kurus' dalam bahasa Mandarin?", "options": ["你瘦", "你瘦了", "你很瘦", "你瘦了了"], "options_id": ["Kamu kurus", "Kamu menjadi lebih kurus", "Kamu sangat kurus", "Kamu kurus sudah"], "correct": 1},
+    {"question": "What does 看起来 (kàn qǐlai) mean?", "question_id": "Apa arti 看起来 (kàn qǐlai)?", "options": ["To look at", "Looks like/seems", "To see", "To watch"], "options_id": ["Melihat", "Terlihat/sepertinya", "Melihat", "Menonton"], "correct": 1},
+    {"question": "How to say 'You look very energetic' in Chinese?", "question_id": "Bagaimana mengatakan 'Kamu terlihat sangat bersemangat' dalam bahasa Mandarin?", "options": ["你看起来很有精神", "你很有精神", "你看精神", "你很精神"], "options_id": ["Kamu terlihat sangat bersemangat", "Kamu sangat bersemangat", "Kamu lihat semangat", "Kamu sangat semangat"], "correct": 0},
+    {"question": "What does 精神 (jīngshén) mean in this context?", "question_id": "Apa arti 精神 (jīngshén) dalam konteks ini?", "options": ["Spirit", "Energetic", "Mental", "Essence"], "options_id": ["Semangat", "Bersemangat", "Mental", "Esensi"], "correct": 1}
+  ]
+}

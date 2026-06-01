@@ -1,0 +1,228 @@
+{
+  "title": "媒体素养",
+  "subtitle": "Media Literacy, Critical Consumption, Information Evaluation",
+  "assistant_message": "Today we learn: discussing media literacy skills, expressing ability to evaluate information, and talking about identifying fake news and bias.",
+  "vocabulary": [
+    {
+      "word": "媒体",
+      "pinyin": "méi tǐ",
+      "meaning": "media",
+      "meaning_id": "media",
+      "example": "社交媒体",
+      "example_translation": "social media",
+      "example_translation_id": "media sosial"
+    },
+    {
+      "word": "素养",
+      "pinyin": "sù yǎng",
+      "meaning": "literacy",
+      "meaning_id": "literasi",
+      "example": "信息素养",
+      "example_translation": "information literacy",
+      "example_translation_id": "literasi informasi"
+    },
+    {
+      "word": "信息",
+      "pinyin": "xìn xī",
+      "meaning": "information",
+      "meaning_id": "informasi",
+      "example": "获取信息",
+      "example_translation": "obtain information",
+      "example_translation_id": "memperoleh informasi"
+    },
+    {
+      "word": "真实",
+      "pinyin": "zhēn shí",
+      "meaning": "truthful/real",
+      "meaning_id": "benar/nyata",
+      "example": "真实信息",
+      "example_translation": "truthful information",
+      "example_translation_id": "informasi yang benar"
+    },
+    {
+      "word": "虚假",
+      "pinyin": "xū jiǎ",
+      "meaning": "false",
+      "meaning_id": "palsu",
+      "example": "虚假新闻",
+      "example_translation": "fake news",
+      "example_translation_id": "berita palsu"
+    },
+    {
+      "word": "偏见",
+      "pinyin": "piān jiàn",
+      "meaning": "bias",
+      "meaning_id": "bias",
+      "example": "消除偏见",
+      "example_translation": "eliminate bias",
+      "example_translation_id": "menghilangkan bias"
+    },
+    {
+      "word": "来源",
+      "pinyin": "lái yuán",
+      "meaning": "source",
+      "meaning_id": "sumber",
+      "example": "可靠来源",
+      "example_translation": "reliable source",
+      "example_translation_id": "sumber terpercaya"
+    },
+    {
+      "word": "核实",
+      "pinyin": "hé shí",
+      "meaning": "to verify",
+      "meaning_id": "memverifikasi",
+      "example": "核实信息",
+      "example_translation": "verify information",
+      "example_translation_id": "memverifikasi informasi"
+    },
+    {
+      "word": "误导",
+      "pinyin": "wù dǎo",
+      "meaning": "to mislead",
+      "meaning_id": "menyesatkan",
+      "example": "避免误导",
+      "example_translation": "avoid being misled",
+      "example_translation_id": "hindari tersesat"
+    },
+    {
+      "word": "批判性",
+      "pinyin": "pī pàn xìng",
+      "meaning": "critical",
+      "meaning_id": "kritis",
+      "example": "批判性阅读",
+      "example_translation": "critical reading",
+      "example_translation_id": "membaca kritis"
+    }
+  ],
+  "grammar": [
+    {
+      "point": "Using 无论...都... (wúlùn...dōu...) - 'No matter... all...'",
+      "point_id": "Menggunakan 无论...都... (wúlùn...dōu...) - 'Tidak peduli... semua...'",
+      "explanation": "This structure expresses that regardless of the condition, the result remains the same.",
+      "explanation_id": "Struktur ini menyatakan bahwa terlepas dari kondisinya, hasilnya tetap sama.",
+      "examples": [
+        {
+          "chinese": "无论信息来源是什么，都要核实其真实性。",
+          "translation": "No matter what the source of information is, verify its authenticity.",
+          "translation_id": "Tidak peduli apa sumber informasinya, verifikasi keasliannya."
+        },
+        {
+          "chinese": "无论新闻看起来多么可信，都要保持批判性思维。",
+          "translation": "No matter how credible the news looks, maintain critical thinking.",
+          "translation_id": "Tidak peduli seberapa kredibel berita itu, pertahankan berpikir kritis."
+        }
+      ]
+    },
+    {
+      "point": "Using 以...为 (yǐ...wéi) - 'Take... as...'",
+      "point_id": "Menggunakan 以...为 (yǐ...wéi) - 'Mengambil... sebagai...'",
+      "explanation": "This structure indicates taking something as a basis or standard.",
+      "explanation_id": "Struktur ini menunjukkan mengambil sesuatu sebagai dasar atau standar.",
+      "examples": [
+        {
+          "chinese": "以可靠来源为判断依据。",
+          "translation": "Use reliable sources as the basis for judgment.",
+          "translation_id": "Gunakan sumber terpercaya sebagai dasar penilaian."
+        },
+        {
+          "chinese": "以事实为基础分析信息。",
+          "translation": "Analyze information based on facts.",
+          "translation_id": "Analisis informasi berdasarkan fakta."
+        }
+      ]
+    },
+    {
+      "point": "Using 避免 (bìmiǎn) - 'To avoid'",
+      "point_id": "Menggunakan 避免 (bìmiǎn) - 'Menghindari'",
+      "explanation": "避免 means to avoid or prevent something negative.",
+      "explanation_id": "避免 berarti menghindari atau mencegah sesuatu yang negatif.",
+      "examples": [
+        {
+          "chinese": "避免相信未经核实的信息。",
+          "translation": "Avoid believing unverified information.",
+          "translation_id": "Hindari percaya pada informasi yang belum diverifikasi."
+        },
+        {
+          "chinese": "避免被虚假新闻误导。",
+          "translation": "Avoid being misled by fake news.",
+          "translation_id": "Hindari tersesat oleh berita palsu."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "female",
+      "name": "Wu Di",
+      "voice": "female",
+      "chinese": "现在网上的信息太多了，很难分辨真假。",
+      "pinyin": "Xiànzài wǎngshàng de xìnxī tài duō le, hěn nán fēnbiàn zhēnjiǎ.",
+      "translation": "There's too much information online now. It's hard to tell what's true and false.",
+      "translation_id": "Sekarang ada terlalu banyak informasi online. Sulit membedakan mana yang benar dan salah."
+    },
+    {
+      "speaker": "male",
+      "name": "Zheng Ming",
+      "voice": "male",
+      "chinese": "这就需要媒体素养。无论信息来源是什么，都要先核实。",
+      "pinyin": "Zhè jiù xūyào méitǐ sùyǎng. Wúlùn xìnxī láiyuán shì shénme, dōu yào xiān héshí.",
+      "translation": "This requires media literacy. No matter what the information source is, verify it first.",
+      "translation_id": "Ini membutuhkan literasi media. Tidak peduli apa sumber informasinya, verifikasi dulu."
+    },
+    {
+      "speaker": "female",
+      "name": "Wu Di",
+      "voice": "female",
+      "chinese": "如何判断一个信息是否可靠呢？",
+      "pinyin": "Rúhé pànduàn yī gè xìnxī shìfǒu kěkào ne?",
+      "translation": "How do you judge whether information is reliable?",
+      "translation_id": "Bagaimana menilai apakah suatu informasi dapat diandalkan?"
+    },
+    {
+      "speaker": "male",
+      "name": "Zheng Ming",
+      "voice": "male",
+      "chinese": "以可靠来源为判断依据，比如官方媒体或权威机构。同时，要识别可能的偏见。避免被虚假新闻误导，培养批判性阅读的习惯。",
+      "pinyin": "Yǐ kěkào láiyuán wéi pànduàn yījù, bǐrú guānfāng méitǐ huò quánwēi jīgòu. Tóngshí, yào shíbié kěnéng de piānjiàn. Bìmiǎn bèi xūjiǎ xīnwén wùdǎo, péiyǎng pīpàn xìng yuèdú de xíguàn.",
+      "translation": "Use reliable sources as the basis for judgment, such as official media or authoritative institutions. At the same time, identify possible biases. Avoid being misled by fake news and develop the habit of critical reading.",
+      "translation_id": "Gunakan sumber terpercaya sebagai dasar penilaian, seperti media resmi atau lembaga berwenang. Pada saat yang sama, identifikasi kemungkinan bias. Hindari tersesat oleh berita palsu dan kembangkan kebiasaan membaca kritis."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "What does 媒体素养 (méitǐ sùyǎng) mean?",
+      "question_id": "Apa arti 媒体素养 (méitǐ sùyǎng)?",
+      "options": ["Media literacy", "Information literacy", "Digital literacy", "News literacy"],
+      "options_id": ["Literasi media", "Literasi informasi", "Literasi digital", "Literasi berita"],
+      "correct": 0
+    },
+    {
+      "question": "How do you say 'fake news' in Chinese?",
+      "question_id": "Bagaimana mengatakan 'berita palsu' dalam bahasa Mandarin?",
+      "options": ["真实新闻", "虚假新闻", "可靠新闻", "官方新闻"],
+      "options_id": ["berita benar", "berita palsu", "berita terpercaya", "berita resmi"],
+      "correct": 1
+    },
+    {
+      "question": "What does 核实 (héshí) mean?",
+      "question_id": "Apa arti 核实 (héshí)?",
+      "options": ["To believe", "To verify", "To ignore", "To share"],
+      "options_id": ["Percaya", "Memverifikasi", "Mengabaikan", "Berbagi"],
+      "correct": 1
+    },
+    {
+      "question": "Complete the sentence: ______信息来源是什么，都要核实其真实性。",
+      "question_id": "Lengkapi kalimat: ______信息来源是什么，都要核实其真实性。",
+      "options": ["无论", "尽管", "虽然", "如果"],
+      "options_id": ["Tidak peduli", "Meskipun", "Walaupun", "Jika"],
+      "correct": 0
+    },
+    {
+      "question": "What is the best translation of 'critical reading'?",
+      "question_id": "Apa terjemahan terbaik dari 'membaca kritis'?",
+      "options": ["批判性阅读", "批判性思维", "批判性分析", "批判性评价"],
+      "options_id": ["membaca kritis", "berpikir kritis", "analisis kritis", "evaluasi kritis"],
+      "correct": 0
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "title": "理财规划",
+  "subtitle": "Financial Planning, Money Management, Investment",
+  "assistant_message": "Today we learn: discussing financial planning, expressing money management strategies, and talking about saving, investing, and budgeting.",
+  "vocabulary": [
+    {
+      "word": "理财",
+      "pinyin": "lǐ cái",
+      "meaning": "financial management",
+      "meaning_id": "manajemen keuangan",
+      "example": "学习理财",
+      "example_translation": "learn financial management",
+      "example_translation_id": "belajar manajemen keuangan"
+    },
+    {
+      "word": "规划",
+      "pinyin": "guī huà",
+      "meaning": "planning",
+      "meaning_id": "perencanaan",
+      "example": "财务规划",
+      "example_translation": "financial planning",
+      "example_translation_id": "perencanaan keuangan"
+    },
+    {
+      "word": "预算",
+      "pinyin": "yù suàn",
+      "meaning": "budget",
+      "meaning_id": "anggaran",
+      "example": "制定预算",
+      "example_translation": "make a budget",
+      "example_translation_id": "membuat anggaran"
+    },
+    {
+      "word": "储蓄",
+      "pinyin": "chǔ xù",
+      "meaning": "savings",
+      "meaning_id": "tabungan",
+      "example": "定期储蓄",
+      "example_translation": "regular savings",
+      "example_translation_id": "tabungan teratur"
+    },
+    {
+      "word": "投资",
+      "pinyin": "tóu zī",
+      "meaning": "investment",
+      "meaning_id": "investasi",
+      "example": "理性投资",
+      "example_translation": "rational investment",
+      "example_translation_id": "investasi rasional"
+    },
+    {
+      "word": "风险",
+      "pinyin": "fēng xiǎn",
+      "meaning": "risk",
+      "meaning_id": "risiko",
+      "example": "控制风险",
+      "example_translation": "control risk",
+      "example_translation_id": "mengendalikan risiko"
+    },
+    {
+      "word": "收益",
+      "pinyin": "shōu yì",
+      "meaning": "return/profit",
+      "meaning_id": "keuntungan",
+      "example": "获得收益",
+      "example_translation": "obtain returns",
+      "example_translation_id": "memperoleh keuntungan"
+    },
+    {
+      "word": "债务",
+      "pinyin": "zhài wù",
+      "meaning": "debt",
+      "meaning_id": "hutang",
+      "example": "减少债务",
+      "example_translation": "reduce debt",
+      "example_translation_id": "mengurangi hutang"
+    },
+    {
+      "word": "保险",
+      "pinyin": "bǎo xiǎn",
+      "meaning": "insurance",
+      "meaning_id": "asuransi",
+      "example": "购买保险",
+      "example_translation": "buy insurance",
+      "example_translation_id": "membeli asuransi"
+    },
+    {
+      "word": "退休",
+      "pinyin": "tuì xiū",
+      "meaning": "retirement",
+      "meaning_id": "pensiun",
+      "example": "退休规划",
+      "example_translation": "retirement planning",
+      "example_translation_id": "perencanaan pensiun"
+    }
+  ],
+  "grammar": [
+    {
+      "point": "Using 避免 (bìmiǎn) - 'To avoid'",
+      "point_id": "Menggunakan 避免 (bìmiǎn) - 'Menghindari'",
+      "explanation": "避免 means to avoid or prevent something negative from happening.",
+      "explanation_id": "避免 berarti menghindari atau mencegah sesuatu yang negatif terjadi.",
+      "examples": [
+        {
+          "chinese": "要避免不必要的开支。",
+          "translation": "Avoid unnecessary expenses.",
+          "translation_id": "Hindari pengeluaran yang tidak perlu."
+        },
+        {
+          "chinese": "通过分散投资来避免风险。",
+          "translation": "Avoid risk by diversifying investments.",
+          "translation_id": "Hindari risiko dengan mendiversifikasi investasi."
+        }
+      ]
+    },
+    {
+      "point": "Using 与其...不如... (yǔqí...bùrú...) - 'Rather than... better to...'",
+      "point_id": "Menggunakan 与其...不如... (yǔqí...bùrú...) - 'Daripada... lebih baik...'",
+      "explanation": "This structure compares two options, indicating the second is preferable.",
+      "explanation_id": "Struktur ini membandingkan dua pilihan, menunjukkan pilihan kedua lebih baik.",
+      "examples": [
+        {
+          "chinese": "与其花钱买不需要的东西，不如把钱存起来。",
+          "translation": "Rather than spending money on things you don't need, it's better to save it.",
+          "translation_id": "Daripada membelanjakan uang untuk barang yang tidak perlu, lebih baik menabung."
+        },
+        {
+          "chinese": "与其现在消费，不如为未来投资。",
+          "translation": "Rather than consuming now, it's better to invest for the future.",
+          "translation_id": "Daripada konsumsi sekarang, lebih baik berinvestasi untuk masa depan."
+        }
+      ]
+    },
+    {
+      "point": "Using 以...为 (yǐ...wéi) - 'Take... as...'",
+      "point_id": "Menggunakan 以...为 (yǐ...wéi) - 'Mengambil... sebagai...'",
+      "explanation": "This structure indicates taking something as a basis or goal.",
+      "explanation_id": "Struktur ini menunjukkan mengambil sesuatu sebagai dasar atau tujuan.",
+      "examples": [
+        {
+          "chinese": "以长期收益为投资目标。",
+          "translation": "Take long-term returns as the investment goal.",
+          "translation_id": "Ambil keuntungan jangka panjang sebagai tujuan investasi."
+        },
+        {
+          "chinese": "以安全为首要原则进行理财。",
+          "translation": "Manage finances with safety as the primary principle.",
+          "translation_id": "Kelola keuangan dengan keamanan sebagai prinsip utama."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "male",
+      "name": "Chen Jun",
+      "voice": "male",
+      "chinese": "我想开始理财，但不知道从哪里开始。",
+      "pinyin": "Wǒ xiǎng kāishǐ lǐcái, dàn bù zhīdào cóng nǎlǐ kāishǐ.",
+      "translation": "I want to start financial planning, but I don't know where to start.",
+      "translation_id": "Saya ingin memulai perencanaan keuangan, tapi tidak tahu harus mulai dari mana."
+    },
+    {
+      "speaker": "female",
+      "name": "Liu Yan",
+      "voice": "female",
+      "chinese": "首先要制定预算，控制支出。其次，要养成定期储蓄的习惯。",
+      "pinyin": "Shǒuxiān yào zhìdìng yùsuàn, kòngzhì zhīchū. Qícì, yào yǎngchéng dìngqī chǔxù de xíguàn.",
+      "translation": "First, make a budget and control expenses. Second, develop the habit of regular savings.",
+      "translation_id": "Pertama, buat anggaran dan kendalikan pengeluaran. Kedua, kembangkan kebiasaan menabung secara teratur."
+    },
+    {
+      "speaker": "male",
+      "name": "Chen Jun",
+      "voice": "male",
+      "chinese": "我也想投资，但担心风险。",
+      "pinyin": "Wǒ yě xiǎng tóuzī, dàn dānxīn fēngxiǎn.",
+      "translation": "I also want to invest, but I'm worried about risks.",
+      "translation_id": "Saya juga ingin berinvestasi, tapi khawatir tentang risiko."
+    },
+    {
+      "speaker": "female",
+      "name": "Liu Yan",
+      "voice": "female",
+      "chinese": "与其投资高风险产品，不如选择稳健的理财产品。同时，要购买保险来规避风险。以长期收益为目标，做好退休规划。",
+      "pinyin": "Yǔqí tóuzī gāo fēngxiǎn chǎnpǐn, bùrú xuǎnzé wěnjiàn de lǐcái chǎnpǐn. Tóngshí, yào gòumǎi bǎoxiǎn lái guībì fēngxiǎn. Yǐ chángqī shōuyì wèi mùbiāo, zuò hǎo tuìxiū guīhuà.",
+      "translation": "Rather than investing in high-risk products, it's better to choose stable financial products. At the same time, buy insurance to avoid risks. Take long-term returns as the goal and do good retirement planning.",
+      "translation_id": "Daripada berinvestasi pada produk berisiko tinggi, lebih baik memilih produk keuangan yang stabil. Pada saat yang sama, beli asuransi untuk menghindari risiko. Ambil keuntungan jangka panjang sebagai tujuan dan lakukan perencanaan pensiun yang baik."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "What does 理财 (lǐcái) mean?",
+      "question_id": "Apa arti 理财 (lǐcái)?",
+      "options": ["Investment", "Financial management", "Savings", "Budgeting"],
+      "options_id": ["Investasi", "Manajemen keuangan", "Tabungan", "Penganggaran"],
+      "correct": 1
+    },
+    {
+      "question": "How do you say 'budget' in Chinese?",
+      "question_id": "Bagaimana mengatakan 'anggaran' dalam bahasa Mandarin?",
+      "options": ["储蓄", "投资", "预算", "规划"],
+      "options_id": ["tabungan", "investasi", "anggaran", "perencanaan"],
+      "correct": 2
+    },
+    {
+      "question": "What does 风险 (fēngxiǎn) mean?",
+      "question_id": "Apa arti 风险 (fēngxiǎn)?",
+      "options": ["Return", "Risk", "Profit", "Debt"],
+      "options_id": ["Keuntungan", "Risiko", "Laba", "Hutang"],
+      "correct": 1
+    },
+    {
+      "question": "Complete the sentence: ______花钱买不需要的东西，______把钱存起来。",
+      "question_id": "Lengkapi kalimat: ______花钱买不需要的东西，______把钱存起来。",
+      "options": ["不但...而且...", "与其...不如...", "虽然...但是...", "因为...所以..."],
+      "options_id": ["tidak hanya...tetapi juga...", "daripada...lebih baik...", "meskipun...tetapi...", "karena...jadi..."],
+      "correct": 1
+    },
+    {
+      "question": "What is the best translation of 'avoid unnecessary expenses'?",
+      "question_id": "Apa terjemahan terbaik dari 'menghindari pengeluaran yang tidak perlu'?",
+      "options": ["减少开支", "控制支出", "避免不必要开支", "节省开支"],
+      "options_id": ["mengurangi pengeluaran", "mengendalikan pengeluaran", "menghindari pengeluaran yang tidak perlu", "menghemat pengeluaran"],
+      "correct": 2
+    }
+  ]
+}

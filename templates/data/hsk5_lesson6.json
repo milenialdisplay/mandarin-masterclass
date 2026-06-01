@@ -1,0 +1,60 @@
+{
+  "title": "科技改变生活",
+  "subtitle": "Technology, Innovation, Daily Life Impact",
+  "assistant_message": "Today we learn: discussing how technology changes our daily lives, using 随着 (suízhe) for 'as', and expressing opinions about technological progress.",
+  "vocabulary": [
+    {"word": "科技", "pinyin": "kē jì", "meaning": "technology", "meaning_id": "teknologi", "example": "现代科技", "example_translation": "modern technology", "example_translation_id": "teknologi modern"},
+    {"word": "创新", "pinyin": "chuàng xīn", "meaning": "innovation", "meaning_id": "inovasi", "example": "技术创新", "example_translation": "technological innovation", "example_translation_id": "inovasi teknologi"},
+    {"word": "研发", "pinyin": "yán fā", "meaning": "research and development", "meaning_id": "penelitian dan pengembangan", "example": "研发新产品", "example_translation": "develop new products", "example_translation_id": "mengembangkan produk baru"},
+    {"word": "应用", "pinyin": "yìng yòng", "meaning": "application", "meaning_id": "aplikasi", "example": "广泛应用", "example_translation": "widely applied", "example_translation_id": "diterapkan secara luas"},
+    {"word": "普及", "pinyin": "pǔ jí", "meaning": "to popularize", "meaning_id": "memasyarakatkan", "example": "智能手机普及", "example_translation": "smartphones are popular", "example_translation_id": "ponsel pintar populer"},
+    {"word": "影响", "pinyin": "yǐng xiǎng", "meaning": "influence/impact", "meaning_id": "pengaruh", "example": "深远影响", "example_translation": "far-reaching impact", "example_translation_id": "dampak yang luas"},
+    {"word": "效率", "pinyin": "xiào lǜ", "meaning": "efficiency", "meaning_id": "efisiensi", "example": "提高效率", "example_translation": "improve efficiency", "example_translation_id": "meningkatkan efisiensi"},
+    {"word": "便捷", "pinyin": "biàn jié", "meaning": "convenient and fast", "meaning_id": "nyaman dan cepat", "example": "生活更便捷", "example_translation": "life is more convenient", "example_translation_id": "kehidupan lebih nyaman"}
+  ],
+  "grammar": [
+    {
+      "point": "随着 (suízhe) - As...",
+      "point_id": "随着 (suízhe) - Seiring dengan...",
+      "explanation": "随着 is used to indicate that as one thing changes, another changes accordingly. Often used at the beginning of a sentence.",
+      "explanation_id": "随着 digunakan untuk menunjukkan bahwa seiring satu hal berubah, hal lain berubah sesuai. Sering digunakan di awal kalimat.",
+      "examples": [
+        {"chinese": "随着科技的发展，人们的生活越来越方便。", "translation": "As technology develops, people's lives become more and more convenient.", "translation_id": "Seiring perkembangan teknologi, kehidupan masyarakat menjadi semakin nyaman."},
+        {"chinese": "随着智能手机的普及，移动支付也流行起来。", "translation": "As smartphones become popular, mobile payment also becomes popular.", "translation_id": "Seiring populernya ponsel pintar, pembayaran seluler juga menjadi populer."}
+      ]
+    },
+    {
+      "point": "不仅...而且... (bùjǐn... érqiě...) - Not only... but also...",
+      "point_id": "不仅...而且... (bùjǐn... érqiě...) - Tidak hanya... tetapi juga...",
+      "explanation": "不仅 introduces one point, and 而且 adds another point of equal or greater importance.",
+      "explanation_id": "不仅 memperkenalkan satu poin, dan 而且 menambahkan poin lain yang sama atau lebih penting.",
+      "examples": [
+        {"chinese": "科技不仅改变了我们的生活方式，而且提高了工作效率。", "translation": "Technology not only changed our way of life, but also improved work efficiency.", "translation_id": "Teknologi tidak hanya mengubah cara hidup kita, tetapi juga meningkatkan efisiensi kerja."},
+        {"chinese": "这个发明不仅很实用，而且价格便宜。", "translation": "This invention is not only very practical, but also cheap.", "translation_id": "Penemuan ini tidak hanya sangat praktis, tetapi juga murah."}
+      ]
+    },
+    {
+      "point": "越来越 (yuè lái yuè) - More and more",
+      "point_id": "越来越 (yuè lái yuè) - Semakin",
+      "explanation": "越来越 + adjective means 'more and more', indicating gradual change.",
+      "explanation_id": "越来越 + kata sifat berarti 'semakin', menunjukkan perubahan bertahap.",
+      "examples": [
+        {"chinese": "人工智能技术越来越成熟。", "translation": "Artificial intelligence technology is becoming more and more mature.", "translation_id": "Teknologi kecerdasan buatan menjadi semakin matang."},
+        {"chinese": "人们越来越依赖科技产品。", "translation": "People are becoming more and more dependent on technological products.", "translation_id": "Masyarakat menjadi semakin tergantung pada produk teknologi."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你觉得科技给我们的生活带来了什么变化？", "pinyin": "Nǐ juéde kējì gěi wǒmen de shēnghuó dài lái le shénme biànhuà?", "translation": "What changes do you think technology has brought to our lives?", "translation_id": "Perubahan apa yang menurutmu dibawa oleh teknologi ke kehidupan kita?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "随着科技的发展，我们的生活越来越便捷。比如网上购物、移动支付都非常方便。", "pinyin": "Suízhe kējì de fāzhǎn, wǒmen de shēnghuó yuè lái yuè biànjié. Bǐrú wǎngshàng gòuwù, yídòng zhīfù dōu fēicháng fāngbiàn.", "translation": "As technology develops, our lives become more and more convenient. For example, online shopping and mobile payment are very convenient.", "translation_id": "Seiring perkembangan teknologi, kehidupan kita menjadi semakin nyaman. Misalnya, belanja online dan pembayaran seluler sangat nyaman."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "科技不仅改变了生活方式，也提高了工作效率。", "pinyin": "Kējì bùjǐn gǎibiàn le shēnghuó fāngshì, yě tígāo le gōngzuò xiàolǜ.", "translation": "Technology not only changed our lifestyle, but also improved work efficiency.", "translation_id": "Teknologi tidak hanya mengubah gaya hidup, tetapi juga meningkatkan efisiensi kerja."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "但是科技也有负面影响，比如人们过度依赖手机。", "pinyin": "Dànshì kējì yě yǒu fùmiàn yǐngxiǎng, bǐrú rénmen guòdù yīlài shǒujī.", "translation": "But technology also has negative effects, such as people over-relying on phones.", "translation_id": "Tapi teknologi juga memiliki efek negatif, seperti orang terlalu bergantung pada ponsel."}
+  ],
+  "exercises": [
+    {"question": "What does 科技 (kējì) mean?", "question_id": "Apa arti 科技 (kējì)?", "options": ["Science", "Technology", "Innovation", "Research"], "options_id": ["Sains", "Teknologi", "Inovasi", "Penelitian"], "correct": 1},
+    {"question": "How do you say 'As technology develops' in Chinese?", "question_id": "Bagaimana mengatakan 'Seiring perkembangan teknologi' dalam bahasa Mandarin?", "options": ["随着科技的发展", "科技的发展", "发展科技", "科技的随着发展"], "options_id": ["Seiring perkembangan teknologi", "Perkembangan teknologi", "Mengembangkan teknologi", "Teknologi seiring perkembangan"], "correct": 0},
+    {"question": "What does the structure 不仅...而且... express?", "question_id": "Apa yang diekspresikan oleh struktur 不仅...而且...?", "options": ["If... then...", "Not only... but also...", "Although... but...", "Because... so..."], "options_id": ["Jika... maka...", "Tidak hanya... tetapi juga...", "Meskipun... tetapi...", "Karena... jadi..."], "correct": 1},
+    {"question": "What does 效率 (xiàolǜ) mean?", "question_id": "Apa arti 效率 (xiàolǜ)?", "options": ["Effect", "Efficiency", "Result", "Process"], "options_id": ["Efek", "Efisiensi", "Hasil", "Proses"], "correct": 1},
+    {"question": "How to say 'life is more convenient' in Chinese?", "question_id": "Bagaimana mengatakan 'kehidupan lebih nyaman' dalam bahasa Mandarin?", "options": ["生活更便捷", "生活更方便", "生活更好", "A and B"], "options_id": ["kehidupan lebih nyaman", "kehidupan lebih nyaman", "kehidupan lebih baik", "A dan B"], "correct": 3}
+  ]
+}

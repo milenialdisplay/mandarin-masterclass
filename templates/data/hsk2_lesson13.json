@@ -1,0 +1,51 @@
+{
+  "title": "门开着呢",
+  "subtitle": "The 着 Particle for Continuous States, Describing Ongoing Conditions",
+  "assistant_message": "Today we learn: the 着 (zhe) particle to describe continuous states, talking about how things are (门开着, 灯亮着), and using 呢 for emphasis.",
+  "vocabulary": [
+    {"word": "门", "pinyin": "mén", "meaning": "door", "meaning_id": "pintu", "example": "开门", "example_translation": "open the door", "example_translation_id": "buka pintu"},
+    {"word": "开", "pinyin": "kāi", "meaning": "to open", "meaning_id": "membuka", "example": "开门", "example_translation": "open the door", "example_translation_id": "buka pintu"},
+    {"word": "关", "pinyin": "guān", "meaning": "to close", "meaning_id": "menutup", "example": "关门", "example_translation": "close the door", "example_translation_id": "tutup pintu"},
+    {"word": "着", "pinyin": "zhe", "meaning": "particle for continuous state", "meaning_id": "partikel untuk keadaan berkelanjutan", "example": "门开着", "example_translation": "the door is open", "example_translation_id": "pintunya terbuka"},
+    {"word": "灯", "pinyin": "dēng", "meaning": "light/lamp", "meaning_id": "lampu", "example": "开灯", "example_translation": "turn on the light", "example_translation_id": "nyalakan lampu"},
+    {"word": "亮", "pinyin": "liàng", "meaning": "bright/lit", "meaning_id": "terang", "example": "灯亮着", "example_translation": "the light is on", "example_translation_id": "lampunya menyala"},
+    {"word": "窗户", "pinyin": "chuāng hù", "meaning": "window", "meaning_id": "jendela", "example": "开窗户", "example_translation": "open the window", "example_translation_id": "buka jendela"},
+    {"word": "空调", "pinyin": "kōng tiáo", "meaning": "air conditioner", "meaning_id": "AC", "example": "开空调", "example_translation": "turn on the AC", "example_translation_id": "nyalakan AC"}
+  ],
+  "grammar": [
+    {
+      "point": "Continuous State with 着 (zhe)",
+      "point_id": "Keadaan Berkelanjutan dengan 着 (zhe)",
+      "explanation": "Use 着 after a verb to describe a continuous state or condition. Structure: Subject + Verb + 着.",
+      "explanation_id": "Gunakan 着 setelah kata kerja untuk menggambarkan keadaan atau kondisi yang berkelanjutan. Struktur: Subjek + Kata Kerja + 着.",
+      "examples": [
+        {"chinese": "门开着。", "translation": "The door is open (state of being open).", "translation_id": "Pintunya terbuka (keadaan terbuka)."},
+        {"chinese": "灯亮着。", "translation": "The light is on.", "translation_id": "Lampunya menyala."},
+        {"chinese": "窗户关着。", "translation": "The window is closed.", "translation_id": "Jendelanya tertutup."}
+      ]
+    },
+    {
+      "point": "Actions vs States: 着 vs 了",
+      "point_id": "Aksi vs Keadaan: 着 vs 了",
+      "explanation": "Use 了 for completed actions. Use 着 for ongoing states.",
+      "explanation_id": "Gunakan 了 untuk aksi selesai. Gunakan 着 untuk keadaan berkelanjutan.",
+      "examples": [
+        {"chinese": "他开了门。", "translation": "He opened the door (action completed).", "translation_id": "Dia membuka pintu (aksi selesai)."},
+        {"chinese": "门开着。", "translation": "The door is open (state).", "translation_id": "Pintunya terbuka (keadaan)."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "门怎么开着呢？", "pinyin": "Mén zěnme kāi zhe ne?", "translation": "Why is the door open?", "translation_id": "Mengapa pintunya terbuka?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我刚才开了窗户，想透透气。", "pinyin": "Wǒ gāngcái kāi le chuānghù, xiǎng tòu tòu qì.", "translation": "I opened the window just now, wanted to get some fresh air.", "translation_id": "Saya baru saja membuka jendela, ingin menghirup udara segar."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "空调也开着呢。", "pinyin": "Kōngtiáo yě kāi zhe ne.", "translation": "The AC is also on.", "translation_id": "AC juga menyala."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "对不起，我忘了关。", "pinyin": "Duìbuqǐ, wǒ wàng le guān.", "translation": "Sorry, I forgot to turn it off.", "translation_id": "Maaf, saya lupa mematikannya."}
+  ],
+  "exercises": [
+    {"question": "What does the particle 着 (zhe) indicate?", "question_id": "Apa yang ditunjukkan oleh partikel 着 (zhe)?", "options": ["Completed action", "Continuous state", "Future action", "Possibility"], "options_id": ["Aksi selesai", "Keadaan berkelanjutan", "Aksi masa depan", "Kemungkinan"], "correct": 1},
+    {"question": "How do you say 'The door is open' in Chinese?", "question_id": "Bagaimana mengatakan 'Pintunya terbuka' dalam bahasa Mandarin?", "options": ["门开了", "门开着", "开门了", "开了门"], "options_id": ["Pintu sudah terbuka (aksi selesai)", "Pintu terbuka (keadaan)", "Buka pintu sudah", "Sudah buka pintu"], "correct": 1},
+    {"question": "What does 关 (guān) mean?", "question_id": "Apa arti 关 (guān)?", "options": ["Open", "Close", "Turn on", "Turn off"], "options_id": ["Buka", "Tutup", "Nyalakan", "Matikan"], "correct": 1},
+    {"question": "How to say 'The light is on' in Chinese?", "question_id": "Bagaimana mengatakan 'Lampunya menyala' dalam bahasa Mandarin?", "options": ["灯开了", "灯亮着", "灯开着", "灯关了"], "options_id": ["Lampu sudah menyala (aksi)", "Lampu menyala (keadaan)", "Lampu menyala (bisa juga)", "Lampu mati"], "correct": 1},
+    {"question": "What is the difference between 门开了 and 门开着?", "question_id": "Apa perbedaan antara 门开了 dan 门开着?", "options": ["Same meaning", "开了 = completed action, 开着 = ongoing state", "开着 = completed, 开了 = ongoing", "Both are wrong"], "options_id": ["Makna sama", "开了 = aksi selesai, 开着 = keadaan berkelanjutan", "开着 = selesai, 开了 = berkelanjutan", "Keduanya salah"], "correct": 1}
+  ]
+}

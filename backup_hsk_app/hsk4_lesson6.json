@@ -1,0 +1,50 @@
+{
+  "title": "健康的饮食习惯",
+  "subtitle": "Talking About Health, Eating Habits, and Nutrition",
+  "assistant_message": "Today we learn: discussing healthy eating habits, using 极其 (jíqí) for 'extremely', and talking about nutrition.",
+  "vocabulary": [
+    {"word": "健康", "pinyin": "jiàn kāng", "meaning": "healthy", "meaning_id": "sehat", "example": "健康饮食", "example_translation": "healthy diet", "example_translation_id": "makanan sehat"},
+    {"word": "习惯", "pinyin": "xí guàn", "meaning": "habit", "meaning_id": "kebiasaan", "example": "好习惯", "example_translation": "good habit", "example_translation_id": "kebiasaan baik"},
+    {"word": "饮食", "pinyin": "yǐn shí", "meaning": "diet/food and drink", "meaning_id": "makanan dan minuman", "example": "合理饮食", "example_translation": "reasonable diet", "example_translation_id": "pola makan yang masuk akal"},
+    {"word": "营养", "pinyin": "yíng yǎng", "meaning": "nutrition", "meaning_id": "nutrisi", "example": "营养丰富", "example_translation": "nutritious", "example_translation_id": "kaya nutrisi"},
+    {"word": "均衡", "pinyin": "jūn héng", "meaning": "balanced", "meaning_id": "seimbang", "example": "均衡饮食", "example_translation": "balanced diet", "example_translation_id": "pola makan seimbang"},
+    {"word": "蔬菜", "pinyin": "shū cài", "meaning": "vegetables", "meaning_id": "sayuran", "example": "多吃蔬菜", "example_translation": "eat more vegetables", "example_translation_id": "makan lebih banyak sayuran"},
+    {"word": "水果", "pinyin": "shuǐ guǒ", "meaning": "fruit", "meaning_id": "buah-buahan", "example": "新鲜水果", "example_translation": "fresh fruit", "example_translation_id": "buah segar"},
+    {"word": "蛋白质", "pinyin": "dàn bái zhì", "meaning": "protein", "meaning_id": "protein", "example": "高蛋白", "example_translation": "high protein", "example_translation_id": "protein tinggi"}
+  ],
+  "grammar": [
+    {
+      "point": "Expressing 'Extremely' with 极其 (jíqí)",
+      "point_id": "Menyatakan 'Sangat' dengan 极其 (jíqí)",
+      "explanation": "极其 means 'extremely' and is stronger than 非常. Used before adjectives.",
+      "explanation_id": "极其 berarti 'sangat' dan lebih kuat dari 非常. Digunakan sebelum kata sifat.",
+      "examples": [
+        {"chinese": "健康的饮食习惯极其重要。", "translation": "Healthy eating habits are extremely important.", "translation_id": "Kebiasaan makan sehat sangat penting."},
+        {"chinese": "这个问题极其复杂。", "translation": "This problem is extremely complicated.", "translation_id": "Masalah ini sangat rumit."}
+      ]
+    },
+    {
+      "point": "Using 为主 (wéi zhǔ) for 'Mainly'",
+      "point_id": "Menggunakan 为主 (wéi zhǔ) untuk 'Terutama'",
+      "explanation": "以...为主 means 'mainly...' or 'with... as the main thing'.",
+      "explanation_id": "以...为主 berarti 'terutama...' atau 'dengan... sebagai hal utama'.",
+      "examples": [
+        {"chinese": "饮食应以蔬菜和水果为主。", "translation": "The diet should mainly consist of vegetables and fruits.", "translation_id": "Pola makan harus terutama terdiri dari sayuran dan buah-buahan."},
+        {"chinese": "他的工作以研究为主。", "translation": "His work is mainly research.", "translation_id": "Pekerjaannya terutama penelitian."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "最近我感觉身体不太好。", "pinyin": "Zuìjìn wǒ gǎnjué shēntǐ bù tài hǎo.", "translation": "I haven't been feeling very well lately.", "translation_id": "Akhir-akhir ini saya merasa tidak terlalu sehat."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你有没有健康的饮食习惯？", "pinyin": "Nǐ yǒu méiyǒu jiànkāng de yǐnshí xíguàn?", "translation": "Do you have healthy eating habits?", "translation_id": "Apakah kamu punya kebiasaan makan yang sehat?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我经常吃快餐，很少吃蔬菜。", "pinyin": "Wǒ jīngcháng chī kuàicān, hěn shǎo chī shūcài.", "translation": "I often eat fast food and rarely eat vegetables.", "translation_id": "Saya sering makan cepat saji, jarang makan sayuran."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你需要改变饮食习惯。多吃蔬菜水果，饮食要均衡。", "pinyin": "Nǐ xūyào gǎibiàn yǐnshí xíguàn. Duō chī shūcài shuǐguǒ, yǐnshí yào jūnhéng.", "translation": "You need to change your eating habits. Eat more vegetables and fruits. Your diet needs to be balanced.", "translation_id": "Kamu perlu mengubah kebiasaan makan. Makan lebih banyak sayuran dan buah-buahan. Pola makan harus seimbang."}
+  ],
+  "exercises": [
+    {"question": "What does 健康 (jiànkāng) mean?", "question_id": "Apa arti 健康 (jiànkāng)?", "options": ["Happy", "Healthy", "Rich", "Busy"], "options_id": ["Senang", "Sehat", "Kaya", "Sibuk"], "correct": 1},
+    {"question": "How do you say 'balanced diet' in Chinese?", "question_id": "Bagaimana mengatakan 'pola makan seimbang' dalam bahasa Mandarin?", "options": ["健康饮食", "均衡饮食", "合理饮食", "正常饮食"], "options_id": ["makanan sehat", "pola makan seimbang", "pola makan masuk akal", "makanan normal"], "correct": 1},
+    {"question": "What does 极其 (jíqí) express?", "question_id": "Apa yang diekspresikan oleh 极其 (jíqí)?", "options": ["A little", "Extremely", "Quite", "Not very"], "options_id": ["Sedikit", "Sangat", "Cukup", "Tidak terlalu"], "correct": 1},
+    {"question": "What is 营养 (yíngyǎng)?", "question_id": "Apa itu 营养 (yíngyǎng)?", "options": ["Taste", "Nutrition", "Calorie", "Vitamin"], "options_id": ["Rasa", "Nutrisi", "Kalori", "Vitamin"], "correct": 1},
+    {"question": "How to say 'eat more vegetables' in Chinese?", "question_id": "Bagaimana mengatakan 'makan lebih banyak sayuran' dalam bahasa Mandarin?", "options": ["多吃蔬菜", "少吃蔬菜", "吃蔬菜", "蔬菜多吃"], "options_id": ["makan lebih banyak sayuran", "makan lebih sedikit sayuran", "makan sayuran", "sayuran dimakan banyak"], "correct": 0}
+  ]
+}

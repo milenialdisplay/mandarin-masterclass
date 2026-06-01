@@ -1,0 +1,228 @@
+{
+  "title": "可持续发展",
+  "subtitle": "Sustainable Development, Environmental Protection, Future Generations",
+  "assistant_message": "Today we learn: discussing sustainable development, expressing environmental awareness, and talking about balancing economic growth with environmental protection.",
+  "vocabulary": [
+    {
+      "word": "可持续发展",
+      "pinyin": "kě chí xù fā zhǎn",
+      "meaning": "sustainable development",
+      "meaning_id": "pembangunan berkelanjutan",
+      "example": "促进可持续发展",
+      "example_translation": "promote sustainable development",
+      "example_translation_id": "mempromosikan pembangunan berkelanjutan"
+    },
+    {
+      "word": "资源",
+      "pinyin": "zī yuán",
+      "meaning": "resources",
+      "meaning_id": "sumber daya",
+      "example": "自然资源",
+      "example_translation": "natural resources",
+      "example_translation_id": "sumber daya alam"
+    },
+    {
+      "word": "环境",
+      "pinyin": "huán jìng",
+      "meaning": "environment",
+      "meaning_id": "lingkungan",
+      "example": "保护环境",
+      "example_translation": "protect the environment",
+      "example_translation_id": "melindungi lingkungan"
+    },
+    {
+      "word": "能源",
+      "pinyin": "néng yuán",
+      "meaning": "energy",
+      "meaning_id": "energi",
+      "example": "可再生能源",
+      "example_translation": "renewable energy",
+      "example_translation_id": "energi terbarukan"
+    },
+    {
+      "word": "消耗",
+      "pinyin": "xiāo hào",
+      "meaning": "consumption",
+      "meaning_id": "konsumsi",
+      "example": "减少消耗",
+      "example_translation": "reduce consumption",
+      "example_translation_id": "mengurangi konsumsi"
+    },
+    {
+      "word": "污染",
+      "pinyin": "wū rǎn",
+      "meaning": "pollution",
+      "meaning_id": "polusi",
+      "example": "减少污染",
+      "example_translation": "reduce pollution",
+      "example_translation_id": "mengurangi polusi"
+    },
+    {
+      "word": "生态",
+      "pinyin": "shēng tài",
+      "meaning": "ecology",
+      "meaning_id": "ekologi",
+      "example": "生态系统",
+      "example_translation": "ecosystem",
+      "example_translation_id": "ekosistem"
+    },
+    {
+      "word": "循环",
+      "pinyin": "xún huán",
+      "meaning": "recycling/circulation",
+      "meaning_id": "daur ulang/sirkulasi",
+      "example": "循环经济",
+      "example_translation": "circular economy",
+      "example_translation_id": "ekonomi sirkular"
+    },
+    {
+      "word": "绿色",
+      "pinyin": "lǜ sè",
+      "meaning": "green",
+      "meaning_id": "hijau",
+      "example": "绿色能源",
+      "example_translation": "green energy",
+      "example_translation_id": "energi hijau"
+    },
+    {
+      "word": "后代",
+      "pinyin": "hòu dài",
+      "meaning": "future generations",
+      "meaning_id": "generasi mendatang",
+      "example": "为了后代",
+      "example_translation": "for future generations",
+      "example_translation_id": "untuk generasi mendatang"
+    }
+  ],
+  "grammar": [
+    {
+      "point": "Using 为了 (wèile) - 'In order to'",
+      "point_id": "Menggunakan 为了 (wèile) - 'Untuk'",
+      "explanation": "为了 indicates the purpose or goal of an action.",
+      "explanation_id": "为了 menunjukkan tujuan atau sasaran dari suatu tindakan.",
+      "examples": [
+        {
+          "chinese": "为了后代，我们必须保护环境。",
+          "translation": "For the sake of future generations, we must protect the environment.",
+          "translation_id": "Demi generasi mendatang, kita harus melindungi lingkungan."
+        },
+        {
+          "chinese": "为了可持续发展，我们要节约资源。",
+          "translation": "For sustainable development, we need to conserve resources.",
+          "translation_id": "Untuk pembangunan berkelanjutan, kita perlu menghemat sumber daya."
+        }
+      ]
+    },
+    {
+      "point": "Using 在...的同时 (zài...detóngshí) - 'While... at the same time'",
+      "point_id": "Menggunakan 在...的同时 (zài...detóngshí) - 'Sambil... pada saat yang sama'",
+      "explanation": "This structure indicates two actions happening simultaneously.",
+      "explanation_id": "Struktur ini menunjukkan dua tindakan terjadi secara bersamaan.",
+      "examples": [
+        {
+          "chinese": "在发展经济的同时，也要保护环境。",
+          "translation": "While developing the economy, we must also protect the environment.",
+          "translation_id": "Sambil mengembangkan ekonomi, kita juga harus melindungi lingkungan."
+        },
+        {
+          "chinese": "在享受便利的同时，也要注意节约。",
+          "translation": "While enjoying convenience, we must also pay attention to conservation.",
+          "translation_id": "Sambil menikmati kemudahan, kita juga harus memperhatikan penghematan."
+        }
+      ]
+    },
+    {
+      "point": "Using 只有...才... (zhǐyǒu...cái...) - 'Only... then...'",
+      "point_id": "Menggunakan 只有...才... (zhǐyǒu...cái...) - 'Hanya... maka...'",
+      "explanation": "This structure expresses a necessary condition for a result.",
+      "explanation_id": "Struktur ini menyatakan kondisi yang diperlukan untuk suatu hasil.",
+      "examples": [
+        {
+          "chinese": "只有减少污染，才能改善环境。",
+          "translation": "Only by reducing pollution can we improve the environment.",
+          "translation_id": "Hanya dengan mengurangi polusi kita dapat memperbaiki lingkungan."
+        },
+        {
+          "chinese": "只有节约资源，才能实现可持续发展。",
+          "translation": "Only by conserving resources can we achieve sustainable development.",
+          "translation_id": "Hanya dengan menghemat sumber daya kita dapat mencapai pembangunan berkelanjutan."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "female",
+      "name": "Zhang Li",
+      "voice": "female",
+      "chinese": "我们公司在考虑如何实现可持续发展，你有什么建议吗？",
+      "pinyin": "Wǒmen gōngsī zài kǎolǜ rúhé shíxiàn kěchíxù fāzhǎn, nǐ yǒu shénme jiànyì ma?",
+      "translation": "Our company is considering how to achieve sustainable development. Do you have any suggestions?",
+      "translation_id": "Perusahaan kami sedang mempertimbangkan bagaimana mencapai pembangunan berkelanjutan. Apakah Anda punya saran?"
+    },
+    {
+      "speaker": "male",
+      "name": "Wang Tao",
+      "voice": "male",
+      "chinese": "首先，要减少能源消耗和污染排放。其次，可以投资可再生能源和循环经济。",
+      "pinyin": "Shǒuxiān, yào jiǎnshǎo néngyuán xiāohào hé wūrǎn páifàng. Qícì, kěyǐ tóuzī kězàishēng néngyuán hé xúnhuán jīngjì.",
+      "translation": "First, reduce energy consumption and pollution emissions. Second, invest in renewable energy and the circular economy.",
+      "translation_id": "Pertama, kurangi konsumsi energi dan emisi polusi. Kedua, investasikan pada energi terbarukan dan ekonomi sirkular."
+    },
+    {
+      "speaker": "female",
+      "name": "Zhang Li",
+      "voice": "female",
+      "chinese": "在发展经济的同时，如何平衡环境保护？",
+      "pinyin": "Zài fāzhǎn jīngjì de tóngshí, rúhé pínghéng huánjìng bǎohù?",
+      "translation": "While developing the economy, how do we balance environmental protection?",
+      "translation_id": "Sambil mengembangkan ekonomi, bagaimana menyeimbangkan perlindungan lingkungan?"
+    },
+    {
+      "speaker": "male",
+      "name": "Wang Tao",
+      "voice": "male",
+      "chinese": "只有坚持绿色发展战略，才能实现可持续发展。为了后代，我们每个人都有责任保护地球。",
+      "pinyin": "Zhǐyǒu jiānchí lǜsè fāzhǎn zhànlüè, cáinéng shíxiàn kěchíxù fāzhǎn. Wèile hòudài, wǒmen měi gè rén dōu yǒu zérèn bǎohù dìqiú.",
+      "translation": "Only by adhering to a green development strategy can we achieve sustainable development. For the sake of future generations, each of us has a responsibility to protect the Earth.",
+      "translation_id": "Hanya dengan menganut strategi pembangunan hijau kita dapat mencapai pembangunan berkelanjutan. Demi generasi mendatang, kita masing-masing memiliki tanggung jawab untuk melindungi Bumi."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "What does 可持续发展 (kě chíxù fāzhǎn) mean?",
+      "question_id": "Apa arti 可持续发展 (kě chíxù fāzhǎn)?",
+      "options": ["Rapid development", "Sustainable development", "Economic development", "Social development"],
+      "options_id": ["Pembangunan cepat", "Pembangunan berkelanjutan", "Pembangunan ekonomi", "Pembangunan sosial"],
+      "correct": 1
+    },
+    {
+      "question": "How do you say 'renewable energy' in Chinese?",
+      "question_id": "Bagaimana mengatakan 'energi terbarukan' dalam bahasa Mandarin?",
+      "options": ["绿色能源", "可再生能源", "新能源", "清洁能源"],
+      "options_id": ["energi hijau", "energi terbarukan", "energi baru", "energi bersih"],
+      "correct": 1
+    },
+    {
+      "question": "What does 循环经济 (xúnhuán jīngjì) mean?",
+      "question_id": "Apa arti 循环经济 (xúnhuán jīngjì)?",
+      "options": ["Green economy", "Circular economy", "Digital economy", "Sharing economy"],
+      "options_id": ["Ekonomi hijau", "Ekonomi sirkular", "Ekonomi digital", "Ekonomi berbagi"],
+      "correct": 1
+    },
+    {
+      "question": "Complete the sentence: ______后代，我们必须保护环境。",
+      "question_id": "Lengkapi kalimat: ______后代，我们必须保护环境。",
+      "options": ["对于", "为了", "关于", "由于"],
+      "options_id": ["Untuk", "Demi", "Tentang", "Karena"],
+      "correct": 1
+    },
+    {
+      "question": "What is the best translation of 'Only by reducing pollution can we improve the environment'?",
+      "question_id": "Apa terjemahan terbaik dari 'Hanya dengan mengurangi polusi kita dapat memperbaiki lingkungan'?",
+      "options": ["如果减少污染，就能改善环境", "只要减少污染，就能改善环境", "只有减少污染，才能改善环境", "因为减少污染，所以改善环境"],
+      "options_id": ["Jika mengurangi polusi, maka dapat memperbaiki lingkungan", "Selama mengurangi polusi, maka dapat memperbaiki lingkungan", "Hanya dengan mengurangi polusi, maka dapat memperbaiki lingkungan", "Karena mengurangi polusi, maka memperbaiki lingkungan"],
+      "correct": 2
+    }
+  ]
+}

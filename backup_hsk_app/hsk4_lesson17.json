@@ -1,0 +1,50 @@
+{
+  "title": "挑战自我",
+  "subtitle": "Talking About Personal Growth, Ambition, and Courage",
+  "assistant_message": "Today we learn: discussing self-challenge and growth, using 再...也... (zài... yě...) for 'even if... still...', and expressing ambition.",
+  "vocabulary": [
+    {"word": "挑战", "pinyin": "tiǎo zhàn", "meaning": "challenge", "meaning_id": "tantangan", "example": "接受挑战", "example_translation": "accept the challenge", "example_translation_id": "menerima tantangan"},
+    {"word": "自我", "pinyin": "zì wǒ", "meaning": "self", "meaning_id": "diri sendiri", "example": "自我提升", "example_translation": "self-improvement", "example_translation_id": "peningkatan diri"},
+    {"word": "勇气", "pinyin": "yǒng qì", "meaning": "courage", "meaning_id": "keberanian", "example": "鼓起勇气", "example_translation": "summon courage", "example_translation_id": "mengumpulkan keberanian"},
+    {"word": "突破", "pinyin": "tū pò", "meaning": "to break through", "meaning_id": "terobosan", "example": "实现突破", "example_translation": "achieve a breakthrough", "example_translation_id": "mencapai terobosan"},
+    {"word": "成长", "pinyin": "chéng zhǎng", "meaning": "to grow", "meaning_id": "tumbuh", "example": "个人成长", "example_translation": "personal growth", "example_translation_id": "pertumbuhan pribadi"},
+    {"word": "目标", "pinyin": "mù biāo", "meaning": "goal", "meaning_id": "tujuan", "example": "设定目标", "example_translation": "set a goal", "example_translation_id": "menetapkan tujuan"},
+    {"word": "坚持", "pinyin": "jiān chí", "meaning": "to persist", "meaning_id": "bertahan", "example": "坚持到底", "example_translation": "persist to the end", "example_translation_id": "bertahan sampai akhir"},
+    {"word": "超越", "pinyin": "chāo yuè", "meaning": "to surpass", "meaning_id": "melampaui", "example": "超越自己", "example_translation": "surpass oneself", "example_translation_id": "melampaui diri sendiri"}
+  ],
+  "grammar": [
+    {
+      "point": "Using 再...也... (Even if... still...)",
+      "point_id": "Menggunakan 再...也... (Meskipun... tetap...)",
+      "explanation": "再 + Adjective/Verb + 也 + Result means 'even if... still...'.",
+      "explanation_id": "再 + Kata Sifat/Kata Kerja + 也 + Hasil berarti 'meskipun... tetap...'.",
+      "examples": [
+        {"chinese": "再大的困难，我们也要克服。", "translation": "No matter how big the difficulty, we must overcome it.", "translation_id": "Meskipun sebesar apa pun kesulitannya, kita harus mengatasinya."},
+        {"chinese": "再难，也要坚持下去。", "translation": "No matter how hard it is, you must persist.", "translation_id": "Meskipun sulit, harus bertahan."}
+      ]
+    },
+    {
+      "point": "Using 不管...都... (No matter... still...)",
+      "point_id": "Menggunakan 不管...都... (Tidak peduli... tetap...)",
+      "explanation": "不管 introduces a condition, and 都 states that the result remains true regardless.",
+      "explanation_id": "不管 memperkenalkan suatu kondisi, dan 都 menyatakan bahwa hasilnya tetap benar terlepas dari apapun.",
+      "examples": [
+        {"chinese": "不管遇到什么困难，都不要放弃。", "translation": "No matter what difficulties you encounter, don't give up.", "translation_id": "Tidak peduli kesulitan apa yang kamu hadapi, jangan menyerah."},
+        {"chinese": "不管结果如何，我都尽力了。", "translation": "No matter what the result, I did my best.", "translation_id": "Tidak peduli apa hasilnya, saya sudah berusaha sebaik mungkin."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "我决定报名参加马拉松比赛。", "pinyin": "Wǒ juédìng bàomíng cānjiā mǎlāsōng bǐsài.", "translation": "I decided to sign up for the marathon.", "translation_id": "Saya memutuskan untuk mendaftar maraton."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "那是个很大的挑战啊！", "pinyin": "Nà shì gè hěn dà de tiǎozhàn a!", "translation": "That's a big challenge!", "translation_id": "Itu tantangan besar!"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "我知道。再大的困难，我也要挑战自我。", "pinyin": "Wǒ zhīdào. Zài dà de kùnnan, wǒ yě yào tiǎozhàn zìwǒ.", "translation": "I know. No matter how big the difficulty, I want to challenge myself.", "translation_id": "Saya tahu. Meskipun sebesar apa pun kesulitannya, saya ingin menantang diri sendiri."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你有这样的勇气真让人佩服。我相信你一定能突破自己！", "pinyin": "Nǐ yǒu zhèyàng de yǒngqì zhēn ràng rén pèifú. Wǒ xiāngxìn nǐ yīdìng néng tūpò zìjǐ!", "translation": "Having such courage is truly admirable. I believe you will definitely break through!", "translation_id": "Memiliki keberanian seperti itu sungguh mengagumkan. Saya percaya kamu pasti akan mencapai terobosan!"}
+  ],
+  "exercises": [
+    {"question": "What does 挑战 (tiǎozhàn) mean?", "question_id": "Apa arti 挑战 (tiǎozhàn)?", "options": ["Opportunity", "Challenge", "Success", "Failure"], "options_id": ["Kesempatan", "Tantangan", "Sukses", "Kegagalan"], "correct": 1},
+    {"question": "How do you say 'self-improvement' in Chinese?", "question_id": "Bagaimana mengatakan 'peningkatan diri' dalam bahasa Mandarin?", "options": ["自我提升", "自我完善", "自我发展", "自我成长"], "options_id": ["peningkatan diri", "penyempurnaan diri", "pengembangan diri", "pertumbuhan diri"], "correct": 0},
+    {"question": "What does the structure 再...也... express?", "question_id": "Apa yang diekspresikan oleh struktur 再...也...?", "options": ["Even if... still...", "If... then...", "Because... so...", "Although... but..."], "options_id": ["Meskipun... tetap...", "Jika... maka...", "Karena... jadi...", "Meskipun... tetapi..."], "correct": 0},
+    {"question": "What is 勇气 (yǒngqì)?", "question_id": "Apa itu 勇气 (yǒngqì)?", "options": ["Confidence", "Courage", "Strength", "Wisdom"], "options_id": ["Kepercayaan diri", "Keberanian", "Kekuatan", "Kebijaksanaan"], "correct": 1},
+    {"question": "How to say 'surpass oneself' in Chinese?", "question_id": "Bagaimana mengatakan 'melampaui diri sendiri' dalam bahasa Mandarin?", "options": ["超越自己", "超过自己", "胜过自己", "胜过自我"], "options_id": ["melampaui diri sendiri", "melebihi diri sendiri", "mengalahkan diri sendiri", "mengalahkan diri"], "correct": 0}
+  ]
+}

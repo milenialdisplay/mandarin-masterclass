@@ -1,0 +1,51 @@
+{
+  "title": "我从来没去过西藏",
+  "subtitle": "Negative Experiences with 从来没, Expressing 'Never', Talking About Places",
+  "assistant_message": "Today we learn: expressing 'never' with 从来没 (cónglái méi), talking about places you've never been to, and using 过 for experience.",
+  "vocabulary": [
+    {"word": "从来", "pinyin": "cóng lái", "meaning": "always/ever (used with negatives)", "meaning_id": "selalu/pernah (digunakan dengan negatif)", "example": "从来没去过", "example_translation": "have never been to", "example_translation_id": "belum pernah pergi ke"},
+    {"word": "西藏", "pinyin": "Xī zàng", "meaning": "Tibet", "meaning_id": "Tibet", "example": "去西藏", "example_translation": "go to Tibet", "example_translation_id": "pergi ke Tibet"},
+    {"word": "地方", "pinyin": "dì fang", "meaning": "place", "meaning_id": "tempat", "example": "好地方", "example_translation": "good place", "example_translation_id": "tempat bagus"},
+    {"word": "旅行", "pinyin": "lǚ xíng", "meaning": "to travel", "meaning_id": "bepergian", "example": "喜欢旅行", "example_translation": "like to travel", "example_translation_id": "suka bepergian"},
+    {"word": "风景", "pinyin": "fēng jǐng", "meaning": "scenery", "meaning_id": "pemandangan", "example": "美丽的风景", "example_translation": "beautiful scenery", "example_translation_id": "pemandangan indah"},
+    {"word": "高原", "pinyin": "gāo yuán", "meaning": "plateau", "meaning_id": "dataran tinggi", "example": "青藏高原", "example_translation": "Qinghai-Tibet Plateau", "example_translation_id": "Dataran Tinggi Qinghai-Tibet"},
+    {"word": "海拔", "pinyin": "hǎi bá", "meaning": "altitude", "meaning_id": "ketinggian", "example": "海拔很高", "example_translation": "altitude is high", "example_translation_id": "ketinggiannya tinggi"},
+    {"word": "梦想", "pinyin": "mèng xiǎng", "meaning": "dream", "meaning_id": "mimpi", "example": "我的梦想", "example_translation": "my dream", "example_translation_id": "mimpi saya"}
+  ],
+  "grammar": [
+    {
+      "point": "Expressing 'Never' with 从来没 (cónglái méi)",
+      "point_id": "Menyatakan 'Tidak Pernah' dengan 从来没 (cónglái méi)",
+      "explanation": "Use 从来没 + Verb + 过 to express 'have never done something'. 从来 emphasizes 'all along'.",
+      "explanation_id": "Gunakan 从来没 + Kata Kerja + 过 untuk menyatakan 'belum pernah melakukan sesuatu'. 从来 menekankan 'selama ini'.",
+      "examples": [
+        {"chinese": "我从来没去过西藏。", "translation": "I have never been to Tibet.", "translation_id": "Saya belum pernah ke Tibet."},
+        {"chinese": "他从来没吃过中国菜。", "translation": "He has never eaten Chinese food.", "translation_id": "Dia belum pernah makan masakan Tiongkok."},
+        {"chinese": "我从来没听说过这件事。", "translation": "I have never heard of this matter.", "translation_id": "Saya belum pernah mendengar tentang hal ini."}
+      ]
+    },
+    {
+      "point": "Talking About Dreams with 梦想 (mèngxiǎng)",
+      "point_id": "Membicarakan Mimpi dengan 梦想 (mèngxiǎng)",
+      "explanation": "Use 梦想 as a noun meaning 'dream'. 我的梦想是... means 'My dream is...'",
+      "explanation_id": "Gunakan 梦想 sebagai kata benda yang berarti 'mimpi'. 我的梦想是... berarti 'Mimpiku adalah...'",
+      "examples": [
+        {"chinese": "我的梦想是去西藏旅行。", "translation": "My dream is to travel to Tibet.", "translation_id": "Mimpi saya adalah bepergian ke Tibet."},
+        {"chinese": "你有什么梦想？", "translation": "What are your dreams?", "translation_id": "Apa mimpimu?"}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你去过西藏吗？", "pinyin": "Nǐ qù guo Xīzàng ma?", "translation": "Have you been to Tibet?", "translation_id": "Apakah kamu pernah ke Tibet?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "从来没去过，但是很想去。", "pinyin": "Cónglái méi qù guo, dànshì hěn xiǎng qù.", "translation": "I've never been, but I really want to go.", "translation_id": "Belum pernah, tapi sangat ingin pergi."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "听说那里的风景很美。", "pinyin": "Tīngshuō nàlǐ de fēngjǐng hěn měi.", "translation": "I heard the scenery there is very beautiful.", "translation_id": "Saya dengar pemandangan di sana sangat indah."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "是的，西藏是我梦想的地方。", "pinyin": "Shì de, Xīzàng shì wǒ mèngxiǎng de dìfāng.", "translation": "Yes, Tibet is my dream place.", "translation_id": "Ya, Tibet adalah tempat impian saya."}
+  ],
+  "exercises": [
+    {"question": "What does 从来没 (cónglái méi) express?", "question_id": "Apa yang diekspresikan oleh 从来没 (cónglái méi)?", "options": ["Always", "Never", "Sometimes", "Often"], "options_id": ["Selalu", "Tidak pernah", "Kadang-kadang", "Sering"], "correct": 1},
+    {"question": "How do you say 'I have never been to Tibet' in Chinese?", "question_id": "Bagaimana mengatakan 'Saya belum pernah ke Tibet' dalam bahasa Mandarin?", "options": ["我去过西藏", "我没去过西藏", "我从来没去过西藏", "我不去西藏"], "options_id": ["Saya pernah ke Tibet", "Saya belum pernah ke Tibet", "Saya tidak pernah ke Tibet", "Saya tidak pergi ke Tibet"], "correct": 2},
+    {"question": "What does 梦想 (mèngxiǎng) mean?", "question_id": "Apa arti 梦想 (mèngxiǎng)?", "options": ["Dream", "Idea", "Plan", "Hope"], "options_id": ["Mimpi", "Ide", "Rencana", "Harapan"], "correct": 0},
+    {"question": "How to ask 'What are your dreams?' in Chinese?", "question_id": "Bagaimana bertanya 'Apa mimpimu?' dalam bahasa Mandarin?", "options": ["你有什么梦想？", "你梦想什么？", "你的梦想是什么？", "All of the above"], "options_id": ["Apa mimpimu?", "Kamu bermimpi apa?", "Apa mimpimu?", "Semua di atas"], "correct": 3},
+    {"question": "What does 风景 (fēngjǐng) mean?", "question_id": "Apa arti 风景 (fēngjǐng)?", "options": ["Weather", "Scenery", "Climate", "Environment"], "options_id": ["Cuaca", "Pemandangan", "Iklim", "Lingkungan"], "correct": 1}
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "title": "最好的医生是自己",
+  "subtitle": "Talking About Self-Care, Prevention, and Health",
+  "assistant_message": "Today we learn: discussing self-care and prevention, using 上述 (shàngshù) for 'above-mentioned', and giving health advice.",
+  "vocabulary": [
+    {"word": "医生", "pinyin": "yī shēng", "meaning": "doctor", "meaning_id": "dokter", "example": "最好的医生", "example_translation": "the best doctor", "example_translation_id": "dokter terbaik"},
+    {"word": "自己", "pinyin": "zì jǐ", "meaning": "oneself", "meaning_id": "diri sendiri", "example": "相信自己", "example_translation": "believe in oneself", "example_translation_id": "percaya pada diri sendiri"},
+    {"word": "预防", "pinyin": "yù fáng", "meaning": "to prevent", "meaning_id": "mencegah", "example": "预防疾病", "example_translation": "prevent diseases", "example_translation_id": "mencegah penyakit"},
+    {"word": "锻炼", "pinyin": "duàn liàn", "meaning": "to exercise", "meaning_id": "berolahraga", "example": "坚持锻炼", "example_translation": "persist in exercising", "example_translation_id": "bertahan berolahraga"},
+    {"word": "作息", "pinyin": "zuò xī", "meaning": "work and rest", "meaning_id": "kerja dan istirahat", "example": "规律作息", "example_translation": "regular work and rest", "example_translation_id": "kerja dan istirahat teratur"},
+    {"word": "心态", "pinyin": "xīn tài", "meaning": "mindset", "meaning_id": "pola pikir", "example": "积极心态", "example_translation": "positive mindset", "example_translation_id": "pola pikir positif"},
+    {"word": "定期", "pinyin": "dìng qī", "meaning": "regularly", "meaning_id": "secara teratur", "example": "定期检查", "example_translation": "regular check-up", "example_translation_id": "pemeriksaan rutin"},
+    {"word": "检查", "pinyin": "jiǎn chá", "meaning": "to examine/check", "meaning_id": "memeriksa", "example": "身体检查", "example_translation": "physical examination", "example_translation_id": "pemeriksaan fisik"}
+  ],
+  "grammar": [
+    {
+      "point": "Using 上述 (shàngshù) for 'Above-mentioned'",
+      "point_id": "Menggunakan 上述 (shàngshù) untuk 'Tersebut di Atas'",
+      "explanation": "上述 is used to refer to something mentioned earlier in the text or conversation.",
+      "explanation_id": "上述 digunakan untuk merujuk pada sesuatu yang disebutkan sebelumnya dalam teks atau percakapan.",
+      "examples": [
+        {"chinese": "上述方法对健康很有帮助。", "translation": "The above-mentioned methods are very helpful for health.", "translation_id": "Metode yang disebutkan di atas sangat membantu untuk kesehatan."},
+        {"chinese": "上述观点我完全同意。", "translation": "I completely agree with the above-mentioned viewpoint.", "translation_id": "Saya sepenuhnya setuju dengan sudut pandang yang disebutkan di atas."}
+      ]
+    },
+    {
+      "point": "Using 之一 (zhī yī) for 'One of...'",
+      "point_id": "Menggunakan 之一 (zhī yī) untuk 'Salah Satu dari...'",
+      "explanation": "之一 means 'one of'. Structure: Noun + 之一.",
+      "explanation_id": "之一 berarti 'salah satu dari'. Struktur: Kata Benda + 之一.",
+      "examples": [
+        {"chinese": "健康是人生最重要的财富之一。", "translation": "Health is one of the most important assets in life.", "translation_id": "Kesehatan adalah salah satu aset terpenting dalam hidup."},
+        {"chinese": "他是我们班最好的学生之一。", "translation": "He is one of the best students in our class.", "translation_id": "Dia adalah salah satu siswa terbaik di kelas kami."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "俗话说，最好的医生是自己。你怎么看？", "pinyin": "Súhuà shuō, zuì hǎo de yīshēng shì zìjǐ. Nǐ zěnme kàn?", "translation": "As the saying goes, the best doctor is oneself. What do you think?", "translation_id": "Seperti kata pepatah, dokter terbaik adalah diri sendiri. Bagaimana menurutmu?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我同意。预防比治疗更重要。", "pinyin": "Wǒ tóngyì. Yùfáng bǐ zhìliáo gèng zhòngyào.", "translation": "I agree. Prevention is more important than treatment.", "translation_id": "Saya setuju. Pencegahan lebih penting daripada pengobatan."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "所以我们要坚持锻炼，保持好的心态。", "pinyin": "Suǒyǐ wǒmen yào jiānchí duànliàn, bǎochí hǎo de xīntài.", "translation": "So we need to persist in exercising and maintain a good mindset.", "translation_id": "Jadi kita harus bertahan berolahraga dan menjaga pola pikir yang baik."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "还有定期检查也很重要。", "pinyin": "Hái yǒu dìngqī jiǎnchá yě hěn zhòngyào.", "translation": "Regular check-ups are also very important.", "translation_id": "Pemeriksaan rutin juga sangat penting."}
+  ],
+  "exercises": [
+    {"question": "What does 预防 (yùfáng) mean?", "question_id": "Apa arti 预防 (yùfáng)?", "options": ["To treat", "To prevent", "To cure", "To diagnose"], "options_id": ["Mengobati", "Mencegah", "Menyembuhkan", "Mendiagnosis"], "correct": 1},
+    {"question": "How do you say 'regular exercise' in Chinese?", "question_id": "Bagaimana mengatakan 'olahraga teratur' dalam bahasa Mandarin?", "options": ["定期锻炼", "经常锻炼", "坚持锻炼", "All of the above"], "options_id": ["olahraga teratur", "sering berolahraga", "bertahan berolahraga", "Semua di atas"], "correct": 3},
+    {"question": "What does 上述 (shàngshù) refer to?", "question_id": "Apa yang dirujuk oleh 上述 (shàngshù)?", "options": ["Below-mentioned", "Above-mentioned", "Previously mentioned", "All of the above"], "options_id": ["Tersebut di bawah", "Tersebut di atas", "Tersebut sebelumnya", "Semua di atas"], "correct": 1},
+    {"question": "What is 心态 (xīntài)?", "question_id": "Apa itu 心态 (xīntài)?", "options": ["Physical state", "Mindset", "Emotion", "Health"], "options_id": ["Kondisi fisik", "Pola pikir", "Emosi", "Kesehatan"], "correct": 1},
+    {"question": "How to say 'one of the most important' in Chinese?", "question_id": "Bagaimana mengatakan 'salah satu yang terpenting' dalam bahasa Mandarin?", "options": ["最重要的之一", "最重要的一个", "最重要的部分", "最重要的内容"], "options_id": ["salah satu yang terpenting", "satu yang terpenting", "bagian terpenting", "isi terpenting"], "correct": 0}
+  ]
+}

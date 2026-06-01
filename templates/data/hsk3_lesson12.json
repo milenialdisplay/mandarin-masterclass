@@ -1,0 +1,52 @@
+{
+  "title": "你要控制一下饮食",
+  "subtitle": "Giving Advice with 要, Using 一下, Health Advice and Suggestions",
+  "assistant_message": "Today we learn: giving advice with 要 (yào), softening suggestions with 一下 (yīxià), talking about health and diet.",
+  "vocabulary": [
+    {"word": "控制", "pinyin": "kòng zhì", "meaning": "to control", "meaning_id": "mengendalikan", "example": "控制饮食", "example_translation": "control diet", "example_translation_id": "mengendalikan makanan"},
+    {"word": "饮食", "pinyin": "yǐn shí", "meaning": "diet/food and drink", "meaning_id": "makanan dan minuman", "example": "健康饮食", "example_translation": "healthy diet", "example_translation_id": "makanan sehat"},
+    {"word": "一下", "pinyin": "yī xià", "meaning": "a bit (softens suggestion)", "meaning_id": "sedikit (memperhalus saran)", "example": "看一下", "example_translation": "take a look", "example_translation_id": "lihat sebentar"},
+    {"word": "健康", "pinyin": "jiàn kāng", "meaning": "healthy", "meaning_id": "sehat", "example": "身体健康", "example_translation": "healthy body", "example_translation_id": "tubuh sehat"},
+    {"word": "锻炼", "pinyin": "duàn liàn", "meaning": "to exercise", "meaning_id": "berolahraga", "example": "锻炼身体", "example_translation": "exercise the body", "example_translation_id": "berolahraga"},
+    {"word": "体重", "pinyin": "tǐ zhòng", "meaning": "body weight", "meaning_id": "berat badan", "example": "控制体重", "example_translation": "control weight", "example_translation_id": "mengendalikan berat badan"},
+    {"word": "习惯", "pinyin": "xí guàn", "meaning": "habit", "meaning_id": "kebiasaan", "example": "好习惯", "example_translation": "good habit", "example_translation_id": "kebiasaan baik"},
+    {"word": "建议", "pinyin": "jiàn yì", "meaning": "suggestion/advice", "meaning_id": "saran", "example": "给你一个建议", "example_translation": "give you a suggestion", "example_translation_id": "memberi saran"}
+  ],
+  "grammar": [
+    {
+      "point": "Giving Advice with 要 (yào)",
+      "point_id": "Memberi Saran dengan 要 (yào)",
+      "explanation": "Use 要 before a verb to express 'should' or 'need to'. Structure: Subject + 要 + Verb.",
+      "explanation_id": "Gunakan 要 sebelum kata kerja untuk menyatakan 'sebaiknya' atau 'perlu'. Struktur: Subjek + 要 + Kata Kerja.",
+      "examples": [
+        {"chinese": "你要控制一下饮食。", "translation": "You need to control your diet a bit.", "translation_id": "Kamu perlu mengendalikan makanan sedikit."},
+        {"chinese": "你要多锻炼。", "translation": "You should exercise more.", "translation_id": "Kamu harus lebih banyak berolahraga."},
+        {"chinese": "你要早睡早起。", "translation": "You should sleep early and wake up early.", "translation_id": "Kamu harus tidur awal dan bangun awal."}
+      ]
+    },
+    {
+      "point": "Softening Suggestions with 一下 (yīxià)",
+      "point_id": "Memperhalus Saran dengan 一下 (yīxià)",
+      "explanation": "Add 一下 after a verb to soften the tone, meaning 'a little' or 'for a moment'.",
+      "explanation_id": "Tambahkan 一下 setelah kata kerja untuk memperhalus nada, berarti 'sedikit' atau 'sebentar'.",
+      "examples": [
+        {"chinese": "看一下。", "translation": "Take a look.", "translation_id": "Lihat sebentar."},
+        {"chinese": "想一下。", "translation": "Think about it a bit.", "translation_id": "Pikirkan sedikit."},
+        {"chinese": "控制一下。", "translation": "Control it a bit.", "translation_id": "Kendalikan sedikit."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你最近好像胖了。", "pinyin": "Nǐ zuìjìn hǎoxiàng pàng le.", "translation": "You seem to have gained weight recently.", "translation_id": "Kamu sepertinya baru saja naik berat badan."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "是啊，最近吃得太多了。", "pinyin": "Shì a, zuìjìn chī de tài duō le.", "translation": "Yes, I've been eating too much lately.", "translation_id": "Ya, akhir-akhir ini makan terlalu banyak."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你要控制一下饮食。", "pinyin": "Nǐ yào kòngzhì yīxià yǐnshí.", "translation": "You need to control your diet a bit.", "translation_id": "Kamu perlu mengendalikan makanan sedikit."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "谢谢你的建议，我会注意的。", "pinyin": "Xièxie nǐ de jiànyì, wǒ huì zhùyì de.", "translation": "Thanks for your advice, I'll pay attention.", "translation_id": "Terima kasih sarannya, saya akan perhatikan."}
+  ],
+  "exercises": [
+    {"question": "What does 要 (yào) express in advice?", "question_id": "Apa yang diekspresikan oleh 要 (yào) dalam saran?", "options": ["Want", "Need to/should", "Will", "Can"], "options_id": ["Ingin", "Perlu/sebaiknya", "Akan", "Bisa"], "correct": 1},
+    {"question": "How do you say 'You need to control your diet a bit' in Chinese?", "question_id": "Bagaimana mengatakan 'Kamu perlu mengendalikan makanan sedikit' dalam bahasa Mandarin?", "options": ["你要控制饮食", "你要控制一下饮食", "你控制一下饮食", "你控制饮食"], "options_id": ["Kamu perlu mengendalikan makanan", "Kamu perlu mengendalikan makanan sedikit", "Kamu mengendalikan makanan sedikit", "Kamu mengendalikan makanan"], "correct": 1},
+    {"question": "What does 一下 (yīxià) do?", "question_id": "Apa fungsi 一下 (yīxià)?", "options": ["Makes action more intense", "Softens the tone", "Shows completion", "Shows duration"], "options_id": ["Membuat aksi lebih intens", "Memperhalus nada", "Menunjukkan selesai", "Menunjukkan durasi"], "correct": 1},
+    {"question": "How to say 'Take a look' in Chinese?", "question_id": "Bagaimana mengatakan 'Lihat sebentar' dalam bahasa Mandarin?", "options": ["看", "看一下", "看一看", "Both B and C"], "options_id": ["Lihat", "Lihat sebentar", "Lihat-lihat sebentar", "B dan C"], "correct": 3},
+    {"question": "What does 健康 (jiànkāng) mean?", "question_id": "Apa arti 健康 (jiànkāng)?", "options": ["Happy", "Healthy", "Rich", "Busy"], "options_id": ["Senang", "Sehat", "Kaya", "Sibuk"], "correct": 1}
+  ]
+}

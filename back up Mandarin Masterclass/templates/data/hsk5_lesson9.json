@@ -1,0 +1,50 @@
+{
+  "title": "心理健康",
+  "subtitle": "Mental Health, Emotional Well-being, Self-care",
+  "assistant_message": "Today we learn: discussing mental health, using 调整 (tiáozhěng) and 平衡 (pínghéng), and expressing the importance of emotional well-being.",
+  "vocabulary": [
+    {"word": "心理", "pinyin": "xīn lǐ", "meaning": "mental/psychological", "meaning_id": "mental/psikologis", "example": "心理健康", "example_translation": "mental health", "example_translation_id": "kesehatan mental"},
+    {"word": "健康", "pinyin": "jiàn kāng", "meaning": "health", "meaning_id": "kesehatan", "example": "身体健康", "example_translation": "physical health", "example_translation_id": "kesehatan fisik"},
+    {"word": "压力", "pinyin": "yā lì", "meaning": "pressure", "meaning_id": "tekanan", "example": "缓解压力", "example_translation": "relieve stress", "example_translation_id": "mengurangi stres"},
+    {"word": "焦虑", "pinyin": "jiāo lǜ", "meaning": "anxiety", "meaning_id": "kecemasan", "example": "感到焦虑", "example_translation": "feel anxious", "example_translation_id": "merasa cemas"},
+    {"word": "抑郁", "pinyin": "yì yù", "meaning": "depression", "meaning_id": "depresi", "example": "抑郁症", "example_translation": "depression", "example_translation_id": "depresi"},
+    {"word": "调整", "pinyin": "tiáo zhěng", "meaning": "to adjust", "meaning_id": "menyesuaikan", "example": "调整心态", "example_translation": "adjust mindset", "example_translation_id": "menyesuaikan pola pikir"},
+    {"word": "平衡", "pinyin": "píng héng", "meaning": "balance", "meaning_id": "keseimbangan", "example": "工作生活平衡", "example_translation": "work-life balance", "example_translation_id": "keseimbangan kerja-hidup"},
+    {"word": "放松", "pinyin": "fàng sōng", "meaning": "to relax", "meaning_id": "bersantai", "example": "放松心情", "example_translation": "relax the mind", "example_translation_id": "merilekskan pikiran"}
+  ],
+  "grammar": [
+    {
+      "point": "调整心态 (tiáozhěng xīntài) - Adjust One's Mindset",
+      "point_id": "Menyesuaikan Pola Pikir",
+      "explanation": "调整 means 'to adjust'. 心态 means 'mindset'. Together they mean to adjust one's mental attitude.",
+      "explanation_id": "调整 berarti 'menyesuaikan'. 心态 berarti 'pola pikir'. Bersama berarti menyesuaikan sikap mental seseorang.",
+      "examples": [
+        {"chinese": "面对压力，要学会调整心态。", "translation": "When facing pressure, you need to learn to adjust your mindset.", "translation_id": "Saat menghadapi tekanan, kamu perlu belajar menyesuaikan pola pikir."},
+        {"chinese": "积极的心态有助于心理健康。", "translation": "A positive mindset contributes to mental health.", "translation_id": "Pola pikir positif berkontribusi pada kesehatan mental."}
+      ]
+    },
+    {
+      "point": "平衡 (pínghéng) - Balance",
+      "point_id": "Keseimbangan",
+      "explanation": "平衡 can be used as a noun or verb to talk about achieving balance between different aspects of life.",
+      "explanation_id": "平衡 dapat digunakan sebagai kata benda atau kata kerja untuk membicarakan pencapaian keseimbangan antara berbagai aspek kehidupan.",
+      "examples": [
+        {"chinese": "要学会平衡工作和生活。", "translation": "You need to learn to balance work and life.", "translation_id": "Kamu perlu belajar menyeimbangkan pekerjaan dan kehidupan."},
+        {"chinese": "保持心理平衡很重要。", "translation": "Maintaining psychological balance is very important.", "translation_id": "Menjaga keseimbangan psikologis sangat penting."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "最近工作压力很大，感觉有点焦虑。", "pinyin": "Zuìjìn gōngzuò yālì hěn dà, gǎnjué yǒudiǎn jiāolǜ.", "translation": "Recently work pressure has been great, I feel a bit anxious.", "translation_id": "Akhir-akhir ini tekanan kerja besar, saya merasa sedikit cemas."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "要学会调整心态，平衡工作和生活。心理健康和身体健康一样重要。", "pinyin": "Yào xuéhuì tiáozhěng xīntài, pínghéng gōngzuò hé shēnghuó. Xīnlǐ jiànkāng hé shēntǐ jiànkāng yīyàng zhòngyào.", "translation": "You need to learn to adjust your mindset and balance work and life. Mental health is as important as physical health.", "translation_id": "Kamu perlu belajar menyesuaikan pola pikir dan menyeimbangkan pekerjaan dan kehidupan. Kesehatan mental sama pentingnya dengan kesehatan fisik."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "怎么放松自己？", "pinyin": "Zěnme fàngsōng zìjǐ?", "translation": "How to relax yourself?", "translation_id": "Bagaimana cara bersantai?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "运动、听音乐、和朋友聊天都很有帮助。必要时可以寻求专业帮助。", "pinyin": "Yùndòng, tīng yīnyuè, hé péngyou liáotiān dōu hěn yǒu bāngzhù. Bìyào shí kěyǐ xúnqiú zhuānyè bāngzhù.", "translation": "Exercise, listening to music, and chatting with friends are all helpful. You can seek professional help when necessary.", "translation_id": "Olahraga, mendengarkan musik, dan mengobrol dengan teman semuanya membantu. Kamu dapat mencari bantuan profesional jika diperlukan."}
+  ],
+  "exercises": [
+    {"question": "What does 心理健康 (xīnlǐ jiànkāng) mean?", "question_id": "Apa arti 心理健康 (xīnlǐ jiànkāng)?", "options": ["Physical health", "Mental health", "Social health", "Financial health"], "options_id": ["Kesehatan fisik", "Kesehatan mental", "Kesehatan sosial", "Kesehatan finansial"], "correct": 1},
+    {"question": "How do you say 'adjust mindset' in Chinese?", "question_id": "Bagaimana mengatakan 'menyesuaikan pola pikir' dalam bahasa Mandarin?", "options": ["调整心态", "改变心态", "保持心态", "失去心态"], "options_id": ["menyesuaikan pola pikir", "mengubah pola pikir", "mempertahankan pola pikir", "kehilangan pola pikir"], "correct": 0},
+    {"question": "What does 焦虑 (jiāolǜ) mean?", "question_id": "Apa arti 焦虑 (jiāolǜ)?", "options": ["Depression", "Anxiety", "Stress", "Happiness"], "options_id": ["Depresi", "Kecemasan", "Stres", "Kebahagiaan"], "correct": 1},
+    {"question": "What is the opposite of 放松 (fàngsōng)?", "question_id": "Apa lawan dari 放松 (fàngsōng)?", "options": ["放松", "紧张", "轻松", "愉快"], "options_id": ["bersantai", "tegang", "ringan", "gembira"], "correct": 1},
+    {"question": "How to say 'work-life balance' in Chinese?", "question_id": "Bagaimana mengatakan 'keseimbangan kerja-hidup' dalam bahasa Mandarin?", "options": ["工作生活平衡", "工作平衡", "生活平衡", "时间管理"], "options_id": ["keseimbangan kerja-hidup", "keseimbangan kerja", "keseimbangan hidup", "manajemen waktu"], "correct": 0}
+  ]
+}

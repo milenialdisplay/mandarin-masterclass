@@ -1,0 +1,51 @@
+{
+  "title": "除了汉语，我还会英语",
+  "subtitle": "The 除了...还/也... Structure, Expressing 'Besides', Talking About Language Abilities",
+  "assistant_message": "Today we learn: using 除了...还/也... (chúle... hái/yě...) to express 'besides... also...', talking about multiple language abilities, and making lists.",
+  "vocabulary": [
+    {"word": "除了", "pinyin": "chú le", "meaning": "besides/apart from", "meaning_id": "selain", "example": "除了汉语", "example_translation": "besides Chinese", "example_translation_id": "selain Mandarin"},
+    {"word": "还", "pinyin": "hái", "meaning": "also (additional)", "meaning_id": "juga (tambahan)", "example": "还会英语", "example_translation": "also know English", "example_translation_id": "juga bisa Inggris"},
+    {"word": "也", "pinyin": "yě", "meaning": "also (as well)", "meaning_id": "juga (sama)", "example": "我也会", "example_translation": "I also can", "example_translation_id": "saya juga bisa"},
+    {"word": "语言", "pinyin": "yǔ yán", "meaning": "language", "meaning_id": "bahasa", "example": "学习语言", "example_translation": "learn languages", "example_translation_id": "belajar bahasa"},
+    {"word": "能力", "pinyin": "néng lì", "meaning": "ability", "meaning_id": "kemampuan", "example": "语言能力", "example_translation": "language ability", "example_translation_id": "kemampuan bahasa"},
+    {"word": "交流", "pinyin": "jiāo liú", "meaning": "to communicate", "meaning_id": "berkomunikasi", "example": "交流思想", "example_translation": "exchange ideas", "example_translation_id": "bertukar pikiran"},
+    {"word": "流利", "pinyin": "liú lì", "meaning": "fluent", "meaning_id": "lancar", "example": "说得很流利", "example_translation": "speak very fluently", "example_translation_id": "berbicara sangat lancar"},
+    {"word": "母语", "pinyin": "mǔ yǔ", "meaning": "native language", "meaning_id": "bahasa ibu", "example": "我的母语", "example_translation": "my native language", "example_translation_id": "bahasa ibu saya"}
+  ],
+  "grammar": [
+    {
+      "point": "The 除了...还/也... Structure (Besides... Also...)",
+      "point_id": "Struktur 除了...还/也... (Selain... Juga...)",
+      "explanation": "Use 除了 to state something, then 还 or 也 to add additional information. Structure: 除了 + A, 还/也 + B.",
+      "explanation_id": "Gunakan 除了 untuk menyatakan sesuatu, lalu 还 atau 也 untuk menambahkan informasi tambahan. Struktur: 除了 + A, 还/也 + B.",
+      "examples": [
+        {"chinese": "除了汉语，我还会英语。", "translation": "Besides Chinese, I also know English.", "translation_id": "Selain Mandarin, saya juga bisa Inggris."},
+        {"chinese": "除了北京，我还去过上海。", "translation": "Besides Beijing, I've also been to Shanghai.", "translation_id": "Selain Beijing, saya juga pernah ke Shanghai."},
+        {"chinese": "除了学习，他也喜欢运动。", "translation": "Besides studying, he also likes sports.", "translation_id": "Selain belajar, dia juga suka olahraga."}
+      ]
+    },
+    {
+      "point": "Talking About Language Abilities",
+      "point_id": "Membicarakan Kemampuan Bahasa",
+      "explanation": "Use 会 (can) to talk about language abilities. 会说 (can speak), 会写 (can write), 会读 (can read).",
+      "explanation_id": "Gunakan 会 (bisa) untuk membicarakan kemampuan bahasa. 会说 (bisa bicara), 会写 (bisa menulis), 会读 (bisa membaca).",
+      "examples": [
+        {"chinese": "我会说汉语和英语。", "translation": "I can speak Chinese and English.", "translation_id": "Saya bisa bicara Mandarin dan Inggris."},
+        {"chinese": "她的英语很流利。", "translation": "Her English is very fluent.", "translation_id": "Bahasa Inggrisnya sangat lancar."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你会说几种语言？", "pinyin": "Nǐ huì shuō jǐ zhǒng yǔyán?", "translation": "How many languages can you speak?", "translation_id": "Kamu bisa bicara berapa bahasa?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "除了汉语，我还会英语。", "pinyin": "Chúle Hànyǔ, wǒ hái huì Yīngyǔ.", "translation": "Besides Chinese, I also know English.", "translation_id": "Selain Mandarin, saya juga bisa Inggris."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你的英语说得怎么样？", "pinyin": "Nǐ de Yīngyǔ shuō de zěnme yàng?", "translation": "How well do you speak English?", "translation_id": "Seberapa lancar kamu bicara Inggris?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "还可以，但是不如汉语流利。", "pinyin": "Hái kěyǐ, dànshì bùrú Hànyǔ liúlì.", "translation": "Not bad, but not as fluent as Chinese.", "translation_id": "Lumayan, tapi tidak selancar Mandarin."}
+  ],
+  "exercises": [
+    {"question": "What does the structure 除了...还/也... express?", "question_id": "Apa yang diekspresikan oleh struktur 除了...还/也...?", "options": ["Only... not...", "Besides... also...", "Instead of...", "Except..."], "options_id": ["Hanya... tidak...", "Selain... juga...", "Alih-alih...", "Kecuali..."], "correct": 1},
+    {"question": "How do you say 'Besides Chinese, I also know English' in Chinese?", "question_id": "Bagaimana mengatakan 'Selain Mandarin, saya juga bisa Inggris' dalam bahasa Mandarin?", "options": ["除了汉语，我还会英语", "除了汉语，我也英语", "除了汉语，我会英语", "汉语除了，我还会英语"], "options_id": ["Selain Mandarin, saya juga bisa Inggris", "Selain Mandarin, saya juga Inggris", "Selain Mandarin, saya bisa Inggris", "Mandarin selain, saya juga bisa Inggris"], "correct": 0},
+    {"question": "What does 还 (hái) mean in this context?", "question_id": "Apa arti 还 (hái) dalam konteks ini?", "options": ["Still", "Also (additional)", "Return", "Even"], "options_id": ["Masih", "Juga (tambahan)", "Kembali", "Bahkan"], "correct": 1},
+    {"question": "How to ask 'How many languages can you speak?' in Chinese?", "question_id": "Bagaimana bertanya 'Kamu bisa bicara berapa bahasa?' dalam bahasa Mandarin?", "options": ["你会说几种语言？", "你会说多少语言？", "你能说几种语言？", "All of the above"], "options_id": ["Kamu bisa bicara berapa bahasa?", "Kamu bisa bicara berapa bahasa?", "Kamu bisa bicara berapa bahasa?", "Semua di atas"], "correct": 3},
+    {"question": "What does 流利 (liúlì) mean?", "question_id": "Apa arti 流利 (liúlì)?", "options": ["Fluent", "Slow", "Fast", "Clear"], "options_id": ["Lancar", "Lambat", "Cepat", "Jelas"], "correct": 0}
+  ]
+}

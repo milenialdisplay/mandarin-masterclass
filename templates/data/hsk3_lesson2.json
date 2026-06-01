@@ -1,0 +1,51 @@
+{
+  "title": "这个电影很有意思",
+  "subtitle": "Expressing Opinions, Using 有意思, Talking About Movies",
+  "assistant_message": "Today we learn: expressing opinions about movies, using 有意思 (yǒu yìsi) for 'interesting', and making recommendations.",
+  "vocabulary": [
+    {"word": "电影", "pinyin": "diàn yǐng", "meaning": "movie/film", "meaning_id": "film", "example": "看电影", "example_translation": "watch a movie", "example_translation_id": "menonton film"},
+    {"word": "有意思", "pinyin": "yǒu yì si", "meaning": "interesting", "meaning_id": "menarik", "example": "很有意思", "example_translation": "very interesting", "example_translation_id": "sangat menarik"},
+    {"word": "故事", "pinyin": "gù shi", "meaning": "story", "meaning_id": "cerita", "example": "好听的故事", "example_translation": "good story", "example_translation_id": "cerita bagus"},
+    {"word": "演员", "pinyin": "yǎn yuán", "meaning": "actor", "meaning_id": "aktor", "example": "好演员", "example_translation": "good actor", "example_translation_id": "aktor bagus"},
+    {"word": "角色", "pinyin": "jué sè", "meaning": "character/role", "meaning_id": "karakter/peran", "example": "主角", "example_translation": "main character", "example_translation_id": "karakter utama"},
+    {"word": "推荐", "pinyin": "tuī jiàn", "meaning": "to recommend", "meaning_id": "merekomendasikan", "example": "推荐电影", "example_translation": "recommend a movie", "example_translation_id": "merekomendasikan film"},
+    {"word": "好看", "pinyin": "hǎo kàn", "meaning": "good-looking/nice to watch", "meaning_id": "bagus untuk ditonton", "example": "这个电影很好看", "example_translation": "this movie is very good", "example_translation_id": "film ini sangat bagus"},
+    {"word": "无聊", "pinyin": "wú liáo", "meaning": "boring", "meaning_id": "membosankan", "example": "很无聊", "example_translation": "very boring", "example_translation_id": "sangat membosankan"}
+  ],
+  "grammar": [
+    {
+      "point": "Expressing Opinions with 有意思 (yǒu yìsi)",
+      "point_id": "Menyatakan Pendapat dengan 有意思 (yǒu yìsi)",
+      "explanation": "Use 有意思 to say something is interesting. Use 没意思 for boring. Structure: Subject + 很有意思/没意思.",
+      "explanation_id": "Gunakan 有意思 untuk mengatakan sesuatu itu menarik. Gunakan 没意思 untuk membosankan. Struktur: Subjek + 很有意思/没意思.",
+      "examples": [
+        {"chinese": "这个电影很有意思。", "translation": "This movie is very interesting.", "translation_id": "Film ini sangat menarik."},
+        {"chinese": "这本书没意思。", "translation": "This book is boring.", "translation_id": "Buku ini membosankan."},
+        {"chinese": "你觉得这个活动有意思吗？", "translation": "Do you think this activity is interesting?", "translation_id": "Apakah menurutmu kegiatan ini menarik?"}
+      ]
+    },
+    {
+      "point": "Making Recommendations with 推荐 (tuījiàn)",
+      "point_id": "Memberi Rekomendasi dengan 推荐 (tuījiàn)",
+      "explanation": "Use 推荐 to recommend something to someone. Structure: Subject + 推荐 + Object + 给 + Person.",
+      "explanation_id": "Gunakan 推荐 untuk merekomendasikan sesuatu kepada seseorang. Struktur: Subjek + 推荐 + Objek + 给 + Orang.",
+      "examples": [
+        {"chinese": "我推荐这个电影。", "translation": "I recommend this movie.", "translation_id": "Saya merekomendasikan film ini."},
+        {"chinese": "你能给我推荐一本好书吗？", "translation": "Can you recommend a good book to me?", "translation_id": "Bisakah kamu merekomendasikan buku bagus kepada saya?"}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你看过这个电影吗？", "pinyin": "Nǐ kàn guo zhège diànyǐng ma?", "translation": "Have you seen this movie?", "translation_id": "Apakah kamu pernah melihat film ini?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "看过，很有意思。", "pinyin": "Kàn guo, hěn yǒu yìsi.", "translation": "Yes, it's very interesting.", "translation_id": "Sudah, sangat menarik."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "故事怎么样？", "pinyin": "Gùshi zěnme yàng?", "translation": "How's the story?", "translation_id": "Bagaimana ceritanya?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "故事很精彩，演员也演得很好。", "pinyin": "Gùshi hěn jīngcǎi, yǎnyuán yě yǎn de hěn hǎo.", "translation": "The story is wonderful, and the actors also performed very well.", "translation_id": "Ceritanya luar biasa, dan para aktornya juga berakting sangat baik."}
+  ],
+  "exercises": [
+    {"question": "What does 有意思 (yǒu yìsi) mean?", "question_id": "Apa arti 有意思 (yǒu yìsi)?", "options": ["Boring", "Interesting", "Funny", "Sad"], "options_id": ["Membosankan", "Menarik", "Lucu", "Sedih"], "correct": 1},
+    {"question": "How do you say 'This movie is boring' in Chinese?", "question_id": "Bagaimana mengatakan 'Film ini membosankan' dalam bahasa Mandarin?", "options": ["这个电影有意思", "这个电影没意思", "这个电影好看", "这个电影不好看"], "options_id": ["Film ini menarik", "Film ini membosankan", "Film ini bagus", "Film ini tidak bagus"], "correct": 1},
+    {"question": "What does 推荐 (tuījiàn) mean?", "question_id": "Apa arti 推荐 (tuījiàn)?", "options": ["To watch", "To recommend", "To like", "To dislike"], "options_id": ["Menonton", "Merekomendasikan", "Suka", "Tidak suka"], "correct": 1},
+    {"question": "What is 演员 (yǎnyuán)?", "question_id": "Apa itu 演员 (yǎnyuán)?", "options": ["Director", "Actor", "Story", "Movie theater"], "options_id": ["Sutradara", "Aktor", "Cerita", "Bioskop"], "correct": 1},
+    {"question": "How to ask 'How's the story?' in Chinese?", "question_id": "Bagaimana bertanya 'Bagaimana ceritanya?' dalam bahasa Mandarin?", "options": ["故事怎么样？", "电影怎么样？", "演员怎么样？", "角色怎么样？"], "options_id": ["Ceritanya bagaimana?", "Filmnya bagaimana?", "Aktornya bagaimana?", "Karakter bagaimana?"], "correct": 0}
+  ]
+}

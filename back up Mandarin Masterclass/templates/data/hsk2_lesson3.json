@@ -1,0 +1,52 @@
+{
+  "title": "左边那个红色的是我的",
+  "subtitle": "Possession with 的, Demonstrative Pronouns, Color Descriptions",
+  "assistant_message": "Today we learn: expressing possession with 的 (de), using demonstrative pronouns (这个, 那个, 哪个), and describing colors (红色, 蓝色).",
+  "vocabulary": [
+    {"word": "左边", "pinyin": "zuǒ biān", "meaning": "left side", "meaning_id": "sisi kiri", "example": "在左边", "example_translation": "on the left", "example_translation_id": "di sebelah kiri"},
+    {"word": "右边", "pinyin": "yòu biān", "meaning": "right side", "meaning_id": "sisi kanan", "example": "在右边", "example_translation": "on the right", "example_translation_id": "di sebelah kanan"},
+    {"word": "那个", "pinyin": "nà ge", "meaning": "that (one)", "meaning_id": "itu", "example": "那个红色的是我的", "example_translation": "that red one is mine", "example_translation_id": "yang merah itu milik saya"},
+    {"word": "这个", "pinyin": "zhè ge", "meaning": "this (one)", "meaning_id": "ini", "example": "这个是我的", "example_translation": "this is mine", "example_translation_id": "ini milik saya"},
+    {"word": "哪个", "pinyin": "nǎ ge", "meaning": "which (one)", "meaning_id": "yang mana", "example": "哪个是你的？", "example_translation": "which one is yours?", "example_translation_id": "yang mana milikmu?"},
+    {"word": "红色", "pinyin": "hóng sè", "meaning": "red", "meaning_id": "merah", "example": "红色衣服", "example_translation": "red clothes", "example_translation_id": "pakaian merah"},
+    {"word": "蓝色", "pinyin": "lán sè", "meaning": "blue", "meaning_id": "biru", "example": "蓝色裙子", "example_translation": "blue dress", "example_translation_id": "gaun biru"},
+    {"word": "的", "pinyin": "de", "meaning": "possessive particle", "meaning_id": "partikel kepemilikan", "example": "我的书", "example_translation": "my book", "example_translation_id": "buku saya"}
+  ],
+  "grammar": [
+    {
+      "point": "Possession with 的 (de)",
+      "point_id": "Kepemilikan dengan 的 (de)",
+      "explanation": "Use 的 after a noun or pronoun to show possession. For example: 我的 (my), 你的 (your), 他的 (his).",
+      "explanation_id": "Gunakan 的 setelah kata benda atau kata ganti untuk menunjukkan kepemilikan. Contoh: 我的 (milik saya), 你的 (milik kamu), 他的 (milik dia).",
+      "examples": [
+        {"chinese": "我的手机", "translation": "my phone", "translation_id": "ponsel saya"},
+        {"chinese": "这本书是我的。", "translation": "This book is mine.", "translation_id": "Buku ini milik saya."},
+        {"chinese": "左边那个红色的是我的。", "translation": "The red one on the left is mine.", "translation_id": "Yang merah di sebelah kiri itu milik saya."}
+      ]
+    },
+    {
+      "point": "Demonstrative Pronouns: 这个, 那个, 哪个",
+      "point_id": "Kata Ganti Penunjuk: 这个, 那个, 哪个",
+      "explanation": "Use 这个 for 'this', 那个 for 'that', and 哪个 for 'which' when referring to specific objects.",
+      "explanation_id": "Gunakan 这个 untuk 'ini', 那个 untuk 'itu', dan 哪个 untuk 'yang mana' ketika merujuk pada objek tertentu.",
+      "examples": [
+        {"chinese": "这个是什么？", "translation": "What is this?", "translation_id": "Apa ini?"},
+        {"chinese": "那个是谁的？", "translation": "Whose is that?", "translation_id": "Itu milik siapa?"},
+        {"chinese": "哪个是你的？", "translation": "Which one is yours?", "translation_id": "Yang mana milikmu?"}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "哪个是你的？", "pinyin": "Nǎge shì nǐ de?", "translation": "Which one is yours?", "translation_id": "Yang mana milikmu?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "左边那个红色的是我的。", "pinyin": "Zuǒbiān nàge hóngsè de shì wǒ de.", "translation": "The red one on the left is mine.", "translation_id": "Yang merah di sebelah kiri itu milik saya."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "右边那个蓝色的是谁的呢？", "pinyin": "Yòubiān nàge lánsè de shì shéi de ne?", "translation": "Whose is the blue one on the right?", "translation_id": "Yang biru di sebelah kanan itu milik siapa?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "那个是王老师的。", "pinyin": "Nàge shì Wáng lǎoshī de.", "translation": "That one is Teacher Wang's.", "translation_id": "Itu milik Guru Wang."}
+  ],
+  "exercises": [
+    {"question": "What does 左边 (zuǒbiān) mean?", "question_id": "Apa arti 左边 (zuǒbiān)?", "options": ["Right side", "Left side", "Front side", "Back side"], "options_id": ["Sisi kanan", "Sisi kiri", "Sisi depan", "Sisi belakang"], "correct": 1},
+    {"question": "How do you say 'The red one on the left is mine' in Chinese?", "question_id": "Bagaimana mengatakan 'Yang merah di sebelah kiri itu milik saya' dalam bahasa Mandarin?", "options": ["左边红色的是我的", "左边那个红色的是我的", "红色的左边是我的", "我的左边是红色的"], "options_id": ["Merah kiri milik saya", "Yang merah di sebelah kiri itu milik saya", "Merah sebelah kiri milik saya", "Kiri saya merah"], "correct": 1},
+    {"question": "What is the function of 的 (de) in Chinese?", "question_id": "Apa fungsi 的 (de) dalam bahasa Mandarin?", "options": ["Question marker", "Possession marker", "Past tense marker", "Plural marker"], "options_id": ["Penanda pertanyaan", "Penanda kepemilikan", "Penanda masa lalu", "Penanda jamak"], "correct": 1},
+    {"question": "How to ask 'Which one is yours?' in Chinese?", "question_id": "Bagaimana bertanya 'Yang mana milikmu?' dalam bahasa Mandarin?", "options": ["哪个是你的？", "这个是你的？", "那个是你的？", "谁是你的？"], "options_id": ["Yang mana milikmu?", "Ini milikmu?", "Itu milikmu?", "Siapa milikmu?"], "correct": 0},
+    {"question": "What color is 蓝色 (lánsè)?", "question_id": "Warna apa 蓝色 (lánsè)?", "options": ["Red", "Blue", "Yellow", "Green"], "options_id": ["Merah", "Biru", "Kuning", "Hijau"], "correct": 1}
+  ]
+}

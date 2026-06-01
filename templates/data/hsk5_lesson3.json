@@ -1,0 +1,50 @@
+{
+  "title": "网购的利与弊",
+  "subtitle": "Debate, E-commerce, Pros and Cons",
+  "assistant_message": "Today we learn: discussing online shopping, debating pros and cons, and using 不仅...而且... (bùjǐn... érqiě...).",
+  "vocabulary": [
+    {"word": "网购", "pinyin": "wǎng gòu", "meaning": "online shopping", "meaning_id": "belanja online", "example": "喜欢网购", "example_translation": "like online shopping", "example_translation_id": "suka belanja online"},
+    {"word": "利", "pinyin": "lì", "meaning": "benefit/advantage", "meaning_id": "keuntungan", "example": "利大于弊", "example_translation": "benefits outweigh drawbacks", "example_translation_id": "keuntungan lebih besar dari kerugian"},
+    {"word": "弊", "pinyin": "bì", "meaning": "disadvantage", "meaning_id": "kerugian", "example": "弊大于利", "example_translation": "drawbacks outweigh benefits", "example_translation_id": "kerugian lebih besar dari keuntungan"},
+    {"word": "方便", "pinyin": "fāng biàn", "meaning": "convenient", "meaning_id": "nyaman", "example": "很方便", "example_translation": "very convenient", "example_translation_id": "sangat nyaman"},
+    {"word": "价格", "pinyin": "jià gé", "meaning": "price", "meaning_id": "harga", "example": "价格便宜", "example_translation": "price is cheap", "example_translation_id": "harganya murah"},
+    {"word": "质量", "pinyin": "zhì liàng", "meaning": "quality", "meaning_id": "kualitas", "example": "质量保证", "example_translation": "quality guarantee", "example_translation_id": "jaminan kualitas"},
+    {"word": "退货", "pinyin": "tuì huò", "meaning": "to return goods", "meaning_id": "mengembalikan barang", "example": "免费退货", "example_translation": "free returns", "example_translation_id": "pengembalian gratis"},
+    {"word": "评价", "pinyin": "píng jià", "meaning": "review/rating", "meaning_id": "ulasan", "example": "看评价", "example_translation": "read reviews", "example_translation_id": "baca ulasan"}
+  ],
+  "grammar": [
+    {
+      "point": "不仅...而且... (bùjǐn... érqiě...) - Not only... but also...",
+      "point_id": "不仅...而且... (bùjǐn... érqiě...) - Tidak hanya... tetapi juga...",
+      "explanation": "不仅 introduces one point, and 而且 adds another point of equal or greater importance.",
+      "explanation_id": "不仅 memperkenalkan satu poin, dan 而且 menambahkan poin lain yang sama atau lebih penting.",
+      "examples": [
+        {"chinese": "网购不仅方便，而且价格便宜。", "translation": "Online shopping is not only convenient, but also cheap.", "translation_id": "Belanja online tidak hanya nyaman, tetapi juga murah."},
+        {"chinese": "他不仅聪明，而且很努力。", "translation": "He is not only smart, but also very hardworking.", "translation_id": "Dia tidak hanya pintar, tetapi juga sangat pekerja keras."}
+      ]
+    },
+    {
+      "point": "Expressing 'Pros and Cons'",
+      "point_id": "Menyatakan 'Kelebihan dan Kekurangan'",
+      "explanation": "Use 利 (benefits) and 弊 (drawbacks) to discuss advantages and disadvantages.",
+      "explanation_id": "Gunakan 利 (keuntungan) dan 弊 (kerugian) untuk membahas kelebihan dan kekurangan.",
+      "examples": [
+        {"chinese": "网购有利也有弊。", "translation": "Online shopping has both advantages and disadvantages.", "translation_id": "Belanja online memiliki kelebihan dan kekurangan."},
+        {"chinese": "我们要分析这个方案的利弊。", "translation": "We need to analyze the pros and cons of this plan.", "translation_id": "Kita perlu menganalisis kelebihan dan kekurangan rencana ini."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你觉得网购怎么样？", "pinyin": "Nǐ juéde wǎnggòu zěnme yàng?", "translation": "What do you think about online shopping?", "translation_id": "Bagaimana pendapatmu tentang belanja online?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "网购不仅方便，而且价格便宜。我很喜欢。", "pinyin": "Wǎnggòu bùjǐn fāngbiàn, érqiě jiàgé piányi. Wǒ hěn xǐhuān.", "translation": "Online shopping is not only convenient, but also cheap. I really like it.", "translation_id": "Belanja online tidak hanya nyaman, tetapi juga murah. Saya sangat menyukainya."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "但是网购也有弊端，比如质量无法保证，退货比较麻烦。", "pinyin": "Dànshì wǎnggòu yě yǒu bìduān, bǐrú zhìliàng wúfǎ bǎozhèng, tuìhuò bǐjiào máfan.", "translation": "But online shopping also has drawbacks, such as quality cannot be guaranteed, and returns are troublesome.", "translation_id": "Tapi belanja online juga punya kekurangan, seperti kualitas tidak terjamin, dan pengembalian agak merepotkan."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你说得对。所以买东西前要看评价。", "pinyin": "Nǐ shuō de duì. Suǒyǐ mǎi dōngxi qián yào kàn píngjià.", "translation": "You're right. So before buying things, you need to read reviews.", "translation_id": "Kamu benar. Jadi sebelum membeli barang, kamu perlu membaca ulasan."}
+  ],
+  "exercises": [
+    {"question": "What does 网购 (wǎnggòu) mean?", "question_id": "Apa arti 网购 (wǎnggòu)?", "options": ["Online gaming", "Online shopping", "Online dating", "Online learning"], "options_id": ["Game online", "Belanja online", "Kencan online", "Belajar online"], "correct": 1},
+    {"question": "What does 利 (lì) mean in this context?", "question_id": "Apa arti 利 (lì) dalam konteks ini?", "options": ["Profit/benefit", "Loss", "Interest", "Sharp"], "options_id": ["Keuntungan", "Kerugian", "Bunga", "Tajam"], "correct": 0},
+    {"question": "How do you say 'Not only convenient, but also cheap' in Chinese?", "question_id": "Bagaimana mengatakan 'Tidak hanya nyaman, tetapi juga murah' dalam bahasa Mandarin?", "options": ["不仅方便，而且便宜", "方便而且便宜", "不但方便，还便宜", "A and C"], "options_id": ["Tidak hanya nyaman, tetapi juga murah", "Nyaman dan murah", "Tidak hanya nyaman, juga murah", "A dan C"], "correct": 3},
+    {"question": "What does 质量 (zhìliàng) mean?", "question_id": "Apa arti 质量 (zhìliàng)?", "options": ["Price", "Quality", "Quantity", "Service"], "options_id": ["Harga", "Kualitas", "Kuantitas", "Layanan"], "correct": 1},
+    {"question": "How to say 'read reviews' in Chinese?", "question_id": "Bagaimana mengatakan 'baca ulasan' dalam bahasa Mandarin?", "options": ["看评价", "写评价", "给评价", "要评价"], "options_id": ["baca ulasan", "tulis ulasan", "beri ulasan", "minta ulasan"], "correct": 0}
+  ]
+}

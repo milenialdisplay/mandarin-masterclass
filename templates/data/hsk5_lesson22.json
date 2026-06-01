@@ -1,0 +1,228 @@
+{
+  "title": "决策能力",
+  "subtitle": "Decision Making, Critical Thinking, Problem Analysis",
+  "assistant_message": "Today we learn: discussing decision-making processes, expressing analytical thinking, and talking about weighing pros and cons.",
+  "vocabulary": [
+    {
+      "word": "决策",
+      "pinyin": "jué cè",
+      "meaning": "decision",
+      "meaning_id": "keputusan",
+      "example": "做出决策",
+      "example_translation": "make a decision",
+      "example_translation_id": "membuat keputusan"
+    },
+    {
+      "word": "能力",
+      "pinyin": "néng lì",
+      "meaning": "ability",
+      "meaning_id": "kemampuan",
+      "example": "提高能力",
+      "example_translation": "improve ability",
+      "example_translation_id": "meningkatkan kemampuan"
+    },
+    {
+      "word": "分析",
+      "pinyin": "fēn xī",
+      "meaning": "to analyze",
+      "meaning_id": "menganalisis",
+      "example": "分析问题",
+      "example_translation": "analyze the problem",
+      "example_translation_id": "menganalisis masalah"
+    },
+    {
+      "word": "利弊",
+      "pinyin": "lì bì",
+      "meaning": "pros and cons",
+      "meaning_id": "kelebihan dan kekurangan",
+      "example": "权衡利弊",
+      "example_translation": "weigh pros and cons",
+      "example_translation_id": "mempertimbangkan kelebihan dan kekurangan"
+    },
+    {
+      "word": "选择",
+      "pinyin": "xuǎn zé",
+      "meaning": "choice",
+      "meaning_id": "pilihan",
+      "example": "做出正确选择",
+      "example_translation": "make the right choice",
+      "example_translation_id": "membuat pilihan yang tepat"
+    },
+    {
+      "word": "后果",
+      "pinyin": "hòu guǒ",
+      "meaning": "consequence",
+      "meaning_id": "konsekuensi",
+      "example": "考虑后果",
+      "example_translation": "consider consequences",
+      "example_translation_id": "mempertimbangkan konsekuensi"
+    },
+    {
+      "word": "理性",
+      "pinyin": "lǐ xìng",
+      "meaning": "rational",
+      "meaning_id": "rasional",
+      "example": "理性思考",
+      "example_translation": "think rationally",
+      "example_translation_id": "berpikir rasional"
+    },
+    {
+      "word": "直觉",
+      "pinyin": "zhí jué",
+      "meaning": "intuition",
+      "meaning_id": "intuisi",
+      "example": "相信直觉",
+      "example_translation": "trust intuition",
+      "example_translation_id": "percaya intuisi"
+    },
+    {
+      "word": "信息",
+      "pinyin": "xìn xī",
+      "meaning": "information",
+      "meaning_id": "informasi",
+      "example": "收集信息",
+      "example_translation": "gather information",
+      "example_translation_id": "mengumpulkan informasi"
+    },
+    {
+      "word": "责任",
+      "pinyin": "zé rèn",
+      "meaning": "responsibility",
+      "meaning_id": "tanggung jawab",
+      "example": "承担责任",
+      "example_translation": "take responsibility",
+      "example_translation_id": "mengambil tanggung jawab"
+    }
+  ],
+  "grammar": [
+    {
+      "point": "Using 与其...不如... (yǔqí...bùrú...) - 'Rather than... it's better to...'",
+      "point_id": "Menggunakan 与其...不如... (yǔqí...bùrú...) - 'Daripada... lebih baik...'",
+      "explanation": "This structure compares two options, indicating that the second is better than the first.",
+      "explanation_id": "Struktur ini membandingkan dua pilihan, menunjukkan bahwa pilihan kedua lebih baik daripada yang pertama.",
+      "examples": [
+        {
+          "chinese": "与其担心结果，不如专注过程。",
+          "translation": "Rather than worrying about the result, it's better to focus on the process.",
+          "translation_id": "Daripada mengkhawatirkan hasil, lebih baik fokus pada proses."
+        },
+        {
+          "chinese": "与其抱怨，不如想办法解决。",
+          "translation": "Rather than complaining, it's better to find a way to solve it.",
+          "translation_id": "Daripada mengeluh, lebih baik mencari cara untuk menyelesaikannya."
+        }
+      ]
+    },
+    {
+      "point": "Using 归根结底 (guīgēn jiédǐ) - 'In the final analysis'",
+      "point_id": "Menggunakan 归根结底 (guīgēn jiédǐ) - 'Pada analisis akhir'",
+      "explanation": "归根结底 means 'in the final analysis' or 'ultimately', used to summarize the most important point.",
+      "explanation_id": "归根结底 berarti 'pada analisis akhir', digunakan untuk merangkum poin terpenting.",
+      "examples": [
+        {
+          "chinese": "归根结底，这是你自己的选择。",
+          "translation": "In the final analysis, this is your own choice.",
+          "translation_id": "Pada analisis akhir, ini adalah pilihanmu sendiri."
+        },
+        {
+          "chinese": "归根结底，成功需要努力。",
+          "translation": "Ultimately, success requires hard work.",
+          "translation_id": "Pada akhirnya, kesuksesan membutuhkan kerja keras."
+        }
+      ]
+    },
+    {
+      "point": "Using 鉴于 (jiànyú) - 'In consideration of'",
+      "point_id": "Menggunakan 鉴于 (jiànyú) - 'Mengingat'",
+      "explanation": "鉴于 introduces a basis for a decision or action, similar to 'given that' or 'in light of'.",
+      "explanation_id": "鉴于 memperkenalkan dasar untuk keputusan atau tindakan.",
+      "examples": [
+        {
+          "chinese": "鉴于他的表现，我们决定给他升职。",
+          "translation": "In light of his performance, we decided to give him a promotion.",
+          "translation_id": "Mengingat kinerjanya, kami memutuskan untuk memberinya promosi."
+        },
+        {
+          "chinese": "鉴于时间有限，我们得尽快决定。",
+          "translation": "Given the limited time, we need to decide quickly.",
+          "translation_id": "Mengingat waktu terbatas, kita harus memutuskan dengan cepat."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "female",
+      "name": "Wang Li",
+      "voice": "female",
+      "chinese": "我正在考虑要不要换工作。新工作工资更高，但离家很远。",
+      "pinyin": "Wǒ zhèngzài kǎolǜ yào bù yào huàn gōngzuò. Xīn gōngzuò gōngzī gèng gāo, dàn lí jiā hěn yuǎn.",
+      "translation": "I'm considering whether to change jobs. The new job pays more, but it's far from home.",
+      "translation_id": "Saya sedang mempertimbangkan apakah akan berganti pekerjaan. Pekerjaan baru bayarannya lebih tinggi, tapi jauh dari rumah."
+    },
+    {
+      "speaker": "male",
+      "name": "Zhang Wei",
+      "voice": "male",
+      "chinese": "你需要理性分析利弊。首先收集所有信息，然后权衡每个选择的后果。",
+      "pinyin": "Nǐ xūyào lǐxìng fēnxī lìbì. Shǒuxiān shōují suǒyǒu xìnxī, ránhòu quánhéng měi gè xuǎnzé de hòuguǒ.",
+      "translation": "You need to rationally analyze the pros and cons. First gather all the information, then weigh the consequences of each choice.",
+      "translation_id": "Anda perlu menganalisis kelebihan dan kekurangan secara rasional. Pertama kumpulkan semua informasi, lalu pertimbangkan konsekuensi dari setiap pilihan."
+    },
+    {
+      "speaker": "female",
+      "name": "Wang Li",
+      "voice": "female",
+      "chinese": "我的直觉告诉我要接受新工作，但我也担心适应问题。",
+      "pinyin": "Wǒ de zhíjué gàosu wǒ yào jiēshòu xīn gōngzuò, dàn wǒ yě dānxīn shìyìng wèntí.",
+      "translation": "My intuition tells me to take the new job, but I'm also worried about the adjustment.",
+      "translation_id": "Intuisi saya mengatakan untuk menerima pekerjaan baru, tapi saya juga khawatir tentang penyesuaian."
+    },
+    {
+      "speaker": "male",
+      "name": "Zhang Wei",
+      "voice": "male",
+      "chinese": "与其犹豫不决，不如列出优缺点清单。归根结底，无论你选择什么，都要为自己的决定承担责任。",
+      "pinyin": "Yǔqí yóuyù bùjué, bùrú liè chū yōuquēdiǎn qīngdān. Guīgēn jiédǐ, wúlùn nǐ xuǎnzé shénme, dōu yào wèi zìjǐ de juédìng chéngdān zérèn.",
+      "translation": "Rather than hesitating, it's better to make a list of pros and cons. Ultimately, no matter what you choose, you must take responsibility for your decision.",
+      "translation_id": "Daripada ragu-ragu, lebih baik buat daftar kelebihan dan kekurangan. Pada akhirnya, apa pun yang Anda pilih, Anda harus bertanggung jawab atas keputusan Anda."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "What does 决策 (juécè) mean?",
+      "question_id": "Apa arti 决策 (juécè)?",
+      "options": ["Choice", "Decision", "Analysis", "Information"],
+      "options_id": ["Pilihan", "Keputusan", "Analisis", "Informasi"],
+      "correct": 1
+    },
+    {
+      "question": "How do you say 'weigh pros and cons' in Chinese?",
+      "question_id": "Bagaimana mengatakan 'mempertimbangkan kelebihan dan kekurangan' dalam bahasa Mandarin?",
+      "options": ["分析利弊", "权衡利弊", "考虑利弊", "评估利弊"],
+      "options_id": ["menganalisis pro dan kontra", "mempertimbangkan pro dan kontra", "memikirkan pro dan kontra", "menilai pro dan kontra"],
+      "correct": 1
+    },
+    {
+      "question": "What does 后果 (hòuguǒ) mean?",
+      "question_id": "Apa arti 后果 (hòuguǒ)?",
+      "options": ["Cause", "Consequence", "Choice", "Information"],
+      "options_id": ["Penyebab", "Konsekuensi", "Pilihan", "Informasi"],
+      "correct": 1
+    },
+    {
+      "question": "Complete the sentence: ______担心结果，______专注过程。",
+      "question_id": "Lengkapi kalimat: ______担心结果，______专注过程。",
+      "options": ["不但...而且...", "与其...不如...", "虽然...但是...", "因为...所以..."],
+      "options_id": ["tidak hanya...tetapi juga...", "daripada...lebih baik...", "meskipun...tetapi...", "karena...jadi..."],
+      "correct": 1
+    },
+    {
+      "question": "What does 理性 (lǐxìng) mean?",
+      "question_id": "Apa arti 理性 (lǐxìng)?",
+      "options": ["Emotional", "Rational", "Intuitive", "Random"],
+      "options_id": ["Emosional", "Rasional", "Intuitif", "Acak"],
+      "correct": 1
+    }
+  ]
+}

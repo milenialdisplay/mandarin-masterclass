@@ -1,0 +1,228 @@
+{
+  "title": "健康生活",
+  "subtitle": "Healthy Living, Wellness, Lifestyle Choices",
+  "assistant_message": "Today we learn: discussing healthy living habits, expressing wellness tips, and talking about lifestyle choices for better health.",
+  "vocabulary": [
+    {
+      "word": "健康",
+      "pinyin": "jiàn kāng",
+      "meaning": "health",
+      "meaning_id": "kesehatan",
+      "example": "保持健康",
+      "example_translation": "maintain health",
+      "example_translation_id": "menjaga kesehatan"
+    },
+    {
+      "word": "饮食",
+      "pinyin": "yǐn shí",
+      "meaning": "diet",
+      "meaning_id": "makanan",
+      "example": "健康饮食",
+      "example_translation": "healthy diet",
+      "example_translation_id": "makanan sehat"
+    },
+    {
+      "word": "运动",
+      "pinyin": "yùn dòng",
+      "meaning": "exercise",
+      "meaning_id": "olahraga",
+      "example": "坚持运动",
+      "example_translation": "persist in exercise",
+      "example_translation_id": "tetap berolahraga"
+    },
+    {
+      "word": "睡眠",
+      "pinyin": "shuì mián",
+      "meaning": "sleep",
+      "meaning_id": "tidur",
+      "example": "充足睡眠",
+      "example_translation": "adequate sleep",
+      "example_translation_id": "tidur yang cukup"
+    },
+    {
+      "word": "压力",
+      "pinyin": "yā lì",
+      "meaning": "stress",
+      "meaning_id": "stres",
+      "example": "缓解压力",
+      "example_translation": "relieve stress",
+      "example_translation_id": "meredakan stres"
+    },
+    {
+      "word": "习惯",
+      "pinyin": "xí guàn",
+      "meaning": "habit",
+      "meaning_id": "kebiasaan",
+      "example": "养成好习惯",
+      "example_translation": "develop good habits",
+      "example_translation_id": "mengembangkan kebiasaan baik"
+    },
+    {
+      "word": "预防",
+      "pinyin": "yù fáng",
+      "meaning": "prevention",
+      "meaning_id": "pencegahan",
+      "example": "疾病预防",
+      "example_translation": "disease prevention",
+      "example_translation_id": "pencegahan penyakit"
+    },
+    {
+      "word": "营养",
+      "pinyin": "yíng yǎng",
+      "meaning": "nutrition",
+      "meaning_id": "nutrisi",
+      "example": "均衡营养",
+      "example_translation": "balanced nutrition",
+      "example_translation_id": "nutrisi seimbang"
+    },
+    {
+      "word": "体检",
+      "pinyin": "tǐ jiǎn",
+      "meaning": "physical examination",
+      "meaning_id": "pemeriksaan fisik",
+      "example": "定期体检",
+      "example_translation": "regular check-ups",
+      "example_translation_id": "pemeriksaan rutin"
+    },
+    {
+      "word": "心态",
+      "pinyin": "xīn tài",
+      "meaning": "mindset",
+      "meaning_id": "pola pikir",
+      "example": "积极心态",
+      "example_translation": "positive mindset",
+      "example_translation_id": "pola pikir positif"
+    }
+  ],
+  "grammar": [
+    {
+      "point": "Using 养成 (yǎngchéng) - 'To develop/cultivate'",
+      "point_id": "Menggunakan 养成 (yǎngchéng) - 'Mengembangkan'",
+      "explanation": "养成 means to develop or cultivate a habit or behavior over time.",
+      "explanation_id": "养成 berarti mengembangkan kebiasaan atau perilaku dari waktu ke waktu.",
+      "examples": [
+        {
+          "chinese": "养成健康的生活习惯很重要。",
+          "translation": "It's important to develop healthy living habits.",
+          "translation_id": "Penting untuk mengembangkan kebiasaan hidup sehat."
+        },
+        {
+          "chinese": "他养成了早睡早起的好习惯。",
+          "translation": "He has developed the good habit of going to bed early and waking up early.",
+          "translation_id": "Dia telah mengembangkan kebiasaan baik tidur awal dan bangun awal."
+        }
+      ]
+    },
+    {
+      "point": "Using 有助于 (yǒuzhùyú) - 'Contributes to/Helps'",
+      "point_id": "Menggunakan 有助于 (yǒuzhùyú) - 'Membantu'",
+      "explanation": "有助于 means to be beneficial for or to contribute positively to something.",
+      "explanation_id": "有助于 berarti bermanfaat untuk atau berkontribusi positif pada sesuatu.",
+      "examples": [
+        {
+          "chinese": "规律运动有助于保持健康。",
+          "translation": "Regular exercise helps maintain health.",
+          "translation_id": "Olahraga teratur membantu menjaga kesehatan."
+        },
+        {
+          "chinese": "均衡饮食有助于预防疾病。",
+          "translation": "A balanced diet helps prevent diseases.",
+          "translation_id": "Pola makan seimbang membantu mencegah penyakit."
+        }
+      ]
+    },
+    {
+      "point": "Using 不仅...也... (bùjǐn...yě...) - 'Not only... also...'",
+      "point_id": "Menggunakan 不仅...也... (bùjǐn...yě...) - 'Tidak hanya... juga...'",
+      "explanation": "This structure adds additional information about the same subject.",
+      "explanation_id": "Struktur ini menambahkan informasi tambahan tentang subjek yang sama.",
+      "examples": [
+        {
+          "chinese": "运动不仅有益身体健康，也有助于心理健康。",
+          "translation": "Exercise is not only good for physical health, but also beneficial for mental health.",
+          "translation_id": "Olahraga tidak hanya baik untuk kesehatan fisik, tetapi juga bermanfaat untuk kesehatan mental."
+        },
+        {
+          "chinese": "健康的生活方式不仅影响个人，也影响家庭。",
+          "translation": "A healthy lifestyle affects not only the individual but also the family.",
+          "translation_id": "Gaya hidup sehat tidak hanya mempengaruhi individu tetapi juga keluarga."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "female",
+      "name": "Sun Li",
+      "voice": "female",
+      "chinese": "我最近总感觉很累，可能是生活习惯不太好。",
+      "pinyin": "Wǒ zuìjìn zǒng gǎnjué hěn lèi, kěnéng shì shēnghuó xíguàn bù tài hǎo.",
+      "translation": "I've been feeling very tired lately. Maybe my lifestyle habits aren't very good.",
+      "translation_id": "Akhir-akhir ini saya merasa sangat lelah. Mungkin kebiasaan gaya hidup saya tidak baik."
+    },
+    {
+      "speaker": "male",
+      "name": "Li Ming",
+      "voice": "male",
+      "chinese": "健康生活需要养成好习惯。首先要保证充足睡眠和均衡饮食。",
+      "pinyin": "Jiànkāng shēnghuó xūyào yǎngchéng hǎo xíguàn. Shǒuxiān yào bǎozhèng chōngzú shuìmián hé jūnhéng yǐnshí.",
+      "translation": "Healthy living requires developing good habits. First, ensure adequate sleep and a balanced diet.",
+      "translation_id": "Hidup sehat membutuhkan pengembangan kebiasaan baik. Pertama, pastikan tidur cukup dan pola makan seimbang."
+    },
+    {
+      "speaker": "female",
+      "name": "Sun Li",
+      "voice": "female",
+      "chinese": "我也知道运动很重要，但总是没时间。",
+      "pinyin": "Wǒ yě zhīdào yùndòng hěn zhòngyào, dàn zǒng shì méi shíjiān.",
+      "translation": "I also know exercise is important, but I never have time.",
+      "translation_id": "Saya juga tahu olahraga itu penting, tapi selalu tidak punya waktu."
+    },
+    {
+      "speaker": "male",
+      "name": "Li Ming",
+      "voice": "male",
+      "chinese": "每天30分钟的运动就有助于健康。同时，保持积极心态也很重要。定期体检，预防疾病。",
+      "pinyin": "Měitiān sānshí fēnzhōng de yùndòng jiù yǒuzhùyú jiànkāng. Tóngshí, bǎochí jījí xīntài yě hěn zhòngyào. Dìngqī tǐjiǎn, yùfáng jíbìng.",
+      "translation": "Just 30 minutes of exercise a day helps your health. At the same time, maintaining a positive mindset is also important. Get regular check-ups to prevent diseases.",
+      "translation_id": "Hanya 30 menit olahraga sehari sudah membantu kesehatan Anda. Pada saat yang sama, mempertahankan pola pikir positif juga penting. Lakukan pemeriksaan rutin untuk mencegah penyakit."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "What does 健康 (jiànkāng) mean?",
+      "question_id": "Apa arti 健康 (jiànkāng)?",
+      "options": ["Sickness", "Health", "Exercise", "Diet"],
+      "options_id": ["Penyakit", "Kesehatan", "Olahraga", "Makanan"],
+      "correct": 1
+    },
+    {
+      "question": "How do you say 'regular exercise' in Chinese?",
+      "question_id": "Bagaimana mengatakan 'olahraga teratur' dalam bahasa Mandarin?",
+      "options": ["规律运动", "经常运动", "定期运动", "坚持运动"],
+      "options_id": ["olahraga teratur", "sering berolahraga", "olahraga rutin", "tetap berolahraga"],
+      "correct": 0
+    },
+    {
+      "question": "What does 预防 (yùfáng) mean?",
+      "question_id": "Apa arti 预防 (yùfáng)?",
+      "options": ["Treatment", "Prevention", "Cure", "Diagnosis"],
+      "options_id": ["Perawatan", "Pencegahan", "Penyembuhan", "Diagnosis"],
+      "correct": 1
+    },
+    {
+      "question": "Complete the sentence: 规律运动______保持健康。",
+      "question_id": "Lengkapi kalimat: 规律运动______保持健康。",
+      "options": ["有助于", "有利于", "有益于", "以上都是"],
+      "options_id": ["membantu", "bermanfaat untuk", "baik untuk", "semua di atas"],
+      "correct": 3
+    },
+    {
+      "question": "What is the best translation of 'develop good habits'?",
+      "question_id": "Apa terjemahan terbaik dari 'mengembangkan kebiasaan baik'?",
+      "options": ["养成好习惯", "形成好习惯", "培养好习惯", "以上都是"],
+      "options_id": ["mengembangkan kebiasaan baik", "membentuk kebiasaan baik", "membina kebiasaan baik", "semua di atas"],
+      "correct": 3
+    }
+  ]
+}

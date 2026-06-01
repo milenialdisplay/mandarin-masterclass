@@ -1,0 +1,21 @@
+{
+  "1": {
+    "title": "Greeting",
+    "lines": [
+      {
+        "speaker": "A",
+        "chinese": "你好",
+        "pinyin": "Ni hao",
+        "english": "Hello",
+        "indonesian": "Halo"
+      },
+      {
+        "speaker": "B",
+        "chinese": "你好我叫小明",
+        "pinyin": "Ni hao wo jiao Xiao Ming",
+        "english": "Hello my name is Xiao Ming",
+        "indonesian": "Halo nama saya Xiao Ming"
+      }
+    ]
+  }
+}

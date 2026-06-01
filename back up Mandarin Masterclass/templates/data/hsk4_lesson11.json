@@ -1,0 +1,50 @@
+{
+  "title": "读书与人生",
+  "subtitle": "Talking About Reading, Life Philosophy, and Wisdom",
+  "assistant_message": "Today we learn: discussing the value of reading, using 从而 (cóng'ér) for 'thereby', and sharing life wisdom.",
+  "vocabulary": [
+    {"word": "读书", "pinyin": "dú shū", "meaning": "to read", "meaning_id": "membaca", "example": "喜欢读书", "example_translation": "like to read", "example_translation_id": "suka membaca"},
+    {"word": "人生", "pinyin": "rén shēng", "meaning": "life", "meaning_id": "kehidupan", "example": "人生经历", "example_translation": "life experience", "example_translation_id": "pengalaman hidup"},
+    {"word": "智慧", "pinyin": "zhì huì", "meaning": "wisdom", "meaning_id": "kebijaksanaan", "example": "人生智慧", "example_translation": "life wisdom", "example_translation_id": "kebijaksanaan hidup"},
+    {"word": "知识", "pinyin": "zhī shi", "meaning": "knowledge", "meaning_id": "pengetahuan", "example": "获得知识", "example_translation": "gain knowledge", "example_translation_id": "mendapatkan pengetahuan"},
+    {"word": "丰富", "pinyin": "fēng fù", "meaning": "rich/abundant", "meaning_id": "kaya", "example": "丰富人生", "example_translation": "enrich life", "example_translation_id": "memperkaya kehidupan"},
+    {"word": "开阔", "pinyin": "kāi kuò", "meaning": "to broaden", "meaning_id": "memperluas", "example": "开阔视野", "example_translation": "broaden horizons", "example_translation_id": "memperluas wawasan"},
+    {"word": "视野", "pinyin": "shì yě", "meaning": "vision/horizon", "meaning_id": "wawasan", "example": "国际视野", "example_translation": "international vision", "example_translation_id": "wawasan internasional"},
+    {"word": "修养", "pinyin": "xiū yǎng", "meaning": "cultivation/refinement", "meaning_id": "budaya", "example": "个人修养", "example_translation": "personal cultivation", "example_translation_id": "budaya pribadi"}
+  ],
+  "grammar": [
+    {
+      "point": "Using 从而 (cóng'ér) for 'Thereby'",
+      "point_id": "Menggunakan 从而 (cóng'ér) untuk 'Dengan Demikian'",
+      "explanation": "从而 connects two clauses where the first leads to the second as a result or further action.",
+      "explanation_id": "从而 menghubungkan dua klausa di mana klausa pertama mengarah ke klausa kedua sebagai hasil atau tindakan lanjutan.",
+      "examples": [
+        {"chinese": "多读书可以增长知识，从而提高个人修养。", "translation": "Reading more can increase knowledge, thereby improving personal cultivation.", "translation_id": "Banyak membaca dapat menambah pengetahuan, dengan demikian meningkatkan budaya pribadi."},
+        {"chinese": "他努力学习，从而取得了好成绩。", "translation": "He studied hard, thereby achieving good grades.", "translation_id": "Dia belajar keras, dengan demikian mencapai nilai bagus."}
+      ]
+    },
+    {
+      "point": "Using 进而 (jìn'ér) for 'Then Further'",
+      "point_id": "Menggunakan 进而 (jìn'ér) untuk 'Lalu Selanjutnya'",
+      "explanation": "进而 means 'then further' or 'and then', indicating progression to the next step.",
+      "explanation_id": "进而 berarti 'lalu selanjutnya', menunjukkan kemajuan ke langkah berikutnya.",
+      "examples": [
+        {"chinese": "先了解情况，进而解决问题。", "translation": "First understand the situation, then further solve the problem.", "translation_id": "Pertama pahami situasinya, lalu selanjutnya selesaikan masalahnya."},
+        {"chinese": "学习知识，进而运用知识。", "translation": "Learn knowledge, and then further apply knowledge.", "translation_id": "Pelajari pengetahuan, lalu selanjutnya terapkan pengetahuan."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你为什么喜欢读书？", "pinyin": "Nǐ wèishénme xǐhuān dúshū?", "translation": "Why do you like reading?", "translation_id": "Mengapa kamu suka membaca?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "读书可以开阔视野，增长智慧，从而丰富人生。", "pinyin": "Dúshū kěyǐ kāikuò shìyě, zēngzhǎng zhìhuì, cóng'ér fēngfù rénshēng.", "translation": "Reading can broaden horizons, increase wisdom, thereby enriching life.", "translation_id": "Membaca dapat memperluas wawasan, menambah kebijaksanaan, dengan demikian memperkaya kehidupan."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你最喜欢读什么书？", "pinyin": "Nǐ zuì xǐhuān dú shénme shū?", "translation": "What kind of books do you like to read most?", "translation_id": "Buku apa yang paling kamu suka baca?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "哲学和历史类的书，它们能让我思考人生。", "pinyin": "Zhéxué hé lìshǐ lèi de shū, tāmen néng ràng wǒ sīkǎo rénshēng.", "translation": "Philosophy and history books. They make me think about life.", "translation_id": "Buku filsafat dan sejarah. Mereka membuat saya berpikir tentang kehidupan."}
+  ],
+  "exercises": [
+    {"question": "What does 读书 (dúshū) mean?", "question_id": "Apa arti 读书 (dúshū)?", "options": ["To write", "To read", "To study", "To teach"], "options_id": ["Menulis", "Membaca", "Belajar", "Mengajar"], "correct": 1},
+    {"question": "How do you say 'broaden horizons' in Chinese?", "question_id": "Bagaimana mengatakan 'memperluas wawasan' dalam bahasa Mandarin?", "options": ["开阔视野", "增长知识", "丰富人生", "提高修养"], "options_id": ["memperluas wawasan", "menambah pengetahuan", "memperkaya kehidupan", "meningkatkan budaya"], "correct": 0},
+    {"question": "What does 从而 (cóng'ér) express?", "question_id": "Apa yang diekspresikan oleh 从而 (cóng'ér)?", "options": ["Cause", "Result/thereby", "Contrast", "Concession"], "options_id": ["Sebab", "Hasil/dengan demikian", "Kontras", "Konsesi"], "correct": 1},
+    {"question": "What is 修养 (xiūyǎng)?", "question_id": "Apa itu 修养 (xiūyǎng)?", "options": ["Knowledge", "Cultivation/refinement", "Experience", "Skill"], "options_id": ["Pengetahuan", "Budaya", "Pengalaman", "Keterampilan"], "correct": 1},
+    {"question": "How to say 'life wisdom' in Chinese?", "question_id": "Bagaimana mengatakan 'kebijaksanaan hidup' dalam bahasa Mandarin?", "options": ["人生智慧", "生活智慧", "生命智慧", "All of the above"], "options_id": ["kebijaksanaan hidup", "kebijaksanaan kehidupan", "kebijaksanaan kehidupan", "Semua di atas"], "correct": 0}
+  ]
+}

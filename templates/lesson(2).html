@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>HSK 1 Lessons - Interactive Mandarin Teacher</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a472a;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a472a, #2d6a4f);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .header h1 { font-size: 28px; margin-bottom: 8px; }
+        .header p { font-size: 14px; opacity: 0.9; }
+        
+        .lesson-badge {
+            display: inline-block;
+            background: #ffd700;
+            color: #1a472a;
+            padding: 5px 15px;
+            border-radius: 25px;
+            font-size: 13px;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+        
+        /* Navigation */
+        .nav-bar {
+            background: #f5f5f5;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .nav-btn {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        
+        .nav-btn:hover { background: #1a472a; transform: scale(1.02); }
+        .nav-btn:active { transform: scale(0.98); }
+        
+        .lesson-selector {
+            background: white;
+            padding: 5px 10px;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
+        /* Progress Bar */
+        .progress-section {
+            padding: 15px 20px;
+            background: white;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .progress-label {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .progress-bar {
+            background: #e0e0e0;
+            border-radius: 10px;
+            height: 6px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            background: linear-gradient(90deg, #2d6a4f, #ffd700);
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        /* Main Content */
+        .content {
+            padding: 25px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+            background: #fafafa;
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid #eee;
+        }
+        
+        .section-title {
+            font-size: 22px;
+            color: #1a472a;
+            border-left: 5px solid #ffd700;
+            padding-left: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .speaker-icon {
+            background: #ffd700;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.2s;
+        }
+        
+        .speaker-icon:hover { background: #e6c200; transform: scale(1.05); }
+        
+        /* Vocabulary Grid */
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .vocab-card {
+            background: white;
+            border-radius: 16px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+            cursor: pointer;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .vocab-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: #ffd700;
+        }
+        
+        .vocab-word {
+            font-size: 32px;
+            font-weight: bold;
+            color: #1a472a;
+            margin-bottom: 8px;
+        }
+        
+        .vocab-pinyin {
+            color: #e94560;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .vocab-meaning {
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        
+        .vocab-example {
+            background: #f8f9fa;
+            padding: 8px;
+            border-radius: 8px;
+            font-size: 12px;
+            color: #555;
+            margin-top: 10px;
+        }
+        
+        .audio-btn {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 11px;
+            margin-top: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .audio-btn:hover { background: #1a472a; }
+        
+        /* Grammar Cards */
+        .grammar-card {
+            background: white;
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 15px;
+            border-left: 4px solid #ffd700;
+        }
+        
+        .grammar-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1a472a;
+            margin-bottom: 10px;
+        }
+        
+        .grammar-example {
+            background: #e8f5e9;
+            padding: 12px;
+            border-radius: 10px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 16px;
+        }
+        
+        /* Dialogue */
+        .dialogue-container {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        
+        .dialogue-line {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .dialogue-line:hover { background: #f0f7f0; }
+        
+        .dialogue-speaker {
+            font-weight: bold;
+            color: #e94560;
+            margin-bottom: 5px;
+        }
+        
+        .dialogue-chinese {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .dialogue-pinyin {
+            color: #666;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        
+        .dialogue-translation {
+            color: #888;
+            font-size: 13px;
+        }
+        
+        /* Exercises */
+        .exercise-card {
+            background: white;
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .exercise-question {
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        
+        .exercise-option {
+            padding: 10px;
+            margin: 5px 0;
+            background: #f5f5f5;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .exercise-option:hover { background: #e8f5e9; }
+        .exercise-option.correct { background: #d4edda; border: 1px solid #28a745; }
+        .exercise-option.wrong { background: #f8d7da; border: 1px solid #dc3545; }
+        
+        /* Culture Note */
+        .culture-note {
+            background: #fff8e1;
+            border-radius: 12px;
+            padding: 18px;
+            border-left: 4px solid #ffd700;
+        }
+        
+        /* Back Button */
+        .back-btn {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0 25px 25px 25px;
+            width: calc(100% - 50px);
+        }
+        
+        .back-btn:hover { background: #5a6268; }
+        
+        /* Loading */
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #666;
+        }
+        
+        @media (max-width: 600px) {
+            .vocab-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+            .vocab-word { font-size: 24px; }
+            .section-title { font-size: 18px; }
+            .dialogue-chinese { font-size: 16px; }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .playing {
+            animation: pulse 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 HSK 1 Complete Curriculum</h1>
+            <p>Interactive Mandarin Chinese Course</p>
+            <div class="lesson-badge" id="lessonBadge">Lesson 1: 你好</div>
+        </div>
+        
+        <div class="nav-bar">
+            <button class="nav-btn" onclick="prevLesson()">◀ Previous Lesson</button>
+            <select id="lessonSelect" class="lesson-selector" onchange="goToLesson()">
+                <option value="1">Lesson 1: 你好 - Hello</option>
+                <option value="2">Lesson 2: 谢谢你 - Thank You</option>
+                <option value="3">Lesson 3: 你叫什么名字 - What's Your Name</option>
+                <option value="4">Lesson 4: 她是我的汉语老师 - She's My Chinese Teacher</option>
+                <option value="5">Lesson 5: 她女儿今年二十岁 - Age and Numbers</option>
+                <option value="6">Lesson 6: 我会说汉语 - I Can Speak Chinese</option>
+                <option value="7">Lesson 7: 今天几号 - Dates and Days</option>
+                <option value="8">Lesson 8: 我想喝茶 - Want and Ordering</option>
+                <option value="9">Lesson 9: 你儿子在哪儿工作 - Locations</option>
+                <option value="10">Lesson 10: 我能坐这儿吗 - Permission</option>
+                <option value="11">Lesson 11: 现在几点 - Telling Time</option>
+                <option value="12">Lesson 12: 明天天气怎么样 - Weather</option>
+                <option value="13">Lesson 13: 他在学做中国菜呢 - Progressive</option>
+                <option value="14">Lesson 14: 她买了不少衣服 - Completed Actions</option>
+                <option value="15">Lesson 15: 我是坐飞机来的 - Transportation</option>
+            </select>
+            <button class="nav-btn" onclick="nextLesson()">Next Lesson ▶</button>
+        </div>
+        
+        <div class="progress-section">
+            <div class="progress-label">
+                <span>📊 Course Progress</span>
+                <span id="progressText">Lesson 1 of 15</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill" style="width: 6.6%"></div>
+            </div>
+        </div>
+        
+        <div class="content" id="content">
+            <div class="loading">Loading lesson...</div>
+        </div>
+        
+        <button class="back-btn" onclick="location.href='/'">🏠 Back to Chat</button>
+    </div>
+
+    <script>
+        let currentLesson = 1;
+        let lessonsData = {};
+        let currentAudio = null;
+        
+        // Audio playback function with Edge TTS
+        async function playAudio(text, language = 'zh') {
+            if (!text) return;
+            
+            // Show playing animation on active element
+            const activeElement = document.activeElement;
+            if (activeElement && activeElement.classList) {
+                activeElement.classList.add('playing');
+                setTimeout(() => activeElement.classList.remove('playing'), 500);
+            }
+            
+            // Update status
+            const statusDiv = document.getElementById('progressText');
+            const originalText = statusDiv.innerHTML;
+            statusDiv.innerHTML = '🔊 Playing audio...';
+            
+            try {
+                const response = await fetch('/api/speak', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ text: text, language: language })
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.use_browser_tts) {
+                        // Browser TTS fallback
+                        const utterance = new SpeechSynthesisUtterance(data.text);
+                        utterance.lang = language === 'zh' ? 'zh-CN' : 'en-US';
+                        utterance.rate = 0.85;
+                        speechSynthesis.speak(utterance);
+                        utterance.onend = () => {
+                            statusDiv.innerHTML = originalText;
+                        };
+                    } else {
+                        const audioBlob = await response.blob();
+                        const audioUrl = URL.createObjectURL(audioBlob);
+                        if (currentAudio) {
+                            currentAudio.pause();
+                        }
+                        currentAudio = new Audio(audioUrl);
+                        currentAudio.onended = () => {
+                            URL.revokeObjectURL(audioUrl);
+                            statusDiv.innerHTML = originalText;
+                        };
+                        currentAudio.play();
+                    }
+                } else {
+                    // Fallback browser TTS
+                    const utterance = new SpeechSynthesisUtterance(text);
+                    utterance.lang = language === 'zh' ? 'zh-CN' : 'en-US';
+                    utterance.rate = 0.85;
+                    speechSynthesis.speak(utterance);
+                    utterance.onend = () => {
+                        statusDiv.innerHTML = originalText;
+                    };
+                }
+            } catch (error) {
+                console.error('Audio error:', error);
+                // Fallback browser TTS
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = language === 'zh' ? 'zh-CN' : 'en-US';
+                speechSynthesis.speak(utterance);
+                utterance.onend = () => {
+                    statusDiv.innerHTML = originalText;
+                };
+            }
+        }
+        
+        // Load lesson from server
+        async function loadLesson(lessonNum) {
+            currentLesson = lessonNum;
+            
+            // Update UI
+            document.getElementById('lessonBadge').innerHTML = `Lesson ${lessonNum}: ${lessonsData[lessonNum]?.title || 'Loading...'}`;
+            document.getElementById('lessonSelect').value = lessonNum;
+            
+            const progressPercent = (lessonNum / 15) * 100;
+            document.getElementById('progressFill').style.width = progressPercent + '%';
+            document.getElementById('progressText').innerHTML = `Lesson ${lessonNum} of 15`;
+            
+            try {
+                const response = await fetch(`/api/lesson/${lessonNum}`);
+                const lesson = await response.json();
+                lessonsData[lessonNum] = lesson;
+                renderLesson(lesson);
+            } catch (error) {
+                console.error('Error loading lesson:', error);
+                document.getElementById('content').innerHTML = '<div class="loading">Error loading lesson. Please refresh.</div>';
+            }
+        }
+        
+        // Render lesson with interactive audio buttons
+        function renderLesson(lesson) {
+            const content = document.getElementById('content');
+            
+            let html = `
+                <!-- Objectives Section -->
+                <div class="section">
+                    <div class="section-title">
+                        📖 Learning Objectives
+                        <button class="speaker-icon" onclick="playAudio('${lesson.objectives.join('. ')}', 'en')">🔊</button>
+                    </div>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        ${lesson.objectives.map(obj => `<li>${obj}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <!-- Vocabulary Section -->
+                <div class="section">
+                    <div class="section-title">
+                        📚 Vocabulary (${lesson.vocabulary.length} words)
+                        <button class="speaker-icon" onclick="playAllVocabulary(${JSON.stringify(lesson.vocabulary).replace(/"/g, '&quot;')})">🔊 Play All</button>
+                    </div>
+                    <div class="vocab-grid">
+                        ${lesson.vocabulary.map(v => `
+                            <div class="vocab-card" onclick="playAudio('${v.word}', 'zh')">
+                                <div class="vocab-word">${v.word}</div>
+                                <div class="vocab-pinyin">${v.pinyin}</div>
+                                <div class="vocab-meaning">${v.meaning}</div>
+                                <div class="vocab-example">
+                                    📝 ${v.example}
+                                    <button class="audio-btn" onclick="event.stopPropagation(); playAudio('${v.example}', 'zh')">🔊 Example</button>
+                                </div>
+                                <button class="audio-btn" onclick="event.stopPropagation(); playAudio('${v.word}', 'zh')">🔊 Pronounce</button>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                
+                <!-- Grammar Section -->
+                <div class="section">
+                    <div class="section-title">
+                        📖 Grammar Points
+                        <button class="speaker-icon" onclick="playAllGrammar(${JSON.stringify(lesson.grammar).replace(/"/g, '&quot;')})">🔊 Play All</button>
+                    </div>
+                    ${lesson.grammar.map(g => `
+                        <div class="grammar-card">
+                            <div class="grammar-title">
+                                ${g.point}
+                                <button class="audio-btn" onclick="playAudio('${g.point}. ${g.explanation}', 'en')" style="margin-left: 10px;">🔊</button>
+                            </div>
+                            <div>${g.explanation}</div>
+                            <div class="grammar-example">
+                                Example: ${g.example}
+                                <button class="audio-btn" onclick="playAudio('${g.example}', 'zh')" style="margin-left: 10px;">🔊 Listen</button>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+                
+                <!-- Dialogue Section -->
+                <div class="section">
+                    <div class="section-title">
+                        💬 Conversation Practice
+                        <button class="speaker-icon" onclick="playFullDialogue('${lesson.dialogue.replace(/'/g, "\\'")}')">🔊 Play Full Dialogue</button>
+                    </div>
+                    <div class="dialogue-container">
+                        ${lesson.dialogue.split('\n').filter(line => line.trim()).map((line, idx) => {
+                            const match = line.match(/([A-Za-z]+):\s*(.+)/);
+                            if (match) {
+                                const speaker = match[1];
+                                const chinese = match[2];
+                                return `
+                                    <div class="dialogue-line" onclick="playAudio('${chinese}', 'zh')">
+                                        <div class="dialogue-speaker">${speaker}</div>
+                                        <div class="dialogue-chinese">${chinese}</div>
+                                        <button class="audio-btn" onclick="event.stopPropagation(); playAudio('${chinese}', 'zh')">🔊 Listen</button>
+                                    </div>
+                                `;
+                            }
+                            return `<div class="dialogue-line">${line}</div>`;
+                        }).join('')}
+                    </div>
+                </div>
+            `;
+            
+            // Add exercises if available
+            if (lesson.exercises) {
+                html += `
+                    <div class="section">
+                        <div class="section-title">✍️ Practice Exercises</div>
+                        ${lesson.exercises.map((ex, exIdx) => `
+                            <div class="exercise-card" id="exercise-${exIdx}">
+                                <div class="exercise-question">${exIdx + 1}. ${ex.question}</div>
+                                ${ex.type === 'match' ? `
+                                    ${ex.items.map((item, itemIdx) => `
+                                        <div class="exercise-option" onclick="checkMatch(${exIdx}, ${itemIdx}, '${item.correct}')">
+                                            ${item.chinese} → ?
+                                        </div>
+                                    `).join('')}
+                                ` : ''}
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+            
+            // Add culture note if available
+            if (lesson.culture_note) {
+                html += `
+                    <div class="section">
+                        <div class="section-title">🏮 Cultural Note</div>
+                        <div class="culture-note">
+                            <strong>${lesson.culture_note.title}</strong><br>
+                            ${lesson.culture_note.content}
+                            <button class="audio-btn" onclick="playAudio('${lesson.culture_note.content}', 'en')" style="margin-top: 10px;">🔊 Listen</button>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            content.innerHTML = html;
+        }
+        
+        // Play all vocabulary words
+        async function playAllVocabulary(vocabList) {
+            for (const v of vocabList) {
+                await playAudio(v.word, 'zh');
+                await new Promise(resolve => setTimeout(resolve, 500));
+            }
+        }
+        
+        // Play all grammar points
+        async function playAllGrammar(grammarList) {
+            for (const g of grammarList) {
+                await playAudio(`${g.point}. ${g.explanation}`, 'en');
+                await new Promise(resolve => setTimeout(resolve, 800));
+                await playAudio(g.example, 'zh');
+                await new Promise(resolve => setTimeout(resolve, 500));
+            }
+        }
+        
+        // Play full dialogue
+        function playFullDialogue(dialogue) {
+            const lines = dialogue.split('\n').filter(l => l.trim());
+            let index = 0;
+            
+            function playNext() {
+                if (index >= lines.length) return;
+                const match = lines[index].match(/[A-Za-z]+:\s*(.+)/);
+                if (match) {
+                    playAudio(match[1], 'zh');
+                    index++;
+                    setTimeout(playNext, 2000);
+                } else {
+                    index++;
+                    playNext();
+                }
+            }
+            
+            playNext();
+        }
+        
+        // Exercise check function
+        function checkMatch(exerciseIdx, itemIdx, correctAnswer) {
+            const selected = document.querySelector(`#exercise-${exerciseIdx} .exercise-option:nth-child(${itemIdx + 1})`);
+            if (selected) {
+                selected.classList.add('correct');
+                playAudio('Correct! Good job!', 'en');
+            }
+        }
+        
+        function prevLesson() {
+            if (currentLesson > 1) {
+                loadLesson(currentLesson - 1);
+            }
+        }
+        
+        function nextLesson() {
+            if (currentLesson < 15) {
+                loadLesson(currentLesson + 1);
+            } else {
+                alert('🎉 Congratulations! You have completed all 15 HSK 1 lessons!');
+            }
+        }
+        
+        function goToLesson() {
+            const select = document.getElementById('lessonSelect');
+            const lessonNum = parseInt(select.value);
+            loadLesson(lessonNum);
+        }
+        
+        // Initialize
+        loadLesson(1);
+    </script>
+</body>
+</html>

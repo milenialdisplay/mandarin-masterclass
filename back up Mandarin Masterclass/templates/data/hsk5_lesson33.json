@@ -1,0 +1,228 @@
+{
+  "title": "法律意识",
+  "subtitle": "Legal Awareness, Rights and Obligations, Rule of Law",
+  "assistant_message": "Today we learn: discussing legal awareness and rights, expressing understanding of laws, and talking about legal responsibilities and obligations.",
+  "vocabulary": [
+    {
+      "word": "法律",
+      "pinyin": "fǎ lǜ",
+      "meaning": "law",
+      "meaning_id": "hukum",
+      "example": "遵守法律",
+      "example_translation": "obey the law",
+      "example_translation_id": "mematuhi hukum"
+    },
+    {
+      "word": "意识",
+      "pinyin": "yì shí",
+      "meaning": "awareness",
+      "meaning_id": "kesadaran",
+      "example": "法律意识",
+      "example_translation": "legal awareness",
+      "example_translation_id": "kesadaran hukum"
+    },
+    {
+      "word": "权利",
+      "pinyin": "quán lì",
+      "meaning": "rights",
+      "meaning_id": "hak",
+      "example": "保护权利",
+      "example_translation": "protect rights",
+      "example_translation_id": "melindungi hak"
+    },
+    {
+      "word": "义务",
+      "pinyin": "yì wù",
+      "meaning": "obligation",
+      "meaning_id": "kewajiban",
+      "example": "履行义务",
+      "example_translation": "fulfill obligations",
+      "example_translation_id": "memenuhi kewajiban"
+    },
+    {
+      "word": "遵守",
+      "pinyin": "zūn shǒu",
+      "meaning": "to obey",
+      "meaning_id": "mematuhi",
+      "example": "遵守规定",
+      "example_translation": "obey regulations",
+      "example_translation_id": "mematuhi peraturan"
+    },
+    {
+      "word": "违法",
+      "pinyin": "wéi fǎ",
+      "meaning": "illegal",
+      "meaning_id": "melanggar hukum",
+      "example": "违法行为",
+      "example_translation": "illegal behavior",
+      "example_translation_id": "perilaku melanggar hukum"
+    },
+    {
+      "word": "合同",
+      "pinyin": "hé tong",
+      "meaning": "contract",
+      "meaning_id": "kontrak",
+      "example": "签订合同",
+      "example_translation": "sign a contract",
+      "example_translation_id": "menandatangani kontrak"
+    },
+    {
+      "word": "纠纷",
+      "pinyin": "jiū fēn",
+      "meaning": "dispute",
+      "meaning_id": "sengketa",
+      "example": "解决纠纷",
+      "example_translation": "resolve disputes",
+      "example_translation_id": "menyelesaikan sengketa"
+    },
+    {
+      "word": "证据",
+      "pinyin": "zhèng jù",
+      "meaning": "evidence",
+      "meaning_id": "bukti",
+      "example": "收集证据",
+      "example_translation": "collect evidence",
+      "example_translation_id": "mengumpulkan bukti"
+    },
+    {
+      "word": "律师",
+      "pinyin": "lǜ shī",
+      "meaning": "lawyer",
+      "meaning_id": "pengacara",
+      "example": "咨询律师",
+      "example_translation": "consult a lawyer",
+      "example_translation_id": "berkonsultasi dengan pengacara"
+    }
+  ],
+  "grammar": [
+    {
+      "point": "Using 根据 (gēnjù) - 'According to'",
+      "point_id": "Menggunakan 根据 (gēnjù) - 'Menurut'",
+      "explanation": "根据 indicates the basis or source of information or action.",
+      "explanation_id": "根据 menunjukkan dasar atau sumber informasi atau tindakan.",
+      "examples": [
+        {
+          "chinese": "根据法律规定，我们有权利维护自己的利益。",
+          "translation": "According to the law, we have the right to protect our interests.",
+          "translation_id": "Menurut hukum, kita memiliki hak untuk melindungi kepentingan kita."
+        },
+        {
+          "chinese": "根据合同条款，双方都有义务履行。",
+          "translation": "According to the contract terms, both parties have obligations to fulfill.",
+          "translation_id": "Menurut ketentuan kontrak, kedua belah pihak memiliki kewajiban untuk dipenuhi."
+        }
+      ]
+    },
+    {
+      "point": "Using 通过...来... (tōngguò...lái...) - 'Through... to...'",
+      "point_id": "Menggunakan 通过...来... (tōngguò...lái...) - 'Melalui... untuk...'",
+      "explanation": "This structure indicates the method or means to achieve a goal.",
+      "explanation_id": "Struktur ini menunjukkan metode atau cara untuk mencapai tujuan.",
+      "examples": [
+        {
+          "chinese": "通过法律途径来解决纠纷。",
+          "translation": "Resolve disputes through legal channels.",
+          "translation_id": "Selesaikan sengketa melalui jalur hukum."
+        },
+        {
+          "chinese": "通过学习法律知识来提高法律意识。",
+          "translation": "Improve legal awareness by studying legal knowledge.",
+          "translation_id": "Tingkatkan kesadaran hukum dengan mempelajari pengetahuan hukum."
+        }
+      ]
+    },
+    {
+      "point": "Using 无论...都... (wúlùn...dōu...) - 'No matter... all...'",
+      "point_id": "Menggunakan 无论...都... (wúlùn...dōu...) - 'Tidak peduli... semua...'",
+      "explanation": "This structure expresses that regardless of conditions, the result remains the same.",
+      "explanation_id": "Struktur ini menyatakan bahwa terlepas dari kondisinya, hasilnya tetap sama.",
+      "examples": [
+        {
+          "chinese": "无论你是谁，都要遵守法律。",
+          "translation": "No matter who you are, you must obey the law.",
+          "translation_id": "Tidak peduli siapa Anda, Anda harus mematuhi hukum."
+        },
+        {
+          "chinese": "无论在什么情况下，都不能违法。",
+          "translation": "No matter the circumstances, you cannot break the law.",
+          "translation_id": "Tidak peduli situasinya, Anda tidak bisa melanggar hukum."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "female",
+      "name": "Zhao Min",
+      "voice": "female",
+      "chinese": "我最近遇到了合同纠纷，不知道该怎么处理。",
+      "pinyin": "Wǒ zuìjìn yù dào le hétong jiūfēn, bù zhīdào gāi zěnme chǔlǐ.",
+      "translation": "I recently encountered a contract dispute and don't know how to handle it.",
+      "translation_id": "Saya baru saja mengalami sengketa kontrak dan tidak tahu harus menanganinya."
+    },
+    {
+      "speaker": "male",
+      "name": "Wang Lei",
+      "voice": "male",
+      "chinese": "根据合同条款，你有权利维护自己的利益。建议你咨询律师。",
+      "pinyin": "Gēnjù hétong tiáokuǎn, nǐ yǒu quánlì wéihù zìjǐ de lìyì. Jiànyì nǐ zīxún lǜshī.",
+      "translation": "According to the contract terms, you have the right to protect your interests. I suggest you consult a lawyer.",
+      "translation_id": "Menurut ketentuan kontrak, Anda memiliki hak untuk melindungi kepentingan Anda. Saya sarankan Anda berkonsultasi dengan pengacara."
+    },
+    {
+      "speaker": "female",
+      "name": "Zhao Min",
+      "voice": "female",
+      "chinese": "我需要收集哪些证据呢？",
+      "pinyin": "Wǒ xūyào shōují nǎxiē zhèngjù ne?",
+      "translation": "What evidence do I need to collect?",
+      "translation_id": "Bukti apa yang perlu saya kumpulkan?"
+    },
+    {
+      "speaker": "male",
+      "name": "Wang Lei",
+      "voice": "male",
+      "chinese": "无论情况如何，都要保留书面文件和沟通记录。通过法律途径来解决纠纷是最可靠的方式。我们每个人都应该提高法律意识，了解自己的权利和义务。",
+      "pinyin": "Wúlùn qíngkuàng rúhé, dōu yào bǎoliú shūmiàn wénjiàn hé gōutōng jìlù. Tōngguò fǎlǜ tújìng lái jiějué jiūfēn shì zuì kěkào de fāngshì. Wǒmen měi gè rén dōu yīnggāi tígāo fǎlǜ yìshí, liǎojiě zìjǐ de quánlì hé yìwù.",
+      "translation": "No matter the situation, keep written documents and communication records. Resolving disputes through legal channels is the most reliable way. Each of us should raise our legal awareness and understand our rights and obligations.",
+      "translation_id": "Tidak peduli situasinya, simpan dokumen tertulis dan catatan komunikasi. Menyelesaikan sengketa melalui jalur hukum adalah cara yang paling dapat diandalkan. Masing-masing dari kita harus meningkatkan kesadaran hukum dan memahami hak dan kewajiban kita."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "What does 法律 (fǎlǜ) mean?",
+      "question_id": "Apa arti 法律 (fǎlǜ)?",
+      "options": ["Right", "Obligation", "Law", "Contract"],
+      "options_id": ["Hak", "Kewajiban", "Hukum", "Kontrak"],
+      "correct": 2
+    },
+    {
+      "question": "How do you say 'obey the law' in Chinese?",
+      "question_id": "Bagaimana mengatakan 'mematuhi hukum' dalam bahasa Mandarin?",
+      "options": ["违反法律", "遵守法律", "制定法律", "修改法律"],
+      "options_id": ["melanggar hukum", "mematuhi hukum", "membuat hukum", "mengubah hukum"],
+      "correct": 1
+    },
+    {
+      "question": "What does 纠纷 (jiūfēn) mean?",
+      "question_id": "Apa arti 纠纷 (jiūfēn)?",
+      "options": ["Agreement", "Dispute", "Contract", "Evidence"],
+      "options_id": ["Perjanjian", "Sengketa", "Kontrak", "Bukti"],
+      "correct": 1
+    },
+    {
+      "question": "Complete the sentence: ______法律规定，我们有权利维护自己的利益。",
+      "question_id": "Lengkapi kalimat: ______法律规定，我们有权利维护自己的利益。",
+      "options": ["对于", "关于", "根据", "由于"],
+      "options_id": ["Untuk", "Tentang", "Menurut", "Karena"],
+      "correct": 2
+    },
+    {
+      "question": "What is the best translation of 'raise legal awareness'?",
+      "question_id": "Apa terjemahan terbaik dari 'meningkatkan kesadaran hukum'?",
+      "options": ["提高法律意识", "增强法律意识", "培养法律意识", "以上都是"],
+      "options_id": ["meningkatkan kesadaran hukum", "memperkuat kesadaran hukum", "mengembangkan kesadaran hukum", "semua di atas"],
+      "correct": 3
+    }
+  ]
+}

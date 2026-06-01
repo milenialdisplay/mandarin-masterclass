@@ -1,0 +1,52 @@
+{
+  "title": "你今天感觉怎么样",
+  "subtitle": "Expressing Feelings and Health, Using 感觉, Asking About Well-being",
+  "assistant_message": "Today we learn: expressing feelings and health (感觉 gǎnjué), asking how someone feels, and describing physical states (累, 舒服, 难受).",
+  "vocabulary": [
+    {"word": "感觉", "pinyin": "gǎn jué", "meaning": "to feel", "meaning_id": "merasa", "example": "你感觉怎么样？", "example_translation": "How do you feel?", "example_translation_id": "Bagaimana perasaanmu?"},
+    {"word": "怎么样", "pinyin": "zěn me yàng", "meaning": "how is", "meaning_id": "bagaimana", "example": "天气怎么样？", "example_translation": "How's the weather?", "example_translation_id": "Bagaimana cuacanya?"},
+    {"word": "累", "pinyin": "lèi", "meaning": "tired", "meaning_id": "lelah", "example": "我很累", "example_translation": "I am very tired", "example_translation_id": "Saya sangat lelah"},
+    {"word": "舒服", "pinyin": "shū fu", "meaning": "comfortable", "meaning_id": "nyaman", "example": "很舒服", "example_translation": "very comfortable", "example_translation_id": "sangat nyaman"},
+    {"word": "难受", "pinyin": "nán shòu", "meaning": "uncomfortable/sick", "meaning_id": "tidak nyaman/sakit", "example": "身体难受", "example_translation": "feel unwell", "example_translation_id": "merasa tidak enak badan"},
+    {"word": "开心", "pinyin": "kāi xīn", "meaning": "happy", "meaning_id": "senang", "example": "很开心", "example_translation": "very happy", "example_translation_id": "sangat senang"},
+    {"word": "担心", "pinyin": "dān xīn", "meaning": "to worry", "meaning_id": "khawatir", "example": "别担心", "example_translation": "don't worry", "example_translation_id": "jangan khawatir"},
+    {"word": "紧张", "pinyin": "jǐn zhāng", "meaning": "nervous", "meaning_id": "gugup", "example": "很紧张", "example_translation": "very nervous", "example_translation_id": "sangat gugup"}
+  ],
+  "grammar": [
+    {
+      "point": "Asking About Feelings with 感觉怎么样 (gǎnjué zěnme yàng)",
+      "point_id": "Bertanya Tentang Perasaan dengan 感觉怎么样 (gǎnjué zěnme yàng)",
+      "explanation": "Use 感觉怎么样 to ask 'how do you feel'. Structure: Subject + 感觉 + 怎么样？",
+      "explanation_id": "Gunakan 感觉怎么样 untuk bertanya 'bagaimana perasaanmu'. Struktur: Subjek + 感觉 + 怎么样？",
+      "examples": [
+        {"chinese": "你今天感觉怎么样？", "translation": "How do you feel today?", "translation_id": "Bagaimana perasaanmu hari ini?"},
+        {"chinese": "你身体感觉怎么样？", "translation": "How does your body feel?", "translation_id": "Bagaimana perasaan tubuhmu?"},
+        {"chinese": "你感觉好点了吗？", "translation": "Do you feel better?", "translation_id": "Apakah kamu merasa lebih baik?"}
+      ]
+    },
+    {
+      "point": "Describing Physical States",
+      "point_id": "Mendeskripsikan Kondisi Fisik",
+      "explanation": "Use adjectives like 累 (tired), 舒服 (comfortable), 难受 (uncomfortable) to describe how you feel.",
+      "explanation_id": "Gunakan kata sifat seperti 累 (lelah), 舒服 (nyaman), 难受 (tidak nyaman) untuk mendeskripsikan bagaimana perasaanmu.",
+      "examples": [
+        {"chinese": "我今天很累。", "translation": "I am very tired today.", "translation_id": "Saya sangat lelah hari ini."},
+        {"chinese": "我觉得不舒服。", "translation": "I don't feel comfortable.", "translation_id": "Saya merasa tidak nyaman."},
+        {"chinese": "身体有点难受。", "translation": "My body feels a bit unwell.", "translation_id": "Tubuhku merasa sedikit tidak enak."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你今天感觉怎么样？", "pinyin": "Nǐ jīntiān gǎnjué zěnme yàng?", "translation": "How do you feel today?", "translation_id": "Bagaimana perasaanmu hari ini?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "我感觉有点累。", "pinyin": "Wǒ gǎnjué yǒudiǎn lèi.", "translation": "I feel a bit tired.", "translation_id": "Saya merasa sedikit lelah."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "要多休息。", "pinyin": "Yào duō xiūxi.", "translation": "You should rest more.", "translation_id": "Kamu harus lebih banyak istirahat."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "谢谢你的关心。", "pinyin": "Xièxie nǐ de guānxīn.", "translation": "Thank you for your concern.", "translation_id": "Terima kasih atas perhatianmu."}
+  ],
+  "exercises": [
+    {"question": "What does 感觉 (gǎnjué) mean?", "question_id": "Apa arti 感觉 (gǎnjué)?", "options": ["To think", "To feel", "To see", "To hear"], "options_id": ["Berpikir", "Merasa", "Melihat", "Mendengar"], "correct": 1},
+    {"question": "How do you ask 'How do you feel today?' in Chinese?", "question_id": "Bagaimana bertanya 'Bagaimana perasaanmu hari ini?' dalam bahasa Mandarin?", "options": ["你今天怎么样？", "你今天感觉怎么样？", "你今天身体怎么样？", "你今天好吗？"], "options_id": ["Kamu hari ini bagaimana?", "Kamu hari ini merasa bagaimana?", "Kamu hari ini tubuh bagaimana?", "Kamu hari ini baik?"], "correct": 1},
+    {"question": "What does 累 (lèi) mean?", "question_id": "Apa arti 累 (lèi)?", "options": ["Happy", "Tired", "Sick", "Nervous"], "options_id": ["Senang", "Lelah", "Sakit", "Gugup"], "correct": 1},
+    {"question": "How to say 'I feel a bit tired' in Chinese?", "question_id": "Bagaimana mengatakan 'Saya merasa sedikit lelah' dalam bahasa Mandarin?", "options": ["我感觉有点累", "我感觉很累", "我累了", "我累一点"], "options_id": ["Saya merasa sedikit lelah", "Saya merasa sangat lelah", "Saya lelah", "Saya lelah sedikit"], "correct": 0},
+    {"question": "What does 紧张 (jǐnzhāng) mean?", "question_id": "Apa arti 紧张 (jǐnzhāng)?", "options": ["Happy", "Sad", "Nervous", "Angry"], "options_id": ["Senang", "Sedih", "Gugup", "Marah"], "correct": 2}
+  ]
+}

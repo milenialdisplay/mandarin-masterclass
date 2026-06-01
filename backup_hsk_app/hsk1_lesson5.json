@@ -1,0 +1,56 @@
+{
+  "title": "她女儿今年二十岁",
+  "subtitle": "Talking About Age, Numbers 1-100, Asking 'How Old'",
+  "assistant_message": "Today we learn: numbers 1-100, talking about age (岁 suì), and asking 'how old' (多大 duō dà).",
+  "vocabulary": [
+    {"word": "一", "pinyin": "yī", "meaning": "one", "meaning_id": "satu", "example": "一个人", "example_translation": "one person", "example_translation_id": "satu orang"},
+    {"word": "二", "pinyin": "èr", "meaning": "two", "meaning_id": "dua", "example": "两个人", "example_translation": "two people", "example_translation_id": "dua orang"},
+    {"word": "三", "pinyin": "sān", "meaning": "three", "meaning_id": "tiga", "example": "三个苹果", "example_translation": "three apples", "example_translation_id": "tiga apel"},
+    {"word": "四", "pinyin": "sì", "meaning": "four", "meaning_id": "empat", "example": "四本书", "example_translation": "four books", "example_translation_id": "empat buku"},
+    {"word": "五", "pinyin": "wǔ", "meaning": "five", "meaning_id": "lima", "example": "五个人", "example_translation": "five people", "example_translation_id": "lima orang"},
+    {"word": "六", "pinyin": "liù", "meaning": "six", "meaning_id": "enam", "example": "六天", "example_translation": "six days", "example_translation_id": "enam hari"},
+    {"word": "七", "pinyin": "qī", "meaning": "seven", "meaning_id": "tujuh", "example": "七块钱", "example_translation": "seven yuan", "example_translation_id": "tujuh yuan"},
+    {"word": "八", "pinyin": "bā", "meaning": "eight", "meaning_id": "delapan", "example": "八岁", "example_translation": "eight years old", "example_translation_id": "delapan tahun"},
+    {"word": "九", "pinyin": "jiǔ", "meaning": "nine", "meaning_id": "sembilan", "example": "九点", "example_translation": "nine o'clock", "example_translation_id": "jam sembilan"},
+    {"word": "十", "pinyin": "shí", "meaning": "ten", "meaning_id": "sepuluh", "example": "十个人", "example_translation": "ten people", "example_translation_id": "sepuluh orang"},
+    {"word": "岁", "pinyin": "suì", "meaning": "years old", "meaning_id": "tahun (usia)", "example": "二十岁", "example_translation": "twenty years old", "example_translation_id": "dua puluh tahun"},
+    {"word": "女儿", "pinyin": "nǚ ér", "meaning": "daughter", "meaning_id": "anak perempuan", "example": "她的女儿", "example_translation": "her daughter", "example_translation_id": "anak perempuannya"}
+  ],
+  "grammar": [
+    {
+      "point": "Numbers 1-100",
+      "point_id": "Angka 1-100",
+      "explanation": "Numbers 11-19 are 十 + number (11 = 十一). Tens are number + 十 (20 = 二十, 30 = 三十).",
+      "explanation_id": "Angka 11-19 adalah 十 + angka (11 = 十一). Puluhan adalah angka + 十 (20 = 二十, 30 = 三十).",
+      "examples": [
+        {"chinese": "十一", "translation": "eleven", "translation_id": "sebelas"},
+        {"chinese": "二十", "translation": "twenty", "translation_id": "dua puluh"},
+        {"chinese": "二十五", "translation": "twenty-five", "translation_id": "dua puluh lima"},
+        {"chinese": "一百", "translation": "one hundred", "translation_id": "seratus"}
+      ]
+    },
+    {
+      "point": "Talking about Age with 岁 (suì)",
+      "point_id": "Membicarakan Usia dengan 岁 (suì)",
+      "explanation": "Use 岁 after a number to state age. To ask 'How old', use 多大 (duō dà).",
+      "explanation_id": "Gunakan 岁 setelah angka untuk menyatakan usia. Untuk bertanya 'Berapa umur', gunakan 多大 (duō dà).",
+      "examples": [
+        {"chinese": "我二十岁。", "translation": "I am 20 years old.", "translation_id": "Saya berumur 20 tahun."},
+        {"chinese": "你多大？", "translation": "How old are you?", "translation_id": "Berapa umurmu?"}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你女儿今年多大？", "pinyin": "Nǐ nǚ'ér jīnnián duō dà?", "translation": "How old is your daughter?", "translation_id": "Berapa umur anak perempuannya?"},
+    {"speaker": "female", "name": "Wang Fang", "voice": "female", "chinese": "她今年二十岁。", "pinyin": "Tā jīnnián èrshí suì.", "translation": "She is 20 years old this year.", "translation_id": "Dia berumur 20 tahun tahun ini."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "她上大学了吗？", "pinyin": "Tā shàng dàxué le ma?", "translation": "Does she go to university?", "translation_id": "Apakah dia kuliah?"},
+    {"speaker": "female", "name": "Wang Fang", "voice": "female", "chinese": "是的，她上大学了。", "pinyin": "Shì de, tā shàng dàxué le.", "translation": "Yes, she goes to university.", "translation_id": "Ya, dia kuliah."}
+  ],
+  "exercises": [
+    {"question": "What does 岁 (suì) mean?", "question_id": "Apa arti 岁 (suì)?", "options": ["Year", "Years old", "Month", "Day"], "options_id": ["Tahun", "Tahun (usia)", "Bulan", "Hari"], "correct": 1},
+    {"question": "How do you say 'twenty-five' in Chinese?", "question_id": "Bagaimana mengatakan 'dua puluh lima' dalam bahasa Mandarin?", "options": ["十五", "二十", "二十五", "五十二"], "options_id": ["lima belas", "dua puluh", "dua puluh lima", "lima puluh dua"], "correct": 2},
+    {"question": "What is 女儿 (nǚ'ér)?", "question_id": "Apa itu 女儿 (nǚ'ér)?", "options": ["Son", "Daughter", "Mother", "Father"], "options_id": ["Anak laki-laki", "Anak perempuan", "Ibu", "Ayah"], "correct": 1},
+    {"question": "How to ask 'How old are you?' in Chinese?", "question_id": "Bagaimana bertanya 'Berapa umurmu?' dalam bahasa Mandarin?", "options": ["你几岁？", "你多大？", "你多少岁？", "All of the above"], "options_id": ["Umurmu berapa?", "Berapa umurmu?", "Umurmu berapa tahun?", "Semua di atas"], "correct": 3},
+    {"question": "What is the number 八 (bā)?", "question_id": "Angka berapakah 八 (bā)?", "options": ["Seven", "Eight", "Nine", "Ten"], "options_id": ["Tujuh", "Delapan", "Sembilan", "Sepuluh"], "correct": 1}
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "title": "我们该出发了",
+  "subtitle": "Expressing Obligation with 该, Time Management, Making Departure Plans",
+  "assistant_message": "Today we learn: expressing obligation with 该 (gāi), talking about departure and arrival times, and managing schedules.",
+  "vocabulary": [
+    {"word": "该", "pinyin": "gāi", "meaning": "should/ought to (it's time to)", "meaning_id": "seharusnya (sudah waktunya)", "example": "该走了", "example_translation": "it's time to go", "example_translation_id": "sudah waktunya pergi"},
+    {"word": "出发", "pinyin": "chū fā", "meaning": "to set off/depart", "meaning_id": "berangkat", "example": "准备出发", "example_translation": "ready to depart", "example_translation_id": "siap berangkat"},
+    {"word": "到达", "pinyin": "dào dá", "meaning": "to arrive", "meaning_id": "tiba", "example": "准时到达", "example_translation": "arrive on time", "example_translation_id": "tiba tepat waktu"},
+    {"word": "准时", "pinyin": "zhǔn shí", "meaning": "on time", "meaning_id": "tepat waktu", "example": "很准时", "example_translation": "very on time", "example_translation_id": "sangat tepat waktu"},
+    {"word": "迟到", "pinyin": "chí dào", "meaning": "to be late", "meaning_id": "terlambat", "example": "经常迟到", "example_translation": "often late", "example_translation_id": "sering terlambat"},
+    {"word": "时间", "pinyin": "shí jiān", "meaning": "time", "meaning_id": "waktu", "example": "没有时间", "example_translation": "no time", "example_translation_id": "tidak punya waktu"},
+    {"word": "计划", "pinyin": "jì huà", "meaning": "plan", "meaning_id": "rencana", "example": "旅行计划", "example_translation": "travel plan", "example_translation_id": "rencana perjalanan"},
+    {"word": "准备", "pinyin": "zhǔn bèi", "meaning": "to prepare", "meaning_id": "mempersiapkan", "example": "准备好了", "example_translation": "ready", "example_translation_id": "sudah siap"}
+  ],
+  "grammar": [
+    {
+      "point": "Expressing 'It's Time To' with 该 (gāi)",
+      "point_id": "Menyatakan 'Sudah Waktunya' dengan 该 (gāi)",
+      "explanation": "Use 该 before a verb to mean 'should' or 'it's time to'. Structure: Subject + 该 + Verb + 了.",
+      "explanation_id": "Gunakan 该 sebelum kata kerja untuk berarti 'seharusnya' atau 'sudah waktunya'. Struktur: Subjek + 该 + Kata Kerja + 了.",
+      "examples": [
+        {"chinese": "我们该出发了。", "translation": "It's time for us to set off.", "translation_id": "Sudah waktunya kita berangkat."},
+        {"chinese": "你该睡觉了。", "translation": "It's time for you to sleep.", "translation_id": "Sudah waktunya kamu tidur."},
+        {"chinese": "该吃饭了。", "translation": "It's time to eat.", "translation_id": "Sudah waktunya makan."}
+      ]
+    },
+    {
+      "point": "Talking About Punctuality",
+      "point_id": "Membicarakan Ketepatan Waktu",
+      "explanation": "Use 准时 (on time) and 迟到 (late) to talk about punctuality. Structure: Subject + 准时/迟到.",
+      "explanation_id": "Gunakan 准时 (tepat waktu) dan 迟到 (terlambat) untuk membicarakan ketepatan waktu. Struktur: Subjek + 准时/迟到.",
+      "examples": [
+        {"chinese": "火车准时到达。", "translation": "The train arrived on time.", "translation_id": "Kereta tiba tepat waktu."},
+        {"chinese": "他经常迟到。", "translation": "He is often late.", "translation_id": "Dia sering terlambat."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "现在几点了？", "pinyin": "Xiànzài jǐ diǎn le?", "translation": "What time is it now?", "translation_id": "Sekarang jam berapa?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "已经八点了。", "pinyin": "Yǐjīng bā diǎn le.", "translation": "It's already 8 o'clock.", "translation_id": "Sudah jam 8."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我们该出发了，不然会迟到。", "pinyin": "Wǒmen gāi chūfā le, bùrán huì chídào.", "translation": "It's time for us to set off, otherwise we'll be late.", "translation_id": "Sudah waktunya kita berangkat, kalau tidak akan terlambat."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "好的，我准备好了。", "pinyin": "Hǎo de, wǒ zhǔnbèi hǎo le.", "translation": "Okay, I'm ready.", "translation_id": "Baik, saya sudah siap."}
+  ],
+  "exercises": [
+    {"question": "What does 该 (gāi) express?", "question_id": "Apa yang diekspresikan oleh 该 (gāi)?", "options": ["Should (advice)", "It's time to", "Must", "Can"], "options_id": ["Seharusnya (saran)", "Sudah waktunya", "Harus", "Bisa"], "correct": 1},
+    {"question": "How do you say 'It's time for us to set off' in Chinese?", "question_id": "Bagaimana mengatakan 'Sudah waktunya kita berangkat' dalam bahasa Mandarin?", "options": ["我们该出发了", "我们应该出发", "我们出发了", "我们要出发"], "options_id": ["Sudah waktunya kita berangkat", "Kita seharusnya berangkat", "Kita berangkat", "Kita akan berangkat"], "correct": 0},
+    {"question": "What does 准时 (zhǔnshí) mean?", "question_id": "Apa arti 准时 (zhǔnshí)?", "options": ["Late", "On time", "Early", "Sometimes"], "options_id": ["Terlambat", "Tepat waktu", "Lebih awal", "Kadang-kadang"], "correct": 1},
+    {"question": "What is the opposite of 准时?", "question_id": "Apa lawan dari 准时?", "options": ["准时", "迟到", "早到", "按时"], "options_id": ["Tepat waktu", "Terlambat", "Lebih awal", "Sesuai waktu"], "correct": 1},
+    {"question": "How to say 'otherwise we'll be late' in Chinese?", "question_id": "Bagaimana mengatakan 'kalau tidak akan terlambat' dalam bahasa Mandarin?", "options": ["不然会迟到", "不然迟到", "如果不迟到", "就会迟到"], "options_id": ["Kalau tidak akan terlambat", "Kalau tidak terlambat", "Jika tidak terlambat", "Maka akan terlambat"], "correct": 0}
+  ]
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Lesson Exercise - Mandarin Teacher</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a472a, #2d6a4f);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .header {
+            background: #1a472a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .exercise-item {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .exercise-question {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .exercise-option {
+            padding: 10px;
+            margin: 8px 0;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+        }
+        
+        .exercise-option:hover { background: #e8f5e9; }
+        .exercise-option.correct { background: #d4edda; border-color: #28a745; }
+        .exercise-option.wrong { background: #f8d7da; border-color: #dc3545; }
+        
+        .submit-exercise {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            margin: 15px;
+            width: calc(100% - 30px);
+        }
+        
+        .score-display {
+            text-align: center;
+            padding: 15px;
+            background: #e8f5e9;
+            margin: 15px;
+            border-radius: 12px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="lessonTitle">Lesson 1 Exercise</h1>
+            <p>Practice what you've learned</p>
+        </div>
+        
+        <div id="exercises"></div>
+        
+        <button class="submit-exercise" onclick="checkAnswers()">Check Answers</button>
+        <div id="scoreDisplay" class="score-display"></div>
+        <button class="submit-exercise" onclick="window.location.href='/lessons'" style="background:#6c757d;">← Back to Lessons</button>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const level = parseInt(urlParams.get('level')) || 1;
+        const lessonNum = parseInt(urlParams.get('lesson')) || 1;
+        
+        document.getElementById('lessonTitle').innerHTML = `HSK ${level} - Lesson ${lessonNum} Exercise`;
+        
+        const exercises = {
+            1: [
+                {question: "What is the pinyin for 你好?", options: ["nǐ hǎo", "nǐ hào", "ní hǎo", "nì hǎo"], correct: 0},
+                {question: "What does 谢谢 mean?", options: ["Hello", "Thank you", "Goodbye", "Sorry"], correct: 1},
+                {question: "Complete: 我___学生", options: ["是", "有", "在", "去"], correct: 0},
+                {question: "Select the correct translation for 'I love you'", options: ["我爱你", "我喜欢你", "我恨你", "我认识你"], correct: 0},
+                {question: "What is '再见' in English?", options: ["Hello", "Thank you", "Goodbye", "Sorry"], correct: 2},
+            ]
+        };
+        
+        function loadExercises() {
+            const exList = exercises[lessonNum] || exercises[1];
+            const container = document.getElementById('exercises');
+            container.innerHTML = exList.map((ex, idx) => `
+                <div class="exercise-item">
+                    <div class="exercise-question">${idx + 1}. ${ex.question}</div>
+                    ${ex.options.map((opt, optIdx) => `
+                        <div class="exercise-option" onclick="selectOption(${idx}, ${optIdx})">
+                            ${String.fromCharCode(65 + optIdx)}. ${opt}
+                        </div>
+                    `).join('')}
+                </div>
+            `).join('');
+        }
+        
+        let userSelections = {};
+        
+        function selectOption(exIdx, optIdx) {
+            userSelections[exIdx] = optIdx;
+            const options = document.querySelectorAll(`.exercise-item:nth-child(${exIdx + 1}) .exercise-option`);
+            options.forEach(opt => opt.classList.remove('selected'));
+            options[optIdx].classList.add('selected');
+        }
+        
+        function checkAnswers() {
+            const exList = exercises[lessonNum] || exercises[1];
+            let correct = 0;
+            exList.forEach((ex, idx) => {
+                if (userSelections[idx] === ex.correct) correct++;
+                const options = document.querySelectorAll(`.exercise-item:nth-child(${idx + 1}) .exercise-option`);
+                options.forEach((opt, optIdx) => {
+                    if (optIdx === ex.correct) opt.classList.add('correct');
+                    else if (optIdx === userSelections[idx] && userSelections[idx] !== ex.correct) opt.classList.add('wrong');
+                });
+            });
+            
+            const scoreDiv = document.getElementById('scoreDisplay');
+            scoreDiv.style.display = 'block';
+            scoreDiv.innerHTML = `<strong>Score: ${correct}/${exList.length}</strong><br>${correct >= 4 ? 'Great job! Ready for the next lesson!' : 'Review the lesson and try again!'}`;
+        }
+        
+        loadExercises();
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{
+  "title": "阳光与希望",
+  "subtitle": "Talking About Optimism, Attitude, and Inspiration",
+  "assistant_message": "Today we learn: discussing optimism and hope, using 将 (jiāng) for future actions, and expressing positive attitudes.",
+  "vocabulary": [
+    {"word": "阳光", "pinyin": "yáng guāng", "meaning": "sunshine", "meaning_id": "sinar matahari", "example": "温暖的阳光", "example_translation": "warm sunshine", "example_translation_id": "sinar matahari yang hangat"},
+    {"word": "希望", "pinyin": "xī wàng", "meaning": "hope", "meaning_id": "harapan", "example": "充满希望", "example_translation": "full of hope", "example_translation_id": "penuh harapan"},
+    {"word": "积极", "pinyin": "jī jí", "meaning": "positive", "meaning_id": "positif", "example": "积极态度", "example_translation": "positive attitude", "example_translation_id": "sikap positif"},
+    {"word": "乐观", "pinyin": "lè guān", "meaning": "optimistic", "meaning_id": "optimis", "example": "乐观向上", "example_translation": "optimistic and upward", "example_translation_id": "optimis dan berkembang"},
+    {"word": "困难", "pinyin": "kùn nan", "meaning": "difficulty", "meaning_id": "kesulitan", "example": "克服困难", "example_translation": "overcome difficulties", "example_translation_id": "mengatasi kesulitan"},
+    {"word": "坚持", "pinyin": "jiān chí", "meaning": "to persist", "meaning_id": "bertahan", "example": "坚持下去", "example_translation": "persist", "example_translation_id": "bertahan"},
+    {"word": "未来", "pinyin": "wèi lái", "meaning": "future", "meaning_id": "masa depan", "example": "美好未来", "example_translation": "bright future", "example_translation_id": "masa depan cerah"},
+    {"word": "梦想", "pinyin": "mèng xiǎng", "meaning": "dream", "meaning_id": "mimpi", "example": "实现梦想", "example_translation": "realize dreams", "example_translation_id": "mewujudkan mimpi"}
+  ],
+  "grammar": [
+    {
+      "point": "Using 将 (jiāng) for Future Actions",
+      "point_id": "Menggunakan 将 (jiāng) untuk Aksi Masa Depan",
+      "explanation": "将 is a formal way to express future actions, similar to 会.",
+      "explanation_id": "将 adalah cara formal untuk menyatakan aksi masa depan, mirip dengan 会.",
+      "examples": [
+        {"chinese": "我们将迎来更美好的未来。", "translation": "We will welcome a brighter future.", "translation_id": "Kami akan menyambut masa depan yang lebih cerah."},
+        {"chinese": "希望将化为现实。", "translation": "Hope will become reality.", "translation_id": "Harapan akan menjadi kenyataan."}
+      ]
+    },
+    {
+      "point": "Using 会 (huì) for Possibility",
+      "point_id": "Menggunakan 会 (huì) untuk Kemungkinan",
+      "explanation": "会 can express possibility or prediction about the future.",
+      "explanation_id": "会 dapat menyatakan kemungkinan atau prediksi tentang masa depan.",
+      "examples": [
+        {"chinese": "只要你努力，一定会成功的。", "translation": "As long as you work hard, you will definitely succeed.", "translation_id": "Asalkan kamu bekerja keras, pasti akan berhasil."},
+        {"chinese": "明天天气会很好。", "translation": "The weather will be good tomorrow.", "translation_id": "Cuaca besok akan bagus."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "最近遇到很多困难，我感到很沮丧。", "pinyin": "Zuìjìn yùdào hěnduō kùnnan, wǒ gǎndào hěn jǔsàng.", "translation": "I've encountered many difficulties lately, I feel very frustrated.", "translation_id": "Akhir-akhir ini mengalami banyak kesulitan, saya merasa sangat frustrasi."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "别灰心，阳光总在风雨后。只要坚持，就会有希望。", "pinyin": "Bié huīxīn, yángguāng zǒng zài fēngyǔ hòu. Zhǐyào jiānchí, jiù huì yǒu xīwàng.", "translation": "Don't lose heart, sunshine always comes after the storm. As long as you persist, there will be hope.", "translation_id": "Jangan putus asa, sinar matahari selalu datang setelah badai. Asalkan kamu bertahan, akan ada harapan."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你说得对，我应该保持积极乐观的心态。", "pinyin": "Nǐ shuō de duì, wǒ yīnggāi bǎochí jījí lèguān de xīntài.", "translation": "You're right, I should maintain a positive and optimistic mindset.", "translation_id": "Kamu benar, saya harus menjaga pola pikir positif dan optimis."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "相信未来会更好。加油！", "pinyin": "Xiāngxìn wèilái huì gèng hǎo. Jiāyóu!", "translation": "Believe that the future will be better. Keep going!", "translation_id": "Percayalah masa depan akan lebih baik. Semangat!"}
+  ],
+  "exercises": [
+    {"question": "What does 乐观 (lèguān) mean?", "question_id": "Apa arti 乐观 (lèguān)?", "options": ["Pessimistic", "Optimistic", "Realistic", "Idealistic"], "options_id": ["Pesimis", "Optimis", "Realistis", "Idealistis"], "correct": 1},
+    {"question": "How do you say 'overcome difficulties' in Chinese?", "question_id": "Bagaimana mengatakan 'mengatasi kesulitan' dalam bahasa Mandarin?", "options": ["遇到困难", "克服困难", "解决困难", "面对困难"], "options_id": ["menemui kesulitan", "mengatasi kesulitan", "memecahkan kesulitan", "menghadapi kesulitan"], "correct": 1},
+    {"question": "What does 将 (jiāng) express?", "question_id": "Apa yang diekspresikan oleh 将 (jiāng)?", "options": ["Past action", "Future action (formal)", "Ongoing action", "Completed action"], "options_id": ["Aksi masa lalu", "Aksi masa depan (formal)", "Aksi sedang berlangsung", "Aksi selesai"], "correct": 1},
+    {"question": "What is 梦想 (mèngxiǎng)?", "question_id": "Apa itu 梦想 (mèngxiǎng)?", "options": ["Idea", "Dream", "Goal", "Plan"], "options_id": ["Ide", "Mimpi", "Tujuan", "Rencana"], "correct": 1},
+    {"question": "How to say 'believe in the future' in Chinese?", "question_id": "Bagaimana mengatakan 'percaya pada masa depan' dalam bahasa Mandarin?", "options": ["相信未来", "相信希望", "相信梦想", "相信自己"], "options_id": ["percaya pada masa depan", "percaya pada harapan", "percaya pada mimpi", "percaya pada diri sendiri"], "correct": 0}
+  ]
+}

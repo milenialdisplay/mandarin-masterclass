@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>HSK Complete Course - Levels 1-6 | Mandarin Teacher</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a472a;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1a472a, #2d6a4f);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .header h1 { font-size: 28px; margin-bottom: 8px; }
+        .header p { font-size: 14px; opacity: 0.9; }
+        
+        .level-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            background: #f5f5f5;
+            border-bottom: 2px solid #ddd;
+        }
+        
+        .level-tab {
+            flex: 1;
+            min-width: 80px;
+            padding: 15px 10px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .level-tab:hover { background: #e8f5e9; }
+        .level-tab.active {
+            background: white;
+            border-bottom-color: #2d6a4f;
+            color: #2d6a4f;
+        }
+        
+        .content-area {
+            padding: 20px;
+            display: none;
+        }
+        
+        .content-area.active {
+            display: block;
+        }
+        
+        .level-info {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .info-item {
+            text-align: center;
+            flex: 1;
+            min-width: 100px;
+        }
+        
+        .info-value {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1a472a;
+        }
+        
+        .info-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .lesson-list {
+            max-height: 500px;
+            overflow-y: auto;
+            border: 1px solid #e0e0e0;
+            border-radius: 16px;
+            background: #fafafa;
+        }
+        
+        .lesson-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: background 0.2s;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .lesson-item:hover {
+            background: #e8f5e9;
+        }
+        
+        .lesson-left {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .lesson-number {
+            font-weight: bold;
+            color: #e94560;
+            font-size: 18px;
+            min-width: 60px;
+        }
+        
+        .lesson-info {
+            flex: 1;
+        }
+        
+        .lesson-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1a472a;
+        }
+        
+        .lesson-title-en {
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .lesson-stats {
+            display: flex;
+            gap: 15px;
+            font-size: 12px;
+            color: #888;
+            margin-top: 5px;
+        }
+        
+        .play-lesson-btn {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+        
+        .play-lesson-btn:hover {
+            background: #1a472a;
+            transform: scale(1.02);
+        }
+        
+        .back-btn {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 20px 25px;
+            width: calc(100% - 50px);
+        }
+        
+        .back-btn:hover { background: #5a6268; }
+        
+        .lesson-list::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .lesson-list::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .lesson-list::-webkit-scrollbar-thumb {
+            background: #2d6a4f;
+            border-radius: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .level-tab { padding: 12px 5px; font-size: 12px; }
+            .lesson-left { flex-direction: column; align-items: flex-start; gap: 8px; }
+            .lesson-number { min-width: auto; }
+            .info-value { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 HSK Complete Course</h1>
+            <p>Levels 1-6 | Official Curriculum | 124+ Lessons</p>
+        </div>
+        
+        <div class="level-tabs" id="levelTabs">
+            <div class="level-tab active" data-level="1">HSK 1</div>
+            <div class="level-tab" data-level="2">HSK 2</div>
+            <div class="level-tab" data-level="3">HSK 3</div>
+            <div class="level-tab" data-level="4">HSK 4</div>
+            <div class="level-tab" data-level="5">HSK 5</div>
+            <div class="level-tab" data-level="6">HSK 6</div>
+        </div>
+        
+        <div id="level1Content" class="content-area active">
+            <div class="level-info">
+                <div class="info-item"><div class="info-value">15</div><div class="info-label">Lessons</div></div>
+                <div class="info-item"><div class="info-value">150</div><div class="info-label">Vocabulary</div></div>
+                <div class="info-item"><div class="info-value">A1</div><div class="info-label">CEFR Level</div></div>
+                <div class="info-item"><div class="info-value">40</div><div class="info-label">Study Hours</div></div>
+            </div>
+            <div class="lesson-list" id="lessonList1"></div>
+        </div>
+        
+        <div id="level2Content" class="content-area">
+            <div class="level-info">
+                <div class="info-item"><div class="info-value">15</div><div class="info-label">Lessons</div></div>
+                <div class="info-item"><div class="info-value">300</div><div class="info-label">Vocabulary</div></div>
+                <div class="info-item"><div class="info-value">A2</div><div class="info-label">CEFR Level</div></div>
+                <div class="info-item"><div class="info-value">50</div><div class="info-label">Study Hours</div></div>
+            </div>
+            <div class="lesson-list" id="lessonList2"></div>
+        </div>
+        
+        <div id="level3Content" class="content-area">
+            <div class="level-info">
+                <div class="info-item"><div class="info-value">20</div><div class="info-label">Lessons</div></div>
+                <div class="info-item"><div class="info-value">600</div><div class="info-label">Vocabulary</div></div>
+                <div class="info-item"><div class="info-value">B1</div><div class="info-label">CEFR Level</div></div>
+                <div class="info-item"><div class="info-value">80</div><div class="info-label">Study Hours</div></div>
+            </div>
+            <div class="lesson-list" id="lessonList3"></div>
+        </div>
+        
+        <div id="level4Content" class="content-area">
+            <div class="level-info">
+                <div class="info-item"><div class="info-value">20</div><div class="info-label">Lessons</div></div>
+                <div class="info-item"><div class="info-value">1200</div><div class="info-label">Vocabulary</div></div>
+                <div class="info-item"><div class="info-value">B2</div><div class="info-label">CEFR Level</div></div>
+                <div class="info-item"><div class="info-value">100</div><div class="info-label">Study Hours</div></div>
+            </div>
+            <div class="lesson-list" id="lessonList4"></div>
+        </div>
+        
+        <div id="level5Content" class="content-area">
+            <div class="level-info">
+                <div class="info-item"><div class="info-value">36</div><div class="info-label">Lessons</div></div>
+                <div class="info-item"><div class="info-value">2500</div><div class="info-label">Vocabulary</div></div>
+                <div class="info-item"><div class="info-value">C1</div><div class="info-label">CEFR Level</div></div>
+                <div class="info-item"><div class="info-value">150</div><div class="info-label">Study Hours</div></div>
+            </div>
+            <div class="lesson-list" id="lessonList5"></div>
+        </div>
+        
+        <div id="level6Content" class="content-area">
+            <div class="level-info">
+                <div class="info-item"><div class="info-value">18</div><div class="info-label">Lessons</div></div>
+                <div class="info-item"><div class="info-value">5000+</div><div class="info-label">Vocabulary</div></div>
+                <div class="info-item"><div class="info-value">C2</div><div class="info-label">CEFR Level</div></div>
+                <div class="info-item"><div class="info-value">200</div><div class="info-label">Study Hours</div></div>
+            </div>
+            <div class="lesson-list" id="lessonList6"></div>
+        </div>
+        
+        <button class="back-btn" onclick="location.href='/'">🏠 Back to Main Chat</button>
+    </div>
+
+    <script>
+        let currentLevel = 1;
+        
+        // Complete lesson data for all levels
+        const hsk1Lessons = [
+            {num: 1, title: "你好", title_en: "Hello", vocab: 12, grammar: 2},
+            {num: 2, title: "谢谢你", title_en: "Thank You", vocab: 8, grammar: 1},
+            {num: 3, title: "你叫什么名字", title_en: "What's Your Name", vocab: 8, grammar: 1},
+            {num: 4, title: "她是我的汉语老师", title_en: "She's My Chinese Teacher", vocab: 8, grammar: 1},
+            {num: 5, title: "她女儿今年二十岁", title_en: "Her Daughter is 20", vocab: 15, grammar: 1},
+            {num: 6, title: "我会说汉语", title_en: "I Can Speak Chinese", vocab: 8, grammar: 1},
+            {num: 7, title: "今天几号", title_en: "What's the Date", vocab: 14, grammar: 1},
+            {num: 8, title: "我想喝茶", title_en: "I Want Tea", vocab: 10, grammar: 1},
+            {num: 9, title: "你儿子在哪儿工作", title_en: "Where Does Your Son Work", vocab: 12, grammar: 1},
+            {num: 10, title: "我能坐这儿吗", title_en: "Can I Sit Here", vocab: 14, grammar: 1},
+            {num: 11, title: "现在几点", title_en: "What Time Is It", vocab: 11, grammar: 1},
+            {num: 12, title: "明天天气怎么样", title_en: "How's the Weather", vocab: 13, grammar: 1},
+            {num: 13, title: "他在学做中国菜呢", title_en: "Learning Chinese Cooking", vocab: 12, grammar: 1},
+            {num: 14, title: "她买了不少衣服", title_en: "Shopping for Clothes", vocab: 14, grammar: 1},
+            {num: 15, title: "我是坐飞机来的", title_en: "I Came by Plane", vocab: 11, grammar: 1}
+        ];
+        
+        // Create lessons for HSK 2-6
+        const hsk2Lessons = [];
+        const hsk3Lessons = [];
+        const hsk4Lessons = [];
+        const hsk5Lessons = [];
+        const hsk6Lessons = [];
+        
+        for (let i = 1; i <= 15; i++) {
+            hsk2Lessons.push({num: i, title: `HSK 2 Lesson ${i}`, title_en: `Lesson ${i}`, vocab: 15, grammar: 2});
+        }
+        for (let i = 1; i <= 20; i++) {
+            hsk3Lessons.push({num: i, title: `HSK 3 Lesson ${i}`, title_en: `Lesson ${i}`, vocab: 15, grammar: 2});
+            hsk4Lessons.push({num: i, title: `HSK 4 Lesson ${i}`, title_en: `Lesson ${i}`, vocab: 20, grammar: 2});
+        }
+        for (let i = 1; i <= 36; i++) {
+            hsk5Lessons.push({num: i, title: `HSK 5 Lesson ${i}`, title_en: `Lesson ${i}`, vocab: 25, grammar: 2});
+        }
+        for (let i = 1; i <= 18; i++) {
+            hsk6Lessons.push({num: i, title: `HSK 6 Lesson ${i}`, title_en: `Lesson ${i}`, vocab: 30, grammar: 2});
+        }
+        
+        function renderLessonList(level, lessons) {
+            const container = document.getElementById(`lessonList${level}`);
+            if (!container) return;
+            container.innerHTML = '';
+            lessons.forEach(lesson => {
+                const lessonDiv = document.createElement('div');
+                lessonDiv.className = 'lesson-item';
+                lessonDiv.innerHTML = `
+                    <div class="lesson-left">
+                        <div class="lesson-number">Lesson ${lesson.num}</div>
+                        <div class="lesson-info">
+                            <div class="lesson-title">${lesson.title}</div>
+                            <div class="lesson-title-en">${lesson.title_en}</div>
+                            <div class="lesson-stats">
+                                <span>📚 ${lesson.vocab} words</span>
+                                <span>📖 ${lesson.grammar} grammar</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="play-lesson-btn" onclick="openLesson(${level}, ${lesson.num})">Start Lesson →</button>
+                `;
+                container.appendChild(lessonDiv);
+            });
+        }
+        
+        function openLesson(level, lessonNum) {
+            // Navigate to full_lesson.html with correct level and lesson parameters
+            window.location.href = `/full-lesson?level=${level}&lesson=${lessonNum}`;
+        }
+        
+        function switchLevel(level) {
+            currentLevel = level;
+            document.querySelectorAll('.level-tab').forEach((tab, idx) => {
+                if (idx + 1 === level) tab.classList.add('active');
+                else tab.classList.remove('active');
+            });
+            document.querySelectorAll('.content-area').forEach((area, idx) => {
+                if (idx + 1 === level) area.classList.add('active');
+                else area.classList.remove('active');
+            });
+        }
+        
+        // Initialize
+        renderLessonList(1, hsk1Lessons);
+        renderLessonList(2, hsk2Lessons);
+        renderLessonList(3, hsk3Lessons);
+        renderLessonList(4, hsk4Lessons);
+        renderLessonList(5, hsk5Lessons);
+        renderLessonList(6, hsk6Lessons);
+        
+        document.querySelectorAll('.level-tab').forEach((tab, idx) => {
+            tab.addEventListener('click', () => switchLevel(idx + 1));
+        });
+        
+        // Make openLesson globally available
+        window.openLesson = openLesson;
+    </script>
+</body>
+</html>

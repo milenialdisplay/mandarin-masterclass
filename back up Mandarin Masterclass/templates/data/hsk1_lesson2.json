@@ -1,0 +1,48 @@
+{
+  "title": "谢谢你",
+  "subtitle": "Expressing Thanks, Apologizing, and Polite Expressions",
+  "assistant_message": "Today we learn: expressing thanks (谢谢), you're welcome (不客气), apologizing (对不起), and polite responses (没关系).",
+  "vocabulary": [
+    {"word": "谢谢", "pinyin": "xiè xie", "meaning": "thank you", "meaning_id": "terima kasih", "example": "谢谢你！", "example_translation": "Thank you!", "example_translation_id": "Terima kasih!"},
+    {"word": "不客气", "pinyin": "bù kè qi", "meaning": "you're welcome", "meaning_id": "sama-sama", "example": "不客气！", "example_translation": "You're welcome!", "example_translation_id": "Sama-sama!"},
+    {"word": "对不起", "pinyin": "duì bu qǐ", "meaning": "sorry", "meaning_id": "maaf", "example": "对不起，我迟到了。", "example_translation": "Sorry, I'm late.", "example_translation_id": "Maaf, saya terlambat."},
+    {"word": "没关系", "pinyin": "méi guān xi", "meaning": "it's okay", "meaning_id": "tidak apa-apa", "example": "没关系！", "example_translation": "It's okay!", "example_translation_id": "Tidak apa-apa!"},
+    {"word": "请", "pinyin": "qǐng", "meaning": "please", "meaning_id": "silakan", "example": "请进！", "example_translation": "Please come in!", "example_translation_id": "Silakan masuk!"},
+    {"word": "您", "pinyin": "nín", "meaning": "you (polite)", "meaning_id": "Anda (sopan)", "example": "您好！", "example_translation": "Hello (polite)!", "example_translation_id": "Halo (sopan)!"}
+  ],
+  "grammar": [
+    {
+      "point": "Expressing Thanks",
+      "point_id": "Mengucapkan Terima Kasih",
+      "explanation": "Use 谢谢 (xiè xie) to say thank you. 不客气 (bù kè qi) means you're welcome.",
+      "explanation_id": "Gunakan 谢谢 (xiè xie) untuk mengucapkan terima kasih. 不客气 (bù kè qi) berarti sama-sama.",
+      "examples": [
+        {"chinese": "谢谢你！", "translation": "Thank you!", "translation_id": "Terima kasih!"},
+        {"chinese": "不客气！", "translation": "You're welcome!", "translation_id": "Sama-sama!"}
+      ]
+    },
+    {
+      "point": "Apologizing",
+      "point_id": "Meminta Maaf",
+      "explanation": "Use 对不起 (duì bu qǐ) to say sorry. 没关系 (méi guān xi) means it's okay.",
+      "explanation_id": "Gunakan 对不起 (duì bu qǐ) untuk meminta maaf. 没关系 (méi guān xi) berarti tidak apa-apa.",
+      "examples": [
+        {"chinese": "对不起！", "translation": "Sorry!", "translation_id": "Maaf!"},
+        {"chinese": "没关系！", "translation": "It's okay!", "translation_id": "Tidak apa-apa!"}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Tom", "voice": "male", "chinese": "谢谢你！", "pinyin": "Xièxie nǐ!", "translation": "Thank you!", "translation_id": "Terima kasih!"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "不客气！", "pinyin": "Bù kèqi!", "translation": "You're welcome!", "translation_id": "Sama-sama!"},
+    {"speaker": "male", "name": "Tom", "voice": "male", "chinese": "对不起，我迟到了。", "pinyin": "Duìbuqǐ, wǒ chídào le.", "translation": "Sorry, I'm late.", "translation_id": "Maaf, saya terlambat."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "没关系！请进。", "pinyin": "Méi guānxi! Qǐng jìn.", "translation": "It's okay! Please come in.", "translation_id": "Tidak apa-apa! Silakan masuk."}
+  ],
+  "exercises": [
+    {"question": "What does 谢谢 (xiè xie) mean?", "question_id": "Apa arti 谢谢 (xiè xie)?", "options": ["Sorry", "Thank you", "Hello", "Goodbye"], "options_id": ["Maaf", "Terima kasih", "Halo", "Selamat tinggal"], "correct": 1},
+    {"question": "How do you say 'You're welcome' in Chinese?", "question_id": "Bagaimana mengatakan 'Sama-sama' dalam bahasa Mandarin?", "options": ["对不起", "谢谢", "不客气", "没关系"], "options_id": ["Maaf", "Terima kasih", "Sama-sama", "Tidak apa-apa"], "correct": 2},
+    {"question": "What is 对不起 (duì bu qǐ)?", "question_id": "Apa itu 对不起 (duì bu qǐ)?", "options": ["Thank you", "Sorry", "You're welcome", "Please"], "options_id": ["Terima kasih", "Maaf", "Sama-sama", "Silakan"], "correct": 1},
+    {"question": "How to respond to 对不起?", "question_id": "Bagaimana merespon 对不起?", "options": ["谢谢", "不客气", "没关系", "你好"], "options_id": ["Terima kasih", "Sama-sama", "Tidak apa-apa", "Halo"], "correct": 2},
+    {"question": "Which word means 'please'?", "question_id": "Kata mana yang berarti 'silakan'?", "options": ["请", "您", "谢谢", "对不起"], "options_id": ["Silakan", "Anda (sopan)", "Terima kasih", "Maaf"], "correct": 0}
+  ]
+}

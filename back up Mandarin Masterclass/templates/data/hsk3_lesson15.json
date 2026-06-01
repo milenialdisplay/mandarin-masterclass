@@ -1,0 +1,51 @@
+{
+  "title": "我们都应该保护环境",
+  "subtitle": "Expressing Obligation with 应该, Talking About Environmental Protection, Using 都 for Emphasis",
+  "assistant_message": "Today we learn: expressing obligation with 应该 (yīnggāi), talking about environmental protection, and using 都 (dōu) to emphasize 'all'.",
+  "vocabulary": [
+    {"word": "应该", "pinyin": "yīng gāi", "meaning": "should/ought to", "meaning_id": "seharusnya", "example": "应该保护", "example_translation": "should protect", "example_translation_id": "seharusnya melindungi"},
+    {"word": "保护", "pinyin": "bǎo hù", "meaning": "to protect", "meaning_id": "melindungi", "example": "保护环境", "example_translation": "protect the environment", "example_translation_id": "melindungi lingkungan"},
+    {"word": "环境", "pinyin": "huán jìng", "meaning": "environment", "meaning_id": "lingkungan", "example": "自然环境", "example_translation": "natural environment", "example_translation_id": "lingkungan alam"},
+    {"word": "污染", "pinyin": "wū rǎn", "meaning": "pollution", "meaning_id": "polusi", "example": "空气污染", "example_translation": "air pollution", "example_translation_id": "polusi udara"},
+    {"word": "回收", "pinyin": "huí shōu", "meaning": "to recycle", "meaning_id": "daur ulang", "example": "回收垃圾", "example_translation": "recycle trash", "example_translation_id": "daur ulang sampah"},
+    {"word": "节约", "pinyin": "jié yuē", "meaning": "to save/conserve", "meaning_id": "menghemat", "example": "节约用水", "example_translation": "save water", "example_translation_id": "menghemat air"},
+    {"word": "能源", "pinyin": "néng yuán", "meaning": "energy", "meaning_id": "energi", "example": "清洁能源", "example_translation": "clean energy", "example_translation_id": "energi bersih"},
+    {"word": "地球", "pinyin": "dì qiú", "meaning": "Earth", "meaning_id": "Bumi", "example": "保护地球", "example_translation": "protect the Earth", "example_translation_id": "melindungi Bumi"}
+  ],
+  "grammar": [
+    {
+      "point": "Expressing Obligation with 应该 (yīnggāi)",
+      "point_id": "Menyatakan Kewajiban dengan 应该 (yīnggāi)",
+      "explanation": "Use 应该 before a verb to express 'should' or 'ought to'. Structure: Subject + 应该 + Verb.",
+      "explanation_id": "Gunakan 应该 sebelum kata kerja untuk menyatakan 'seharusnya'. Struktur: Subjek + 应该 + Kata Kerja.",
+      "examples": [
+        {"chinese": "我们都应该保护环境。", "translation": "We should all protect the environment.", "translation_id": "Kita semua seharusnya melindungi lingkungan."},
+        {"chinese": "你应该多运动。", "translation": "You should exercise more.", "translation_id": "Kamu seharusnya lebih banyak berolahraga."},
+        {"chinese": "不应该浪费食物。", "translation": "We shouldn't waste food.", "translation_id": "Seharusnya tidak membuang-buang makanan."}
+      ]
+    },
+    {
+      "point": "Using 都 (dōu) for Emphasis",
+      "point_id": "Menggunakan 都 (dōu) untuk Penekanan",
+      "explanation": "Place 都 after the subject to emphasize 'all' or 'everyone'.",
+      "explanation_id": "Letakkan 都 setelah subjek untuk menekankan 'semua' atau 'setiap orang'.",
+      "examples": [
+        {"chinese": "我们都喜欢中国菜。", "translation": "We all like Chinese food.", "translation_id": "Kita semua suka masakan Tiongkok."},
+        {"chinese": "大家都很努力。", "translation": "Everyone works very hard.", "translation_id": "Semua orang bekerja sangat keras."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "现在的环境污染越来越严重。", "pinyin": "Xiànzài de huánjìng wūrǎn yuè lái yuè yánzhòng.", "translation": "Environmental pollution is getting more and more serious.", "translation_id": "Polusi lingkungan semakin parah."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "是啊，我们都应该保护环境。", "pinyin": "Shì a, wǒmen dōu yīnggāi bǎohù huánjìng.", "translation": "Yes, we should all protect the environment.", "translation_id": "Ya, kita semua seharusnya melindungi lingkungan."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "我们可以从节约用水开始。", "pinyin": "Wǒmen kěyǐ cóng jiéyuē yòngshuǐ kāishǐ.", "translation": "We can start by saving water.", "translation_id": "Kita bisa mulai dengan menghemat air."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "说得对，还要记得垃圾分类。", "pinyin": "Shuō de duì, hái yào jìde lājī fēnlèi.", "translation": "Well said, also remember to separate trash.", "translation_id": "Benar, juga ingat untuk memisahkan sampah."}
+  ],
+  "exercises": [
+    {"question": "What does 应该 (yīnggāi) express?", "question_id": "Apa yang diekspresikan oleh 应该 (yīnggāi)?", "options": ["Must", "Should/ought to", "Can", "May"], "options_id": ["Harus", "Seharusnya", "Bisa", "Boleh"], "correct": 1},
+    {"question": "How do you say 'We should all protect the environment' in Chinese?", "question_id": "Bagaimana mengatakan 'Kita semua seharusnya melindungi lingkungan' dalam bahasa Mandarin?", "options": ["我们都保护环境", "我们都应该保护环境", "我们应该保护环境", "我们保护环境"], "options_id": ["Kita semua melindungi lingkungan", "Kita semua seharusnya melindungi lingkungan", "Kita seharusnya melindungi lingkungan", "Kita melindungi lingkungan"], "correct": 1},
+    {"question": "What does 保护 (bǎohù) mean?", "question_id": "Apa arti 保护 (bǎohù)?", "options": ["To destroy", "To protect", "To pollute", "To clean"], "options_id": ["Menghancurkan", "Melindungi", "Mencemari", "Membersihkan"], "correct": 1},
+    {"question": "How to say 'save water' in Chinese?", "question_id": "Bagaimana mengatakan 'menghemat air' dalam bahasa Mandarin?", "options": ["节约水", "节约用水", "省水", "All of the above"], "options_id": ["Hemat air", "Hemat menggunakan air", "Hemat air", "Semua di atas"], "correct": 3},
+    {"question": "What does 污染 (wūrǎn) mean?", "question_id": "Apa arti 污染 (wūrǎn)?", "options": ["Environment", "Pollution", "Protection", "Recycle"], "options_id": ["Lingkungan", "Polusi", "Perlindungan", "Daur ulang"], "correct": 1}
+  ]
+}

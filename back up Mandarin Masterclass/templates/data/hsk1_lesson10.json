@@ -1,0 +1,50 @@
+{
+  "title": "我能坐这儿吗",
+  "subtitle": "Asking for Permission, Using 能 and 可以, Using Measure Words",
+  "assistant_message": "Today we learn: asking for permission with 能 (néng) and 可以 (kěyǐ), and using measure words (个, 本, 杯).",
+  "vocabulary": [
+    {"word": "能", "pinyin": "néng", "meaning": "can (permission/ability)", "meaning_id": "bisa (izin/kemampuan)", "example": "我能进来吗？", "example_translation": "Can I come in?", "example_translation_id": "Bisakah saya masuk?"},
+    {"word": "可以", "pinyin": "kě yǐ", "meaning": "may, can (permission)", "meaning_id": "boleh, bisa (izin)", "example": "可以坐这儿吗？", "example_translation": "May I sit here?", "example_translation_id": "Bolehkah saya duduk di sini?"},
+    {"word": "坐", "pinyin": "zuò", "meaning": "to sit", "meaning_id": "duduk", "example": "请坐", "example_translation": "Please sit", "example_translation_id": "Silakan duduk"},
+    {"word": "个", "pinyin": "gè", "meaning": "general measure word", "meaning_id": "kata bantu umum", "example": "一个人", "example_translation": "one person", "example_translation_id": "satu orang"},
+    {"word": "本", "pinyin": "běn", "meaning": "measure word for books", "meaning_id": "kata bantu untuk buku", "example": "一本书", "example_translation": "one book", "example_translation_id": "satu buku"},
+    {"word": "杯", "pinyin": "bēi", "meaning": "measure word for cups", "meaning_id": "kata bantu untuk cangkir", "example": "一杯茶", "example_translation": "a cup of tea", "example_translation_id": "secangkir teh"},
+    {"word": "请", "pinyin": "qǐng", "meaning": "please", "meaning_id": "silakan", "example": "请问", "example_translation": "May I ask...", "example_translation_id": "Boleh saya tanya..."},
+    {"word": "谢谢", "pinyin": "xiè xie", "meaning": "thank you", "meaning_id": "terima kasih", "example": "谢谢你", "example_translation": "Thank you", "example_translation_id": "Terima kasih"}
+  ],
+  "grammar": [
+    {
+      "point": "Asking Permission with 能 (néng)",
+      "point_id": "Meminta Izin dengan 能 (néng)",
+      "explanation": "Use 能 before the verb to ask 'can I' for permission.",
+      "explanation_id": "Gunakan 能 sebelum kata kerja untuk bertanya 'bisakah saya' untuk izin.",
+      "examples": [
+        {"chinese": "我能坐这儿吗？", "translation": "Can I sit here?", "translation_id": "Bisakah saya duduk di sini?"},
+        {"chinese": "我能进来吗？", "translation": "Can I come in?", "translation_id": "Bisakah saya masuk?"}
+      ]
+    },
+    {
+      "point": "Asking Permission with 可以 (kěyǐ)",
+      "point_id": "Meminta Izin dengan 可以 (kěyǐ)",
+      "explanation": "可以 is more polite than 能 for asking permission.",
+      "explanation_id": "可以 lebih sopan daripada 能 untuk meminta izin.",
+      "examples": [
+        {"chinese": "我可以坐这儿吗？", "translation": "May I sit here?", "translation_id": "Bolehkah saya duduk di sini?"},
+        {"chinese": "我可以问你吗？", "translation": "May I ask you?", "translation_id": "Bolehkah saya bertanya?"}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Tom", "voice": "male", "chinese": "请问，我能坐这儿吗？", "pinyin": "Qǐngwèn, wǒ néng zuò zhèr ma?", "translation": "Excuse me, can I sit here?", "translation_id": "Permisi, bisakah saya duduk di sini?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "可以，请坐。", "pinyin": "Kěyǐ, qǐng zuò.", "translation": "Yes, please sit down.", "translation_id": "Boleh, silakan duduk."},
+    {"speaker": "male", "name": "Tom", "voice": "male", "chinese": "谢谢！", "pinyin": "Xièxie!", "translation": "Thank you!", "translation_id": "Terima kasih!"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "不客气。", "pinyin": "Bù kèqi.", "translation": "You're welcome.", "translation_id": "Sama-sama."}
+  ],
+  "exercises": [
+    {"question": "What does 能 (néng) mean?", "question_id": "Apa arti 能 (néng)?", "options": ["Want", "Can (permission/ability)", "Go", "Come"], "options_id": ["Ingin", "Bisa (izin/kemampuan)", "Pergi", "Datang"], "correct": 1},
+    {"question": "How do you ask 'Can I sit here?' in Chinese?", "question_id": "Bagaimana bertanya 'Bisakah saya duduk di sini?' dalam bahasa Mandarin?", "options": ["我能坐这儿吗？", "我想坐这儿", "我去坐这儿", "我坐这儿"], "options_id": ["Bisakah saya duduk di sini?", "Saya ingin duduk di sini", "Saya pergi duduk di sini", "Saya duduk di sini"], "correct": 0},
+    {"question": "What is the measure word for books?", "question_id": "Apa kata bantu untuk buku?", "options": ["个", "本", "杯", "只"], "options_id": ["(umum)", "(buku)", "(cangkir)", "(hewan)"], "correct": 1},
+    {"question": "How to say 'May I ask you?' in Chinese?", "question_id": "Bagaimana mengatakan 'Bolehkah saya bertanya?' dalam bahasa Mandarin?", "options": ["我可以问你吗？", "我能问你吗？", "我想问你", "A and B"], "options_id": ["Bolehkah saya bertanya?", "Bisakah saya bertanya?", "Saya ingin bertanya", "A dan B"], "correct": 3},
+    {"question": "What is the polite reply to 'May I sit here?'", "question_id": "Apa jawaban sopan untuk 'Bolehkah saya duduk di sini?'", "options": ["可以，请坐", "不可以", "不行", "不要"], "options_id": ["Boleh, silakan duduk", "Tidak boleh", "Tidak bisa", "Jangan"], "correct": 0}
+  ]
+}

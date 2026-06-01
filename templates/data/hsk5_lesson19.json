@@ -1,0 +1,228 @@
+{
+  "title": "情绪控制",
+  "subtitle": "Emotional Intelligence, Self-Regulation, Mental Health",
+  "assistant_message": "Today we learn: discussing emotional control and regulation, expressing feelings appropriately, and talking about mental health and well-being.",
+  "vocabulary": [
+    {
+      "word": "情绪",
+      "pinyin": "qíng xù",
+      "meaning": "emotion",
+      "meaning_id": "emosi",
+      "example": "控制情绪",
+      "example_translation": "control emotions",
+      "example_translation_id": "mengendalikan emosi"
+    },
+    {
+      "word": "控制",
+      "pinyin": "kòng zhì",
+      "meaning": "to control",
+      "meaning_id": "mengendalikan",
+      "example": "自我控制",
+      "example_translation": "self-control",
+      "example_translation_id": "kontrol diri"
+    },
+    {
+      "word": "冷静",
+      "pinyin": "lěng jìng",
+      "meaning": "calm",
+      "meaning_id": "tenang",
+      "example": "保持冷静",
+      "example_translation": "stay calm",
+      "example_translation_id": "tetap tenang"
+    },
+    {
+      "word": "愤怒",
+      "pinyin": "fèn nù",
+      "meaning": "anger",
+      "meaning_id": "kemarahan",
+      "example": "控制愤怒",
+      "example_translation": "control anger",
+      "example_translation_id": "mengendalikan kemarahan"
+    },
+    {
+      "word": "压力",
+      "pinyin": "yā lì",
+      "meaning": "stress",
+      "meaning_id": "stres",
+      "example": "减轻压力",
+      "example_translation": "reduce stress",
+      "example_translation_id": "mengurangi stres"
+    },
+    {
+      "word": "放松",
+      "pinyin": "fàng sōng",
+      "meaning": "to relax",
+      "meaning_id": "bersantai",
+      "example": "听音乐放松",
+      "example_translation": "relax by listening to music",
+      "example_translation_id": "bersantai dengan mendengarkan musik"
+    },
+    {
+      "word": "积极",
+      "pinyin": "jī jí",
+      "meaning": "positive",
+      "meaning_id": "positif",
+      "example": "积极思考",
+      "example_translation": "positive thinking",
+      "example_translation_id": "berpikir positif"
+    },
+    {
+      "word": "消极",
+      "pinyin": "xiāo jí",
+      "meaning": "negative",
+      "meaning_id": "negatif",
+      "example": "消极情绪",
+      "example_translation": "negative emotions",
+      "example_translation_id": "emosi negatif"
+    },
+    {
+      "word": "调节",
+      "pinyin": "tiáo jié",
+      "meaning": "to regulate",
+      "meaning_id": "mengatur",
+      "example": "调节情绪",
+      "example_translation": "regulate emotions",
+      "example_translation_id": "mengatur emosi"
+    },
+    {
+      "word": "心理健康",
+      "pinyin": "xīn lǐ jiàn kāng",
+      "meaning": "mental health",
+      "meaning_id": "kesehatan mental",
+      "example": "关注心理健康",
+      "example_translation": "pay attention to mental health",
+      "example_translation_id": "perhatikan kesehatan mental"
+    }
+  ],
+  "grammar": [
+    {
+      "point": "Using 冷静 (lěngjìng) - 'Calm down'",
+      "point_id": "Menggunakan 冷静 (lěngjìng) - 'Tenang'",
+      "explanation": "冷静 can be used as an adjective meaning calm, or as a verb meaning to calm down.",
+      "explanation_id": "冷静 dapat digunakan sebagai kata sifat yang berarti tenang, atau sebagai kata kerja yang berarti menenangkan diri.",
+      "examples": [
+        {
+          "chinese": "遇到困难时要保持冷静。",
+          "translation": "Stay calm when facing difficulties.",
+          "translation_id": "Tetap tenang saat menghadapi kesulitan."
+        },
+        {
+          "chinese": "他冷静地处理了问题。",
+          "translation": "He handled the problem calmly.",
+          "translation_id": "Dia menangani masalah dengan tenang."
+        }
+      ]
+    },
+    {
+      "point": "Using 反而 (fǎn'ér) - 'On the contrary'",
+      "point_id": "Menggunakan 反而 (fǎn'ér) - 'Sebaliknya'",
+      "explanation": "反而 indicates a contrary result, meaning 'instead' or 'on the contrary'.",
+      "explanation_id": "反而 menunjukkan hasil yang berlawanan, berarti 'sebaliknya'.",
+      "examples": [
+        {
+          "chinese": "他不但没有生气，反而笑了。",
+          "translation": "He didn't get angry; on the contrary, he smiled.",
+          "translation_id": "Dia tidak marah; sebaliknya, dia tersenyum."
+        },
+        {
+          "chinese": "批评反而让他更努力。",
+          "translation": "Criticism made him work even harder instead.",
+          "translation_id": "Kritik malah membuatnya bekerja lebih keras."
+        }
+      ]
+    },
+    {
+      "point": "Using 难免 (nánmiǎn) - 'Inevitable'",
+      "point_id": "Menggunakan 难免 (nánmiǎn) - 'Tidak terhindarkan'",
+      "explanation": "难免 means 'hard to avoid' or 'inevitable', used for situations that are likely to happen.",
+      "explanation_id": "难免 berarti 'sulit dihindari' atau 'tidak terhindarkan', digunakan untuk situasi yang mungkin terjadi.",
+      "examples": [
+        {
+          "chinese": "工作中难免会遇到压力。",
+          "translation": "It's inevitable to encounter stress at work.",
+          "translation_id": "Tidak terhindarkan untuk mengalami stres di tempat kerja."
+        },
+        {
+          "chinese": "初次尝试难免犯错。",
+          "translation": "It's inevitable to make mistakes when trying something for the first time.",
+          "translation_id": "Tidak terhindarkan untuk membuat kesalahan saat mencoba sesuatu untuk pertama kali."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "male",
+      "name": "Li Qiang",
+      "voice": "male",
+      "chinese": "最近工作压力很大，我经常感到愤怒和焦虑。",
+      "pinyin": "Zuìjìn gōngzuò yālì hěn dà, wǒ jīngcháng gǎndào fènnù hé jiāolǜ.",
+      "translation": "Work has been very stressful lately. I often feel angry and anxious.",
+      "translation_id": "Pekerjaan akhir-akhir ini sangat stres. Saya sering merasa marah dan cemas."
+    },
+    {
+      "speaker": "female",
+      "name": "Wang Jing",
+      "voice": "female",
+      "chinese": "你需要学会情绪控制。遇到挫折时，先深呼吸，让自己冷静下来。",
+      "pinyin": "Nǐ xūyào xuéhuì qíngxù kòngzhì. Yù dào cuòzhé shí, xiān shēn hūxī, ràng zìjǐ lěngjìng xiàlái.",
+      "translation": "You need to learn emotional control. When facing setbacks, take deep breaths first and calm yourself down.",
+      "translation_id": "Anda perlu belajar kontrol emosi. Saat menghadapi kemunduran, tarik napas dalam-dalam dulu dan tenangkan diri."
+    },
+    {
+      "speaker": "male",
+      "name": "Li Qiang",
+      "voice": "male",
+      "chinese": "有时候我控制不住自己，情绪爆发后会后悔。",
+      "pinyin": "Yǒu shíhòu wǒ kòngzhì bù zhù zìjǐ, qíngxù bàofā hòu huì hòuhuǐ.",
+      "translation": "Sometimes I can't control myself, and I regret it after an emotional outburst.",
+      "translation_id": "Kadang saya tidak bisa mengendalikan diri, dan menyesal setelah ledakan emosi."
+    },
+    {
+      "speaker": "female",
+      "name": "Wang Jing",
+      "voice": "female",
+      "chinese": "多运动、听音乐可以帮助放松。积极思考也很重要，压力反而会变成动力。",
+      "pinyin": "Duō yùndòng, tīng yīnyuè kěyǐ bāngzhù fàngsōng. Jījí sīkǎo yě hěn zhòngyào, yālì fǎn'ér huì biànchéng dònglì.",
+      "translation": "More exercise and listening to music can help you relax. Positive thinking is also important; stress can instead become motivation.",
+      "translation_id": "Lebih banyak olahraga dan mendengarkan musik dapat membantu Anda rileks. Berpikir positif juga penting; stres malah bisa menjadi motivasi."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "What does 情绪 (qíngxù) mean?",
+      "question_id": "Apa arti 情绪 (qíngxù)?",
+      "options": ["Stress", "Emotion", "Anger", "Calm"],
+      "options_id": ["Stres", "Emosi", "Kemarahan", "Tenang"],
+      "correct": 1
+    },
+    {
+      "question": "How do you say 'stay calm' in Chinese?",
+      "question_id": "Bagaimana mengatakan 'tetap tenang' dalam bahasa Mandarin?",
+      "options": ["保持冷静", "控制愤怒", "减轻压力", "积极思考"],
+      "options_id": ["tetap tenang", "mengendalikan kemarahan", "mengurangi stres", "berpikir positif"],
+      "correct": 0
+    },
+    {
+      "question": "What does 心理健康 (xīnlǐ jiànkāng) mean?",
+      "question_id": "Apa arti 心理健康 (xīnlǐ jiànkāng)?",
+      "options": ["Physical health", "Mental health", "Emotional control", "Stress management"],
+      "options_id": ["Kesehatan fisik", "Kesehatan mental", "Kontrol emosi", "Manajemen stres"],
+      "correct": 1
+    },
+    {
+      "question": "Complete the sentence: 他不但没有生气，______笑了。",
+      "question_id": "Lengkapi kalimat: 他不但没有生气，______笑了。",
+      "options": ["而且", "反而", "但是", "所以"],
+      "options_id": ["dan juga", "sebaliknya", "tetapi", "jadi"],
+      "correct": 1
+    },
+    {
+      "question": "What does 放松 (fàngsōng) mean?",
+      "question_id": "Apa arti 放松 (fàngsōng)?",
+      "options": ["To stress", "To relax", "To control", "To regulate"],
+      "options_id": ["Stres", "Bersantai", "Mengendalikan", "Mengatur"],
+      "correct": 1
+    }
+  ]
+}

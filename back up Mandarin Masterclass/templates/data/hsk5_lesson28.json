@@ -1,0 +1,228 @@
+{
+  "title": "全球化",
+  "subtitle": "Globalization, Interconnectedness, Global Economy",
+  "assistant_message": "Today we learn: discussing globalization and its effects, expressing views on global interconnectedness, and talking about economic and cultural integration.",
+  "vocabulary": [
+    {
+      "word": "全球化",
+      "pinyin": "quán qiú huà",
+      "meaning": "globalization",
+      "meaning_id": "globalisasi",
+      "example": "全球化趋势",
+      "example_translation": "globalization trend",
+      "example_translation_id": "tren globalisasi"
+    },
+    {
+      "word": "经济",
+      "pinyin": "jīng jì",
+      "meaning": "economy",
+      "meaning_id": "ekonomi",
+      "example": "全球经济",
+      "example_translation": "global economy",
+      "example_translation_id": "ekonomi global"
+    },
+    {
+      "word": "贸易",
+      "pinyin": "mào yì",
+      "meaning": "trade",
+      "meaning_id": "perdagangan",
+      "example": "国际贸易",
+      "example_translation": "international trade",
+      "example_translation_id": "perdagangan internasional"
+    },
+    {
+      "word": "交流",
+      "pinyin": "jiāo liú",
+      "meaning": "exchange",
+      "meaning_id": "pertukaran",
+      "example": "文化交流",
+      "example_translation": "cultural exchange",
+      "example_translation_id": "pertukaran budaya"
+    },
+    {
+      "word": "影响",
+      "pinyin": "yǐng xiǎng",
+      "meaning": "impact",
+      "meaning_id": "dampak",
+      "example": "深远影响",
+      "example_translation": "far-reaching impact",
+      "example_translation_id": "dampak yang luas"
+    },
+    {
+      "word": "机遇",
+      "pinyin": "jī yù",
+      "meaning": "opportunity",
+      "meaning_id": "kesempatan",
+      "example": "抓住机遇",
+      "example_translation": "seize opportunities",
+      "example_translation_id": "merebut kesempatan"
+    },
+    {
+      "word": "挑战",
+      "pinyin": "tiǎo zhàn",
+      "meaning": "challenge",
+      "meaning_id": "tantangan",
+      "example": "面临挑战",
+      "example_translation": "face challenges",
+      "example_translation_id": "menghadapi tantangan"
+    },
+    {
+      "word": "融合",
+      "pinyin": "róng hé",
+      "meaning": "integration",
+      "meaning_id": "integrasi",
+      "example": "文化融合",
+      "example_translation": "cultural integration",
+      "example_translation_id": "integrasi budaya"
+    },
+    {
+      "word": "多样性",
+      "pinyin": "duō yàng xìng",
+      "meaning": "diversity",
+      "meaning_id": "keanekaragaman",
+      "example": "文化多样性",
+      "example_translation": "cultural diversity",
+      "example_translation_id": "keanekaragaman budaya"
+    },
+    {
+      "word": "竞争",
+      "pinyin": "jìng zhēng",
+      "meaning": "competition",
+      "meaning_id": "persaingan",
+      "example": "国际竞争",
+      "example_translation": "international competition",
+      "example_translation_id": "persaingan internasional"
+    }
+  ],
+  "grammar": [
+    {
+      "point": "Using 随着...越来越... (suízhe...yuèláiyuè...) - 'As... increasingly...'",
+      "point_id": "Menggunakan 随着...越来越... (suízhe...yuèláiyuè...) - 'Seiring... semakin...'",
+      "explanation": "This structure shows a gradual change over time.",
+      "explanation_id": "Struktur ini menunjukkan perubahan bertahap seiring waktu.",
+      "examples": [
+        {
+          "chinese": "随着全球化的发展，各国经济联系越来越紧密。",
+          "translation": "As globalization develops, economic ties between countries become increasingly close.",
+          "translation_id": "Seiring perkembangan globalisasi, hubungan ekonomi antar negara menjadi semakin erat."
+        },
+        {
+          "chinese": "随着文化交流增多，人们越来越理解不同文化。",
+          "translation": "As cultural exchanges increase, people increasingly understand different cultures.",
+          "translation_id": "Seiring meningkatnya pertukaran budaya, orang semakin memahami budaya yang berbeda."
+        }
+      ]
+    },
+    {
+      "point": "Using 在...方面 (zài...fāngmiàn) - 'In terms of...'",
+      "point_id": "Menggunakan 在...方面 (zài...fāngmiàn) - 'Dalam hal...'",
+      "explanation": "This structure specifies a particular aspect or area.",
+      "explanation_id": "Struktur ini menentukan aspek atau area tertentu.",
+      "examples": [
+        {
+          "chinese": "在经济方面，全球化带来了很多机遇。",
+          "translation": "In economic terms, globalization has brought many opportunities.",
+          "translation_id": "Dalam hal ekonomi, globalisasi telah membawa banyak kesempatan."
+        },
+        {
+          "chinese": "在文化方面，全球化促进了文化交流。",
+          "translation": "In cultural terms, globalization has promoted cultural exchange.",
+          "translation_id": "Dalam hal budaya, globalisasi telah mempromosikan pertukaran budaya."
+        }
+      ]
+    },
+    {
+      "point": "Using 不仅...而且... (bùjǐn...érqiě...) - 'Not only... but also...'",
+      "point_id": "Menggunakan 不仅...而且... (bùjǐn...érqiě...) - 'Tidak hanya... tetapi juga...'",
+      "explanation": "This structure adds emphasis, with the second clause often being more significant.",
+      "explanation_id": "Struktur ini menambahkan penekanan, dengan klausa kedua seringkali lebih signifikan.",
+      "examples": [
+        {
+          "chinese": "全球化不仅带来了经济机遇，而且促进了文化融合。",
+          "translation": "Globalization has not only brought economic opportunities, but also promoted cultural integration.",
+          "translation_id": "Globalisasi tidak hanya membawa peluang ekonomi, tetapi juga mendorong integrasi budaya."
+        },
+        {
+          "chinese": "这不仅是个人的挑战，而且是整个社会的课题。",
+          "translation": "This is not only an individual challenge, but also an issue for society as a whole.",
+          "translation_id": "Ini tidak hanya tantangan individu, tetapi juga masalah bagi seluruh masyarakat."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "female",
+      "name": "Li Na",
+      "voice": "female",
+      "chinese": "你觉得全球化对我们生活有什么影响？",
+      "pinyin": "Nǐ juéde quánqiúhuà duì wǒmen shēnghuó yǒu shénme yǐngxiǎng?",
+      "translation": "What impact do you think globalization has on our lives?",
+      "translation_id": "Menurut Anda, apa dampak globalisasi terhadap kehidupan kita?"
+    },
+    {
+      "speaker": "male",
+      "name": "Zhang Wei",
+      "voice": "male",
+      "chinese": "随着全球化的发展，我们可以买到世界各地的产品，也能了解不同文化。",
+      "pinyin": "Suízhe quánqiúhuà de fāzhǎn, wǒmen kěyǐ mǎi dào shìjiè gèdì de chǎnpǐn, yě néng liǎojiě bùtóng wénhuà.",
+      "translation": "As globalization develops, we can buy products from all over the world and also learn about different cultures.",
+      "translation_id": "Seiring perkembangan globalisasi, kita dapat membeli produk dari seluruh dunia dan juga belajar tentang budaya yang berbeda."
+    },
+    {
+      "speaker": "female",
+      "name": "Li Na",
+      "voice": "female",
+      "chinese": "在经济方面，全球化带来了更多就业机会，但同时也加剧了竞争。",
+      "pinyin": "Zài jīngjì fāngmiàn, quánqiúhuà dài lái le gèng duō jiùyè jīhuì, dàn tóngshí yě jiājù le jìngzhēng.",
+      "translation": "In economic terms, globalization has brought more job opportunities, but at the same time intensified competition.",
+      "translation_id": "Dalam hal ekonomi, globalisasi telah membawa lebih banyak peluang kerja, tetapi pada saat yang sama memperketat persaingan."
+    },
+    {
+      "speaker": "male",
+      "name": "Zhang Wei",
+      "voice": "male",
+      "chinese": "全球化不仅带来了挑战，而且创造了机遇。我们既要保持文化多样性，又要促进文化交流融合。",
+      "pinyin": "Quánqiúhuà bùjǐn dài lái le tiǎozhàn, érqiě chuàngzào le jīyù. Wǒmen jì yào bǎochí wénhuà duōyàng xìng, yòu yào cùjìn wénhuà jiāoliú rónghé.",
+      "translation": "Globalization has not only brought challenges but also created opportunities. We need to both maintain cultural diversity and promote cultural exchange and integration.",
+      "translation_id": "Globalisasi tidak hanya membawa tantangan tetapi juga menciptakan peluang. Kita perlu menjaga keanekaragaman budaya dan mempromosikan pertukaran dan integrasi budaya."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "What does 全球化 (quánqiúhuà) mean?",
+      "question_id": "Apa arti 全球化 (quánqiúhuà)?",
+      "options": ["Internationalization", "Globalization", "Modernization", "Westernization"],
+      "options_id": ["Internasionalisasi", "Globalisasi", "Modernisasi", "Westernisasi"],
+      "correct": 1
+    },
+    {
+      "question": "How do you say 'cultural diversity' in Chinese?",
+      "question_id": "Bagaimana mengatakan 'keanekaragaman budaya' dalam bahasa Mandarin?",
+      "options": ["文化多样", "文化多样性", "多元文化", "多文化"],
+      "options_id": ["beragam budaya", "keanekaragaman budaya", "multikultural", "banyak budaya"],
+      "correct": 1
+    },
+    {
+      "question": "What does 融合 (rónghé) mean?",
+      "question_id": "Apa arti 融合 (rónghé)?",
+      "options": ["Integration", "Separation", "Competition", "Isolation"],
+      "options_id": ["Integrasi", "Pemisahan", "Persaingan", "Isolasi"],
+      "correct": 0
+    },
+    {
+      "question": "Complete the sentence: ______全球化的发展，各国经济联系越来越紧密。",
+      "question_id": "Lengkapi kalimat: ______全球化的发展，各国经济联系越来越紧密。",
+      "options": ["对于", "关于", "随着", "沿着"],
+      "options_id": ["Untuk", "Tentang", "Seiring", "Sepanjang"],
+      "correct": 2
+    },
+    {
+      "question": "What is the best translation of 'far-reaching impact'?",
+      "question_id": "Apa terjemahan terbaik dari 'dampak yang luas'?",
+      "options": ["直接影响", "间接影响", "深远影响", "短期影响"],
+      "options_id": ["dampak langsung", "dampak tidak langsung", "dampak yang luas", "dampak jangka pendek"],
+      "correct": 2
+    }
+  ]
+}

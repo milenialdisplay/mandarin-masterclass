@@ -1,0 +1,50 @@
+{
+  "title": "传统节日",
+  "subtitle": "Traditional Festivals, Celebrations, Cultural Heritage",
+  "assistant_message": "Today we learn: discussing traditional festivals, using 庆祝 (qìngzhù) and 习俗 (xísú), and describing celebration customs.",
+  "vocabulary": [
+    {"word": "传统", "pinyin": "chuán tǒng", "meaning": "traditional", "meaning_id": "tradisional", "example": "传统文化", "example_translation": "traditional culture", "example_translation_id": "budaya tradisional"},
+    {"word": "节日", "pinyin": "jié rì", "meaning": "festival", "meaning_id": "festival/hari raya", "example": "传统节日", "example_translation": "traditional festival", "example_translation_id": "festival tradisional"},
+    {"word": "庆祝", "pinyin": "qìng zhù", "meaning": "to celebrate", "meaning_id": "merayakan", "example": "庆祝春节", "example_translation": "celebrate Spring Festival", "example_translation_id": "merayakan Festival Musim Semi"},
+    {"word": "习俗", "pinyin": "xí sú", "meaning": "custom", "meaning_id": "adat istiadat", "example": "节日习俗", "example_translation": "festival customs", "example_translation_id": "adat festival"},
+    {"word": "团圆", "pinyin": "tuán yuán", "meaning": "reunion", "meaning_id": "reuni", "example": "家人团圆", "example_translation": "family reunion", "example_translation_id": "reuni keluarga"},
+    {"word": "礼物", "pinyin": "lǐ wù", "meaning": "gift", "meaning_id": "hadiah", "example": "送礼物", "example_translation": "give gifts", "example_translation_id": "memberi hadiah"},
+    {"word": "热闹", "pinyin": "rè nào", "meaning": "lively", "meaning_id": "ramai", "example": "很热闹", "example_translation": "very lively", "example_translation_id": "sangat ramai"},
+    {"word": "气氛", "pinyin": "qì fēn", "meaning": "atmosphere", "meaning_id": "suasana", "example": "节日气氛", "example_translation": "festive atmosphere", "example_translation_id": "suasana meriah"}
+  ],
+  "grammar": [
+    {
+      "point": "庆祝 (qìngzhù) - To Celebrate",
+      "point_id": "Merayakan",
+      "explanation": "庆祝 is used to talk about celebrating festivals, achievements, or special occasions.",
+      "explanation_id": "庆祝 digunakan untuk membicarakan perayaan festival, pencapaian, atau acara khusus.",
+      "examples": [
+        {"chinese": "春节是中国最重要的传统节日，人们会庆祝很多天。", "translation": "Spring Festival is China's most important traditional festival. People celebrate for many days.", "translation_id": "Festival Musim Semi adalah festival tradisional terpenting di Tiongkok. Orang-orang merayakannya selama berhari-hari."},
+        {"chinese": "我们庆祝新年吃年夜饭。", "translation": "We celebrate New Year by having a reunion dinner.", "translation_id": "Kami merayakan Tahun Baru dengan makan malam reuni."}
+      ]
+    },
+    {
+      "point": "节日气氛 (jiérì qìfēn) - Festive Atmosphere",
+      "point_id": "Suasana Meriah",
+      "explanation": "气氛 means 'atmosphere'. Use 节日气氛 to describe the festive mood during celebrations.",
+      "explanation_id": "气氛 berarti 'suasana'. Gunakan 节日气氛 untuk menggambarkan suasana meriah selama perayaan.",
+      "examples": [
+        {"chinese": "春节的时候，到处都很热闹，节日气氛很浓。", "translation": "During Spring Festival, everywhere is very lively, the festive atmosphere is strong.", "translation_id": "Saat Festival Musim Semi, di mana-mana sangat ramai, suasana meriah sangat terasa."},
+        {"chinese": "节日气氛让人心情愉悦。", "translation": "The festive atmosphere makes people feel happy.", "translation_id": "Suasana meriah membuat orang merasa senang."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "春节快到了，你打算怎么庆祝？", "pinyin": "Chūnjié kuài dào le, nǐ dǎsuàn zěnme qìngzhù?", "translation": "Spring Festival is coming soon, how do you plan to celebrate?", "translation_id": "Festival Musim Semi akan segera tiba, bagaimana rencanamu merayakannya?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "回家和家人团圆，一起吃年夜饭。这是最重要的习俗。", "pinyin": "Huíjiā hé jiārén tuányuán, yīqǐ chī niányèfàn. Zhè shì zuì zhòngyào de xísú.", "translation": "Go home and reunite with family, have reunion dinner together. This is the most important custom.", "translation_id": "Pulang ke rumah dan berkumpul dengan keluarga, makan malam reuni bersama. Ini adalah adat yang paling penting."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "春节还有哪些习俗？", "pinyin": "Chūnjié hái yǒu nǎxiē xísú?", "translation": "What other customs does Spring Festival have?", "translation_id": "Apa saja adat lain dari Festival Musim Semi?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "贴春联、放鞭炮、发红包，很热闹。节日气氛特别浓。", "pinyin": "Tiē chūnlián, fàng biānpào, fā hóngbāo, hěn rènao. Jiérì qìfēn tèbié nóng.", "translation": "Put up Spring Festival couplets, set off firecrackers, give red envelopes. It's very lively. The festive atmosphere is especially strong.", "translation_id": "Pasang pasangan Festival Musim Semi, menyalakan kembang api, memberi angpao. Sangat ramai. Suasana meriah sangat terasa."}
+  ],
+  "exercises": [
+    {"question": "What does 节日 (jiérì) mean?", "question_id": "Apa arti 节日 (jiérì)?", "options": ["Holiday/ Festival", "Weekend", "Vacation", "Birthday"], "options_id": ["Hari libur/Festival", "Akhir pekan", "Liburan", "Ulang tahun"], "correct": 0},
+    {"question": "How do you say 'celebrate Spring Festival' in Chinese?", "question_id": "Bagaimana mengatakan 'merayakan Festival Musim Semi' dalam bahasa Mandarin?", "options": ["庆祝春节", "庆祝新年", "庆祝元旦", "庆祝中秋"], "options_id": ["merayakan Festival Musim Semi", "merayakan Tahun Baru", "merayakan Tahun Baru Masehi", "merayakan Festival Pertengahan Musim Gugur"], "correct": 0},
+    {"question": "What does 团圆 (tuányuán) mean?", "question_id": "Apa arti 团圆 (tuányuán)?", "options": ["Separation", "Reunion", "Gift", "Dinner"], "options_id": ["Perpisahan", "Reuni", "Hadiah", "Makan malam"], "correct": 1},
+    {"question": "What is 红包 (hóngbāo)?", "question_id": "Apa itu 红包 (hóngbāo)?", "options": ["Red packet/money gift", "Red envelope", "Red paper", "Red color"], "options_id": ["Angpao/hadiah uang", "Amplop merah", "Kertas merah", "Warna merah"], "correct": 0},
+    {"question": "How to say 'festive atmosphere' in Chinese?", "question_id": "Bagaimana mengatakan 'suasana meriah' dalam bahasa Mandarin?", "options": ["节日气氛", "热闹气氛", "庆祝气氛", "快乐气氛"], "options_id": ["suasana meriah", "suasana ramai", "suasana perayaan", "suasana gembira"], "correct": 0}
+  ]
+}

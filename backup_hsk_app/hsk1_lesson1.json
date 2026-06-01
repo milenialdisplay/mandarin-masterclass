@@ -1,0 +1,53 @@
+{
+  "title": "你好",
+  "subtitle": "Basic Greetings, Introductions, and Saying Goodbye",
+  "assistant_message": "Today we learn: greetings (你好, 您好), introductions (我叫), and saying goodbye (再见).",
+  "vocabulary": [
+    {"word": "你", "pinyin": "nǐ", "meaning": "you", "meaning_id": "kamu", "example": "你好", "example_translation": "hello", "example_translation_id": "halo"},
+    {"word": "好", "pinyin": "hǎo", "meaning": "good", "meaning_id": "baik", "example": "很好", "example_translation": "very good", "example_translation_id": "sangat baik"},
+    {"word": "你好", "pinyin": "nǐ hǎo", "meaning": "hello", "meaning_id": "halo", "example": "你好！", "example_translation": "Hello!", "example_translation_id": "Halo!"},
+    {"word": "我", "pinyin": "wǒ", "meaning": "I", "meaning_id": "saya", "example": "我是学生", "example_translation": "I am a student", "example_translation_id": "Saya adalah murid"},
+    {"word": "叫", "pinyin": "jiào", "meaning": "to be called", "meaning_id": "dipanggil", "example": "我叫小明", "example_translation": "I'm called Xiaoming", "example_translation_id": "Saya dipanggil Xiaoming"},
+    {"word": "什么", "pinyin": "shén me", "meaning": "what", "meaning_id": "apa", "example": "你叫什么", "example_translation": "What's your name", "example_translation_id": "Siapa namamu"},
+    {"word": "名字", "pinyin": "míng zi", "meaning": "name", "meaning_id": "nama", "example": "我的名字", "example_translation": "my name", "example_translation_id": "nama saya"},
+    {"word": "是", "pinyin": "shì", "meaning": "to be", "meaning_id": "adalah", "example": "我是老师", "example_translation": "I am a teacher", "example_translation_id": "Saya adalah guru"},
+    {"word": "学生", "pinyin": "xué sheng", "meaning": "student", "meaning_id": "murid", "example": "我是学生", "example_translation": "I am a student", "example_translation_id": "Saya adalah murid"},
+    {"word": "老师", "pinyin": "lǎo shī", "meaning": "teacher", "meaning_id": "guru", "example": "王老师", "example_translation": "Teacher Wang", "example_translation_id": "Guru Wang"},
+    {"word": "再见", "pinyin": "zài jiàn", "meaning": "goodbye", "meaning_id": "selamat tinggal", "example": "明天再见", "example_translation": "See you tomorrow", "example_translation_id": "Sampai jumpa besok"},
+    {"word": "谢谢", "pinyin": "xiè xie", "meaning": "thank you", "meaning_id": "terima kasih", "example": "谢谢您", "example_translation": "Thank you", "example_translation_id": "Terima kasih"}
+  ],
+  "grammar": [
+    {
+      "point": "SVO Word Order",
+      "point_id": "Urutan Kata SVO",
+      "explanation": "Chinese uses Subject-Verb-Object word order.",
+      "explanation_id": "Bahasa Mandarin menggunakan urutan kata Subjek-Kata Kerja-Objek.",
+      "examples": [
+        {"chinese": "我爱你", "translation": "I love you", "translation_id": "Saya cinta kamu"}
+      ]
+    },
+    {
+      "point": "吗 Questions",
+      "point_id": "Pertanyaan dengan 吗",
+      "explanation": "Add 吗 to make yes/no questions.",
+      "explanation_id": "Tambahkan 吗 untuk membuat pertanyaan ya/tidak.",
+      "examples": [
+        {"chinese": "你好吗？", "translation": "How are you?", "translation_id": "Apa kabar?"}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "A", "voice": "male", "chinese": "你好！", "pinyin": "Nǐ hǎo!", "translation": "Hello!", "translation_id": "Halo!"},
+    {"speaker": "female", "name": "B", "voice": "female", "chinese": "你好！", "pinyin": "Nǐ hǎo!", "translation": "Hello!", "translation_id": "Halo!"},
+    {"speaker": "male", "name": "A", "voice": "male", "chinese": "你叫什么名字？", "pinyin": "Nǐ jiào shénme míngzi?", "translation": "What's your name?", "translation_id": "Siapa namamu?"},
+    {"speaker": "female", "name": "B", "voice": "female", "chinese": "我叫小明。你呢？", "pinyin": "Wǒ jiào Xiǎomíng. Nǐ ne?", "translation": "I'm Xiaoming. And you?", "translation_id": "Saya Xiaoming. Kamu?"},
+    {"speaker": "male", "name": "A", "voice": "male", "chinese": "我叫安娜。很高兴认识你。", "pinyin": "Wǒ jiào Ānnà. Hěn gāoxìng rènshi nǐ.", "translation": "I'm Anna. Nice to meet you.", "translation_id": "Saya Anna. Senang berkenalan denganmu."}
+  ],
+  "exercises": [
+    {"question": "What does 你好 (nǐ hǎo) mean?", "question_id": "Apa arti 你好 (nǐ hǎo)?", "options": ["Goodbye", "Hello", "Thank you", "Sorry"], "options_id": ["Selamat tinggal", "Halo", "Terima kasih", "Maaf"], "correct": 1},
+    {"question": "How do you say 'What's your name?' in Chinese?", "question_id": "Bagaimana mengatakan 'Siapa namamu?' dalam bahasa Mandarin?", "options": ["你好吗？", "你叫什么名字？", "你几岁？", "你吃什么？"], "options_id": ["Apa kabar?", "Siapa namamu?", "Berapa umurmu?", "Kamu makan apa?"], "correct": 1},
+    {"question": "What does 再见 (zàijiàn) mean?", "question_id": "Apa arti 再见 (zàijiàn)?", "options": ["Hello", "Goodbye", "Thank you", "Sorry"], "options_id": ["Halo", "Selamat tinggal", "Terima kasih", "Maaf"], "correct": 1},
+    {"question": "How to say 'teacher' in Chinese?", "question_id": "Bagaimana mengatakan 'guru' dalam bahasa Mandarin?", "options": ["学生", "老师", "朋友", "妈妈"], "options_id": ["Murid", "Guru", "Teman", "Ibu"], "correct": 1},
+    {"question": "Complete: 我___小明 (I am Xiaoming)", "question_id": "Lengkapi: Saya ___ Xiaoming", "options": ["是", "叫", "有", "在"], "options_id": ["adalah", "dipanggil", "mempunyai", "ada di"], "correct": 1}
+  ]
+}

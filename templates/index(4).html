@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>AI Mandarin Teacher - Voice Interactive with Tone Visualizer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a472a 0%, #2d6a4f 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: #1a472a;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .header h1 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+        
+        .level-badge {
+            display: inline-block;
+            background: #ffd700;
+            color: #1a472a;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-top: 8px;
+            font-weight: bold;
+        }
+        
+        /* Progress Bar - Small and clean */
+        .progress-container {
+            padding: 0 15px 10px 15px;
+            background: white;
+        }
+        
+        .progress-label {
+            font-size: 11px;
+            color: #666;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .progress-bar-container {
+            background: #e0e0e0;
+            border-radius: 10px;
+            height: 6px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            background: linear-gradient(90deg, #2d6a4f, #ffd700);
+            height: 100%;
+            border-radius: 10px;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        /* Tone Visualizer - Smaller and HIDDEN by default */
+        .tone-visualizer {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 10px;
+            margin: 10px 15px;
+            border: 1px solid #2d6a4f;
+            display: none;  /* HIDDEN by default */
+        }
+        
+        .tone-visualizer.active {
+            display: block;
+        }
+        
+        .current-word {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a472a;
+        }
+        
+        .current-pinyin {
+            text-align: center;
+            font-size: 14px;
+            color: #e94560;
+            margin-bottom: 8px;
+        }
+        
+        .tone-canvas-container {
+            background: white;
+            border-radius: 8px;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        
+        canvas {
+            width: 100%;
+            height: 70px;
+            background: #fff;
+            border-radius: 6px;
+            display: block;
+        }
+        
+        .tone-selector {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 8px 0;
+            flex-wrap: wrap;
+        }
+        
+        .tone-btn {
+            padding: 4px 10px;
+            border: 1px solid #2d6a4f;
+            background: white;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        
+        .tone-btn.first { color: #e94560; border-color: #e94560; }
+        .tone-btn.second { color: #f4a261; border-color: #f4a261; }
+        .tone-btn.third { color: #2a9d8f; border-color: #2a9d8f; }
+        .tone-btn.fourth { color: #e76f51; border-color: #e76f51; }
+        .tone-btn.neutral { color: #6c757d; border-color: #6c757d; }
+        
+        .tone-btn.active {
+            background: #2d6a4f;
+            color: white;
+        }
+        
+        .tone-description {
+            font-size: 10px;
+            color: #666;
+            text-align: center;
+        }
+        
+        .chat-area {
+            height: 320px;
+            overflow-y: auto;
+            padding: 15px;
+            background: #f5f5f5;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .message {
+            margin-bottom: 12px;
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .teacher-message {
+            justify-content: flex-start;
+        }
+        
+        .student-message {
+            justify-content: flex-end;
+        }
+        
+        .bubble {
+            max-width: 80%;
+            padding: 10px 14px;
+            border-radius: 18px;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            font-size: 14px;
+        }
+        
+        .teacher-message .bubble {
+            background: white;
+            border: 1px solid #ddd;
+            border-bottom-left-radius: 4px;
+        }
+        
+        .student-message .bubble {
+            background: #2d6a4f;
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+        
+        .typing {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 8px 12px;
+        }
+        
+        .typing span {
+            width: 8px;
+            height: 8px;
+            background: #999;
+            border-radius: 50%;
+            animation: typing 1.4s infinite ease-in-out;
+        }
+        
+        @keyframes typing {
+            0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+            30% { transform: translateY(-10px); opacity: 1; }
+        }
+        
+        .input-area {
+            padding: 15px;
+            background: white;
+        }
+        
+        .input-group {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        input[type="text"] {
+            flex: 2;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 30px;
+            font-size: 14px;
+            outline: none;
+            min-width: 150px;
+        }
+        
+        input[type="text"]:focus {
+            border-color: #2d6a4f;
+        }
+        
+        button {
+            padding: 12px 20px;
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        
+        button:active {
+            transform: scale(0.95);
+        }
+        
+        .voice-btn {
+            background: #e94560;
+        }
+        
+        .voice-btn.recording {
+            background: #ff0000;
+            animation: pulse 1s infinite;
+        }
+        
+        .speaker-btn {
+            background: #ffd700;
+            color: #1a472a;
+            padding: 5px 10px;
+            font-size: 11px;
+            margin-left: 8px;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .suggestions {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .suggestion-btn {
+            background: #f0f0f0;
+            color: #333;
+            padding: 6px 12px;
+            font-size: 11px;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 6px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+        
+        .small-btn {
+            padding: 6px 10px;
+            font-size: 10px;
+            background: #764ba2;
+        }
+        
+        .status {
+            text-align: center;
+            padding: 8px;
+            font-size: 11px;
+            color: #666;
+            border-top: 1px solid #eee;
+            margin-top: 8px;
+        }
+        
+        .pronunciation-feedback {
+            padding: 8px;
+            margin-top: 8px;
+            border-radius: 8px;
+            font-size: 12px;
+            display: none;
+        }
+        
+        .feedback-correct {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .feedback-wrong {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+        }
+        
+        @media (max-width: 600px) {
+            .bubble {
+                max-width: 90%;
+                font-size: 13px;
+            }
+            
+            .chat-area {
+                height: 280px;
+            }
+            
+            .current-word {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎓 AI Mandarin Teacher</h1>
+            <p>Pronunciation Coach • Mastery-Based Learning</p>
+            <div class="level-badge" id="levelBadge">HSK Level 1</div>
+        </div>
+        
+        <!-- Progress Bar -->
+        <div class="progress-container" id="progressContainer">
+            <div class="progress-label">
+                <span>📚 Lesson Progress</span>
+                <span id="progressText">0/5 words</span>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+        
+        <!-- Tone Visualizer - HIDDEN until lesson starts -->
+        <div class="tone-visualizer" id="toneVisualizer">
+            <div class="current-word" id="currentWord">—</div>
+            <div class="current-pinyin" id="currentPinyin">—</div>
+            <div class="tone-canvas-container">
+                <canvas id="toneCanvas" width="600" height="70"></canvas>
+            </div>
+            <div class="tone-selector" id="toneSelector">
+                <button class="tone-btn first" data-tone="1">1st (ā)</button>
+                <button class="tone-btn second" data-tone="2">2nd (á)</button>
+                <button class="tone-btn third" data-tone="3">3rd (ǎ)</button>
+                <button class="tone-btn fourth" data-tone="4">4th (à)</button>
+                <button class="tone-btn neutral" data-tone="0">Neutral</button>
+            </div>
+            <div class="tone-description" id="toneDescription">
+                Click any tone button to hear/see the pitch
+            </div>
+        </div>
+        
+        <div class="chat-area" id="chatArea"></div>
+        
+        <div class="input-area">
+            <div class="input-group">
+                <input type="text" id="messageInput" placeholder="Type your response here..." onkeypress="if(event.key==='Enter') sendMessage()">
+                <button id="voiceBtn" class="voice-btn" onclick="toggleRecording()">🎤 Speak</button>
+            </div>
+            <div class="suggestions" id="suggestions"></div>
+            <div id="pronunciationFeedback" class="pronunciation-feedback"></div>
+            <div class="controls">
+                <button class="small-btn" onclick="location.href='/dashboard'">📊 Dashboard</button>
+                <button class="small-btn" onclick="location.href='/certificate'">🎓 Certificate</button>
+                <button class="small-btn" onclick="location.href='/hsk-practice'">📝 Test</button>
+                <button class="small-btn" onclick="location.href='/homework'">📚 Homework</button>
+                <button class="small-btn" onclick="restartLesson()">🔄 New Lesson</button>
+                <button class="small-btn" onclick="levelUp()">⬆️ Level Up</button>
+                <button class="small-btn" onclick="levelDown()">⬇️ Level Down</button>
+            </div>
+            <div class="status" id="status">🎤 Ready to learn! Type 'yes' to begin your lesson.</div>
+        </div>
+    </div>
+
+    <script>
+        let currentLevel = 1;
+        let isRecording = false;
+        let recognition = null;
+        let speechSynthesis = window.speechSynthesis;
+        let lessonActive = false;  // Track if lesson is active (tone visualizer shows only when true)
+        
+        // ============================================
+        // TONE VISUALIZER FUNCTIONS
+        // ============================================
+        
+        const canvas = document.getElementById('toneCanvas');
+        let ctx = canvas.getContext('2d');
+        
+        function resizeCanvas() {
+            const container = canvas.parentElement;
+            const width = container.clientWidth - 10;
+            canvas.width = width;
+            canvas.height = 70;
+            ctx = canvas.getContext('2d');
+            drawTone(1);
+        }
+        
+        window.addEventListener('resize', resizeCanvas);
+        
+        function showToneVisualizer(show) {
+            const visualizer = document.getElementById('toneVisualizer');
+            if (show) {
+                visualizer.classList.add('active');
+                resizeCanvas();
+            } else {
+                visualizer.classList.remove('active');
+            }
+        }
+        
+        function drawTone(toneNumber) {
+            if (!ctx) return;
+            
+            const w = canvas.width;
+            const h = canvas.height;
+            const startX = w * 0.1;
+            const endX = w * 0.9;
+            const midY = h * 0.5;
+            
+            ctx.clearRect(0, 0, w, h);
+            
+            // Draw grid lines
+            ctx.strokeStyle = '#e0e0e0';
+            ctx.lineWidth = 0.5;
+            for (let i = 0; i <= 4; i++) {
+                const y = midY - 20 + (i * 10);
+                ctx.beginPath();
+                ctx.moveTo(startX, y);
+                ctx.lineTo(endX, y);
+                ctx.stroke();
+            }
+            
+            // Draw axis
+            ctx.strokeStyle = '#999';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(startX, midY);
+            ctx.lineTo(endX, midY);
+            ctx.stroke();
+            
+            // Draw tone curve
+            ctx.beginPath();
+            ctx.strokeStyle = '#e94560';
+            ctx.lineWidth = 2.5;
+            
+            let points = [];
+            
+            switch(toneNumber) {
+                case 1:
+                    points = [{x: startX, y: midY - 20}, {x: endX, y: midY - 20}];
+                    break;
+                case 2:
+                    points = [{x: startX, y: midY + 5}, {x: endX, y: midY - 25}];
+                    break;
+                case 3:
+                    points = [
+                        {x: startX, y: midY - 8},
+                        {x: startX + (endX-startX)*0.35, y: midY + 12},
+                        {x: startX + (endX-startX)*0.65, y: midY + 12},
+                        {x: endX, y: midY - 15}
+                    ];
+                    break;
+                case 4:
+                    points = [{x: startX, y: midY - 20}, {x: endX, y: midY + 12}];
+                    break;
+                default:
+                    points = [{x: startX, y: midY - 3}, {x: endX, y: midY + 3}];
+                    ctx.setLineDash([4, 4]);
+            }
+            
+            ctx.moveTo(points[0].x, points[0].y);
+            for (let i = 1; i < points.length; i++) {
+                ctx.lineTo(points[i].x, points[i].y);
+            }
+            ctx.stroke();
+            ctx.setLineDash([]);
+            
+            // Draw arrow at end
+            const last = points[points.length - 1];
+            const secondLast = points[points.length - 2];
+            const angle = Math.atan2(last.y - secondLast.y, last.x - secondLast.x);
+            const arrowSize = 6;
+            
+            ctx.fillStyle = '#e94560';
+            ctx.beginPath();
+            ctx.moveTo(last.x, last.y);
+            ctx.lineTo(last.x - arrowSize * Math.cos(angle - Math.PI/6), last.y - arrowSize * Math.sin(angle - Math.PI/6));
+            ctx.lineTo(last.x - arrowSize * Math.cos(angle + Math.PI/6), last.y - arrowSize * Math.sin(angle + Math.PI/6));
+            ctx.fill();
+        }
+        
+        function updateToneVisualizer(word, pinyin, toneNumber) {
+            if (!word || word === '—') {
+                showToneVisualizer(false);
+                return;
+            }
+            showToneVisualizer(true);
+            document.getElementById('currentWord').textContent = word;
+            document.getElementById('currentPinyin').textContent = pinyin || '—';
+            if (toneNumber !== undefined) {
+                drawTone(toneNumber);
+            }
+        }
+        
+        function hideToneVisualizer() {
+            showToneVisualizer(false);
+            document.getElementById('currentWord').textContent = '—';
+            document.getElementById('currentPinyin').textContent = '—';
+        }
+        
+        function updateProgress(wordsMastered, totalWords) {
+            const percent = (wordsMastered / totalWords) * 100;
+            document.getElementById('progressFill').style.width = percent + '%';
+            document.getElementById('progressText').textContent = `${wordsMastered}/${totalWords} words`;
+        }
+        
+        // ============================================
+        // SPEECH RECOGNITION & TTS
+        // ============================================
+        
+        function initSpeechRecognition() {
+            if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+                const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                recognition = new SpeechRecognition();
+                recognition.lang = 'zh-CN';
+                recognition.continuous = false;
+                recognition.interimResults = false;
+                
+                recognition.onresult = function(event) {
+                    const text = event.results[0][0].transcript;
+                    document.getElementById('messageInput').value = text;
+                    updateStatus("Processing your speech...");
+                    sendMessage(true);
+                    stopRecording();
+                };
+                
+                recognition.onerror = function() {
+                    updateStatus("Could not understand. Please type.");
+                    stopRecording();
+                };
+                
+                recognition.onend = function() {
+                    stopRecording();
+                };
+                
+                return true;
+            } else {
+                updateStatus("Speech recognition not supported. Please type.");
+                document.getElementById('voiceBtn').disabled = true;
+                return false;
+            }
+        }
+        
+        function toggleRecording() {
+            if (!recognition) initSpeechRecognition();
+            if (isRecording) stopRecording();
+            else startRecording();
+        }
+        
+        function startRecording() {
+            if (!recognition) return;
+            isRecording = true;
+            try {
+                recognition.start();
+                const voiceBtn = document.getElementById('voiceBtn');
+                voiceBtn.classList.add('recording');
+                voiceBtn.innerHTML = '🔴 Recording...';
+                updateStatus("Listening... Speak clearly");
+            } catch(e) {
+                stopRecording();
+            }
+        }
+        
+        function stopRecording() {
+            if (recognition && isRecording) {
+                try { recognition.stop(); } catch(e) {}
+            }
+            isRecording = false;
+            const voiceBtn = document.getElementById('voiceBtn');
+            voiceBtn.classList.remove('recording');
+            voiceBtn.innerHTML = '🎤 Speak';
+            if (!document.getElementById('status').innerHTML.includes('Processing')) {
+                updateStatus("Ready");
+            }
+        }
+        
+        function speakText(text) {
+            if (!text) return;
+            let cleanText = text.replace(/[^\w\s\u4e00-\u9fff]/g, ' ').substring(0, 200);
+            speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(cleanText);
+            utterance.lang = 'zh-CN';
+            utterance.rate = 0.9;
+            speechSynthesis.speak(utterance);
+        }
+        
+        function updateStatus(msg) {
+            document.getElementById('status').innerHTML = msg;
+        }
+        
+        function showTypingIndicator() {
+            const chatArea = document.getElementById('chatArea');
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'message teacher-message';
+            typingDiv.id = 'typingIndicator';
+            typingDiv.innerHTML = '<div class="bubble typing"><span></span><span></span><span></span></div>';
+            chatArea.appendChild(typingDiv);
+            chatArea.scrollTop = chatArea.scrollHeight;
+        }
+        
+        function hideTypingIndicator() {
+            const indicator = document.getElementById('typingIndicator');
+            if (indicator) indicator.remove();
+        }
+        
+        function addMessage(text, isStudent, ttsText = null, wordInfo = null) {
+            const chatArea = document.getElementById('chatArea');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = isStudent ? 'message student-message' : 'message teacher-message';
+            
+            let bubbleContent = `<div class="bubble">${text.replace(/\n/g, '<br>')}</div>`;
+            
+            if (!isStudent) {
+                bubbleContent = `<div class="bubble">
+                    ${text.replace(/\n/g, '<br>')}
+                    <button class="speaker-btn" onclick="speakText('${(ttsText || text).replace(/'/g, "\\'")}')">🔊</button>
+                </div>`;
+            }
+            
+            messageDiv.innerHTML = bubbleContent;
+            chatArea.appendChild(messageDiv);
+            chatArea.scrollTop = chatArea.scrollHeight;
+            
+            // Update tone visualizer only if lesson is active and we have word info
+            if (wordInfo && wordInfo.word && wordInfo.word !== '—') {
+                lessonActive = true;
+                updateToneVisualizer(wordInfo.word, wordInfo.pinyin, wordInfo.tone || 1);
+                if (wordInfo.words_mastered !== undefined && wordInfo.total_words !== undefined) {
+                    updateProgress(wordInfo.words_mastered.length, wordInfo.total_words);
+                }
+            } else if (!wordInfo || !wordInfo.word) {
+                // No active word - hide tone visualizer
+                if (lessonActive) {
+                    lessonActive = false;
+                    hideToneVisualizer();
+                }
+            }
+            
+            if (!isStudent && ttsText) speakText(ttsText);
+            else if (!isStudent && text) speakText(text);
+        }
+        
+        function addSuggestions(suggestions) {
+            const suggestionsDiv = document.getElementById('suggestions');
+            suggestionsDiv.innerHTML = '';
+            if (!suggestions || suggestions.length === 0) return;
+            
+            suggestions.forEach(suggestion => {
+                if (!suggestion) return;
+                const btn = document.createElement('button');
+                btn.className = 'suggestion-btn';
+                btn.textContent = suggestion;
+                btn.onclick = () => {
+                    document.getElementById('messageInput').value = suggestion;
+                    sendMessage(false);
+                };
+                suggestionsDiv.appendChild(btn);
+            });
+        }
+        
+        function setupToneSelector() {
+            const buttons = document.querySelectorAll('.tone-btn');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const tone = parseInt(btn.dataset.tone);
+                    drawTone(tone);
+                    buttons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const descriptions = {
+                        1: "1st Tone (ā): High and flat. Like holding a high musical note.",
+                        2: "2nd Tone (á): Rising. Like asking a question.",
+                        3: "3rd Tone (ǎ): Falling then rising. Like nodding your head.",
+                        4: "4th Tone (à): Sharp falling. Like giving a command.",
+                        0: "Neutral Tone: Light and quick. No emphasis."
+                    };
+                    document.getElementById('toneDescription').textContent = descriptions[tone] || "Click a tone to see the contour";
+                    
+                    // Play example sound for the tone
+                    const examples = {
+                        1: "ma1",
+                        2: "ma2", 
+                        3: "ma3",
+                        4: "ma4",
+                        0: "ma"
+                    };
+                    if (examples[tone]) {
+                        speakText(examples[tone]);
+                    }
+                });
+            });
+        }
+        
+        async function sendMessage(isPronunciationAttempt = false) {
+            const input = document.getElementById('messageInput');
+            const message = input.value.trim();
+            if (!message) return;
+            
+            addMessage(message, true);
+            input.value = '';
+            updateStatus("Teacher is thinking...");
+            showTypingIndicator();
+            
+            try {
+                const response = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        message: message, 
+                        level: currentLevel,
+                        lessonState: { started: lessonActive },
+                        is_pronunciation: isPronunciationAttempt
+                    })
+                });
+                
+                const data = await response.json();
+                hideTypingIndicator();
+                addMessage(data.reply, false, data.tts_text, data.word_info);
+                
+                if (data.suggestions) addSuggestions(data.suggestions);
+                else addSuggestions(["yes", "help", "next level", "review"]);
+                
+                updateStatus("Ready - type your response");
+                
+            } catch (error) {
+                hideTypingIndicator();
+                addMessage("Sorry, connection error. Please refresh.", false);
+                updateStatus("Error - check connection");
+            }
+        }
+        
+        async function sendWelcomeMessage() {
+            showTypingIndicator();
+            try {
+                const response = await fetch('/api/welcome', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ level: currentLevel })
+                });
+                const data = await response.json();
+                hideTypingIndicator();
+                addMessage(data.welcome, false, data.tts_text);
+                addSuggestions(["yes", "start lesson", "help"]);
+                updateStatus("Ready - type 'yes' to begin!");
+                lessonActive = false;
+                hideToneVisualizer();
+                updateProgress(0, 5);
+            } catch (error) {
+                hideTypingIndicator();
+                addMessage("Welcome to Mandarin Teacher! Type 'yes' to begin.", false);
+                addSuggestions(["yes", "help"]);
+            }
+        }
+        
+        function restartLesson() {
+            const chatArea = document.getElementById('chatArea');
+            chatArea.innerHTML = '';
+            lessonActive = false;
+            hideToneVisualizer();
+            updateProgress(0, 5);
+            sendWelcomeMessage();
+        }
+        
+        function levelUp() {
+            if (currentLevel < 6) {
+                currentLevel++;
+                document.getElementById('levelBadge').innerHTML = `HSK Level ${currentLevel}`;
+                addMessage(`Great job! You've advanced to HSK Level ${currentLevel}!`, false);
+                addSuggestions(["Start new lesson", "Review", "Take test"]);
+                lessonActive = false;
+                hideToneVisualizer();
+                updateProgress(0, 5);
+            } else {
+                addMessage("Amazing! You've reached HSK 6! You're practically fluent!", false);
+                addSuggestions(["Take mastery test", "Get certificate", "Review"]);
+            }
+        }
+        
+        function levelDown() {
+            if (currentLevel > 1) {
+                currentLevel--;
+                document.getElementById('levelBadge').innerHTML = `HSK Level ${currentLevel}`;
+                addMessage(`Moving to HSK Level ${currentLevel} for review.`, false);
+                addSuggestions(["Start review", "Practice basics"]);
+                lessonActive = false;
+                hideToneVisualizer();
+                updateProgress(0, 5);
+            } else {
+                addMessage("You're at HSK 1 - the perfect starting point!", false);
+                addSuggestions(["start lesson", "learn greetings"]);
+            }
+        }
+        
+        // Initialize
+        initSpeechRecognition();
+        setupToneSelector();
+        sendWelcomeMessage();
+        resizeCanvas();
+        hideToneVisualizer();  // Start hidden
+    </script>
+</body>
+</html>

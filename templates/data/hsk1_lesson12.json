@@ -1,0 +1,50 @@
+{
+  "title": "明天天气怎么样",
+  "subtitle": "Talking About Weather, Asking About Weather, Describing Temperature",
+  "assistant_message": "Today we learn: talking about weather (天气 tiānqì), asking 'how is the weather' (怎么样 zěnme yàng), and describing temperature (热, 冷, 下雨).",
+  "vocabulary": [
+    {"word": "天气", "pinyin": "tiān qì", "meaning": "weather", "meaning_id": "cuaca", "example": "天气很好", "example_translation": "The weather is good", "example_translation_id": "Cuacanya bagus"},
+    {"word": "怎么样", "pinyin": "zěn me yàng", "meaning": "how is", "meaning_id": "bagaimana", "example": "天气怎么样？", "example_translation": "How's the weather?", "example_translation_id": "Bagaimana cuacanya?"},
+    {"word": "热", "pinyin": "rè", "meaning": "hot", "meaning_id": "panas", "example": "今天很热", "example_translation": "Today is very hot", "example_translation_id": "Hari ini sangat panas"},
+    {"word": "冷", "pinyin": "lěng", "meaning": "cold", "meaning_id": "dingin", "example": "冬天很冷", "example_translation": "Winter is very cold", "example_translation_id": "Musim dingin sangat dingin"},
+    {"word": "下雨", "pinyin": "xià yǔ", "meaning": "to rain", "meaning_id": "hujan", "example": "明天会下雨", "example_translation": "It will rain tomorrow", "example_translation_id": "Besok akan hujan"},
+    {"word": "晴天", "pinyin": "qíng tiān", "meaning": "sunny day", "meaning_id": "hari cerah", "example": "今天是晴天", "example_translation": "Today is sunny", "example_translation_id": "Hari ini cerah"},
+    {"word": "温度", "pinyin": "wēn dù", "meaning": "temperature", "meaning_id": "suhu", "example": "温度二十度", "example_translation": "The temperature is 20 degrees", "example_translation_id": "Suhunya 20 derajat"},
+    {"word": "明天", "pinyin": "míng tiān", "meaning": "tomorrow", "meaning_id": "besok", "example": "明天天气怎么样？", "example_translation": "How's the weather tomorrow?", "example_translation_id": "Bagaimana cuaca besok?"}
+  ],
+  "grammar": [
+    {
+      "point": "Asking About Weather with 怎么样 (zěnme yàng)",
+      "point_id": "Bertanya Tentang Cuaca dengan 怎么样 (zěnme yàng)",
+      "explanation": "Use 怎么样 after a noun to ask 'how is'.",
+      "explanation_id": "Gunakan 怎么样 setelah kata benda untuk bertanya 'bagaimana'.",
+      "examples": [
+        {"chinese": "天气怎么样？", "translation": "How's the weather?", "translation_id": "Bagaimana cuacanya?"},
+        {"chinese": "今天天气怎么样？", "translation": "How's the weather today?", "translation_id": "Bagaimana cuaca hari ini?"}
+      ]
+    },
+    {
+      "point": "Describing Weather with Adjectives",
+      "point_id": "Mendeskripsikan Cuaca dengan Kata Sifat",
+      "explanation": "Use adjectives after a noun: 今天 + 很 + 热/冷/好.",
+      "explanation_id": "Gunakan kata sifat setelah kata benda: 今天 + 很 + 热/冷/好.",
+      "examples": [
+        {"chinese": "今天很热。", "translation": "Today is hot.", "translation_id": "Hari ini panas."},
+        {"chinese": "天气很好。", "translation": "The weather is good.", "translation_id": "Cuacanya bagus."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Tom", "voice": "male", "chinese": "明天天气怎么样？", "pinyin": "Míngtiān tiānqì zěnme yàng?", "translation": "How's the weather tomorrow?", "translation_id": "Bagaimana cuaca besok?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "明天会下雨，温度二十度。", "pinyin": "Míngtiān huì xiàyǔ, wēndù èrshí dù.", "translation": "It will rain tomorrow, temperature 20 degrees.", "translation_id": "Besok akan hujan, suhu 20 derajat."},
+    {"speaker": "male", "name": "Tom", "voice": "male", "chinese": "要多穿点衣服。", "pinyin": "Yào duō chuān diǎn yīfu.", "translation": "You should wear more clothes.", "translation_id": "Kamu harus memakai lebih banyak pakaian."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "谢谢提醒！", "pinyin": "Xièxie tíxǐng!", "translation": "Thanks for the reminder!", "translation_id": "Terima kasih ingatannya!"}
+  ],
+  "exercises": [
+    {"question": "What does 天气 (tiānqì) mean?", "question_id": "Apa arti 天气 (tiānqì)?", "options": ["Weather", "Temperature", "Climate", "Season"], "options_id": ["Cuaca", "Suhu", "Iklim", "Musim"], "correct": 0},
+    {"question": "How do you ask 'How's the weather tomorrow?' in Chinese?", "question_id": "Bagaimana bertanya 'Bagaimana cuaca besok?' dalam bahasa Mandarin?", "options": ["今天天气怎么样？", "明天天气怎么样？", "昨天天气怎么样？", "天气怎么样？"], "options_id": ["Bagaimana cuaca hari ini?", "Bagaimana cuaca besok?", "Bagaimana cuaca kemarin?", "Bagaimana cuacanya?"], "correct": 1},
+    {"question": "What does 热 (rè) mean?", "question_id": "Apa arti 热 (rè)?", "options": ["Cold", "Hot", "Warm", "Cool"], "options_id": ["Dingin", "Panas", "Hangat", "Sejuk"], "correct": 1},
+    {"question": "How to say 'It will rain tomorrow' in Chinese?", "question_id": "Bagaimana mengatakan 'Besok akan hujan' dalam bahasa Mandarin?", "options": ["明天下雨", "明天会下雨", "昨天下雨", "今天下雨"], "options_id": ["Besok hujan", "Besok akan hujan", "Kemarin hujan", "Hari ini hujan"], "correct": 1},
+    {"question": "What is 冷 (lěng)?", "question_id": "Apa itu 冷 (lěng)?", "options": ["Hot", "Cold", "Rain", "Sunny"], "options_id": ["Panas", "Dingin", "Hujan", "Cerah"], "correct": 1}
+  ]
+}
