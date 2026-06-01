@@ -1,0 +1,50 @@
+{
+  "title": "梦想与现实",
+  "subtitle": "Talking About Goals, Practicality, and Balance",
+  "assistant_message": "Today we learn: discussing dreams and reality, using 既然...就... (jìrán... jiù...) for 'since... then...', and balancing ideals with practicality.",
+  "vocabulary": [
+    {"word": "梦想", "pinyin": "mèng xiǎng", "meaning": "dream", "meaning_id": "mimpi", "example": "实现梦想", "example_translation": "realize a dream", "example_translation_id": "mewujudkan mimpi"},
+    {"word": "现实", "pinyin": "xiàn shí", "meaning": "reality", "meaning_id": "kenyataan", "example": "面对现实", "example_translation": "face reality", "example_translation_id": "menghadapi kenyataan"},
+    {"word": "理想", "pinyin": "lǐ xiǎng", "meaning": "ideal", "meaning_id": "ideal", "example": "理想生活", "example_translation": "ideal life", "example_translation_id": "kehidupan ideal"},
+    {"word": "平衡", "pinyin": "píng héng", "meaning": "balance", "meaning_id": "keseimbangan", "example": "找到平衡", "example_translation": "find balance", "example_translation_id": "menemukan keseimbangan"},
+    {"word": "实际", "pinyin": "shí jì", "meaning": "practical/actual", "meaning_id": "praktis", "example": "实际情况", "example_translation": "actual situation", "example_translation_id": "situasi sebenarnya"},
+    {"word": "追求", "pinyin": "zhuī qiú", "meaning": "to pursue", "meaning_id": "mengejar", "example": "追求梦想", "example_translation": "pursue dreams", "example_translation_id": "mengejar mimpi"},
+    {"word": "放弃", "pinyin": "fàng qì", "meaning": "to give up", "meaning_id": "menyerah", "example": "不要放弃", "example_translation": "don't give up", "example_translation_id": "jangan menyerah"},
+    {"word": "坚持", "pinyin": "jiān chí", "meaning": "to persist", "meaning_id": "bertahan", "example": "坚持到底", "example_translation": "persist to the end", "example_translation_id": "bertahan sampai akhir"}
+  ],
+  "grammar": [
+    {
+      "point": "Using 既然...就... (Since... then...)",
+      "point_id": "Menggunakan 既然...就... (Karena... maka...)",
+      "explanation": "既然 introduces a given fact or condition, and 就 states the logical conclusion.",
+      "explanation_id": "既然 memperkenalkan fakta atau kondisi yang diberikan, dan 就 menyatakan kesimpulan logis.",
+      "examples": [
+        {"chinese": "既然选择了梦想，就要坚持到底。", "translation": "Since you have chosen your dream, you must persist to the end.", "translation_id": "Karena kamu telah memilih mimpimu, kamu harus bertahan sampai akhir."},
+        {"chinese": "既然已经决定了，就不要后悔。", "translation": "Since you've already decided, don't regret it.", "translation_id": "Karena sudah memutuskan, jangan menyesal."}
+      ]
+    },
+    {
+      "point": "Using 只要...就... (As long as... then...)",
+      "point_id": "Menggunakan 只要...就... (Asalkan... maka...)",
+      "explanation": "只要 states a condition, and 就 states the result that will occur if the condition is met.",
+      "explanation_id": "只要 menyatakan suatu kondisi, dan 就 menyatakan hasil yang akan terjadi jika kondisi terpenuhi.",
+      "examples": [
+        {"chinese": "只要努力，梦想就能实现。", "translation": "As long as you work hard, your dream can come true.", "translation_id": "Asalkan kamu bekerja keras, mimpimu bisa terwujud."},
+        {"chinese": "只要不放弃，就有希望。", "translation": "As long as you don't give up, there is hope.", "translation_id": "Asalkan tidak menyerah, ada harapan."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "我从小就想当一名画家。", "pinyin": "Wǒ cóng xiǎo jiù xiǎng dāng yī míng huàjiā.", "translation": "I've wanted to be a painter since I was a child.", "translation_id": "Saya ingin menjadi pelukis sejak kecil."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "梦想很美好，但现实可能很残酷。", "pinyin": "Mèngxiǎng hěn měihǎo, dàn xiànshí kěnéng hěn cánkù.", "translation": "Dreams are beautiful, but reality can be cruel.", "translation_id": "Mimpi itu indah, tetapi kenyataan bisa kejam."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "我知道。所以我要在梦想和现实之间找到平衡。", "pinyin": "Wǒ zhīdào. Suǒyǐ wǒ yào zài mèngxiǎng hé xiànshí zhī jiān zhǎodào pínghéng.", "translation": "I know. So I need to find a balance between dreams and reality.", "translation_id": "Saya tahu. Jadi saya perlu menemukan keseimbangan antara mimpi dan kenyataan."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "既然你有梦想，就要努力去追求。只要不放弃，总有一天会成功。", "pinyin": "Jìrán nǐ yǒu mèngxiǎng, jiù yào nǔlì qù zhuīqiú. Zhǐyào bù fàngqì, zǒng yǒu yī tiān huì chénggōng.", "translation": "Since you have a dream, you must work hard to pursue it. As long as you don't give up, one day you will succeed.", "translation_id": "Karena kamu punya mimpi, kamu harus bekerja keras untuk mengejarnya. Asalkan tidak menyerah, suatu hari nanti kamu akan berhasil."}
+  ],
+  "exercises": [
+    {"question": "What does 梦想 (mèngxiǎng) mean?", "question_id": "Apa arti 梦想 (mèngxiǎng)?", "options": ["Idea", "Dream", "Goal", "Plan"], "options_id": ["Ide", "Mimpi", "Tujuan", "Rencana"], "correct": 1},
+    {"question": "How do you say 'face reality' in Chinese?", "question_id": "Bagaimana mengatakan 'menghadapi kenyataan' dalam bahasa Mandarin?", "options": ["面对现实", "接受现实", "承认现实", "认识现实"], "options_id": ["menghadapi kenyataan", "menerima kenyataan", "mengakui kenyataan", "mengenal kenyataan"], "correct": 0},
+    {"question": "What does the structure 既然...就... express?", "question_id": "Apa yang diekspresikan oleh struktur 既然...就...?", "options": ["If... then...", "Since... then...", "Although... but...", "Because... so..."], "options_id": ["Jika... maka...", "Karena... maka...", "Meskipun... tetapi...", "Karena... jadi..."], "correct": 1},
+    {"question": "What is 平衡 (pínghéng)?", "question_id": "Apa itu 平衡 (pínghéng)?", "options": ["Equality", "Balance", "Harmony", "Stability"], "options_id": ["Kesetaraan", "Keseimbangan", "Harmoni", "Stabilitas"], "correct": 1},
+    {"question": "How to say 'pursue dreams' in Chinese?", "question_id": "Bagaimana mengatakan 'mengejar mimpi' dalam bahasa Mandarin?", "options": ["追求梦想", "追逐梦想", "实现梦想", "拥有梦想"], "options_id": ["mengejar mimpi", "mengejar mimpi", "mewujudkan mimpi", "memiliki mimpi"], "correct": 0}
+  ]
+}

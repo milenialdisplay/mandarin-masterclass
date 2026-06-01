@@ -1,0 +1,60 @@
+{
+  "title": "环境保护",
+  "subtitle": "Environmental Protection, Pollution Control, Green Living",
+  "assistant_message": "Today we learn: discussing environmental protection, using 保护 (bǎohù) and 治理 (zhìlǐ), and expressing responsibility for the planet.",
+  "vocabulary": [
+    {"word": "环境", "pinyin": "huán jìng", "meaning": "environment", "meaning_id": "lingkungan", "example": "自然环境", "example_translation": "natural environment", "example_translation_id": "lingkungan alam"},
+    {"word": "保护", "pinyin": "bǎo hù", "meaning": "to protect", "meaning_id": "melindungi", "example": "保护环境", "example_translation": "protect the environment", "example_translation_id": "melindungi lingkungan"},
+    {"word": "污染", "pinyin": "wū rǎn", "meaning": "pollution", "meaning_id": "polusi", "example": "空气污染", "example_translation": "air pollution", "example_translation_id": "polusi udara"},
+    {"word": "治理", "pinyin": "zhì lǐ", "meaning": "to manage/control", "meaning_id": "mengelola", "example": "污染治理", "example_translation": "pollution control", "example_translation_id": "pengendalian polusi"},
+    {"word": "排放", "pinyin": "pái fàng", "meaning": "emission", "meaning_id": "emisi", "example": "减少排放", "example_translation": "reduce emissions", "example_translation_id": "mengurangi emisi"},
+    {"word": "低碳", "pinyin": "dī tàn", "meaning": "low-carbon", "meaning_id": "rendah karbon", "example": "低碳生活", "example_translation": "low-carbon life", "example_translation_id": "kehidupan rendah karbon"},
+    {"word": "绿色", "pinyin": "lǜ sè", "meaning": "green", "meaning_id": "hijau", "example": "绿色能源", "example_translation": "green energy", "example_translation_id": "energi hijau"},
+    {"word": "责任", "pinyin": "zé rèn", "meaning": "responsibility", "meaning_id": "tanggung jawab", "example": "共同责任", "example_translation": "shared responsibility", "example_translation_id": "tanggung jawab bersama"}
+  ],
+  "grammar": [
+    {
+      "point": "保护 (bǎohù) - To Protect",
+      "point_id": "Melindungi",
+      "explanation": "保护 means 'to protect'. Often used with 环境 (environment) or 自然 (nature).",
+      "explanation_id": "保护 berarti 'melindungi'. Sering digunakan dengan 环境 (lingkungan) atau 自然 (alam).",
+      "examples": [
+        {"chinese": "保护环境是每个人的责任。", "translation": "Protecting the environment is everyone's responsibility.", "translation_id": "Melindungi lingkungan adalah tanggung jawab setiap orang."},
+        {"chinese": "我们要保护自然资源。", "translation": "We must protect natural resources.", "translation_id": "Kita harus melindungi sumber daya alam."}
+      ]
+    },
+    {
+      "point": "治理 (zhìlǐ) - To Manage/Control",
+      "point_id": "Mengelola/Mengendalikan",
+      "explanation": "治理 is used for managing or controlling problems like pollution.",
+      "explanation_id": "治理 digunakan untuk mengelola atau mengendalikan masalah seperti polusi.",
+      "examples": [
+        {"chinese": "政府正在加强污染治理。", "translation": "The government is strengthening pollution control.", "translation_id": "Pemerintah sedang memperkuat pengendalian polusi."},
+        {"chinese": "水污染治理需要长期努力。", "translation": "Water pollution control requires long-term effort.", "translation_id": "Pengendalian polusi air membutuhkan upaya jangka panjang."}
+      ]
+    },
+    {
+      "point": "低碳生活 (dītàn shēnghuó) - Low-Carbon Life",
+      "point_id": "Kehidupan Rendah Karbon",
+      "explanation": "低碳生活 refers to a lifestyle that reduces carbon emissions.",
+      "explanation_id": "低碳生活 mengacu pada gaya hidup yang mengurangi emisi karbon.",
+      "examples": [
+        {"chinese": "低碳生活包括节约用电、减少开车等。", "translation": "Low-carbon life includes saving electricity, reducing driving, etc.", "translation_id": "Kehidupan rendah karbon termasuk menghemat listrik, mengurangi mengemudi, dll."},
+        {"chinese": "越来越多的人选择低碳生活。", "translation": "More and more people are choosing a low-carbon life.", "translation_id": "Semakin banyak orang memilih kehidupan rendah karbon."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "环境保护是每个人的责任。", "pinyin": "Huánjìng bǎohù shì měi gè rén de zérèn.", "translation": "Environmental protection is everyone's responsibility.", "translation_id": "Perlindungan lingkungan adalah tanggung jawab setiap orang."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我们要减少污染排放，推广低碳生活。", "pinyin": "Wǒmen yào jiǎnshǎo wūrǎn páifàng, tuīguǎng dītàn shēnghuó.", "translation": "We need to reduce pollution emissions and promote low-carbon living.", "translation_id": "Kita perlu mengurangi emisi polusi dan mempromosikan kehidupan rendah karbon."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "绿色出行很重要，比如骑自行车或坐公交。", "pinyin": "Lǜsè chūxíng hěn zhòngyào, bǐrú qí zìxíngchē huò zuò gōngjiāo.", "translation": "Green travel is very important, such as cycling or taking the bus.", "translation_id": "Perjalanan hijau sangat penting, seperti bersepeda atau naik bus."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "还要做好垃圾分类。保护环境不仅是为了现在，也是为了未来。", "pinyin": "Hái yào zuò hǎo lājī fēnlèi. Bǎohù huánjìng bùjǐn shì wèile xiànzài, yěshì wèile wèilái.", "translation": "We also need to do good waste sorting. Protecting the environment is not only for the present, but also for the future.", "translation_id": "Kita juga perlu melakukan pemilahan sampah yang baik. Melindungi lingkungan tidak hanya untuk saat ini, tetapi juga untuk masa depan."}
+  ],
+  "exercises": [
+    {"question": "What does 环境 (huánjìng) mean?", "question_id": "Apa arti 环境 (huánjìng)?", "options": ["Weather", "Environment", "Climate", "Nature"], "options_id": ["Cuaca", "Lingkungan", "Iklim", "Alam"], "correct": 1},
+    {"question": "How do you say 'protect the environment' in Chinese?", "question_id": "Bagaimana mengatakan 'melindungi lingkungan' dalam bahasa Mandarin?", "options": ["破坏环境", "保护环境", "污染环境", "改善环境"], "options_id": ["merusak lingkungan", "melindungi lingkungan", "mencemari lingkungan", "memperbaiki lingkungan"], "correct": 1},
+    {"question": "What does 低碳 (dītàn) mean?", "question_id": "Apa arti 低碳 (dītàn)?", "options": ["High carbon", "Low carbon", "No carbon", "Carbon free"], "options_id": ["Karbon tinggi", "Rendah karbon", "Tanpa karbon", "Bebas karbon"], "correct": 1},
+    {"question": "What is 垃圾分类 (lājī fēnlèi)?", "question_id": "Apa itu 垃圾分类 (lājī fēnlèi)?", "options": ["Burning trash", "Waste sorting", "Recycling", "Composting"], "options_id": ["Membakar sampah", "Pemilahan sampah", "Daur ulang", "Pembuatan kompos"], "correct": 1},
+    {"question": "How to say 'green travel' in Chinese?", "question_id": "Bagaimana mengatakan 'perjalanan hijau' dalam bahasa Mandarin?", "options": ["绿色出行", "绿色能源", "绿色生活", "绿色发展"], "options_id": ["perjalanan hijau", "energi hijau", "kehidupan hijau", "perkembangan hijau"], "correct": 0}
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "title": "这件衣服太贵了",
+  "subtitle": "Making Complaints, Expressing 'Too' with 太, Price Negotiation",
+  "assistant_message": "Today we learn: making complaints, using 太 (tài) for 'too', price negotiation phrases, and expressing dissatisfaction.",
+  "vocabulary": [
+    {"word": "贵", "pinyin": "guì", "meaning": "expensive", "meaning_id": "mahal", "example": "太贵了", "example_translation": "too expensive", "example_translation_id": "terlalu mahal"},
+    {"word": "便宜", "pinyin": "pián yi", "meaning": "cheap", "meaning_id": "murah", "example": "很便宜", "example_translation": "very cheap", "example_translation_id": "sangat murah"},
+    {"word": "价格", "pinyin": "jià gé", "meaning": "price", "meaning_id": "harga", "example": "价格太高", "example_translation": "price too high", "example_translation_id": "harga terlalu tinggi"},
+    {"word": "折扣", "pinyin": "zhé kòu", "meaning": "discount", "meaning_id": "diskon", "example": "打折扣", "example_translation": "give a discount", "example_translation_id": "memberi diskon"},
+    {"word": "太", "pinyin": "tài", "meaning": "too (excessively)", "meaning_id": "terlalu", "example": "太大了", "example_translation": "too big", "example_translation_id": "terlalu besar"},
+    {"word": "有点", "pinyin": "yǒu diǎn", "meaning": "a little (too)", "meaning_id": "agak (terlalu)", "example": "有点贵", "example_translation": "a little expensive", "example_translation_id": "agak mahal"},
+    {"word": "质量", "pinyin": "zhì liàng", "meaning": "quality", "meaning_id": "kualitas", "example": "质量很好", "example_translation": "quality is good", "example_translation_id": "kualitasnya bagus"},
+    {"word": "颜色", "pinyin": "yán sè", "meaning": "color", "meaning_id": "warna", "example": "什么颜色", "example_translation": "what color", "example_translation_id": "warna apa"}
+  ],
+  "grammar": [
+    {
+      "point": "Expressing 'Too' with 太 (tài)",
+      "point_id": "Menyatakan 'Terlalu' dengan 太 (tài)",
+      "explanation": "Use 太 before an adjective to mean 'too' (excessively). Often used with 了 at the end. Structure: 太 + Adjective + 了.",
+      "explanation_id": "Gunakan 太 sebelum kata sifat untuk berarti 'terlalu' (berlebihan). Sering digunakan dengan 了 di akhir. Struktur: 太 + Kata Sifat + 了.",
+      "examples": [
+        {"chinese": "这件衣服太贵了。", "translation": "This clothing is too expensive.", "translation_id": "Pakaian ini terlalu mahal."},
+        {"chinese": "这个菜太辣了。", "translation": "This dish is too spicy.", "translation_id": "Masakan ini terlalu pedas."},
+        {"chinese": "你走得太快了。", "translation": "You walk too fast.", "translation_id": "Kamu berjalan terlalu cepat."}
+      ]
+    },
+    {
+      "point": "Softening with 有点 (yǒu diǎn)",
+      "point_id": "Memperhalus dengan 有点 (yǒu diǎn)",
+      "explanation": "Use 有点 before an adjective to mean 'a little too' or 'somewhat'. It's softer than 太.",
+      "explanation_id": "Gunakan 有点 sebelum kata sifat untuk berarti 'agak terlalu' atau 'sedikit'. Ini lebih lembut dari 太.",
+      "examples": [
+        {"chinese": "有点贵。", "translation": "A little expensive.", "translation_id": "Agak mahal."},
+        {"chinese": "他有点不高兴。", "translation": "He's a little unhappy.", "translation_id": "Dia agak tidak senang."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Customer", "voice": "female", "chinese": "这件衣服多少钱？", "pinyin": "Zhè jiàn yīfu duōshao qián?", "translation": "How much is this piece of clothing?", "translation_id": "Berapa harga pakaian ini?"},
+    {"speaker": "male", "name": "Salesperson", "voice": "male", "chinese": "五百块。", "pinyin": "Wǔ bǎi kuài.", "translation": "Five hundred yuan.", "translation_id": "Lima ratus yuan."},
+    {"speaker": "female", "name": "Customer", "voice": "female", "chinese": "太贵了！能便宜一点吗？", "pinyin": "Tài guì le! Néng piányi yīdiǎn ma?", "translation": "Too expensive! Can you make it cheaper?", "translation_id": "Terlalu mahal! Bisa lebih murah sedikit?"},
+    {"speaker": "male", "name": "Salesperson", "voice": "male", "chinese": "可以打八折，四百块。", "pinyin": "Kěyǐ dǎ bā zhé, sì bǎi kuài.", "translation": "I can give you 20% off, four hundred yuan.", "translation_id": "Bisa diskon 20%, empat ratus yuan."}
+  ],
+  "exercises": [
+    {"question": "What does 太 (tài) express?", "question_id": "Apa yang diekspresikan oleh 太 (tài)?", "options": ["Very", "Too (excessively)", "Quite", "A little"], "options_id": ["Sangat", "Terlalu (berlebihan)", "Cukup", "Sedikit"], "correct": 1},
+    {"question": "How do you say 'This is too expensive' in Chinese?", "question_id": "Bagaimana mengatakan 'Ini terlalu mahal' dalam bahasa Mandarin?", "options": ["很贵", "太贵了", "有点贵", "非常贵"], "options_id": ["Sangat mahal", "Terlalu mahal", "Agak mahal", "Sangat mahal sekali"], "correct": 1},
+    {"question": "What is the difference between 太 and 有点?", "question_id": "Apa perbedaan antara 太 dan 有点?", "options": ["太 is softer, 有点 is stronger", "太 is stronger, 有点 is softer", "They mean the same", "太 is for positive, 有点 is for negative"], "options_id": ["太 lebih lembut, 有点 lebih kuat", "太 lebih kuat, 有点 lebih lembut", "Artinya sama", "太 untuk positif, 有点 untuk negatif"], "correct": 1},
+    {"question": "What does 打折 (dǎzhé) mean?", "question_id": "Apa arti 打折 (dǎzhé)?", "options": ["To increase price", "To give a discount", "To calculate price", "To compare price"], "options_id": ["Menaikkan harga", "Memberi diskon", "Menghitung harga", "Membandingkan harga"], "correct": 1},
+    {"question": "How to say 'Can you make it cheaper?' in Chinese?", "question_id": "Bagaimana mengatakan 'Bisa lebih murah?' dalam bahasa Mandarin?", "options": ["能便宜一点吗？", "能贵一点吗？", "能打折吗？", "能换吗？"], "options_id": ["Bisa lebih murah sedikit?", "Bisa lebih mahal sedikit?", "Bisa diskon?", "Bisa tukar?"], "correct": 0}
+  ]
+}

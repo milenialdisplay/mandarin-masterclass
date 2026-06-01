@@ -1,0 +1,50 @@
+{
+  "title": "职场竞争",
+  "subtitle": "Workplace Competition, Career Development, Professional Skills",
+  "assistant_message": "Today we learn: discussing workplace competition, using 竞争 (jìngzhēng) and 压力 (yālì), and giving career advice.",
+  "vocabulary": [
+    {"word": "竞争", "pinyin": "jìng zhēng", "meaning": "competition", "meaning_id": "persaingan", "example": "激烈竞争", "example_translation": "fierce competition", "example_translation_id": "persaingan ketat"},
+    {"word": "压力", "pinyin": "yā lì", "meaning": "pressure", "meaning_id": "tekanan", "example": "工作压力", "example_translation": "work pressure", "example_translation_id": "tekanan kerja"},
+    {"word": "优势", "pinyin": "yōu shì", "meaning": "advantage", "meaning_id": "keunggulan", "example": "竞争优势", "example_translation": "competitive advantage", "example_translation_id": "keunggulan kompetitif"},
+    {"word": "劣势", "pinyin": "liè shì", "meaning": "disadvantage", "meaning_id": "kelemahan", "example": "处于劣势", "example_translation": "at a disadvantage", "example_translation_id": "dalam posisi lemah"},
+    {"word": "能力", "pinyin": "néng lì", "meaning": "ability", "meaning_id": "kemampuan", "example": "专业能力", "example_translation": "professional ability", "example_translation_id": "kemampuan profesional"},
+    {"word": "提升", "pinyin": "tí shēng", "meaning": "to improve/upgrade", "meaning_id": "meningkatkan", "example": "提升能力", "example_translation": "improve abilities", "example_translation_id": "meningkatkan kemampuan"},
+    {"word": "团队", "pinyin": "tuán duì", "meaning": "team", "meaning_id": "tim", "example": "团队合作", "example_translation": "teamwork", "example_translation_id": "kerja tim"},
+    {"word": "合作", "pinyin": "hé zuò", "meaning": "cooperation", "meaning_id": "kerja sama", "example": "加强合作", "example_translation": "strengthen cooperation", "example_translation_id": "memperkuat kerja sama"}
+  ],
+  "grammar": [
+    {
+      "point": "表达压力 (biǎodá yālì) - Expressing Pressure",
+      "point_id": "Menyatakan Tekanan",
+      "explanation": "Use 压力 (yālì) to talk about pressure. Common phrases: 工作压力 (work pressure), 竞争压力 (competitive pressure).",
+      "explanation_id": "Gunakan 压力 (yālì) untuk membicarakan tekanan. Frasa umum: 工作压力 (tekanan kerja), 竞争压力 (tekanan persaingan).",
+      "examples": [
+        {"chinese": "职场竞争越来越激烈，压力也越来越大。", "translation": "Workplace competition is becoming more intense, and pressure is also increasing.", "translation_id": "Persaingan di tempat kerja menjadi semakin ketat, dan tekanan juga semakin besar."},
+        {"chinese": "要学会缓解压力。", "translation": "You need to learn to relieve stress.", "translation_id": "Kamu perlu belajar mengurangi stres."}
+      ]
+    },
+    {
+      "point": "优势与劣势 (yōushì yǔ lièshì) - Advantages and Disadvantages",
+      "point_id": "Keunggulan dan Kelemahan",
+      "explanation": "Use 优势 for advantages, 劣势 for disadvantages when comparing things or people.",
+      "explanation_id": "Gunakan 优势 untuk keunggulan, 劣势 untuk kelemahan saat membandingkan hal atau orang.",
+      "examples": [
+        {"chinese": "每个人都有优势和劣势。", "translation": "Everyone has advantages and disadvantages.", "translation_id": "Setiap orang memiliki keunggulan dan kelemahan."},
+        {"chinese": "要发挥自己的优势，弥补劣势。", "translation": "You should play to your strengths and make up for your weaknesses.", "translation_id": "Kamu harus memanfaatkan keunggulanmu dan menutupi kelemahanmu."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "现在职场竞争越来越激烈了，压力很大。", "pinyin": "Xiànzài zhíchǎng jìngzhēng yuè lái yuè jīliè le, yālì hěn dà.", "translation": "Workplace competition is becoming more and more intense now, the pressure is great.", "translation_id": "Persaingan di tempat kerja sekarang semakin ketat, tekanannya besar."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "是啊。不仅要提升专业能力，还要学会团队合作。", "pinyin": "Shì a. Bùjǐn yào tíshēng zhuānyè nénglì, hái yào xuéhuì tuánduì hézuò.", "translation": "Yes. Not only do we need to improve professional abilities, but also learn teamwork.", "translation_id": "Ya. Tidak hanya perlu meningkatkan kemampuan profesional, tetapi juga belajar kerja tim."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你有什么竞争优势？", "pinyin": "Nǐ yǒu shénme jìngzhēng yōushì?", "translation": "What competitive advantages do you have?", "translation_id": "Apa keunggulan kompetitif yang kamu miliki?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "我的优势是学习能力强，适应快。每个人都要找到自己的优势。", "pinyin": "Wǒ de yōushì shì xuéxí nénglì qiáng, shìyìng kuài. Měi gè rén dōu yào zhǎo dào zìjǐ de yōushì.", "translation": "My advantage is strong learning ability and quick adaptation. Everyone needs to find their own advantages.", "translation_id": "Keunggulan saya adalah kemampuan belajar yang kuat dan adaptasi cepat. Setiap orang perlu menemukan keunggulannya sendiri."}
+  ],
+  "exercises": [
+    {"question": "What does 竞争 (jìngzhēng) mean?", "question_id": "Apa arti 竞争 (jìngzhēng)?", "options": ["Cooperation", "Competition", "Communication", "Celebration"], "options_id": ["Kerja sama", "Persaingan", "Komunikasi", "Perayaan"], "correct": 1},
+    {"question": "How do you say 'work pressure' in Chinese?", "question_id": "Bagaimana mengatakan 'tekanan kerja' dalam bahasa Mandarin?", "options": ["工作压力", "竞争压力", "生活压力", "学习压力"], "options_id": ["tekanan kerja", "tekanan persaingan", "tekanan hidup", "tekanan belajar"], "correct": 0},
+    {"question": "What does 优势 (yōushì) mean?", "question_id": "Apa arti 优势 (yōushì)?", "options": ["Disadvantage", "Advantage", "Pressure", "Ability"], "options_id": ["Kelemahan", "Keunggulan", "Tekanan", "Kemampuan"], "correct": 1},
+    {"question": "How to say 'improve abilities' in Chinese?", "question_id": "Bagaimana mengatakan 'meningkatkan kemampuan' dalam bahasa Mandarin?", "options": ["提升能力", "降低能力", "保持能力", "失去能力"], "options_id": ["meningkatkan kemampuan", "menurunkan kemampuan", "mempertahankan kemampuan", "kehilangan kemampuan"], "correct": 0},
+    {"question": "What is the opposite of 优势 (yōushì)?", "question_id": "Apa lawan dari 优势 (yōushì)?", "options": ["优势", "劣势", "强势", "弱势"], "options_id": ["keunggulan", "kelemahan", "kekuatan", "kelemahan"], "correct": 1}
+  ]
+}

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate of Completion - Mandarin Teacher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(135deg, #1a472a 0%, #2d6a4f 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .certificate-container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Certificate Card */
+        .certificate {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative border */
+        .certificate::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #ffd700;
+            border-radius: 15px;
+            pointer-events: none;
+        }
+
+        /* Decorative corners */
+        .corner {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-color: #ffd700;
+            border-style: solid;
+        }
+
+        .corner-tl {
+            top: 20px;
+            left: 20px;
+            border-width: 3px 0 0 3px;
+        }
+
+        .corner-tr {
+            top: 20px;
+            right: 20px;
+            border-width: 3px 3px 0 0;
+        }
+
+        .corner-bl {
+            bottom: 20px;
+            left: 20px;
+            border-width: 0 0 3px 3px;
+        }
+
+        .corner-br {
+            bottom: 20px;
+            right: 20px;
+            border-width: 0 3px 3px 0;
+        }
+
+        /* Header */
+        .certificate-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .certificate-icon {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .certificate-title {
+            font-size: 42px;
+            color: #1a472a;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+        }
+
+        .certificate-subtitle {
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            display: inline-block;
+            padding: 5px 20px;
+        }
+
+        /* Body */
+        .certificate-body {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .awarded-to {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .student-name {
+            font-size: 48px;
+            font-weight: bold;
+            color: #1a472a;
+            margin: 20px 0;
+            font-family: 'Georgia', serif;
+            border-bottom: 2px dotted #ffd700;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .achievement {
+            font-size: 24px;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        .level-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #1a472a;
+            margin: 20px 0;
+        }
+
+        .description {
+            color: #666;
+            line-height: 1.8;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        /* Score section */
+        .score-section {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 15px;
+            margin: 20px 0;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .score-value {
+            font-size: 36px;
+            font-weight: bold;
+            color: #e94560;
+        }
+
+        /* Footer */
+        .certificate-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+
+        .signature {
+            text-align: center;
+        }
+
+        .signature-line {
+            width: 150px;
+            height: 2px;
+            background: #333;
+            margin: 10px auto;
+        }
+
+        .signature-name {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .signature-title {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .certificate-date {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        /* Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.2s;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .btn-primary {
+            background: #e94560;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #c42e4a;
+            transform: scale(1.02);
+        }
+
+        .btn-secondary {
+            background: #2d6a4f;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #1a472a;
+        }
+
+        .btn-back {
+            background: #667eea;
+            color: white;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .action-buttons {
+                display: none;
+            }
+            
+            .certificate {
+                box-shadow: none;
+                padding: 30px;
+            }
+            
+            .certificate::before {
+                top: 10px;
+                left: 10px;
+                right: 10px;
+                bottom: 10px;
+            }
+            
+            .corner {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .certificate {
+                padding: 25px;
+            }
+            
+            .certificate-title {
+                font-size: 28px;
+            }
+            
+            .student-name {
+                font-size: 28px;
+            }
+            
+            .achievement {
+                font-size: 18px;
+            }
+            
+            .signature-line {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate-container">
+        <div class="certificate" id="certificate">
+            <div class="corner corner-tl"></div>
+            <div class="corner corner-tr"></div>
+            <div class="corner corner-bl"></div>
+            <div class="corner corner-br"></div>
+            
+            <div class="certificate-header">
+                <div class="certificate-icon">🎓</div>
+                <h1 class="certificate-title">CERTIFICATE</h1>
+                <div class="certificate-subtitle">OF ACHIEVEMENT</div>
+            </div>
+            
+            <div class="certificate-body">
+                <div class="awarded-to">This certificate is proudly presented to</div>
+                <div class="student-name" id="studentName">Student Name</div>
+                
+                <div class="achievement">for successfully completing</div>
+                <div class="level-badge" id="levelBadge">HSK Level 1</div>
+                
+                <div class="score-section" id="scoreSection" style="display: none;">
+                    with a score of <span class="score-value" id="scoreValue">0%</span>
+                </div>
+                
+                <div class="description" id="description">
+                    Demonstrating proficiency in Mandarin Chinese vocabulary, grammar, listening comprehension, and basic conversation skills equivalent to the HSK Level 1 standard.
+                </div>
+            </div>
+            
+            <div class="certificate-footer">
+                <div class="signature">
+                    <div class="signature-line"></div>
+                    <div class="signature-name">AI Mandarin Teacher</div>
+                    <div class="signature-title">Course Instructor</div>
+                </div>
+                <div class="signature">
+                    <div class="signature-line"></div>
+                    <div class="signature-name">HSK Curriculum</div>
+                    <div class="signature-title">Certified Program</div>
+                </div>
+            </div>
+            
+            <div class="certificate-date" id="certificateDate">
+                Issued on January 1, 2024
+            </div>
+        </div>
+        
+        <div class="action-buttons">
+            <button class="btn btn-primary" onclick="downloadCertificate()">📥 Download as Image</button>
+            <button class="btn btn-secondary" onclick="window.print()">🖨️ Print Certificate</button>
+            <button class="btn btn-back" onclick="window.location.href='/dashboard'">← Back to Dashboard</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script>
+        // Get student data from localStorage
+        let studentData = JSON.parse(localStorage.getItem('mandarin_student_data'));
+        
+        // Level descriptions for certificate
+        const LEVEL_DESCRIPTIONS = {
+            1: "Demonstrating proficiency in Mandarin Chinese vocabulary, grammar, listening comprehension, and basic conversation skills equivalent to the HSK Level 1 standard (150 words, basic daily communication).",
+            2: "Demonstrating proficiency in Mandarin Chinese equivalent to HSK Level 2 standard (300 words, handling simple daily conversations, shopping, and directions).",
+            3: "Demonstrating proficiency in Mandarin Chinese equivalent to HSK Level 3 standard (600 words, able to live independently in China and handle daily work situations).",
+            4: "Demonstrating proficiency in Mandarin Chinese equivalent to HSK Level 4 standard (1,200 words, able to discuss abstract topics and read news headlines).",
+            5: "Demonstrating advanced proficiency in Mandarin Chinese equivalent to HSK Level 5 standard (2,500 words, able to work professionally and discuss complex topics).",
+            6: "Demonstrating near-native proficiency in Mandarin Chinese equivalent to HSK Level 6 standard (5,000+ words, able to understand media and conduct academic research)."
+        };
+        
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        let level = parseInt(urlParams.get('level')) || 1;
+        let score = urlParams.get('score') ? parseInt(urlParams.get('score')) : null;
+        
+        // Override with student data if available and not specified
+        if (studentData && !score) {
+            // Use highest passed level
+            for (let i = 6; i >= 1; i--) {
+                if (studentData.testScores && studentData.testScores[i] >= 60) {
+                    level = i;
+                    score = studentData.testScores[i];
+                    break;
+                }
+            }
+            
+            // If no passed level, use current level with best score
+            if (!score && studentData.testScores[studentData.currentHSK]) {
+                score = studentData.testScores[studentData.currentHSK];
+            }
+        }
+        
+        // Display student name
+        const studentNameElement = document.getElementById('studentName');
+        if (studentData && studentData.name) {
+            studentNameElement.textContent = studentData.name;
+        } else {
+            // Let user enter name
+            const defaultName = "Language Learner";
+            studentNameElement.textContent = defaultName;
+            studentNameElement.setAttribute('contenteditable', 'true');
+            studentNameElement.style.cursor = 'pointer';
+            studentNameElement.style.borderBottom = '2px dotted #ffd700';
+            studentNameElement.title = 'Click to edit name';
+            
+            studentNameElement.addEventListener('click', () => {
+                const newName = prompt('Enter your name for the certificate:', studentNameElement.textContent);
+                if (newName && newName.trim()) {
+                    studentNameElement.textContent = newName.trim();
+                    if (studentData) {
+                        studentData.name = newName.trim();
+                        localStorage.setItem('mandarin_student_data', JSON.stringify(studentData));
+                    }
+                }
+            });
+        }
+        
+        // Update certificate based on level
+        const levelNames = {
+            1: "HSK Level 1 (Beginner)",
+            2: "HSK Level 2 (Elementary)",
+            3: "HSK Level 3 (Intermediate)",
+            4: "HSK Level 4 (Upper-Intermediate)",
+            5: "HSK Level 5 (Advanced)",
+            6: "HSK Level 6 (Mastery)"
+        };
+        
+        document.getElementById('levelBadge').textContent = levelNames[level] || `HSK Level ${level}`;
+        document.getElementById('description').textContent = LEVEL_DESCRIPTIONS[level] || LEVEL_DESCRIPTIONS[6];
+        
+        // Show score if available
+        if (score && score >= 60) {
+            const scoreSection = document.getElementById('scoreSection');
+            scoreSection.style.display = 'inline-block';
+            document.getElementById('scoreValue').textContent = `${Math.round(score)}%`;
+        }
+        
+        // Set date
+        const dateElement = document.getElementById('certificateDate');
+        const today = new Date();
+        const formattedDate = today.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        dateElement.textContent = `Issued on ${formattedDate}`;
+        
+        // Generate verification code
+        const verificationCode = generateVerificationCode();
+        const verificationElement = document.createElement('div');
+        verificationElement.style.cssText = 'text-align: center; font-size: 10px; color: #999; margin-top: 15px;';
+        verificationElement.innerHTML = `Verification Code: ${verificationCode}`;
+        document.querySelector('.certificate-footer').after(verificationElement);
+        
+        function generateVerificationCode() {
+            const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+            let code = '';
+            for (let i = 0; i < 8; i++) {
+                code += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return `${level}-${code}-${today.getFullYear()}`;
+        }
+        
+        // Download as image
+        async function downloadCertificate() {
+            const certificate = document.getElementById('certificate');
+            const buttons = document.querySelector('.action-buttons');
+            const originalDisplay = buttons.style.display;
+            
+            // Hide buttons temporarily
+            buttons.style.display = 'none';
+            
+            try {
+                const canvas = await html2canvas(certificate, {
+                    scale: 2,
+                    backgroundColor: '#ffffff',
+                    logging: false,
+                    useCORS: true
+                });
+                
+                const link = document.createElement('a');
+                const studentNameForFile = studentNameElement.textContent.replace(/\s+/g, '_');
+                link.download = `HSK_Level_${level}_Certificate_${studentNameForFile}.png`;
+                link.href = canvas.toDataURL();
+                link.click();
+                
+            } catch (error) {
+                console.error('Error generating certificate:', error);
+                alert('There was an error generating the certificate. Please try again.');
+            } finally {
+                buttons.style.display = originalDisplay;
+            }
+        }
+        
+        // Share certificate
+        async function shareCertificate() {
+            const certificate = document.getElementById('certificate');
+            
+            try {
+                const canvas = await html2canvas(certificate, {
+                    scale: 2,
+                    backgroundColor: '#ffffff'
+                });
+                
+                canvas.toBlob(async (blob) => {
+                    if (navigator.share) {
+                        const file = new File([blob], 'certificate.png', { type: 'image/png' });
+                        await navigator.share({
+                            title: 'My HSK Certificate',
+                            text: `I earned my HSK Level ${level} certificate!`,
+                            files: [file]
+                        });
+                    } else {
+                        // Fallback to download
+                        const link = document.createElement('a');
+                        link.download = `HSK_Level_${level}_Certificate.png`;
+                        link.href = URL.createObjectURL(blob);
+                        link.click();
+                        URL.revokeObjectURL(link.href);
+                    }
+                });
+            } catch (error) {
+                console.error('Error sharing:', error);
+                alert('Your browser does not support sharing. The certificate has been downloaded instead.');
+            }
+        }
+    </script>
+</body>
+</html>

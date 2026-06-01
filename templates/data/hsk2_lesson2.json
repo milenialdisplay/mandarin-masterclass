@@ -1,0 +1,52 @@
+{
+  "title": "我每天六点起床",
+  "subtitle": "Daily Routines, Time Expressions, Frequency Adverbs",
+  "assistant_message": "Today we learn: daily routines (起床, 上班, 睡觉), time expressions (早上, 晚上, 每天), and frequency adverbs (经常, 有时候).",
+  "vocabulary": [
+    {"word": "起床", "pinyin": "qǐ chuáng", "meaning": "to get up", "meaning_id": "bangun tidur", "example": "六点起床", "example_translation": "get up at 6", "example_translation_id": "bangun jam 6"},
+    {"word": "每天", "pinyin": "měi tiān", "meaning": "every day", "meaning_id": "setiap hari", "example": "每天运动", "example_translation": "exercise every day", "example_translation_id": "olahraga setiap hari"},
+    {"word": "早上", "pinyin": "zǎo shang", "meaning": "morning", "meaning_id": "pagi", "example": "早上好", "example_translation": "good morning", "example_translation_id": "selamat pagi"},
+    {"word": "刷牙", "pinyin": "shuā yá", "meaning": "to brush teeth", "meaning_id": "menyikat gigi", "example": "刷牙洗脸", "example_translation": "brush teeth and wash face", "example_translation_id": "sikat gigi dan cuci muka"},
+    {"word": "洗脸", "pinyin": "xǐ liǎn", "meaning": "to wash face", "meaning_id": "cuci muka", "example": "洗脸后吃早饭", "example_translation": "eat breakfast after washing face", "example_translation_id": "makan sarapan setelah cuci muka"},
+    {"word": "上班", "pinyin": "shàng bān", "meaning": "to go to work", "meaning_id": "pergi kerja", "example": "八点上班", "example_translation": "go to work at 8", "example_translation_id": "pergi kerja jam 8"},
+    {"word": "下班", "pinyin": "xià bān", "meaning": "to get off work", "meaning_id": "pulang kerja", "example": "五点下班", "example_translation": "get off work at 5", "example_translation_id": "pulang kerja jam 5"},
+    {"word": "睡觉", "pinyin": "shuì jiào", "meaning": "to sleep", "meaning_id": "tidur", "example": "十点睡觉", "example_translation": "sleep at 10", "example_translation_id": "tidur jam 10"}
+  ],
+  "grammar": [
+    {
+      "point": "Time Order (Time + Action)",
+      "point_id": "Urutan Waktu (Waktu + Aksi)",
+      "explanation": "In Chinese, time expressions come before the verb. Time + Subject + Verb.",
+      "explanation_id": "Dalam bahasa Mandarin, ekspresi waktu datang sebelum kata kerja. Waktu + Subjek + Kata Kerja.",
+      "examples": [
+        {"chinese": "我每天六点起床。", "translation": "I get up at 6 every day.", "translation_id": "Saya bangun jam 6 setiap hari."},
+        {"chinese": "他早上八点上班。", "translation": "He goes to work at 8 in the morning.", "translation_id": "Dia pergi kerja jam 8 pagi."},
+        {"chinese": "我们晚上十点睡觉。", "translation": "We sleep at 10 at night.", "translation_id": "Kami tidur jam 10 malam."}
+      ]
+    },
+    {
+      "point": "Frequency Adverbs (经常, 有时候, 总是)",
+      "point_id": "Kata Keterangan Frekuensi (经常, 有时候, 总是)",
+      "explanation": "Place frequency adverbs before the verb. 经常 (often), 有时候 (sometimes), 总是 (always).",
+      "explanation_id": "Letakkan kata keterangan frekuensi sebelum kata kerja. 经常 (sering), 有时候 (kadang-kadang), 总是 (selalu).",
+      "examples": [
+        {"chinese": "我经常运动。", "translation": "I often exercise.", "translation_id": "Saya sering berolahraga."},
+        {"chinese": "他有时候迟到。", "translation": "He is sometimes late.", "translation_id": "Dia kadang-kadang terlambat."},
+        {"chinese": "她总是很忙。", "translation": "She is always busy.", "translation_id": "Dia selalu sibuk."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Li Ming", "voice": "male", "chinese": "你每天几点起床？", "pinyin": "Nǐ měitiān jǐ diǎn qǐchuáng?", "translation": "What time do you get up every day?", "translation_id": "Kamu bangun jam berapa setiap hari?"},
+    {"speaker": "female", "name": "Wang Fang", "voice": "female", "chinese": "我每天六点起床。你呢？", "pinyin": "Wǒ měitiān liù diǎn qǐchuáng. Nǐ ne?", "translation": "I get up at 6 every day. And you?", "translation_id": "Saya bangun jam 6 setiap hari. Kamu?"},
+    {"speaker": "male", "name": "Li Ming", "voice": "male", "chinese": "我六点半起床。早上做什么？", "pinyin": "Wǒ liù diǎn bàn qǐchuáng. Zǎoshang zuò shénme?", "translation": "I get up at 6:30. What do you do in the morning?", "translation_id": "Saya bangun jam 6:30. Kamu melakukan apa di pagi hari?"},
+    {"speaker": "female", "name": "Wang Fang", "voice": "female", "chinese": "我刷牙洗脸，然后吃早饭。", "pinyin": "Wǒ shuāyá xǐliǎn, ránhòu chī zǎofàn.", "translation": "I brush my teeth and wash my face, then eat breakfast.", "translation_id": "Saya sikat gigi dan cuci muka, lalu makan sarapan."}
+  ],
+  "exercises": [
+    {"question": "What does 起床 (qǐchuáng) mean?", "question_id": "Apa arti 起床 (qǐchuáng)?", "options": ["Go to bed", "Get up", "Eat breakfast", "Go to work"], "options_id": ["Tidur", "Bangun tidur", "Makan sarapan", "Pergi kerja"], "correct": 1},
+    {"question": "How do you say 'every day' in Chinese?", "question_id": "Bagaimana mengatakan 'setiap hari' dalam bahasa Mandarin?", "options": ["每天", "每天天", "每日", "天天"], "options_id": ["setiap hari", "setiap hari-hari", "setiap hari (formal)", "hari-hari"], "correct": 0},
+    {"question": "What is 上班 (shàngbān)?", "question_id": "Apa itu 上班 (shàngbān)?", "options": ["Get off work", "Go to work", "Rest", "Sleep"], "options_id": ["Pulang kerja", "Pergi kerja", "Istirahat", "Tidur"], "correct": 1},
+    {"question": "How to say 'I sleep at 10 PM' in Chinese?", "question_id": "Bagaimana mengatakan 'Saya tidur jam 10 malam' dalam bahasa Mandarin?", "options": ["我十点睡觉", "我睡觉十点", "十点我睡觉", "我十点睡"], "options_id": ["Saya jam 10 tidur", "Saya tidur jam 10", "Jam 10 saya tidur", "Saya jam 10 tidur"], "correct": 0},
+    {"question": "Choose the correct time order sentence", "question_id": "Pilih kalimat urutan waktu yang benar", "options": ["我起床六点每天", "我每天六点起床", "六点起床我每天", "起床我六点每天"], "options_id": ["Saya bangun jam 6 setiap hari (salah urutan)", "Saya setiap hari jam 6 bangun", "Jam 6 bangun saya setiap hari", "Bangun saya jam 6 setiap hari"], "correct": 1}
+  ]
+}

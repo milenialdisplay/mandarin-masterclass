@@ -1,0 +1,228 @@
+{
+  "title": "批判性思维",
+  "subtitle": "Critical Thinking, Logical Reasoning, Analysis",
+  "assistant_message": "Today we learn: discussing critical thinking skills, expressing logical reasoning, and talking about analyzing information objectively.",
+  "vocabulary": [
+    {
+      "word": "批判性思维",
+      "pinyin": "pī pàn xìng sī wéi",
+      "meaning": "critical thinking",
+      "meaning_id": "berpikir kritis",
+      "example": "培养批判性思维",
+      "example_translation": "develop critical thinking",
+      "example_translation_id": "mengembangkan berpikir kritis"
+    },
+    {
+      "word": "逻辑",
+      "pinyin": "luó ji",
+      "meaning": "logic",
+      "meaning_id": "logika",
+      "example": "逻辑推理",
+      "example_translation": "logical reasoning",
+      "example_translation_id": "penalaran logis"
+    },
+    {
+      "word": "客观",
+      "pinyin": "kè guān",
+      "meaning": "objective",
+      "meaning_id": "objektif",
+      "example": "客观分析",
+      "example_translation": "objective analysis",
+      "example_translation_id": "analisis objektif"
+    },
+    {
+      "word": "主观",
+      "pinyin": "zhǔ guān",
+      "meaning": "subjective",
+      "meaning_id": "subjektif",
+      "example": "主观判断",
+      "example_translation": "subjective judgment",
+      "example_translation_id": "penilaian subjektif"
+    },
+    {
+      "word": "证据",
+      "pinyin": "zhèng jù",
+      "meaning": "evidence",
+      "meaning_id": "bukti",
+      "example": "寻找证据",
+      "example_translation": "look for evidence",
+      "example_translation_id": "mencari bukti"
+    },
+    {
+      "word": "假设",
+      "pinyin": "jiǎ shè",
+      "meaning": "assumption",
+      "meaning_id": "asumsi",
+      "example": "基于假设",
+      "example_translation": "based on assumptions",
+      "example_translation_id": "berdasarkan asumsi"
+    },
+    {
+      "word": "结论",
+      "pinyin": "jié lùn",
+      "meaning": "conclusion",
+      "meaning_id": "kesimpulan",
+      "example": "得出结论",
+      "example_translation": "draw a conclusion",
+      "example_translation_id": "menarik kesimpulan"
+    },
+    {
+      "word": "质疑",
+      "pinyin": "zhì yí",
+      "meaning": "to question",
+      "meaning_id": "mempertanyakan",
+      "example": "敢于质疑",
+      "example_translation": "dare to question",
+      "example_translation_id": "berani mempertanyakan"
+    },
+    {
+      "word": "偏见",
+      "pinyin": "piān jiàn",
+      "meaning": "bias",
+      "meaning_id": "bias",
+      "example": "消除偏见",
+      "example_translation": "eliminate bias",
+      "example_translation_id": "menghilangkan bias"
+    },
+    {
+      "word": "推理",
+      "pinyin": "tuī lǐ",
+      "meaning": "reasoning",
+      "meaning_id": "penalaran",
+      "example": "逻辑推理",
+      "example_translation": "logical reasoning",
+      "example_translation_id": "penalaran logis"
+    }
+  ],
+  "grammar": [
+    {
+      "point": "Using 基于 (jīyú) - 'Based on'",
+      "point_id": "Menggunakan 基于 (jīyú) - 'Berdasarkan'",
+      "explanation": "基于 indicates the foundation or basis for an action or judgment.",
+      "explanation_id": "基于 menunjukkan dasar atau fondasi untuk suatu tindakan atau penilaian.",
+      "examples": [
+        {
+          "chinese": "基于事实做出判断。",
+          "translation": "Make judgments based on facts.",
+          "translation_id": "Buat penilaian berdasarkan fakta."
+        },
+        {
+          "chinese": "基于这些证据，我们得出结论。",
+          "translation": "Based on this evidence, we draw a conclusion.",
+          "translation_id": "Berdasarkan bukti ini, kami menarik kesimpulan."
+        }
+      ]
+    },
+    {
+      "point": "Using 由此可见 (yóucǐ kějiàn) - 'From this it can be seen'",
+      "point_id": "Menggunakan 由此可见 (yóucǐ kějiàn) - 'Dari sini dapat dilihat'",
+      "explanation": "由此可见 introduces a conclusion drawn from previous information.",
+      "explanation_id": "由此可见 memperkenalkan kesimpulan yang ditarik dari informasi sebelumnya.",
+      "examples": [
+        {
+          "chinese": "他没有提供任何证据，由此可见他的话不可信。",
+          "translation": "He didn't provide any evidence; from this it can be seen that his words are unreliable.",
+          "translation_id": "Dia tidak memberikan bukti apa pun; dari sini dapat dilihat bahwa kata-katanya tidak dapat dipercaya."
+        },
+        {
+          "chinese": "所有人都同意这个方案，由此可见它很合理。",
+          "translation": "Everyone agrees with this plan; from this it can be seen that it is very reasonable.",
+          "translation_id": "Semua orang setuju dengan rencana ini; dari sini dapat dilihat bahwa itu sangat masuk akal."
+        }
+      ]
+    },
+    {
+      "point": "Using 与其说...不如说... (yǔqí shuō...bùrú shuō...) - 'Rather than say... it's better to say...'",
+      "point_id": "Menggunakan 与其说...不如说... (yǔqí shuō...bùrú shuō...) - 'Daripada mengatakan... lebih baik mengatakan...'",
+      "explanation": "This structure corrects or refines a previous statement.",
+      "explanation_id": "Struktur ini mengoreksi atau memperbaiki pernyataan sebelumnya.",
+      "examples": [
+        {
+          "chinese": "与其说这是运气，不如说是努力的结果。",
+          "translation": "Rather than saying it's luck, it's better to say it's the result of hard work.",
+          "translation_id": "Daripada mengatakan itu keberuntungan, lebih baik dikatakan itu hasil kerja keras."
+        },
+        {
+          "chinese": "与其说他在批评，不如说他在建议。",
+          "translation": "Rather than saying he's criticizing, it's better to say he's suggesting.",
+          "translation_id": "Daripada mengatakan dia mengkritik, lebih baik dikatakan dia memberi saran."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "male",
+      "name": "Chen Yu",
+      "voice": "male",
+      "chinese": "现在的网络上有很多信息，但很难分辨真假。",
+      "pinyin": "Xiànzài de wǎngluò shàng yǒu hěnduō xìnxī, dàn hěn nán fēnbiàn zhēnjiǎ.",
+      "translation": "There's a lot of information on the internet now, but it's hard to tell what's true and false.",
+      "translation_id": "Ada banyak informasi di internet sekarang, tapi sulit membedakan mana yang benar dan salah."
+    },
+    {
+      "speaker": "female",
+      "name": "Li Na",
+      "voice": "female",
+      "chinese": "所以我们需要培养批判性思维。要学会质疑，不要轻易相信任何信息。",
+      "pinyin": "Suǒyǐ wǒmen xūyào péiyǎng pīpàn xìng sīwéi. Yào xuéhuì zhìyí, bùyào qīngyì xiāngxìn rènhé xìnxī.",
+      "translation": "That's why we need to develop critical thinking. Learn to question and don't easily believe any information.",
+      "translation_id": "Itulah mengapa kita perlu mengembangkan berpikir kritis. Belajar mempertanyakan dan jangan mudah percaya pada informasi apa pun."
+    },
+    {
+      "speaker": "male",
+      "name": "Chen Yu",
+      "voice": "male",
+      "chinese": "我们应该如何客观分析问题呢？",
+      "pinyin": "Wǒmen yīnggāi rúhé kèguān fēnxī wèntí ne?",
+      "translation": "How should we analyze problems objectively?",
+      "translation_id": "Bagaimana kita harus menganalisis masalah secara objektif?"
+    },
+    {
+      "speaker": "female",
+      "name": "Li Na",
+      "voice": "female",
+      "chinese": "首先，基于证据而不是主观偏见。其次，检查逻辑是否合理。由此可见，批判性思维能帮我们做出更明智的判断。",
+      "pinyin": "Shǒuxiān, jīyú zhèngjù ér bùshì zhǔguān piānjiàn. Qícì, jiǎnchá luóji shìfǒu hélǐ. Yóucǐ kějiàn, pīpàn xìng sīwéi néng bāng wǒmen zuò chū gèng míngzhì de pànduàn.",
+      "translation": "First, base it on evidence, not subjective bias. Second, check whether the logic is reasonable. From this it can be seen that critical thinking can help us make wiser judgments.",
+      "translation_id": "Pertama, dasarkan pada bukti, bukan bias subjektif. Kedua, periksa apakah logikanya masuk akal. Dari sini dapat dilihat bahwa berpikir kritis dapat membantu kita membuat penilaian yang lebih bijaksana."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "What does 批判性思维 (pīpàn xìng sīwéi) mean?",
+      "question_id": "Apa arti 批判性思维 (pīpàn xìng sīwéi)?",
+      "options": ["Positive thinking", "Critical thinking", "Creative thinking", "Logical thinking"],
+      "options_id": ["Berpikir positif", "Berpikir kritis", "Berpikir kreatif", "Berpikir logis"],
+      "correct": 1
+    },
+    {
+      "question": "How do you say 'objective' in Chinese?",
+      "question_id": "Bagaimana mengatakan 'objektif' dalam bahasa Mandarin?",
+      "options": ["主观", "客观", "逻辑", "偏见"],
+      "options_id": ["subjektif", "objektif", "logika", "bias"],
+      "correct": 1
+    },
+    {
+      "question": "What does 证据 (zhèngjù) mean?",
+      "question_id": "Apa arti 证据 (zhèngjù)?",
+      "options": ["Assumption", "Conclusion", "Evidence", "Bias"],
+      "options_id": ["Asumsi", "Kesimpulan", "Bukti", "Bias"],
+      "correct": 2
+    },
+    {
+      "question": "Complete the sentence: ______这些证据，我们得出结论。",
+      "question_id": "Lengkapi kalimat: ______这些证据，我们得出结论。",
+      "options": ["基于", "关于", "对于", "由于"],
+      "options_id": ["Berdasarkan", "Tentang", "Untuk", "Karena"],
+      "correct": 0
+    },
+    {
+      "question": "What is the best translation of 'Rather than saying it's luck, it's better to say it's the result of hard work'?",
+      "question_id": "Apa terjemahan terbaik dari 'Daripada mengatakan itu keberuntungan, lebih baik dikatakan itu hasil kerja keras'?",
+      "options": ["与其说运气，不如说努力", "与其说努力，不如说运气", "与其说成功，不如说失败", "与其说结果，不如说过程"],
+      "options_id": ["daripada keberuntungan, lebih baik kerja keras", "daripada kerja keras, lebih baik keberuntungan", "daripada sukses, lebih baik gagal", "daripada hasil, lebih baik proses"],
+      "correct": 0
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "title": "人与自然",
+  "subtitle": "Environment, Philosophy, Balance",
+  "assistant_message": "Today we learn: discussing the relationship between humans and nature, using 从而 (cóng'ér) for 'thereby', and expressing ecological concepts.",
+  "vocabulary": [
+    {"word": "自然", "pinyin": "zì rán", "meaning": "nature", "meaning_id": "alam", "example": "保护自然", "example_translation": "protect nature", "example_translation_id": "melindungi alam"},
+    {"word": "和谐", "pinyin": "hé xié", "meaning": "harmony", "meaning_id": "harmoni", "example": "人与自然和谐相处", "example_translation": "harmonious coexistence between humans and nature", "example_translation_id": "hidup harmonis antara manusia dan alam"},
+    {"word": "生态", "pinyin": "shēng tài", "meaning": "ecology", "meaning_id": "ekologi", "example": "生态系统", "example_translation": "ecosystem", "example_translation_id": "ekosistem"},
+    {"word": "平衡", "pinyin": "píng héng", "meaning": "balance", "meaning_id": "keseimbangan", "example": "生态平衡", "example_translation": "ecological balance", "example_translation_id": "keseimbangan ekologi"},
+    {"word": "可持续发展", "pinyin": "kě chí xù fā zhǎn", "meaning": "sustainable development", "meaning_id": "pembangunan berkelanjutan", "example": "可持续发展战略", "example_translation": "sustainable development strategy", "example_translation_id": "strategi pembangunan berkelanjutan"},
+    {"word": "资源", "pinyin": "zī yuán", "meaning": "resources", "meaning_id": "sumber daya", "example": "自然资源", "example_translation": "natural resources", "example_translation_id": "sumber daya alam"},
+    {"word": "污染", "pinyin": "wū rǎn", "meaning": "pollution", "meaning_id": "polusi", "example": "环境污染", "example_translation": "environmental pollution", "example_translation_id": "polusi lingkungan"},
+    {"word": "节约", "pinyin": "jié yuē", "meaning": "to save/conserve", "meaning_id": "menghemat", "example": "节约能源", "example_translation": "conserve energy", "example_translation_id": "menghemat energi"}
+  ],
+  "grammar": [
+    {
+      "point": "从而 (cóng'ér) - Thereby",
+      "point_id": "从而 (cóng'ér) - Dengan demikian",
+      "explanation": "从而 connects two clauses where the first leads to the second as a result or further action.",
+      "explanation_id": "从而 menghubungkan dua klausa di mana klausa pertama mengarah ke klausa kedua sebagai hasil atau tindakan lanjutan.",
+      "examples": [
+        {"chinese": "我们要保护自然环境，从而实现可持续发展。", "translation": "We must protect the natural environment, thereby achieving sustainable development.", "translation_id": "Kita harus melindungi lingkungan alam, dengan demikian mencapai pembangunan berkelanjutan."},
+        {"chinese": "节约用水，从而减少资源浪费。", "translation": "Conserve water, thereby reducing resource waste.", "translation_id": "Hemat air, dengan demikian mengurangi pemborosan sumber daya."}
+      ]
+    },
+    {
+      "point": "和谐相处 (héxié xiāngchǔ) - Harmonious coexistence",
+      "point_id": "和谐相处 (héxié xiāngchǔ) - Hidup harmonis",
+      "explanation": "Use this phrase to describe people or things living together peacefully and balanced.",
+      "explanation_id": "Gunakan frasa ini untuk menggambarkan orang atau hal yang hidup bersama secara damai dan seimbang.",
+      "examples": [
+        {"chinese": "人与自然应该和谐相处。", "translation": "Humans and nature should coexist harmoniously.", "translation_id": "Manusia dan alam harus hidup harmonis."},
+        {"chinese": "他们一家人和谐相处。", "translation": "Their family lives in harmony.", "translation_id": "Keluarga mereka hidup harmonis."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你觉得人与自然应该是什么关系？", "pinyin": "Nǐ juéde rén yǔ zìrán yīnggāi shì shénme guānxì?", "translation": "What do you think the relationship between humans and nature should be?", "translation_id": "Menurutmu apa hubungan antara manusia dan alam?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "人与自然应该和谐相处。我们要保护自然，从而实现可持续发展。", "pinyin": "Rén yǔ zìrán yīnggāi héxié xiāngchǔ. Wǒmen yào bǎohù zìrán, cóng'ér shíxiàn kě chíxù fāzhǎn.", "translation": "Humans and nature should coexist harmoniously. We must protect nature, thereby achieving sustainable development.", "translation_id": "Manusia dan alam harus hidup harmonis. Kita harus melindungi alam, dengan demikian mencapai pembangunan berkelanjutan."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "但是现在环境污染很严重，资源也在减少。", "pinyin": "Dànshì xiànzài huánjìng wūrǎn hěn yánzhòng, zīyuán yě zài jiǎnshǎo.", "translation": "But now environmental pollution is very serious, and resources are also decreasing.", "translation_id": "Tapi sekarang polusi lingkungan sangat parah, dan sumber daya juga semakin berkurang."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "所以每个人都要从自己做起，节约资源，保护环境。", "pinyin": "Suǒyǐ měi gè rén dōu yào cóng zìjǐ zuò qǐ, jiéyuē zīyuán, bǎohù huánjìng.", "translation": "So everyone must start with themselves, conserve resources, and protect the environment.", "translation_id": "Jadi setiap orang harus mulai dari diri sendiri, menghemat sumber daya, dan melindungi lingkungan."}
+  ],
+  "exercises": [
+    {"question": "What does 自然 (zìrán) mean?", "question_id": "Apa arti 自然 (zìrán)?", "options": ["Nature", "Culture", "Society", "Economy"], "options_id": ["Alam", "Budaya", "Masyarakat", "Ekonomi"], "correct": 0},
+    {"question": "What does 从而 (cóng'ér) mean?", "question_id": "Apa arti 从而 (cóng'ér)?", "options": ["Therefore", "Thereby", "However", "Moreover"], "options_id": ["Oleh karena itu", "Dengan demikian", "Namun", "Selain itu"], "correct": 1},
+    {"question": "How do you say 'sustainable development' in Chinese?", "question_id": "Bagaimana mengatakan 'pembangunan berkelanjutan' dalam bahasa Mandarin?", "options": ["持续发展", "可持续发展", "继续发展", "永久发展"], "options_id": ["perkembangan berkelanjutan", "pembangunan berkelanjutan", "perkembangan lanjutan", "perkembangan permanen"], "correct": 1},
+    {"question": "What does 和谐相处 (héxié xiāngchǔ) mean?", "question_id": "Apa arti 和谐相处 (héxié xiāngchǔ)?", "options": ["To fight", "To coexist harmoniously", "To compete", "To separate"], "options_id": ["Bertengkar", "Hidup harmonis", "Bersaing", "Berpisah"], "correct": 1},
+    {"question": "How to say 'conserve energy' in Chinese?", "question_id": "Bagaimana mengatakan 'menghemat energi' dalam bahasa Mandarin?", "options": ["节约能源", "使用能源", "开发能源", "浪费能源"], "options_id": ["menghemat energi", "menggunakan energi", "mengembangkan energi", "membuang energi"], "correct": 0}
+  ]
+}

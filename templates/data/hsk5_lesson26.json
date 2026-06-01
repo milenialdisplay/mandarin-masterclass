@@ -1,0 +1,228 @@
+{
+  "title": "志愿服务",
+  "subtitle": "Volunteer Service, Social Responsibility, Community Engagement",
+  "assistant_message": "Today we learn: discussing volunteer service and community engagement, expressing social responsibility, and talking about giving back to society.",
+  "vocabulary": [
+    {
+      "word": "志愿",
+      "pinyin": "zhì yuàn",
+      "meaning": "volunteer",
+      "meaning_id": "sukarelawan",
+      "example": "志愿服务活动",
+      "example_translation": "volunteer service activities",
+      "example_translation_id": "kegiatan layanan sukarelawan"
+    },
+    {
+      "word": "服务",
+      "pinyin": "fú wù",
+      "meaning": "service",
+      "meaning_id": "layanan",
+      "example": "社区服务",
+      "example_translation": "community service",
+      "example_translation_id": "layanan masyarakat"
+    },
+    {
+      "word": "奉献",
+      "pinyin": "fèng xiàn",
+      "meaning": "dedication",
+      "meaning_id": "dedikasi",
+      "example": "无私奉献",
+      "example_translation": "selfless dedication",
+      "example_translation_id": "dedikasi tanpa pamrih"
+    },
+    {
+      "word": "责任",
+      "pinyin": "zé rèn",
+      "meaning": "responsibility",
+      "meaning_id": "tanggung jawab",
+      "example": "社会责任",
+      "example_translation": "social responsibility",
+      "example_translation_id": "tanggung jawab sosial"
+    },
+    {
+      "word": "社区",
+      "pinyin": "shè qū",
+      "meaning": "community",
+      "meaning_id": "komunitas",
+      "example": "服务社区",
+      "example_translation": "serve the community",
+      "example_translation_id": "melayani komunitas"
+    },
+    {
+      "word": "帮助",
+      "pinyin": "bāng zhù",
+      "meaning": "to help",
+      "meaning_id": "membantu",
+      "example": "帮助他人",
+      "example_translation": "help others",
+      "example_translation_id": "membantu orang lain"
+    },
+    {
+      "word": "经验",
+      "pinyin": "jīng yàn",
+      "meaning": "experience",
+      "meaning_id": "pengalaman",
+      "example": "获得经验",
+      "example_translation": "gain experience",
+      "example_translation_id": "mendapatkan pengalaman"
+    },
+    {
+      "word": "回报",
+      "pinyin": "huí bào",
+      "meaning": "to give back",
+      "meaning_id": "memberi kembali",
+      "example": "回报社会",
+      "example_translation": "give back to society",
+      "example_translation_id": "memberi kembali kepada masyarakat"
+    },
+    {
+      "word": "关怀",
+      "pinyin": "guān huái",
+      "meaning": "care",
+      "meaning_id": "perhatian",
+      "example": "关怀弱势群体",
+      "example_translation": "care for vulnerable groups",
+      "example_translation_id": "peduli pada kelompok rentan"
+    },
+    {
+      "word": "意义",
+      "pinyin": "yì yì",
+      "meaning": "meaning",
+      "meaning_id": "makna",
+      "example": "人生意义",
+      "example_translation": "meaning of life",
+      "example_translation_id": "makna hidup"
+    }
+  ],
+  "grammar": [
+    {
+      "point": "Using 通过...来... (tōngguò...lái...) - 'Through... to...'",
+      "point_id": "Menggunakan 通过...来... (tōngguò...lái...) - 'Melalui... untuk...'",
+      "explanation": "This structure indicates the method or means by which something is achieved.",
+      "explanation_id": "Struktur ini menunjukkan cara atau metode untuk mencapai sesuatu.",
+      "examples": [
+        {
+          "chinese": "通过志愿服务来回报社会。",
+          "translation": "Give back to society through volunteer service.",
+          "translation_id": "Memberi kembali kepada masyarakat melalui layanan sukarelawan."
+        },
+        {
+          "chinese": "通过帮助他人来获得快乐。",
+          "translation": "Gain happiness by helping others.",
+          "translation_id": "Mendapatkan kebahagiaan dengan membantu orang lain."
+        }
+      ]
+    },
+    {
+      "point": "Using 不仅...也... (bùjǐn...yě...) - 'Not only... but also...'",
+      "point_id": "Menggunakan 不仅...也... (bùjǐn...yě...) - 'Tidak hanya... tetapi juga...'",
+      "explanation": "This structure adds additional information, emphasizing two aspects.",
+      "explanation_id": "Struktur ini menambahkan informasi tambahan, menekankan dua aspek.",
+      "examples": [
+        {
+          "chinese": "志愿服务不仅帮助了别人，也丰富了自己。",
+          "translation": "Volunteer service not only helps others, but also enriches oneself.",
+          "translation_id": "Layanan sukarelawan tidak hanya membantu orang lain, tetapi juga memperkaya diri sendiri."
+        },
+        {
+          "chinese": "他不仅参加了活动，也提出了很好的建议。",
+          "translation": "He not only participated in the activity, but also made good suggestions.",
+          "translation_id": "Dia tidak hanya berpartisipasi dalam kegiatan, tetapi juga memberikan saran yang baik."
+        }
+      ]
+    },
+    {
+      "point": "Using 无论...还是... (wúlùn...háishì...) - 'Whether... or...'",
+      "point_id": "Menggunakan 无论...还是... (wúlùn...háishì...) - 'Baik... maupun...'",
+      "explanation": "This structure covers all possibilities regardless of conditions.",
+      "explanation_id": "Struktur ini mencakup semua kemungkinan terlepas dari kondisi.",
+      "examples": [
+        {
+          "chinese": "无论年轻还是年老，都可以参与志愿服务。",
+          "translation": "Whether young or old, everyone can participate in volunteer service.",
+          "translation_id": "Baik muda maupun tua, semua orang dapat berpartisipasi dalam layanan sukarelawan."
+        },
+        {
+          "chinese": "无论城市还是乡村，都需要志愿服务。",
+          "translation": "Whether in cities or villages, volunteer service is needed.",
+          "translation_id": "Baik di kota maupun desa, layanan sukarelawan diperlukan."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "female",
+      "name": "Wang Fang",
+      "voice": "female",
+      "chinese": "我最近开始参加志愿服务活动，每周去敬老院帮忙。",
+      "pinyin": "Wǒ zuìjìn kāishǐ cānjiā zhìyuàn fúwù huódòng, měi zhōu qù jìnglǎoyuàn bāngmáng.",
+      "translation": "I recently started participating in volunteer service activities, going to the nursing home every week to help.",
+      "translation_id": "Saya baru saja mulai berpartisipasi dalam kegiatan layanan sukarelawan, pergi ke panti jompo setiap minggu untuk membantu."
+    },
+    {
+      "speaker": "male",
+      "name": "Liu Yang",
+      "voice": "male",
+      "chinese": "真不错！通过志愿服务来回报社会，很有意义。",
+      "pinyin": "Zhēn bùcuò! Tōngguò zhìyuàn fúwù lái huíbào shèhuì, hěn yǒu yìyì.",
+      "translation": "That's great! Giving back to society through volunteer service is very meaningful.",
+      "translation_id": "Itu bagus! Memberi kembali kepada masyarakat melalui layanan sukarelawan sangat bermakna."
+    },
+    {
+      "speaker": "female",
+      "name": "Wang Fang",
+      "voice": "female",
+      "chinese": "志愿服务不仅帮助了老人，也让我获得了宝贵的人生经验。",
+      "pinyin": "Zhìyuàn fúwù bùjǐn bāngzhù le lǎorén, yě ràng wǒ huòdé le bǎoguì de rénshēng jīngyàn.",
+      "translation": "Volunteer service not only helps the elderly, but also gives me valuable life experience.",
+      "translation_id": "Layanan sukarelawan tidak hanya membantu lansia, tetapi juga memberi saya pengalaman hidup yang berharga."
+    },
+    {
+      "speaker": "male",
+      "name": "Liu Yang",
+      "voice": "male",
+      "chinese": "无论年轻还是年老，每个人都可以为社会做贡献。我也决定加入志愿活动！",
+      "pinyin": "Wúlùn niánqīng háishì niánlǎo, měi gèrén dōu kěyǐ wèi shèhuì zuò gòngxiàn. Wǒ yě juédìng jiārù zhìyuàn huódòng!",
+      "translation": "Whether young or old, everyone can contribute to society. I've also decided to join volunteer activities!",
+      "translation_id": "Baik muda maupun tua, setiap orang dapat berkontribusi kepada masyarakat. Saya juga memutuskan untuk bergabung dengan kegiatan sukarelawan!"
+    }
+  ],
+  "exercises": [
+    {
+      "question": "What does 志愿 (zhìyuàn) mean?",
+      "question_id": "Apa arti 志愿 (zhìyuàn)?",
+      "options": ["Volunteer", "Service", "Dedication", "Responsibility"],
+      "options_id": ["Sukarelawan", "Layanan", "Dedikasi", "Tanggung jawab"],
+      "correct": 0
+    },
+    {
+      "question": "How do you say 'give back to society' in Chinese?",
+      "question_id": "Bagaimana mengatakan 'memberi kembali kepada masyarakat' dalam bahasa Mandarin?",
+      "options": ["服务社会", "奉献社会", "回报社会", "帮助社会"],
+      "options_id": ["melayani masyarakat", "mendedikasikan untuk masyarakat", "memberi kembali kepada masyarakat", "membantu masyarakat"],
+      "correct": 2
+    },
+    {
+      "question": "What does 意义 (yìyì) mean?",
+      "question_id": "Apa arti 意义 (yìyì)?",
+      "options": ["Experience", "Meaning", "Responsibility", "Community"],
+      "options_id": ["Pengalaman", "Makna", "Tanggung jawab", "Komunitas"],
+      "correct": 1
+    },
+    {
+      "question": "Complete the sentence: 志愿服务______帮助了别人，______丰富了自己。",
+      "question_id": "Lengkapi kalimat: 志愿服务______帮助了别人，______丰富了自己。",
+      "options": ["不但...而且...", "不仅...也...", "既...又...", "又...又..."],
+      "options_id": ["tidak hanya...tetapi juga...", "tidak hanya...juga...", "baik...maupun...", "dan...dan..."],
+      "correct": 1
+    },
+    {
+      "question": "What is the best translation of 'through volunteer service'?",
+      "question_id": "Apa terjemahan terbaik dari 'melalui layanan sukarelawan'?",
+      "options": ["通过志愿服务", "为了志愿服务", "关于志愿服务", "在志愿服务中"],
+      "options_id": ["melalui layanan sukarelawan", "untuk layanan sukarelawan", "tentang layanan sukarelawan", "dalam layanan sukarelawan"],
+      "correct": 0
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Hanzi Writer Animation</title>
+    <!-- Load hanzi-writer from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hanzi-writer@2.3.0/dist/hanzi-writer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@2.3.0/dist/hanzi-writer.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1a472a;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .test-container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .target {
+            width: 250px;
+            height: 250px;
+            margin: 20px auto;
+            border: 2px solid #2d6a4f;
+            border-radius: 8px;
+            background: white;
+        }
+        button {
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 14px;
+        }
+        button.clear {
+            background: #e94560;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            background: #e8f5e9;
+            color: #333;
+            font-size: 13px;
+        }
+        .status.success { background: #d4edda; color: #28a745; }
+        .status.error { background: #f8d7da; color: #dc3545; }
+        select, input {
+            padding: 8px;
+            margin: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+<div class="test-container">
+    <h2>✍️ Hanzi Writer Test</h2>
+    <p>Testing stroke order animation for Chinese characters</p>
+    
+    <div>
+        <label>Character: </label>
+        <input type="text" id="charInput" value="天" maxlength="1" style="width: 60px; text-align: center; font-size: 24px;">
+        <button onclick="loadCharacter()">Load</button>
+    </div>
+    
+    <div id="target" class="target"></div>
+    
+    <div>
+        <button onclick="playAnimation()">▶ Play Animation</button>
+        <button class="clear" onclick="clearCanvas()">🗑 Clear</button>
+    </div>
+    
+    <div id="status" class="status">Ready to test. Click "Load" then "Play Animation"</div>
+</div>
+
+<script>
+    let writer = null;
+    let currentChar = '天';
+    
+    function loadCharacter() {
+        const char = document.getElementById('charInput').value.trim();
+        if (!char) return;
+        
+        currentChar = char;
+        const statusDiv = document.getElementById('status');
+        statusDiv.innerHTML = `Loading character "${char}"...`;
+        statusDiv.className = 'status';
+        
+        // Clear previous writer
+        if (writer) {
+            try { writer = null; } catch(e) {}
+        }
+        
+        const container = document.getElementById('target');
+        container.innerHTML = '';
+        
+        try {
+            writer = HanziWriter.create('target', char, {
+                width: 250,
+                height: 250,
+                showOutline: true,
+                showCharacter: true,
+                showHintAfterMissedStroke: true,
+                strokeAnimationSpeed: 1.5,
+                delayBetweenStrokes: 600,
+                onLoad: function() {
+                    const strokeCount = writer.getStrokes().length;
+                    statusDiv.innerHTML = `✅ Success! Character "${char}" loaded with ${strokeCount} strokes. Click "Play Animation" to see stroke order.`;
+                    statusDiv.className = 'status success';
+                },
+                onError: function(err) {
+                    console.error('Hanzi-writer error:', err);
+                    statusDiv.innerHTML = `❌ Error loading "${char}". ${err.message || 'Character not supported'}. Try "你", "好", "中", "国".`;
+                    statusDiv.className = 'status error';
+                }
+            });
+        } catch(e) {
+            console.error('Exception:', e);
+            statusDiv.innerHTML = `❌ Exception: ${e.message}. Try a simpler character like "一", "人", "大".`;
+            statusDiv.className = 'status error';
+        }
+    }
+    
+    function playAnimation() {
+        if (writer) {
+            try {
+                writer.animateCharacter();
+                const statusDiv = document.getElementById('status');
+                statusDiv.innerHTML = '🎬 Playing stroke order animation...';
+                statusDiv.className = 'status success';
+            } catch(e) {
+                console.error('Animation error:', e);
+                document.getElementById('status').innerHTML = `❌ Animation failed: ${e.message}`;
+                document.getElementById('status').className = 'status error';
+            }
+        } else {
+            document.getElementById('status').innerHTML = '⚠️ No character loaded. Click "Load" first.';
+            document.getElementById('status').className = 'status error';
+        }
+    }
+    
+    function clearCanvas() {
+        if (writer) {
+            try {
+                writer = null;
+                const container = document.getElementById('target');
+                container.innerHTML = '';
+                writer = HanziWriter.create('target', currentChar, {
+                    width: 250,
+                    height: 250,
+                    showOutline: true,
+                    showCharacter: true
+                });
+                document.getElementById('status').innerHTML = 'Canvas cleared. Click "Play Animation" again.';
+            } catch(e) {
+                loadCharacter();
+            }
+        } else {
+            loadCharacter();
+        }
+    }
+    
+    // Load default character on page load
+    window.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => loadCharacter(), 100);
+    });
+</script>
+</body>
+</html>

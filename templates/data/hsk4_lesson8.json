@@ -1,0 +1,50 @@
+{
+  "title": "生活中的小窍门",
+  "subtitle": "Life Hacks, Solutions, and Daily Tips",
+  "assistant_message": "Today we learn: sharing life hacks, using 并 (bìng) for emphasis, and talking about practical solutions.",
+  "vocabulary": [
+    {"word": "窍门", "pinyin": "qiào mén", "meaning": "trick/hack", "meaning_id": "trik", "example": "生活小窍门", "example_translation": "life hacks", "example_translation_id": "trik kehidupan"},
+    {"word": "解决", "pinyin": "jiě jué", "meaning": "to solve", "meaning_id": "memecahkan", "example": "解决问题", "example_translation": "solve problems", "example_translation_id": "memecahkan masalah"},
+    {"word": "方法", "pinyin": "fāng fǎ", "meaning": "method", "meaning_id": "metode", "example": "好方法", "example_translation": "good method", "example_translation_id": "metode bagus"},
+    {"word": "实用", "pinyin": "shí yòng", "meaning": "practical", "meaning_id": "praktis", "example": "很实用", "example_translation": "very practical", "example_translation_id": "sangat praktis"},
+    {"word": "节省", "pinyin": "jié shěng", "meaning": "to save", "meaning_id": "menghemat", "example": "节省时间", "example_translation": "save time", "example_translation_id": "menghemat waktu"},
+    {"word": "效率", "pinyin": "xiào lǜ", "meaning": "efficiency", "meaning_id": "efisiensi", "example": "提高效率", "example_translation": "improve efficiency", "example_translation_id": "meningkatkan efisiensi"},
+    {"word": "建议", "pinyin": "jiàn yì", "meaning": "suggestion/advice", "meaning_id": "saran", "example": "给建议", "example_translation": "give advice", "example_translation_id": "memberi saran"},
+    {"word": "经验", "pinyin": "jīng yàn", "meaning": "experience", "meaning_id": "pengalaman", "example": "分享经验", "example_translation": "share experience", "example_translation_id": "berbagi pengalaman"}
+  ],
+  "grammar": [
+    {
+      "point": "Using 并 (bìng) for Emphasis",
+      "point_id": "Menggunakan 并 (bìng) untuk Penekanan",
+      "explanation": "并 is used before negatives to add emphasis, meaning 'really' or 'at all'.",
+      "explanation_id": "并 digunakan sebelum negatif untuk menambahkan penekanan, berarti 'sungguh' atau 'sama sekali'.",
+      "examples": [
+        {"chinese": "这个问题并不难解决。", "translation": "This problem is not difficult to solve at all.", "translation_id": "Masalah ini sama sekali tidak sulit dipecahkan."},
+        {"chinese": "他并不是不知道答案。", "translation": "He really doesn't know the answer.", "translation_id": "Dia sungguh tidak tahu jawabannya."}
+      ]
+    },
+    {
+      "point": "Using 而且 (érqiě) for 'Moreover'",
+      "point_id": "Menggunakan 而且 (érqiě) untuk 'Selain Itu'",
+      "explanation": "而且 is used to add additional information, meaning 'moreover' or 'furthermore'.",
+      "explanation_id": "而且 digunakan untuk menambahkan informasi tambahan, berarti 'selain itu' atau 'lagi pula'.",
+      "examples": [
+        {"chinese": "这个方法很简单，而且很实用。", "translation": "This method is very simple, and moreover very practical.", "translation_id": "Metode ini sangat sederhana, dan selain itu sangat praktis."},
+        {"chinese": "他工作认真，而且很有经验。", "translation": "He works carefully, and moreover has a lot of experience.", "translation_id": "Dia bekerja dengan hati-hati, dan selain itu memiliki banyak pengalaman."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你知道什么生活小窍门吗？", "pinyin": "Nǐ zhīdào shénme shēnghuó qiàomén ma?", "translation": "Do you know any life hacks?", "translation_id": "Apakah kamu tahu trik kehidupan?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我知道一个节省时间的好方法。", "pinyin": "Wǒ zhīdào yī gè jiéshěng shíjiān de hǎo fāngfǎ.", "translation": "I know a good method to save time.", "translation_id": "Saya tahu metode bagus untuk menghemat waktu."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "快告诉我！", "pinyin": "Kuài gàosu wǒ!", "translation": "Tell me quickly!", "translation_id": "Cepat beri tahu saya!"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "提前计划第二天要做的事情。这个方法并不复杂，而且很实用。", "pinyin": "Tíqián jìhuà dì èr tiān yào zuò de shìqing. Zhège fāngfǎ bìng bù fùzá, érqiě hěn shíyòng.", "translation": "Plan what you need to do the next day in advance. This method is not complicated at all, and moreover very practical.", "translation_id": "Rencanakan apa yang perlu dilakukan keesokan harinya terlebih dahulu. Metode ini sama sekali tidak rumit, dan selain itu sangat praktis."}
+  ],
+  "exercises": [
+    {"question": "What does 窍门 (qiàomén) mean?", "question_id": "Apa arti 窍门 (qiàomén)?", "options": ["Door", "Trick/hack", "Key", "Secret"], "options_id": ["Pintu", "Trik", "Kunci", "Rahasia"], "correct": 1},
+    {"question": "How do you say 'save time' in Chinese?", "question_id": "Bagaimana mengatakan 'menghemat waktu' dalam bahasa Mandarin?", "options": ["节省时间", "浪费时间", "花时间", "利用时间"], "options_id": ["menghemat waktu", "membuang waktu", "menghabiskan waktu", "memanfaatkan waktu"], "correct": 0},
+    {"question": "What does 并 (bìng) emphasize?", "question_id": "Apa yang ditekankan oleh 并 (bìng)?", "options": ["Positive statements", "Negative statements", "Questions", "Commands"], "options_id": ["Pernyataan positif", "Pernyataan negatif", "Pertanyaan", "Perintah"], "correct": 1},
+    {"question": "What is 效率 (xiàolǜ)?", "question_id": "Apa itu 效率 (xiàolǜ)?", "options": ["Effect", "Efficiency", "Result", "Process"], "options_id": ["Efek", "Efisiensi", "Hasil", "Proses"], "correct": 1},
+    {"question": "How to say 'share experience' in Chinese?", "question_id": "Bagaimana mengatakan 'berbagi pengalaman' dalam bahasa Mandarin?", "options": ["分享经验", "分享知识", "分享快乐", "分享成功"], "options_id": ["berbagi pengalaman", "berbagi pengetahuan", "berbagi kebahagiaan", "berbagi kesuksesan"], "correct": 0}
+  ]
+}

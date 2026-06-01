@@ -1,0 +1,51 @@
+{
+  "title": "我会说汉语",
+  "subtitle": "Talking About Abilities, Using Modal Verb 会, Discussing Language Skills",
+  "assistant_message": "Today we learn: modal verb 会 (huì) for abilities, how to say 'I can speak Chinese', and asking about language skills.",
+  "vocabulary": [
+    {"word": "会", "pinyin": "huì", "meaning": "can (learned ability)", "meaning_id": "bisa (kemampuan yang dipelajari)", "example": "我会说汉语", "example_translation": "I can speak Chinese", "example_translation_id": "Saya bisa bicara Mandarin"},
+    {"word": "说", "pinyin": "shuō", "meaning": "to speak", "meaning_id": "berbicara", "example": "说汉语", "example_translation": "speak Chinese", "example_translation_id": "bicara Mandarin"},
+    {"word": "汉语", "pinyin": "Hàn yǔ", "meaning": "Chinese language", "meaning_id": "bahasa Mandarin", "example": "学汉语", "example_translation": "study Chinese", "example_translation_id": "belajar Mandarin"},
+    {"word": "英语", "pinyin": "Yīng yǔ", "meaning": "English language", "meaning_id": "bahasa Inggris", "example": "说英语", "example_translation": "speak English", "example_translation_id": "bicara Inggris"},
+    {"word": "一点", "pinyin": "yī diǎn", "meaning": "a little", "meaning_id": "sedikit", "example": "会一点", "example_translation": "know a little", "example_translation_id": "bisa sedikit"},
+    {"word": "但是", "pinyin": "dàn shì", "meaning": "but", "meaning_id": "tetapi", "example": "但是不会", "example_translation": "but cannot", "example_translation_id": "tetapi tidak bisa"},
+    {"word": "写", "pinyin": "xiě", "meaning": "to write", "meaning_id": "menulis", "example": "写汉字", "example_translation": "write Chinese characters", "example_translation_id": "menulis karakter Mandarin"},
+    {"word": "读", "pinyin": "dú", "meaning": "to read", "meaning_id": "membaca", "example": "读书", "example_translation": "read books", "example_translation_id": "membaca buku"}
+  ],
+  "grammar": [
+    {
+      "point": "Modal Verb 会 (huì) - Can / Know How To",
+      "point_id": "Kata Kerja Modal 会 (huì) - Bisa / Tahu Cara",
+      "explanation": "Use 会 before a verb to express an ability learned through practice.",
+      "explanation_id": "Gunakan 会 sebelum kata kerja untuk menyatakan kemampuan yang dipelajari melalui latihan.",
+      "examples": [
+        {"chinese": "我会说汉语。", "translation": "I can speak Chinese.", "translation_id": "Saya bisa bicara Mandarin."},
+        {"chinese": "你会写汉字吗？", "translation": "Can you write Chinese characters?", "translation_id": "Apakah kamu bisa menulis karakter Mandarin?"},
+        {"chinese": "他不会读这本书。", "translation": "He cannot read this book.", "translation_id": "Dia tidak bisa membaca buku ini."}
+      ]
+    },
+    {
+      "point": "Expressing 'A Little' with 一点 (yī diǎn)",
+      "point_id": "Menyatakan 'Sedikit' dengan 一点 (yī diǎn)",
+      "explanation": "Place 一点 after a verb to mean 'a little bit'.",
+      "explanation_id": "Letakkan 一点 setelah kata kerja untuk berarti 'sedikit'.",
+      "examples": [
+        {"chinese": "我会说一点汉语。", "translation": "I can speak a little Chinese.", "translation_id": "Saya bisa bicara sedikit Mandarin."},
+        {"chinese": "他认识一点汉字。", "translation": "He knows a few Chinese characters.", "translation_id": "Dia tahu sedikit karakter Mandarin."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Tom", "voice": "male", "chinese": "你会说汉语吗？", "pinyin": "Nǐ huì shuō Hànyǔ ma?", "translation": "Can you speak Chinese?", "translation_id": "Apakah kamu bisa bicara Mandarin?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "我会说一点，但是说得不好。", "pinyin": "Wǒ huì shuō yī diǎn, dànshì shuō de bù hǎo.", "translation": "I can speak a little, but not well.", "translation_id": "Saya bisa bicara sedikit, tetapi tidak bagus."},
+    {"speaker": "male", "name": "Tom", "voice": "male", "chinese": "你会写汉字吗？", "pinyin": "Nǐ huì xiě Hànzì ma?", "translation": "Can you write Chinese characters?", "translation_id": "Apakah kamu bisa menulis karakter Mandarin?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "我会写一些。多练习就会好。", "pinyin": "Wǒ huì xiě yīxiē. Duō liànxí jiù huì hǎo.", "translation": "I can write some. With more practice it will get better.", "translation_id": "Saya bisa menulis beberapa. Dengan lebih banyak latihan akan menjadi lebih baik."}
+  ],
+  "exercises": [
+    {"question": "What does 会 (huì) mean?", "question_id": "Apa arti 会 (huì)?", "options": ["Want", "Can (learned ability)", "Go", "Come"], "options_id": ["Ingin", "Bisa (kemampuan yang dipelajari)", "Pergi", "Datang"], "correct": 1},
+    {"question": "How do you say 'I can speak Chinese' in Chinese?", "question_id": "Bagaimana mengatakan 'Saya bisa bicara Mandarin' dalam bahasa Mandarin?", "options": ["我会说汉语", "我想说汉语", "我去说汉语", "我来说汉语"], "options_id": ["Saya bisa bicara Mandarin", "Saya ingin bicara Mandarin", "Saya pergi bicara Mandarin", "Saya datang bicara Mandarin"], "correct": 0},
+    {"question": "What is 一点 (yī diǎn)?", "question_id": "Apa itu 一点 (yī diǎn)?", "options": ["A lot", "A little", "Very much", "Not at all"], "options_id": ["Banyak", "Sedikit", "Sangat banyak", "Tidak sama sekali"], "correct": 1},
+    {"question": "How to say 'but' in Chinese?", "question_id": "Bagaimana mengatakan 'tetapi' dalam bahasa Mandarin?", "options": ["因为", "所以", "但是", "如果"], "options_id": ["Karena", "Jadi", "Tetapi", "Jika"], "correct": 2},
+    {"question": "Choose the correct negation: 'I cannot speak English'", "question_id": "Pilih negasi yang benar: 'Saya tidak bisa bicara Inggris'", "options": ["我会说英语", "我不会说英语", "我说不会英语", "我不说会英语"], "options_id": ["Saya bisa bicara Inggris", "Saya tidak bisa bicara Inggris", "Saya bicara tidak bisa Inggris", "Saya tidak bicara bisa Inggris"], "correct": 1}
+  ]
+}

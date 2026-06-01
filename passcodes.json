@@ -1,0 +1,71 @@
+{
+  "settings": {
+    "default_expiry_hours": 168,
+    "max_devices_per_user": 2
+  },
+  "users": {
+    "niche.active77@gmail.com": {
+      "active_lessons": {
+        "hsk1_lesson2": {
+          "passcode": "GQT549",
+          "expires_at": "2026-06-07T23:26:28.775734",
+          "expiry_hours": 168,
+          "approved_at": "2026-05-31T23:26:28.775734"
+        },
+        "hsk1_lesson3": {
+          "passcode": "UWS308",
+          "expires_at": "2026-06-08T09:11:36.441255",
+          "expiry_hours": 168,
+          "approved_at": "2026-06-01T09:11:36.441255"
+        }
+      },
+      "devices": []
+    }
+  },
+  "requests": {
+    "niche.active77@gmail.com_hsk1_lesson2_1780244774": {
+      "email": "niche.active77@gmail.com",
+      "level": 1,
+      "lesson_num": 2,
+      "passcode": "GQT549",
+      "created_at": "2026-05-31T23:26:14.894333",
+      "status": "approved",
+      "approved_at": "2026-05-31T23:26:28.775734",
+      "expires_at": "2026-06-07T23:26:28.775734"
+    },
+    "niche.active77@gmail.com_hsk1_lesson3_1780279871": {
+      "email": "niche.active77@gmail.com",
+      "level": 1,
+      "lesson_num": 3,
+      "passcode": "UWS308",
+      "created_at": "2026-06-01T09:11:11.286338",
+      "status": "approved",
+      "approved_at": "2026-06-01T09:11:36.441255",
+      "expires_at": "2026-06-08T09:11:36.441255"
+    }
+  },
+  "history": [
+    {
+      "request_id": "niche.active77@gmail.com_hsk1_lesson2_1780244774",
+      "email": "niche.active77@gmail.com",
+      "level": 1,
+      "lesson_num": 2,
+      "passcode": "GQT549",
+      "status": "approved",
+      "created_at": "2026-05-31T23:26:14.894333",
+      "approved_at": "2026-05-31T23:26:28.775734",
+      "expires_at": "2026-06-07T23:26:28.775734"
+    },
+    {
+      "request_id": "niche.active77@gmail.com_hsk1_lesson3_1780279871",
+      "email": "niche.active77@gmail.com",
+      "level": 1,
+      "lesson_num": 3,
+      "passcode": "UWS308",
+      "status": "approved",
+      "created_at": "2026-06-01T09:11:11.286338",
+      "approved_at": "2026-06-01T09:11:36.441255",
+      "expires_at": "2026-06-08T09:11:36.441255"
+    }
+  ]
+}

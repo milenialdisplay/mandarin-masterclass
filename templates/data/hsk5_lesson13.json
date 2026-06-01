@@ -1,0 +1,60 @@
+{
+  "title": "教育公平",
+  "subtitle": "Education Equality, Equal Opportunities, Rural vs Urban Education",
+  "assistant_message": "Today we learn: discussing education equality, using 平等 (píngděng) and 机会 (jīhuì), and expressing opinions about educational access.",
+  "vocabulary": [
+    {"word": "教育", "pinyin": "jiào yù", "meaning": "education", "meaning_id": "pendidikan", "example": "基础教育", "example_translation": "basic education", "example_translation_id": "pendidikan dasar"},
+    {"word": "公平", "pinyin": "gōng píng", "meaning": "fairness", "meaning_id": "keadilan", "example": "教育公平", "example_translation": "educational fairness", "example_translation_id": "keadilan pendidikan"},
+    {"word": "平等", "pinyin": "píng děng", "meaning": "equality", "meaning_id": "kesetaraan", "example": "机会平等", "example_translation": "equal opportunity", "example_translation_id": "kesempatan yang sama"},
+    {"word": "机会", "pinyin": "jī huì", "meaning": "opportunity", "meaning_id": "kesempatan", "example": "教育机会", "example_translation": "educational opportunity", "example_translation_id": "kesempatan pendidikan"},
+    {"word": "资源", "pinyin": "zī yuán", "meaning": "resources", "meaning_id": "sumber daya", "example": "教育资源", "example_translation": "educational resources", "example_translation_id": "sumber daya pendidikan"},
+    {"word": "差距", "pinyin": "chā jù", "meaning": "gap", "meaning_id": "kesenjangan", "example": "城乡差距", "example_translation": "urban-rural gap", "example_translation_id": "kesenjangan kota-desa"},
+    {"word": "农村", "pinyin": "nóng cūn", "meaning": "rural area", "meaning_id": "pedesaan", "example": "农村教育", "example_translation": "rural education", "example_translation_id": "pendidikan pedesaan"},
+    {"word": "城市", "pinyin": "chéng shì", "meaning": "urban area", "meaning_id": "perkotaan", "example": "城市学校", "example_translation": "urban schools", "example_translation_id": "sekolah perkotaan"}
+  ],
+  "grammar": [
+    {
+      "point": "平等 (píngděng) - Equality",
+      "point_id": "Kesetaraan",
+      "explanation": "平等 means 'equality'. Often used with 机会 (opportunity) to discuss equal access.",
+      "explanation_id": "平等 berarti 'kesetaraan'. Sering digunakan dengan 机会 (kesempatan) untuk membahas akses yang sama.",
+      "examples": [
+        {"chinese": "每个孩子都应该有平等的教育机会。", "translation": "Every child should have equal educational opportunities.", "translation_id": "Setiap anak harus memiliki kesempatan pendidikan yang sama."},
+        {"chinese": "教育平等是社会进步的基础。", "translation": "Educational equality is the foundation of social progress.", "translation_id": "Kesetaraan pendidikan adalah fondasi kemajuan sosial."}
+      ]
+    },
+    {
+      "point": "差距 (chājù) - Gap",
+      "point_id": "Kesenjangan",
+      "explanation": "差距 means 'gap' or 'disparity', often used to compare differences between groups.",
+      "explanation_id": "差距 berarti 'kesenjangan', sering digunakan untuk membandingkan perbedaan antar kelompok.",
+      "examples": [
+        {"chinese": "城乡之间的教育差距依然存在。", "translation": "The education gap between urban and rural areas still exists.", "translation_id": "Kesenjangan pendidikan antara daerah perkotaan dan pedesaan masih ada."},
+        {"chinese": "要努力缩小这个差距。", "translation": "We must work hard to narrow this gap.", "translation_id": "Kita harus bekerja keras untuk mempersempit kesenjangan ini."}
+      ]
+    },
+    {
+      "point": "不仅...而且... (bùjǐn... érqiě...) - Not only... but also...",
+      "point_id": "不仅...而且... (bùjǐn... érqiě...) - Tidak hanya... tetapi juga...",
+      "explanation": "This structure adds emphasis by listing multiple points.",
+      "explanation_id": "Struktur ini menambahkan penekanan dengan mencantumkan beberapa poin.",
+      "examples": [
+        {"chinese": "教育公平不仅影响个人发展，而且影响社会进步。", "translation": "Educational equality not only affects personal development, but also affects social progress.", "translation_id": "Kesetaraan pendidikan tidak hanya mempengaruhi perkembangan pribadi, tetapi juga mempengaruhi kemajuan sosial."},
+        {"chinese": "农村教育不仅需要资金，而且需要好老师。", "translation": "Rural education not only needs funding, but also needs good teachers.", "translation_id": "Pendidikan pedesaan tidak hanya membutuhkan dana, tetapi juga membutuhkan guru yang baik."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你觉得教育公平重要吗？", "pinyin": "Nǐ juéde jiàoyù gōngpíng zhòngyào ma?", "translation": "Do you think educational fairness is important?", "translation_id": "Apakah menurutmu keadilan pendidikan itu penting?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "非常重要。每个孩子都应该有平等的教育机会，无论他们来自农村还是城市。", "pinyin": "Fēicháng zhòngyào. Měi gè háizi dōu yīnggāi yǒu píngděng de jiàoyù jīhuì, wúlùn tāmen láizì nóngcūn háishì chéngshì.", "translation": "Very important. Every child should have equal educational opportunities, whether they come from rural or urban areas.", "translation_id": "Sangat penting. Setiap anak harus memiliki kesempatan pendidikan yang sama, baik mereka berasal dari pedesaan maupun perkotaan."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "但是城乡教育资源还有很大差距。", "pinyin": "Dànshì chéngxiāng jiàoyù zīyuán hái yǒu hěn dà chājù.", "translation": "But there is still a big gap in educational resources between urban and rural areas.", "translation_id": "Tapi masih ada kesenjangan besar dalam sumber daya pendidikan antara perkotaan dan pedesaan."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "政府正在努力改善这种情况。教育公平不仅需要政策支持，还需要全社会的努力。", "pinyin": "Zhèngfǔ zhèngzài nǔlì gǎishàn zhè zhǒng qíngkuàng. Jiàoyù gōngpíng bùjǐn xūyào zhèngcè zhīchí, hái xūyào quán shèhuì de nǔlì.", "translation": "The government is working hard to improve this situation. Educational fairness not only needs policy support, but also needs the efforts of the whole society.", "translation_id": "Pemerintah sedang berusaha keras untuk memperbaiki situasi ini. Keadilan pendidikan tidak hanya membutuhkan dukungan kebijakan, tetapi juga membutuhkan upaya seluruh masyarakat."}
+  ],
+  "exercises": [
+    {"question": "What does 教育公平 (jiàoyù gōngpíng) mean?", "question_id": "Apa arti 教育公平 (jiàoyù gōngpíng)?", "options": ["Education quality", "Education fairness", "Education cost", "Education policy"], "options_id": ["Kualitas pendidikan", "Keadilan pendidikan", "Biaya pendidikan", "Kebijakan pendidikan"], "correct": 1},
+    {"question": "How do you say 'equal opportunity' in Chinese?", "question_id": "Bagaimana mengatakan 'kesempatan yang sama' dalam bahasa Mandarin?", "options": ["平等机会", "公平机会", "相同机会", "一样机会"], "options_id": ["kesempatan yang sama", "kesempatan adil", "kesempatan yang sama", "kesempatan yang sama"], "correct": 0},
+    {"question": "What does 差距 (chājù) mean?", "question_id": "Apa arti 差距 (chājù)?", "options": ["Difference", "Gap", "Distance", "All of the above"], "options_id": ["Perbedaan", "Kesenjangan", "Jarak", "Semua di atas"], "correct": 3},
+    {"question": "How do you say 'rural area' in Chinese?", "question_id": "Bagaimana mengatakan 'daerah pedesaan' dalam bahasa Mandarin?", "options": ["城市", "农村", "郊区", "市区"], "options_id": ["perkotaan", "pedesaan", "pinggiran", "kota"], "correct": 1},
+    {"question": "What is the opposite of 城市 (chéngshì)?", "question_id": "Apa lawan dari 城市 (chéngshì)?", "options": ["农村", "乡镇", "县城", "郊区"], "options_id": ["pedesaan", "kecamatan", "kabupaten", "pinggiran"], "correct": 0}
+  ]
+}

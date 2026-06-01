@@ -1,0 +1,60 @@
+{
+  "title": "医疗改革",
+  "subtitle": "Healthcare Reform, Medical Insurance, Access to Care",
+  "assistant_message": "Today we learn: discussing healthcare reform, using 改革 (gǎigé) and 保障 (bǎozhàng), and expressing concerns about medical services.",
+  "vocabulary": [
+    {"word": "医疗", "pinyin": "yī liáo", "meaning": "healthcare/medical", "meaning_id": "kesehatan medis", "example": "医疗服务", "example_translation": "medical services", "example_translation_id": "layanan medis"},
+    {"word": "改革", "pinyin": "gǎi gé", "meaning": "reform", "meaning_id": "reformasi", "example": "医疗改革", "example_translation": "healthcare reform", "example_translation_id": "reformasi kesehatan"},
+    {"word": "保障", "pinyin": "bǎo zhàng", "meaning": "guarantee/ensure", "meaning_id": "jaminan", "example": "医疗保障", "example_translation": "medical security", "example_translation_id": "jaminan kesehatan"},
+    {"word": "保险", "pinyin": "bǎo xiǎn", "meaning": "insurance", "meaning_id": "asuransi", "example": "医疗保险", "example_translation": "medical insurance", "example_translation_id": "asuransi kesehatan"},
+    {"word": "费用", "pinyin": "fèi yòng", "meaning": "cost/expense", "meaning_id": "biaya", "example": "医疗费用", "example_translation": "medical costs", "example_translation_id": "biaya medis"},
+    {"word": "服务", "pinyin": "fú wù", "meaning": "service", "meaning_id": "layanan", "example": "服务质量", "example_translation": "service quality", "example_translation_id": "kualitas layanan"},
+    {"word": "质量", "pinyin": "zhì liàng", "meaning": "quality", "meaning_id": "kualitas", "example": "提高质量", "example_translation": "improve quality", "example_translation_id": "meningkatkan kualitas"},
+    {"word": "覆盖", "pinyin": "fù gài", "meaning": "coverage", "meaning_id": "cakupan", "example": "覆盖范围", "example_translation": "coverage range", "example_translation_id": "cakupan"}
+  ],
+  "grammar": [
+    {
+      "point": "改革 (gǎigé) - Reform",
+      "point_id": "Reformasi",
+      "explanation": "改革 is used to discuss systematic changes or improvements in policies or institutions.",
+      "explanation_id": "改革 digunakan untuk membahas perubahan sistematis atau perbaikan dalam kebijakan atau institusi.",
+      "examples": [
+        {"chinese": "医疗改革让更多人受益。", "translation": "Healthcare reform benefits more people.", "translation_id": "Reformasi kesehatan menguntungkan lebih banyak orang."},
+        {"chinese": "教育改革也很重要。", "translation": "Education reform is also very important.", "translation_id": "Reformasi pendidikan juga sangat penting."}
+      ]
+    },
+    {
+      "point": "保障 (bǎozhàng) - Guarantee/Ensure",
+      "point_id": "Jaminan",
+      "explanation": "保障 can be a noun meaning 'guarantee' or a verb meaning 'to ensure'.",
+      "explanation_id": "保障 dapat berupa kata benda yang berarti 'jaminan' atau kata kerja yang berarti 'menjamin'.",
+      "examples": [
+        {"chinese": "医疗保障是每个人的基本权利。", "translation": "Medical security is everyone's basic right.", "translation_id": "Jaminan kesehatan adalah hak dasar setiap orang."},
+        {"chinese": "政府要保障人民的健康。", "translation": "The government must ensure the people's health.", "translation_id": "Pemerintah harus menjamin kesehatan masyarakat."}
+      ]
+    },
+    {
+      "point": "不仅...而且... (bùjǐn... érqiě...) - Not only... but also...",
+      "point_id": "不仅...而且... (bùjǐn... érqiě...) - Tidak hanya... tetapi juga...",
+      "explanation": "Used to emphasize multiple aspects of an issue.",
+      "explanation_id": "Digunakan untuk menekankan beberapa aspek dari suatu masalah.",
+      "examples": [
+        {"chinese": "医疗改革不仅降低了费用，而且提高了服务质量。", "translation": "Healthcare reform not only reduced costs, but also improved service quality.", "translation_id": "Reformasi kesehatan tidak hanya mengurangi biaya, tetapi juga meningkatkan kualitas layanan."},
+        {"chinese": "医疗保险不仅覆盖城市，也覆盖农村。", "translation": "Medical insurance covers not only urban areas, but also rural areas.", "translation_id": "Asuransi kesehatan mencakup tidak hanya daerah perkotaan, tetapi juga daerah pedesaan."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "医疗改革让更多人受益。", "pinyin": "Yīliáo gǎigé ràng gèng duō rén shòuyì.", "translation": "Healthcare reform benefits more people.", "translation_id": "Reformasi kesehatan menguntungkan lebih banyak orang."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "医疗保险覆盖面越来越广了。", "pinyin": "Yīliáo bǎoxiǎn fùgài miàn yuè lái yuè guǎng le.", "translation": "Medical insurance coverage is getting wider and wider.", "translation_id": "Cakupan asuransi kesehatan semakin luas."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "但是医疗费用还是很高，尤其对于低收入家庭。", "pinyin": "Dànshì yīliáo fèiyòng háishì hěn gāo, yóuqí duìyú dī shōurù jiātíng.", "translation": "But medical costs are still very high, especially for low-income families.", "translation_id": "Tapi biaya medis masih sangat tinggi, terutama untuk keluarga berpenghasilan rendah."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "希望未来服务质量能进一步提高。医疗改革不仅需要政策，还需要投入。", "pinyin": "Xīwàng wèilái fúwù zhìliàng néng jìnyībù tígāo. Yīliáo gǎigé bùjǐn xūyào zhèngcè, hái xūyào tóurù.", "translation": "I hope service quality can be further improved in the future. Healthcare reform not only needs policy, but also needs investment.", "translation_id": "Saya berharap kualitas layanan dapat ditingkatkan lebih lanjut di masa depan. Reformasi kesehatan tidak hanya membutuhkan kebijakan, tetapi juga membutuhkan investasi."}
+  ],
+  "exercises": [
+    {"question": "What does 医疗 (yīliáo) mean?", "question_id": "Apa arti 医疗 (yīliáo)?", "options": ["Education", "Healthcare", "Economy", "Technology"], "options_id": ["Pendidikan", "Kesehatan medis", "Ekonomi", "Teknologi"], "correct": 1},
+    {"question": "How do you say 'healthcare reform' in Chinese?", "question_id": "Bagaimana mengatakan 'reformasi kesehatan' dalam bahasa Mandarin?", "options": ["教育改革", "医疗改革", "经济改革", "政治改革"], "options_id": ["reformasi pendidikan", "reformasi kesehatan", "reformasi ekonomi", "reformasi politik"], "correct": 1},
+    {"question": "What does 保险 (bǎoxiǎn) mean?", "question_id": "Apa arti 保险 (bǎoxiǎn)?", "options": ["Insurance", "Guarantee", "Safety", "All of the above"], "options_id": ["Asuransi", "Jaminan", "Keamanan", "Semua di atas"], "correct": 3},
+    {"question": "How do you say 'medical costs' in Chinese?", "question_id": "Bagaimana mengatakan 'biaya medis' dalam bahasa Mandarin?", "options": ["医疗费用", "医疗保险", "医疗服务", "医疗质量"], "options_id": ["biaya medis", "asuransi kesehatan", "layanan medis", "kualitas medis"], "correct": 0},
+    {"question": "What does 覆盖 (fùgài) mean in this context?", "question_id": "Apa arti 覆盖 (fùgài) dalam konteks ini?", "options": ["Coverage", "Cost", "Quality", "Service"], "options_id": ["Cakupan", "Biaya", "Kualitas", "Layanan"], "correct": 0}
+  ]
+}

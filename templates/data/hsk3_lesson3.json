@@ -1,0 +1,51 @@
+{
+  "title": "我把钱包忘在家里了",
+  "subtitle": "The 把 Construction, Expressing Mistakes, Talking About Forgetting",
+  "assistant_message": "Today we learn: the 把 (bǎ) construction to emphasize handling of objects, talking about forgetting things, and expressing mistakes.",
+  "vocabulary": [
+    {"word": "把", "pinyin": "bǎ", "meaning": "object marker (把 construction)", "meaning_id": "penanda objek (konstruksi 把)", "example": "把书放在桌子上", "example_translation": "put the book on the table", "example_translation_id": "letakkan buku di atas meja"},
+    {"word": "忘", "pinyin": "wàng", "meaning": "to forget", "meaning_id": "lupa", "example": "忘了带钥匙", "example_translation": "forgot to bring keys", "example_translation_id": "lupa membawa kunci"},
+    {"word": "钱包", "pinyin": "qián bāo", "meaning": "wallet", "meaning_id": "dompet", "example": "我的钱包", "example_translation": "my wallet", "example_translation_id": "dompet saya"},
+    {"word": "家里", "pinyin": "jiā lǐ", "meaning": "at home", "meaning_id": "di rumah", "example": "在家里", "example_translation": "at home", "example_translation_id": "di rumah"},
+    {"word": "忘记", "pinyin": "wàng jì", "meaning": "to forget", "meaning_id": "lupa", "example": "忘记时间", "example_translation": "forget the time", "example_translation_id": "lupa waktu"},
+    {"word": "记得", "pinyin": "jì de", "meaning": "to remember", "meaning_id": "ingat", "example": "不记得了", "example_translation": "don't remember", "example_translation_id": "tidak ingat"},
+    {"word": "放", "pinyin": "fàng", "meaning": "to put/place", "meaning_id": "meletakkan", "example": "放在桌子上", "example_translation": "put on the table", "example_translation_id": "letakkan di atas meja"},
+    {"word": "拿", "pinyin": "ná", "meaning": "to take/hold", "meaning_id": "mengambil", "example": "拿手机", "example_translation": "take the phone", "example_translation_id": "ambil ponsel"}
+  ],
+  "grammar": [
+    {
+      "point": "The 把 (bǎ) Construction",
+      "point_id": "Konstruksi 把 (bǎ)",
+      "explanation": "Use 把 to bring the object before the verb, emphasizing what happens to the object. Structure: Subject + 把 + Object + Verb + Other.",
+      "explanation_id": "Gunakan 把 untuk membawa objek sebelum kata kerja, menekankan apa yang terjadi pada objek. Struktur: Subjek + 把 + Objek + Kata Kerja + Lainnya.",
+      "examples": [
+        {"chinese": "我把钱包忘在家里了。", "translation": "I left my wallet at home.", "translation_id": "Saya meninggalkan dompet di rumah."},
+        {"chinese": "请把书放在桌子上。", "translation": "Please put the book on the table.", "translation_id": "Tolong letakkan buku di atas meja."},
+        {"chinese": "他把门关上了。", "translation": "He closed the door.", "translation_id": "Dia menutup pintunya."}
+      ]
+    },
+    {
+      "point": "Expressing 'Forget' with 忘记 (wàngjì) and 忘了 (wàng le)",
+      "point_id": "Menyatakan 'Lupa' dengan 忘记 (wàngjì) dan 忘了 (wàng le)",
+      "explanation": "Use 忘记 or 忘了 to say 'forget'. 忘了 is more colloquial. Structure: Subject + 忘记/忘了 + Object.",
+      "explanation_id": "Gunakan 忘记 atau 忘了 untuk mengatakan 'lupa'. 忘了 lebih kolokial. Struktur: Subjek + 忘记/忘了 + Objek.",
+      "examples": [
+        {"chinese": "我忘了带钥匙。", "translation": "I forgot to bring my keys.", "translation_id": "Saya lupa membawa kunci."},
+        {"chinese": "不要忘记我们的约定。", "translation": "Don't forget our agreement.", "translation_id": "Jangan lupa perjanjian kita."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你怎么了？", "pinyin": "Nǐ zěnme le?", "translation": "What's wrong with you?", "translation_id": "Ada apa denganmu?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "我把钱包忘在家里了。", "pinyin": "Wǒ bǎ qiánbāo wàng zài jiā lǐ le.", "translation": "I left my wallet at home.", "translation_id": "Saya meninggalkan dompet di rumah."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "别着急，我帮你付钱。", "pinyin": "Bié zhāojí, wǒ bāng nǐ fù qián.", "translation": "Don't worry, I'll pay for you.", "translation_id": "Jangan khawatir, saya akan bayar untukmu."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "谢谢你！我明天还你。", "pinyin": "Xièxie nǐ! Wǒ míngtiān huán nǐ.", "translation": "Thank you! I'll pay you back tomorrow.", "translation_id": "Terima kasih! Saya akan bayar kembali besok."}
+  ],
+  "exercises": [
+    {"question": "What does the 把 (bǎ) construction do?", "question_id": "Apa fungsi konstruksi 把 (bǎ)?", "options": ["Marks the subject", "Marks the object", "Marks the time", "Marks the location"], "options_id": ["Menandai subjek", "Menandai objek", "Menandai waktu", "Menandai lokasi"], "correct": 1},
+    {"question": "How do you say 'I left my wallet at home' using 把?", "question_id": "Bagaimana mengatakan 'Saya meninggalkan dompet di rumah' menggunakan 把?", "options": ["我把钱包忘在家里了", "我忘钱包在家里了", "钱包我忘在家里了", "我把家里忘了钱包"], "options_id": ["Saya meninggalkan dompet di rumah", "Saya lupa dompet di rumah", "Dompet saya lupa di rumah", "Saya lupa rumah dompet"], "correct": 0},
+    {"question": "What does 忘记 (wàngjì) mean?", "question_id": "Apa arti 忘记 (wàngjì)?", "options": ["To remember", "To forget", "To put", "To take"], "options_id": ["Ingat", "Lupa", "Meletakkan", "Mengambil"], "correct": 1},
+    {"question": "How to say 'Please put the book on the table' in Chinese?", "question_id": "Bagaimana mengatakan 'Tolong letakkan buku di atas meja' dalam bahasa Mandarin?", "options": ["请把书放在桌子上", "请放书在桌子上", "书请放在桌子上", "请把桌子上放书"], "options_id": ["Tolong letakkan buku di atas meja", "Tolong letakkan buku di atas meja", "Buku tolong letakkan di atas meja", "Tolong di atas meja letakkan buku"], "correct": 0},
+    {"question": "What is the opposite of 忘记 (wàngjì)?", "question_id": "Apa lawan dari 忘记 (wàngjì)?", "options": ["记得", "知道", "认识", "了解"], "options_id": ["Ingat", "Tahu", "Kenal", "Mengerti"], "correct": 0}
+  ]
+}

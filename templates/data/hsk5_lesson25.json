@@ -1,0 +1,228 @@
+{
+  "title": "跨文化交流",
+  "subtitle": "Cross-Cultural Communication, Cultural Awareness, Global Understanding",
+  "assistant_message": "Today we learn: discussing cross-cultural communication, expressing cultural awareness, and talking about understanding cultural differences.",
+  "vocabulary": [
+    {
+      "word": "跨文化",
+      "pinyin": "kuà wén huà",
+      "meaning": "cross-cultural",
+      "meaning_id": "lintas budaya",
+      "example": "跨文化交流",
+      "example_translation": "cross-cultural communication",
+      "example_translation_id": "komunikasi lintas budaya"
+    },
+    {
+      "word": "文化差异",
+      "pinyin": "wén huà chā yì",
+      "meaning": "cultural difference",
+      "meaning_id": "perbedaan budaya",
+      "example": "尊重文化差异",
+      "example_translation": "respect cultural differences",
+      "example_translation_id": "menghormati perbedaan budaya"
+    },
+    {
+      "word": "包容",
+      "pinyin": "bāo róng",
+      "meaning": "tolerance",
+      "meaning_id": "toleransi",
+      "example": "包容不同观点",
+      "example_translation": "tolerate different viewpoints",
+      "example_translation_id": "menoleransi sudut pandang berbeda"
+    },
+    {
+      "word": "尊重",
+      "pinyin": "zūn zhòng",
+      "meaning": "respect",
+      "meaning_id": "menghormati",
+      "example": "相互尊重",
+      "example_translation": "mutual respect",
+      "example_translation_id": "saling menghormati"
+    },
+    {
+      "word": "误解",
+      "pinyin": "wù jiě",
+      "meaning": "misunderstanding",
+      "meaning_id": "kesalahpahaman",
+      "example": "避免误解",
+      "example_translation": "avoid misunderstandings",
+      "example_translation_id": "menghindari kesalahpahaman"
+    },
+    {
+      "word": "传统",
+      "pinyin": "chuán tǒng",
+      "meaning": "tradition",
+      "meaning_id": "tradisi",
+      "example": "尊重传统",
+      "example_translation": "respect traditions",
+      "example_translation_id": "menghormati tradisi"
+    },
+    {
+      "word": "价值观",
+      "pinyin": "jià zhí guān",
+      "meaning": "values",
+      "meaning_id": "nilai-nilai",
+      "example": "不同的价值观",
+      "example_translation": "different values",
+      "example_translation_id": "nilai-nilai yang berbeda"
+    },
+    {
+      "word": "敏感",
+      "pinyin": "mǐn gǎn",
+      "meaning": "sensitive",
+      "meaning_id": "sensitif",
+      "example": "文化敏感度",
+      "example_translation": "cultural sensitivity",
+      "example_translation_id": "sensitivitas budaya"
+    },
+    {
+      "word": "适应",
+      "pinyin": "shì yìng",
+      "meaning": "to adapt",
+      "meaning_id": "beradaptasi",
+      "example": "适应新文化",
+      "example_translation": "adapt to a new culture",
+      "example_translation_id": "beradaptasi dengan budaya baru"
+    },
+    {
+      "word": "全球化",
+      "pinyin": "quán qiú huà",
+      "meaning": "globalization",
+      "meaning_id": "globalisasi",
+      "example": "全球化时代",
+      "example_translation": "era of globalization",
+      "example_translation_id": "era globalisasi"
+    }
+  ],
+  "grammar": [
+    {
+      "point": "Using 无论...都... (wúlùn...dōu...) - 'No matter... all...'",
+      "point_id": "Menggunakan 无论...都... (wúlùn...dōu...) - 'Tidak peduli... semua...'",
+      "explanation": "This structure expresses that regardless of the condition, the result remains the same.",
+      "explanation_id": "Struktur ini menyatakan bahwa terlepas dari kondisinya, hasilnya tetap sama.",
+      "examples": [
+        {
+          "chinese": "无论文化差异多大，我们都要互相尊重。",
+          "translation": "No matter how big the cultural differences, we must respect each other.",
+          "translation_id": "Tidak peduli seberapa besar perbedaan budaya, kita harus saling menghormati."
+        },
+        {
+          "chinese": "无论遇到什么困难，他都能适应。",
+          "translation": "No matter what difficulties he encounters, he can adapt.",
+          "translation_id": "Tidak peduli kesulitan apa yang dia hadapi, dia bisa beradaptasi."
+        }
+      ]
+    },
+    {
+      "point": "Using 以免 (yǐmiǎn) - 'To avoid'",
+      "point_id": "Menggunakan 以免 (yǐmiǎn) - 'Untuk menghindari'",
+      "explanation": "以免 indicates purpose, meaning 'in order to avoid' something negative.",
+      "explanation_id": "以免 menunjukkan tujuan, berarti 'untuk menghindari' sesuatu yang negatif.",
+      "examples": [
+        {
+          "chinese": "了解当地文化，以免造成误解。",
+          "translation": "Understand the local culture to avoid causing misunderstandings.",
+          "translation_id": "Pahami budaya setempat untuk menghindari kesalahpahaman."
+        },
+        {
+          "chinese": "提前做好准备，以免出现问题。",
+          "translation": "Prepare in advance to avoid problems.",
+          "translation_id": "Persiapkan terlebih dahulu untuk menghindari masalah."
+        }
+      ]
+    },
+    {
+      "point": "Using 随着 (suízhe) - 'Along with'",
+      "point_id": "Menggunakan 随着 (suízhe) - 'Seiring dengan'",
+      "explanation": "随着 indicates that as one thing changes, another changes accordingly.",
+      "explanation_id": "随着 menunjukkan bahwa seiring satu hal berubah, hal lain berubah sesuai.",
+      "examples": [
+        {
+          "chinese": "随着全球化的深入，跨文化交流越来越重要。",
+          "translation": "Along with the deepening of globalization, cross-cultural communication is becoming more and more important.",
+          "translation_id": "Seiring dengan semakin dalamnya globalisasi, komunikasi lintas budaya menjadi semakin penting."
+        },
+        {
+          "chinese": "随着经验增加，他学会了包容。",
+          "translation": "As his experience increased, he learned tolerance.",
+          "translation_id": "Seiring pengalamannya bertambah, dia belajar toleransi."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "female",
+      "name": "Zhang Wei",
+      "voice": "female",
+      "chinese": "我要去国外工作，但担心文化差异会造成误解。",
+      "pinyin": "Wǒ yào qù guówài gōngzuò, dàn dānxīn wénhuà chāyì huì zàochéng wùjiě.",
+      "translation": "I'm going to work abroad, but I'm worried that cultural differences will cause misunderstandings.",
+      "translation_id": "Saya akan bekerja di luar negeri, tapi khawatir perbedaan budaya akan menyebabkan kesalahpahaman."
+    },
+    {
+      "speaker": "male",
+      "name": "Li Ming",
+      "voice": "male",
+      "chinese": "跨文化交流需要开放的心态。无论遇到什么情况，都要保持尊重和包容。",
+      "pinyin": "Kuà wénhuà jiāoliú xūyào kāifàng de xīntài. Wúlùn yù dào shénme qíngkuàng, dōu yào bǎochí zūnzhòng hé bāoróng.",
+      "translation": "Cross-cultural communication requires an open mind. No matter what situations you encounter, maintain respect and tolerance.",
+      "translation_id": "Komunikasi lintas budaya membutuhkan pikiran terbuka. Tidak peduli situasi apa yang Anda hadapi, pertahankan rasa hormat dan toleransi."
+    },
+    {
+      "speaker": "female",
+      "name": "Zhang Wei",
+      "voice": "female",
+      "chinese": "我该如何避免文化冲突呢？",
+      "pinyin": "Wǒ gāi rúhé bìmiǎn wénhuà chōngtū ne?",
+      "translation": "How can I avoid cultural conflicts?",
+      "translation_id": "Bagaimana saya bisa menghindari konflik budaya?"
+    },
+    {
+      "speaker": "male",
+      "name": "Li Ming",
+      "voice": "male",
+      "chinese": "首先要了解当地的文化传统和价值观。其次，多倾听，少评判。随着你逐渐适应，你会发现不同的文化其实很有趣。",
+      "pinyin": "Shǒuxiān yào liǎojiě dāngdì de wénhuà chuántǒng hé jiàzhíguān. Qícì, duō qīngtīng, shǎo píngpàn. Suízhe nǐ zhújiàn shìyìng, nǐ huì fāxiàn bùtóng de wénhuà qíshí hěn yǒuqù.",
+      "translation": "First, learn about the local cultural traditions and values. Second, listen more and judge less. As you gradually adapt, you'll find that different cultures are actually very interesting.",
+      "translation_id": "Pertama, pelajari tentang tradisi budaya dan nilai-nilai setempat. Kedua, lebih banyak mendengarkan dan lebih sedikit menghakimi. Seiring Anda beradaptasi secara bertahap, Anda akan menemukan bahwa budaya yang berbeda sebenarnya sangat menarik."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "What does 跨文化 (kuà wénhuà) mean?",
+      "question_id": "Apa arti 跨文化 (kuà wénhuà)?",
+      "options": ["Intercultural", "Cross-cultural", "Multicultural", "All of the above"],
+      "options_id": ["Antarbudaya", "Lintas budaya", "Multikultural", "Semua di atas"],
+      "correct": 1
+    },
+    {
+      "question": "How do you say 'tolerance' in Chinese?",
+      "question_id": "Bagaimana mengatakan 'toleransi' dalam bahasa Mandarin?",
+      "options": ["尊重", "包容", "误解", "传统"],
+      "options_id": ["hormat", "toleransi", "kesalahpahaman", "tradisi"],
+      "correct": 1
+    },
+    {
+      "question": "What does 误解 (wùjiě) mean?",
+      "question_id": "Apa arti 误解 (wùjiě)?",
+      "options": ["Understanding", "Misunderstanding", "Agreement", "Disagreement"],
+      "options_id": ["Pemahaman", "Kesalahpahaman", "Persetujuan", "Ketidaksetujuan"],
+      "correct": 1
+    },
+    {
+      "question": "Complete the sentence: ______文化差异多大，我们都要互相尊重。",
+      "question_id": "Lengkapi kalimat: ______文化差异多大，我们都要互相尊重。",
+      "options": ["不管", "无论", "尽管", "虽然"],
+      "options_id": ["tidak peduli", "tidak peduli", "meskipun", "walaupun"],
+      "correct": 1
+    },
+    {
+      "question": "What is the best translation of 'avoid misunderstandings'?",
+      "question_id": "Apa terjemahan terbaik dari 'menghindari kesalahpahaman'?",
+      "options": ["造成误解", "避免误解", "解决误解", "理解误解"],
+      "options_id": ["menyebabkan kesalahpahaman", "menghindari kesalahpahaman", "menyelesaikan kesalahpahaman", "memahami kesalahpahaman"],
+      "correct": 1
+    }
+  ]
+}

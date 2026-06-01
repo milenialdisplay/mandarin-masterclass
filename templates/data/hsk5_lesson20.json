@@ -1,0 +1,228 @@
+{
+  "title": "有效沟通",
+  "subtitle": "Effective Communication, Listening Skills, Conflict Resolution",
+  "assistant_message": "Today we learn: discussing effective communication strategies, expressing ideas clearly, and talking about listening skills and conflict resolution.",
+  "vocabulary": [
+    {
+      "word": "沟通",
+      "pinyin": "gōu tōng",
+      "meaning": "communication",
+      "meaning_id": "komunikasi",
+      "example": "有效沟通",
+      "example_translation": "effective communication",
+      "example_translation_id": "komunikasi efektif"
+    },
+    {
+      "word": "表达",
+      "pinyin": "biǎo dá",
+      "meaning": "to express",
+      "meaning_id": "mengekspresikan",
+      "example": "清楚表达想法",
+      "example_translation": "express ideas clearly",
+      "example_translation_id": "mengekspresikan ide dengan jelas"
+    },
+    {
+      "word": "倾听",
+      "pinyin": "qīng tīng",
+      "meaning": "to listen attentively",
+      "meaning_id": "mendengarkan dengan saksama",
+      "example": "学会倾听",
+      "example_translation": "learn to listen",
+      "example_translation_id": "belajar mendengarkan"
+    },
+    {
+      "word": "理解",
+      "pinyin": "lǐ jiě",
+      "meaning": "to understand",
+      "meaning_id": "memahami",
+      "example": "互相理解",
+      "example_translation": "mutual understanding",
+      "example_translation_id": "saling memahami"
+    },
+    {
+      "word": "尊重",
+      "pinyin": "zūn zhòng",
+      "meaning": "to respect",
+      "meaning_id": "menghormati",
+      "example": "尊重他人",
+      "example_translation": "respect others",
+      "example_translation_id": "menghormati orang lain"
+    },
+    {
+      "word": "反馈",
+      "pinyin": "fǎn kuì",
+      "meaning": "feedback",
+      "meaning_id": "umpan balik",
+      "example": "给出反馈",
+      "example_translation": "give feedback",
+      "example_translation_id": "memberikan umpan balik"
+    },
+    {
+      "word": "冲突",
+      "pinyin": "chōng tū",
+      "meaning": "conflict",
+      "meaning_id": "konflik",
+      "example": "解决冲突",
+      "example_translation": "resolve conflict",
+      "example_translation_id": "menyelesaikan konflik"
+    },
+    {
+      "word": "坦诚",
+      "pinyin": "tǎn chéng",
+      "meaning": "honest and open",
+      "meaning_id": "jujur dan terbuka",
+      "example": "坦诚交流",
+      "example_translation": "communicate openly",
+      "example_translation_id": "berkomunikasi secara terbuka"
+    },
+    {
+      "word": "共识",
+      "pinyin": "gòng shí",
+      "meaning": "consensus",
+      "meaning_id": "konsensus",
+      "example": "达成共识",
+      "example_translation": "reach a consensus",
+      "example_translation_id": "mencapai konsensus"
+    },
+    {
+      "word": "技巧",
+      "pinyin": "jì qiǎo",
+      "meaning": "skill",
+      "meaning_id": "keterampilan",
+      "example": "沟通技巧",
+      "example_translation": "communication skills",
+      "example_translation_id": "keterampilan komunikasi"
+    }
+  ],
+  "grammar": [
+    {
+      "point": "Using 通过 (tōngguò) - 'Through/By means of'",
+      "point_id": "Menggunakan 通过 (tōngguò) - 'Melalui'",
+      "explanation": "通过 indicates the means or method by which something is achieved, similar to 'through' or 'by means of'.",
+      "explanation_id": "通过 menunjukkan cara atau metode yang digunakan untuk mencapai sesuatu, mirip dengan 'melalui'.",
+      "examples": [
+        {
+          "chinese": "通过沟通，我们解决了问题。",
+          "translation": "Through communication, we solved the problem.",
+          "translation_id": "Melalui komunikasi, kami menyelesaikan masalah."
+        },
+        {
+          "chinese": "通过努力学习，他取得了进步。",
+          "translation": "By studying hard, he made progress.",
+          "translation_id": "Dengan belajar keras, dia membuat kemajuan."
+        }
+      ]
+    },
+    {
+      "point": "Using 及时 (jíshí) - 'In time/Timely'",
+      "point_id": "Menggunakan 及时 (jíshí) - 'Tepat waktu'",
+      "explanation": "及时 means 'in time' or 'timely', indicating that something happens at the right moment without delay.",
+      "explanation_id": "及时 berarti 'tepat waktu', menunjukkan bahwa sesuatu terjadi pada saat yang tepat tanpa penundaan.",
+      "examples": [
+        {
+          "chinese": "及时反馈很重要。",
+          "translation": "Timely feedback is very important.",
+          "translation_id": "Umpan balik yang tepat waktu sangat penting."
+        },
+        {
+          "chinese": "他及时发现了错误。",
+          "translation": "He discovered the mistake in time.",
+          "translation_id": "Dia menemukan kesalahan tepat waktu."
+        }
+      ]
+    },
+    {
+      "point": "Using 以...为基础 (yǐ...wéi jīchǔ) - 'Based on...'",
+      "point_id": "Menggunakan 以...为基础 (yǐ...wéi jīchǔ) - 'Berdasarkan...'",
+      "explanation": "This structure means 'based on' or 'taking something as the foundation'.",
+      "explanation_id": "Struktur ini berarti 'berdasarkan' atau 'mengambil sesuatu sebagai fondasi'.",
+      "examples": [
+        {
+          "chinese": "以相互尊重为基础建立关系。",
+          "translation": "Build relationships based on mutual respect.",
+          "translation_id": "Bangun hubungan berdasarkan rasa saling menghormati."
+        },
+        {
+          "chinese": "以事实为基础做出决定。",
+          "translation": "Make decisions based on facts.",
+          "translation_id": "Buat keputusan berdasarkan fakta."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "female",
+      "name": "Zhao Lin",
+      "voice": "female",
+      "chinese": "我们团队最近经常有冲突，大家都不愿意倾听对方的意见。",
+      "pinyin": "Wǒmen tuánduì zuìjìn jīngcháng yǒu chōngtū, dàjiā dōu bù yuànyì qīngtīng duìfāng de yìjiàn.",
+      "translation": "Our team has been having frequent conflicts lately. No one wants to listen to each other's opinions.",
+      "translation_id": "Tim kami akhir-akhir ini sering mengalami konflik. Tidak ada yang mau mendengarkan pendapat satu sama lain."
+    },
+    {
+      "speaker": "male",
+      "name": "Sun Wei",
+      "voice": "male",
+      "chinese": "有效沟通需要双方坦诚表达，同时学会倾听。通过互相理解才能解决冲突。",
+      "pinyin": "Yǒuxiào gōutōng xūyào shuāngfāng tǎnchéng biǎodá, tóngshí xuéhuì qīngtīng. Tōngguò hùxiāng lǐjiě cáinéng jiějué chōngtū.",
+      "translation": "Effective communication requires both sides to express themselves honestly while learning to listen. Only through mutual understanding can conflicts be resolved.",
+      "translation_id": "Komunikasi efektif membutuhkan kedua belah pihak untuk mengekspresikan diri dengan jujur sambil belajar mendengarkan. Hanya melalui saling pengertian konflik dapat diselesaikan."
+    },
+    {
+      "speaker": "female",
+      "name": "Zhao Lin",
+      "voice": "female",
+      "chinese": "我们应该如何给出建设性的反馈呢？",
+      "pinyin": "Wǒmen yīnggāi rúhé gěi chū jiànshèxìng de fǎnkuì ne?",
+      "translation": "How should we give constructive feedback?",
+      "translation_id": "Bagaimana kita harus memberikan umpan balik yang konstruktif?"
+    },
+    {
+      "speaker": "male",
+      "name": "Sun Wei",
+      "voice": "male",
+      "chinese": "及时反馈很重要，但要以尊重为基础。先肯定优点，再提出改进建议，这样更容易达成共识。",
+      "pinyin": "Jíshí fǎnkuì hěn zhòngyào, dàn yào yǐ zūnzhòng wéi jīchǔ. Xiān kěndìng yōudiǎn, zài tíchū gǎijìn jiànyì, zhèyàng gèng róngyì dáchéng gòngshí.",
+      "translation": "Timely feedback is important, but it should be based on respect. First affirm the strengths, then suggest improvements. This makes it easier to reach consensus.",
+      "translation_id": "Umpan balik tepat waktu itu penting, tetapi harus didasarkan pada rasa hormat. Pertama akui kekuatannya, lalu sarankan perbaikan. Ini memudahkan untuk mencapai konsensus."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "What does 沟通 (gōutōng) mean?",
+      "question_id": "Apa arti 沟通 (gōutōng)?",
+      "options": ["Conflict", "Communication", "Feedback", "Respect"],
+      "options_id": ["Konflik", "Komunikasi", "Umpan balik", "Hormat"],
+      "correct": 1
+    },
+    {
+      "question": "How do you say 'reach a consensus' in Chinese?",
+      "question_id": "Bagaimana mengatakan 'mencapai konsensus' dalam bahasa Mandarin?",
+      "options": ["解决冲突", "达成共识", "给出反馈", "互相理解"],
+      "options_id": ["menyelesaikan konflik", "mencapai konsensus", "memberikan umpan balik", "saling memahami"],
+      "correct": 1
+    },
+    {
+      "question": "What does 倾听 (qīngtīng) mean?",
+      "question_id": "Apa arti 倾听 (qīngtīng)?",
+      "options": ["To speak", "To listen attentively", "To ignore", "To interrupt"],
+      "options_id": ["Berbicara", "Mendengarkan dengan saksama", "Mengabaikan", "Menyela"],
+      "correct": 1
+    },
+    {
+      "question": "Complete the sentence: ______沟通，我们解决了问题。",
+      "question_id": "Lengkapi kalimat: ______沟通，我们解决了问题。",
+      "options": ["对于", "由于", "通过", "关于"],
+      "options_id": ["Tentang", "Karena", "Melalui", "Mengenai"],
+      "correct": 2
+    },
+    {
+      "question": "What is the best translation of 'constructive feedback'?",
+      "question_id": "Apa terjemahan terbaik dari 'umpan balik konstruktif'?",
+      "options": ["积极反馈", "建设性反馈", "及时反馈", "正面反馈"],
+      "options_id": ["umpan balik positif", "umpan balik konstruktif", "umpan balik tepat waktu", "umpan balik baik"],
+      "correct": 1
+    }
+  ]
+}

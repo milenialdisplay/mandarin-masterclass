@@ -1,0 +1,51 @@
+{
+  "title": "既然你决定了，就去做吧",
+  "subtitle": "The 既然...就... Structure, Expressing 'Since... Then...', Encouraging Decisions",
+  "assistant_message": "Today we learn: using 既然...就... (jìrán... jiù...) to express 'since... then...', encouraging decisions, and talking about commitment.",
+  "vocabulary": [
+    {"word": "既然", "pinyin": "jì rán", "meaning": "since (given that)", "meaning_id": "karena", "example": "既然你决定了", "example_translation": "since you've decided", "example_translation_id": "karena kamu sudah memutuskan"},
+    {"word": "决定", "pinyin": "jué dìng", "meaning": "to decide", "meaning_id": "memutuskan", "example": "我决定了", "example_translation": "I've decided", "example_translation_id": "Saya sudah memutuskan"},
+    {"word": "就", "pinyin": "jiù", "meaning": "then (consequence)", "meaning_id": "maka", "example": "就去做", "example_translation": "then go do it", "example_translation_id": "maka lakukan"},
+    {"word": "鼓励", "pinyin": "gǔ lì", "meaning": "to encourage", "meaning_id": "mendorong", "example": "鼓励朋友", "example_translation": "encourage friends", "example_translation_id": "mendorong teman"},
+    {"word": "信心", "pinyin": "xìn xīn", "meaning": "confidence", "meaning_id": "kepercayaan diri", "example": "有信心", "example_translation": "have confidence", "example_translation_id": "percaya diri"},
+    {"word": "坚持", "pinyin": "jiān chí", "meaning": "to persist", "meaning_id": "bertahan", "example": "坚持下去", "example_translation": "persist", "example_translation_id": "bertahan"},
+    {"word": "实现", "pinyin": "shí xiàn", "meaning": "to realize/achieve", "meaning_id": "mewujudkan", "example": "实现梦想", "example_translation": "realize a dream", "example_translation_id": "mewujudkan mimpi"},
+    {"word": "目标", "pinyin": "mù biāo", "meaning": "goal", "meaning_id": "tujuan", "example": "设定目标", "example_translation": "set a goal", "example_translation_id": "menetapkan tujuan"}
+  ],
+  "grammar": [
+    {
+      "point": "The 既然...就... Structure (Since... Then...)",
+      "point_id": "Struktur 既然...就... (Karena... Maka...)",
+      "explanation": "Use 既然 to state a condition/fact, and 就 to state the conclusion. Structure: 既然 + Condition, 就 + Result.",
+      "explanation_id": "Gunakan 既然 untuk menyatakan kondisi/fakta, dan 就 untuk menyatakan kesimpulan. Struktur: 既然 + Kondisi, 就 + Hasil.",
+      "examples": [
+        {"chinese": "既然你决定了，就去做吧。", "translation": "Since you've decided, then go do it.", "translation_id": "Karena kamu sudah memutuskan, maka lakukanlah."},
+        {"chinese": "既然来了，就多待一会儿。", "translation": "Since you're here, stay a little longer.", "translation_id": "Karena sudah datang, tinggal lebih lama."},
+        {"chinese": "既然喜欢，就买吧。", "translation": "Since you like it, buy it.", "translation_id": "Karena suka, belilah."}
+      ]
+    },
+    {
+      "point": "Encouraging with 鼓励 (gǔlì)",
+      "point_id": "Mendorong dengan 鼓励 (gǔlì)",
+      "explanation": "Use 鼓励 to encourage someone. Structure: Subject + 鼓励 + Person + to do something.",
+      "explanation_id": "Gunakan 鼓励 untuk mendorong seseorang. Struktur: Subjek + 鼓励 + Orang + untuk melakukan sesuatu.",
+      "examples": [
+        {"chinese": "朋友鼓励我继续学习。", "translation": "My friend encouraged me to continue studying.", "translation_id": "Teman mendorong saya untuk terus belajar."},
+        {"chinese": "我们需要互相鼓励。", "translation": "We need to encourage each other.", "translation_id": "Kita perlu saling mendorong."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我想辞职去创业。", "pinyin": "Wǒ xiǎng cízhí qù chuàngyè.", "translation": "I want to quit my job and start a business.", "translation_id": "Saya ingin berhenti kerja dan memulai bisnis."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你确定吗？", "pinyin": "Nǐ quèdìng ma?", "translation": "Are you sure?", "translation_id": "Kamu yakin?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我想了很久，已经决定了。", "pinyin": "Wǒ xiǎng le hěn jiǔ, yǐjīng juédìng le.", "translation": "I've thought about it for a long time, I've already decided.", "translation_id": "Saya sudah memikirkannya lama, sudah memutuskan."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "既然你决定了，就去做吧！我会支持你的。", "pinyin": "Jìrán nǐ juédìng le, jiù qù zuò ba! Wǒ huì zhīchí nǐ de.", "translation": "Since you've decided, then go do it! I will support you.", "translation_id": "Karena kamu sudah memutuskan, maka lakukanlah! Saya akan mendukungmu."}
+  ],
+  "exercises": [
+    {"question": "What does the structure 既然...就... express?", "question_id": "Apa yang diekspresikan oleh struktur 既然...就...?", "options": ["If... then...", "Since... then...", "Although... but...", "Because... so..."], "options_id": ["Jika... maka...", "Karena... maka...", "Meskipun... tetapi...", "Karena... jadi..."], "correct": 1},
+    {"question": "How do you say 'Since you've decided, then go do it' in Chinese?", "question_id": "Bagaimana mengatakan 'Karena kamu sudah memutuskan, maka lakukanlah' dalam bahasa Mandarin?", "options": ["如果你决定了，就去做", "既然你决定了，就去做", "虽然你决定了，就去做", "因为你决定了，就去做"], "options_id": ["Jika kamu sudah memutuskan, lakukanlah", "Karena kamu sudah memutuskan, lakukanlah", "Meskipun kamu sudah memutuskan, lakukanlah", "Karena kamu sudah memutuskan, lakukanlah"], "correct": 1},
+    {"question": "What does 决定 (juédìng) mean?", "question_id": "Apa arti 决定 (juédìng)?", "options": ["To think", "To decide", "To hope", "To try"], "options_id": ["Berpikir", "Memutuskan", "Berharap", "Mencoba"], "correct": 1},
+    {"question": "How to say 'I will support you' in Chinese?", "question_id": "Bagaimana mengatakan 'Saya akan mendukungmu' dalam bahasa Mandarin?", "options": ["我会帮助你", "我会支持你", "我会鼓励你", "我会陪你"], "options_id": ["Saya akan membantu kamu", "Saya akan mendukung kamu", "Saya akan mendorong kamu", "Saya akan menemani kamu"], "correct": 1},
+    {"question": "What does 信心 (xìnxīn) mean?", "question_id": "Apa arti 信心 (xìnxīn)?", "options": ["Hope", "Confidence", "Dream", "Goal"], "options_id": ["Harapan", "Kepercayaan diri", "Mimpi", "Tujuan"], "correct": 1}
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "title": "艺术与生活",
+  "subtitle": "Talking About Art, Appreciation, and Culture",
+  "assistant_message": "Today we learn: discussing art and life, using 总之 (zǒngzhī) for 'in summary', and expressing appreciation.",
+  "vocabulary": [
+    {"word": "艺术", "pinyin": "yì shù", "meaning": "art", "meaning_id": "seni", "example": "现代艺术", "example_translation": "modern art", "example_translation_id": "seni modern"},
+    {"word": "生活", "pinyin": "shēng huó", "meaning": "life", "meaning_id": "kehidupan", "example": "日常生活", "example_translation": "daily life", "example_translation_id": "kehidupan sehari-hari"},
+    {"word": "欣赏", "pinyin": "xīn shǎng", "meaning": "to appreciate", "meaning_id": "menghargai", "example": "欣赏艺术", "example_translation": "appreciate art", "example_translation_id": "menghargai seni"},
+    {"word": "美学", "pinyin": "měi xué", "meaning": "aesthetics", "meaning_id": "estetika", "example": "生活美学", "example_translation": "aesthetics of life", "example_translation_id": "estetika kehidupan"},
+    {"word": "创造", "pinyin": "chuàng zào", "meaning": "to create", "meaning_id": "menciptakan", "example": "艺术创造", "example_translation": "artistic creation", "example_translation_id": "kreasi seni"},
+    {"word": "灵感", "pinyin": "líng gǎn", "meaning": "inspiration", "meaning_id": "inspirasi", "example": "获得灵感", "example_translation": "get inspiration", "example_translation_id": "mendapat inspirasi"},
+    {"word": "表达", "pinyin": "biǎo dá", "meaning": "to express", "meaning_id": "mengekspresikan", "example": "表达情感", "example_translation": "express emotions", "example_translation_id": "mengekspresikan emosi"},
+    {"word": "情感", "pinyin": "qíng gǎn", "meaning": "emotion", "meaning_id": "emosi", "example": "真实情感", "example_translation": "true feelings", "example_translation_id": "perasaan sejati"}
+  ],
+  "grammar": [
+    {
+      "point": "Using 总之 (zǒngzhī) for 'In Summary'",
+      "point_id": "Menggunakan 总之 (zǒngzhī) untuk 'Singkatnya'",
+      "explanation": "总之 is used to summarize previous points, meaning 'in summary' or 'in short'.",
+      "explanation_id": "总之 digunakan untuk merangkum poin-poin sebelumnya, berarti 'singkatnya' atau 'kesimpulannya'.",
+      "examples": [
+        {"chinese": "艺术可以丰富我们的生活，提高我们的审美能力。总之，艺术对生活很重要。", "translation": "Art can enrich our lives and improve our aesthetic ability. In summary, art is very important to life.", "translation_id": "Seni dapat memperkaya kehidupan kita dan meningkatkan kemampuan estetika kita. Singkatnya, seni sangat penting untuk kehidupan."},
+        {"chinese": "总之，我们应该多欣赏艺术。", "translation": "In short, we should appreciate art more.", "translation_id": "Singkatnya, kita harus lebih menghargai seni."}
+      ]
+    },
+    {
+      "point": "Using 总的来说 (zǒng de lái shuō) for 'Generally Speaking'",
+      "point_id": "Menggunakan 总的来说 (zǒng de lái shuō) untuk 'Secara Umum'",
+      "explanation": "总的来说 is used to give a general statement or overall opinion.",
+      "explanation_id": "总的来说 digunakan untuk memberikan pernyataan umum atau pendapat keseluruhan.",
+      "examples": [
+        {"chinese": "总的来说，艺术让生活更美好。", "translation": "Generally speaking, art makes life better.", "translation_id": "Secara umum, seni membuat hidup lebih baik."},
+        {"chinese": "总的来说，我同意你的看法。", "translation": "Generally speaking, I agree with your view.", "translation_id": "Secara umum, saya setuju dengan pendapatmu."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你觉得艺术和生活有什么关系？", "pinyin": "Nǐ juéde yìshù hé shēnghuó yǒu shénme guānxì?", "translation": "What do you think is the relationship between art and life?", "translation_id": "Apa hubungan antara seni dan kehidupan menurutmu?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "艺术来源于生活，又高于生活。艺术让我们学会欣赏美。", "pinyin": "Yìshù láiyuán yú shēnghuó, yòu gāo yú shēnghuó. Yìshù ràng wǒmen xuéhuì xīnshǎng měi.", "translation": "Art comes from life, yet is higher than life. Art teaches us to appreciate beauty.", "translation_id": "Seni berasal dari kehidupan, namun lebih tinggi dari kehidupan. Seni mengajarkan kita untuk menghargai keindahan."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "艺术也能表达人们的情感和思想。", "pinyin": "Yìshù yě néng biǎodá rénmen de qínggǎn hé sīxiǎng.", "translation": "Art can also express people's emotions and thoughts.", "translation_id": "Seni juga dapat mengekspresikan emosi dan pikiran orang."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "总之，艺术让生活更加丰富多彩。", "pinyin": "Zǒngzhī, yìshù ràng shēnghuó gèngjiā fēngfù duōcǎi.", "translation": "In summary, art makes life more colorful.", "translation_id": "Singkatnya, seni membuat kehidupan lebih berwarna."}
+  ],
+  "exercises": [
+    {"question": "What does 艺术 (yìshù) mean?", "question_id": "Apa arti 艺术 (yìshù)?", "options": ["Science", "Art", "History", "Literature"], "options_id": ["Sains", "Seni", "Sejarah", "Sastra"], "correct": 1},
+    {"question": "How do you say 'appreciate art' in Chinese?", "question_id": "Bagaimana mengatakan 'menghargai seni' dalam bahasa Mandarin?", "options": ["欣赏艺术", "了解艺术", "学习艺术", "创造艺术"], "options_id": ["menghargai seni", "memahami seni", "belajar seni", "menciptakan seni"], "correct": 0},
+    {"question": "What does 总之 (zǒngzhī) mean?", "question_id": "Apa arti 总之 (zǒngzhī)?", "options": ["In detail", "In summary", "In addition", "In contrast"], "options_id": ["Secara detail", "Singkatnya", "Sebagai tambahan", "Sebaliknya"], "correct": 1},
+    {"question": "What is 灵感 (línggǎn)?", "question_id": "Apa itu 灵感 (línggǎn)?", "options": ["Idea", "Inspiration", "Imagination", "Creativity"], "options_id": ["Ide", "Inspirasi", "Imajinasi", "Kreativitas"], "correct": 1},
+    {"question": "How to say 'express emotions' in Chinese?", "question_id": "Bagaimana mengatakan 'mengekspresikan emosi' dalam bahasa Mandarin?", "options": ["表达情感", "表达思想", "表达意见", "表达感受"], "options_id": ["mengekspresikan emosi", "mengekspresikan pikiran", "mengekspresikan pendapat", "mengekspresikan perasaan"], "correct": 0}
+  ]
+}

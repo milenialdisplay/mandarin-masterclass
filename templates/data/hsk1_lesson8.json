@@ -1,0 +1,52 @@
+{
+  "title": "我想喝茶",
+  "subtitle": "Expressing Wants, Using Modal Verb 想, Ordering Food and Drinks",
+  "assistant_message": "Today we learn: expressing wants with 想 (xiǎng), ordering food and drinks, and using measure words (杯, 个).",
+  "vocabulary": [
+    {"word": "想", "pinyin": "xiǎng", "meaning": "to want, would like", "meaning_id": "ingin", "example": "我想喝茶", "example_translation": "I would like to drink tea", "example_translation_id": "Saya ingin minum teh"},
+    {"word": "要", "pinyin": "yào", "meaning": "to want (stronger)", "meaning_id": "mau (lebih kuat)", "example": "我要这个", "example_translation": "I want this", "example_translation_id": "Saya mau ini"},
+    {"word": "喝茶", "pinyin": "hē chá", "meaning": "to drink tea", "meaning_id": "minum teh", "example": "我喜欢喝茶", "example_translation": "I like to drink tea", "example_translation_id": "Saya suka minum teh"},
+    {"word": "喝水", "pinyin": "hē shuǐ", "meaning": "to drink water", "meaning_id": "minum air", "example": "请喝水", "example_translation": "Please drink water", "example_translation_id": "Silakan minum air"},
+    {"word": "吃饭", "pinyin": "chī fàn", "meaning": "to eat a meal", "meaning_id": "makan", "example": "我们一起吃饭", "example_translation": "Let's eat together", "example_translation_id": "Mari kita makan bersama"},
+    {"word": "面条", "pinyin": "miàn tiáo", "meaning": "noodles", "meaning_id": "mie", "example": "我喜欢吃面条", "example_translation": "I like to eat noodles", "example_translation_id": "Saya suka makan mie"},
+    {"word": "苹果", "pinyin": "píng guǒ", "meaning": "apple", "meaning_id": "apel", "example": "一个苹果", "example_translation": "one apple", "example_translation_id": "satu apel"},
+    {"word": "个", "pinyin": "gè", "meaning": "general measure word", "meaning_id": "kata bantu umum", "example": "一个人", "example_translation": "one person", "example_translation_id": "satu orang"},
+    {"word": "杯", "pinyin": "bēi", "meaning": "measure word for cups", "meaning_id": "kata bantu untuk cangkir", "example": "一杯茶", "example_translation": "a cup of tea", "example_translation_id": "secangkir teh"}
+  ],
+  "grammar": [
+    {
+      "point": "Expressing Wants with 想 (xiǎng)",
+      "point_id": "Menyatakan Keinginan dengan 想 (xiǎng)",
+      "explanation": "Use 想 before a verb to express 'would like to' or 'want to'. 想 is softer than 要 (yào).",
+      "explanation_id": "Gunakan 想 sebelum kata kerja untuk menyatakan 'ingin' atau 'mau'. 想 lebih lembut daripada 要 (yào).",
+      "examples": [
+        {"chinese": "我想喝茶。", "translation": "I would like to drink tea.", "translation_id": "Saya ingin minum teh."},
+        {"chinese": "你想吃什么？", "translation": "What would you like to eat?", "translation_id": "Kamu ingin makan apa?"}
+      ]
+    },
+    {
+      "point": "Measure Words: 个 (gè) and 杯 (bēi)",
+      "point_id": "Kata Bantu: 个 (gè) dan 杯 (bēi)",
+      "explanation": "Use 个 as a general measure word. Use 杯 for cup-shaped drinks.",
+      "explanation_id": "Gunakan 个 sebagai kata bantu umum. Gunakan 杯 untuk minuman berbentuk cangkir.",
+      "examples": [
+        {"chinese": "一个人", "translation": "one person", "translation_id": "satu orang"},
+        {"chinese": "一杯茶", "translation": "a cup of tea", "translation_id": "secangkir teh"},
+        {"chinese": "三个苹果", "translation": "three apples", "translation_id": "tiga apel"}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Waitress", "voice": "female", "chinese": "您好！您想喝什么？", "pinyin": "Nín hǎo! Nín xiǎng hē shénme?", "translation": "Hello! What would you like to drink?", "translation_id": "Halo! Anda ingin minum apa?"},
+    {"speaker": "male", "name": "Customer", "voice": "male", "chinese": "我想喝茶。", "pinyin": "Wǒ xiǎng hē chá.", "translation": "I would like to drink tea.", "translation_id": "Saya ingin minum teh."},
+    {"speaker": "female", "name": "Waitress", "voice": "female", "chinese": "您想吃什么？", "pinyin": "Nín xiǎng chī shénme?", "translation": "What would you like to eat?", "translation_id": "Anda ingin makan apa?"},
+    {"speaker": "male", "name": "Customer", "voice": "male", "chinese": "我想吃面条。", "pinyin": "Wǒ xiǎng chī miàntiáo.", "translation": "I would like to eat noodles.", "translation_id": "Saya ingin makan mie."}
+  ],
+  "exercises": [
+    {"question": "What does 想 (xiǎng) mean?", "question_id": "Apa arti 想 (xiǎng)?", "options": ["To go", "To want/would like", "To eat", "To drink"], "options_id": ["Pergi", "Ingin", "Makan", "Minum"], "correct": 1},
+    {"question": "How do you say 'I want to drink tea' in Chinese?", "question_id": "Bagaimana mengatakan 'Saya ingin minum teh' dalam bahasa Mandarin?", "options": ["我想喝水", "我想喝茶", "我想吃茶", "我去喝茶"], "options_id": ["Saya ingin minum air", "Saya ingin minum teh", "Saya ingin makan teh", "Saya pergi minum teh"], "correct": 1},
+    {"question": "What is the measure word for cup-shaped drinks?", "question_id": "Apa kata bantu untuk minuman berbentuk cangkir?", "options": ["个", "杯", "只", "条"], "options_id": ["(umum)", "(cangkir)", "(hewan)", "(panjang)"], "correct": 1},
+    {"question": "How to ask 'What would you like to eat?' in Chinese?", "question_id": "Bagaimana bertanya 'Anda ingin makan apa?' dalam bahasa Mandarin?", "options": ["你想喝什么？", "你想吃什么？", "你想要什么？", "你去哪里？"], "options_id": ["Anda ingin minum apa?", "Anda ingin makan apa?", "Anda ingin apa?", "Anda pergi ke mana?"], "correct": 1},
+    {"question": "What is 面条 (miàntiáo)?", "question_id": "Apa itu 面条 (miàntiáo)?", "options": ["Rice", "Noodles", "Bread", "Soup"], "options_id": ["Nasi", "Mie", "Roti", "Sup"], "correct": 1}
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "title": "你听说过长城吗",
+  "subtitle": "Experience with 过, Talking About Famous Places, Using 听说",
+  "assistant_message": "Today we learn: using 过 (guo) for past experiences, talking about the Great Wall, and using 听说 (tīngshuō) for 'heard that'.",
+  "vocabulary": [
+    {"word": "听说", "pinyin": "tīng shuō", "meaning": "to hear that", "meaning_id": "mendengar bahwa", "example": "听说你要去北京", "example_translation": "I heard you're going to Beijing", "example_translation_id": "Saya dengar kamu akan pergi ke Beijing"},
+    {"word": "长城", "pinyin": "Cháng chéng", "meaning": "Great Wall", "meaning_id": "Tembok Besar", "example": "去长城", "example_translation": "go to the Great Wall", "example_translation_id": "pergi ke Tembok Besar"},
+    {"word": "去过", "pinyin": "qù guo", "meaning": "have been to", "meaning_id": "pernah pergi ke", "example": "去过北京", "example_translation": "have been to Beijing", "example_translation_id": "pernah ke Beijing"},
+    {"word": "有名", "pinyin": "yǒu míng", "meaning": "famous", "meaning_id": "terkenal", "example": "很有名", "example_translation": "very famous", "example_translation_id": "sangat terkenal"},
+    {"word": "景点", "pinyin": "jǐng diǎn", "meaning": "scenic spot", "meaning_id": "tempat wisata", "example": "著名景点", "example_translation": "famous scenic spot", "example_translation_id": "tempat wisata terkenal"},
+    {"word": "历史", "pinyin": "lì shǐ", "meaning": "history", "meaning_id": "sejarah", "example": "中国历史", "example_translation": "Chinese history", "example_translation_id": "sejarah Tiongkok"},
+    {"word": "文化", "pinyin": "wén huà", "meaning": "culture", "meaning_id": "budaya", "example": "中国文化", "example_translation": "Chinese culture", "example_translation_id": "budaya Tiongkok"},
+    {"word": "参观", "pinyin": "cān guān", "meaning": "to visit (a place)", "meaning_id": "mengunjungi (tempat)", "example": "参观博物馆", "example_translation": "visit the museum", "example_translation_id": "mengunjungi museum"}
+  ],
+  "grammar": [
+    {
+      "point": "Past Experience with 过 (guo)",
+      "point_id": "Pengalaman Masa Lalu dengan 过 (guo)",
+      "explanation": "Use 过 after a verb to indicate that someone has experienced an action. Negative: 没 + Verb + 过.",
+      "explanation_id": "Gunakan 过 setelah kata kerja untuk menunjukkan bahwa seseorang telah mengalami suatu tindakan. Negatif: 没 + Kata Kerja + 过.",
+      "examples": [
+        {"chinese": "你去过长城吗？", "translation": "Have you been to the Great Wall?", "translation_id": "Apakah kamu pernah ke Tembok Besar?"},
+        {"chinese": "我没去过北京。", "translation": "I have never been to Beijing.", "translation_id": "Saya belum pernah ke Beijing."},
+        {"chinese": "她吃过中国菜。", "translation": "She has eaten Chinese food.", "translation_id": "Dia pernah makan masakan Tiongkok."}
+      ]
+    },
+    {
+      "point": "Using 听说 (tīngshuō) for 'Heard That'",
+      "point_id": "Menggunakan 听说 (tīngshuō) untuk 'Mendengar Bahwa'",
+      "explanation": "Use 听说 at the beginning of a sentence to say 'I heard that...'",
+      "explanation_id": "Gunakan 听说 di awal kalimat untuk mengatakan 'Saya mendengar bahwa...'",
+      "examples": [
+        {"chinese": "听说长城很壮观。", "translation": "I heard the Great Wall is magnificent.", "translation_id": "Saya mendengar Tembok Besar sangat megah."},
+        {"chinese": "听说你换了工作。", "translation": "I heard you changed jobs.", "translation_id": "Saya dengar kamu ganti pekerjaan."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你听说过长城吗？", "pinyin": "Nǐ tīngshuō guo Chángchéng ma?", "translation": "Have you heard of the Great Wall?", "translation_id": "Apakah kamu pernah mendengar tentang Tembok Besar?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "当然听说过，很有名。", "pinyin": "Dāngrán tīngshuō guo, hěn yǒumíng.", "translation": "Of course I've heard of it, it's very famous.", "translation_id": "Tentu saja pernah dengar, sangat terkenal."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你去过长城吗？", "pinyin": "Nǐ qù guo Chángchéng ma?", "translation": "Have you been to the Great Wall?", "translation_id": "Apakah kamu pernah ke Tembok Besar?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "去过，非常壮观。", "pinyin": "Qù guo, fēicháng zhuàngguān.", "translation": "Yes, it's very magnificent.", "translation_id": "Sudah pernah, sangat megah."}
+  ],
+  "exercises": [
+    {"question": "What does 过 (guo) indicate after a verb?", "question_id": "Apa yang ditunjukkan oleh 过 (guo) setelah kata kerja?", "options": ["Future action", "Past experience", "Ongoing action", "Possible action"], "options_id": ["Aksi masa depan", "Pengalaman masa lalu", "Aksi sedang berlangsung", "Aksi mungkin"], "correct": 1},
+    {"question": "How do you say 'Have you been to the Great Wall?' in Chinese?", "question_id": "Bagaimana mengatakan 'Apakah kamu pernah ke Tembok Besar?' dalam bahasa Mandarin?", "options": ["你去长城吗？", "你去过长城吗？", "你去了长城吗？", "你要去长城吗？"], "options_id": ["Kamu pergi ke Tembok Besar?", "Kamu pernah ke Tembok Besar?", "Kamu sudah pergi ke Tembok Besar?", "Kamu mau pergi ke Tembok Besar?"], "correct": 1},
+    {"question": "What does 听说 (tīngshuō) mean?", "question_id": "Apa arti 听说 (tīngshuō)?", "options": ["To hear", "To listen", "To hear that", "To say"], "options_id": ["Mendengar", "Mendengarkan", "Mendengar bahwa", "Mengatakan"], "correct": 2},
+    {"question": "What is 长城 (Chángchéng)?", "question_id": "Apa itu 长城 (Chángchéng)?", "options": ["Forbidden City", "Great Wall", "Summer Palace", "Temple of Heaven"], "options_id": ["Kota Terlarang", "Tembok Besar", "Istana Musim Panas", "Kuil Surga"], "correct": 1},
+    {"question": "How to say 'I have never been to Beijing' in Chinese?", "question_id": "Bagaimana mengatakan 'Saya belum pernah ke Beijing' dalam bahasa Mandarin?", "options": ["我去过北京", "我没去过北京", "我去了北京", "我要去北京"], "options_id": ["Saya pernah ke Beijing", "Saya belum pernah ke Beijing", "Saya pergi ke Beijing", "Saya mau pergi ke Beijing"], "correct": 1}
+  ]
+}

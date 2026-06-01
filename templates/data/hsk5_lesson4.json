@@ -1,0 +1,50 @@
+{
+  "title": "共享经济",
+  "subtitle": "Economics, Modern Trends, Technology",
+  "assistant_message": "Today we learn: discussing the sharing economy, modern economic trends, and using 随着 (suízhe) for 'as...'.",
+  "vocabulary": [
+    {"word": "共享", "pinyin": "gòng xiǎng", "meaning": "to share", "meaning_id": "berbagi", "example": "共享资源", "example_translation": "share resources", "example_translation_id": "berbagi sumber daya"},
+    {"word": "经济", "pinyin": "jīng jì", "meaning": "economy", "meaning_id": "ekonomi", "example": "经济发展", "example_translation": "economic development", "example_translation_id": "perkembangan ekonomi"},
+    {"word": "资源", "pinyin": "zī yuán", "meaning": "resources", "meaning_id": "sumber daya", "example": "节约资源", "example_translation": "save resources", "example_translation_id": "menghemat sumber daya"},
+    {"word": "效率", "pinyin": "xiào lǜ", "meaning": "efficiency", "meaning_id": "efisiensi", "example": "提高效率", "example_translation": "improve efficiency", "example_translation_id": "meningkatkan efisiensi"},
+    {"word": "环保", "pinyin": "huán bǎo", "meaning": "environmental protection", "meaning_id": "perlindungan lingkungan", "example": "环保理念", "example_translation": "environmental concept", "example_translation_id": "konsep lingkungan"},
+    {"word": "趋势", "pinyin": "qū shì", "meaning": "trend", "meaning_id": "tren", "example": "发展趋势", "example_translation": "development trend", "example_translation_id": "tren perkembangan"},
+    {"word": "创新", "pinyin": "chuàng xīn", "meaning": "innovation", "meaning_id": "inovasi", "example": "技术创新", "example_translation": "technological innovation", "example_translation_id": "inovasi teknologi"},
+    {"word": "模式", "pinyin": "mó shì", "meaning": "model/pattern", "meaning_id": "model/pola", "example": "商业模式", "example_translation": "business model", "example_translation_id": "model bisnis"}
+  ],
+  "grammar": [
+    {
+      "point": "随着 (suízhe) - As... (indicating change over time)",
+      "point_id": "随着 (suízhe) - Seiring dengan... (menunjukkan perubahan seiring waktu)",
+      "explanation": "随着 is used to indicate that as one thing changes, another changes accordingly.",
+      "explanation_id": "随着 digunakan untuk menunjukkan bahwa seiring satu hal berubah, hal lain berubah sesuai.",
+      "examples": [
+        {"chinese": "随着科技的发展，共享经济越来越流行。", "translation": "As technology develops, the sharing economy becomes more and more popular.", "translation_id": "Seiring perkembangan teknologi, ekonomi berbagi menjadi semakin populer."},
+        {"chinese": "随着生活水平的提高，人们对品质的要求更高了。", "translation": "As living standards rise, people's requirements for quality become higher.", "translation_id": "Seiring meningkatnya standar hidup, persyaratan orang terhadap kualitas menjadi lebih tinggi."}
+      ]
+    },
+    {
+      "point": "越来越 (yuè lái yuè) - More and more",
+      "point_id": "越来越 (yuè lái yuè) - Semakin",
+      "explanation": "越来越 + adjective means 'more and more'.",
+      "explanation_id": "越来越 + kata sifat berarti 'semakin'.",
+      "examples": [
+        {"chinese": "共享经济越来越受欢迎。", "translation": "The sharing economy is becoming more and more popular.", "translation_id": "Ekonomi berbagi menjadi semakin populer."},
+        {"chinese": "天气越来越冷了。", "translation": "The weather is getting colder and colder.", "translation_id": "Cuaca semakin dingin."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你听说过共享经济吗？", "pinyin": "Nǐ tīngshuō guo gòngxiǎng jīngjì ma?", "translation": "Have you heard of the sharing economy?", "translation_id": "Apakah kamu pernah mendengar tentang ekonomi berbagi?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "听说过，比如共享单车、共享汽车。", "pinyin": "Tīngshuō guo, bǐrú gòngxiǎng dānchē, gòngxiǎng qìchē.", "translation": "Yes, like shared bikes and shared cars.", "translation_id": "Pernah, seperti sepeda bersama, mobil bersama."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "随着科技的发展，共享经济越来越普及。", "pinyin": "Suízhe kējì de fāzhǎn, gòngxiǎng jīngjì yuè lái yuè pǔjí.", "translation": "As technology develops, the sharing economy becomes more and more popular.", "translation_id": "Seiring perkembangan teknologi, ekonomi berbagi menjadi semakin populer."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "这种模式不仅提高了资源利用率，还很环保。", "pinyin": "Zhè zhǒng móshì bùjǐn tígāo le zīyuán lìyòng lǜ, hái hěn huánbǎo.", "translation": "This model not only improves resource utilization, but is also very environmentally friendly.", "translation_id": "Model ini tidak hanya meningkatkan pemanfaatan sumber daya, tetapi juga sangat ramah lingkungan."}
+  ],
+  "exercises": [
+    {"question": "What does 共享 (gòngxiǎng) mean?", "question_id": "Apa arti 共享 (gòngxiǎng)?", "options": ["To own", "To share", "To buy", "To sell"], "options_id": ["Memiliki", "Berbagi", "Membeli", "Menjual"], "correct": 1},
+    {"question": "What does the structure 随着... express?", "question_id": "Apa yang diekspresikan oleh struktur 随着...?", "options": ["As (indicating change)", "Because", "Although", "If"], "options_id": ["Seiring (menunjukkan perubahan)", "Karena", "Meskipun", "Jika"], "correct": 0},
+    {"question": "How do you say 'more and more popular' in Chinese?", "question_id": "Bagaimana mengatakan 'semakin populer' dalam bahasa Mandarin?", "options": ["很流行", "越来越流行", "非常流行", "特别流行"], "options_id": ["sangat populer", "semakin populer", "sangat populer", "sangat populer"], "correct": 1},
+    {"question": "What does 效率 (xiàolǜ) mean?", "question_id": "Apa arti 效率 (xiàolǜ)?", "options": ["Effect", "Efficiency", "Result", "Process"], "options_id": ["Efek", "Efisiensi", "Hasil", "Proses"], "correct": 1},
+    {"question": "How to say 'environmental protection' in Chinese?", "question_id": "Bagaimana mengatakan 'perlindungan lingkungan' dalam bahasa Mandarin?", "options": ["环保", "环境", "保护", "生态"], "options_id": ["perlindungan lingkungan", "lingkungan", "perlindungan", "ekologi"], "correct": 0}
+  ]
+}

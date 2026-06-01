@@ -1,0 +1,228 @@
+{
+  "title": "社会责任",
+  "subtitle": "Social Responsibility, Corporate Ethics, Civic Duty",
+  "assistant_message": "Today we learn: discussing social responsibility, expressing ethical awareness, and talking about corporate and individual duties to society.",
+  "vocabulary": [
+    {
+      "word": "社会",
+      "pinyin": "shè huì",
+      "meaning": "society",
+      "meaning_id": "masyarakat",
+      "example": "社会发展",
+      "example_translation": "social development",
+      "example_translation_id": "pembangunan sosial"
+    },
+    {
+      "word": "责任",
+      "pinyin": "zé rèn",
+      "meaning": "responsibility",
+      "meaning_id": "tanggung jawab",
+      "example": "承担社会责任",
+      "example_translation": "bear social responsibility",
+      "example_translation_id": "memikul tanggung jawab sosial"
+    },
+    {
+      "word": "道德",
+      "pinyin": "dào dé",
+      "meaning": "morality",
+      "meaning_id": "moralitas",
+      "example": "道德标准",
+      "example_translation": "moral standards",
+      "example_translation_id": "standar moral"
+    },
+    {
+      "word": "企业",
+      "pinyin": "qǐ yè",
+      "meaning": "enterprise",
+      "meaning_id": "perusahaan",
+      "example": "企业责任",
+      "example_translation": "corporate responsibility",
+      "example_translation_id": "tanggung jawab perusahaan"
+    },
+    {
+      "word": "公益",
+      "pinyin": "gōng yì",
+      "meaning": "public welfare",
+      "meaning_id": "kesejahteraan publik",
+      "example": "公益事业",
+      "example_translation": "public welfare initiatives",
+      "example_translation_id": "inisiatif kesejahteraan publik"
+    },
+    {
+      "word": "环保",
+      "pinyin": "huán bǎo",
+      "meaning": "environmental protection",
+      "meaning_id": "perlindungan lingkungan",
+      "example": "环保责任",
+      "example_translation": "environmental responsibility",
+      "example_translation_id": "tanggung jawab lingkungan"
+    },
+    {
+      "word": "可持续",
+      "pinyin": "kě chí xù",
+      "meaning": "sustainable",
+      "meaning_id": "berkelanjutan",
+      "example": "可持续发展",
+      "example_translation": "sustainable development",
+      "example_translation_id": "pembangunan berkelanjutan"
+    },
+    {
+      "word": "贡献",
+      "pinyin": "gòng xiàn",
+      "meaning": "contribution",
+      "meaning_id": "kontribusi",
+      "example": "做出贡献",
+      "example_translation": "make a contribution",
+      "example_translation_id": "memberikan kontribusi"
+    },
+    {
+      "word": "意识",
+      "pinyin": "yì shí",
+      "meaning": "awareness",
+      "meaning_id": "kesadaran",
+      "example": "提高意识",
+      "example_translation": "raise awareness",
+      "example_translation_id": "meningkatkan kesadaran"
+    },
+    {
+      "word": "影响",
+      "pinyin": "yǐng xiǎng",
+      "meaning": "impact/influence",
+      "meaning_id": "dampak/pengaruh",
+      "example": "积极影响",
+      "example_translation": "positive impact",
+      "example_translation_id": "dampak positif"
+    }
+  ],
+  "grammar": [
+    {
+      "point": "Using 不仅...而且... (bùjǐn...érqiě...) - 'Not only... but also...'",
+      "point_id": "Menggunakan 不仅...而且... (bùjǐn...érqiě...) - 'Tidak hanya... tetapi juga...'",
+      "explanation": "This structure emphasizes both aspects, with the second often being more important.",
+      "explanation_id": "Struktur ini menekankan kedua aspek, dengan aspek kedua seringkali lebih penting.",
+      "examples": [
+        {
+          "chinese": "企业不仅要追求利润，而且要承担社会责任。",
+          "translation": "Enterprises should not only pursue profits, but also bear social responsibility.",
+          "translation_id": "Perusahaan tidak hanya harus mengejar keuntungan, tetapi juga memikul tanggung jawab sosial."
+        },
+        {
+          "chinese": "我们不仅要关注自己，而且要关心社会。",
+          "translation": "We should not only care about ourselves, but also care about society.",
+          "translation_id": "Kita tidak hanya harus peduli pada diri sendiri, tetapi juga peduli pada masyarakat."
+        }
+      ]
+    },
+    {
+      "point": "Using 从...角度 (cóng...jiǎodù) - 'From the perspective of...'",
+      "point_id": "Menggunakan 从...角度 (cóng...jiǎodù) - 'Dari sudut pandang...'",
+      "explanation": "This structure indicates a specific viewpoint or angle for considering an issue.",
+      "explanation_id": "Struktur ini menunjukkan sudut pandang tertentu untuk mempertimbangkan suatu masalah.",
+      "examples": [
+        {
+          "chinese": "从社会责任的角度看，企业应该保护环境。",
+          "translation": "From the perspective of social responsibility, companies should protect the environment.",
+          "translation_id": "Dari sudut pandang tanggung jawab sosial, perusahaan harus melindungi lingkungan."
+        },
+        {
+          "chinese": "从道德的角度看，这样做是不对的。",
+          "translation": "From a moral perspective, doing this is wrong.",
+          "translation_id": "Dari sudut pandang moral, melakukan ini salah."
+        }
+      ]
+    },
+    {
+      "point": "Using 从而 (cóng'ér) - 'Thereby'",
+      "point_id": "Menggunakan 从而 (cóng'ér) - 'Dengan demikian'",
+      "explanation": "从而 indicates a result or consequence of a previous action.",
+      "explanation_id": "从而 menunjukkan hasil atau konsekuensi dari tindakan sebelumnya.",
+      "examples": [
+        {
+          "chinese": "企业要履行社会责任，从而获得公众信任。",
+          "translation": "Companies should fulfill social responsibilities, thereby gaining public trust.",
+          "translation_id": "Perusahaan harus memenuhi tanggung jawab sosial, dengan demikian mendapatkan kepercayaan publik."
+        },
+        {
+          "chinese": "提高环保意识，从而改善生活环境。",
+          "translation": "Raise environmental awareness, thereby improving the living environment.",
+          "translation_id": "Tingkatkan kesadaran lingkungan, dengan demikian perbaiki lingkungan hidup."
+        }
+      ]
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "male",
+      "name": "Wang Hua",
+      "voice": "male",
+      "chinese": "我们公司最近在讨论社会责任问题，你觉得企业应该怎么做？",
+      "pinyin": "Wǒmen gōngsī zuìjìn zài tǎolùn shèhuì zérèn wèntí, nǐ juéde qǐyè yīnggāi zěnme zuò?",
+      "translation": "Our company has been discussing social responsibility issues lately. What do you think companies should do?",
+      "translation_id": "Perusahaan kami akhir-akhir ini sedang mendiskusikan masalah tanggung jawab sosial. Menurut Anda apa yang harus dilakukan perusahaan?"
+    },
+    {
+      "speaker": "female",
+      "name": "Chen Ling",
+      "voice": "female",
+      "chinese": "企业不仅要追求经济效益，而且要承担环保和公益责任。从社会责任的角度看，这是可持续发展的需要。",
+      "pinyin": "Qǐyè bùjǐn yào zhuīqiú jīngjì xiàoyì, érqiě yào chéngdān huánbǎo hé gōngyì zérèn. Cóng shèhuì zérèn de jiǎodù kàn, zhè shì kěchíxù fāzhǎn de xūyào.",
+      "translation": "Companies should not only pursue economic benefits, but also bear environmental and public welfare responsibilities. From the perspective of social responsibility, this is necessary for sustainable development.",
+      "translation_id": "Perusahaan tidak hanya harus mengejar keuntungan ekonomi, tetapi juga memikul tanggung jawab lingkungan dan kesejahteraan publik. Dari sudut pandang tanggung jawab sosial, ini diperlukan untuk pembangunan berkelanjutan."
+    },
+    {
+      "speaker": "male",
+      "name": "Wang Hua",
+      "voice": "male",
+      "chinese": "我们公司已经开始了环保项目，减少了污染排放，从而对社区产生了积极影响。",
+      "pinyin": "Wǒmen gōngsī yǐjīng kāishǐ le huánbǎo xiàngmù, jiǎnshǎo le wūrǎn páifàng, cóng'ér duì shèqū chǎnshēng le jījí yǐngxiǎng.",
+      "translation": "Our company has started environmental protection projects, reduced pollution emissions, thereby having a positive impact on the community.",
+      "translation_id": "Perusahaan kami telah memulai proyek perlindungan lingkungan, mengurangi emisi polusi, sehingga memiliki dampak positif pada masyarakat."
+    },
+    {
+      "speaker": "female",
+      "name": "Chen Ling",
+      "voice": "female",
+      "chinese": "很好！每个公民也都应该提高社会责任感，为社会做出自己的贡献。",
+      "pinyin": "Hěn hǎo! Měi gè gōngmín yě dōu yīnggāi tígāo shèhuì zérèn gǎn, wèi shèhuì zuò chū zìjǐ de gòngxiàn.",
+      "translation": "Great! Every citizen should also raise their sense of social responsibility and make their own contribution to society.",
+      "translation_id": "Bagus! Setiap warga negara juga harus meningkatkan rasa tanggung jawab sosial dan memberikan kontribusi mereka sendiri kepada masyarakat."
+    }
+  ],
+  "exercises": [
+    {
+      "question": "What does 社会责任 (shèhuì zérèn) mean?",
+      "question_id": "Apa arti 社会责任 (shèhuì zérèn)?",
+      "options": ["Social responsibility", "Corporate ethics", "Moral duty", "Civic duty"],
+      "options_id": ["Tanggung jawab sosial", "Etika perusahaan", "Kewajiban moral", "Kewajiban warga negara"],
+      "correct": 0
+    },
+    {
+      "question": "How do you say 'sustainable development' in Chinese?",
+      "question_id": "Bagaimana mengatakan 'pembangunan berkelanjutan' dalam bahasa Mandarin?",
+      "options": ["持续发展", "可持续发展", "可发展持续", "发展可持续"],
+      "options_id": ["pembangunan berkelanjutan", "pembangunan berkelanjutan", "dapat berkelanjutan pembangunan", "pembangunan berkelanjutan"],
+      "correct": 1
+    },
+    {
+      "question": "What does 公益 (gōngyì) mean?",
+      "question_id": "Apa arti 公益 (gōngyì)?",
+      "options": ["Public interest", "Public welfare", "Corporate profit", "Individual gain"],
+      "options_id": ["Kepentingan publik", "Kesejahteraan publik", "Keuntungan perusahaan", "Keuntungan individu"],
+      "correct": 1
+    },
+    {
+      "question": "Complete the sentence: 企业______要追求利润，______要承担社会责任。",
+      "question_id": "Lengkapi kalimat: 企业______要追求利润，______要承担社会责任。",
+      "options": ["不仅...而且...", "因为...所以...", "虽然...但是...", "如果...就..."],
+      "options_id": ["tidak hanya...tetapi juga...", "karena...jadi...", "meskipun...tetapi...", "jika...maka..."],
+      "correct": 0
+    },
+    {
+      "question": "What is the best translation of 'positive impact'?",
+      "question_id": "Apa terjemahan terbaik dari 'dampak positif'?",
+      "options": ["正面影响", "积极影响", "好的影响", "有利影响"],
+      "options_id": ["dampak positif", "dampak positif", "dampak baik", "dampak menguntungkan"],
+      "correct": 1
+    }
+  ]
+}

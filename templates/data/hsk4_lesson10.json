@@ -1,0 +1,50 @@
+{
+  "title": "幸福的味道",
+  "subtitle": "Talking About Happiness, Philosophy, and Gratitude",
+  "assistant_message": "Today we learn: discussing the meaning of happiness, using 即使...也... (jíshǐ... yě...), and expressing gratitude.",
+  "vocabulary": [
+    {"word": "幸福", "pinyin": "xìng fú", "meaning": "happiness", "meaning_id": "kebahagiaan", "example": "幸福的家庭", "example_translation": "happy family", "example_translation_id": "keluarga bahagia"},
+    {"word": "味道", "pinyin": "wèi dào", "meaning": "taste/flavor", "meaning_id": "rasa", "example": "幸福的味道", "example_translation": "the taste of happiness", "example_translation_id": "rasa kebahagiaan"},
+    {"word": "平凡", "pinyin": "píng fán", "meaning": "ordinary", "meaning_id": "biasa", "example": "平凡的生活", "example_translation": "ordinary life", "example_translation_id": "kehidupan biasa"},
+    {"word": "简单", "pinyin": "jiǎn dān", "meaning": "simple", "meaning_id": "sederhana", "example": "简单快乐", "example_translation": "simple happiness", "example_translation_id": "kebahagiaan sederhana"},
+    {"word": "满足", "pinyin": "mǎn zú", "meaning": "content/satisfied", "meaning_id": "puas", "example": "感到满足", "example_translation": "feel content", "example_translation_id": "merasa puas"},
+    {"word": "感恩", "pinyin": "gǎn ēn", "meaning": "gratitude", "meaning_id": "rasa syukur", "example": "学会感恩", "example_translation": "learn to be grateful", "example_translation_id": "belajar bersyukur"},
+    {"word": "珍惜", "pinyin": "zhēn xī", "meaning": "to cherish", "meaning_id": "menghargai", "example": "珍惜当下", "example_translation": "cherish the present", "example_translation_id": "menghargai saat ini"},
+    {"word": "当下", "pinyin": "dāng xià", "meaning": "present moment", "meaning_id": "saat ini", "example": "活在当下", "example_translation": "live in the present", "example_translation_id": "hidup di saat ini"}
+  ],
+  "grammar": [
+    {
+      "point": "Concession with 即使...也... (Even if... still...)",
+      "point_id": "Konsesi dengan 即使...也... (Meskipun... tetap...)",
+      "explanation": "即使 introduces a hypothetical condition, and 也 states the result that remains true.",
+      "explanation_id": "即使 memperkenalkan kondisi hipotetis, dan 也 menyatakan hasil yang tetap benar.",
+      "examples": [
+        {"chinese": "即使生活平凡，也能找到幸福。", "translation": "Even if life is ordinary, you can still find happiness.", "translation_id": "Meskipun kehidupan biasa, tetap bisa menemukan kebahagiaan."},
+        {"chinese": "即使遇到困难，也不要放弃希望。", "translation": "Even if you encounter difficulties, don't give up hope.", "translation_id": "Meskipun menemui kesulitan, jangan menyerah pada harapan."}
+      ]
+    },
+    {
+      "point": "Using 哪怕...也... (Even... still...)",
+      "point_id": "Menggunakan 哪怕...也... (Meskipun... tetap...)",
+      "explanation": "类似即使...也...,  but 哪怕 is more colloquial.",
+      "explanation_id": "类似即使...也..., tetapi 哪怕 lebih kolokial.",
+      "examples": [
+        {"chinese": "哪怕再忙，也要抽时间陪家人。", "translation": "Even if you're busy, you must make time for family.", "translation_id": "Meskipun sibuk, harus meluangkan waktu untuk keluarga."},
+        {"chinese": "哪怕只有一点希望，也不要放弃。", "translation": "Even if there's only a little hope, don't give up.", "translation_id": "Meskipun hanya ada sedikit harapan, jangan menyerah."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你觉得什么是幸福？", "pinyin": "Nǐ juéde shénme shì xìngfú?", "translation": "What do you think happiness is?", "translation_id": "Menurutmu apa itu kebahagiaan?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "幸福其实很简单，就是和家人在一起，健康快乐。", "pinyin": "Xìngfú qíshí hěn jiǎndān, jiùshì hé jiārén zài yīqǐ, jiànkāng kuàilè.", "translation": "Happiness is actually very simple: being with family, healthy and happy.", "translation_id": "Kebahagiaan sebenarnya sangat sederhana: bersama keluarga, sehat dan senang."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "即使生活平凡，也能感受到幸福的味道吗？", "pinyin": "Jíshǐ shēnghuó píngfán, yě néng gǎnshòu dào xìngfú de wèidào ma?", "translation": "Even if life is ordinary, can you still feel the taste of happiness?", "translation_id": "Meskipun kehidupan biasa, tetap bisa merasakan rasa kebahagiaan?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "当然可以。学会感恩，珍惜当下，幸福就在身边。", "pinyin": "Dāngrán kěyǐ. Xuéhuì gǎn'ēn, zhēnxī dāngxià, xìngfú jiù zài shēnbiān.", "translation": "Of course. Learn to be grateful, cherish the present, happiness is right beside you.", "translation_id": "Tentu saja. Belajar bersyukur, menghargai saat ini, kebahagiaan ada di sampingmu."}
+  ],
+  "exercises": [
+    {"question": "What does 幸福 (xìngfú) mean?", "question_id": "Apa arti 幸福 (xìngfú)?", "options": ["Sadness", "Happiness", "Anger", "Fear"], "options_id": ["Sedih", "Kebahagiaan", "Marah", "Takut"], "correct": 1},
+    {"question": "How do you say 'the taste of happiness' in Chinese?", "question_id": "Bagaimana mengatakan 'rasa kebahagiaan' dalam bahasa Mandarin?", "options": ["幸福的味道", "幸福的滋味", "幸福的感觉", "幸福的体验"], "options_id": ["rasa kebahagiaan", "cita rasa kebahagiaan", "perasaan kebahagiaan", "pengalaman kebahagiaan"], "correct": 0},
+    {"question": "What does the structure 即使...也... express?", "question_id": "Apa yang diekspresikan oleh struktur 即使...也...?", "options": ["Cause and effect", "Concession (even if)", "Condition (if)", "Result (therefore)"], "options_id": ["Sebab akibat", "Konsesi (meskipun)", "Kondisi (jika)", "Hasil (karena itu)"], "correct": 1},
+    {"question": "What is 感恩 (gǎn'ēn)?", "question_id": "Apa itu 感恩 (gǎn'ēn)?", "options": ["Thanks", "Gratitude", "Appreciation", "All of the above"], "options_id": ["Terima kasih", "Rasa syukur", "Penghargaan", "Semua di atas"], "correct": 3},
+    {"question": "How to say 'cherish the present' in Chinese?", "question_id": "Bagaimana mengatakan 'menghargai saat ini' dalam bahasa Mandarin?", "options": ["珍惜时间", "珍惜当下", "珍惜生活", "珍惜机会"], "options_id": ["menghargai waktu", "menghargai saat ini", "menghargai kehidupan", "menghargai kesempatan"], "correct": 1}
+  ]
+}

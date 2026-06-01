@@ -1,0 +1,52 @@
+{
+  "title": "她买的衣服真漂亮",
+  "subtitle": "Relative Clauses with 的, Giving Compliments, Describing Things",
+  "assistant_message": "Today we learn: using 的 to create relative clauses, giving compliments (真漂亮, 真好看), and describing things in detail.",
+  "vocabulary": [
+    {"word": "漂亮", "pinyin": "piào liang", "meaning": "beautiful", "meaning_id": "cantik", "example": "真漂亮", "example_translation": "really beautiful", "example_translation_id": "sangat cantik"},
+    {"word": "真", "pinyin": "zhēn", "meaning": "really/truly", "meaning_id": "sungguh", "example": "真好看", "example_translation": "really good-looking", "example_translation_id": "sangat bagus"},
+    {"word": "裙子", "pinyin": "qún zi", "meaning": "skirt/dress", "meaning_id": "rok", "example": "漂亮的裙子", "example_translation": "beautiful dress", "example_translation_id": "gaun cantik"},
+    {"word": "颜色", "pinyin": "yán sè", "meaning": "color", "meaning_id": "warna", "example": "什么颜色", "example_translation": "what color", "example_translation_id": "warna apa"},
+    {"word": "适合", "pinyin": "shì hé", "meaning": "to suit/fit", "meaning_id": "cocok", "example": "很适合你", "example_translation": "suits you well", "example_translation_id": "cocok untukmu"},
+    {"word": "风格", "pinyin": "fēng gé", "meaning": "style", "meaning_id": "gaya", "example": "个人风格", "example_translation": "personal style", "example_translation_id": "gaya pribadi"},
+    {"word": "设计", "pinyin": "shè jì", "meaning": "design", "meaning_id": "desain", "example": "设计很好", "example_translation": "design is good", "example_translation_id": "desainnya bagus"},
+    {"word": "时尚", "pinyin": "shí shàng", "meaning": "fashionable", "meaning_id": "modis", "example": "很时尚", "example_translation": "very fashionable", "example_translation_id": "sangat modis"}
+  ],
+  "grammar": [
+    {
+      "point": "Relative Clauses with 的 (de)",
+      "point_id": "Klausa Relatif dengan 的 (de)",
+      "explanation": "Use 的 to modify nouns. The phrase before 的 describes the noun after it. Structure: Description + 的 + Noun.",
+      "explanation_id": "Gunakan 的 untuk memodifikasi kata benda. Frasa sebelum 的 menggambarkan kata benda setelahnya. Struktur: Deskripsi + 的 + Kata Benda.",
+      "examples": [
+        {"chinese": "她买的衣服很漂亮。", "translation": "The clothes she bought are very beautiful.", "translation_id": "Pakaian yang dia beli sangat cantik."},
+        {"chinese": "我喜欢红色的裙子。", "translation": "I like red dresses.", "translation_id": "Saya suka gaun merah."},
+        {"chinese": "这是我最喜欢的电影。", "translation": "This is my favorite movie.", "translation_id": "Ini adalah film favorit saya."}
+      ]
+    },
+    {
+      "point": "Giving Compliments with 真 (zhēn)",
+      "point_id": "Memberi Pujian dengan 真 (zhēn)",
+      "explanation": "Use 真 before an adjective to give a strong compliment meaning 'really' or 'truly'.",
+      "explanation_id": "Gunakan 真 sebelum kata sifat untuk memberikan pujian yang kuat yang berarti 'sungguh' atau 'benar-benar'.",
+      "examples": [
+        {"chinese": "真漂亮！", "translation": "Really beautiful!", "translation_id": "Sungguh cantik!"},
+        {"chinese": "你真聪明！", "translation": "You are really smart!", "translation_id": "Kamu sungguh pintar!"},
+        {"chinese": "这件衣服真好看。", "translation": "This clothing is really good-looking.", "translation_id": "Pakaian ini sungguh bagus."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你买的这条裙子真漂亮！", "pinyin": "Nǐ mǎi de zhè tiáo qúnzi zhēn piàoliang!", "translation": "This dress you bought is really beautiful!", "translation_id": "Gaun yang kamu beli ini sungguh cantik!"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "谢谢！我也觉得很好看。", "pinyin": "Xièxie! Wǒ yě juéde hěn hǎokàn.", "translation": "Thank you! I also think it's very good-looking.", "translation_id": "Terima kasih! Saya juga merasa sangat bagus."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "颜色很适合你。", "pinyin": "Yánsè hěn shìhé nǐ.", "translation": "The color suits you well.", "translation_id": "Warnanya cocok untukmu."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "我也这么觉得。是在新开的店买的。", "pinyin": "Wǒ yě zhème juéde. Shì zài xīn kāi de diàn mǎi de.", "translation": "I think so too. I bought it at the newly opened store.", "translation_id": "Saya juga berpikir begitu. Dibeli di toko yang baru buka."}
+  ],
+  "exercises": [
+    {"question": "What does 的 (de) do in a relative clause?", "question_id": "Apa fungsi 的 (de) dalam klausa relatif?", "options": ["Shows possession", "Links description to noun", "Marks past tense", "Shows location"], "options_id": ["Menunjukkan kepemilikan", "Menghubungkan deskripsi ke kata benda", "Menandai masa lalu", "Menunjukkan lokasi"], "correct": 1},
+    {"question": "How do you say 'The clothes she bought are beautiful' in Chinese?", "question_id": "Bagaimana mengatakan 'Pakaian yang dia beli cantik' dalam bahasa Mandarin?", "options": ["她买的衣服漂亮", "她买漂亮衣服", "她衣服买漂亮", "漂亮她买的衣服"], "options_id": ["Pakaian yang dia beli cantik", "Dia beli pakaian cantik", "Dia pakaian beli cantik", "Cantik pakaian yang dia beli"], "correct": 0},
+    {"question": "What does 真 (zhēn) express?", "question_id": "Apa yang diekspresikan oleh 真 (zhēn)?", "options": ["Really/truly (compliment)", "Fake", "Truth", "Real"], "options_id": ["Sungguh (pujian)", "Palsu", "Kebenaran", "Nyata"], "correct": 0},
+    {"question": "How to compliment someone in Chinese?", "question_id": "Bagaimana memuji seseorang dalam bahasa Mandarin?", "options": ["你很好", "你真漂亮", "你很棒", "All of the above"], "options_id": ["Kamu baik", "Kamu sungguh cantik", "Kamu hebat", "Semua di atas"], "correct": 3},
+    {"question": "What does 适合 (shìhé) mean?", "question_id": "Apa arti 适合 (shìhé)?", "options": ["To fit/suit", "To look", "To wear", "To buy"], "options_id": ["Cocok", "Terlihat", "Memakai", "Membeli"], "correct": 0}
+  ]
+}

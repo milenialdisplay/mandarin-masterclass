@@ -1,0 +1,50 @@
+{
+  "title": "我是坐飞机来的",
+  "subtitle": "Talking About Transportation, Using 是...的 Construction, Describing Past Actions",
+  "assistant_message": "Today we learn: 是...的 construction for emphasizing past action details, transportation vocabulary (坐飞机, 坐火车, 开车), and asking/answering 'how' questions.",
+  "vocabulary": [
+    {"word": "坐", "pinyin": "zuò", "meaning": "to travel by (vehicle)", "meaning_id": "naik (kendaraan)", "example": "坐飞机", "example_translation": "travel by plane", "example_translation_id": "naik pesawat"},
+    {"word": "飞机", "pinyin": "fēi jī", "meaning": "airplane", "meaning_id": "pesawat terbang", "example": "坐飞机去北京", "example_translation": "fly to Beijing", "example_translation_id": "naik pesawat ke Beijing"},
+    {"word": "火车", "pinyin": "huǒ chē", "meaning": "train", "meaning_id": "kereta api", "example": "坐火车", "example_translation": "take the train", "example_translation_id": "naik kereta api"},
+    {"word": "汽车", "pinyin": "qì chē", "meaning": "car", "meaning_id": "mobil", "example": "开汽车", "example_translation": "drive a car", "example_translation_id": "menyetir mobil"},
+    {"word": "怎么", "pinyin": "zěn me", "meaning": "how", "meaning_id": "bagaimana", "example": "你怎么来的？", "example_translation": "How did you come?", "example_translation_id": "Bagaimana kamu datang?"},
+    {"word": "为什么", "pinyin": "wèi shén me", "meaning": "why", "meaning_id": "mengapa", "example": "为什么迟到？", "example_translation": "Why are you late?", "example_translation_id": "Mengapa terlambat?"},
+    {"word": "因为", "pinyin": "yīn wèi", "meaning": "because", "meaning_id": "karena", "example": "因为下雨", "example_translation": "because of the rain", "example_translation_id": "karena hujan"},
+    {"word": "来", "pinyin": "lái", "meaning": "to come", "meaning_id": "datang", "example": "来北京", "example_translation": "come to Beijing", "example_translation_id": "datang ke Beijing"}
+  ],
+  "grammar": [
+    {
+      "point": "是...的 Construction for Emphasis",
+      "point_id": "Konstruksi 是...的 untuk Penekanan",
+      "explanation": "Use 是...的 to emphasize details about a past event (how, when, where, who).",
+      "explanation_id": "Gunakan 是...的 untuk menekankan detail tentang peristiwa masa lalu (bagaimana, kapan, di mana, siapa).",
+      "examples": [
+        {"chinese": "我是坐飞机来的。", "translation": "I came by plane (emphasizing the method).", "translation_id": "Saya datang dengan pesawat (menekankan cara)."},
+        {"chinese": "他是昨天去的。", "translation": "He went yesterday (emphasizing when).", "translation_id": "Dia pergi kemarin (menekankan kapan)."}
+      ]
+    },
+    {
+      "point": "Asking 'How' with 怎么 (zěnme)",
+      "point_id": "Bertanya 'Bagaimana' dengan 怎么 (zěnme)",
+      "explanation": "Use 怎么 to ask 'how' about the method or manner of an action.",
+      "explanation_id": "Gunakan 怎么 untuk bertanya 'bagaimana' tentang metode atau cara suatu aksi.",
+      "examples": [
+        {"chinese": "你怎么来的？", "translation": "How did you come?", "translation_id": "Bagaimana kamu datang?"},
+        {"chinese": "这个字怎么写？", "translation": "How do you write this character?", "translation_id": "Bagaimana cara menulis karakter ini?"}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "你是怎么来的？", "pinyin": "Nǐ shì zěnme lái de?", "translation": "How did you come?", "translation_id": "Bagaimana kamu datang?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我是坐飞机来的。", "pinyin": "Wǒ shì zuò fēijī lái de.", "translation": "I came by plane.", "translation_id": "Saya datang dengan pesawat."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "为什么坐飞机？", "pinyin": "Wèishénme zuò fēijī?", "translation": "Why did you take the plane?", "translation_id": "Mengapa kamu naik pesawat?"},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "因为坐火车太慢了。", "pinyin": "Yīnwèi zuò huǒchē tài màn le.", "translation": "Because taking the train is too slow.", "translation_id": "Karena naik kereta api terlalu lambat."}
+  ],
+  "exercises": [
+    {"question": "What does the 是...的 construction emphasize?", "question_id": "Apa yang ditekankan oleh konstruksi 是...的?", "options": ["Future actions", "Past event details", "Ongoing actions", "Possibility"], "options_id": ["Aksi masa depan", "Detail peristiwa masa lalu", "Aksi sedang berlangsung", "Kemungkinan"], "correct": 1},
+    {"question": "How do you say 'I came by plane' in Chinese?", "question_id": "Bagaimana mengatakan 'Saya datang dengan pesawat' dalam bahasa Mandarin?", "options": ["我坐飞机来", "我是坐飞机来的", "我来坐飞机", "我会坐飞机来"], "options_id": ["Saya naik pesawat datang", "Saya datang dengan pesawat", "Saya datang naik pesawat", "Saya bisa naik pesawat datang"], "correct": 1},
+    {"question": "What does 火车 (huǒchē) mean?", "question_id": "Apa arti 火车 (huǒchē)?", "options": ["Airplane", "Train", "Car", "Bus"], "options_id": ["Pesawat", "Kereta api", "Mobil", "Bus"], "correct": 1},
+    {"question": "How to ask 'Why?' in Chinese?", "question_id": "Bagaimana bertanya 'Mengapa?' dalam bahasa Mandarin?", "options": ["怎么", "什么", "为什么", "怎么样"], "options_id": ["Bagaimana", "Apa", "Mengapa", "Bagaimana (keadaan)"], "correct": 2},
+    {"question": "Complete: 我___坐火车来的 (I came by train)", "question_id": "Lengkapi: Saya datang dengan kereta api", "options": ["在", "了", "是", "会"], "options_id": ["sedang", "sudah", "adalah", "bisa"], "correct": 2}
+  ]
+}

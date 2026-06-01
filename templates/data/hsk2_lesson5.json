@@ -1,0 +1,52 @@
+{
+  "title": "就买这件吧",
+  "subtitle": "Shopping Decisions, Suggestion Particle 吧, Measure Word 件",
+  "assistant_message": "Today we learn: shopping conversations, suggestion particle 吧 (ba), measure word 件 (jiàn for clothing), and making decisions.",
+  "vocabulary": [
+    {"word": "买", "pinyin": "mǎi", "meaning": "to buy", "meaning_id": "membeli", "example": "买东西", "example_translation": "buy things", "example_translation_id": "membeli barang"},
+    {"word": "件", "pinyin": "jiàn", "meaning": "measure word for clothing", "meaning_id": "kata bantu untuk pakaian", "example": "一件衣服", "example_translation": "a piece of clothing", "example_translation_id": "sepotong pakaian"},
+    {"word": "衣服", "pinyin": "yī fu", "meaning": "clothes", "meaning_id": "pakaian", "example": "买衣服", "example_translation": "buy clothes", "example_translation_id": "membeli pakaian"},
+    {"word": "价格", "pinyin": "jià gé", "meaning": "price", "meaning_id": "harga", "example": "价格便宜", "example_translation": "the price is cheap", "example_translation_id": "harganya murah"},
+    {"word": "便宜", "pinyin": "pián yi", "meaning": "cheap", "meaning_id": "murah", "example": "很便宜", "example_translation": "very cheap", "example_translation_id": "sangat murah"},
+    {"word": "贵", "pinyin": "guì", "meaning": "expensive", "meaning_id": "mahal", "example": "太贵了", "example_translation": "too expensive", "example_translation_id": "terlalu mahal"},
+    {"word": "试试", "pinyin": "shì shi", "meaning": "to try (clothes)", "meaning_id": "mencoba (pakaian)", "example": "试试这件", "example_translation": "try this one", "example_translation_id": "coba yang ini"},
+    {"word": "就", "pinyin": "jiù", "meaning": "just/only (for emphasis)", "meaning_id": "saja (untuk penekanan)", "example": "就买这件", "example_translation": "just buy this one", "example_translation_id": "beli saja yang ini"}
+  ],
+  "grammar": [
+    {
+      "point": "Suggestion Particle 吧 (ba)",
+      "point_id": "Partikel Saran 吧 (ba)",
+      "explanation": "Add 吧 at the end of a sentence to make a suggestion or soften a command. 就...吧 means 'just do it'.",
+      "explanation_id": "Tambahkan 吧 di akhir kalimat untuk membuat saran atau memperhalus perintah. 就...吧 berarti 'lakukan saja'.",
+      "examples": [
+        {"chinese": "就买这件吧。", "translation": "Just buy this one.", "translation_id": "Beli saja yang ini."},
+        {"chinese": "我们走吧。", "translation": "Let's go.", "translation_id": "Ayo pergi."},
+        {"chinese": "试试这件吧。", "translation": "Why not try this one?", "translation_id": "Coba saja yang ini."}
+      ]
+    },
+    {
+      "point": "Measure Word 件 (jiàn) for Clothing",
+      "point_id": "Kata Bantu 件 (jiàn) untuk Pakaian",
+      "explanation": "Use 件 as a measure word for shirts, jackets, dresses, and other clothing items.",
+      "explanation_id": "Gunakan 件 sebagai kata bantu untuk kemeja, jaket, gaun, dan item pakaian lainnya.",
+      "examples": [
+        {"chinese": "一件衣服", "translation": "a piece of clothing", "translation_id": "sepotong pakaian"},
+        {"chinese": "三件衬衫", "translation": "three shirts", "translation_id": "tiga kemeja"},
+        {"chinese": "这件很好看", "translation": "this one looks good", "translation_id": "yang ini terlihat bagus"}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "female", "name": "Salesperson", "voice": "female", "chinese": "您想买什么？", "pinyin": "Nín xiǎng mǎi shénme?", "translation": "What would you like to buy?", "translation_id": "Anda ingin membeli apa?"},
+    {"speaker": "male", "name": "Customer", "voice": "male", "chinese": "我想看看衣服。", "pinyin": "Wǒ xiǎng kànkan yīfu.", "translation": "I'd like to look at clothes.", "translation_id": "Saya ingin melihat-lihat pakaian."},
+    {"speaker": "female", "name": "Salesperson", "voice": "female", "chinese": "这件怎么样？价格很便宜。", "pinyin": "Zhè jiàn zěnme yàng? Jiàgé hěn piányi.", "translation": "How about this one? The price is very cheap.", "translation_id": "Bagaimana dengan yang ini? Harganya sangat murah."},
+    {"speaker": "male", "name": "Customer", "voice": "male", "chinese": "这件不错。就买这件吧！", "pinyin": "Zhè jiàn bùcuò. Jiù mǎi zhè jiàn ba!", "translation": "This one is not bad. Just buy this one!", "translation_id": "Yang ini lumayan. Beli saja yang ini!"}
+  ],
+  "exercises": [
+    {"question": "What does the particle 吧 (ba) indicate?", "question_id": "Apa yang ditunjukkan oleh partikel 吧 (ba)?", "options": ["Question", "Suggestion/soft command", "Past action", "Possibility"], "options_id": ["Pertanyaan", "Saran/perintah halus", "Aksi masa lalu", "Kemungkinan"], "correct": 1},
+    {"question": "How do you say 'Just buy this one' in Chinese?", "question_id": "Bagaimana mengatakan 'Beli saja yang ini' dalam bahasa Mandarin?", "options": ["买这件", "就买这件吧", "这件买吧", "买这件就吧"], "options_id": ["Beli yang ini", "Beli saja yang ini", "Yang ini beli saja", "Beli yang ini saja"], "correct": 1},
+    {"question": "What is the measure word for clothing?", "question_id": "Apa kata bantu untuk pakaian?", "options": ["个", "件", "条", "只"], "options_id": ["(umum)", "(pakaian)", "(panjang)", "(hewan)"], "correct": 1},
+    {"question": "What does 便宜 (piányi) mean?", "question_id": "Apa arti 便宜 (piányi)?", "options": ["Expensive", "Cheap", "Good quality", "Bad quality"], "options_id": ["Mahal", "Murah", "Kualitas bagus", "Kualitas buruk"], "correct": 1},
+    {"question": "What is the reduplication pattern for 'to try'?", "question_id": "Apa pola pengulangan untuk 'mencoba'?", "options": ["试了试", "试试", "试一下", "试着"], "options_id": ["sudah coba", "coba-coba", "coba sebentar", "sambil coba"], "correct": 1}
+  ]
+}

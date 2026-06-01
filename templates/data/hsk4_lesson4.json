@@ -1,0 +1,50 @@
+{
+  "title": "不要太着急赚钱",
+  "subtitle": "Giving Advice About Money, Expressing Patience",
+  "assistant_message": "Today we learn: giving advice about money and career, expressing patience, and using 过于 (guòyú) for 'excessively'.",
+  "vocabulary": [
+    {"word": "着急", "pinyin": "zháo jí", "meaning": "to worry/anxious", "meaning_id": "khawatir/cemas", "example": "别着急", "example_translation": "don't worry", "example_translation_id": "jangan khawatir"},
+    {"word": "赚钱", "pinyin": "zhuàn qián", "meaning": "to make money", "meaning_id": "mencari uang", "example": "努力赚钱", "example_translation": "work hard to make money", "example_translation_id": "bekerja keras mencari uang"},
+    {"word": "耐心", "pinyin": "nài xīn", "meaning": "patience", "meaning_id": "kesabaran", "example": "有耐心", "example_translation": "be patient", "example_translation_id": "bersabar"},
+    {"word": "积累", "pinyin": "jī lěi", "meaning": "to accumulate", "meaning_id": "mengumpulkan", "example": "积累经验", "example_translation": "accumulate experience", "example_translation_id": "mengumpulkan pengalaman"},
+    {"word": "机会", "pinyin": "jī huì", "meaning": "opportunity", "meaning_id": "kesempatan", "example": "抓住机会", "example_translation": "seize the opportunity", "example_translation_id": "memanfaatkan kesempatan"},
+    {"word": "投资", "pinyin": "tóu zī", "meaning": "to invest", "meaning_id": "berinvestasi", "example": "投资理财", "example_translation": "invest and manage money", "example_translation_id": "berinvestasi dan mengelola uang"},
+    {"word": "风险", "pinyin": "fēng xiǎn", "meaning": "risk", "meaning_id": "risiko", "example": "高风险", "example_translation": "high risk", "example_translation_id": "risiko tinggi"},
+    {"word": "稳定", "pinyin": "wěn dìng", "meaning": "stable", "meaning_id": "stabil", "example": "稳定收入", "example_translation": "stable income", "example_translation_id": "penghasilan stabil"}
+  ],
+  "grammar": [
+    {
+      "point": "Expressing 'Excessively' with 过于 (guòyú)",
+      "point_id": "Menyatakan 'Terlalu' dengan 过于 (guòyú)",
+      "explanation": "过于 means 'excessively' or 'too', used before adjectives or verbs.",
+      "explanation_id": "过于 berarti 'terlalu', digunakan sebelum kata sifat atau kata kerja.",
+      "examples": [
+        {"chinese": "不要太着急赚钱。", "translation": "Don't be too anxious to make money.", "translation_id": "Jangan terlalu cemas mencari uang."},
+        {"chinese": "他的要求过于严格。", "translation": "His requirements are too strict.", "translation_id": "Persyaratannya terlalu ketat."}
+      ]
+    },
+    {
+      "point": "Using 至于 (zhìyú) for 'As for'",
+      "point_id": "Menggunakan 至于 (zhìyú) untuk 'Mengenai'",
+      "explanation": "至于 is used to introduce a new topic, often contrasting with the previous one.",
+      "explanation_id": "至于 digunakan untuk memperkenalkan topik baru, sering kontras dengan topik sebelumnya.",
+      "examples": [
+        {"chinese": "至于赚钱的事，不要太着急。", "translation": "As for making money, don't be too anxious.", "translation_id": "Mengenai mencari uang, jangan terlalu cemas."},
+        {"chinese": "其他事情我不管，至于这个，我一定会做。", "translation": "I don't care about other things, as for this, I will definitely do it.", "translation_id": "Saya tidak peduli dengan hal lain, mengenai ini, saya pasti akan melakukannya."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我最近很着急，想快点赚钱。", "pinyin": "Wǒ zuìjìn hěn zháojí, xiǎng kuài diǎn zhuànqián.", "translation": "I've been very anxious lately, wanting to make money quickly.", "translation_id": "Akhir-akhir ini saya sangat cemas, ingin cepat mencari uang."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "不要太着急赚钱，成功需要时间和积累。", "pinyin": "Bù yào tài zháojí zhuànqián, chénggōng xūyào shíjiān hé jīlěi.", "translation": "Don't be too anxious to make money. Success takes time and accumulation.", "translation_id": "Jangan terlalu cemas mencari uang. Sukses butuh waktu dan akumulasi."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你说得对，我应该更有耐心。", "pinyin": "Nǐ shuō de duì, wǒ yīnggāi gèng yǒu nàixīn.", "translation": "You're right, I should be more patient.", "translation_id": "Kamu benar, saya harus lebih sabar."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "积累经验比赚钱更重要。机会总会来的。", "pinyin": "Jīlěi jīngyàn bǐ zhuànqián gèng zhòngyào. Jīhuì zǒng huì lái de.", "translation": "Accumulating experience is more important than making money. Opportunities will come.", "translation_id": "Mengumpulkan pengalaman lebih penting daripada mencari uang. Kesempatan pasti akan datang."}
+  ],
+  "exercises": [
+    {"question": "What does 着急 (zháojí) mean?", "question_id": "Apa arti 着急 (zháojí)?", "options": ["To be happy", "To be anxious/worried", "To be angry", "To be sad"], "options_id": ["Senang", "Cemas/khawatir", "Marah", "Sedih"], "correct": 1},
+    {"question": "How do you say 'Don't be too anxious' in Chinese?", "question_id": "Bagaimana mengatakan 'Jangan terlalu cemas' dalam bahasa Mandarin?", "options": ["别着急", "太着急", "不要过于着急", "A and C"], "options_id": ["Jangan cemas", "Terlalu cemas", "Jangan terlalu cemas", "A dan C"], "correct": 3},
+    {"question": "What does 过于 (guòyú) mean?", "question_id": "Apa arti 过于 (guòyú)?", "options": ["Very", "Excessively/too", "Quite", "A little"], "options_id": ["Sangat", "Terlalu", "Cukup", "Sedikit"], "correct": 1},
+    {"question": "What is 耐心 (nàixīn)?", "question_id": "Apa itu 耐心 (nàixīn)?", "options": ["Patience", "Confidence", "Courage", "Honesty"], "options_id": ["Kesabaran", "Kepercayaan diri", "Keberanian", "Kejujuran"], "correct": 0},
+    {"question": "How to say 'accumulate experience' in Chinese?", "question_id": "Bagaimana mengatakan 'mengumpulkan pengalaman' dalam bahasa Mandarin?", "options": ["积累经验", "积累知识", "积累财富", "积累人脉"], "options_id": ["mengumpulkan pengalaman", "mengumpulkan pengetahuan", "mengumpulkan kekayaan", "mengumpulkan koneksi"], "correct": 0}
+  ]
+}

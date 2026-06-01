@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Homework Assignments - Mandarin Teacher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+        }
+
+        .level-badge {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+
+        /* Assignment Cards */
+        .assignment-card {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .assignment-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .assignment-header {
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .assignment-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .assignment-status {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .status-pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-submitted {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-graded {
+            background: #cce5ff;
+            color: #004085;
+        }
+
+        .status-overdue {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .assignment-due {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .assignment-body {
+            padding: 20px;
+            border-top: 1px solid #eee;
+            display: none;
+        }
+
+        .assignment-body.open {
+            display: block;
+        }
+
+        .question-item {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .question-type {
+            font-size: 11px;
+            color: #3498db;
+            margin-bottom: 5px;
+        }
+
+        /* Answer inputs */
+        .answer-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-top: 10px;
+            font-family: inherit;
+        }
+
+        .answer-textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .voice-answer-btn {
+            background: #e94560;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        /* Grade display */
+        .grade-display {
+            margin-top: 15px;
+            padding: 12px;
+            background: #e8f4fd;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .grade-display.show {
+            display: block;
+        }
+
+        .teacher-feedback {
+            background: #f0f7ff;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* Submit button */
+        .submit-homework {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .submit-homework:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        /* Summary section */
+        .summary-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 28px;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* Navigation */
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .assignment-header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Homework Assignments</h1>
+            <p>Complete assignments to reinforce your learning</p>
+            <div class="level-badge" id="levelBadge">HSK Level 1</div>
+        </div>
+
+        <!-- Summary Card -->
+        <div class="summary-card">
+            <h3>📊 Your Homework Summary</h3>
+            <div class="summary-stats">
+                <div class="stat">
+                    <div class="stat-value" id="totalAssignments">0</div>
+                    <div class="stat-label">Total</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="completedAssignments">0</div>
+                    <div class="stat-label">Completed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="avgGrade">0%</div>
+                    <div class="stat-label">Average Grade</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="pendingCount">0</div>
+                    <div class="stat-label">Pending</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assignments Container -->
+        <div id="assignmentsContainer"></div>
+
+        <div class="nav-buttons">
+            <button class="btn btn-primary" onclick="location.href='/'">← Continue Learning</button>
+            <button class="btn btn-primary" onclick="location.href='/dashboard'">📊 View Dashboard</button>
+        </div>
+    </div>
+
+    <script>
+        // ============================================
+        // HOMEWORK ASSIGNMENT SYSTEM
+        // AI automatically generates and grades assignments
+        // ============================================
+
+        // Homework templates by HSK level
+        const HOMEWORK_TEMPLATES = {
+            1: [
+                {
+                    id: "hsk1_1",
+                    title: "Basic Greetings",
+                    dueDays: 3,
+                    questions: [
+                        { type: "translate", text: "How do you say 'Hello' in Chinese?", expectedKeywords: ["你好", "nǐ hǎo"] },
+                        { type: "translate", text: "How do you say 'Thank you' in Chinese?", expectedKeywords: ["谢谢", "xièxie"] },
+                        { type: "fill_blank", text: "我___学生 (I am a student)", answer: "是" },
+                        { type: "write", text: "Write a self-introduction (name, where you're from, how you are)", minLength: 20 }
+                    ]
+                },
+                {
+                    id: "hsk1_2",
+                    title: "Numbers and Counting",
+                    dueDays: 3,
+                    questions: [
+                        { type: "translate", text: "What is '一' in English?", expectedKeywords: ["one", "1"] },
+                        { type: "translate", text: "What is '十' in English?", expectedKeywords: ["ten", "10"] },
+                        { type: "fill_blank", text: "我___岁。 (I am ___ years old)", answer: "数字" },
+                        { type: "write", text: "Write the numbers 1-10 in Chinese characters", expectedKeywords: ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"] }
+                    ]
+                },
+                {
+                    id: "hsk1_3",
+                    title: "Family Members",
+                    dueDays: 4,
+                    questions: [
+                        { type: "translate", text: "How do you say 'mother' in Chinese?", expectedKeywords: ["妈妈", "母亲", "māma"] },
+                        { type: "translate", text: "How do you say 'father' in Chinese?", expectedKeywords: ["爸爸", "父亲", "bàba"] },
+                        { type: "fill_blank", text: "我家有___个人。 (There are ___ people in my family)", answer: "数字" },
+                        { type: "write", text: "Describe your family in 3-4 sentences", minLength: 40 }
+                    ]
+                },
+                {
+                    id: "hsk1_4",
+                    title: "Food and Drinks",
+                    dueDays: 4,
+                    questions: [
+                        { type: "translate", text: "How do you say 'rice/meal' in Chinese?", expectedKeywords: ["饭", "fàn"] },
+                        { type: "translate", text: "How do you say 'water' in Chinese?", expectedKeywords: ["水", "shuǐ"] },
+                        { type: "fill_blank", text: "我喜欢吃___。 (I like to eat ___)", answer: "食物名称" },
+                        { type: "write", text: "What is your favorite Chinese food? Describe it.", minLength: 30 }
+                    ]
+                },
+                {
+                    id: "hsk1_5",
+                    title: "Daily Routines",
+                    dueDays: 5,
+                    questions: [
+                        { type: "translate", text: "How do you say 'go to school' in Chinese?", expectedKeywords: ["去学校", "上学"] },
+                        { type: "translate", text: "How do you say 'wake up' in Chinese?", expectedKeywords: ["起床", "qǐchuáng"] },
+                        { type: "fill_blank", text: "我每天早上___点起床。", answer: "数字" },
+                        { type: "write", text: "Describe your daily routine (morning to evening)", minLength: 50 }
+                    ]
+                }
+            ],
+            2: [
+                {
+                    id: "hsk2_1",
+                    title: "Talking About Weather",
+                    dueDays: 4,
+                    questions: [
+                        { type: "translate", text: "How do you say 'weather' in Chinese?", expectedKeywords: ["天气", "tiānqì"] },
+                        { type: "translate", text: "How do you say 'sunny' in Chinese?", expectedKeywords: ["晴天", "晴朗"] },
+                        { type: "fill_blank", text: "今天天气很___。 (Today's weather is very ___)", answer: "形容词" },
+                        { type: "write", text: "Describe today's weather in Chinese (3-4 sentences)", minLength: 40 }
+                    ]
+                },
+                {
+                    id: "hsk2_2",
+                    title: "Shopping Vocabulary",
+                    dueDays: 4,
+                    questions: [
+                        { type: "translate", text: "How do you say 'how much' in Chinese?", expectedKeywords: ["多少钱", "duōshao qián"] },
+                        { type: "translate", text: "How do you say 'expensive' in Chinese?", expectedKeywords: ["贵", "guì"] },
+                        { type: "fill_blank", text: "这个___多少钱？ (How much is this?)", answer: "东西" },
+                        { type: "write", text: "Write a short dialogue between a customer and a shopkeeper", minLength: 60 }
+                    ]
+                },
+                {
+                    id: "hsk2_3",
+                    title: "Directions and Locations",
+                    dueDays: 5,
+                    questions: [
+                        { type: "translate", text: "How do you say 'where' in Chinese?", expectedKeywords: ["哪儿", "哪里"] },
+                        { type: "translate", text: "How do you say 'left' in Chinese?", expectedKeywords: ["左", "zuǒ"] },
+                        { type: "fill_blank", text: "图书馆在学校的___边。", answer: "方向词" },
+                        { type: "write", text: "Explain how to get from your home to a nearby place", minLength: 60 }
+                    ]
+                }
+            ]
+        };
+
+        // Load or initialize homework data
+        let homeworkData = JSON.parse(localStorage.getItem('mandarin_homework'));
+        if (!homeworkData) {
+            homeworkData = {
+                assignments: {},
+                submitted: {},
+                graded: {}
+            };
+            localStorage.setItem('mandarin_homework', JSON.stringify(homeworkData));
+        }
+
+        // Get student level from main data
+        let studentData = JSON.parse(localStorage.getItem('mandarin_student_data'));
+        let currentLevel = (studentData && studentData.currentHSK) ? studentData.currentHSK : 1;
+        document.getElementById('levelBadge').textContent = `HSK Level ${currentLevel}`;
+
+        // Generate assignments for current level if not exist
+        function generateAssignments() {
+            const templates = HOMEWORK_TEMPLATES[currentLevel] || HOMEWORK_TEMPLATES[1];
+            const now = new Date();
+            
+            templates.forEach(template => {
+                if (!homeworkData.assignments[template.id]) {
+                    const dueDate = new Date();
+                    dueDate.setDate(dueDate.getDate() + template.dueDays);
+                    
+                    homeworkData.assignments[template.id] = {
+                        ...template,
+                        dueDate: dueDate.toISOString(),
+                        level: currentLevel,
+                        createdAt: now.toISOString()
+                    };
+                }
+            });
+            
+            localStorage.setItem('mandarin_homework', JSON.stringify(homeworkData));
+        }
+
+        // Save student answer
+        function saveAnswer(assignmentId, questionIndex, answer) {
+            if (!homeworkData.submitted[assignmentId]) {
+                homeworkData.submitted[assignmentId] = {};
+            }
+            homeworkData.submitted[assignmentId][questionIndex] = answer;
+            localStorage.setItem('mandarin_homework', JSON.stringify(homeworkData));
+        }
+
+        // Auto-grade an assignment
+        function gradeAssignment(assignmentId) {
+            const assignment = homeworkData.assignments[assignmentId];
+            const answers = homeworkData.submitted[assignmentId] || {};
+            let totalScore = 0;
+            let maxScore = assignment.questions.length * 10;
+            let feedback = [];
+            
+            assignment.questions.forEach((q, idx) => {
+                const userAnswer = answers[idx] || "";
+                let score = 0;
+                let qFeedback = "";
+                
+                if (q.type === "translate") {
+                    const lowerAnswer = userAnswer.toLowerCase();
+                    const hasKeyword = q.expectedKeywords.some(keyword => 
+                        lowerAnswer.includes(keyword.toLowerCase())
+                    );
+                    if (hasKeyword) {
+                        score = 10;
+                        qFeedback = "✓ Correct translation!";
+                    } else if (userAnswer.length > 0) {
+                        score = 5;
+                        qFeedback = `🔄 Close! Expected: ${q.expectedKeywords.join(" or ")}`;
+                    } else {
+                        qFeedback = "❌ No answer provided.";
+                    }
+                }
+                else if (q.type === "fill_blank") {
+                    if (userAnswer.toLowerCase().includes(q.answer.toLowerCase())) {
+                        score = 10;
+                        qFeedback = "✓ Correct!";
+                    } else if (userAnswer.length > 0) {
+                        score = 3;
+                        qFeedback = `🔄 Not quite. Expected: ${q.answer}`;
+                    } else {
+                        qFeedback = "❌ No answer.";
+                    }
+                }
+                else if (q.type === "write") {
+                    const length = userAnswer.length;
+                    if (length >= (q.minLength || 30)) {
+                        score = 10;
+                        qFeedback = `✓ Great! Your answer is ${length} characters long.`;
+                    } else if (length > 0) {
+                        score = Math.floor((length / (q.minLength || 30)) * 5);
+                        qFeedback = `🔄 Add more detail. (${length}/${q.minLength || 30} characters)`;
+                    } else {
+                        qFeedback = "❌ Please write your answer.";
+                    }
+                }
+                
+                totalScore += score;
+                feedback.push({ question: q.text, score: score, feedback: qFeedback, userAnswer: userAnswer });
+            });
+            
+            const percentage = Math.round((totalScore / maxScore) * 100);
+            const letterGrade = percentage >= 90 ? 'A' : percentage >= 80 ? 'B' : percentage >= 70 ? 'C' : percentage >= 60 ? 'D' : 'F';
+            
+            homeworkData.graded[assignmentId] = {
+                score: percentage,
+                letterGrade: letterGrade,
+                feedback: feedback,
+                gradedAt: new Date().toISOString()
+            };
+            
+            // Update student's words mastered based on grade
+            if (percentage >= 70 && studentData) {
+                const oldWords = studentData.wordsMastered[currentLevel] || 0;
+                const newWords = oldWords + assignment.questions.length * 5;
+                studentData.wordsMastered[currentLevel] = Math.min(newWords, currentLevel === 1 ? 150 : currentLevel * 500);
+                localStorage.setItem('mandarin_student_data', JSON.stringify(studentData));
+            }
+            
+            localStorage.setItem('mandarin_homework', JSON.stringify(homeworkData));
+            return { percentage, letterGrade, feedback };
+        }
+
+        // Check if assignment is overdue
+        function isOverdue(dueDate) {
+            return new Date() > new Date(dueDate);
+        }
+
+        // Render all assignments
+        function renderAssignments() {
+            const container = document.getElementById('assignmentsContainer');
+            const templates = HOMEWORK_TEMPLATES[currentLevel] || HOMEWORK_TEMPLATES[1];
+            
+            if (!templates || templates.length === 0) {
+                container.innerHTML = '<div class="summary-card"><p style="text-align:center;">No assignments yet. Keep learning!</p></div>';
+                return;
+            }
+            
+            // Update summary stats
+            let total = 0;
+            let completed = 0;
+            let sumGrades = 0;
+            let pending = 0;
+            
+            templates.forEach(template => {
+                total++;
+                const graded = homeworkData.graded[template.id];
+                const submitted = homeworkData.submitted[template.id];
+                
+                if (graded) {
+                    completed++;
+                    sumGrades += graded.score;
+                } else if (submitted) {
+                    pending++;
+                } else {
+                    pending++;
+                }
+            });
+            
+            document.getElementById('totalAssignments').textContent = total;
+            document.getElementById('completedAssignments').textContent = completed;
+            document.getElementById('avgGrade').textContent = completed > 0 ? Math.round(sumGrades / completed) + '%' : '0%';
+            document.getElementById('pendingCount').textContent = pending;
+            
+            // Render each assignment
+            container.innerHTML = '';
+            
+            templates.forEach(template => {
+                const assignment = homeworkData.assignments[template.id];
+                const submitted = homeworkData.submitted[template.id] || {};
+                const graded = homeworkData.graded[template.id];
+                const dueDate = new Date(assignment.dueDate);
+                const isDueOver = isOverdue(assignment.dueDate);
+                const isSubmitted = Object.keys(submitted).length === template.questions.length;
+                
+                let statusClass = 'status-pending';
+                let statusText = 'Not Started';
+                
+                if (graded) {
+                    statusClass = 'status-graded';
+                    statusText = `Graded: ${graded.score}% (${graded.letterGrade})`;
+                } else if (isSubmitted) {
+                    statusClass = 'status-submitted';
+                    statusText = 'Submitted - Awaiting Grade';
+                } else if (isDueOver && !isSubmitted) {
+                    statusClass = 'status-overdue';
+                    statusText = 'Overdue';
+                } else {
+                    statusText = 'Pending';
+                }
+                
+                const card = document.createElement('div');
+                card.className = 'assignment-card';
+                card.innerHTML = `
+                    <div class="assignment-header" onclick="toggleAssignment('${template.id}')">
+                        <div>
+                            <div class="assignment-title">📝 ${template.title}</div>
+                            <div class="assignment-due">Due: ${dueDate.toLocaleDateString()}</div>
+                        </div>
+                        <div>
+                            <span class="assignment-status ${statusClass}">${statusText}</span>
+                        </div>
+                    </div>
+                    <div class="assignment-body" id="body-${template.id}">
+                        ${renderQuestions(template, submitted, graded)}
+                        ${!graded && !isSubmitted ? `<button class="submit-homework" onclick="submitAssignment('${template.id}')">📤 Submit Homework</button>` : ''}
+                        ${graded ? `<div class="grade-display show"><strong>Grade: ${graded.score}% (${graded.letterGrade})</strong><br>${renderFeedback(graded.feedback)}</div>` : ''}
+                    </div>
+                `;
+                
+                container.appendChild(card);
+            });
+        }
+        
+        function renderQuestions(template, submitted, graded) {
+            let html = '';
+            template.questions.forEach((q, idx) => {
+                const savedAnswer = submitted[idx] || '';
+                const isGraded = graded && graded.feedback && graded.feedback[idx];
+                
+                html += `
+                    <div class="question-item">
+                        <div class="question-type">${getQuestionTypeName(q.type)}</div>
+                        <div class="question-text">${idx + 1}. ${q.text}</div>
+                        ${q.type === 'write' ? 
+                            `<textarea class="answer-input answer-textarea" id="answer-${template.id}-${idx}" placeholder="Type your answer in Chinese..." ${graded ? 'disabled' : ''}>${savedAnswer}</textarea>` :
+                            `<input type="text" class="answer-input" id="answer-${template.id}-${idx}" placeholder="Type your answer..." value="${escapeHtml(savedAnswer)}" ${graded ? 'disabled' : ''}>`
+                        }
+                        ${q.type === 'write' ? 
+                            `<button class="voice-answer-btn" onclick="startVoiceAnswer('${template.id}', ${idx})">🎤 Speak Your Answer</button>` : ''
+                        }
+                        ${isGraded ? `
+                            <div class="teacher-feedback">
+                                <strong>🤖 AI Feedback:</strong> ${graded.feedback[idx].feedback}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            });
+            return html;
+        }
+        
+        function getQuestionTypeName(type) {
+            const types = {
+                'translate': 'Translation',
+                'fill_blank': 'Fill in the Blank',
+                'write': 'Writing Exercise'
+            };
+            return types[type] || 'Exercise';
+        }
+        
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/[&<>]/g, function(m) {
+                if (m === '&') return '&amp;';
+                if (m === '<') return '&lt;';
+                if (m === '>') return '&gt;';
+                return m;
+            });
+        }
+        
+        function renderFeedback(feedback) {
+            if (!feedback) return '';
+            let html = '<div style="margin-top:10px;"><strong>Detailed Feedback:</strong><ul style="margin-top:5px; margin-left:20px;">';
+            feedback.forEach(f => {
+                html += `<li>${f.question.substring(0, 50)}... - ${f.feedback} (${f.score}/10)</li>`;
+            });
+            html += '</ul></div>';
+            return html;
+        }
+        
+        function toggleAssignment(id) {
+            const body = document.getElementById(`body-${id}`);
+            if (body) {
+                body.classList.toggle('open');
+            }
+        }
+        
+        function startVoiceAnswer(assignmentId, questionIndex) {
+            if (!('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)) {
+                alert('Voice input is not supported in this browser. Please type your answer.');
+                return;
+            }
+            
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            const recognition = new SpeechRecognition();
+            recognition.lang = 'zh-CN';
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            
+            recognition.onresult = (event) => {
+                const text = event.results[0][0].transcript;
+                const textarea = document.getElementById(`answer-${assignmentId}-${questionIndex}`);
+                if (textarea) {
+                    textarea.value = text;
+                    saveAnswer(assignmentId, questionIndex, text);
+                }
+            };
+            
+            recognition.onerror = () => {
+                alert('Could not understand. Please type your answer.');
+            };
+            
+            recognition.start();
+            alert('Listening... Please speak in Chinese.');
+        }
+        
+        function submitAssignment(assignmentId) {
+            const assignment = homeworkData.assignments[assignmentId];
+            if (!assignment) return;
+            
+            // Collect all answers
+            let allAnswered = true;
+            assignment.questions.forEach((q, idx) => {
+                const input = document.getElementById(`answer-${assignmentId}-${idx}`);
+                if (input) {
+                    saveAnswer(assignmentId, idx, input.value);
+                    if (!input.value.trim()) allAnswered = false;
+                }
+            });
+            
+            if (!allAnswered) {
+                alert('Please answer all questions before submitting.');
+                return;
+            }
+            
+            // Grade and show results
+            const result = gradeAssignment(assignmentId);
+            
+            // Update dashboard
+            if (studentData) {
+                if (!studentData.activityLog) studentData.activityLog = [];
+                studentData.activityLog.unshift({
+                    date: new Date().toISOString(),
+                    type: 'homework',
+                    assignment: assignment.title,
+                    score: result.percentage,
+                    level: currentLevel
+                });
+                localStorage.setItem('mandarin_student_data', JSON.stringify(studentData));
+            }
+            
+            alert(`Homework submitted! Your score: ${result.percentage}% (${result.letterGrade})`);
+            renderAssignments();
+            
+            // Send to AI teacher via parent window
+            if (window.parent && window.parent !== window) {
+                window.parent.postMessage({
+                    type: 'homework_complete',
+                    assignment: assignment.title,
+                    score: result.percentage
+                }, '*');
+            }
+        }
+        
+        // Attach save listeners after render
+        function attachSaveListeners() {
+            setTimeout(() => {
+                const inputs = document.querySelectorAll('.answer-input');
+                inputs.forEach(input => {
+                    const idParts = input.id.split('-');
+                    if (idParts.length >= 3) {
+                        const assignmentId = idParts[1];
+                        const questionIdx = parseInt(idParts[2]);
+                        input.addEventListener('input', () => {
+                            saveAnswer(assignmentId, questionIdx, input.value);
+                        });
+                    }
+                });
+            }, 100);
+        }
+        
+        // Initialize
+        generateAssignments();
+        renderAssignments();
+        attachSaveListeners();
+        
+        // Re-attach listeners when page updates
+        const observer = new MutationObserver(() => {
+            attachSaveListeners();
+        });
+        observer.observe(document.getElementById('assignmentsContainer'), { childList: true, subtree: true });
+    </script>
+</body>
+</html>

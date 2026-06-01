@@ -1,0 +1,51 @@
+{
+  "title": "现在几点",
+  "subtitle": "Telling Time, Asking for the Time, Talking About Daily Schedules",
+  "assistant_message": "Today we learn: telling time (几点 jǐ diǎn), asking for the time, and talking about daily schedules (早上, 上午, 下午, 晚上).",
+  "vocabulary": [
+    {"word": "现在", "pinyin": "xiàn zài", "meaning": "now", "meaning_id": "sekarang", "example": "现在几点？", "example_translation": "What time is it now?", "example_translation_id": "Sekarang jam berapa?"},
+    {"word": "几点", "pinyin": "jǐ diǎn", "meaning": "what time", "meaning_id": "jam berapa", "example": "现在几点？", "example_translation": "What time is it?", "example_translation_id": "Jam berapa sekarang?"},
+    {"word": "点", "pinyin": "diǎn", "meaning": "o'clock", "meaning_id": "jam", "example": "三点", "example_translation": "three o'clock", "example_translation_id": "jam tiga"},
+    {"word": "半", "pinyin": "bàn", "meaning": "half (30 minutes)", "meaning_id": "setengah (30 menit)", "example": "三点半", "example_translation": "three thirty", "example_translation_id": "setengah empat (jam 3:30)"},
+    {"word": "分", "pinyin": "fēn", "meaning": "minute", "meaning_id": "menit", "example": "五分", "example_translation": "five minutes", "example_translation_id": "lima menit"},
+    {"word": "早上", "pinyin": "zǎo shang", "meaning": "early morning", "meaning_id": "pagi buta", "example": "早上好", "example_translation": "Good morning", "example_translation_id": "Selamat pagi"},
+    {"word": "上午", "pinyin": "shàng wǔ", "meaning": "before noon (AM)", "meaning_id": "sebelum siang", "example": "上午十点", "example_translation": "10 AM", "example_translation_id": "jam 10 pagi"},
+    {"word": "下午", "pinyin": "xià wǔ", "meaning": "afternoon (PM)", "meaning_id": "sore/siang", "example": "下午三点", "example_translation": "3 PM", "example_translation_id": "jam 3 sore"},
+    {"word": "晚上", "pinyin": "wǎn shang", "meaning": "evening/night", "meaning_id": "malam", "example": "晚上好", "example_translation": "Good evening", "example_translation_id": "Selamat malam"}
+  ],
+  "grammar": [
+    {
+      "point": "Telling Time: O'clock",
+      "point_id": "Menyatakan Waktu: Jam Tepat",
+      "explanation": "Use 点 (diǎn) after the hour number. Structure: Number + 点.",
+      "explanation_id": "Gunakan 点 (diǎn) setelah angka jam. Struktur: Angka + 点.",
+      "examples": [
+        {"chinese": "三点", "translation": "three o'clock", "translation_id": "jam tiga"},
+        {"chinese": "八点", "translation": "eight o'clock", "translation_id": "jam delapan"}
+      ]
+    },
+    {
+      "point": "Telling Time: Half Past",
+      "point_id": "Menyatakan Waktu: Lewat Setengah Jam",
+      "explanation": "Use 半 (bàn) after the hour for 30 minutes past.",
+      "explanation_id": "Gunakan 半 (bàn) setelah jam untuk 30 menit lewat.",
+      "examples": [
+        {"chinese": "三点半", "translation": "three thirty (3:30)", "translation_id": "setengah empat (3:30)"},
+        {"chinese": "七点半", "translation": "seven thirty (7:30)", "translation_id": "setengah delapan (7:30)"}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Tom", "voice": "male", "chinese": "打扰一下，现在几点？", "pinyin": "Dǎrǎo yīxià, xiànzài jǐ diǎn?", "translation": "Excuse me, what time is it now?", "translation_id": "Permisi, sekarang jam berapa?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "现在下午两点半。", "pinyin": "Xiànzài xiàwǔ liǎng diǎn bàn.", "translation": "It's 2:30 PM now.", "translation_id": "Sekarang jam setengah tiga sore (2:30)."},
+    {"speaker": "male", "name": "Tom", "voice": "male", "chinese": "谢谢！", "pinyin": "Xièxie!", "translation": "Thank you!", "translation_id": "Terima kasih!"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "不客气。", "pinyin": "Bù kèqi.", "translation": "You're welcome.", "translation_id": "Sama-sama."}
+  ],
+  "exercises": [
+    {"question": "What does 点 (diǎn) mean in telling time?", "question_id": "Apa arti 点 (diǎn) dalam menyatakan waktu?", "options": ["Minute", "Hour / o'clock", "Second", "Half"], "options_id": ["Menit", "Jam", "Detik", "Setengah"], "correct": 1},
+    {"question": "How do you say '3:30' in Chinese?", "question_id": "Bagaimana mengatakan 'jam setengah empat (3:30)' dalam bahasa Mandarin?", "options": ["三点", "三点半", "三点十五分", "四点"], "options_id": ["jam tiga", "setengah empat", "jam tiga lewat lima belas menit", "jam empat"], "correct": 1},
+    {"question": "What does 上午 (shàngwǔ) refer to?", "question_id": "Apa yang dimaksud dengan 上午 (shàngwǔ)?", "options": ["Morning (before noon)", "Afternoon", "Evening", "Night"], "options_id": ["Pagi (sebelum siang)", "Sore", "Petang", "Malam"], "correct": 0},
+    {"question": "How to ask 'What time is it?' in Chinese?", "question_id": "Bagaimana bertanya 'Jam berapa?' dalam bahasa Mandarin?", "options": ["现在几点？", "你今天怎么样？", "你在哪儿？", "你叫什么？"], "options_id": ["Sekarang jam berapa?", "Apa kabar hari ini?", "Kamu di mana?", "Siapa namamu?"], "correct": 0},
+    {"question": "What time is 晚上十点 (wǎnshang shí diǎn)?", "question_id": "Jam berapakah 晚上十点 (wǎnshang shí diǎn)?", "options": ["10 AM", "10 PM", "8 PM", "8 AM"], "options_id": ["jam 10 pagi", "jam 10 malam", "jam 8 malam", "jam 8 pagi"], "correct": 1}
+  ]
+}

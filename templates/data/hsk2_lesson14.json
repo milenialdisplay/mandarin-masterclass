@@ -1,0 +1,51 @@
+{
+  "title": "你看过那个电影吗",
+  "subtitle": "Experience with 过, Talking About Past Experiences, Discussing Movies",
+  "assistant_message": "Today we learn: expressing past experiences with 过 (guo), talking about movies, and asking if someone has done something before.",
+  "vocabulary": [
+    {"word": "看过", "pinyin": "kàn guo", "meaning": "have seen (experience)", "meaning_id": "pernah melihat", "example": "看过电影", "example_translation": "have seen the movie", "example_translation_id": "pernah melihat film"},
+    {"word": "电影", "pinyin": "diàn yǐng", "meaning": "movie/film", "meaning_id": "film", "example": "看电影", "example_translation": "watch a movie", "example_translation_id": "menonton film"},
+    {"word": "过", "pinyin": "guo", "meaning": "experience particle", "meaning_id": "partikel pengalaman", "example": "去过北京", "example_translation": "have been to Beijing", "example_translation_id": "pernah ke Beijing"},
+    {"word": "没", "pinyin": "méi", "meaning": "not (negation for 过)", "meaning_id": "tidak (negasi untuk 过)", "example": "没看过", "example_translation": "haven't seen", "example_translation_id": "belum pernah melihat"},
+    {"word": "以前", "pinyin": "yǐ qián", "meaning": "before/in the past", "meaning_id": "sebelumnya/dulu", "example": "以前看过", "example_translation": "have seen before", "example_translation_id": "pernah lihat sebelumnya"},
+    {"word": "最近", "pinyin": "zuì jìn", "meaning": "recently", "meaning_id": "baru-baru ini", "example": "最近很忙", "example_translation": "recently very busy", "example_translation_id": "baru-baru ini sangat sibuk"},
+    {"word": "好看", "pinyin": "hǎo kàn", "meaning": "good-looking/nice to watch", "meaning_id": "bagus untuk ditonton", "example": "这个电影很好看", "example_translation": "this movie is very good", "example_translation_id": "film ini sangat bagus"},
+    {"word": "有意思", "pinyin": "yǒu yì si", "meaning": "interesting", "meaning_id": "menarik", "example": "很有意思", "example_translation": "very interesting", "example_translation_id": "sangat menarik"}
+  ],
+  "grammar": [
+    {
+      "point": "Expressing Experience with 过 (guo)",
+      "point_id": "Menyatakan Pengalaman dengan 过 (guo)",
+      "explanation": "Use 过 after a verb to indicate that someone has experienced an action in the past.",
+      "explanation_id": "Gunakan 过 setelah kata kerja untuk menunjukkan bahwa seseorang telah mengalami suatu tindakan di masa lalu.",
+      "examples": [
+        {"chinese": "我去过北京。", "translation": "I have been to Beijing.", "translation_id": "Saya pernah ke Beijing."},
+        {"chinese": "你看过这个电影吗？", "translation": "Have you seen this movie?", "translation_id": "Apakah kamu pernah melihat film ini?"},
+        {"chinese": "我没吃过中国菜。", "translation": "I have never eaten Chinese food.", "translation_id": "Saya belum pernah makan masakan Tiongkok."}
+      ]
+    },
+    {
+      "point": "Asking About Experiences with Verb + 过 + 吗",
+      "point_id": "Bertanya Tentang Pengalaman dengan Kata Kerja + 过 + 吗",
+      "explanation": "Form questions by adding 吗 at the end, or using 有没有 before the verb.",
+      "explanation_id": "Bentuk pertanyaan dengan menambahkan 吗 di akhir, atau menggunakan 有没有 sebelum kata kerja.",
+      "examples": [
+        {"chinese": "你看过那个电影吗？", "translation": "Have you seen that movie?", "translation_id": "Apakah kamu pernah melihat film itu?"},
+        {"chinese": "你有没有吃过这个？", "translation": "Have you ever eaten this?", "translation_id": "Apakah kamu pernah makan ini?"}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "你看过那个新电影吗？", "pinyin": "Nǐ kàn guo nàge xīn diànyǐng ma?", "translation": "Have you seen that new movie?", "translation_id": "Apakah kamu pernah melihat film baru itu?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "看过，很好看。", "pinyin": "Kàn guo, hěn hǎokàn.", "translation": "Yes, I've seen it. It's very good.", "translation_id": "Sudah pernah, sangat bagus."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "我也想去看看。", "pinyin": "Wǒ yě xiǎng qù kànkan.", "translation": "I also want to go see it.", "translation_id": "Saya juga ingin pergi menontonnya."},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "最近有时间吗？我们可以一起去。", "pinyin": "Zuìjìn yǒu shíjiān ma? Wǒmen kěyǐ yīqǐ qù.", "translation": "Do you have time recently? We can go together.", "translation_id": "Akhir-akhir ini ada waktu? Kita bisa pergi bersama."}
+  ],
+  "exercises": [
+    {"question": "What does 过 (guo) indicate after a verb?", "question_id": "Apa yang ditunjukkan oleh 过 (guo) setelah kata kerja?", "options": ["Future action", "Past experience", "Ongoing action", "Completed action"], "options_id": ["Aksi masa depan", "Pengalaman masa lalu", "Aksi sedang berlangsung", "Aksi selesai"], "correct": 1},
+    {"question": "How do you say 'Have you seen this movie?' in Chinese?", "question_id": "Bagaimana mengatakan 'Apakah kamu pernah melihat film ini?' dalam bahasa Mandarin?", "options": ["你看这个电影吗？", "你看过这个电影吗？", "你看了这个电影吗？", "你看着这个电影吗？"], "options_id": ["Kamu lihat film ini?", "Kamu pernah lihat film ini?", "Kamu sudah lihat film ini?", "Kamu sedang lihat film ini?"], "correct": 1},
+    {"question": "What does 好看 (hǎokàn) mean when talking about a movie?", "question_id": "Apa arti 好看 (hǎokàn) ketika berbicara tentang film?", "options": ["Interesting", "Good-looking/enjoyable", "Boring", "Long"], "options_id": ["Menarik", "Bagus/menyenangkan", "Membosankan", "Panjang"], "correct": 1},
+    {"question": "How to say 'I have never been to Beijing' in Chinese?", "question_id": "Bagaimana mengatakan 'Saya belum pernah ke Beijing' dalam bahasa Mandarin?", "options": ["我去过北京", "我没去过北京", "我去了北京", "我要去北京"], "options_id": ["Saya pernah ke Beijing", "Saya belum pernah ke Beijing", "Saya pergi ke Beijing", "Saya mau pergi ke Beijing"], "correct": 1},
+    {"question": "What does 有意思 (yǒu yìsi) mean?", "question_id": "Apa arti 有意思 (yǒu yìsi)?", "options": ["Boring", "Interesting", "Beautiful", "Expensive"], "options_id": ["Membosankan", "Menarik", "Cantik", "Mahal"], "correct": 1}
+  ]
+}

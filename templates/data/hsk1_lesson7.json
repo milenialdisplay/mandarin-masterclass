@@ -1,0 +1,55 @@
+{
+  "title": "今天几号",
+  "subtitle": "Asking and Telling the Date, Days of the Week, Talking About Schedules",
+  "assistant_message": "Today we learn: asking and telling the date (几号 jǐ hào), days of the week (星期一到星期日), and talking about schedules.",
+  "vocabulary": [
+    {"word": "今天", "pinyin": "jīn tiān", "meaning": "today", "meaning_id": "hari ini", "example": "今天星期几？", "example_translation": "What day is it today?", "example_translation_id": "Hari ini hari apa?"},
+    {"word": "明天", "pinyin": "míng tiān", "meaning": "tomorrow", "meaning_id": "besok", "example": "明天见", "example_translation": "See you tomorrow", "example_translation_id": "Sampai jumpa besok"},
+    {"word": "昨天", "pinyin": "zuó tiān", "meaning": "yesterday", "meaning_id": "kemarin", "example": "昨天去了", "example_translation": "went yesterday", "example_translation_id": "pergi kemarin"},
+    {"word": "星期一", "pinyin": "xīng qī yī", "meaning": "Monday", "meaning_id": "Senin", "example": "星期一上课", "example_translation": "Monday class", "example_translation_id": "Kelas hari Senin"},
+    {"word": "星期二", "pinyin": "xīng qī èr", "meaning": "Tuesday", "meaning_id": "Selasa", "example": "星期二考试", "example_translation": "Tuesday exam", "example_translation_id": "Ujian hari Selasa"},
+    {"word": "星期三", "pinyin": "xīng qī sān", "meaning": "Wednesday", "meaning_id": "Rabu", "example": "星期三休息", "example_translation": "Wednesday rest", "example_translation_id": "Istirahat hari Rabu"},
+    {"word": "星期四", "pinyin": "xīng qī sì", "meaning": "Thursday", "meaning_id": "Kamis", "example": "星期四开会", "example_translation": "Thursday meeting", "example_translation_id": "Rapat hari Kamis"},
+    {"word": "星期五", "pinyin": "xīng qī wǔ", "meaning": "Friday", "meaning_id": "Jumat", "example": "星期五晚上", "example_translation": "Friday evening", "example_translation_id": "Jumat malam"},
+    {"word": "星期六", "pinyin": "xīng qī liù", "meaning": "Saturday", "meaning_id": "Sabtu", "example": "星期六出去玩", "example_translation": "go out Saturday", "example_translation_id": "pergi jalan-jalan Sabtu"},
+    {"word": "星期日", "pinyin": "xīng qī rì", "meaning": "Sunday", "meaning_id": "Minggu", "example": "星期日休息", "example_translation": "Sunday rest", "example_translation_id": "Istirahat hari Minggu"},
+    {"word": "号", "pinyin": "hào", "meaning": "date", "meaning_id": "tanggal", "example": "几号？", "example_translation": "What's the date?", "example_translation_id": "Tanggal berapa?"},
+    {"word": "月", "pinyin": "yuè", "meaning": "month", "meaning_id": "bulan", "example": "五月", "example_translation": "May", "example_translation_id": "Mei"}
+  ],
+  "grammar": [
+    {
+      "point": "Days of the Week: 星期 + Number",
+      "point_id": "Hari dalam Seminggu: 星期 + Angka",
+      "explanation": "星期 (xīngqī) means 'week'. Add numbers 1-6 for Monday to Saturday. Sunday is 星期日 or 星期天.",
+      "explanation_id": "星期 (xīngqī) berarti 'minggu'. Tambahkan angka 1-6 untuk Senin sampai Sabtu. Minggu adalah 星期日 atau 星期天.",
+      "examples": [
+        {"chinese": "星期一", "translation": "Monday", "translation_id": "Senin"},
+        {"chinese": "星期六", "translation": "Saturday", "translation_id": "Sabtu"},
+        {"chinese": "星期日", "translation": "Sunday", "translation_id": "Minggu"}
+      ]
+    },
+    {
+      "point": "Asking and Telling the Date",
+      "point_id": "Bertanya dan Menyatakan Tanggal",
+      "explanation": "Use 几号 (jǐ hào) to ask 'what date'. Use 号 after the number to state the date.",
+      "explanation_id": "Gunakan 几号 (jǐ hào) untuk bertanya 'tanggal berapa'. Gunakan 号 setelah angka untuk menyatakan tanggal.",
+      "examples": [
+        {"chinese": "今天几号？", "translation": "What's the date today?", "translation_id": "Hari ini tanggal berapa?"},
+        {"chinese": "今天五月十五号。", "translation": "Today is May 15th.", "translation_id": "Hari ini tanggal 15 Mei."}
+      ]
+    }
+  ],
+  "dialogue": [
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "今天几月几号？", "pinyin": "Jīntiān jǐ yuè jǐ hào?", "translation": "What's the date today?", "translation_id": "Hari ini tanggal berapa?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "今天五月十五号。", "pinyin": "Jīntiān wǔ yuè shíwǔ hào.", "translation": "Today is May 15th.", "translation_id": "Hari ini tanggal 15 Mei."},
+    {"speaker": "male", "name": "Zhang Wei", "voice": "male", "chinese": "今天星期几？", "pinyin": "Jīntiān xīngqī jǐ?", "translation": "What day is it today?", "translation_id": "Hari ini hari apa?"},
+    {"speaker": "female", "name": "Li Mei", "voice": "female", "chinese": "今天是星期三。", "pinyin": "Jīntiān shì xīngqī sān.", "translation": "Today is Wednesday.", "translation_id": "Hari ini hari Rabu."}
+  ],
+  "exercises": [
+    {"question": "What does 今天 (jīntiān) mean?", "question_id": "Apa arti 今天 (jīntiān)?", "options": ["Tomorrow", "Yesterday", "Today", "Day after tomorrow"], "options_id": ["Besok", "Kemarin", "Hari ini", "Lusa"], "correct": 2},
+    {"question": "How do you say 'Wednesday' in Chinese?", "question_id": "Bagaimana mengatakan 'Rabu' dalam bahasa Mandarin?", "options": ["星期一", "星期二", "星期三", "星期四"], "options_id": ["Senin", "Selasa", "Rabu", "Kamis"], "correct": 2},
+    {"question": "What is 号 (hào)?", "question_id": "Apa itu 号 (hào)?", "options": ["Month", "Year", "Date", "Week"], "options_id": ["Bulan", "Tahun", "Tanggal", "Minggu"], "correct": 2},
+    {"question": "How to ask 'What day is it today?' in Chinese?", "question_id": "Bagaimana bertanya 'Hari ini hari apa?' dalam bahasa Mandarin?", "options": ["今天几号？", "今天星期几？", "今天几月？", "今天几点？"], "options_id": ["Hari ini tanggal berapa?", "Hari ini hari apa?", "Hari ini bulan berapa?", "Hari ini jam berapa?"], "correct": 1},
+    {"question": "What day is 星期六 (xīngqī liù)?", "question_id": "Hari apakah 星期六 (xīngqī liù)?", "options": ["Friday", "Saturday", "Sunday", "Monday"], "options_id": ["Jumat", "Sabtu", "Minggu", "Senin"], "correct": 1}
+  ]
+}
