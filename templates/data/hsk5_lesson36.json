@@ -1,33 +1,67 @@
 {
   "title": "未来趋势",
-  "subtitle": "Future Trends",
-  "assistant_message": "Today we learn: discussing future trends, using 未来(wèilái) and 趋势(qūshì), and expressing predictions.",
+  "subtitle": "Future Trends, Technology Impact, Social Changes",
+  "assistant_message": "Today we learn: discussing future trends (未来趋势), using 趋势 (qūshì) and 预测 (yùcè), and expressing predictions about technology and society.",
   "vocabulary": [
-    {
-      "word": "未来",
-      "pinyin": "wèilái",
-      "meaning": "future",
-      "meaning_id": "future",
-      "example": "未来很常见",
-      "example_translation": "未来 is common",
-      "example_translation_id": "未来 umum"
-    }
+    {"word": "未来", "pinyin": "wèi lái", "meaning": "future", "meaning_id": "masa depan", "example": "在不久的将来", "example_translation": "in the near future", "example_translation_id": "dalam waktu dekat"},
+    {"word": "趋势", "pinyin": "qū shì", "meaning": "trend", "meaning_id": "tren", "example": "发展趋势", "example_translation": "development trend", "example_translation_id": "tren perkembangan"},
+    {"word": "预测", "pinyin": "yù cè", "meaning": "to predict", "meaning_id": "memprediksi", "example": "预测未来", "example_translation": "predict the future", "example_translation_id": "memprediksi masa depan"},
+    {"word": "人工智能", "pinyin": "rén gōng zhì néng", "meaning": "artificial intelligence", "meaning_id": "kecerdasan buatan", "example": "人工智能技术", "example_translation": "AI technology", "example_translation_id": "teknologi AI"},
+    {"word": "自动化", "pinyin": "zì dòng huà", "meaning": "automation", "meaning_id": "otomatisasi", "example": "自动化生产", "example_translation": "automated production", "example_translation_id": "produksi otomatis"},
+    {"word": "可持续发展", "pinyin": "kě chí xù fā zhǎn", "meaning": "sustainable development", "meaning_id": "pembangunan berkelanjutan", "example": "保护环境", "example_translation": "protect the environment", "example_translation_id": "melindungi lingkungan"},
+    {"word": "全球化", "pinyin": "quán qiú huà", "meaning": "globalization", "meaning_id": "globalisasi", "example": "经济全球化", "example_translation": "economic globalization", "example_translation_id": "globalisasi ekonomi"},
+    {"word": "创新", "pinyin": "chuàng xīn", "meaning": "innovation", "meaning_id": "inovasi", "example": "科技创新", "example_translation": "technological innovation", "example_translation_id": "inovasi teknologi"},
+    {"word": "挑战", "pinyin": "tiǎo zhàn", "meaning": "challenge", "meaning_id": "tantangan", "example": "面临挑战", "example_translation": "face challenges", "example_translation_id": "menghadapi tantangan"},
+    {"word": "机遇", "pinyin": "jī yù", "meaning": "opportunity", "meaning_id": "peluang", "example": "抓住机遇", "example_translation": "seize the opportunity", "example_translation_id": "memanfaatkan peluang"}
   ],
   "grammar": [
     {
-      "point": "趋势(qūshì)=trend",
-      "point_id": "趋势(qūshì)=trend",
-      "explanation": "Explanation for 趋势(qūshì)=trend",
-      "explanation_id": "Penjelasan untuk 趋势(qūshì)=trend",
+      "point": "Using 趋势 (qūshì) to Describe Trends",
+      "point_id": "Menggunakan 趋势 untuk Menjelaskan Tren",
+      "explanation": "趋势 means 'trend' and is often used with 发展 (development), 增长 (growth), or 变化 (change).",
+      "explanation_id": "趋势 berarti 'tren' dan sering digunakan dengan 发展 (perkembangan), 增长 (pertumbuhan), atau 变化 (perubahan).",
       "examples": [
-        {
-          "chinese": "例子",
-          "translation": "example",
-          "translation_id": "contoh"
-        }
+        {"chinese": "人工智能是未来的发展趋势。", "translation": "Artificial intelligence is the future development trend.", "translation_id": "Kecerdasan buatan adalah tren perkembangan masa depan."},
+        {"chinese": "全球化的趋势越来越明显。", "translation": "The trend of globalization is becoming more and more obvious.", "translation_id": "Tren globalisasi semakin jelas."}
+      ]
+    },
+    {
+      "point": "Using 随着... (suízhe) - 'Along with...'",
+      "point_id": "Menggunakan 随着... (suízhe) - 'Seiring dengan...'",
+      "explanation": "随着 indicates that one change follows another. Structure: 随着 + A, B.",
+      "explanation_id": "随着 menunjukkan bahwa satu perubahan mengikuti perubahan lain. Struktur: 随着 + A, B.",
+      "examples": [
+        {"chinese": "随着科技的发展，我们的生活越来越方便。", "translation": "Along with technological development, our lives become more and more convenient.", "translation_id": "Seiring dengan perkembangan teknologi, hidup kita semakin nyaman."},
+        {"chinese": "随着全球化的加速，各国之间的交流更加频繁。", "translation": "Along with the acceleration of globalization, exchanges between countries become more frequent.", "translation_id": "Seiring dengan percepatan globalisasi, pertukaran antar negara menjadi lebih sering."}
+      ]
+    },
+    {
+      "point": "Using 不仅...而且... (bùjǐn...érqiě...)",
+      "point_id": "Menggunakan 不仅...而且...",
+      "explanation": "Not only... but also...",
+      "explanation_id": "Tidak hanya... tetapi juga...",
+      "examples": [
+        {"chinese": "人工智能不仅改变了工作方式，而且影响了我们的日常生活。", "translation": "AI has not only changed the way we work but also affected our daily lives.", "translation_id": "AI tidak hanya mengubah cara kerja kita tetapi juga mempengaruhi kehidupan sehari-hari kita."},
+        {"chinese": "未来的挑战不仅来自技术，而且来自社会变化。", "translation": "Future challenges come not only from technology but also from social changes.", "translation_id": "Tantangan masa depan tidak hanya datang dari teknologi tetapi juga dari perubahan sosial."}
       ]
     }
   ],
-  "dialogue": [],
-  "exercises": []
+  "dialogue": [
+    {"speaker": "female", "name": "Chen Mei", "voice": "female", "chinese": "你觉得未来十年最大的趋势是什么？", "pinyin": "Nǐ juéde wèilái shí nián zuì dà de qūshì shì shénme?", "translation": "What do you think is the biggest trend in the next ten years?", "translation_id": "Menurutmu apa tren terbesar dalam sepuluh tahun ke depan?"},
+    {"speaker": "male", "name": "Wang Lei", "voice": "male", "chinese": "我认为人工智能和自动化会改变很多行业。", "pinyin": "Wǒ rènwéi réngōng zhìnéng hé zìdònghuà huì gǎibiàn hěnduō hángyè.", "translation": "I think AI and automation will change many industries.", "translation_id": "Saya pikir AI dan otomatisasi akan mengubah banyak industri."},
+    {"speaker": "female", "name": "Chen Mei", "voice": "female", "chinese": "随着人工智能的发展，很多人担心失去工作。你怎么看？", "pinyin": "Suízhe réngōng zhìnéng de fāzhǎn, hěnduō rén dānxīn shīqù gōngzuò. Nǐ zěnme kàn?", "translation": "Along with AI development, many people worry about losing jobs. What do you think?", "translation_id": "Seiring dengan perkembangan AI, banyak orang khawatir kehilangan pekerjaan. Bagaimana menurutmu?"},
+    {"speaker": "male", "name": "Wang Lei", "voice": "male", "chinese": "虽然有些工作会消失，但也会创造新的机遇。关键在于不断学习和适应变化。", "pinyin": "Suīrán yǒuxiē gōngzuò huì xiāoshī, dàn yě huì chuàngzào xīn de jīyù. Guānjiàn zàiyú bùduàn xuéxí hé shìyìng biànhuà.", "translation": "Although some jobs will disappear, new opportunities will also be created. The key is to keep learning and adapting to change.", "translation_id": "Meskipun beberapa pekerjaan akan hilang, peluang baru juga akan tercipta. Kuncinya adalah terus belajar dan beradaptasi dengan perubahan."},
+    {"speaker": "female", "name": "Chen Mei", "voice": "female", "chinese": "除了技术，还有哪些重要的趋势？", "pinyin": "Chúle jìshù, hái yǒu nǎxiē zhòngyào de qūshì?", "translation": "Besides technology, what other important trends are there?", "translation_id": "Selain teknologi, tren penting apa lagi yang ada?"},
+    {"speaker": "male", "name": "Wang Lei", "voice": "male", "chinese": "可持续发展和全球化也很重要。我们需要保护地球，同时加强国际合作。", "pinyin": "Kě chíxù fāzhǎn hé quánqiúhuà yě hěn zhòngyào. Wǒmen xūyào bǎohù dìqiú, tóngshí jiāqiáng guójì hézuò.", "translation": "Sustainable development and globalization are also important. We need to protect the earth while strengthening international cooperation.", "translation_id": "Pembangunan berkelanjutan dan globalisasi juga penting. Kita perlu melindungi bumi sambil memperkuat kerja sama internasional."}
+  ],
+  "exercises": [
+    {"question": "What does 趋势 (qūshì) mean?", "question_id": "Apa arti 趋势 (qūshì)?", "options": ["Past", "Present", "Trend", "Problem"], "options_id": ["Masa lalu", "Sekarang", "Tren", "Masalah"], "correct": 2},
+    {"question": "How do you say 'artificial intelligence' in Chinese?", "question_id": "Bagaimana mengatakan 'kecerdasan buatan' dalam bahasa Mandarin?", "options": ["自动化", "人工智能", "机器学习", "深度学习"], "options_id": ["Otomatisasi", "Kecerdasan buatan", "Pembelajaran mesin", "Pembelajaran mendalam"], "correct": 1},
+    {"question": "What does the pattern 随着 (suízhe) express?", "question_id": "Apa yang diungkapkan oleh pola 随着 (suízhe)?", "options": ["Instead of", "Along with/As", "Because of", "In order to"], "options_id": ["Alih-alih", "Seiring dengan", "Karena", "Untuk"], "correct": 1},
+    {"question": "Complete: 随着科技的发展，我们的生活______方便。", "question_id": "Lengkapi kalimat.", "options": ["越来越", "越来越不", "已经", "还没有"], "options_id": ["semakin", "semakin tidak", "sudah", "belum"], "correct": 0},
+    {"question": "What is 'sustainable development' in Chinese?", "question_id": "Apa 'pembangunan berkelanjutan' dalam bahasa Mandarin?", "options": ["经济发展", "可持续发展", "社会发展", "技术发展"], "options_id": ["Pembangunan ekonomi", "Pembangunan berkelanjutan", "Pembangunan sosial", "Pembangunan teknologi"], "correct": 1},
+    {"question": "How to say 'face challenges' in Chinese?", "question_id": "Bagaimana mengatakan 'menghadapi tantangan' dalam bahasa Mandarin?", "options": ["创造机遇", "面临挑战", "适应变化", "学习新技能"], "options_id": ["Menciptakan peluang", "Menghadapi tantangan", "Beradaptasi dengan perubahan", "Mempelajari keterampilan baru"], "correct": 1},
+    {"question": "What does 预测 (yùcè) mean?", "question_id": "Apa arti 预测 (yùcè)?", "options": ["To remember", "To predict", "To explain", "To decide"], "options_id": ["Mengingat", "Memprediksi", "Menjelaskan", "Memutuskan"], "correct": 1},
+    {"question": "Complete the sentence: AI不仅改变了工作方式，______影响了我们的日常生活。", "question_id": "Lengkapi kalimat.", "options": ["但是", "而且", "因为", "所以"], "options_id": ["tetapi", "tetapi juga", "karena", "jadi"], "correct": 1}
+  ]
 }

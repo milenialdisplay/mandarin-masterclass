@@ -50,28 +50,191 @@
         .character-result { background: #e8f5e9; padding: 10px; border-radius: 10px; margin-top: 10px; display: none; }
         .character-result.show { display: block; }
         .character-result-word { font-size: 36px; font-weight: bold; color: #1a472a; }
-        .writing-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 10000; justify-content: center; align-items: center; }
+        
+        /* WRITING MODAL - FIXED FOR MOBILE */
+        .writing-modal { 
+            display: none; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: rgba(0,0,0,0.85); 
+            z-index: 10000; 
+            justify-content: center; 
+            align-items: center; 
+        }
         .writing-modal.active { display: flex; }
-        .writing-modal-content { background: white; border-radius: 20px; padding: 20px; max-width: 95%; width: auto; text-align: center; position: relative; max-height: 90vh; overflow-y: auto; }
-        .writing-modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px; }
-        .writing-modal-header h3 { font-size: 24px; color: #1a472a; }
-        .close-modal { background: #e94560; color: white; border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 20px; }
-        .writing-boxes-container { display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; margin: 20px auto; }
-        .writing-character-box { position: relative; width: 250px; height: 250px; border: 3px solid #2d6a4f; border-radius: 12px; background: #fafafa; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.15); overflow: hidden; }
-        .writing-character-box.completed { border-color: #28a745; background: #f0fff0; }
-        .writing-character-box.active { border-color: #ffd700; box-shadow: 0 0 20px rgba(255,215,0,0.6); }
-        .writing-character-box.wrong { border-color: #e94560; animation: shake 0.3s ease-in-out; }
-        @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
-        .writing-hanzi-target { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
-        .writing-draw-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; cursor: crosshair; touch-action: none; z-index: 2; }
-        .box-label { position: absolute; bottom: -30px; left: 0; right: 0; text-align: center; font-size: 14px; color: #555; font-weight: bold; }
-        .writing-stroke-counter { font-size: 16px; font-weight: bold; color: #1a472a; margin: 35px 0 15px; padding: 10px; background: #e8f5e9; border-radius: 8px; }
-        .writing-controls { display: flex; gap: 12px; justify-content: center; margin: 15px 0; flex-wrap: wrap; }
-        .writing-btn { background: #2d6a4f; color: white; border: none; padding: 8px 20px; border-radius: 30px; cursor: pointer; font-size: 13px; font-weight: bold; transition: all 0.2s ease; }
-        .writing-btn:hover { transform: scale(1.02); opacity: 0.95; }
-        .write-mode-btn { background: #ffd700; color: #1a472a; }
-        .white-paper-mode-btn { background: #e8f5e9; color: #2d6a4f; border: 1px solid #2d6a4f; }
-        .writing-clear-btn { background: #e94560; }
+        .writing-modal-content { 
+            background: white; 
+            border-radius: 20px; 
+            padding: 20px; 
+            max-width: 95%; 
+            width: auto; 
+            text-align: center; 
+            position: relative; 
+            max-height: 90vh; 
+            overflow-y: auto; 
+        }
+        .writing-modal-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 15px; 
+            flex-wrap: wrap; 
+            gap: 10px; 
+        }
+        .writing-modal-header h3 { 
+            font-size: 18px; 
+            color: #1a472a; 
+        }
+        .close-modal { 
+            background: #e94560; 
+            color: white; 
+            border: none; 
+            width: 36px; 
+            height: 36px; 
+            border-radius: 50%; 
+            cursor: pointer; 
+            font-size: 20px; 
+        }
+        .writing-boxes-container { 
+            display: flex; 
+            flex-direction: row; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 20px; 
+            flex-wrap: wrap; 
+            margin: 15px auto; 
+        }
+        .writing-character-box { 
+            position: relative; 
+            width: 280px; 
+            height: 280px; 
+            border: 3px solid #2d6a4f; 
+            border-radius: 12px; 
+            background: #fafafa; 
+            flex-shrink: 0; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+            overflow: hidden; 
+        }
+        /* Responsive canvas sizing - FIX FOR MOBILE CROPPING */
+        @media (max-width: 768px) {
+            .writing-character-box {
+                width: 85vw;
+                max-width: 350px;
+                height: 85vw;
+                max-height: 350px;
+            }
+        }
+        @media (max-width: 480px) {
+            .writing-character-box {
+                width: 90vw;
+                max-width: 300px;
+                height: 90vw;
+                max-height: 300px;
+            }
+            .writing-modal-header h3 {
+                font-size: 16px;
+            }
+            .writing-controls {
+                gap: 8px;
+            }
+            .writing-btn {
+                padding: 6px 12px;
+                font-size: 11px;
+            }
+        }
+        .writing-character-box.completed { 
+            border-color: #28a745; 
+            background: #f0fff0; 
+        }
+        .writing-character-box.active { 
+            border-color: #ffd700; 
+            box-shadow: 0 0 20px rgba(255,215,0,0.6); 
+        }
+        .writing-character-box.wrong { 
+            border-color: #e94560; 
+            animation: shake 0.3s ease-in-out; 
+        }
+        @keyframes shake { 
+            0%, 100% { transform: translateX(0); } 
+            25% { transform: translateX(-5px); } 
+            75% { transform: translateX(5px); } 
+        }
+        .writing-hanzi-target { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            z-index: 1; 
+        }
+        .writing-draw-canvas { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100% !important; 
+            height: 100% !important; 
+            background: transparent; 
+            cursor: crosshair; 
+            touch-action: none; 
+            z-index: 2; 
+        }
+        .box-label { 
+            position: absolute; 
+            bottom: -30px; 
+            left: 0; 
+            right: 0; 
+            text-align: center; 
+            font-size: 14px; 
+            color: #555; 
+            font-weight: bold; 
+        }
+        .writing-stroke-counter { 
+            font-size: 16px; 
+            font-weight: bold; 
+            color: #1a472a; 
+            margin: 35px 0 15px; 
+            padding: 10px; 
+            background: #e8f5e9; 
+            border-radius: 8px; 
+        }
+        .writing-controls { 
+            display: flex; 
+            gap: 12px; 
+            justify-content: center; 
+            margin: 15px 0; 
+            flex-wrap: wrap; 
+        }
+        .writing-btn { 
+            background: #2d6a4f; 
+            color: white; 
+            border: none; 
+            padding: 8px 20px; 
+            border-radius: 30px; 
+            cursor: pointer; 
+            font-size: 13px; 
+            font-weight: bold; 
+            transition: all 0.2s ease; 
+        }
+        .writing-btn:hover { 
+            transform: scale(1.02); 
+            opacity: 0.95; 
+        }
+        .write-mode-btn { 
+            background: #ffd700; 
+            color: #1a472a; 
+        }
+        .white-paper-mode-btn { 
+            background: #e8f5e9; 
+            color: #2d6a4f; 
+            border: 1px solid #2d6a4f; 
+        }
+        .writing-clear-btn { 
+            background: #e94560; 
+        }
+        
         .lesson-content { background: white; border-radius: 16px; margin-top: 12px; padding: 16px; max-height: 55vh; overflow-y: auto; font-size: 15px; }
         .section { margin-bottom: 20px; }
         .section-title { font-size: 20px; color: #1a472a; border-left: 4px solid #ffd700; padding-left: 12px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
@@ -110,8 +273,6 @@
         .exercise-score { margin-top: 8px; padding: 6px; border-radius: 8px; text-align: center; font-size: 12px; }
         .score-good { background: #d4edda; color: #28a745; }
         .score-bad { background: #f8d7da; color: #dc3545; }
-        @media (max-width: 700px) { .writing-character-box { width: 180px; height: 180px; } .writing-boxes-container { gap: 25px; } }
-        @media (max-width: 500px) { .writing-character-box { width: 140px; height: 140px; } .writing-boxes-container { gap: 20px; } }
     </style>
 </head>
 <body>
@@ -393,11 +554,13 @@
     let isAnimating = false;
     
     const strokeMap = {
-        // Common characters - add more as needed
         '周': 8, '末': 5, '打': 5, '算': 14, '计': 4, '划': 6, '邀': 16, '请': 10,
         '活': 9, '动': 6, '聚': 14, '会': 6, '一': 1, '起': 10, '安': 6, '排': 11,
         '电': 5, '影': 15, '有': 6, '意': 13, '思': 9, '钱': 10, '包': 5, '忘': 7,
-        '长': 4, '城': 9, '减': 11, '肥': 8
+        '长': 4, '城': 9, '减': 11, '肥': 8, '你': 7, '好': 6, '我': 7, '叫': 5,
+        '什': 4, '么': 3, '名': 6, '字': 6, '是': 9, '学': 8, '生': 5, '老': 6,
+        '师': 6, '再': 6, '见': 7, '谢': 12, '谢': 12, '医': 7, '生': 5, '爱': 10,
+        '情': 11, '细': 8, '节': 5, '未': 5, '来': 7, '趋': 12, '势': 8
     };
     
     function getStrokeCount(char) { return strokeMap[char] || 6; }
@@ -437,7 +600,7 @@
         updateStatus(`❌ Wrong stroke! Starting over for "${characters[charIndex]}".`, 'error');
         if (drawingData[charIndex]) {
             drawingData[charIndex].strokeCount = 0;
-            drawingData[charIndex].ctx.clearRect(0, 0, 250, 250);
+            drawingData[charIndex].ctx.clearRect(0, 0, drawingData[charIndex].canvas.width, drawingData[charIndex].canvas.height);
         }
         let totalCompleted = 0;
         for (let i = 0; i < activeCharIndex; i++) { totalCompleted += drawingData[i]?.strokeCount || 0; }
@@ -462,8 +625,11 @@
             const canvas = document.createElement('canvas');
             canvas.className = 'writing-draw-canvas';
             canvas.id = `draw-canvas-${i}`;
-            canvas.width = 250;
-            canvas.height = 250;
+            // Make canvas responsive - set dimensions after DOM insertion
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+            canvas.width = 300;
+            canvas.height = 300;
             const label = document.createElement('div');
             label.className = 'box-label';
             label.innerHTML = `${char} - ${pinyinArray[i] || currentPinyin}`;
@@ -493,12 +659,21 @@
         const data = drawingData[charIndex];
         const getCoords = (e) => {
             const rect = canvas.getBoundingClientRect();
+            // Use actual canvas dimensions for coordinate mapping
             const scaleX = canvas.width / rect.width;
             const scaleY = canvas.height / rect.height;
             let clientX, clientY;
-            if (e.touches) { clientX = e.touches[0].clientX; clientY = e.touches[0].clientY; }
-            else { clientX = e.clientX; clientY = e.clientY; }
-            return { x: Math.min(Math.max(0, (clientX - rect.left) * scaleX), canvas.width), y: Math.min(Math.max(0, (clientY - rect.top) * scaleY), canvas.height) };
+            if (e.touches) {
+                clientX = e.touches[0].clientX;
+                clientY = e.touches[0].clientY;
+            } else {
+                clientX = e.clientX;
+                clientY = e.clientY;
+            }
+            return {
+                x: Math.min(Math.max(0, (clientX - rect.left) * scaleX), canvas.width),
+                y: Math.min(Math.max(0, (clientY - rect.top) * scaleY), canvas.height)
+            };
         };
         const startDraw = (e) => {
             if (!writingModeActive) { updateStatus('Click "Write Mode" first!', 'error'); return; }
@@ -602,7 +777,7 @@
             if (drawingData[i]) {
                 drawingData[i].strokeCount = 0;
                 drawingData[i].completed = false;
-                drawingData[i].ctx.clearRect(0, 0, 250, 250);
+                drawingData[i].ctx.clearRect(0, 0, drawingData[i].canvas.width, drawingData[i].canvas.height);
                 const targetDiv = document.getElementById(`hanzi-target-${i}`);
                 if (targetDiv) {
                     targetDiv.innerHTML = '';
@@ -631,7 +806,7 @@
             if (drawingData[i]) {
                 drawingData[i].strokeCount = 0;
                 drawingData[i].completed = false;
-                drawingData[i].ctx.clearRect(0, 0, 250, 250);
+                drawingData[i].ctx.clearRect(0, 0, drawingData[i].canvas.width, drawingData[i].canvas.height);
                 const targetDiv = document.getElementById(`hanzi-target-${i}`);
                 if (targetDiv) {
                     targetDiv.innerHTML = '';
@@ -655,7 +830,11 @@
     function clearAll() {
         if (isAnimating) isAnimating = false;
         for (let i = 0; i < characters.length; i++) {
-            if (drawingData[i]) { drawingData[i].ctx.clearRect(0, 0, 250, 250); drawingData[i].strokeCount = 0; drawingData[i].completed = false; }
+            if (drawingData[i]) { 
+                drawingData[i].ctx.clearRect(0, 0, drawingData[i].canvas.width, drawingData[i].canvas.height); 
+                drawingData[i].strokeCount = 0; 
+                drawingData[i].completed = false; 
+            }
             const box = document.getElementById(`char-box-${i}`); if (box) box.style.boxShadow = 'none';
         }
         completedChars.fill(false);
@@ -947,5 +1126,167 @@
     window.clearHelperCanvas = clearHelperCanvas;
     window.identifyDrawnCharacter = identifyDrawnCharacter;
 </script>
+
+<!-- ========== PASSCODE MODAL ========== -->
+<div id="passcodeModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 30000; justify-content: center; align-items: center;">
+    <div style="background: white; border-radius: 20px; padding: 30px; max-width: 400px; width: 90%; position: relative;">
+        <span onclick="closePasscodeModal()" style="position: absolute; top: 15px; right: 20px; font-size: 24px; cursor: pointer;">&times;</span>
+        <h2 id="modalTitle" style="color: #1a472a;">🔐 Access Required</h2>
+        <p id="modalMessage" style="margin: 10px 0;">This lesson requires a passcode.</p>
+        <div id="requestForm">
+            <input type="email" id="requestEmail" placeholder="Your email" style="width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px;">
+            <button onclick="submitRequest()" style="background: #2d6a4f; color: white; border: none; padding: 12px; border-radius: 8px; width: 100%; cursor: pointer;">📧 Request Access</button>
+            <p style="text-align: center; margin-top: 10px;"><a href="#" onclick="showPasscodeForm()">Already have a passcode?</a></p>
+        </div>
+        <div id="passcodeForm" style="display: none;">
+            <input type="email" id="verifyEmail" placeholder="Your email" style="width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px;">
+            <input type="text" id="verifyPasscode" placeholder="Enter passcode" style="width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px;">
+            <button onclick="verifyPasscode()" style="background: #ffd700; color: #1a472a; border: none; padding: 12px; border-radius: 8px; width: 100%; cursor: pointer; font-weight: bold;">🔓 Unlock</button>
+            <p style="text-align: center; margin-top: 10px;"><a href="#" onclick="showRequestForm()">Need a passcode?</a></p>
+        </div>
+        <div id="loadingMsg" style="display: none; text-align: center; padding: 10px;">Processing...</div>
+        <div id="resultMsg" style="margin-top: 10px; padding: 10px; border-radius: 8px; display: none;"></div>
+    </div>
+</div>
+
+<script>
+// Passcode functions
+let pendingLevel = null, pendingLesson = null, pendingUrl = null;
+
+function showPasscodeModal(level, lessonNum, url) {
+    pendingLevel = level;
+    pendingLesson = lessonNum;
+    pendingUrl = url;
+    document.getElementById('requestForm').style.display = 'block';
+    document.getElementById('passcodeForm').style.display = 'none';
+    document.getElementById('resultMsg').style.display = 'none';
+    document.getElementById('passcodeModal').style.display = 'flex';
+}
+
+function showRequestForm() {
+    document.getElementById('requestForm').style.display = 'block';
+    document.getElementById('passcodeForm').style.display = 'none';
+    document.getElementById('resultMsg').style.display = 'none';
+}
+
+function showPasscodeForm() {
+    document.getElementById('requestForm').style.display = 'none';
+    document.getElementById('passcodeForm').style.display = 'block';
+    document.getElementById('resultMsg').style.display = 'none';
+}
+
+function closePasscodeModal() {
+    document.getElementById('passcodeModal').style.display = 'none';
+}
+
+function showMessage(msg, isError) {
+    const msgDiv = document.getElementById('resultMsg');
+    msgDiv.innerHTML = msg;
+    msgDiv.style.display = 'block';
+    msgDiv.style.background = isError ? '#f8d7da' : '#d4edda';
+    msgDiv.style.color = isError ? '#dc3545' : '#28a745';
+    setTimeout(() => { msgDiv.style.display = 'none'; }, 3000);
+}
+
+async function submitRequest() {
+    const email = document.getElementById('requestEmail').value.trim();
+    if (!email || !email.includes('@')) {
+        showMessage('Please enter a valid email.', true);
+        return;
+    }
+    
+    document.getElementById('requestForm').style.display = 'none';
+    document.getElementById('loadingMsg').style.display = 'block';
+    
+    try {
+        const res = await fetch('/api/request-passcode', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, level: pendingLevel, lesson_num: pendingLesson })
+        });
+        const data = await res.json();
+        document.getElementById('loadingMsg').style.display = 'none';
+        
+        if (data.success) {
+            showMessage('✓ Request sent! Admin will review.', false);
+            setTimeout(closePasscodeModal, 2000);
+        } else {
+            showMessage(data.message, true);
+            document.getElementById('requestForm').style.display = 'block';
+        }
+    } catch(e) {
+        document.getElementById('loadingMsg').style.display = 'none';
+        showMessage('Network error. Try again.', true);
+        document.getElementById('requestForm').style.display = 'block';
+    }
+}
+
+async function verifyPasscode() {
+    const email = document.getElementById('verifyEmail').value.trim();
+    let passcode = document.getElementById('verifyPasscode').value.trim();
+    passcode = passcode.toUpperCase();
+
+    if (!email || !email.includes('@')) {
+        showMessage('Enter your email.', true);
+        return;
+    }
+    if (!passcode) {
+        showMessage('Enter your passcode.', true);
+        return;
+    }
+    
+    let deviceId = localStorage.getItem('device_id');
+    if (!deviceId) {
+        deviceId = 'dev_' + Math.random().toString(36).substring(2, 10);
+        localStorage.setItem('device_id', deviceId);
+    }
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|Mobile/i.test(navigator.userAgent);
+    const deviceType = isMobile ? 'mobile' : 'desktop';
+    
+    document.getElementById('passcodeForm').style.display = 'none';
+    document.getElementById('loadingMsg').style.display = 'block';
+    
+    try {
+        const res = await fetch('/api/verify-passcode', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 
+                email, 
+                passcode, 
+                level: pendingLevel, 
+                lesson_num: pendingLesson,
+                device_id: deviceId,
+                device_type: deviceType
+            })
+        });
+        const data = await res.json();
+        document.getElementById('loadingMsg').style.display = 'none';
+        
+        if (data.success) {
+            showMessage('✓ Access granted!', false);
+            setTimeout(() => {
+                closePasscodeModal();
+                window.location.href = pendingUrl;
+            }, 1000);
+        } else {
+            showMessage(data.message, true);
+            document.getElementById('passcodeForm').style.display = 'block';
+        }
+    } catch(e) {
+        document.getElementById('loadingMsg').style.display = 'none';
+        showMessage('Network error.', true);
+        document.getElementById('passcodeForm').style.display = 'block';
+    }
+}
+
+function checkAndNavigate(level, lessonNum) {
+    if (level === 1 && lessonNum === 1) {
+        window.location.href = `/lesson/${level}/${lessonNum}`;
+    } else {
+        showPasscodeModal(level, lessonNum, `/lesson/${level}/${lessonNum}`);
+    }
+}
+</script>
+
 </body>
 </html>
