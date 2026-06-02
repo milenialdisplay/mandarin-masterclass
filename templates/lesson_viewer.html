@@ -35,6 +35,7 @@
         .pronounce-input-btn { background: #ffd700; border: 1px solid #d4a500; color: #1a472a; }
         .send-btn { background: #2d6a4f; color: white; border: none; padding: 6px 14px; border-radius: 25px; cursor: pointer; font-size: 13px; font-weight: bold; }
         @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.7; } 100% { opacity: 1; } }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         .chat-status { font-size: 10px; color: #888; text-align: center; padding-bottom: 6px; }
         #imageUpload { display: none; }
         .image-helper-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 20000; justify-content: center; align-items: center; }
@@ -51,7 +52,7 @@
         .character-result.show { display: block; }
         .character-result-word { font-size: 36px; font-weight: bold; color: #1a472a; }
         
-        /* WRITING MODAL - FIXED FOR MOBILE */
+        /* WRITING MODAL - FIXED FOR MOBILE SCROLLING */
         .writing-modal { 
             display: none; 
             position: fixed; 
@@ -69,12 +70,14 @@
             background: white; 
             border-radius: 20px; 
             padding: 20px; 
-            max-width: 95%; 
+            max-width: 90%; 
             width: auto; 
             text-align: center; 
             position: relative; 
-            max-height: 90vh; 
-            overflow-y: auto; 
+            max-height: 85vh; 
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
         }
         .writing-modal-header { 
             display: flex; 
@@ -83,6 +86,7 @@
             margin-bottom: 15px; 
             flex-wrap: wrap; 
             gap: 10px; 
+            flex-shrink: 0;
         }
         .writing-modal-header h3 { 
             font-size: 18px; 
@@ -100,49 +104,44 @@
         }
         .writing-boxes-container { 
             display: flex; 
-            flex-direction: row; 
+            flex-direction: column;
             justify-content: center; 
             align-items: center; 
-            gap: 20px; 
-            flex-wrap: wrap; 
-            margin: 15px auto; 
+            gap: 30px; 
+            margin: 10px auto; 
+            max-height: 50vh;
+            overflow-y: auto;
+            padding: 10px;
         }
         .writing-character-box { 
             position: relative; 
-            width: 280px; 
-            height: 280px; 
+            width: 70vw;
+            max-width: 280px;
+            height: 70vw;
+            max-height: 280px;
             border: 3px solid #2d6a4f; 
             border-radius: 12px; 
             background: #fafafa; 
-            flex-shrink: 0; 
+            flex-shrink: 0;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
             overflow: hidden; 
         }
-        /* Responsive canvas sizing - FIX FOR MOBILE CROPPING */
-        @media (max-width: 768px) {
+        /* Make boxes scrollable horizontally for multiple characters */
+        @media (min-width: 768px) {
+            .writing-boxes-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
             .writing-character-box {
-                width: 85vw;
-                max-width: 350px;
-                height: 85vw;
-                max-height: 350px;
+                width: 250px;
+                height: 250px;
             }
         }
-        @media (max-width: 480px) {
+        @media (max-width: 767px) {
             .writing-character-box {
-                width: 90vw;
-                max-width: 300px;
-                height: 90vw;
-                max-height: 300px;
-            }
-            .writing-modal-header h3 {
-                font-size: 16px;
-            }
-            .writing-controls {
-                gap: 8px;
-            }
-            .writing-btn {
-                padding: 6px 12px;
-                font-size: 11px;
+                width: 70vw;
+                height: 70vw;
             }
         }
         .writing-character-box.completed { 
@@ -195,10 +194,11 @@
             font-size: 16px; 
             font-weight: bold; 
             color: #1a472a; 
-            margin: 35px 0 15px; 
+            margin: 15px 0; 
             padding: 10px; 
             background: #e8f5e9; 
             border-radius: 8px; 
+            flex-shrink: 0;
         }
         .writing-controls { 
             display: flex; 
@@ -206,6 +206,7 @@
             justify-content: center; 
             margin: 15px 0; 
             flex-wrap: wrap; 
+            flex-shrink: 0;
         }
         .writing-btn { 
             background: #2d6a4f; 
@@ -234,6 +235,36 @@
         .writing-clear-btn { 
             background: #e94560; 
         }
+        .status { 
+            flex-shrink: 0;
+            font-size: 12px;
+        }
+        
+        /* Pronunciation feedback indicators */
+        .pronounce-status {
+            display: inline-block;
+            margin-left: 8px;
+            font-size: 12px;
+            vertical-align: middle;
+        }
+        .pronounce-loading {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #ffd700;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 5px;
+        }
+        .pronounce-success {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .pronounce-error {
+            color: #e94560;
+            font-weight: bold;
+        }
         
         .lesson-content { background: white; border-radius: 16px; margin-top: 12px; padding: 16px; max-height: 55vh; overflow-y: auto; font-size: 15px; }
         .section { margin-bottom: 20px; }
@@ -244,7 +275,7 @@
         .vocab-card { background: #fafafa; border-radius: 10px; padding: 10px; border: 1px solid #eee; }
         .vocab-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 5px; }
         .vocab-word { font-size: 22px; font-weight: bold; color: #1a472a; cursor: pointer; }
-        .vocab-buttons { display: flex; gap: 6px; }
+        .vocab-buttons { display: flex; gap: 6px; align-items: center; }
         .action-icon-btn { background: #e8f5e9; border: 1px solid #2d6a4f; color: #2d6a4f; padding: 4px 8px; border-radius: 20px; cursor: pointer; font-size: 11px; font-weight: bold; }
         .write-btn { background: #ffd700; border-color: #d4a500; color: #1a472a; }
         .vocab-pinyin { color: #e94560; font-size: 13px; margin: 4px 0; }
@@ -559,8 +590,9 @@
         '电': 5, '影': 15, '有': 6, '意': 13, '思': 9, '钱': 10, '包': 5, '忘': 7,
         '长': 4, '城': 9, '减': 11, '肥': 8, '你': 7, '好': 6, '我': 7, '叫': 5,
         '什': 4, '么': 3, '名': 6, '字': 6, '是': 9, '学': 8, '生': 5, '老': 6,
-        '师': 6, '再': 6, '见': 7, '谢': 12, '谢': 12, '医': 7, '生': 5, '爱': 10,
-        '情': 11, '细': 8, '节': 5, '未': 5, '来': 7, '趋': 12, '势': 8
+        '师': 6, '再': 6, '见': 7, '谢': 12, '医': 7, '爱': 10, '情': 11, '细': 8,
+        '节': 5, '未': 5, '来': 7, '趋': 12, '势': 8, '医': 7, '生': 5, '简': 13,
+        '单': 8, '爱': 10, '情': 11
     };
     
     function getStrokeCount(char) { return strokeMap[char] || 6; }
@@ -625,7 +657,6 @@
             const canvas = document.createElement('canvas');
             canvas.className = 'writing-draw-canvas';
             canvas.id = `draw-canvas-${i}`;
-            // Make canvas responsive - set dimensions after DOM insertion
             canvas.style.width = '100%';
             canvas.style.height = '100%';
             canvas.width = 300;
@@ -659,7 +690,6 @@
         const data = drawingData[charIndex];
         const getCoords = (e) => {
             const rect = canvas.getBoundingClientRect();
-            // Use actual canvas dimensions for coordinate mapping
             const scaleX = canvas.width / rect.width;
             const scaleY = canvas.height / rect.height;
             let clientX, clientY;
@@ -933,15 +963,56 @@
     
     function playWord(word) { playAudio(word, 'zh', 'female'); }
     
-    function startPronunciationPractice(word, pinyin) {
-        if (!pronunciationRecognition) { addChatMessage("⚠️ Speech recognition not supported", false); return; }
+    // Updated pronunciation practice with loading indicator
+    function startPronunciationPractice(word, pinyin, buttonElement) {
+        if (!pronunciationRecognition) { 
+            addChatMessage("⚠️ Speech recognition not supported", false); 
+            return; 
+        }
+        
+        // Add loading indicator to the button
+        const originalText = buttonElement.innerHTML;
+        buttonElement.innerHTML = '⏳ ...';
+        buttonElement.disabled = true;
+        buttonElement.style.opacity = '0.7';
+        
+        addChatMessage(`🎤 Listening... Please pronounce "${word}" (${pinyin})`, false);
+        
         pronunciationRecognition.start();
         pronunciationRecognition.onresult = function(event) {
             const spoken = event.results[0][0].transcript;
             const isCorrect = spoken === word || spoken === pinyin || spoken.includes(word);
-            addChatMessage(isCorrect ? `✅ Excellent pronunciation of "${word}"!` : `❌ Try again. Correct: "${word}" (${pinyin})`, false);
+            
+            // Restore button
+            buttonElement.innerHTML = originalText;
+            buttonElement.disabled = false;
+            buttonElement.style.opacity = '1';
+            
+            if (isCorrect) {
+                addChatMessage(`✅ Excellent pronunciation of "${word}"! Great job! 🎉`, false);
+                // Optional: play success sound or visual feedback
+                buttonElement.style.background = '#28a745';
+                setTimeout(() => { buttonElement.style.background = '#e94560'; }, 1000);
+            } else {
+                addChatMessage(`❌ Please try again. Correct pronunciation: "${word}" (${pinyin})`, false);
+                buttonElement.style.background = '#dc3545';
+                setTimeout(() => { buttonElement.style.background = '#e94560'; }, 1000);
+            }
         };
-        pronunciationRecognition.onerror = function() { addChatMessage("❌ Could not hear you. Please try again.", false); };
+        pronunciationRecognition.onerror = function() { 
+            buttonElement.innerHTML = originalText;
+            buttonElement.disabled = false;
+            buttonElement.style.opacity = '1';
+            addChatMessage("❌ Could not hear you. Please try again.", false);
+        };
+        pronunciationRecognition.onend = function() {
+            // Ensure button is restored if recognition ends unexpectedly
+            if (buttonElement.disabled) {
+                buttonElement.innerHTML = originalText;
+                buttonElement.disabled = false;
+                buttonElement.style.opacity = '1';
+            }
+        };
     }
     
     function toggleVoiceInput() {
@@ -951,8 +1022,13 @@
         const voiceBtn = document.getElementById('voiceBtn');
         voiceBtn.classList.add('recording');
         recognition.start();
-        recognition.onresult = function(event) { document.getElementById('chatInput').value = event.results[0][0].transcript; isRecording = false; voiceBtn.classList.remove('recording'); };
-        recognition.onerror = function() { isRecording = false; voiceBtn.classList.remove('recording'); };
+        recognition.onresult = function(event) { 
+            document.getElementById('chatInput').value = event.results[0][0].transcript; 
+            isRecording = false; 
+            voiceBtn.classList.remove('recording');
+            addChatMessage(`🎤 Recognized: "${event.results[0][0].transcript}"`, false);
+        };
+        recognition.onerror = function() { isRecording = false; voiceBtn.classList.remove('recording'); addChatMessage("❌ Voice recognition failed. Please try again.", false); };
         recognition.onend = function() { if (isRecording) { isRecording = false; voiceBtn.classList.remove('recording'); } };
     }
     
@@ -1022,11 +1098,11 @@
         `;
         
         if (lessonData.vocabulary) {
-            document.getElementById('vocabGrid').innerHTML = lessonData.vocabulary.map(v => `
+            document.getElementById('vocabGrid').innerHTML = lessonData.vocabulary.map((v, idx) => `
                 <div class="vocab-card">
                     <div class="vocab-header"><div class="vocab-word" onclick="playWord('${v.word}')">${v.word}</div><div class="vocab-buttons"><button class="action-icon-btn" onclick="playWord('${v.word}')" title="read">read 🔊</button><button class="action-icon-btn write-btn" onclick="openWritingModal('${v.word}', '${v.pinyin}')" title="write">✍️ Write</button></div></div>
                     <div class="vocab-pinyin">${v.pinyin}</div><div class="vocab-meaning">${isId ? v.meaning_id : v.meaning}</div>
-                    <div class="vocab-example"><div>📝 ${v.example}</div><div style="font-size:9px;color:#888;">→ ${isId ? v.example_translation_id : v.example_translation}</div><button class="audio-btn" onclick="playAudio('${v.example}','zh','female')">🔊 Listen</button><button class="speak-practice-btn" onclick="startPronunciationPractice('${v.word}','${v.pinyin}')">🎤 Practice</button></div>
+                    <div class="vocab-example"><div>📝 ${v.example}</div><div style="font-size:9px;color:#888;">→ ${isId ? v.example_translation_id : v.example_translation}</div><button class="audio-btn" onclick="playAudio('${v.example}','zh','female')">🔊 Listen</button><button class="speak-practice-btn" id="practice-btn-${idx}" onclick="startPronunciationPractice('${v.word}','${v.pinyin}', this)">🎤 Practice</button></div>
                 </div>
             `).join('');
         }
