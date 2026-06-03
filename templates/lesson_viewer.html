@@ -216,7 +216,7 @@
         .status { font-size: 12px; }
         
         /* ============================================ */
-        /* LANDSCAPE MODE (Phone/Tablet Horizontal) */
+        /* LANDSCAPE MODE (Phone/Tablet Horizontal) - FIXED */
         /* ============================================ */
         @media (orientation: landscape) and (max-width: 900px) {
             .writing-character-box {
@@ -226,10 +226,11 @@
             .writing-boxes-container {
                 gap: 12px;
             }
+            /* Scale character to 70% of box size (70% of 160px = 112px) */
             .writing-hanzi-target svg,
             .writing-hanzi-target canvas {
-                width: 80px !important;
-                height: 80px !important;
+                width: 112px !important;
+                height: 112px !important;
             }
         }
         
@@ -238,10 +239,14 @@
                 width: 140px;
                 height: 140px;
             }
+            /* Scale character to 70% of box size (70% of 140px = 98px) */
             .writing-hanzi-target svg,
             .writing-hanzi-target canvas {
-                width: 70px !important;
-                height: 70px !important;
+                width: 98px !important;
+                height: 98px !important;
+            }
+            .writing-boxes-container {
+                gap: 10px;
             }
         }
         
@@ -748,7 +753,7 @@
                 if (window.innerWidth <= 768 && window.matchMedia('(orientation: portrait)').matches) {
                     writerSize = 126;  // 70% of 180px box
                 } else if (window.innerWidth <= 900 && window.matchMedia('(orientation: landscape)').matches) {
-                    writerSize = 80;
+                    writerSize = 112;  // 70% of 160px box
                 }
                 const writer = HanziWriter.create(`hanzi-target-${i}`, char, { 
                     width: writerSize, 
@@ -878,7 +883,7 @@
                 if (window.innerWidth <= 768 && window.matchMedia('(orientation: portrait)').matches) {
                     writerSize = 126;
                 } else if (window.innerWidth <= 900 && window.matchMedia('(orientation: landscape)').matches) {
-                    writerSize = 80;
+                    writerSize = 112;
                 }
                 const tempWriter = HanziWriter.create(targetId, char, { 
                     width: writerSize, 
@@ -905,7 +910,7 @@
         if (window.innerWidth <= 768 && window.matchMedia('(orientation: portrait)').matches) {
             writerSize = 126;
         } else if (window.innerWidth <= 900 && window.matchMedia('(orientation: landscape)').matches) {
-            writerSize = 80;
+            writerSize = 112;
         }
         
         for (let i = 0; i < characters.length; i++) {
@@ -950,7 +955,7 @@
         if (window.innerWidth <= 768 && window.matchMedia('(orientation: portrait)').matches) {
             writerSize = 126;
         } else if (window.innerWidth <= 900 && window.matchMedia('(orientation: landscape)').matches) {
-            writerSize = 80;
+            writerSize = 112;
         }
         
         for (let i = 0; i < characters.length; i++) {
@@ -1010,7 +1015,7 @@
             if (window.innerWidth <= 768 && window.matchMedia('(orientation: portrait)').matches) {
                 writerSize = 126;
             } else if (window.innerWidth <= 900 && window.matchMedia('(orientation: landscape)').matches) {
-                writerSize = 80;
+                writerSize = 112;
             }
             for (let i = 0; i < characters.length; i++) {
                 const targetDiv = document.getElementById(`hanzi-target-${i}`);
@@ -1568,4 +1573,3 @@ function checkAndNavigate(level, lessonNum) {
 
 </body>
 </html>
-
