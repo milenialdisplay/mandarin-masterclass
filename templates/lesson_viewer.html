@@ -52,9 +52,7 @@
         .character-result.show { display: block; }
         .character-result-word { font-size: 36px; font-weight: bold; color: #1a472a; }
         
-        /* ============================================ */
         /* WRITING MODAL - BASE STYLES */
-        /* ============================================ */
         .writing-modal { 
             display: none; 
             position: fixed; 
@@ -102,7 +100,7 @@
             font-size: 20px; 
         }
         
-        /* Horizontal layout - DEFAULT (Desktop/Laptop) */
+        /* Horizontal layout - DEFAULT (Desktop/Laptop/Tablet Landscape) */
         .writing-boxes-container { 
             display: flex; 
             flex-direction: row;
@@ -126,27 +124,6 @@
             overflow: hidden; 
         }
         
-        /* Ensure HanziWriter content is centered and fits */
-        .writing-hanzi-target {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .writing-hanzi-target svg,
-        .writing-hanzi-target canvas {
-            display: block;
-            margin: 0 auto;
-            width: 100% !important;
-            height: 100% !important;
-        }
-        
         .writing-character-box.completed { 
             border-color: #28a745; 
             background: #f0fff0; 
@@ -163,6 +140,14 @@
             0%, 100% { transform: translateX(0); } 
             25% { transform: translateX(-5px); } 
             75% { transform: translateX(5px); } 
+        }
+        .writing-hanzi-target { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            z-index: 1; 
         }
         .writing-draw-canvas { 
             position: absolute; 
@@ -217,53 +202,7 @@
         .writing-clear-btn { background: #e94560; }
         .status { font-size: 12px; }
         
-        /* ============================================ */
-        /* LANDSCAPE MODE FOR MOBILE/TABLET - FIXED */
-        /* ============================================ */
-        @media (orientation: landscape) and (max-width: 900px) {
-            .writing-boxes-container {
-                flex-direction: row !important;
-                flex-wrap: wrap !important;
-                justify-content: center !important;
-                align-items: center !important;
-                gap: 15px;
-            }
-            
-            .writing-character-box {
-                width: 160px;
-                height: 160px;
-            }
-            
-            /* Force SVG to scale to fit box completely */
-            .writing-hanzi-target svg,
-            .writing-hanzi-target canvas {
-                width: 100% !important;
-                height: 100% !important;
-                max-width: 100%;
-                max-height: 100%;
-            }
-        }
-        
-        @media (orientation: landscape) and (max-width: 700px) {
-            .writing-character-box {
-                width: 130px;
-                height: 130px;
-            }
-            .writing-boxes-container {
-                gap: 10px;
-            }
-        }
-        
-        @media (orientation: landscape) and (min-width: 901px) and (max-width: 1200px) {
-            .writing-character-box {
-                width: 200px;
-                height: 200px;
-            }
-        }
-        
-        /* ============================================ */
-        /* PORTRAIT MODE (Mobile Vertical) - STACK & SCROLL */
-        /* ============================================ */
+        /* ========== PORTRAIT MODE (Mobile Vertical) - STACK & SCROLL ========== */
         @media (orientation: portrait) and (max-width: 768px) {
             .writing-modal-content {
                 display: flex;
@@ -275,7 +214,6 @@
                 max-width: 400px;
             }
             .writing-modal-header { flex-shrink: 0; margin-bottom: 10px; }
-            
             .writing-boxes-container {
                 flex-direction: column !important;
                 overflow-y: auto !important;
@@ -287,11 +225,9 @@
                 padding: 15px 10px;
                 -webkit-overflow-scrolling: touch;
             }
-            
             .writing-boxes-container::-webkit-scrollbar { width: 4px; }
             .writing-boxes-container::-webkit-scrollbar-track { background: #e8f5e9; border-radius: 10px; }
             .writing-boxes-container::-webkit-scrollbar-thumb { background: #2d6a4f; border-radius: 10px; }
-            
             .writing-character-box {
                 width: 85vw;
                 max-width: 320px;
@@ -300,13 +236,6 @@
                 margin: 0 auto;
                 flex-shrink: 0;
             }
-            
-            .writing-hanzi-target svg,
-            .writing-hanzi-target canvas {
-                width: 100% !important;
-                height: 100% !important;
-            }
-            
             .writing-stroke-counter { flex-shrink: 0; margin: 8px 0; padding: 8px; font-size: 14px; }
             .writing-controls { flex-shrink: 0; margin: 8px 0; gap: 8px; }
             .writing-btn { padding: 6px 14px; font-size: 11px; }
@@ -323,6 +252,27 @@
             }
             .writing-boxes-container { 
                 max-height: 50vh; 
+            }
+        }
+        
+        /* ========== LANDSCAPE MODE FOR SMALL SCREENS ========== */
+        @media (orientation: landscape) and (max-width: 900px) {
+            .writing-character-box {
+                width: 160px;
+                height: 160px;
+            }
+            .writing-boxes-container {
+                gap: 12px;
+            }
+        }
+        
+        @media (orientation: landscape) and (max-width: 700px) {
+            .writing-character-box {
+                width: 140px;
+                height: 140px;
+            }
+            .writing-boxes-container {
+                gap: 10px;
             }
         }
         
@@ -654,7 +604,7 @@
         '节': 5, '未': 5, '来': 7, '趋': 12, '势': 8, '简': 13, '单': 8, '智': 12,
         '能': 10, '人': 2, '工': 3, '的': 8, '追': 9, '求': 7, '卓': 8, '越': 12,
         '目': 5, '标': 9, '努': 7, '力': 2, '坚': 7, '持': 9, '突': 9, '破': 10,
-        '准': 10, '激': 16, '情': 11, '成': 6, '功': 5, '长': 4, '医': 7, '生': 5
+        '准': 10, '激': 16, '成': 6, '功': 5
     };
     
     function getStrokeCount(char) { return strokeMap[char] || 6; }
@@ -738,24 +688,9 @@
             drawingData[i] = { canvas, ctx, isDrawing: false, points: [], strokeCount: 0, completed: false, currentStrokePoints: [] };
             setupCanvasEvents(canvas, i);
             try {
-                // Get the actual box size for HanziWriter
-                const boxWidth = box.offsetWidth;
-                const boxHeight = box.offsetHeight;
-                const writerSize = Math.min(boxWidth, boxHeight, 250);
-                
-                const writer = HanziWriter.create(`hanzi-target-${i}`, char, { 
-                    width: writerSize, 
-                    height: writerSize, 
-                    showOutline: !isWhitePaperMode, 
-                    showCharacter: true, 
-                    outlineColor: '#d3d3d3', 
-                    strokeColor: '#000000',
-                    padding: 5
-                });
+                const writer = HanziWriter.create(`hanzi-target-${i}`, char, { width: 250, height: 250, showOutline: !isWhitePaperMode, showCharacter: true, outlineColor: '#d3d3d3', strokeColor: '#000000' });
                 writers.push(writer);
-            } catch(e) { 
-                writers.push(null); 
-            }
+            } catch(e) { writers.push(null); }
         }
         const totalAllStrokes = wordChars.reduce((sum, ch) => sum + getStrokeCount(ch), 0);
         document.getElementById('writingTotalStrokes').innerText = totalAllStrokes;
@@ -888,18 +823,7 @@
                 const targetDiv = document.getElementById(`hanzi-target-${i}`);
                 if (targetDiv) {
                     targetDiv.innerHTML = '';
-                    const boxWidth = document.getElementById(`char-box-${i}`).offsetWidth;
-                    const writerSize = Math.min(boxWidth, 250);
-                    try { 
-                        writers[i] = HanziWriter.create(`hanzi-target-${i}`, characters[i], { 
-                            width: writerSize, 
-                            height: writerSize, 
-                            showOutline: true, 
-                            showCharacter: false, 
-                            outlineColor: '#d3d3d3', 
-                            strokeColor: '#000000' 
-                        }); 
-                    } catch(e) {}
+                    try { writers[i] = HanziWriter.create(`hanzi-target-${i}`, characters[i], { width: 250, height: 250, showOutline: true, showCharacter: false, outlineColor: '#d3d3d3', strokeColor: '#000000' }); } catch(e) {}
                 }
             }
         }
@@ -928,17 +852,7 @@
                 const targetDiv = document.getElementById(`hanzi-target-${i}`);
                 if (targetDiv) {
                     targetDiv.innerHTML = '';
-                    const boxWidth = document.getElementById(`char-box-${i}`).offsetWidth;
-                    const writerSize = Math.min(boxWidth, 250);
-                    try { 
-                        writers[i] = HanziWriter.create(`hanzi-target-${i}`, characters[i], { 
-                            width: writerSize, 
-                            height: writerSize, 
-                            showOutline: false, 
-                            showCharacter: false, 
-                            strokeColor: '#000000' 
-                        }); 
-                    } catch(e) {}
+                    try { writers[i] = HanziWriter.create(`hanzi-target-${i}`, characters[i], { width: 250, height: 250, showOutline: false, showCharacter: false, strokeColor: '#000000' }); } catch(e) {}
                 }
             }
         }
@@ -979,18 +893,7 @@
                 const targetDiv = document.getElementById(`hanzi-target-${i}`);
                 if (targetDiv) {
                     targetDiv.innerHTML = '';
-                    const boxWidth = document.getElementById(`char-box-${i}`).offsetWidth;
-                    const writerSize = Math.min(boxWidth, 250);
-                    try { 
-                        writers[i] = HanziWriter.create(`hanzi-target-${i}`, characters[i], { 
-                            width: writerSize, 
-                            height: writerSize, 
-                            showOutline: true, 
-                            showCharacter: false, 
-                            outlineColor: '#d3d3d3', 
-                            strokeColor: '#000000' 
-                        }); 
-                    } catch(e) {}
+                    try { writers[i] = HanziWriter.create(`hanzi-target-${i}`, characters[i], { width: 250, height: 250, showOutline: true, showCharacter: false, outlineColor: '#d3d3d3', strokeColor: '#000000' }); } catch(e) {}
                 }
             }
         }
