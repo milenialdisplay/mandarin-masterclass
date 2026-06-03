@@ -226,7 +226,6 @@
             .writing-boxes-container {
                 gap: 12px;
             }
-            /* Scale character to 50% of box size */
             .writing-hanzi-target svg,
             .writing-hanzi-target canvas {
                 width: 80px !important;
@@ -247,7 +246,7 @@
         }
         
         /* ============================================ */
-        /* PORTRAIT MODE (Phone/Tablet Vertical) */
+        /* PORTRAIT MODE (Phone/Tablet Vertical) - IMPROVED SCROLLING */
         /* ============================================ */
         @media (orientation: portrait) and (max-width: 768px) {
             .writing-modal-content {
@@ -261,7 +260,7 @@
             }
             .writing-modal-header { flex-shrink: 0; margin-bottom: 10px; }
             
-            /* Horizontal scrollable row */
+            /* Horizontal scrollable row - IMPROVED SCROLLING */
             .writing-boxes-container {
                 flex-direction: row !important;
                 overflow-x: auto !important;
@@ -272,26 +271,45 @@
                 -webkit-overflow-scrolling: touch;
                 justify-content: flex-start !important;
                 flex-wrap: nowrap !important;
+                cursor: grab;
+                scrollbar-width: thick;
             }
             
-            /* Custom scrollbar */
-            .writing-boxes-container::-webkit-scrollbar { height: 4px; }
-            .writing-boxes-container::-webkit-scrollbar-track { background: #e8f5e9; border-radius: 10px; }
-            .writing-boxes-container::-webkit-scrollbar-thumb { background: #2d6a4f; border-radius: 10px; }
+            .writing-boxes-container:active {
+                cursor: grabbing;
+            }
+            
+            /* THICKER SCROLLBAR - easier to grab */
+            .writing-boxes-container::-webkit-scrollbar {
+                height: 10px;
+            }
+            .writing-boxes-container::-webkit-scrollbar-track {
+                background: #e8f5e9;
+                border-radius: 10px;
+                margin: 0 10px;
+            }
+            .writing-boxes-container::-webkit-scrollbar-thumb {
+                background: #2d6a4f;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            .writing-boxes-container::-webkit-scrollbar-thumb:hover {
+                background: #1a472a;
+            }
             
             /* Fixed width boxes, side by side */
             .writing-character-box {
-                width: 260px;
-                height: 260px;
+                width: 180px;
+                height: 180px;
                 flex-shrink: 0;
                 margin: 0;
             }
             
-            /* Scale character to 50% of box size - FIXED SIZE */
+            /* Scale character to 70% of box size (70% of 180px = 126px) */
             .writing-hanzi-target svg,
             .writing-hanzi-target canvas {
-                width: 130px !important;
-                height: 130px !important;
+                width: 126px !important;
+                height: 126px !important;
             }
             
             .writing-stroke-counter { flex-shrink: 0; margin: 8px 0; padding: 8px; font-size: 14px; }
@@ -303,13 +321,13 @@
         
         @media (orientation: portrait) and (max-width: 480px) {
             .writing-character-box { 
-                width: 240px; 
-                height: 240px; 
+                width: 160px; 
+                height: 160px; 
             }
             .writing-hanzi-target svg,
             .writing-hanzi-target canvas {
-                width: 120px !important;
-                height: 120px !important;
+                width: 112px !important;
+                height: 112px !important;
             }
         }
         
@@ -728,7 +746,7 @@
                 // Create HanziWriter with specific size based on device
                 let writerSize = 250;
                 if (window.innerWidth <= 768 && window.matchMedia('(orientation: portrait)').matches) {
-                    writerSize = 130;
+                    writerSize = 126;  // 70% of 180px box
                 } else if (window.innerWidth <= 900 && window.matchMedia('(orientation: landscape)').matches) {
                     writerSize = 80;
                 }
@@ -858,7 +876,7 @@
                 targetDiv.innerHTML = '';
                 let writerSize = 250;
                 if (window.innerWidth <= 768 && window.matchMedia('(orientation: portrait)').matches) {
-                    writerSize = 130;
+                    writerSize = 126;
                 } else if (window.innerWidth <= 900 && window.matchMedia('(orientation: landscape)').matches) {
                     writerSize = 80;
                 }
@@ -885,7 +903,7 @@
         
         let writerSize = 250;
         if (window.innerWidth <= 768 && window.matchMedia('(orientation: portrait)').matches) {
-            writerSize = 130;
+            writerSize = 126;
         } else if (window.innerWidth <= 900 && window.matchMedia('(orientation: landscape)').matches) {
             writerSize = 80;
         }
@@ -930,7 +948,7 @@
         
         let writerSize = 250;
         if (window.innerWidth <= 768 && window.matchMedia('(orientation: portrait)').matches) {
-            writerSize = 130;
+            writerSize = 126;
         } else if (window.innerWidth <= 900 && window.matchMedia('(orientation: landscape)').matches) {
             writerSize = 80;
         }
@@ -990,7 +1008,7 @@
         if (writingModeActive && !isWhitePaperMode) {
             let writerSize = 250;
             if (window.innerWidth <= 768 && window.matchMedia('(orientation: portrait)').matches) {
-                writerSize = 130;
+                writerSize = 126;
             } else if (window.innerWidth <= 900 && window.matchMedia('(orientation: landscape)').matches) {
                 writerSize = 80;
             }
