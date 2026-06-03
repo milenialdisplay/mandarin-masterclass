@@ -52,7 +52,9 @@
         .character-result.show { display: block; }
         .character-result-word { font-size: 36px; font-weight: bold; color: #1a472a; }
         
+        /* ============================================ */
         /* WRITING MODAL - BASE STYLES */
+        /* ============================================ */
         .writing-modal { 
             display: none; 
             position: fixed; 
@@ -100,7 +102,7 @@
             font-size: 20px; 
         }
         
-        /* Horizontal layout - DEFAULT (Desktop/Laptop/Tablet Landscape) */
+        /* Horizontal layout - DEFAULT (Desktop/Laptop) - UNCHANGED */
         .writing-boxes-container { 
             display: flex; 
             flex-direction: row;
@@ -124,6 +126,25 @@
             overflow: hidden; 
         }
         
+        /* Ensure HanziWriter content is centered */
+        .writing-hanzi-target {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .writing-hanzi-target svg,
+        .writing-hanzi-target canvas {
+            display: block;
+            margin: 0 auto;
+        }
+        
         .writing-character-box.completed { 
             border-color: #28a745; 
             background: #f0fff0; 
@@ -140,14 +161,6 @@
             0%, 100% { transform: translateX(0); } 
             25% { transform: translateX(-5px); } 
             75% { transform: translateX(5px); } 
-        }
-        .writing-hanzi-target { 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            z-index: 1; 
         }
         .writing-draw-canvas { 
             position: absolute; 
@@ -202,7 +215,53 @@
         .writing-clear-btn { background: #e94560; }
         .status { font-size: 12px; }
         
-        /* ========== PORTRAIT MODE (Mobile Vertical) - STACK & SCROLL ========== */
+        /* ============================================ */
+        /* LANDSCAPE MODE (Phone/Tablet Horizontal) */
+        /* ============================================ */
+        @media (orientation: landscape) and (max-width: 900px) {
+            .writing-boxes-container {
+                flex-direction: row !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                align-items: center !important;
+                gap: 15px;
+            }
+            
+            .writing-character-box {
+                width: 160px;
+                height: 160px;
+            }
+            
+            /* Scale character to fit inside frame (60-70% of box) */
+            .writing-hanzi-target svg,
+            .writing-hanzi-target canvas {
+                width: 65% !important;
+                height: 65% !important;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        
+        @media (orientation: landscape) and (max-width: 700px) {
+            .writing-character-box {
+                width: 140px;
+                height: 140px;
+            }
+            .writing-boxes-container {
+                gap: 10px;
+            }
+            .writing-hanzi-target svg,
+            .writing-hanzi-target canvas {
+                width: 60% !important;
+                height: 60% !important;
+            }
+        }
+        
+        /* ============================================ */
+        /* PORTRAIT MODE (Phone/Tablet Vertical) - HORIZONTAL SCROLLABLE */
+        /* ============================================ */
         @media (orientation: portrait) and (max-width: 768px) {
             .writing-modal-content {
                 display: flex;
@@ -214,28 +273,44 @@
                 max-width: 400px;
             }
             .writing-modal-header { flex-shrink: 0; margin-bottom: 10px; }
+            
+            /* Horizontal scrollable row */
             .writing-boxes-container {
-                flex-direction: column !important;
-                overflow-y: auto !important;
-                overflow-x: hidden;
-                max-height: 55vh;
-                min-height: 250px;
-                gap: 25px;
+                flex-direction: row !important;
+                overflow-x: auto !important;
+                overflow-y: hidden !important;
+                white-space: nowrap;
+                gap: 20px;
                 margin: 5px 0;
                 padding: 15px 10px;
                 -webkit-overflow-scrolling: touch;
+                justify-content: flex-start !important;
             }
-            .writing-boxes-container::-webkit-scrollbar { width: 4px; }
+            
+            /* Custom scrollbar */
+            .writing-boxes-container::-webkit-scrollbar { height: 4px; }
             .writing-boxes-container::-webkit-scrollbar-track { background: #e8f5e9; border-radius: 10px; }
             .writing-boxes-container::-webkit-scrollbar-thumb { background: #2d6a4f; border-radius: 10px; }
+            
+            /* Each box - fixed width, side by side */
             .writing-character-box {
-                width: 85vw;
-                max-width: 320px;
-                height: 85vw;
-                max-height: 320px;
-                margin: 0 auto;
+                width: 280px;
+                height: 280px;
                 flex-shrink: 0;
+                margin: 0;
             }
+            
+            /* Center character in portrait mode */
+            .writing-hanzi-target svg,
+            .writing-hanzi-target canvas {
+                width: 70% !important;
+                height: 70% !important;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            
             .writing-stroke-counter { flex-shrink: 0; margin: 8px 0; padding: 8px; font-size: 14px; }
             .writing-controls { flex-shrink: 0; margin: 8px 0; gap: 8px; }
             .writing-btn { padding: 6px 14px; font-size: 11px; }
@@ -245,34 +320,13 @@
         
         @media (orientation: portrait) and (max-width: 480px) {
             .writing-character-box { 
-                width: 90vw; 
-                max-width: 280px; 
-                height: 90vw; 
-                max-height: 280px; 
+                width: 260px; 
+                height: 260px; 
             }
-            .writing-boxes-container { 
-                max-height: 50vh; 
-            }
-        }
-        
-        /* ========== LANDSCAPE MODE FOR SMALL SCREENS ========== */
-        @media (orientation: landscape) and (max-width: 900px) {
-            .writing-character-box {
-                width: 160px;
-                height: 160px;
-            }
-            .writing-boxes-container {
-                gap: 12px;
-            }
-        }
-        
-        @media (orientation: landscape) and (max-width: 700px) {
-            .writing-character-box {
-                width: 140px;
-                height: 140px;
-            }
-            .writing-boxes-container {
-                gap: 10px;
+            .writing-hanzi-target svg,
+            .writing-hanzi-target canvas {
+                width: 65% !important;
+                height: 65% !important;
             }
         }
         
@@ -692,10 +746,11 @@
                 writers.push(writer);
             } catch(e) { writers.push(null); }
         }
-        const totalAllStrokes = wordChars.reduce((sum, ch) => sum + getStrokeCount(ch), 0);
-        document.getElementById('writingTotalStrokes').innerText = totalAllStrokes;
+        // Show only current character's stroke count, not total
+        const currentCharStrokes = getStrokeCount(wordChars[0]);
+        document.getElementById('writingTotalStrokes').innerText = currentCharStrokes;
         document.getElementById('writingStrokeCount').innerText = '0';
-        totalStrokesForCurrentChar = getStrokeCount(wordChars[0]);
+        totalStrokesForCurrentChar = currentCharStrokes;
     }
     
     function setupCanvasEvents(canvas, charIndex) {
@@ -747,7 +802,7 @@
                     data.strokeCount++;
                     let totalCompleted = 0;
                     for (let i = 0; i <= activeCharIndex; i++) totalCompleted += drawingData[i]?.strokeCount || 0;
-                    document.getElementById('writingStrokeCount').innerText = totalCompleted;
+                    document.getElementById('writingStrokeCount').innerText = data.strokeCount;
                     if (data.strokeCount >= totalStrokesForCurrentChar) {
                         data.completed = true;
                         completedChars[charIndex] = true;
@@ -757,6 +812,8 @@
                         if (charIndex + 1 < characters.length) {
                             activeCharIndex = charIndex + 1;
                             totalStrokesForCurrentChar = getStrokeCount(characters[activeCharIndex]);
+                            document.getElementById('writingTotalStrokes').innerText = totalStrokesForCurrentChar;
+                            document.getElementById('writingStrokeCount').innerText = '0';
                             const nextBox = document.getElementById(`char-box-${activeCharIndex}`);
                             if (nextBox) nextBox.classList.add('active');
                             updateStatus(`Now practice "${characters[activeCharIndex]}"! (${totalStrokesForCurrentChar} strokes)`, 'success');
@@ -830,13 +887,12 @@
         completedChars.fill(false);
         activeCharIndex = 0;
         totalStrokesForCurrentChar = getStrokeCount(characters[0]);
+        document.getElementById('writingTotalStrokes').innerText = totalStrokesForCurrentChar;
+        document.getElementById('writingStrokeCount').innerText = '0';
         for (let i = 0; i < characters.length; i++) {
             const box = document.getElementById(`char-box-${i}`);
             if (box) { box.classList.remove('completed', 'active'); box.style.boxShadow = 'none'; if (i === 0) box.classList.add('active'); }
         }
-        document.getElementById('writingStrokeCount').innerText = '0';
-        const totalAllStrokes = characters.reduce((sum, ch) => sum + getStrokeCount(ch), 0);
-        document.getElementById('writingTotalStrokes').innerText = totalAllStrokes;
         updateStatus(`✍️ Write mode activated! Complete "${characters[0]}" first (${totalStrokesForCurrentChar} strokes).`, 'success');
     }
     
@@ -859,13 +915,12 @@
         completedChars.fill(false);
         activeCharIndex = 0;
         totalStrokesForCurrentChar = getStrokeCount(characters[0]);
+        document.getElementById('writingTotalStrokes').innerText = totalStrokesForCurrentChar;
+        document.getElementById('writingStrokeCount').innerText = '0';
         for (let i = 0; i < characters.length; i++) {
             const box = document.getElementById(`char-box-${i}`);
             if (box) { box.classList.remove('completed', 'active'); box.style.boxShadow = 'none'; if (i === 0) box.classList.add('active'); }
         }
-        document.getElementById('writingStrokeCount').innerText = '0';
-        const totalAllStrokes = characters.reduce((sum, ch) => sum + getStrokeCount(ch), 0);
-        document.getElementById('writingTotalStrokes').innerText = totalAllStrokes;
         updateStatus('📄 White paper mode - Write from memory!', 'success');
     }
     
@@ -882,11 +937,12 @@
         completedChars.fill(false);
         activeCharIndex = 0;
         totalStrokesForCurrentChar = getStrokeCount(characters[0]);
+        document.getElementById('writingTotalStrokes').innerText = totalStrokesForCurrentChar;
+        document.getElementById('writingStrokeCount').innerText = '0';
         for (let i = 0; i < characters.length; i++) {
             const box = document.getElementById(`char-box-${i}`);
             if (box) { box.classList.remove('completed', 'active'); if (i === 0) box.classList.add('active'); }
         }
-        document.getElementById('writingStrokeCount').innerText = '0';
         updateStatus('Canvas cleared. Start over!', 'info');
         if (writingModeActive && !isWhitePaperMode) {
             for (let i = 0; i < characters.length; i++) {
