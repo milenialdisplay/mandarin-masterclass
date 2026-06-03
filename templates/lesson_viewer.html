@@ -52,7 +52,7 @@
         .character-result.show { display: block; }
         .character-result-word { font-size: 36px; font-weight: bold; color: #1a472a; }
         
-        /* WRITING MODAL - BASE STYLES (UNCHANGED) */
+        /* WRITING MODAL - BASE STYLES */
         .writing-modal { 
             display: none; 
             position: fixed; 
@@ -100,7 +100,7 @@
             font-size: 20px; 
         }
         
-        /* Horizontal layout (UNCHANGED - KEPT ORIGINAL) */
+        /* Horizontal layout (Desktop/Laptop/Tablet Landscape) - SHOW ALL BOXES */
         .writing-boxes-container { 
             display: flex; 
             flex-direction: row;
@@ -202,7 +202,7 @@
         .writing-clear-btn { background: #e94560; }
         .status { font-size: 12px; }
         
-        /* ========== ONLY ADDITION - PORTRAIT MODE VERTICAL SCROLL FIX ========== */
+        /* ========== PORTRAIT MODE (Mobile Vertical) - STACK & SCROLL ========== */
         @media (orientation: portrait) and (max-width: 768px) {
             .writing-modal-content {
                 display: flex;
@@ -243,9 +243,40 @@
             .box-label { font-size: 11px; bottom: -25px; }
         }
         
+        /* Small phones portrait */
         @media (orientation: portrait) and (max-width: 480px) {
             .writing-character-box { width: 90vw; max-width: 280px; height: 90vw; max-height: 280px; }
             .writing-boxes-container { max-height: 45vh; }
+        }
+        
+        /* ========== LANDSCAPE MODE (Mobile Horizontal) - SAME AS DESKTOP ========== */
+        /* Show ALL boxes side by side, wrapping to next line if needed */
+        @media (orientation: landscape) and (max-width: 900px) {
+            .writing-boxes-container {
+                flex-direction: row !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                align-items: center !important;
+                overflow-y: visible !important;
+                overflow-x: visible !important;
+                max-height: none !important;
+                gap: 15px;
+            }
+            .writing-character-box {
+                width: 160px;
+                height: 160px;
+            }
+        }
+        
+        /* Very small landscape screens */
+        @media (orientation: landscape) and (max-width: 700px) {
+            .writing-character-box {
+                width: 140px;
+                height: 140px;
+            }
+            .writing-boxes-container {
+                gap: 10px;
+            }
         }
         
         .lesson-content { background: white; border-radius: 16px; margin-top: 12px; padding: 16px; max-height: 55vh; overflow-y: auto; font-size: 15px; }
@@ -890,7 +921,7 @@
     }
 
     // ============================================
-    // MAIN CONTENT & AUDIO FUNCTIONS (FIXED - ORIGINAL WORKING VERSION)
+    // MAIN CONTENT & AUDIO FUNCTIONS (FIXED - WORKING)
     // ============================================
     
     let currentLanguage = 'en';
@@ -916,7 +947,7 @@
         renderContent();
     }
     
-    // ========== FIXED AUDIO FUNCTIONS - RESTORED TO ORIGINAL WORKING CODE ==========
+    // ========== AUDIO FUNCTIONS - WORKING ==========
     async function playAudio(text, language = 'zh', voiceType = 'female') {
         if (!text) return;
         audioQueue.push({text, language, voiceType});
