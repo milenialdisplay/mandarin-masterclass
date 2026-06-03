@@ -139,12 +139,6 @@
             justify-content: center;
         }
         
-        .writing-hanzi-target svg,
-        .writing-hanzi-target canvas {
-            display: block;
-            margin: 0 auto;
-        }
-        
         .writing-character-box.completed { 
             border-color: #28a745; 
             background: #f0fff0; 
@@ -232,11 +226,11 @@
                 height: 160px;
             }
             
-            /* Scale character to fit inside frame (60-70% of box) */
+            /* Scale character to 55% of box size - SMALLER, NOT CROPPED */
             .writing-hanzi-target svg,
             .writing-hanzi-target canvas {
-                width: 65% !important;
-                height: 65% !important;
+                width: 55% !important;
+                height: 55% !important;
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -254,8 +248,8 @@
             }
             .writing-hanzi-target svg,
             .writing-hanzi-target canvas {
-                width: 60% !important;
-                height: 60% !important;
+                width: 50% !important;
+                height: 50% !important;
             }
         }
         
@@ -274,7 +268,7 @@
             }
             .writing-modal-header { flex-shrink: 0; margin-bottom: 10px; }
             
-            /* Horizontal scrollable row */
+            /* Horizontal scrollable row - boxes side by side */
             .writing-boxes-container {
                 flex-direction: row !important;
                 overflow-x: auto !important;
@@ -285,6 +279,7 @@
                 padding: 15px 10px;
                 -webkit-overflow-scrolling: touch;
                 justify-content: flex-start !important;
+                flex-wrap: nowrap !important;
             }
             
             /* Custom scrollbar */
@@ -292,7 +287,7 @@
             .writing-boxes-container::-webkit-scrollbar-track { background: #e8f5e9; border-radius: 10px; }
             .writing-boxes-container::-webkit-scrollbar-thumb { background: #2d6a4f; border-radius: 10px; }
             
-            /* Each box - fixed width, side by side */
+            /* Each box - fixed width, side by side, not wrapping */
             .writing-character-box {
                 width: 280px;
                 height: 280px;
@@ -300,11 +295,11 @@
                 margin: 0;
             }
             
-            /* Center character in portrait mode */
+            /* Scale character to 55% of box size - SMALLER, NOT CROPPED, CENTERED */
             .writing-hanzi-target svg,
             .writing-hanzi-target canvas {
-                width: 70% !important;
-                height: 70% !important;
+                width: 55% !important;
+                height: 55% !important;
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -325,8 +320,8 @@
             }
             .writing-hanzi-target svg,
             .writing-hanzi-target canvas {
-                width: 65% !important;
-                height: 65% !important;
+                width: 50% !important;
+                height: 50% !important;
             }
         }
         
@@ -746,7 +741,7 @@
                 writers.push(writer);
             } catch(e) { writers.push(null); }
         }
-        // Show only current character's stroke count, not total
+        // Show only current character's stroke count
         const currentCharStrokes = getStrokeCount(wordChars[0]);
         document.getElementById('writingTotalStrokes').innerText = currentCharStrokes;
         document.getElementById('writingStrokeCount').innerText = '0';
