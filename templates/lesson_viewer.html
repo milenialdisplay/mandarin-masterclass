@@ -52,7 +52,9 @@
         .character-result.show { display: block; }
         .character-result-word { font-size: 36px; font-weight: bold; color: #1a472a; }
         
+        /* ============================================ */
         /* WRITING MODAL - BASE STYLES */
+        /* ============================================ */
         .writing-modal { 
             display: none; 
             position: fixed; 
@@ -100,7 +102,8 @@
             font-size: 20px; 
         }
         
-        /* Horizontal layout (Desktop/Laptop/Tablet Landscape) - SHOW ALL BOXES */
+        /* Horizontal layout - DEFAULT (Desktop/Laptop/Tablet Landscape) */
+        /* This shows ALL boxes side by side, wrapping to next line if needed */
         .writing-boxes-container { 
             display: flex; 
             flex-direction: row;
@@ -202,7 +205,9 @@
         .writing-clear-btn { background: #e94560; }
         .status { font-size: 12px; }
         
-        /* ========== PORTRAIT MODE (Mobile Vertical) - STACK & SCROLL ========== */
+        /* ============================================ */
+        /* PORTRAIT MODE (Mobile Vertical) - STACK & SCROLL */
+        /* ============================================ */
         @media (orientation: portrait) and (max-width: 768px) {
             .writing-modal-content {
                 display: flex;
@@ -214,28 +219,36 @@
                 max-width: 400px;
             }
             .writing-modal-header { flex-shrink: 0; margin-bottom: 10px; }
+            
+            /* STACK VERTICALLY - each box on top of another */
             .writing-boxes-container {
                 flex-direction: column !important;
                 overflow-y: auto !important;
                 overflow-x: hidden;
-                max-height: 50vh;
+                max-height: 55vh;
                 min-height: 250px;
-                gap: 20px;
+                gap: 25px;
                 margin: 5px 0;
-                padding: 10px 5px;
+                padding: 15px 10px;
                 -webkit-overflow-scrolling: touch;
             }
+            
+            /* Custom scrollbar */
             .writing-boxes-container::-webkit-scrollbar { width: 4px; }
             .writing-boxes-container::-webkit-scrollbar-track { background: #e8f5e9; border-radius: 10px; }
             .writing-boxes-container::-webkit-scrollbar-thumb { background: #2d6a4f; border-radius: 10px; }
+            
+            /* Each box - centered and properly sized */
             .writing-character-box {
                 width: 85vw;
-                max-width: 300px;
+                max-width: 320px;
                 height: 85vw;
-                max-height: 300px;
+                max-height: 320px;
                 margin: 0 auto;
                 flex-shrink: 0;
             }
+            
+            /* Fixed elements don't scroll */
             .writing-stroke-counter { flex-shrink: 0; margin: 8px 0; padding: 8px; font-size: 14px; }
             .writing-controls { flex-shrink: 0; margin: 8px 0; gap: 8px; }
             .writing-btn { padding: 6px 14px; font-size: 11px; }
@@ -243,15 +256,25 @@
             .box-label { font-size: 11px; bottom: -25px; }
         }
         
-        /* Small phones portrait */
+        /* Small phones portrait - adjust box size */
         @media (orientation: portrait) and (max-width: 480px) {
-            .writing-character-box { width: 90vw; max-width: 280px; height: 90vw; max-height: 280px; }
-            .writing-boxes-container { max-height: 45vh; }
+            .writing-character-box { 
+                width: 90vw; 
+                max-width: 280px; 
+                height: 90vw; 
+                max-height: 280px; 
+            }
+            .writing-boxes-container { 
+                max-height: 50vh; 
+            }
         }
         
-        /* ========== LANDSCAPE MODE (Mobile Horizontal) - SAME AS DESKTOP ========== */
-        /* Show ALL boxes side by side, wrapping to next line if needed */
+        /* ============================================ */
+        /* LANDSCAPE MODE (Mobile Horizontal) - SAME AS DESKTOP */
+        /* Shows ALL boxes side by side, exactly like laptop/desktop */
+        /* ============================================ */
         @media (orientation: landscape) and (max-width: 900px) {
+            /* Keep horizontal layout - NO vertical stacking */
             .writing-boxes-container {
                 flex-direction: row !important;
                 flex-wrap: wrap !important;
@@ -262,13 +285,15 @@
                 max-height: none !important;
                 gap: 15px;
             }
+            
+            /* Smaller boxes to fit more on screen, but ALL visible */
             .writing-character-box {
                 width: 160px;
                 height: 160px;
             }
         }
         
-        /* Very small landscape screens */
+        /* Very small landscape screens (phones) */
         @media (orientation: landscape) and (max-width: 700px) {
             .writing-character-box {
                 width: 140px;
@@ -276,6 +301,17 @@
             }
             .writing-boxes-container {
                 gap: 10px;
+            }
+        }
+        
+        /* Large landscape tablets - keep original size */
+        @media (orientation: landscape) and (min-width: 901px) and (max-width: 1200px) {
+            .writing-character-box {
+                width: 200px;
+                height: 200px;
+            }
+            .writing-boxes-container {
+                gap: 15px;
             }
         }
         
@@ -317,6 +353,12 @@
         .exercise-score { margin-top: 8px; padding: 6px; border-radius: 8px; text-align: center; font-size: 12px; }
         .score-good { background: #d4edda; color: #28a745; }
         .score-bad { background: #f8d7da; color: #dc3545; }
+        
+        /* Ensure characters are centered in the canvas */
+        .writing-hanzi-target svg {
+            display: block;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -605,7 +647,9 @@
         '什': 4, '么': 3, '名': 6, '字': 6, '是': 9, '学': 8, '生': 5, '老': 6,
         '师': 6, '再': 6, '见': 7, '谢': 12, '医': 7, '爱': 10, '情': 11, '细': 8,
         '节': 5, '未': 5, '来': 7, '趋': 12, '势': 8, '简': 13, '单': 8, '智': 12,
-        '能': 10, '人': 2, '工': 3, '的': 8
+        '能': 10, '人': 2, '工': 3, '的': 8, '追': 9, '求': 7, '卓': 8, '越': 12,
+        '目': 5, '标': 9, '努': 7, '力': 2, '坚': 7, '持': 9, '突': 9, '破': 10,
+        '标': 9, '准': 10, '激': 16, '情': 11, '成': 6, '功': 5, '成': 6, '长': 4
     };
     
     function getStrokeCount(char) { return strokeMap[char] || 6; }
@@ -921,7 +965,7 @@
     }
 
     // ============================================
-    // MAIN CONTENT & AUDIO FUNCTIONS (FIXED - WORKING)
+    // MAIN CONTENT & AUDIO FUNCTIONS
     // ============================================
     
     let currentLanguage = 'en';
@@ -1438,4 +1482,3 @@ function checkAndNavigate(level, lessonNum) {
 
 </body>
 </html>
-
