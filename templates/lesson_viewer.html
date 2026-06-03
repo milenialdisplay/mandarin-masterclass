@@ -102,7 +102,7 @@
             font-size: 20px; 
         }
         
-        /* Horizontal layout - DEFAULT (Desktop/Laptop) - UNCHANGED */
+        /* Desktop/Laptop - UNCHANGED */
         .writing-boxes-container { 
             display: flex; 
             flex-direction: row;
@@ -123,20 +123,26 @@
             background: #fafafa; 
             flex-shrink: 0;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
-            overflow: hidden; 
+            overflow: visible !important;
         }
         
-        /* Ensure HanziWriter content is centered */
         .writing-hanzi-target {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: auto;
+            height: auto;
             z-index: 1;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+        
+        .writing-hanzi-target svg,
+        .writing-hanzi-target canvas {
+            display: block;
+            margin: 0 auto;
         }
         
         .writing-character-box.completed { 
@@ -213,28 +219,18 @@
         /* LANDSCAPE MODE (Phone/Tablet Horizontal) */
         /* ============================================ */
         @media (orientation: landscape) and (max-width: 900px) {
-            .writing-boxes-container {
-                flex-direction: row !important;
-                flex-wrap: wrap !important;
-                justify-content: center !important;
-                align-items: center !important;
-                gap: 15px;
-            }
-            
             .writing-character-box {
                 width: 160px;
                 height: 160px;
             }
-            
-            /* Scale character to 55% of box size - SMALLER, NOT CROPPED */
+            .writing-boxes-container {
+                gap: 12px;
+            }
+            /* Scale character to 50% of box size */
             .writing-hanzi-target svg,
             .writing-hanzi-target canvas {
-                width: 55% !important;
-                height: 55% !important;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+                width: 80px !important;
+                height: 80px !important;
             }
         }
         
@@ -243,18 +239,15 @@
                 width: 140px;
                 height: 140px;
             }
-            .writing-boxes-container {
-                gap: 10px;
-            }
             .writing-hanzi-target svg,
             .writing-hanzi-target canvas {
-                width: 50% !important;
-                height: 50% !important;
+                width: 70px !important;
+                height: 70px !important;
             }
         }
         
         /* ============================================ */
-        /* PORTRAIT MODE (Phone/Tablet Vertical) - HORIZONTAL SCROLLABLE */
+        /* PORTRAIT MODE (Phone/Tablet Vertical) */
         /* ============================================ */
         @media (orientation: portrait) and (max-width: 768px) {
             .writing-modal-content {
@@ -264,18 +257,17 @@
                 overflow-y: hidden;
                 padding: 15px;
                 width: 95%;
-                max-width: 400px;
+                max-width: 450px;
             }
             .writing-modal-header { flex-shrink: 0; margin-bottom: 10px; }
             
-            /* Horizontal scrollable row - boxes side by side */
+            /* Horizontal scrollable row */
             .writing-boxes-container {
                 flex-direction: row !important;
                 overflow-x: auto !important;
                 overflow-y: hidden !important;
-                white-space: nowrap;
                 gap: 20px;
-                margin: 5px 0;
+                margin: 10px 0;
                 padding: 15px 10px;
                 -webkit-overflow-scrolling: touch;
                 justify-content: flex-start !important;
@@ -287,23 +279,19 @@
             .writing-boxes-container::-webkit-scrollbar-track { background: #e8f5e9; border-radius: 10px; }
             .writing-boxes-container::-webkit-scrollbar-thumb { background: #2d6a4f; border-radius: 10px; }
             
-            /* Each box - fixed width, side by side, not wrapping */
+            /* Fixed width boxes, side by side */
             .writing-character-box {
-                width: 280px;
-                height: 280px;
+                width: 260px;
+                height: 260px;
                 flex-shrink: 0;
                 margin: 0;
             }
             
-            /* Scale character to 55% of box size - SMALLER, NOT CROPPED, CENTERED */
+            /* Scale character to 50% of box size - FIXED SIZE */
             .writing-hanzi-target svg,
             .writing-hanzi-target canvas {
-                width: 55% !important;
-                height: 55% !important;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+                width: 130px !important;
+                height: 130px !important;
             }
             
             .writing-stroke-counter { flex-shrink: 0; margin: 8px 0; padding: 8px; font-size: 14px; }
@@ -315,13 +303,13 @@
         
         @media (orientation: portrait) and (max-width: 480px) {
             .writing-character-box { 
-                width: 260px; 
-                height: 260px; 
+                width: 240px; 
+                height: 240px; 
             }
             .writing-hanzi-target svg,
             .writing-hanzi-target canvas {
-                width: 50% !important;
-                height: 50% !important;
+                width: 120px !important;
+                height: 120px !important;
             }
         }
         
@@ -737,11 +725,25 @@
             drawingData[i] = { canvas, ctx, isDrawing: false, points: [], strokeCount: 0, completed: false, currentStrokePoints: [] };
             setupCanvasEvents(canvas, i);
             try {
-                const writer = HanziWriter.create(`hanzi-target-${i}`, char, { width: 250, height: 250, showOutline: !isWhitePaperMode, showCharacter: true, outlineColor: '#d3d3d3', strokeColor: '#000000' });
+                // Create HanziWriter with specific size based on device
+                let writerSize = 250;
+                if (window.innerWidth <= 768 && window.matchMedia('(orientation: portrait)').matches) {
+                    writerSize = 130;
+                } else if (window.innerWidth <= 900 && window.matchMedia('(orientation: landscape)').matches) {
+                    writerSize = 80;
+                }
+                const writer = HanziWriter.create(`hanzi-target-${i}`, char, { 
+                    width: writerSize, 
+                    height: writerSize, 
+                    showOutline: !isWhitePaperMode, 
+                    showCharacter: true, 
+                    outlineColor: '#d3d3d3', 
+                    strokeColor: '#000000',
+                    padding: 5
+                });
                 writers.push(writer);
             } catch(e) { writers.push(null); }
         }
-        // Show only current character's stroke count
         const currentCharStrokes = getStrokeCount(wordChars[0]);
         document.getElementById('writingTotalStrokes').innerText = currentCharStrokes;
         document.getElementById('writingStrokeCount').innerText = '0';
@@ -854,7 +856,20 @@
                     if (box) box.style.boxShadow = i === currentAnimIndex ? '0 0 0 3px #ffd700, 0 0 15px rgba(255,215,0,0.8)' : 'none';
                 }
                 targetDiv.innerHTML = '';
-                const tempWriter = HanziWriter.create(targetId, char, { width: 250, height: 250, showOutline: true, showCharacter: true, outlineColor: '#d3d3d3', strokeColor: '#2d6a4f' });
+                let writerSize = 250;
+                if (window.innerWidth <= 768 && window.matchMedia('(orientation: portrait)').matches) {
+                    writerSize = 130;
+                } else if (window.innerWidth <= 900 && window.matchMedia('(orientation: landscape)').matches) {
+                    writerSize = 80;
+                }
+                const tempWriter = HanziWriter.create(targetId, char, { 
+                    width: writerSize, 
+                    height: writerSize, 
+                    showOutline: true, 
+                    showCharacter: true, 
+                    outlineColor: '#d3d3d3', 
+                    strokeColor: '#2d6a4f' 
+                });
                 setTimeout(() => {
                     tempWriter.animateCharacter({ onComplete: () => { currentAnimIndex++; setTimeout(animateNextCharacter, 800); } });
                 }, 200);
@@ -867,6 +882,14 @@
         if (isAnimating) isAnimating = false;
         writingModeActive = true;
         isWhitePaperMode = false;
+        
+        let writerSize = 250;
+        if (window.innerWidth <= 768 && window.matchMedia('(orientation: portrait)').matches) {
+            writerSize = 130;
+        } else if (window.innerWidth <= 900 && window.matchMedia('(orientation: landscape)').matches) {
+            writerSize = 80;
+        }
+        
         for (let i = 0; i < characters.length; i++) {
             if (drawingData[i]) {
                 drawingData[i].strokeCount = 0;
@@ -875,7 +898,16 @@
                 const targetDiv = document.getElementById(`hanzi-target-${i}`);
                 if (targetDiv) {
                     targetDiv.innerHTML = '';
-                    try { writers[i] = HanziWriter.create(`hanzi-target-${i}`, characters[i], { width: 250, height: 250, showOutline: true, showCharacter: false, outlineColor: '#d3d3d3', strokeColor: '#000000' }); } catch(e) {}
+                    try { 
+                        writers[i] = HanziWriter.create(`hanzi-target-${i}`, characters[i], { 
+                            width: writerSize, 
+                            height: writerSize, 
+                            showOutline: true, 
+                            showCharacter: false, 
+                            outlineColor: '#d3d3d3', 
+                            strokeColor: '#000000' 
+                        }); 
+                    } catch(e) {}
                 }
             }
         }
@@ -895,6 +927,14 @@
         if (isAnimating) isAnimating = false;
         writingModeActive = true;
         isWhitePaperMode = true;
+        
+        let writerSize = 250;
+        if (window.innerWidth <= 768 && window.matchMedia('(orientation: portrait)').matches) {
+            writerSize = 130;
+        } else if (window.innerWidth <= 900 && window.matchMedia('(orientation: landscape)').matches) {
+            writerSize = 80;
+        }
+        
         for (let i = 0; i < characters.length; i++) {
             if (drawingData[i]) {
                 drawingData[i].strokeCount = 0;
@@ -903,7 +943,15 @@
                 const targetDiv = document.getElementById(`hanzi-target-${i}`);
                 if (targetDiv) {
                     targetDiv.innerHTML = '';
-                    try { writers[i] = HanziWriter.create(`hanzi-target-${i}`, characters[i], { width: 250, height: 250, showOutline: false, showCharacter: false, strokeColor: '#000000' }); } catch(e) {}
+                    try { 
+                        writers[i] = HanziWriter.create(`hanzi-target-${i}`, characters[i], { 
+                            width: writerSize, 
+                            height: writerSize, 
+                            showOutline: false, 
+                            showCharacter: false, 
+                            strokeColor: '#000000' 
+                        }); 
+                    } catch(e) {}
                 }
             }
         }
@@ -940,11 +988,26 @@
         }
         updateStatus('Canvas cleared. Start over!', 'info');
         if (writingModeActive && !isWhitePaperMode) {
+            let writerSize = 250;
+            if (window.innerWidth <= 768 && window.matchMedia('(orientation: portrait)').matches) {
+                writerSize = 130;
+            } else if (window.innerWidth <= 900 && window.matchMedia('(orientation: landscape)').matches) {
+                writerSize = 80;
+            }
             for (let i = 0; i < characters.length; i++) {
                 const targetDiv = document.getElementById(`hanzi-target-${i}`);
                 if (targetDiv) {
                     targetDiv.innerHTML = '';
-                    try { writers[i] = HanziWriter.create(`hanzi-target-${i}`, characters[i], { width: 250, height: 250, showOutline: true, showCharacter: false, outlineColor: '#d3d3d3', strokeColor: '#000000' }); } catch(e) {}
+                    try { 
+                        writers[i] = HanziWriter.create(`hanzi-target-${i}`, characters[i], { 
+                            width: writerSize, 
+                            height: writerSize, 
+                            showOutline: true, 
+                            showCharacter: false, 
+                            outlineColor: '#d3d3d3', 
+                            strokeColor: '#000000' 
+                        }); 
+                    } catch(e) {}
                 }
             }
         }
@@ -1487,3 +1550,4 @@ function checkAndNavigate(level, lessonNum) {
 
 </body>
 </html>
+
