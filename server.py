@@ -1,4 +1,4 @@
-# server.py - Complete HSK Mandarin Teacher with PostgreSQL
+# server.py - HSK Mandarin Teacher with JSON Storage (Working Version)
 
 from flask import Flask, render_template, request, jsonify, send_file, redirect, url_for
 from flask_cors import CORS
@@ -9,17 +9,9 @@ import edge_tts
 import hashlib
 import re
 import requests
-import uuid
 import random
 import string
 from datetime import datetime, timedelta
-import psycopg2
-from psycopg2.extras import RealDictCursor
-from urllib.parse import urlparse
-
-import sys
-print("Python version:", sys.version)
-print("Starting server.py...")
 
 app = Flask(__name__)
 CORS(app)
@@ -39,207 +31,75 @@ os.makedirs(LESSON_DATA_PATH, exist_ok=True)
 MAX_LESSONS = {1: 15, 2: 15, 3: 20, 4: 20, 5: 36, 6: 40}
 
 # ============================================
-# POSTGRESQL DATABASE SETUP
+# JSON FILE STORAGE (No PostgreSQL needed)
 # ============================================
 
-def get_db_connection():
-    database_url = os.environ.get('DATABASE_URL')
-    if database_url:
-        result = urlparse(database_url)
-        conn = psycopg2.connect(
-            database=result.path[1:],
-            user=result.username,
-            password=result.password,
-            host=result.hostname,
-            port=result.port
-        )
-    else:
-        conn = psycopg2.connect(
-            database="mandarin_db",
-            user="mandarin_user",
-            password="mandarin_password",
-            host="localhost",
-            port=5432
-        )
-    return conn
+PASSCODES_FILE = "passcodes.json"
 
-def init_db():
-    conn = get_db_connection()
-    c = conn.cursor()
-    
-    c.execute('''CREATE TABLE IF NOT EXISTS settings (
-        key TEXT PRIMARY KEY,
-        value TEXT
-    )''')
-    
-    c.execute('''CREATE TABLE IF NOT EXISTS users (
-        email TEXT,
-        lesson_key TEXT,
-        passcode TEXT,
-        expires_at TIMESTAMP,
-        created_at TIMESTAMP,
-        approved_at TIMESTAMP,
-        PRIMARY KEY (email, lesson_key)
-    )''')
-    
-    c.execute('''CREATE TABLE IF NOT EXISTS requests (
-        request_id TEXT PRIMARY KEY,
-        email TEXT,
-        level INTEGER,
-        lesson_num INTEGER,
-        passcode TEXT,
-        status TEXT,
-        created_at TIMESTAMP,
-        approved_at TIMESTAMP,
-        expires_at TIMESTAMP
-    )''')
-    
-    # Devices table - per lesson tracking
-    c.execute('''CREATE TABLE IF NOT EXISTS devices (
-        email TEXT,
-        lesson_key TEXT,
-        device_fp TEXT,
-        device_type TEXT,
-        registered_at TIMESTAMP,
-        PRIMARY KEY (email, lesson_key, device_fp)
-    )''')
-    
-    c.execute("INSERT INTO settings (key, value) VALUES ('default_expiry_hours', '168') ON CONFLICT (key) DO NOTHING")
-    c.execute("INSERT INTO settings (key, value) VALUES ('max_devices_per_user', '2') ON CONFLICT (key) DO NOTHING")
-    
-    conn.commit()
-    conn.close()
-    print("✅ PostgreSQL database initialized")
+def load_passcodes():
+    if os.path.exists(PASSCODES_FILE):
+        with open(PASSCODES_FILE, 'r') as f:
+            return json.load(f)
+    return {"users": {}, "requests": []}
 
-def get_setting(key, default='168'):
-    conn = get_db_connection()
-    c = conn.cursor()
-    c.execute("SELECT value FROM settings WHERE key = %s", (key,))
-    row = c.fetchone()
-    conn.close()
-    return row[0] if row else default
+def save_passcodes(data):
+    with open(PASSCODES_FILE, 'w') as f:
+        json.dump(data, f, indent=2, default=str)
 
-def save_setting(key, value):
-    conn = get_db_connection()
-    c = conn.cursor()
-    c.execute("INSERT INTO settings (key, value) VALUES (%s, %s) ON CONFLICT (key) DO UPDATE SET value = %s", 
-              (key, str(value), str(value)))
-    conn.commit()
-    conn.close()
+def get_user_lesson(email, lesson_key):
+    data = load_passcodes()
+    key = f"{email}_{lesson_key}"
+    return data["users"].get(key)
 
-init_db()
+def save_user_lesson(email, lesson_key, passcode, expires_at):
+    data = load_passcodes()
+    key = f"{email}_{lesson_key}"
+    data["users"][key] = {
+        "email": email,
+        "lesson_key": lesson_key,
+        "passcode": passcode.upper(),
+        "expires_at": expires_at.isoformat()
+    }
+    save_passcodes(data)
 
-# ============================================
-# PASSCODE SYSTEM FUNCTIONS
-# ============================================
+def save_request(request_id, email, level, lesson_num, passcode, status):
+    data = load_passcodes()
+    data["requests"].append({
+        "request_id": request_id,
+        "email": email,
+        "level": level,
+        "lesson_num": lesson_num,
+        "passcode": passcode,
+        "status": status,
+        "created_at": datetime.now().isoformat()
+    })
+    save_passcodes(data)
 
-def get_lesson_key(level, lesson_num):
-    return f"hsk{level}_lesson{lesson_num}"
+def get_pending_requests():
+    data = load_passcodes()
+    return [r for r in data["requests"] if r["status"] == "pending"]
+
+def get_all_requests():
+    data = load_passcodes()
+    return data["requests"]
+
+def update_request_status(request_id, status):
+    data = load_passcodes()
+    for r in data["requests"]:
+        if r["request_id"] == request_id:
+            r["status"] = status
+            if status == "approved":
+                r["approved_at"] = datetime.now().isoformat()
+            break
+    save_passcodes(data)
 
 def generate_passcode():
     letters = ''.join(random.choices(string.ascii_uppercase, k=3))
     numbers = ''.join(random.choices(string.digits, k=3))
     return f"{letters}{numbers}"
 
-def get_pending_requests():
-    conn = get_db_connection()
-    c = conn.cursor(cursor_factory=RealDictCursor)
-    c.execute("SELECT request_id, email, level, lesson_num, passcode, created_at FROM requests WHERE status = 'pending' ORDER BY created_at DESC")
-    rows = c.fetchall()
-    conn.close()
-    return rows
-
-def get_all_history():
-    conn = get_db_connection()
-    c = conn.cursor(cursor_factory=RealDictCursor)
-    c.execute("SELECT request_id, email, level, lesson_num, passcode, status, created_at, approved_at, expires_at FROM requests ORDER BY created_at DESC")
-    rows = c.fetchall()
-    conn.close()
-    return rows
-
-def save_request(request_id, email, level, lesson_num, passcode, status):
-    conn = get_db_connection()
-    c = conn.cursor()
-    c.execute("INSERT INTO requests (request_id, email, level, lesson_num, passcode, status, created_at) VALUES (%s, %s, %s, %s, %s, %s, %s)",
-              (request_id, email, level, lesson_num, passcode, status, datetime.now()))
-    conn.commit()
-    conn.close()
-
-def update_request_status(request_id, status, approved_at=None, expires_at=None):
-    conn = get_db_connection()
-    c = conn.cursor()
-    if approved_at:
-        c.execute("UPDATE requests SET status = %s, approved_at = %s, expires_at = %s WHERE request_id = %s", 
-                  (status, approved_at, expires_at, request_id))
-    else:
-        c.execute("UPDATE requests SET status = %s WHERE request_id = %s", (status, request_id))
-    conn.commit()
-    conn.close()
-
-def save_user_lesson(email, lesson_key, passcode, expires_at):
-    conn = get_db_connection()
-    c = conn.cursor()
-    c.execute("INSERT INTO users (email, lesson_key, passcode, expires_at, created_at, approved_at) VALUES (%s, %s, %s, %s, %s, %s)",
-              (email, lesson_key, passcode, expires_at, datetime.now(), datetime.now()))
-    conn.commit()
-    conn.close()
-
-def get_user_lesson(email, lesson_key):
-    conn = get_db_connection()
-    c = conn.cursor(cursor_factory=RealDictCursor)
-    c.execute("SELECT passcode, expires_at FROM users WHERE email = %s AND lesson_key = %s", (email, lesson_key))
-    row = c.fetchone()
-    conn.close()
-    return row
-
-def register_device(email, lesson_key, device_fp, device_type, max_mobile=1, max_desktop=1):
-    conn = get_db_connection()
-    c = conn.cursor()
-    
-    c.execute("SELECT device_type, COUNT(*) FROM devices WHERE email = %s AND lesson_key = %s GROUP BY device_type", 
-              (email, lesson_key))
-    rows = c.fetchall()
-    
-    mobile_count = 0
-    desktop_count = 0
-    
-    for row in rows:
-        if row[0] == 'mobile':
-            mobile_count = row[1]
-        elif row[0] == 'desktop':
-            desktop_count = row[1]
-    
-    c.execute("SELECT COUNT(*) FROM devices WHERE email = %s AND lesson_key = %s AND device_fp = %s", 
-              (email, lesson_key, device_fp))
-    already_exists = c.fetchone()[0] > 0
-    
-    if already_exists:
-        conn.close()
-        return True, None
-    
-    if device_type == 'mobile' and mobile_count >= max_mobile:
-        conn.close()
-        return False, f"Mobile device limit reached ({max_mobile}). You already have {mobile_count} mobile device for this lesson."
-    
-    if device_type == 'desktop' and desktop_count >= max_desktop:
-        conn.close()
-        return False, f"Desktop device limit reached ({max_desktop}). You already have {desktop_count} desktop device for this lesson."
-    
-    c.execute("INSERT INTO devices (email, lesson_key, device_fp, device_type, registered_at) VALUES (%s, %s, %s, %s, %s)",
-              (email, lesson_key, device_fp, device_type, datetime.now()))
-    conn.commit()
-    conn.close()
-    
-    return True, None
-
-def get_user_devices(email, lesson_key):
-    conn = get_db_connection()
-    c = conn.cursor(cursor_factory=RealDictCursor)
-    c.execute("SELECT device_fp, device_type, registered_at FROM devices WHERE email = %s AND lesson_key = %s ORDER BY registered_at", 
-              (email, lesson_key))
-    rows = c.fetchall()
-    conn.close()
-    return rows
+def get_lesson_key(level, lesson_num):
+    return f"hsk{level}_lesson{lesson_num}"
 
 # ============================================
 # TTS FUNCTION
@@ -392,14 +252,11 @@ def api_admin_settings():
     if request.method == 'GET':
         return jsonify({
             "settings": {
-                "default_expiry_hours": int(get_setting('default_expiry_hours')),
-                "max_devices_per_user": int(get_setting('max_devices_per_user'))
+                "default_expiry_hours": 168,
+                "max_devices_per_user": 2
             }
         })
     else:
-        new_settings = request.json
-        save_setting('default_expiry_hours', new_settings.get('default_expiry_hours', 168))
-        save_setting('max_devices_per_user', new_settings.get('max_devices_per_user', 2))
         return jsonify({"success": True})
 
 @app.route('/api/admin/pending')
@@ -409,44 +266,35 @@ def api_pending_requests():
 
 @app.route('/api/admin/history', methods=['GET'])
 def api_history_requests():
-    history = get_all_history()
+    history = get_all_requests()
     return jsonify({"history": history})
 
 @app.route('/api/admin/approve/<request_id>', methods=['POST'])
 def api_approve_request(request_id):
-    conn = get_db_connection()
-    c = conn.cursor(cursor_factory=RealDictCursor)
+    lesson_key = None
+    level = None
+    lesson_num = None
+    email = None
+    passcode_to_use = None
     
-    c.execute("SELECT * FROM requests WHERE request_id = %s", (request_id,))
-    req = c.fetchone()
+    data = load_passcodes()
+    for req in data["requests"]:
+        if req["request_id"] == request_id:
+            lesson_key = get_lesson_key(req["level"], req["lesson_num"])
+            level = req["level"]
+            lesson_num = req["lesson_num"]
+            email = req["email"]
+            passcode_to_use = req["passcode"].strip().upper()
+            break
     
-    if not req:
-        conn.close()
+    if not email:
         return jsonify({"success": False, "message": "Request not found"}), 404
     
-    lesson_key = get_lesson_key(req['level'], req['lesson_num'])
-    expiry_hours = int(get_setting('default_expiry_hours'))
-    passcode_to_use = req['passcode'].strip().upper()
-    expires_at = datetime.now() + timedelta(hours=expiry_hours)
+    expires_at = datetime.now() + timedelta(days=7)
+    save_user_lesson(email, lesson_key, passcode_to_use, expires_at)
+    update_request_status(request_id, "approved")
     
-    # Check if this passcode is already used by another user for same lesson
-    c.execute("SELECT email FROM users WHERE lesson_key = %s AND passcode = %s", (lesson_key, passcode_to_use))
-    existing = c.fetchone()
-    if existing:
-        # Generate new unique passcode
-        passcode_to_use = generate_passcode()
-        print(f"⚠️ Passcode was taken, generated new: {passcode_to_use}")
-    
-    c.execute("INSERT INTO users (email, lesson_key, passcode, expires_at, created_at, approved_at) VALUES (%s, %s, %s, %s, %s, %s)",
-              (req['email'], lesson_key, passcode_to_use, expires_at, datetime.now(), datetime.now()))
-    
-    c.execute("UPDATE requests SET status = 'approved', approved_at = %s, expires_at = %s WHERE request_id = %s",
-              (datetime.now(), expires_at, request_id))
-    
-    conn.commit()
-    conn.close()
-    
-    print(f"\n✅ APPROVED: {req['email']} for HSK {req['level']} Lesson {req['lesson_num']}")
+    print(f"\n✅ APPROVED: {email} for HSK {level} Lesson {lesson_num}")
     print(f"🔐 PASSCODE: {passcode_to_use}")
     print(f"⏰ Expires: {expires_at.strftime('%Y-%m-%d %H:%M')}\n")
     
@@ -454,11 +302,7 @@ def api_approve_request(request_id):
 
 @app.route('/api/admin/deny/<request_id>', methods=['POST'])
 def api_deny_request(request_id):
-    conn = get_db_connection()
-    c = conn.cursor()
-    c.execute("UPDATE requests SET status = 'denied', approved_at = %s WHERE request_id = %s", (datetime.now(), request_id))
-    conn.commit()
-    conn.close()
+    update_request_status(request_id, "denied")
     return jsonify({"success": True, "message": "Request denied"})
 
 @app.route('/api/request-passcode', methods=['POST'])
@@ -471,15 +315,13 @@ def api_request_passcode():
     if not email or '@' not in email:
         return jsonify({"success": False, "message": "Valid email required"}), 400
     
-    lesson_key = get_lesson_key(level, lesson_num)
     passcode = generate_passcode()
-    request_id = f"{email}_{lesson_key}_{int(datetime.now().timestamp())}"
+    request_id = f"{email}_{level}_{lesson_num}_{int(datetime.now().timestamp())}"
     
     save_request(request_id, email, level, lesson_num, passcode, 'pending')
     
     print(f"\n📋 NEW REQUEST: {email} wants HSK {level} Lesson {lesson_num}")
     print(f"🔐 Generated passcode: {passcode}")
-    print(f"👉 Go to /admin/passcodes to approve\n")
     
     return jsonify({"success": True, "message": "Request sent! Admin will review."})
 
@@ -495,70 +337,34 @@ def api_verify_passcode():
     
     lesson_key = get_lesson_key(level, lesson_num)
     
+    print(f"🔍 Verifying: email={email}, lesson={lesson_key}, input='{passcode_input}'")
+    
     user_lesson = get_user_lesson(email, lesson_key)
     
     if not user_lesson:
         return jsonify({"success": False, "message": "No access. Request first."})
     
-    # Compare passcodes (both in uppercase)
-    if user_lesson['passcode'].strip().upper() != passcode_input:
+    stored = user_lesson["passcode"].strip().upper()
+    print(f"📦 Stored: '{stored}'")
+    
+    if stored != passcode_input:
         return jsonify({"success": False, "message": "Invalid passcode."})
     
-    expires_at = user_lesson['expires_at']
-    now = datetime.now()
-    
-    if now > expires_at:
+    expires_at = datetime.fromisoformat(user_lesson["expires_at"])
+    if datetime.now() > expires_at:
         return jsonify({"success": False, "message": "Passcode expired. Request a new one."})
     
-    remaining = expires_at - now
-    remaining_days = remaining.days
-    remaining_hours = remaining.seconds // 3600
-    remaining_minutes = (remaining.seconds % 3600) // 60
-    
-    if remaining_days > 0:
-        expiry_message = f"This passcode will expire in {remaining_days} days."
-    elif remaining_hours > 0:
-        expiry_message = f"This passcode will expire in {remaining_hours} hours."
-    else:
-        expiry_message = f"This passcode will expire in {remaining_minutes} minutes."
-    
-    device_fp = f"{device_id}_{device_type}"
-    
-    success, error_msg = register_device(email, lesson_key, device_fp, device_type, max_mobile=1, max_desktop=1)
-    
-    if not success:
-        devices = get_user_devices(email, lesson_key)
-        mobile_count = len([d for d in devices if d['device_type'] == 'mobile'])
-        desktop_count = len([d for d in devices if d['device_type'] == 'desktop'])
-        
-        error_msg = f"❌ {error_msg}\n\n"
-        error_msg += f"📱 Your devices for this lesson:\n"
-        error_msg += f"   - Mobile: {mobile_count}/1 device\n"
-        error_msg += f"   - Desktop/Laptop: {desktop_count}/1 device\n\n"
-        error_msg += f"⚠️ Each passcode can only be used on 1 smartphone/tablet AND 1 desktop/laptop.\n"
-        error_msg += f"This passcode is for {email} only and cannot be shared."
-        
-        return jsonify({"success": False, "message": error_msg})
-    
-    devices = get_user_devices(email, lesson_key)
-    mobile_count = len([d for d in devices if d['device_type'] == 'mobile'])
-    desktop_count = len([d for d in devices if d['device_type'] == 'desktop'])
-    
-    device_info = f"\n\n📱 Device usage for this lesson: {mobile_count}/1 smartphone/tablet, {desktop_count}/1 desktop/laptop"
-    
-    print(f"✅ Access granted: {email} for HSK{level} L{lesson_num} - Expires: {expires_at}")
+    print(f"✅ Access granted: {email} for HSK{level} L{lesson_num}")
     
     return jsonify({
         "success": True, 
-        "message": f"✓ Access granted! {expiry_message}{device_info}",
+        "message": "✓ Access granted! This passcode will expire in 7 days.",
         "redirect": f"/lesson/{level}/{lesson_num}"
     })
 
-@app.route('/api/admin/devices/<email>/<int:level>/<int:lesson_num>', methods=['GET'])
-def api_get_devices(email, level, lesson_num):
-    lesson_key = get_lesson_key(level, lesson_num)
-    devices = get_user_devices(email, lesson_key)
-    return jsonify({"devices": devices})
+@app.route('/api/test', methods=['GET'])
+def test():
+    return jsonify({"status": "ok", "message": "Server running"})
 
 # ============================================
 # AI ASSISTANT API
@@ -626,10 +432,6 @@ def chat():
     message = data.get('message', '')
     return jsonify({"reply": f"Received: {message}"})
 
-@app.route('/api/test', methods=['GET'])
-def test():
-    return jsonify({"status": "ok", "message": "Server running"})
-
 # ============================================
 # MAIN
 # ============================================
@@ -638,7 +440,7 @@ if __name__ == '__main__':
     print("\n" + "=" * 60)
     print("HSK Mandarin Teacher - Complete Curriculum (HSK 1-6)")
     print("=" * 60)
-    print("\n✅ PostgreSQL Database Ready!")
+    print("\n✅ Server Ready!")
     print("\n📖 Available Routes:")
     print("   /              - Home page")
     print("   /lessons       - Main curriculum page")
