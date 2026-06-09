@@ -392,18 +392,20 @@
     </div>
     
     <div class="lesson-nav">
-        {% if lesson_num > 1 %}
-        <button class="nav-btn" onclick="window.location.href='/lesson/{{ level }}/{{ lesson_num - 1 }}'">◀ Previous Lesson</button>
-        {% else %}
-        <button class="nav-btn" onclick="window.location.href='/lessons'">◀ Back to Levels</button>
-        {% endif %}
-        <button class="nav-btn" onclick="window.location.href='/lessons'">📚 All Lessons</button>
-        {% if lesson_num < max_lessons[level] %}
-        <button class="nav-btn" onclick="window.location.href='/lesson/{{ level }}/{{ lesson_num + 1 }}'">Next Lesson ▶</button>
-        {% else %}
-        <button class="nav-btn" onclick="window.location.href='/lesson/{{ level + 1 }}/1'">Next Level ▶</button>
-        {% endif %}
-    </div>
+    {% if lesson_num > 1 %}
+    <button class="nav-btn" onclick="checkAndNavigate({{ level }}, {{ lesson_num - 1 }})">◀ Previous Lesson</button>
+    {% else %}
+    <button class="nav-btn" onclick="window.location.href='/lessons'">◀ Back to Levels</button>
+    {% endif %}
+    
+    <button class="nav-btn" onclick="window.location.href='/lessons'">📚 All Lessons</button>
+    
+    {% if lesson_num < max_lessons[level] %}
+    <button class="nav-btn" onclick="checkAndNavigate({{ level }}, {{ lesson_num + 1 }})">Next Lesson ▶</button>
+    {% else %}
+    <button class="nav-btn" onclick="checkAndNavigate({{ level + 1 }}, 1)">Next Level ▶</button>
+    {% endif %}
+</div>
     
     <div class="ai-bar">
         <div class="ai-bar-header">
@@ -741,6 +743,7 @@ async function verifyPasscode() {
 }
 
 function checkAndNavigate(level, lessonNum) {
+    // ONLY HSK1 Lesson 1 is free - everything else requires passcode
     if (level === 1 && lessonNum === 1) {
         window.location.href = `/lesson/${level}/${lessonNum}`;
     } else {
