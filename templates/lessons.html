@@ -551,6 +551,7 @@
     </div>
 </div>
 
+
 <script>
     // ============================================
     // LANGUAGE TRANSLATIONS
@@ -859,19 +860,6 @@
         document.getElementById('lessonModal').classList.add('active');
     }
     
-    function goToLesson() {
-        if (currentModalLevel && currentModalLesson) {
-            window.location.href = `/hsk${currentModalLevel}/lesson${currentModalLesson}`;
-        }
-    }
-    
-    function goToLessonDirect(level, lessonNum) {
-    if (level === 1 && lessonNum === 1) {
-        window.location.href = `/lesson/${level}/${lessonNum}`;
-    } else {
-        showPasscodeModal(level, lessonNum, `/lesson/${level}/${lessonNum}`);
-    }
-}
     
     function scrollToLevel(level) {
         showAllLessonsForLevel(level);
@@ -888,6 +876,26 @@
         }
     });
     
+    // ============================================
+    // NAVIGATION FUNCTIONS (WITH PASSCODE)
+    // ============================================
+    
+    function goToLessonDirect(level, lessonNum) {
+        // HSK 1 Lesson 1 is always free - no passcode needed
+        if (level === 1 && lessonNum === 1) {
+            window.location.href = `/lesson/${level}/${lessonNum}`;
+        } else {
+            // ALL other lessons require passcode
+            showPasscodeModal(level, lessonNum, `/lesson/${level}/${lessonNum}`);
+        }
+    }
+    
+    function goToLesson() {
+        if (currentModalLevel && currentModalLesson) {
+            goToLessonDirect(currentModalLevel, currentModalLesson);
+        }
+    }
+    
     // Initialize
     renderLevelCards();
     
@@ -898,6 +906,14 @@
     window.closeLessonModal = closeLessonModal;
     window.showAllLessonsForLevel = showAllLessonsForLevel;
     window.setLanguage = setLanguage;
+    window.showPasscodeModal = showPasscodeModal;
+    window.closePasscodeModal = closePasscodeModal;
+    window.submitRequest = submitRequest;
+    window.verifyPasscode = verifyPasscode;
+    window.showRequestForm = showRequestForm;
+    window.showPasscodeForm = showPasscodeForm;
+    
+    
 </script>
 
 <!-- ========== PASSCODE MODAL ========== -->
@@ -1036,32 +1052,7 @@ async function verifyPasscode() {
     }
 }
 
-// Modify navigation to check passcode (except lesson 1-1)
-const originalNav = document.querySelector('.lesson-nav');
-if (originalNav) {
-    const buttons = originalNav.querySelectorAll('.nav-btn');
-    buttons.forEach(btn => {
-        const onclickAttr = btn.getAttribute('onclick');
-        if (onclickAttr && onclickAttr.includes('window.location.href')) {
-            const match = onclickAttr.match(/\/lesson\/(\d+)\/(\d+)/);
-            if (match) {
-                const level = parseInt(match[1]);
-                const lesson = parseInt(match[2]);
-                if (!(level === 1 && lesson === 1)) {
-                    btn.setAttribute('onclick', `checkAndNavigate(${level}, ${lesson})`);
-                }
-            }
-        }
-    });
-}
 
-function checkAndNavigate(level, lessonNum) {
-    if (level === 1 && lessonNum === 1) {
-        window.location.href = `/lesson/${level}/${lessonNum}`;
-    } else {
-        showPasscodeModal(level, lessonNum, `/lesson/${level}/${lessonNum}`);
-    }
-}
 </script>
 
 </body>
