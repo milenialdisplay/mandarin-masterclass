@@ -17,6 +17,10 @@ import psycopg2
 from psycopg2.extras import RealDictCursor
 from urllib.parse import urlparse
 
+import sys
+print("Python version:", sys.version)
+print("Starting server.py...")
+
 app = Flask(__name__)
 CORS(app)
 
