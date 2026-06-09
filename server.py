@@ -97,10 +97,11 @@ def init_db():
         expires_at TIMESTAMP
     )''')
     
-    # Devices table
+    # Devices table - WITH device_type column
     c.execute('''CREATE TABLE IF NOT EXISTS devices (
         email TEXT,
         device_fp TEXT,
+        device_type TEXT,
         registered_at TIMESTAMP,
         PRIMARY KEY (email, device_fp)
     )''')
@@ -197,19 +198,60 @@ def get_user_lesson(email, lesson_key):
     conn.close()
     return row
 
-def register_device(email, device_fp, max_devices):
+def register_device(email, device_fp, device_type, max_mobile=1, max_desktop=1):
+    """
+    Register a device for a user.
+    Allows: 1 mobile (phone/tablet) + 1 desktop (laptop/desktop)
+    """
     conn = get_db_connection()
     c = conn.cursor()
-    c.execute("SELECT COUNT(*) FROM devices WHERE email = %s", (email,))
-    count = c.fetchone()[0]
-    if count >= max_devices:
+    
+    # Count existing devices by type
+    c.execute("SELECT device_type, COUNT(*) FROM devices WHERE email = %s GROUP BY device_type", (email,))
+    rows = c.fetchall()
+    
+    mobile_count = 0
+    desktop_count = 0
+    
+    for row in rows:
+        if row[0] == 'mobile':
+            mobile_count = row[1]
+        elif row[0] == 'desktop':
+            desktop_count = row[1]
+    
+    # Check if device already exists
+    c.execute("SELECT COUNT(*) FROM devices WHERE email = %s AND device_fp = %s", (email, device_fp))
+    already_exists = c.fetchone()[0] > 0
+    
+    if already_exists:
+        conn.close()
+        return True  # Already registered, no error
+    
+    # Check limits
+    if device_type == 'mobile' and mobile_count >= max_mobile:
         conn.close()
         return False
-    c.execute("INSERT INTO devices (email, device_fp, registered_at) VALUES (%s, %s, %s)",
-              (email, device_fp, datetime.now()))
+    
+    if device_type == 'desktop' and desktop_count >= max_desktop:
+        conn.close()
+        return False
+    
+    # Register new device
+    c.execute("INSERT INTO devices (email, device_fp, device_type, registered_at) VALUES (%s, %s, %s, %s)",
+              (email, device_fp, device_type, datetime.now()))
     conn.commit()
     conn.close()
+    
     return True
+
+def get_user_devices(email):
+    """Get list of user's registered devices"""
+    conn = get_db_connection()
+    c = conn.cursor(cursor_factory=RealDictCursor)
+    c.execute("SELECT device_fp, device_type, registered_at FROM devices WHERE email = %s ORDER BY registered_at", (email,))
+    rows = c.fetchall()
+    conn.close()
+    return rows
 
 # ============================================
 # TTS FUNCTION
@@ -460,7 +502,6 @@ def api_verify_passcode():
     device_type = data.get('device_type', 'desktop')
     
     lesson_key = get_lesson_key(level, lesson_num)
-    max_devices = int(get_setting('max_devices_per_user'))
     
     user_lesson = get_user_lesson(email, lesson_key)
     
@@ -471,16 +512,77 @@ def api_verify_passcode():
         return jsonify({"success": False, "message": "Invalid passcode."})
     
     expires_at = user_lesson['expires_at']
-    if datetime.now() > expires_at:
+    now = datetime.now()
+    
+    if now > expires_at:
         return jsonify({"success": False, "message": "Passcode expired. Request a new one."})
+    
+    # Calculate remaining time
+    remaining = expires_at - now
+    remaining_days = remaining.days
+    remaining_hours = remaining.seconds // 3600
+    remaining_minutes = (remaining.seconds % 3600) // 60
+    
+    if remaining_days > 0:
+        expiry_message = f"This passcode will expire in {remaining_days} days."
+    elif remaining_hours > 0:
+        expiry_message = f"This passcode will expire in {remaining_hours} hours."
+    else:
+        expiry_message = f"This passcode will expire in {remaining_minutes} minutes."
     
     # Device tracking
     device_fp = f"{device_id}_{device_type}"
-    if not register_device(email, device_fp, max_devices):
-        return jsonify({"success": False, "message": f"Device limit reached ({max_devices} max). Contact admin."})
     
-    print(f"✅ Access granted: {email} for HSK{level} L{lesson_num}")
-    return jsonify({"success": True, "message": "Access granted!", "redirect": f"/lesson/{level}/{lesson_num}"})
+    # Check if device already registered
+    conn = get_db_connection()
+    c = conn.cursor()
+    c.execute("SELECT COUNT(*) FROM devices WHERE email = %s AND device_fp = %s", (email, device_fp))
+    already_registered = c.fetchone()[0] > 0
+    conn.close()
+    
+    if not already_registered:
+        # Only register if it's a new device
+        success = register_device(email, device_fp, device_type, max_mobile=1, max_desktop=1)
+        if not success:
+            # Get current device counts for error message
+            devices = get_user_devices(email)
+            mobile_count = len([d for d in devices if d['device_type'] == 'mobile'])
+            desktop_count = len([d for d in devices if d['device_type'] == 'desktop'])
+            
+            error_msg = f"❌ Device limit reached.\n\n"
+            error_msg += f"📱 Your current devices:\n"
+            error_msg += f"   - Mobile: {mobile_count}/1 device\n"
+            error_msg += f"   - Desktop/Laptop: {desktop_count}/1 device\n\n"
+            error_msg += f"⚠️ Each passcode allows: 1 smartphone/tablet + 1 desktop/laptop only.\n\n"
+            error_msg += f"To use on another device, please contact admin."
+            
+            return jsonify({"success": False, "message": error_msg})
+    
+    # Get device info for success message
+    devices = get_user_devices(email)
+    mobile_count = len([d for d in devices if d['device_type'] == 'mobile'])
+    desktop_count = len([d for d in devices if d['device_type'] == 'desktop'])
+    
+    device_info = f"\n\n📱 Device usage: {mobile_count}/1 smartphone/tablet, {desktop_count}/1 desktop/laptop"
+    
+    print(f"✅ Access granted: {email} for HSK{level} L{lesson_num} - Expires: {expires_at}")
+    
+    return jsonify({
+        "success": True, 
+        "message": f"✓ Access granted! {expiry_message}{device_info}",
+        "redirect": f"/lesson/{level}/{lesson_num}"
+    })
+    
+@app.route('/api/admin/devices/<email>', methods=['GET'])
+def api_get_devices(email):
+    """Get devices for a specific user"""
+    conn = get_db_connection()
+    c = conn.cursor(cursor_factory=RealDictCursor)
+    c.execute("SELECT device_type, registered_at FROM devices WHERE email = %s ORDER BY registered_at", (email,))
+    devices = c.fetchall()
+    conn.close()
+    return jsonify({"devices": devices})
+    
 
 # ============================================
 # AI ASSISTANT API

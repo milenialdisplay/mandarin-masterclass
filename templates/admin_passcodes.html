@@ -175,6 +175,61 @@
             }
         }
         
+        // Send passcode via WhatsApp
+        function sendWhatsApp(email, passcode, level, lessonNum) {
+            let phoneNumber = "6281234567890"; // CHANGE THIS TO YOUR WHATSAPP NUMBER
+            
+            // Try to extract phone from email if formatted as "phone@domain.com"
+            if (email.includes('@') && email.split('@')[0].match(/^\d+$/)) {
+                phoneNumber = email.split('@')[0];
+                if (!phoneNumber.startsWith('62') && !phoneNumber.startsWith('08')) {
+                    phoneNumber = '62' + phoneNumber;
+                }
+            }
+            
+            // Get expiry settings
+            const expiryValue = document.getElementById('expiryValue').value;
+            const expiryUnit = document.getElementById('expiryUnit').value;
+            let expiryText = `${expiryValue} ${expiryUnit}`;
+            if (expiryUnit === 'hours') expiryText = `${expiryValue} hours`;
+            if (expiryUnit === 'days') expiryText = `${expiryValue} days`;
+            if (expiryUnit === 'weeks') expiryText = `${expiryValue} weeks`;
+            
+            const message = `🎉 *Your Mandarin Masterclass Passcode* 🎉
+            
+✅ Lesson: HSK ${level} - Lesson ${lessonNum}
+🔐 Passcode: ${passcode}
+⏰ Expires: ${expiryText}
+
+👉 Go to: https://mandarin-masterclass-test.onrender.com/lessons
+Enter your email and this passcode to access the lesson.
+
+Thank you for learning Chinese with Mandarin Masterclass! 📚`;
+            
+            const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(waLink, '_blank');
+        }
+        
+        // Show device info for a user
+        async function showDeviceInfo(email) {
+            try {
+                const response = await fetch(`/api/admin/devices/${encodeURIComponent(email)}`);
+                const data = await response.json();
+                
+                if (data.devices && data.devices.length > 0) {
+                    let deviceHtml = '📱 Registered Devices:\n\n';
+                    data.devices.forEach(device => {
+                        deviceHtml += `- ${device.device_type.toUpperCase()}: Registered on ${new Date(device.registered_at).toLocaleString()}\n`;
+                    });
+                    alert(deviceHtml);
+                } else {
+                    alert('No devices registered for this user yet.');
+                }
+            } catch(e) {
+                alert('Error loading device info');
+            }
+        }
+        
         // Load pending requests
         async function loadPending() {
             try {
@@ -192,6 +247,8 @@
                                 <strong>🔐 Passcode:</strong> 
                                 <span class="passcode-display">${req.passcode}</span>
                                 <button class="btn-copy" onclick="copyPasscode('${req.passcode}', '${req.email}', 'HSK ${req.level} L${req.lesson_num}')">📋 Copy</button>
+                                <button class="btn-copy" onclick="sendWhatsApp('${req.email}', '${req.passcode}', ${req.level}, ${req.lesson_num})" style="background: #25D366; color: white;">📱 WhatsApp</button>
+                                <button class="btn-copy" onclick="showDeviceInfo('${req.email}')" style="background: #2196F3; color: white;">📱 Devices</button>
                             </div>
                             <button class="btn-approve" onclick="approveRequest('${req.request_id}')">✓ Approve</button>
                             <button class="btn-deny" onclick="denyRequest('${req.request_id}')">✗ Deny</button>
@@ -203,7 +260,7 @@
             } catch(e) { console.error(e); }
         }
         
-        // Load history - DIRECT SIMPLE APPROACH
+        // Load history
         async function loadHistory() {
             try {
                 console.log("Loading history...");
@@ -218,7 +275,6 @@
                     return;
                 }
                 
-                // Build table directly
                 let tableHtml = `
                     <table class="history-table">
                         <thead>
@@ -265,7 +321,7 @@
                     `;
                 }
                 
-                tableHtml += `</tbody>}</div>`;
+                tableHtml += `</tbody></table>`;
                 container.innerHTML = tableHtml;
                 
                 console.log(`✅ Loaded ${data.history.length} history records`);
@@ -338,6 +394,8 @@
         window.saveSettings = saveSettings;
         window.refreshAll = refreshAll;
         window.loadHistory = loadHistory;
+        window.sendWhatsApp = sendWhatsApp;
+        window.showDeviceInfo = showDeviceInfo;
     </script>
 </body>
 </html>

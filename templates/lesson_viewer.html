@@ -613,6 +613,7 @@
 </div>
 
 <script>
+    
 // Passcode functions
 let pendingLevel = null, pendingLesson = null, pendingUrl = null;
 
@@ -644,11 +645,13 @@ function closePasscodeModal() {
 
 function showMessage(msg, isError) {
     const msgDiv = document.getElementById('resultMsg');
-    msgDiv.innerHTML = msg;
+    msgDiv.innerHTML = msg.replace(/\n/g, '<br>');
     msgDiv.style.display = 'block';
     msgDiv.style.background = isError ? '#f8d7da' : '#d4edda';
     msgDiv.style.color = isError ? '#dc3545' : '#28a745';
-    setTimeout(() => { msgDiv.style.display = 'none'; }, 3000);
+    msgDiv.style.whiteSpace = 'pre-wrap';
+    msgDiv.style.fontSize = '12px';
+    setTimeout(() => { msgDiv.style.display = 'none'; }, 5000);
 }
 
 async function submitRequest() {
@@ -671,8 +674,8 @@ async function submitRequest() {
         document.getElementById('loadingMsg').style.display = 'none';
         
         if (data.success) {
-            showMessage('✓ Request sent! Admin will review.', false);
-            setTimeout(closePasscodeModal, 2000);
+            showMessage('✓ Request sent! Admin will review within 24 hours.', false);
+            setTimeout(closePasscodeModal, 3000);
         } else {
             showMessage(data.message, true);
             document.getElementById('requestForm').style.display = 'block';
@@ -726,24 +729,23 @@ async function verifyPasscode() {
         document.getElementById('loadingMsg').style.display = 'none';
         
         if (data.success) {
-            showMessage('✓ Access granted!', false);
+            showMessage(data.message, false);
             setTimeout(() => {
                 closePasscodeModal();
                 window.location.href = pendingUrl;
-            }, 1000);
+            }, 4000);
         } else {
             showMessage(data.message, true);
             document.getElementById('passcodeForm').style.display = 'block';
         }
     } catch(e) {
         document.getElementById('loadingMsg').style.display = 'none';
-        showMessage('Network error.', true);
+        showMessage('Network error. Please try again.', true);
         document.getElementById('passcodeForm').style.display = 'block';
     }
 }
 
 function checkAndNavigate(level, lessonNum) {
-    // ONLY HSK1 Lesson 1 is free - everything else requires passcode
     if (level === 1 && lessonNum === 1) {
         window.location.href = `/lesson/${level}/${lessonNum}`;
     } else {
