@@ -30,7 +30,7 @@ LESSON_DATA_PATH = os.path.join(os.path.dirname(__file__), 'templates', 'data')
 os.makedirs(LESSON_DATA_PATH, exist_ok=True)
 
 # ============================================
-# SIMPLE IN-MEMORY STORAGE (Works perfectly)
+# SIMPLE IN-MEMORY STORAGE
 # ============================================
 
 passcodes_db = {
@@ -102,26 +102,26 @@ def lessons():
 
 @app.route('/lesson/<int:level>/<int:num>')
 def dynamic_lesson(level, num):
-    # Check if lesson exists
     if level not in MAX_LESSONS or num < 1 or num > MAX_LESSONS[level]:
         return redirect(url_for('lessons'))
     
-    # Load lesson data from JSON file
     json_path = os.path.join(LESSON_DATA_PATH, f'hsk{level}_lesson{num}.json')
     lesson_data = None
     
     if os.path.exists(json_path):
         with open(json_path, 'r', encoding='utf-8') as f:
             lesson_data = json.load(f)
+        print(f"✅ Loaded lesson {level}-{num}: {lesson_data.get('title', 'No title')}")
+    else:
+        print(f"❌ Lesson file not found: {json_path}")
     
-    # Pass the lesson data to the template
     return render_template('lesson_viewer.html', 
                          level=level, 
                          lesson_num=num,
                          lesson_data=lesson_data,
                          max_lessons=MAX_LESSONS)
 
-# Legacy lesson routes (redirect to dynamic lesson)
+# Legacy lesson routes
 @app.route('/hsk1/lesson<int:num>')
 def hsk1_lesson(num):
     if 1 <= num <= 15:
@@ -273,7 +273,6 @@ def api_approve_request(request_id):
             
             print(f"\n✅ APPROVED: {req['email']} for HSK {req['level']} Lesson {req['lesson_num']}")
             print(f"🔐 PASSCODE: {req['passcode']}")
-            print(f"⏰ Expires: {expires_at.strftime('%Y-%m-%d %H:%M')}\n")
             
             return jsonify({"success": True, "message": f"Approved! Passcode: {req['passcode']}"})
     
@@ -295,8 +294,6 @@ def api_verify_passcode():
         passcode_input = data.get('passcode', '').strip().upper()
         level = data.get('level')
         lesson_num = data.get('lesson_num')
-        device_id = data.get('device_id', 'unknown')
-        device_type = data.get('device_type', 'desktop')
         
         lesson_key = get_lesson_key(level, lesson_num)
         user_key = f"{email}_{lesson_key}"
@@ -416,4 +413,3 @@ if __name__ == '__main__':
     print("\n🌐 Server running at: http://localhost:5000")
     print("=" * 60 + "\n")
     app.run(debug=True, host='0.0.0.0', port=5000)
-    
