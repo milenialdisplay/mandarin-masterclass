@@ -1,4 +1,4 @@
-# server.py - HSK Mandarin Teacher - CLEAN WORKING VERSION
+# server.py - HSK Mandarin Teacher - COMPLETE WORKING VERSION
 
 from flask import Flask, render_template, request, jsonify, send_file, redirect, url_for
 from flask_cors import CORS
@@ -22,18 +22,20 @@ os.makedirs("static", exist_ok=True)
 # CONFIGURATION
 # ============================================
 
+OLLAMA_URL = "http://127.0.0.1:11434"
+MODEL_NAME = "mistral:instruct"
+
 MAX_LESSONS = {1: 15, 2: 15, 3: 20, 4: 20, 5: 36, 6: 40}
 LESSON_DATA_PATH = os.path.join(os.path.dirname(__file__), 'templates', 'data')
 os.makedirs(LESSON_DATA_PATH, exist_ok=True)
 
 # ============================================
-# SIMPLE IN-MEMORY STORAGE (No file issues)
+# SIMPLE IN-MEMORY STORAGE (Works perfectly)
 # ============================================
 
-# This stores everything in memory - works perfectly on Render
 passcodes_db = {
-    "users": {},      # Key: "email_lesson_key", Value: {passcode, expires_at}
-    "requests": []    # List of pending requests
+    "users": {},
+    "requests": []
 }
 
 def generate_passcode():
@@ -100,9 +102,11 @@ def lessons():
 
 @app.route('/lesson/<int:level>/<int:num>')
 def dynamic_lesson(level, num):
+    # Check if lesson exists
     if level not in MAX_LESSONS or num < 1 or num > MAX_LESSONS[level]:
         return redirect(url_for('lessons'))
     
+    # Load lesson data from JSON file
     json_path = os.path.join(LESSON_DATA_PATH, f'hsk{level}_lesson{num}.json')
     lesson_data = None
     
@@ -110,13 +114,14 @@ def dynamic_lesson(level, num):
         with open(json_path, 'r', encoding='utf-8') as f:
             lesson_data = json.load(f)
     
+    # Pass the lesson data to the template
     return render_template('lesson_viewer.html', 
                          level=level, 
                          lesson_num=num,
                          lesson_data=lesson_data,
                          max_lessons=MAX_LESSONS)
 
-# Legacy lesson routes
+# Legacy lesson routes (redirect to dynamic lesson)
 @app.route('/hsk1/lesson<int:num>')
 def hsk1_lesson(num):
     if 1 <= num <= 15:
@@ -210,7 +215,6 @@ def api_request_passcode():
         passcode = generate_passcode()
         request_id = f"{email}_{level}_{lesson_num}_{int(datetime.now().timestamp())}"
         
-        # Add to requests list
         passcodes_db["requests"].append({
             "request_id": request_id,
             "email": email,
@@ -221,7 +225,7 @@ def api_request_passcode():
             "created_at": datetime.now().isoformat()
         })
         
-        print(f"📋 NEW REQUEST: {email} wants HSK {level} Lesson {lesson_num}")
+        print(f"\n📋 NEW REQUEST: {email} wants HSK {level} Lesson {lesson_num}")
         print(f"🔐 Generated passcode: {passcode}")
         
         return jsonify({"success": True, "message": "Request sent! Admin will review."})
@@ -256,7 +260,6 @@ def api_approve_request(request_id):
             req["status"] = "approved"
             req["approved_at"] = datetime.now().isoformat()
             
-            # Save to users
             lesson_key = get_lesson_key(req["level"], req["lesson_num"])
             user_key = f"{req['email']}_{lesson_key}"
             expires_at = datetime.now() + timedelta(days=7)
@@ -310,7 +313,6 @@ def api_verify_passcode():
         if datetime.now() > expires_at:
             return jsonify({"success": False, "message": "Passcode expired. Request a new one."})
         
-        # Calculate remaining time
         remaining = expires_at - datetime.now()
         remaining_days = remaining.days
         
